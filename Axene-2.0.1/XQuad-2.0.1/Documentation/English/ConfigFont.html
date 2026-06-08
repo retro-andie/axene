@@ -1,0 +1,102 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Font Configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif"
+ALT="Configuration Files" WIDTH="136" HEIGHT="25"> <img ALIGN="middle"
+SRC="Images/TitleConfigFont.gif" ALT="Font Configuration" WIDTH="322" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+This <a HREF="Config.html">configuration files</a> section defines the character fonts
+used in XQuad. </p>
+
+<h3>Font-list Definition Section: <i>\FONTLIST{...}</i></h3>
+
+<p>This section presents the fonts accessible in corresponding XQuad menus. The
+font-list sits between the opening bracket <i>&quot;{&quot;</i> and closing bracket <i>&quot;}&quot;</i>.
+Each element of the font-list is defined as described below. <a NAME="font"></p>
+
+<h3>Font Definition Section: <i>\FONT{...}</i></h3>
+
+<p>This section defines a font from the font-list. The font definition sits between the
+opening bracket <i>&quot;{&quot;</i> and closing bracket <i>&quot;}&quot;</i>. </a></p>
+
+<p>The parameters of a font definition are: 
+
+<ol>
+  <li><a NAME="id">The <b>font name</b>: the internal name used to designate this font. The
+    user may name the font as they wish, but the name must be unique to all XQuad
+    configuration files. </a><br>
+    &nbsp;</li>
+  <li><b>\FULLNAME{name}</b> where <i>name</i> represents the name attributed to the font in
+    the corresponding XQuad menus. <br>
+    &nbsp;</li>
+  <li><b>\FAMILY{name}</b> where <i>name</i> represents the family name to which the font
+    belongs. This name allows the user to regroup fonts by family; the following parameter
+    permits the user to characterize a font within its family. <br>
+    &nbsp;</li>
+  <li><b>\NORMAL</b>, <b>\BOLD</b>, <b>\ITALIC</b>, <b>\BOLD-ITALIC</b>: these represent a
+    font's characteristics (normal, bold, italic, bold-italic) in relation to its family. <br>
+    &nbsp;</li>
+  <li><b>\DOWNLOAD</b>: indicates that the font must be added to the Postscript file. If your
+    printer contains this font it is not advised to use this parameter because the Postscript
+    file generated will be much larger. Consult the printer's manual to find out which fonts
+    are available. A Level One Postscript printer contains at least the following thirteen
+    basic fonts: <br>
+    &nbsp; <ul>
+      <li>Times (normal, italic, bold, bold-italic)&nbsp;</li>
+      <li>Courier (normal, italic, bold, bold-italic) </li>
+      <li>Helvetica (normal, italic, bold, bold-italic) </li>
+      <li>Symbol <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li>The last parameter corresponds to the <b>filename containing the font</b>. Both
+    &quot;.pfa&quot; and &quot;.pfb&quot; files are accepted. &quot;.pfc&quot; files are fonts
+    which cannot be loaded into the printer (the \DOWNLOAD parameter does not work). These
+    fonts must already be present in your printer. <br>
+    It is to be noted that the access route is not disclosed because it is defined by
+    environmental variables (see Installation). <p><br>
+    </p>
+    <p><br>
+    &nbsp;</p>
+  </li>
+</ol>
+
+<h3>Example:</h3>
+<tt>
+
+<p>\FONTLIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FONT{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AvantGarde-Demi<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FULLNAME{ITC Avant Garde Gothic Demi}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\DOWNLOAD<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FAMILLY{ITC Avant Garde}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\BOLD<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AvantGarde-Demi.pfa<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FONT{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Times-BoldItalic<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FULLNAME{Times Bold Italic}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FAMILY{Times}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\BOLD_ITALIC<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Times-BoldItalic.pfc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166"
+HEIGHT="28"></p>
+</body>
+</html>

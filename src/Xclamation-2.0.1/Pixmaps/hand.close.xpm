@@ -1,0 +1,23 @@
+/* XPM */
+static char * hand_close_xpm[] = {
+"17 17 3 1 9 10",
+" 	s None	c None",
+".	c black",
+"X	c white",
+"        ...      ",
+"     ...XX...    ",
+"    .XX.XX.XX.   ",
+"    .XX.XX.XX... ",
+" .. .XX.XX.XX.XX.",
+".XX..XX.XX.XX.XX.",
+".XXX.XXXXXXXX.XX.",
+" .XX.XXXXXXXXXXX.",
+" .XX.XXXXXXXXXXX.",
+" .XXXXXXXXXXXXXX.",
+"  .XXXXXXXXXXXX. ",
+"  .XXXXXXXXXXXX. ",
+"   .XXXXXXXXXXX. ",
+"    .XXXXXXXXX.  ",
+"     .XXXXXXXX.  ",
+"      .XXXXXXX.  ",
+"      .XXXXXXX.  "};

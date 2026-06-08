@@ -1,0 +1,52 @@
+#!/bin/tcsh -fb
+#
+# do_header for Xclamation, XQuad, XAllWrite, XMayday, XInstall and 
+# 	AxeneOffice in Utils/
+# Make links to include file in Headers subdir.
+# Tcsh version: fast
+#
+# Copyright (C) 1994-2000 Axene.
+# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Email: xcalibur@axene.org
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+# Started on  Mon Jun 13 15:10:29 1994 Stéphane Boisson
+# Last update Fri Jan  7 14:31:15 2000 Emmanuel Paris
+#
+unalias ls
+set count = 0
+set PWD=`pwd`
+set top=`dirname $PWD/$0`
+cd $top/../Headers
+echo Cleaning Header files...
+rm -f * >& /dev/null
+echo Linking Header files...
+foreach repertoire (../*)
+  if (-d ${repertoire}) then
+    if (${repertoire} != "../Headers") then
+       foreach file (`ls -c1 ${repertoire} | grep \\.h$`)
+         if (-e ${file}) then
+           echo ${file} referenced twice! \(from `basename ${repertoire}`\)
+         else
+           ln -s ${repertoire}/${file} ${file}
+           set count = `expr ${count} + 1`
+         endif
+      end
+    endif
+  endif
+end
+
+echo ${count} file\(s\) were linked.

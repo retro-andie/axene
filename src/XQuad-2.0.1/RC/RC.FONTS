@@ -1,0 +1,96 @@
+
+\FONTLIST{
+\FONT{Helvetica
+	\FULLNAME{Helvetica} \FAMILY{Helvetica} \NORMAL 
+	Helvetica.pfc}
+\FONT{Helvetica-Bold
+	\FULLNAME{Helvetica Bold} \FAMILY{Helvetica} \BOLD 
+	Helvetica-Bold.pfc}
+\FONT{Helvetica-Oblique
+	\FULLNAME{Helvetica Oblique} \FAMILY{Helvetica} \ITALIC 
+	Helvetica-Oblique.pfc}
+\FONT{Helvetica-BoldOblique
+	\FULLNAME{Helvetica Bold Oblique} \FAMILY{Helvetica} \BOLD_ITALIC
+	Helvetica-BoldOblique.pfc}
+
+\FONT{AvantGarde-Book
+	\FULLNAME{ITC Avant Garde Gothic Book} 
+	\FAMILY{ITC Avant Garde} \NORMAL
+	AvantGarde-Book.pfc}
+\FONT{AvantGarde-BookOblique
+	\FULLNAME{ITC Avant Garde Gothic Book Oblique} 
+	\FAMILY{ITC Avant Garde} \ITALIC
+	AvantGarde-BookOblique.pfc}
+\FONT{AvantGarde-Demi
+	\FULLNAME{ITC Avant Garde Gothic Demi}
+	\FAMILY{ITC Avant Garde} \BOLD
+	AvantGarde-Demi.pfc}
+\FONT{AvantGarde-DemiOblique
+	\FULLNAME{ITC Avant Garde Gothic Demi Oblique}
+	\FAMILY{ITC Avant Garde} \BOLD_ITALIC
+	AvantGarde-DemiOblique.pfc}
+
+\FONT{NewCenturySchlbk-Roman
+	\FULLNAME{New Century Schoolbook Roman}
+	\FAMILY{New Century Schoolbook} \NORMAL
+	NewCenturySchlbk-Roman.pfc}
+\FONT{NewCenturySchlbk-Bold
+	\FULLNAME{New Century Schoolbook Bold}
+	\FAMILY{New Century Schoolbook} \BOLD
+	NewCenturySchlbk-Bold.pfc}
+\FONT{NewCenturySchlbk-Italic
+	\FULLNAME{New Century Schoolbook Italic}
+	\FAMILY{New Century Schoolbook} \ITALIC
+	NewCenturySchlbk-Italic.pfc}
+\FONT{NewCenturySchlbk-BoldItalic
+	\FULLNAME{New Century Schoolbook Bold Italic}
+	\FAMILY{New Century Schoolbook} \BOLD_ITALIC
+	NewCenturySchlbk-BoldItalic.pfc}
+
+\FONT{Utopia-Regular \FULLNAME{Utopia Regular} 
+	\FAMILY{Utopia} \NORMAL \DOWNLOAD putr.pfa}
+\FONT{Utopia-Bold \FULLNAME{Utopia Bold} 
+	\FAMILY{Utopia} \BOLD \DOWNLOAD putb.pfa}
+\FONT{Utopia-Italic \FULLNAME{Utopia Italic} 
+	\FAMILY{Utopia} \ITALIC \DOWNLOAD putri.pfa}
+\FONT{Utopia-BoldItalic \FULLNAME{Utopia Bold Italic} 
+	\FAMILY{Utopia} \BOLD_ITALIC \DOWNLOAD putbi.pfa}
+
+\FONT{Courier
+	\FULLNAME{Courier}
+	\FAMILY{Courier} \NORMAL
+	Courier.pfc}
+\FONT{Courier-Bold
+	\FULLNAME{Courier Bold}
+	\FAMILY{Courier} \BOLD
+	Courier-Bold.pfc}
+\FONT{Courier-Oblique
+	\FULLNAME{Courier Oblique}
+	\FAMILY{Courier} \ITALIC
+	Courier-Oblique.pfc}
+\FONT{Courier-BoldOblique
+	\FULLNAME{Courier Bold Oblique}
+	\FAMILY{Courier} \BOLD_ITALIC
+	Courier-BoldOblique.pfc}
+
+\FONT{Times-Roman
+	\FULLNAME{Times Roman}
+	\FAMILY{Times} \NORMAL
+	Times-Roman.pfc}
+\FONT{Times-Bold
+	\FULLNAME{Times Bold}
+	\FAMILY{Times} \BOLD
+	Times-Bold.pfc}
+\FONT{Times-Italic
+	\FULLNAME{Times Italic}
+	\FAMILY{Times} \ITALIC
+	Times-Italic.pfc}
+\FONT{Times-BoldItalic
+	\FULLNAME{Times Bold Italic}
+	\FAMILY{Times} \BOLD_ITALIC
+	Times-BoldItalic.pfc}
+
+\FONT{ZapfDingbats \FULLNAME{ITC Zapf Dingbats} ZapfDingbats.pfc}
+\FONT{Symbol \FULLNAME{Symbol} Symbol.pfc}
+}
+

@@ -1,0 +1,104 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Aide générale</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleOverview.gif" ALT="Comment débuter" WIDTH="208" HEIGHT="35">
+</p>
+
+<p><br>
+<br>
+XQuad est un tableur. Un tableur est un logiciel conçu pour effectuer le traitement de
+séries de données numériques. C'est aussi le moyen de rendre ces données présentables
+sous forme de tableaux ou de graphiques. </p>
+
+<p><br>
+</p>
+
+<h2>Principe de base</h2>
+
+<p>XQuad permet l'importation et l'entrée manuelle de données numériques et
+alphanumériques dans des feuilles de calcul. </p>
+
+<p>Une feuille de calcul est un tableau dans lequel les 'cases' nommées <a HREF="Sheet_Cells.html">cellules</a> sont repérées par un système de coordonnées.
+Chaque cellule est située à l'intersection d'une ligne et d'une colonne. Les lignes sont
+repérées par un numéro allant de 1 à 100.000. Les colonnes sont repérées par une
+suite de lettres allant de A à ZZ (soit 702 colonnes). Les coordonnées d'une cellule
+correspondent à la réunion des coordonnée de la colonne et de la ligne auxquelles la
+cellule appartient. </p>
+
+<p>Outre des données alphanumériques et numériques, une cellule peut contenir une
+formule. C'est à ce niveau qu'apparaît l'un des intérêts majeur d'un tableur&nbsp;: à
+l'intérieur d'une formule, il est possible de faire intervenir, en temps qu'argument, la
+référence d'une ou plusieurs autres cellules (grâce à leurs coordonnées). Ces
+références sont dynamiques, c'est à dire que la modification de la valeur d'une cellule
+entraîne le recalcul automatique de toutes cellules la référençant. </p>
+
+<p>De même XQuad permet d'obtenir une représentation visuelle, sous forme de graphique,
+d'une sous partie de la feuille de calcul. Les graphiques sont eux aussi dynamiques&nbsp;:
+le changement d'une valeur utilisée dans un graphique entraîne le recalcul de celui-ci. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<h2>Le lancement</h2>
+<b>
+
+<p>usage&nbsp;:</b> <tt>XQuad [-help] [-version] [-fg&nbsp;&lt;color&gt;]
+[-bg&nbsp;&lt;color&gt;] [-display&nbsp;&lt;displayname&gt;] [-geometry&nbsp;&lt;geom&gt;]
+[-/+opaqueResize] [-opaqueMove&nbsp;&lt;percentage&gt;]
+[-keepFreeColor&nbsp;&lt;number&gt;] [files ...] </tt></p>
+
+<p><b>detail&nbsp;:</b> <tt><b>-help, --help, -h<br>
+</b></tt>Affiche un résumé des paramètres acceptés sur la ligne de commande. </p>
+
+<p><tt><b>-version, -v<br>
+</b></tt>Affiche le numéro de version d'XQuad. </p>
+
+<p><tt><b>-fg color<br>
+</b></tt>Permet de définir la couleur d'avant plan. </p>
+
+<p><tt><b>-bg color<br>
+</b></tt>Permet de définir la couleur d'arrière plan. </p>
+
+<p><tt><b>-display host:dpy<br>
+</b></tt>Spécifie le serveur X à utiliser. </p>
+
+<p><tt><b>-geometry geom<br>
+</b></tt>Fixe la taille de la fenêtre au démarrage. </p>
+
+<p><tt><b>-opaqueResize<br>
+</b></tt>Désactive Le redimensionnement en mode opaque du <a HREF="Document_Window.html">gestionnaire
+de fenêtres</a> interne. </p>
+
+<p><tt><b>+opaqueResize<br>
+</b></tt>Active Le redimensionnement en mode opaque du <a HREF="Document_Window.html">gestionnaire
+de fenêtres</a> interne. </p>
+
+<p><tt><b>-opaqueMove percentage<br>
+</b></tt>Définit en dessous de quel pourcentage de la taille du <a HREF="Main_Interface.html#worktop">plan de travail</a> la fenêtre de document doit être
+déplacée en mode opaque. </p>
+
+<p><tt><b>-keepFreeColor number<br>
+</b></tt>Définit le nombre de couleurs à laisser libre pour l'utilisation d'autres
+applications X. Par défaut, la valeur est 10 pour une palette de 256 couleurs. Cette
+option ne peut être utile que dans le cas où votre serveur X travaille en Pseudo-Color. </p>
+
+<p><tt><b>--xbugpoint, -xbugpoint, -xbp</b></tt><br>
+Sert à corriger un bug de certains pilotes vidéo. Ce paramètre est à utiliser
+seulement si les polices écran ne s'affichent pas normalement. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

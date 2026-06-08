@@ -1,0 +1,185 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Dialog Box: Numeric format</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleDialogBox.gif" ALT="Dialog Box" WIDTH="89" HEIGHT="29"> <img ALIGN="middle" SRC="Images/TitleBoxNumFormat.gif" ALT="Numeric format" WIDTH="330" HEIGHT="37"> </p>
+
+<p><br>
+<br>
+The <i>Numeric format</i> dialog<i> </i>box defines numeric display parameters for
+worksheet cells. These formats apply to both numeric quantities inserted manually and to
+formulas resulting in numeric values. There are five different types of cell content:
+empty, text-filled, containing a formula resulting in text, number-filled, or containing a
+formula resulting in a numeric value. Dates, time, Boolean values, days of the week and
+months of the year are included as numeric values.<br>
+<br>
+</p>
+
+<hr>
+
+<p align="center"><br>
+<img SRC="Images/Box_NumFormat.gif" ALT="Image: Numeric format dialog box" WIDTH="366" HEIGHT="301"> <br>
+<small><i>Screen shot: Numeric format dialog box.</i></small></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p><br>
+</p>
+
+<h3>Left Portion of the Dialog Box:</h3>
+
+<ul>
+  <li><a NAME="format_type_list">The pulldown list of <i>Format Types</i> allows the user to
+    choose only selected number formats from the list. The elements from this list are: <br>
+    &nbsp;<ul>
+      <li><i>All types</i>: displays all available number formats on the list.<br>
+        &nbsp;</li>
+      <li><i>Numbers</i>: displays all available number formats for simple numeric values.<br>
+        &nbsp;</li>
+      <li><i>Units</i>: displays all number formats requiring an identifying unit (monetary
+        formats, for example).<br>
+        &nbsp;</li>
+      <li><i>Scientific</i>: displays all number formats displaying numeric values in an
+        exponential form (for example: 1.123E+15). <br>
+        &nbsp;</li>
+      <li><i>Percentage</i>: displays all number formats displaying percentage values (numbers
+        followed by % sign). Numeric values displayed in this mode are automatically multiplied by
+        100 (0,15 will be displayed: 15%).<br>
+        &nbsp;</li>
+      <li><i>Fractions</i>: displays all number formats with numeric fractions. (0,125 will be
+        displayed as <i>1/8</i>).<br>
+        &nbsp;</li>
+      <li><i>Boolean Values</i>: display all number formats using Boolean values. Boolean numbers
+        may consist only of two options: <i>False</i> if the number is 0 or <i>True</i> if it is
+        not 0.<br>
+        &nbsp;</li>
+      <li><i>Days of the Week</i>: Displays all number formats displaying the names of days of the
+        week. (&quot;Monday&quot; for example). A 0 (zero) value corresponds to Sunday, a one (1)
+        to Monday, etc.<br>
+        &nbsp;</li>
+      <li><i>Months of the Year</i>: Displays all number formats displaying the names of months of
+        the year. (&quot;January&quot; for example). A 1 (one) value represents January, 2 (two)
+        February, etc.<br>
+        &nbsp;</li>
+      <li><i>Time:</i> Displays all number formats displaying time (14:21:12PM for example) Time
+        is kept on the fractional portion of a number: a thousandth of one second equals:
+        1/(24*60*60*1000); a minute equals 1/(24*60) and an hour is 1/24.<br>
+        &nbsp;</li>
+      <li><i>Dates</i>: Display all number formats displaying dates (25/12/1995 for example).
+        Dates are kept as a fractional portion of a number and reflect the number of days since
+        January 1, 2000 (dates prior to 2000 are displayed as negative.)<br>
+        &nbsp;</li>
+      <li><i>Dates and Times</i>: Displays all number formats showing dates followed by time
+        (25/12/1995 14:21 PM for example).<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li></a><a NAME="format_list">The list indicates pre-defined numeric formats. When selecting
+    an item from the list, its characteristics appear on the right. Several formats may be
+    selected by using the <tt>CTRL</tt> key, as long as the chosen format filter is not <i>All
+    Types</i><br>
+    &nbsp;</li>
+  <li></a><a NAME="format_textfield">The text field at the bottom of the list permits the user
+    to change the name of the numeric format selected.<br>
+    &nbsp;</li>
+  <li></a><a NAME="button_new">The <i>Add Format</i> button creates a new numeric format. By
+    default this new format will have the same characteristics as the selected format and the
+    same name followed by a number.<br>
+    &nbsp;</li>
+  <li></a><a NAME="button_del">The <i>Delete Format</i> button deletes a numeric format. All
+    formats are not available for deletion (there must remain at least one of each format
+    type) and the user may not delete a format in current use.<br>
+    &nbsp;</li>
+</ul>
+
+<p><br>
+</p>
+
+<h3>Right Portion of the Dialog Box: </h3>
+
+<p>The right portion of the dialog box allows the user to see and change number format
+characteristics selected from the format list. Because each numeric format has individual
+characteristics, the right portion of this dialog box differs depending on the case. It
+always contains, from top to bottom: 
+
+<ul>
+  <li></a><a NAME="button_bar">A horizontal toolbar to alter the contents of the <i>Configuration</i>
+    section. The number and types of buttons on this bar differ according to the type of
+    numeric format selected.<br>
+    &nbsp;</li>
+  <li></a><a NAME="setup_frame">The <i>Configuration</i> section allows the user to see and
+    change certain characteristics of the selected numeric format. The contents of this
+    section differ according to the button selected from the horizontal bar described above.<br>
+    &nbsp;</li>
+  <li></a><a NAME="preview_frame">The <i>Preview</i> section contains a non-editable text
+    field. This gives the user a preview of the selected numeric format. The preview number is
+    either a predefined, constant number, or the value of the active cell from the worksheet.<br>
+    &nbsp;</li>
+</ul>
+
+<p>When the selected number format is: 
+
+<ul>
+  <li><i>Numbers,</i> the toolbar's buttons are </a><a HREF="Box_NumFmt_Display.html#bnf_display_1"><i>Display</i></a> and <a HREF="Box_NumFmt_Colors.html#bnf_colors_1"><i>Colors</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Units</i>, the toolbar's buttons are <a HREF="Box_NumFmt_Colors.html#bnf_colors_1"><i>Colors</i></a>,
+    <a HREF="Box_NumFmt_Display.html#bnf_display_1"><i>Display</i></a> and <a HREF="Box_NumFmt_UnitStyleText.html#bnf_unit"><i>Units</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Scientific</i>, the toolbar's buttons are <a HREF="Box_NumFmt_Display.html#bnf_display_2"><i>Display</i></a>, <a HREF="Box_NumFmt_Colors.html#bnf_colors_1"><i>Colors</i></a> and <a HREF="Box_NumFmt_UnitStyleText.html#bnf_unit"><i>Units</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Percentage</i>, the toolbar's buttons are <a HREF="Box_NumFmt_Display.html#bnf_display_1"><i>Display</i></a> and <a HREF="Box_NumFmt_Colors.html#bnf_colors_1"><i>Colors</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Fractions</i>, the toolbar's buttons are <a HREF="Box_NumFmt_Display.html#bnf_display_3"><i>Display</i></a>, <a HREF="Box_NumFmt_Colors.html#bnf_colors_1"><i>Colors</i></a> and <a HREF="Box_NumFmt_UnitStyleText.html#bnf_unit"><i>Units</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Boolean Values,</i> the toolbar's buttons are <a HREF="Box_NumFmt_UnitStyleText.html#bnf_text"><i>Text</i></a> and <a HREF="Box_NumFmt_Colors.html#bnf_colors_2"><i>Colors</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Days of the Week</i>, the toolbar's button is <a HREF="Box_NumFmt_UnitStyleText.html#bnf_style"><i>Style</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Months of the year,</i> the toolbar's button is <a HREF="Box_NumFmt_UnitStyleText.html#bnf_style"><i>Style</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Time,</i> the toolbar's button is <a HREF="Box_NumFmt_HourDate.html#bnf_hour"><i>Time</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Dates,</i> the toolbar's button is <a HREF="Box_NumFmt_HourDate.html#bnf_date"><i>Date</i></a>.<br>
+    &nbsp;</li>
+  <li><i>Dates and Times,</i> the toolbar's buttons are <a HREF="Box_NumFmt_HourDate.html#bnf_date"><i>Date</i></a> and <a HREF="Box_NumFmt_HourDate.html#bnf_hour"><i>Time</i></a>.<br>
+    &nbsp;</li>
+</ul>
+
+<p><strong>Note</strong>: When either the <i>Date</i> or <i>Time</i> button is selected,
+the text field in the preview section can be modified manually.</p>
+
+<p><br>
+</p>
+
+<h3>Lower Portion of the Dialog Box:</h3>
+
+<ul>
+  <li><a NAME="button_apply"><i>&quot;Apply&quot;</i> accepts all modifications carried out on
+    the format list and applies the last selected numeric format to the selected cell regions.
+    The box is then closed.</a><br>
+    &nbsp;</li>
+  <li><a NAME="button_ok"><i>&quot;Ok&quot;</i> accepts all the modifications carried out on
+    the numeric format list and closes the box. All numeric values using modified formats will
+    be updated automatically.</a><br>
+    &nbsp;</li>
+  <li><a NAME="button_cancel"><i>&quot;Cancel&quot;</i> cancels all operations to the numeric
+    format list and closes the box.</a><br>
+    &nbsp;</li>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98. Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Documentation XMayday (c)1996-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Help Configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Configuration files" WIDTH="136" HEIGHT="25"> <img ALIGN="middle" SRC="Images/TitleConfigHelp.gif" ALT="Help Configuration" WIDTH="208" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+This <a HREF="Config.html">configuration file</a> section configures the paths and
+applications used to call up help. </p>
+
+<h3>On-line Help Configuration Section: <i>\HELP_CONFIG{...}</i></h3>
+
+<p>This section defines XMayday's on-line help configuration. The help definition begins
+after the opening bracket <i>&quot;{&quot;</i> and before the corresponding closing
+bracket <i>&quot;}&quot;</i>. The configuration parameters are: 
+
+<ul>
+  <li><b>\BASE_LOCATION{path}</b> where <i>path</i> represents the help-file pathway. </li>
+</ul>
+
+<h3>Example:</h3>
+<tt>
+
+<p>\HELP_CONFIG{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\BASE_LOCATION{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$XMAYDAY_LIB/doc/XMayday/English<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+} </tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXMayday.gif" ALT="XMayday (c)1997. Axene" WIDTH="164" HEIGHT="31"></p>
+</body>
+</html>

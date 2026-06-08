@@ -1,0 +1,21 @@
+/* XPM */
+static char * arrow_red_xpm[] = {
+"11 15 3 1 0 0",
+" 	s None	c None",
+".	c black",
+"X	c red",
+".          ",
+"..         ",
+".X.        ",
+".XX.       ",
+".XXX.      ",
+".XXXX.     ",
+".XXXXX.    ",
+".XXXXXX.   ",
+".XXXXXXX.  ",
+".XXXXXXXX. ",
+".XXX.......",
+".XX.       ",
+".X.        ",
+"..         ",
+".          "};

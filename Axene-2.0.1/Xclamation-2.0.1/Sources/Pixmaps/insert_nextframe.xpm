@@ -1,0 +1,28 @@
+/* XPM */
+static char * insert_nextframe_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"32 18 5 1",
+" 	s None	c None",
+".	c white",
+"X	c black",
+"o	c gray80",
+"O	c red",
+/* pixels */
+"                                ",
+"                                ",
+"   ..........     ..........    ",
+"   .XXXXXXXX.X    .XXXXXXXX.X   ",
+"   .Xooooooo.X    .Xooooooo.X   ",
+"   .Xooooooo.X    .XoOooooo.X   ",
+"   .Xooooooo.X    .XoOOoooo.X   ",
+"   .XoooooOOOOOOOOOOOOOOooo.X   ",
+"   .XoooooOOOOOOOOOOOOOOOoo.X   ",
+"   .XoooooOOOOOOOOOOOOOOXXo.X   ",
+"   .XooooooXXXXXXXXXXOOXXoo.X   ",
+"   .Xooooooo.X    .XoOXXooo.X   ",
+"   .Xooooooo.X    .XooXoooo.X   ",
+"   .Xooooooo.X    .Xooooooo.X   ",
+"   ..........X    ..........X   ",
+"    XXXXXXXXXX     XXXXXXXXXX   ",
+"                                ",
+"                                "};

@@ -1,0 +1,84 @@
+%{
+#include "AFM.h"
+%}
+struct AFM_keyword_s { char *name; enum keyword_e type;};
+%%
+Comment, AK_COMMENT
+;, AK_SEPARATOR
+#
+#___AFM Specific___
+StartFontMetrics, AK_START_FONT_METRICS
+EndFontMetrics, AK_END_FONT_METRICS
+#
+#___Control Information___
+MetricSets, AK_METRICS_SETS
+#
+#___Global Font Information___
+FontName, AK_FONT_NAME
+FullName, AK_FULL_NAME
+FamilyName, AK_FAMILY_NAME
+Weight, AK_WEIGHT
+FontBBox, AK_FONT_BBOX
+Version, AK_VERSION
+Notice, AK_NOTICE
+EncodingScheme, AK_ENCODING_SCHEME
+MappingScheme, AK_MAPPING_SCHEME
+EscChar, AK_ESC_CHAR
+CharacterSet, AK_CHARACTER_SET
+Characters, AK_CHARACTERS
+IsBaseFont, AK_IS_BASE_FONT
+VVector, AK_V_VECTOR
+IsFixedV, AK_IS_FIXED_V
+CapHeight, AK_CAP_HEIGHT
+XHeight, AK_X_HEIGHT
+Ascender, AK_ASCENDER
+Descender, AK_DESCENDER
+#
+#___Writing Direction Information___
+StartDirection, AK_START_DIRECTION
+EndDirection, AK_END_DIRECTION
+UnderlinePosition, AK_UNDERLINE_POSITION
+UnderlineThickness, AK_UNDERLINE_THICKNESS
+ItalicAngle, AK_ITALIC_ANGLE
+CharWidth, AK_CHAR_WIDTH
+IsFixedPitch, AK_IS_FIXED_PITCH
+#
+#___Individual Character Metrics___
+StartCharMetrics, AK_START_CHAR_METRICS
+EndCharMetrics, AK_END_CHAR_METRICS
+C, AK_C
+CH, AK_CH
+WX, AK_WX
+W0X, AK_W0X
+W1X, AK_W1X
+WY, AK_WY
+W0Y, AK_W0Y
+W1Y, AK_W1Y
+W, AK_W
+W0, AK_W0
+W1, AK_W1
+VV, AK_VV
+N, AK_N
+B, AK_B
+L, AK_L
+#
+#___Kerning Data___
+StartKernData, AK_START_KERN_DATA
+EndKernData, AK_END_KERN_DATA
+StartTrackKern, AK_START_TRACK_KERN
+EndTrackKern, AK_END_TRACK_KERN
+TrackKern, AK_TRACK_KERN
+StartKernPairs, AK_START_KERN_PAIRS
+EndKernPairs, AK_END_KERN_PAIRS
+StartKernPairs0, AK_START_KERN_PAIRS0
+StartKernPairs1, AK_START_KERN_PAIRS1
+KP, AK_KP
+KPH, AK_KPH
+KPX, AK_KPX
+KPY, AK_KPY
+#
+#___Composite Character___
+StartComposites, AK_START_COMPOSITES
+EndComposites, AK_END_COMPOSITES,
+CC, AK_CC
+PCC, AK_PCC

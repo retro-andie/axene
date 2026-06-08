@@ -1,0 +1,1077 @@
+
+*title:				Axene XQuad 1.4.3 - Hoja electrónica    
+*lPleaseWait.labelString:		Lanzamiento en curso...
+
+*defaultFrameNameMsg:			Marco
+*defaultDocumentNameMsg:		Sín título
+*defaultSheetNameMsg:			Hoja
+*automaticColorMsg:			Automático
+
+
+! ************************************************************************
+! **                    MNEMONICS for PULLDOWN MENUS                    **
+! ************************************************************************
+
+*pmFile.mnemonic:                       F
+*pmEdit.mnemonic:                       E
+*pmSelect.mnemonic:                     S
+*pmDisplay.mnemonic:                    V
+*pmFormat.mnemonic:                     o
+*pmGraph.mnemonic:                      G
+*pmWindows.mnemonic:                    n
+*pmHelp.mnemonic:                       A
+
+*pmFile.mNew.mnemonic:                  N
+*pmFile.mOpen.mnemonic:                 A
+*pmFile.mClose.mnemonic:                C
+*pmFile.mSave.mnemonic:                 S
+*pmFile.mSaveAs.mnemonic:               l
+*pmFile.mSaveAll.mnemonic:              v
+*pmFile.mAcquire.mnemonic:              I
+*pmFile.mExport.mnemonic:               E
+*mExportVector.mnemonic:                D
+*mExportText.mnemonic:                  T
+*mExportHTML.mnemonic:                  H
+*pmFile.mPrintSetup.mnemonic:           o
+*pmFile.mPrint.mnemonic:                m
+*pmFile.mQuit.mnemonic:                 r
+
+*pmEdit.mCut.mnemonic:                  C
+*pmEdit.mCopy.mnemonic:                 o
+*pmEdit.mPaste.mnemonic:                P
+*pmEdit.mDeleteFrame.mnemonic:          S
+*pmEdit.mDelete.mnemonic:               S
+*mDeleteAll.mnemonic:                   t
+*mDeleteFormula.mnemonic:               F
+*mDeleteFormat.mnemonic:                o
+*mDeletePattern.mnemonic:               n
+*mDeleteBorder.mnemonic:                L
+*mDeleteStyle.mnemonic:                 E
+*mDeletePosition.mnemonic:              P
+*mDeleteFont.mnemonic:                  a
+*pmEdit.mInsertRow.mnemonic:            I
+*pmEdit.mDeleteRow.mnemonic:            L
+*pmEdit.mInsertColumn.mnemonic:         n
+*pmEdit.mDeleteColumn.mnemonic:         u
+*pmEdit.mCopyBottom.mnemonic:           b
+*pmEdit.mCopyRight.mnemonic:            d
+*pmEdit.mColors.mnemonic:               r
+
+*pmSelect.mPasteFunction.mnemonic:      F
+*pmSelect.mGotoCell.mnemonic:           A
+*pmSelect.mGotoActiveCell.mnemonic:     l
+*pmSelect.mGotoLastCell.mnemonic:       n
+*pmSelect.mSelectToLastCell.mnemonic:   Z
+*pmSelect.mSelectAllCells.mnemonic:     C
+*pmSelect.mSelectAllFrames.mnemonic:    M
+
+*pmDisplay.mRedraw.mnemonic:            T
+*pmDisplay.mMaskGrid.mnemonic:          R
+*pmDisplay.mShowGrid.mnemonic:          R
+*pmDisplay.mMaskInfobar.mnemonic:       I
+*pmDisplay.mShowInfobar.mnemonic:       I
+*pmDisplay.mMaskFrameBorders.mnemonic:  n
+*pmDisplay.mShowFrameBorders.mnemonic:  n
+*pmDisplay.mMaskColOrigin.mnemonic:     C
+*pmDisplay.mShowColOrigin.mnemonic:     C
+*pmDisplay.mMaskRowOrigin.mnemonic:     L
+*pmDisplay.mShowRowOrigin.mnemonic:     L
+*pmDisplay.mMaskSeparator.mnemonic:     S
+*pmDisplay.mShowSeparator.mnemonic:     S
+*pmDisplay.mShowFormula.mnemonic:       F
+*pmDisplay.mMaskFormula.mnemonic:       F
+*pmDisplay.mMaskZeroCell.mnemonic:      e
+*pmDisplay.mShowZeroCell.mnemonic:      e
+*pmDisplay.mActivMagnet.mnemonic:       M
+*pmDisplay.mStopMagnet.mnemonic:        M
+
+*pmFormat.mNumbers.mnemonic:            N
+*pmFormat.mPatterns.mnemonic:           F
+*pmFormat.mBorders.mnemonic:            L
+*pmFormat.mFonts.mnemonic:              P
+*pmFormat.mRowColSize.mnemonic:         c
+
+*pmGraph.mGraphHBar.mnemonic:           B
+*pmGraph.mGraphVBar.mnemonic:           H
+*pmGraph.mGraphLayer.mnemonic:          A
+*pmGraph.mGraphLine.mnemonic:           C
+*pmGraph.mGraphPie.mnemonic:            S
+*pmGraph.mGraphRadar.mnemonic:          R
+*pmGraph.mMaskLegend.mnemonic:          P
+*pmGraph.mShowLegend.mnemonic:          P
+*pmGraph.mMaskAxeMarks.mnemonic:        o
+*pmGraph.mShowAxeMarks.mnemonic:        o
+*pmGraph.mMaskTitle.mnemonic:           T
+*pmGraph.mShowTitle.mnemonic:           T
+*pmGraph.mMaskFirstSerieLabel.mnemonic: e
+*pmGraph.mShowFirstSerieLabel.mnemonic: e
+*pmGraph.mMaskSerieTitles.mnemonic:     N
+*pmGraph.mShowSerieTitles.mnemonic:     N
+*pmGraph.mGraphSetup.mnemonic:          f
+
+*pmWindows.mCascade.mnemonic:           C
+*pmWindows.mTile.mnemonic:              M
+
+*pmHelp.mOverview.mnemonic:             G
+*pmHelp.mContent.mnemonic:              I
+*pmHelp.mKeyboard.mnemonic:             T
+*pmHelp.mMouse.mnemonic:                R
+*pmHelp.mOnItem.mnemonic:               A
+*pmHelp.mUsingHelp.mnemonic:            U
+*pmHelp.mLegal.mnemonic:                L
+*pmHelp.mRegistration.mnemonic:         D
+*pmHelp.mAbout.mnemonic:                X
+
+
+! ************************************************************************
+! **                            PULLDOWN MENUS                          **
+! ************************************************************************
+
+*pmFile.labelString:			Fichero
+*pmFile.mNew.labelString:		Nuevo
+*pmFile.mOpen.labelString:		Abrir...
+*pmFile.mClose.labelString:		Cerrar
+*pmFile.mSave.labelString:		Salvaguardar
+*pmFile.mSaveAs.labelString:		Salvaguardar bajo...
+*pmFile.mSaveAll.labelString:		Salvaguardarlo todo
+*pmFile.mAcquire.labelString:		Importar...
+*pmFile.mExport.labelString:		Exportar
+*mExportVector.labelString:		Dibujo vectorial...
+*mExportText.labelString:		Texto...
+*mExportHTML.labelString:		HTML...
+*pmFile.mPrintSetup.labelString:	Configurar la impresión...
+*pmFile.mPrint.labelString:		Imprimir...
+*pmFile.mQuit.labelString:		Salir...
+
+*pmEdit.labelString:			Edición
+*pmEdit.mCut.labelString:		Cortar
+*pmEdit.mCopy.labelString:		Copiar
+*pmEdit.mPaste.labelString:		Pegar
+*pmEdit.mDeleteFrame.labelString:	Suprimir
+*pmEdit.mDelete.labelString:		Suprimir
+*mDeleteAll.labelString:		Suprimirlo todo
+*mDeleteFormula.labelString:		Suprimir Fórmulas
+*mDeleteFormat.labelString:		Suprimir Formatos
+*mDeletePattern.labelString:		Suprimir Fondos
+*mDeleteBorder.labelString:		Suprimir Lindes
+*mDeleteStyle.labelString:		Suprimir Estilos 
+*mDeletePosition.labelString:		Suprimir Posiciones
+*mDeleteFont.labelString:		Suprimir Placas
+*pmEdit.Tout selectionner.labelString:	Seleccionarlo todo 
+*pmEdit.mColors.labelString:		Colores...
+*pmEdit.mInsertRow.labelString:		Insertar Líneas
+*pmEdit.mInsertColumn.labelString:	Insertar Columnas
+*pmEdit.mDeleteRow.labelString:		Suprimir Líneas 
+*pmEdit.mDeleteColumn.labelString:	Suprimir Columnas
+*pmEdit.mCopyBottom.labelString:	Copiar hacia abajo
+*pmEdit.mCopyRight.labelString:		Copiar hacia la derecha
+
+*pmSelect.labelString:			Selección
+*pmSelect.mPasteFunction.labelString:	Pegar una Función...
+*pmSelect.mGotoCell.labelString:	Alcanzar la célula...
+*pmSelect.mGotoActiveCell.labelString:	Alcanzar la célula activa
+*pmSelect.mGotoLastCell.labelString:	Alcanzar la última célula 
+*pmSelect.mSelectToLastCell.labelString: Seleccionar la Zona útil
+*pmSelect.mSelectAllCells.labelString:	Seleccionar todas las Células
+*pmSelect.mSelectAllFrames.labelString:	Seleccionar todos los Marcos
+
+*pmDisplay.labelString:			Visualización
+*pmDisplay.mRedraw.labelString:		Refrescarlo Todo
+*pmDisplay.mMaskGrid.labelString:	Ocultar  Rejilla
+*pmDisplay.mShowGrid.labelString:	Visualizar Rejilla 
+*pmDisplay.mMaskInfobar.labelString:	Ocultar barra de Informaciones
+*pmDisplay.mShowInfobar.labelString:	Visualizar barra de Informaciones
+*pmDisplay.mMaskFrameBorders.labelString: Ocultar Lindes de los marcos
+*pmDisplay.mShowFrameBorders.labelString: Visualizar Lindes de los marcos
+*pmDisplay.mMaskColOrigin.labelString:	Ocultar encabezamientos de las Columnas
+*pmDisplay.mShowColOrigin.labelString:	Visualizar encabezamientos de las Columnas
+*pmDisplay.mMaskRowOrigin.labelString:	Ocultar encabezamientos de las Líneas
+*pmDisplay.mShowRowOrigin.labelString:	Visualizar encabezamientos de las Líneas
+*pmDisplay.mShowSeparator.labelString:	Visualizar Separadores
+*pmDisplay.mMaskSeparator.labelString:	Ocultar Separadores
+*pmDisplay.mShowFormula.labelString:	Visualizar Fórmulas
+*pmDisplay.mMaskFormula.labelString:	Visualizar Resultados
+*pmDisplay.mMaskZeroCell.labelString:	Ocultar los Ceros
+*pmDisplay.mShowZeroCell.labelString:	Visualizar los Ceros
+*pmDisplay.mActivMagnet.labelString:	Activar Magnetismo
+*pmDisplay.mStopMagnet.labelString:	Parar Magnetismo
+
+*pmFormat.labelString:			Formato
+*pmFormat.mNumbers.labelString:		Números...
+*pmFormat.mPatterns.labelString:	Fondos...
+*pmFormat.mBorders.labelString:		Lindes...
+*pmFormat.mFonts.labelString:		Placas...
+*pmFormat.mRowColSize.labelString:	Líneas y columnas...
+
+*pmGraph.labelString:			Grafos
+*pmGraph.mGraphHBar.labelString:	Crear Barras...
+*pmGraph.mGraphVBar.labelString:	Crear Histogramas...
+*pmGraph.mGraphLayer.labelString:	Crear Areas...
+*pmGraph.mGraphLine.labelString:	Crear Curvas...
+*pmGraph.mGraphPie.labelString:		Crear Sectores...
+*pmGraph.mGraphRadar.labelString:	Crear Radares...
+*pmGraph.mMaskLegend.labelString:	Ocultar Pie
+*pmGraph.mShowLegend.labelString:	Visualizar Pie
+*pmGraph.mMaskAxeMarks.labelString:	Ocultar Líneas de ordenadas
+*pmGraph.mShowAxeMarks.labelString:	Visualizar Líneas de ordenadas
+*pmGraph.mMaskTitle.labelString:	Ocultar Título
+*pmGraph.mShowTitle.labelString:	Visualizar Título
+*pmGraph.mMaskFirstSerieLabel.labelString: Ocultar Texto de las abscisas
+*pmGraph.mShowFirstSerieLabel.labelString: Visualizar Texto de las abscisas
+*pmGraph.mMaskSerieTitles.labelString:	Ocultar Nombre de las series
+*pmGraph.mShowSerieTitles.labelString:	Nombre de las series
+*pmGraph.mGraphSetup.labelString:	Configuración...
+
+*pmWindows.labelString:			Ventanas
+*pmWindows.mCascade.labelString:	Cascada
+*pmWindows.mTile.labelString:		Mosaico
+
+*pmHelp.labelString:			Ayuda
+*pmHelp.mOverview.labelString:		Ayuda General...
+*pmHelp.mContent.labelString:		Indice...
+*pmHelp.mKeyboard.labelString:		Teclado...
+*pmHelp.mMouse.labelString:		Ratón...
+*pmHelp.mOnItem.labelString:		Ayuda en un Item
+*pmHelp.mUsingHelp.labelString:		Utilizar la ayuda...
+*pmHelp.mAbout.labelString:		A propósito de XQuad...
+*pmHelp.mLegal.labelString:		Licencia...
+*pmHelp.mRegistration.labelString:	Listas de Difusión...
+
+
+! ************************************************************************
+! **                            DIALOG BOXES                            **
+! ************************************************************************
+
+
+! ** Dialog Box: REPLACE FONT ********************************************
+
+*lFontSelekeyFirsct.labelString:	Placa indisponible
+*tbKeepAlias.labelString:		Guardar el vínculo
+
+
+! ** Dialog Box: LICENSE *************************************************
+
+*lBoxLicense.labelString: The Licence file is missing.\n\
+It should be in $AXENE_LIB/license/\n\
+The installation may be incomplete.
+
+*keyFirstMsg:		Licencia concedida a %s
+*keySecondMsg:		%s
+*noKeyFirstMsg:		No tiene Ud llave
+*noVKeyFirstMsg:	Llave no válida
+*noKeySecondMsg:	Remember you can register
+*noVKeySecondMsg:	Sírvase llamar support@axene.org
+*deadlineExpiredMsg:	Su llave ha llegado a expiración
+*deadlineExpired2Msg:	You must register once again
+
+*lLegalAdress.labelString: Email: contact@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org
+
+*lLegalCopy.labelString: Copyright (c)1995-2000 Axene, Inc. Derechos reservados\n\
+XQuad es una marca depositada.
+
+*BoxLegal*Ok.labelString:		How to registrer...
+*BoxLegal*Cancel.labelString:		Register later
+
+
+! ** Dialog Box: LICENSE2 *************************************************
+
+*lLegal2Title.labelString:		Why and How to register ?
+*lBoxLegal2.labelString: The Register file is missing.\n\
+It should be in $AXENE_LIB/license/\n\
+The installation may be incomplete.
+
+
+ ! ** Dialog Box: COLORS **************************************************
+
+*editColorsMsg:			Preparación de los colores
+*lColor.labelString:		Testigo de color
+*l_C.labelString:		Cyan
+*l_M.labelString:		Magenta
+*l_Y.labelString:		Amarillo
+*l_K.labelString:		Negro
+*l_R.labelString:		Rojo
+*l_G.labelString:		Verde
+*l_B.labelString:		Azul
+*l_H.labelString:		Tinte
+*l_S.labelString:		Saturación
+*l_L.labelString:		Luminosidad
+*l_G1.labelString:		Grís
+*lColorAdd.labelString:		Añadir color
+*lColorDel.labelString:		Suprimir color
+*fBCmain.labelString:		Configuración
+*tbBC_CMYK.labelString:		CMAN
+*tbBC_RGB.labelString:		RVA
+*tbBC_HSL.labelString:		TSL
+*tbBC_GRAY.labelString:		Grís
+
+
+! ** Dialog Box: FRAME ATTRIBUTES ****************************************
+
+*frameAttribsMsg:		Atributos de los marcos
+*lBABackColor.labelString:	Color de fondo
+*lBABorderColor.labelString:	Color de los bordes
+*lBABorderWidth.labelString:	Grosor del linde
+*fBAPreview.labelString:	Testigo
+
+
+! ** Dialog Box: CELLS PATTERNS ******************************************
+
+*lBoxPatternTitle.labelString:	Fondo de las células
+*lBPForeColor.labelString:	Color del primer plano
+*lBPBackColor.labelString:	Color del plano de fondo
+*fBPColors.labelString:		Colores
+*fBPPatterns.labelString:	Catálogo de los motivos 
+
+
+! ** Dialog Box: CELLS BORDERS *******************************************
+
+*lBoxBordersTitle.labelString:	Atribución de los lindes a las células          
+*lBBOutline.labelString:	Contorno
+*lBBTop.labelString:		Arriba          
+*lBBBottom.labelString:		Abajo
+*lBBLeft.labelString:		Izquierda
+*lBBRight.labelString:		Derecha
+*lBBPattern.labelString:	Tipo de trazo
+*lBBDash.labelString:		Punteado
+*lBBForeColor.labelString:	Color de primer plano
+*lBBBackColor.labelString:	Color de plano de fondo
+*fBBBorders.labelString:	Aplicar a...
+*fBBLineStyle.labelString:	Estilo de la línea
+
+
+! ** Dialog Box: NUMBER FORMAT *******************************************
+
+*styleNumbersMsg:		Formateo de los números
+*tbColor.labelString:		Colores
+*tbColor2.labelString:		Colores
+*tbStdPrec.labelString:		Visualización
+*tbExpPrec.labelString:		Visualización
+*tbLinks.labelString:		Vínculos
+*tbUnit.labelString:		Unidad
+*tbFracPrec.labelString:	Visualización
+*tbBoolean.labelString:		Texto
+*tbDay.labelString:		Estilo
+*tbMonth.labelString:		Estilo
+*lBNPositiveColor.labelString:	Color de los números positivos
+*lBNNegativeColor.labelString:	Color de los números negativos  
+*lBNUnitString.labelString:	Unidad del número
+*tbBNUnitAfter.labelString:	Colocar la unidad tras el número
+*tbBNTruncate.labelString:	Cortar las decimales al visualizar
+*lBNMaxPrecision.labelString:	Precisión Máxima
+*lBNMinPrecision.labelString:	Precisión Mínima
+*lBNSeparatorString.labelString:	Separador de decimales
+*lBNSeparatorMString.labelString:	Separador de miles
+*lBNSeparatorPosition.labelString:	Separador de todos los grupos
+*tbBNfracDecimal.labelString:	Quebrado en la parte decimal
+*lBNFracPrecision.labelString:	Precisión del denominador
+*lBNTrueString.labelString:	Texto para VERDADERO
+*lBNFalseString.labelString:	Texto para FALSO
+*BnColPositiveMsg:		Color de los números positivos
+*BnColNegativeMsg:		Color de los números negativos
+*BnColTrueMsg:			Color para VERDADERO
+*BnColFalseMsg:			Color para FALSO
+*rbDayNameVeryShort.labelString:Formato muy corto
+*rbDayNameShort.labelString:	Formato corto
+*rbDayNameLong.labelString:	Formato largo
+*rbMonthNameVeryShort.labelString:	Formato muy corto
+*rbMonthNameShort.labelString:	Formato corto
+*rbMonthNameLong.labelString:	Formato largo
+*lBNLnormal.labelString:	Números
+*lBNLunit.labelString:		Unidades
+*lBNLpercent.labelString:	Porcentajes
+*lBNLfraction.labelString:	Quebrados
+*lBNLboolean.labelString:	Booleanos
+*lBNLday.labelString:		Días
+*lBNLmonth.labelString:		Meses
+*lBNLtime.labelString:		Horas
+*lBNLdate.labelString:		Fechas
+*lBNLdate_time.labelString:	Fechas + Horas
+*tbTime.labelString:		Hora
+*lHour.labelString:		Horas(12)
+*lMinute.labelString:		Minutos
+*lSecond.labelString:		Segundos
+*lTenthOfSecond.labelString:	Décimos de segundos
+*lHundredthOfSecond.labelString:	Centésimos de segundos
+*lThousandthOfSecond.labelString:	Milésimos de segundos
+*tbDate.labelString:		Fecha
+*lYear.labelString:		Año
+*lMonth.labelString:		Mes
+*lWeek.labelString:		Semana
+*lDay.labelString:		Día
+*lDayInYear.labelString:	Día del año
+*lPadding.labelString:		Relleno
+*tbNoPad.labelString:		Ninguno
+*tbPadWith0.labelString:	con '0'
+*tbPadWithSpace.labelString:	con ' '
+*lNameSize.labelString:		Tamaño
+*tbNSVeryShort.labelString:	Muy corto
+*tbNSShort.labelString:		Corto
+*tbNSLong.labelString:		Largo
+*lSep.labelString:		Separadores
+*lBNStringEString.labelString:	Presentación del exponente
+*lBNExpMinDigit.labelString:	Tamaño mínimo del exponente
+*lBNExpMul.labelString:		Exponente múltiple de
+*tbBNExpSign.labelString:	Siempre visualizar el signo del exponente
+*lBNumAdd.labelString:		Añadir formato
+*lBNumDel.labelString:		Suprimir formato
+*fBNSetup.labelString:		Configuración
+*fBNPreview.labelString:	Testigo
+*fPadding.labelString:		Alineación
+*fNameSize.labelString:		Largura de los nombres
+
+*BnFmtAllMsg:		Todos los tipos
+*BnFmtNormalMsg:	Números
+*BnFmtUnitMsg:		Unidades
+*BnFmtExponantialMsg:	Científicos
+*BnFmtPercentMsg:	Porcentajes
+*BnFmtFracMsg:		Quebrados
+*BnFmtBooleanMsg:	Booleanos
+*BnFmtDayMsg:		Días de la semana
+*BnFmtMonthMsg:		Meses en el año
+*BnFmtTimeMsg:		Horas
+*BnFmtDateMsg:		Fechas
+*BnFmtDateTimeMsg:	Fechas + Horas
+
+
+! ** Dialog Box: ROWS & COLUMNS SIZE *************************************
+
+*lBoxColSizeTitle.labelString:	Tamaño de las líneas y de las columnas
+*lCSColSize.labelString:	Anchura de columna
+*lCSRowSize.labelString:	Altura de línea
+*tbCSColSize.labelString:	Aplicar
+*tbCSRowSize.labelString:	Aplicar
+*fCSColSize.labelString:	Columnas
+*fCSRowSize.labelString:	Líneas
+
+
+! ** Dialog Box: FONTS ***************************************************
+
+*editStylesMsg:				Composición de las placas
+*lAddFont.labelString:			Añadir placa
+*lDelFont.labelString:			Suprimir placa 
+*tbBSglobal.labelString:		Atributos
+*tbBSconfig.labelString:		Configuraciones 
+*lBSfamily.labelString:			Familia 
+*lBSfontsize.labelString:		Tamaño
+*lBSwidth.labelString:			Anchura
+*lBSthickness.labelString:		Gr.
+*lBSypos.labelString:                   Y-Pos
+*lBSscale.labelString:			Tamaño
+*lBSshadow_dx.labelString:              dX
+*lBSshadow_dy.labelString:              dY
+*lBSstrikeout_dy.labelString:           dY
+*lBSunderline_dy.labelString:           dY
+*tbBSsupscript.labelString:		Exponente...
+*tbBSsubscript.labelString:		Indice...
+*tbBSsmallcaps.labelString:		Pequeñas mayúsculas
+*tbBSbigcaps.labelString:		Mayúsculas
+*tbBSwidth.labelString:			Anchura...
+*fBSoverview.labelString:		Resumen de los parámetros
+*fBSpreview.labelString:		Testigo
+*fBSmain.labelString:			Configuración
+*fBSwidth.labelString:			Anchura
+*fBSunderline.labelString:		Subrayado
+*fBSstrikeout.labelString:		Barrado
+*fBSshadow.labelString:			Sombreado
+*fBSsupscript.labelString:		Exponente
+*fBSsubscript.labelString:		Indice
+*styleBoldMsg:				Negrilla
+*styleItalicMsg:			Bastardilla
+*styleUnderlineMsg:			Subrayado
+*styleThicknessMsg:                     Gr
+*styleSimpleMsg:			simple
+*styleDoubleMsg:			doble
+*styleTripleMsg:			triple
+*styleNoSpaceMsg:			salvo espacios
+*styleStrikeoutMsg:			Barrado
+*styleShadowMsg:			Sombreado
+*styleWidthMsg:				Anchura
+*styleSubscriptMsg:			Indice
+*styleScaleMsg:				E
+*styleSupscriptMsg:			Exponente
+*styleSmallCapsMsg:			Pequeñas mayúsculas
+*styleBigCapsMsg:			Grandes mayúsculas
+
+
+! ** Dialog Box: CHART SETTINGS ******************************************
+
+*lBoxAskGraphTitle.labelString:	Configuración del gráfico
+*fAGSerial.labelString:		Lectura de las series
+*askGraphRowMsg:		Leer la primera línea como :
+*askGraphColMsg:		Leer la primera columna como :
+*askGraphRow2Msg:		Primera línea
+*askGraphCol2Msg:		Primera columna
+*lAGFirstSerial.labelString:	Leer las series en :
+*rbAGLegend.labelString:	Textos del pie
+*rbAGDatas.labelString:		Primera serie de datos
+*rbAGLabels.labelString:	Etiquetas del eje de las abscisas
+*rbAGColumns.labelString:	Columnas
+*rbAGRows.labelString:		Líneas
+
+
+! ** Dialog Box: PRINT SETTINGS ******************************************
+
+*lBoxPrintSetupTitle.labelString:	Configuración de la impresión
+*riPortrait.labelString:	Retrato
+*riLandscape.labelString:	Paisaje
+*lPSMarginT.labelString:	Arriba
+*lPSMarginB.labelString:	Abajo
+*lPSMarginL.labelString:	Izquierda
+*lPSMarginR.labelString:	Derecha
+*riZ.labelString:		Imprimir de izquierda a derecha
+*riN.labelString:		Imprimir de arriba abajo
+*riGrid.labelString:		Imprimir rejilla
+*riRowColumn.labelString:	Imprimir encabezamientos de líneas y columnas
+*lPSSize.labelString:		Tamaño
+*rbPSCenterV.labelString:	Centrar verticalmente
+*rbPSCenterH.labelString:	Centrar horizontalmente
+*tbPSReduce.labelString:	Reducción
+*tbPSPrintOnPage.labelString:	Imprimir en
+*fPSPrintDirection.labelString:	Sentido de la impresión
+*fPSOrientation.labelString:	Orientación
+*fPSScale.labelString:		Reducción
+*fPSFormat.labelString:		Formato
+*fPSMargin.labelString:		Márgenes
+*fPSWhatPrint.labelString:	Añadidos a la impresión
+
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:	Impresión
+*lBPNbCopy.labelString:		Cantidad de copias
+*tbBPPrintAllPages.labelString:	Todo el documento
+*tbBPPrintArea.labelString:	Unicamente la selección
+*lBPPrintFrom.labelString:	Página
+*lBPPrintTo.labelString:	a
+*fBPPrinter.labelString:	Imprimir en ...
+*fBPPrintPage.labelString:	Zona de impresión
+
+
+! ** Dialog Box: PASTE FUNCTION ******************************************
+
+*lBoxFunctionsTitle.labelString:	Colaje de una función
+*tbBFFuncTypeAll.labelString:	Todos tipos
+*tbBFFuncTypeNume.labelString:	Numéricas
+*tbBFFuncTypeStat.labelString:	Estadísticas
+*tbBFFuncTypeBusi.labelString:	Financieras
+*tbBFFuncTypeDate.labelString:	Fechas/Horas
+*tbBFFuncTypeShee.labelString:	Hoja de cálculo
+*tbBFFuncTypeText.labelString:	Textos
+*tbBFFuncTypeLogi.labelString:	Lógicas
+*fBFFuncType.labelString:	Tipo
+
+
+! ** Dialog Box: GOTO CELL ***********************************************
+
+*lGCGotoCell.labelString:	Ir a la célula
+
+
+! ** Dialog Box: ABOUT XQUAD *********************************************
+
+*aboutTitleMsg:		XQuad®- Hoja de cálculo 
+*aboutReleaseBetaMsg:   XQuad versión %d.%d.%d
+*aboutReleaseMsg:       XQuad versión %d.%d
+*aboutNoLicenseMsg:	This software is UNREGISTERED\nRegistration is free
+*licenseCommercialMsg:	This software is registered by\n%s\n%s
+*licensePersonalMsg:	This software is registered by\n%s\n
+
+
+! ** Dialog Box: MAILING LISTS *******************************************
+
+*lBoxRegisterTitle.labelString:		Listas de difusión
+*lBRegisterAdress.labelString:		escribir a : majordomo@axene.org
+*BoxRegistration*Ok.labelString:	Envíar
+*rbRegisterAnnounces.labelString:	Inscribirse a "axene-announce"
+*rbRegisterBugs.labelString:		Inscribirse a "xquad-bugs"
+*rbRegisterUsers.labelString:		Inscribirse a "axene-users"
+*lRegisterReply.labelString:		Su dirección Email
+*lMailCommand.labelString:		Pedido
+*mailingListMsg: \n\
+    Axene pone a su disposición unas listas de \
+difusión (mailing lists) que le permiten a Ud \
+recibir informaciones por correo electrónico.\n\
+\n\
+    "axene-announce" le permite recibir los \
+anuncios oficiales de nuevos productos o \
+de nuevas versiones.\n\
+\n\
+    "xquad-bugs" le participa las correcciones \
+aportadas a XQuad. Existen otras listas \
+relativas a cada producto Axene y que se  \
+pueden descubrir en los demás programas nuestros.\n\
+\n\                                                     \n\
+    "axene-users" le permite conversar con \
+otros usuarios de los productos Axene. \
+Esta lista es moderada (cada mensaje enviado \
+lo validamos nosotros manualmente) para \ 
+evitarle a Ud un atasco de mensajes \
+inútiles.\n\
+\n\
+    Por cada inscripción en una de dichas listas, \
+recibirá una confirmación mediante Email así \ 
+como las instrucciones precisas para una\
+posible cancelación ulterior de inscripción.\n
+
+*fBRRegistered.labelString:		Inscribirse a...
+*fBRegisterCommand.labelString:		Orden de mail
+
+
+! ************************************************************************
+! **                            FILE SELECTORS                          **
+! ************************************************************************
+
+! ** File selector: IMPORT SHEET *****************************************
+
+*importDocumentMsg:		Importación de documento
+*tbFSITdoc.labelString:		En el documento activo
+*rbTrimBefore.labelString:	Cortar Espacios antes
+*rbTrimAfter.labelString:	Cortar Espacios después
+*lFSITseparators.labelString:	Columnas :
+*lFSITcharCode.labelString:	Tipos de acentos
+*rbCodeWindows.labelString:	Unix, Windows
+*rbCodeDos.labelString:		Dos, OS/2
+*rbCodeMac.labelString:		Macintosh
+*tbFSETformula.labelString:	Exportar las fórmulas
+*tbFSETselection.labelString:	Exportar la selección
+*tbFSETgrid.labelString:	Añadir la rejilla
+*tbFSETheaders.labelString:	Añadir los encabezamientos
+*lFSETcharCode.labelString:	Tipos de acentos :
+*lFSETseparators.labelString:	Separador :
+*importDocTextSpaceUnixMsg:	Texto Unix Espacio
+*importDocTextSpaceDosMsg:	Texto Dos Espacio
+*importDocTextSpaceMacMsg:	Texto Mac Espacio
+*importDocTextTabUnixMsg:	Texto Unix Tab
+*importDocTextTabDosMsg:	Texto Dos Tab
+*importDocTextTabMacMsg:	Texto Mac Tab
+**importDocTextCSVUnixMsg:	Texto Unix CSV
+*importDocTextCSVDosMsg:	Texto Dos CSV
+*importDocTextCSVMacMsg:	Texto Mac CSV
+*ImportDocument*Ok.labelString:	Importar
+*fFSITSetup.labelString:	Configuración
+
+
+! ** File selector: EXPORT SHEET *****************************************
+
+*exportDocumentMsg:		Exportación de documento
+*exportDocTextSpaceUnixMsg:	Texto Unix Formateado   
+*exportDocTextSpaceDosMsg:	Texto Dos Formateado
+*exportDocTextSpaceMacMsg:	Texto Mac Formateado
+*exportDocTextTabUnixMsg:	Texto Unix Tab
+*exportDocTextTabDosMsg:	Texto Dos Tab
+*exportDocTextTabMacMsg:	Texto Mac Tab
+*exportDocTextCSVUnixMsg:	Texto Unix CSV
+*exportDocTextCSVDosMsg:	Texto Dos CSV
+*exportDocTextCSVMacMsg:	Texto Mac CSV
+*ExportVector*Ok.labelString:	Exportar
+
+*ExportText*Ok.labelString:	Exportar
+
+*ExportHTML*Ok.labelString:	Exportar
+
+
+! ** File selector: SIMPLE SELECTORS *************************************
+
+*loadDocumentMsg:		Abertura de un documento        
+*OpenDocument*Ok.labelString:	Abrir
+
+*saveDocumentMsg:		Salvaguarda del documento bajo...
+*CloseDocument*Ok.labelString:	Salvaguardar
+
+*printDocumentMsg:		Impresión en el fichero...
+*Print*Ok.labelString:		Imprimir
+
+
+! ************************************************************************
+! **                            WARNING DIALOG BOXES                    **
+! ************************************************************************
+
+! ** Warning dialog: SAVE UNDER ******************************************
+*lSaveDocument.labelString:		Salvaguardar el documento :
+*lSavingName.labelString:		bajo el nombre de fichero :
+
+! ** Warning dialog: CLOSE DOCUMENT **************************************
+*lCloseDocument.labelString:		Cerrar el documento :
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:		Salir de XQuad 
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:       \
+Imposible encontrar la ayuda de XQuad en %s\n\
+El camino de la ayuda se define en el fichero xquadrc.\n\
+Puede Ud telecargar la ayuda en ftp.axene.org /pub/xquad/doc/   
+
+! ** Warning dialog: NO VALID KEY ****************************************
+*functionNeedKeyMsg: Debe Ud disponer de una llave para utilizar esta funcionalidad.\n\Puede pedir una llave provisional por el sitio web de Axene\n\
+http://www.axene.org/spanish/freekey.html
+*autosaveNeedKeyMsg:	Salvaguarda imposible\n\
+Puede pedir una llave provisional por el sitio web de Axene\n\
+http://www.axene.org/spanish/freekey.html
+
+
+! ************************************************************************
+! **                            HELP LINES                              **
+! ************************************************************************
+
+! ** Help lines: GENERAL *************************************************
+*helpCalcMsg:		Caja de herramientas para manipulaciones generales
+*helpToolsSaveMsg:	Salvaguarda el documento seleccionado...        
+*helpToolsPrintMsg:	Imprime
+*helpToolsCutMsg:	Corta la zona (eficiente durante el colaje)
+*helpToolsCopyMsg:	Copia la zona dentro del sujetapapeles
+*helpToolsPasteMsg:	Pega la zona del sujetapapeles
+*helpPasteEqualMsg:	Añade / Quita un '='
+*helpCalcSummMsg:	Pega la función SUMA
+*helpToolsFunctionsMsg:	Pega una función...
+*helpToolsThousandsMsg:	Aplica el formato "Miles"
+*helpToolsCurrencyMsg:	Aplica el formato "Monetario"
+*helpToolsPercentMsg:	Aplica el formato "Porcentajes"
+*helpToolsScientificMsg: Aplica el formato "Científico"
+*helpToolsEngineerMsg:	Aplica el formato "Ingeniero"
+*helpAddDigitMsg:	Añade una decimal a los números
+*helpSubDigitMsg:	Quita una decimal a los números
+
+! ** Help lines: FONT ****************************************************
+*helpFontMsg:		Caja de herramientas de cambio de placas
+*helpToolsBoldMsg:	Pone la placa en Negrilla
+*helpToolsItalicMsg:	Pone la placa en Bastardilla
+*helpToolsUnderlineMsg:	Subraya la placa
+*helpToolsStrikeoutMsg:	Barra la placa
+*helpToolsShadowMsg:	Sombrea la placa
+*helpToolsSmallCapsMsg:	Cambia las minúsculas en pequeñas mayúsculas
+*helpToolsBigCapsMsg:	Cambia las minúsculas en mayúsculas
+*helpFontMinusMsg:	Reduce el tamaño de la placa
+*helpFontPlusMsg:	Aumenta el tamaño de la placa
+
+! ** Help lines: TEXT ****************************************************
+*helpCellsMsg:		Caja de herramientas de manipulación de los textos
+*helpCellsLeftMsg:	Alinea el texto a la izquierda de la célula
+*helpCellsCenterMsg:	Centra horizontalmente el texto en la célula
+*helpCellsRightMsg:	Alinea el texto a la derecha de la célula        
+*helpCellsHJustifyMsg:	Justifica horizontalmente el texto en la célula
+*helpCellsVJustifyMsg:	Justifica verticalmente el texto en la célula
+*helpCellsTopMsg:	Alinea el texto en lo alto de la célula
+*helpCellsBottomMsg:	Alinea el texto abajo de la célula
+*helpCellsMultilinesMsg: Visualiza el texto en varias líneas    
+*helpCellsAngle90Msg:	Visualiza el texto según un ángulo de +90 grados
+*helpCellsAngle270Msg:	Visualiza el texto según un ángulo de -90 grados
+
+! ** Help lines: CELLS ***************************************************
+*helpBordersMsg:	Caja de herramientas de decoración de las células
+*helpBordersCleanMsg:	Borra el linde de las células
+*helpBordersLeftMsg:	Coloca un linde fino a la izquierda de las células
+*helpBordersBottomMsg:	Coloca un linde fino abajo de las células
+*helpBordersRightMsg:	Coloca un linde fino a la derecha de las células
+*helpBordersTopMsg:	Coloca un linde fino en lo alto de las células
+*helpBordersOutlineMsg:	Coloca un linde grueso alrededor de la selección
+
+*helpBackgroundDefaultMsg:	Aplica el fondo por defecto
+*helpVideoReverseMsg:	Inversión vídeo de la zona seleccionada
+
+! ** Help lines: CHARTS **************************************************
+*helpGraphMsg:		Caja de herramientas de manipulación de gráficos
+*helpFrameSelectMsg:	Modo selección
+*helpFrameCreateMsg:	Construye un marco
+*helpFramePlanFirstMsg:	Pasa el marco al primer plano
+*helpFramePlanLastMsg:	Pasa el marco al plano de fondo
+*helpFramePlanUpMsg:	Sube el marco al plano superior
+*helpFramePlanDownMsg:	Baja el marco al plano inferior
+*helpGraphVBarMsg:	Gráfico en Histogramas
+*helpGraphHBarMsg:	Gráfico en Barras
+*helpGraphLineMsg:	Gráfico en Curvas
+*helpGraphAreaMsg:	Gráfico en Areas
+*helpGraphPieMsg:	Gráfico en Sectores
+*helpGraphRadarMsg:	Gráfico en Radares
+*helpFrameLockMsg	Bloquea / Desbloquea un marco o un grupo de marcos
+*helpGraphAxesMsg:	Visualiza / Oculta las líneas de ordenadas
+*helpGraphLegendMsg:	Visualiza / Oculta el pie del gráfico
+*helpGraphTitleMsg:	Visualiza / Oculta el título del gráfico
+*helpGraphSetupMsg:	Abre la caja de configuración del gráfico  
+*helpGraphAbsMsg:	Visualiza / Oculta el texto de las abscisas
+*helpGraphNamesMsg:	Visualiza / Oculta el nombre de las series
+
+! ** Help lines: ZOOM ****************************************************
+*helpZoomMsg:		Caja de herramientas de cambio de zoom
+*helpZoomInMsg:		Aumenta el zoom de 25%
+*helpZoomOutMsg:	Reduce el zoom de 25%
+*helpZoom50Msg:		Zoom a 50%
+*helpZoom75Msg:		Zoom a 75%
+*helpZoom100Msg:	Zoom a 100%
+*helpZoom200Msg:	Zoom a 200%
+*helpZoom400Msg:	Zoom a 400%
+  
+! ** Help lines: SEPARATE ************************************************
+*helpTrashMsg:		Papelera : destrucción de los objetos
+
+! ** Help lines: EDIT BAR ************************************************
+*helpEditbarOkMsg:	Aplicar la fórmula
+*helpEditbarEscMsg:	Cancela / Quita la selección / Selecciona
+
+
+! ************************************************************************
+! **                            ERRORS                                  **
+! ************************************************************************
+
+*sigErrorSEGVMsg:	Violación de privilegios (Segmentation fault)
+*sigErrorPIPEMsg:	Conexión interrumpida (Broken pipe)
+*sigErrorBUSMsg:	Error de bus (Bus error)
+*sigErrorFPEMsg:	Error de cálculo (Floating exception)
+*sigErrorIOTMsg:	Error interno (IOT trap)
+*sigErrorEMTMsg:	Desvío Error Memoria (EMT trap)
+*sigErrorXCPUMsg:	Rebasamiento de tiempo CPU (Cputime limit exceeded)
+*sigErrorXFSZMsg:	Rebasamiento de tamaño de fichero (Filesize limit exceeded)
+*sigErrorILLMsg:	Instrucción ilícita (Illegal instruction)
+*sigErrorINTMsg:	XQuad ha sido (Interrupt)
+*sigErrorQuitingMsg:	Salir ahora de XQuad
+*sigErrorSorryMsg:	Imposible seguir ejecutando
+
+*lCaughtSignal.labelString:	Ha ocurrido un error :
+*lCaughtIOerror.labelString:	Error fatal del servidor X
+*lCannotContinue.labelString:	Imposible proseguir
+
+*loadErrorMsg:			Error de cargamento
+
+
+! ************************************************************************
+! **                    DEFAULT DIALOG BUTTONS                          **
+! ************************************************************************
+
+*action_area.Yes.labelString:		Sí
+*action_area.No.labelString:		No
+*action_area.Apply.labelString:		Aplicar
+*action_area.Ok.labelString:		De acuerdo
+*action_area.Open.labelString:		Abrir...
+*action_area.Retry.labelString:		Repetir
+*action_area.Stop.labelString:		Parar
+*action_area.Reset.labelString:		Reinicializar
+*action_area.Cancel.labelString:	Cancelar
+*action_area.Close.labelString:		Cerrar
+*action_area.Help.labelString:		Ayuda
+*action_area.Save.labelString:		Salvaguardar
+*action_area.Continue.labelString:	Proseguir
+*action_area.Quit.labelString:		Salir
+*action_area.Save as.labelString:	Salvaguardar bajo...
+
+
+! ************************************************************************
+! **                    FORMULA ERRORS                                  **
+! ************************************************************************
+
+*formulaCircErrorMsg:			¡DEPENDENCIA CIRCULAR!
+*formulaValErrorMsg:			¡TIPO INDEBIDO DE VALOR!
+*formulaNameErrorMsg:			¡FUNCION DESCONOCIDA!
+*formulaCharErrorMsg:			¡CARACTER DESCONOCIDO!
+*formulaCalcErrorMsg:			¡ERROR DE CALCULO!
+*formulaDivzErrorMsg:			¡DIVISION POR CERO!
+*formulaParamLessErrorMsg:		¡NO BASTANTES PARAMETROS!
+*formulaParamMoreErrorMsg:		¡DEMASIADOS PARAMETROS!
+*formulaCellRangeErrorMsg:		¡CELULA FUERA DE LIMITES!
+*formulaDIntErrorMsg:			¡PARAMETRO ENTERO REQUERIDO!
+*formulaDOneOneErrorMsg:		¡PARAMETRO [-1,1] REQUERIDO!
+*formulaDOverOneErrorMsg:		¡PARAMETRO [-1,1] REQUERIDO!
+*formulaDOneOneOpenErrorMsg:		¡PARAMETRO ]-1,1[ REQUERIDO!
+*formulaDAlleZeroErrorMsg:		¡PARAMETRO != 0 REQUERIDO!
+*formulaDOverZeroErrorMsg:		¡PARAMETRO > 0 REQUERIDO!
+*formulaDPositiveErrorMsg:		¡PARAMETRO >= 0 REQUERIDO!
+*formulaMissingParamErrorMsg:		¡FALTA UNA PARENTESIS!
+*formulaErrorMsg:			¡ERROR DE FORMULA!
+
+
+! ************************************************************************
+! **                    FUNCTIONS                                       **
+! ************************************************************************
+
+*funcAbsMsg:		abs
+*funcAcosMsg:		acos
+*funcAcoshMsg:		acosh
+*funcAdressMsg:		address
+*funcAleaMsg:		alea
+*funcAleabMsg:		aleab
+*funcSlnMsg:		sln
+*funcRoundMsg:		round
+*funcAsinMsg:		asin
+*funcAsinhMsg:		asinh
+*funcAtanMsg:		atan
+*funcAtan2Msg:		atan2
+*funcAtanhMsg:		atanh
+*funcBaseMsg:		base
+*funcBesseljMsg:	besselj
+*funcBesselkMsg:	besselk
+*funcCharMsg:		char
+*funcCeilMsg:		ceil
+*funcFindMsg:		find
+*funcCnumMsg:		cnum
+*funcColMsg:		col
+*funcCodeMsg:		code
+*funcCosMsg:		cos
+*funcCoshMsg:		cosh
+*funcCountMsg:		count
+*funcCountnMsg:		countn
+*funcCtxtMsg:		ctxt
+*funcDegreesMsg:	degrees
+*funcRightMsg:		right
+*funcEMsg:		e
+*funcIntMsg:		int
+*funcPurgeMsg:		purge
+*funcAndMsg:		and
+*funcExactMsg:		exact
+*funcExpMsg:		exp
+*funcFactMsg:		fact
+*funcFalseMsg:		false
+*funcFloorMsg:		floor
+*funcFracMsg:		frac
+*funcCurrencyMsg:	currency
+*funcLeftMsg:		left
+*funcIndirectMsg:	indirect
+*funcInvMsg:		inv
+*funcRowMsg:		row
+*funcLnMsg:		ln
+*funcLogMsg:		log
+*funcLog10Msg:		log10
+*funcUpperMsg:		upper
+*funcMaxMsg:		max
+*funcMinMsg:		min
+*funcLowerMsg:		lower
+*funcModMsg:		mod
+*funcAvgMsg:		avg
+*funcLengthMsg:		length
+*funcProperMsg:		proper
+*funcPiMsg:		pi
+*funcProdMsg:		prod
+*funcSqrtMsg:		sqrt
+*funcRandomMsg:		random
+*funcReplaceMsg:	replace
+*funcRepeatMsg:		repeat
+*funcSignMsg:		sign
+*funcSinMsg:		sin
+*funcSinhMsg:		sinh
+*funcSummMsg:		sum
+*funcSqrMsg:		sqr
+*funcMidMsg:		mid
+*funcSubstituteMsg:	substitue
+*funcTrimMsg:		trim
+*funcRadiansMsg:	radians
+*funcTMsg:		t
+*funcTanMsg:		tan
+*funcTanhMsg:		tanh
+*funcTextMsg:		text
+*funcTruncMsg:		trunc
+*funcMatchMsg:		match
+*funcTrueMsg:		true
+*funcDbMsg:		db
+*funcDdbMsg:		ddb
+*funcIpmtMsg:		ipmt
+*funcNperMsg:		nper
+*funcPpmtMsg:		ppmt
+*funcSydMsg:		syd
+*funcRateMsg:		rate
+*funcIrrMsg:		irr
+*funcMirrMsg:		mirr
+*funcPvMsg:		pv
+*funcNpvMsg:		npv
+*funcFvMsg:		fv
+*funcVdbMsg:		vdb
+*funcPmtMsg:		pmt
+*funcConcatMsg:		concat
+
+*funcDay360Msg:		day360
+*funcTodayMsg:		today
+*funcDateMsg:		date
+*funcDatevalMsg:	datevalue
+*funcNowMsg:		now
+*funcTimeMsg:		time
+*funcTimevalMsg:	timevalue
+*funcYearMsg:		year
+*funcDayMsg:		day
+*funcDayweekMsg:	weekday
+*funcHourMsg:		hour
+*funcMinuteMsg:		minute
+*funcMonthMsg:		month
+*funcSecondMsg:		second
+*funcMillisecondMsg:	millisecond
+
+*funcNotMsg:		not
+*funcOrMsg:		or
+*funcIfMsg:		if
+
+
+! ** File selector: ALIASES **********************************************
+  
+*funcColAlias1Msg:	column
+*funcBesselkAlias1Msg:	kbessel
+*funcBesseljAlias1Msg:	jbessel
+*funcIntAlias1Msg:	integer
+*funcFactAlias1Msg:	factoriel
+*funcFracAlias1Msg:	fraction
+*funcInvAlias1Msg:	inverse
+*funcMaxAlias1Msg:	maximum
+*funcMinAlias1Msg:	minimum
+*funcModAlias1Msg:	modulo
+*funcAvgAlias1Msg:	average
+*funcProdAlias1Msg:	product
+*funcSummAlias1Msg:	summ
+
+
+! ************************************************************************
+! **                            SPECIAL FORMATS                         **
+! ************************************************************************
+
+! ** Special formats: DATES **********************************************
+
+*dateMonthJanMsg:	Enero
+*dateMonthFebMsg:	Febrero
+*dateMonthMarMsg:	Marzo
+*dateMonthAprMsg:	Abríl
+*dateMonthMayMsg:	Mayo
+*dateMonthJunMsg:	Junio
+*dateMonthJulMsg:	Julio
+*dateMonthAugMsg:	Agosto
+*dateMonthSepMsg:	Septiembre
+*dateMonthOctMsg:	Octubre
+*dateMonthNovMsg:	Noviembre
+*dateMonthDecMsg:	Diciembre
+
+*dateMonthJanShortMsg:	Ene
+*dateMonthFebShortMsg:	Fed
+*dateMonthMarShortMsg:	Mar
+*dateMonthAprShortMsg:	Abr
+*dateMonthMayShortMsg:	May
+*dateMonthJunShortMsg:	Jun
+*dateMonthJulShortMsg:	Jul
+*dateMonthAugShortMsg:	Ago
+*dateMonthSepShortMsg:	Sep
+*dateMonthOctShortMsg:	Oct
+*dateMonthNovShortMsg:	Nov
+*dateMonthDecShortMsg:	Dic
+*dateMonthVeryShortMsg:	E F Mr Ab My Jn Jl Ao S O N D
+             
+*dateDayMonMsg:		Lunes
+*dateDayTueMsg:		Martes
+*dateDayWedMsg:		Miércoles
+*dateDayThuMsg:		Jueves
+*dateDayFriMsg:		Viernes
+*dateDaySatMsg:		Sábado
+*dateDaySunMsg:		Domingo
+
+*dateDayMonShortMsg:	Lun
+*dateDayTueShortMsg:	Mar
+*dateDayWedShortMsg:	Mie
+*dateDayThuShortMsg:	Jue
+*dateDayFriShortMsg:	Vie
+*dateDaySatShortMsg:	Sab
+*dateDaySunShortMsg:	Dom
+*dateDayVeryShortMsg:	L Ma Mi J V S D 
+  
+*dateYearBeforeJCMsg:	a.de J.C.
+*dateYearAfterJCMsg:	d.de J.C.
+  
+*timeHourAMMsg: AM
+*timeHourPMMsg: PM
+
+! ** Special formats: BOOLEANS *******************************************
+
+*trueMsg:		Verdadero
+*falseMsg:		Falso
+

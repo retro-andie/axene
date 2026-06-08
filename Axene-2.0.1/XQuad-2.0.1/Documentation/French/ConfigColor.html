@@ -1,0 +1,95 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration des couleurs</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigColor.gif" ALT="Configuration des couleurs" WIDTH="308" HEIGHT="37"> </p>
+
+<p><br>
+<br>
+Cette section des <a HREF="Config.html">fichiers de configuration</a> permet de
+prédéfinir une liste de couleurs. </p>
+
+<h3>Section de définition de la liste des couleurs : <i>\COLORLIST{...}</i></h3>
+
+<p>Cette section introduit la définition de la liste des couleurs accessibles dans les
+menus correspondants d'XQuad. La définition des couleurs de la liste s'effectue après
+l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade fermante correspondante <i>&quot;}&quot;</i>.
+Chaque élément de la liste des couleurs est défini comme décrit ci-dessous. <a NAME="color"></p>
+
+<h3>Section de définition d'une couleur : <i>\COLORX{...}</i></h3>
+
+<p>La définition d'une couleur s'effectue par <b>\COLORX</b> où <i>X</i> est un entier
+permettant une identification unique de la couleur. </a></p>
+
+<p>Attention aux collisions susceptibles de se produire lors de l'utilisation de plusieurs
+fichiers de configuration. Une politique doit être mise en place afin qu'il ne puisse y
+avoir utilisation multiple d'un même identifiant entre le fichier de configuration
+système (xcuadrc) et ceux des utilisateurs (.xquadrc). On pourra, par exemple, définir
+que ceux des utilisateurs commencent à 100. </p>
+
+<p>Les paramètres de définition d'une couleur commencent après l'accolade ouvrante <i>&quot;{&quot;</i>
+et se terminent avant l'accolade fermante correspondante <i>&quot;}&quot;</i>. Ils
+comprennent : 
+
+<ol>
+  <li><b>\NAME{name}</b> où <i>name</i> représente le nom attribué à la couleur dans les
+    menus correspondants d'XQuad. <br>
+    &nbsp;</li>
+  <li><b>\TRANSPARENCYXXX</b> où <i>XXX</i> représente le degré de transparence de la
+    couleur ; dans la version actuelle, seuls deux états sont possibles : 0 ou 255. <br>
+    &nbsp;</li>
+  <li>Plusieurs façons de définir une couleur existent : <br>
+    &nbsp;<ol>
+      <li><b>\GRAY{ b }</b> où <i>b</i> représente un pourcentage de blanc compris entre 0 et 1,
+        constituant le gris ainsi défini. <br>
+        &nbsp;</li>
+      <li><b>\CMYK{ c m y k }</b> où <i>C</i>, <i>M</i>, <i>Y</i> et <i>K</i> représentent
+        respectivement les pourcentages compris entre 0 et 1 (0 pour 0% et 1 pour 100%) des
+        constituantes Cyan, Magenta, Yellow (jaune) et blacK (noire) de la couleur ainsi définie.
+        <br>
+        &nbsp;</li>
+      <li><b>\RGB{ r g b }</b> où <i>R</i>, <i>G</i> et <i>B</i> représentent respectivement les
+        pourcentages compris entre 0 et 1 (0 pour 0% et 1 pour 100%) des constituantes Red
+        (rouge), Green (vert), Blue (bleu) de la couleur ainsi définie. <br>
+        &nbsp;</li>
+    </ol>
+  </li>
+  <li><a NAME="lock"><b>\LOCK</b> permet de verrouiller une couleur définie dans la base de
+    couleur d'XQuad de façon à ce qu'elle ne puisse être supprimée dans la boîte de
+    dialogue '</a><a HREF="Box_Color.html#button_del">Préparation des couleurs</a>'. <br>
+    &nbsp;</li>
+  <li><a NAME="hide"><b>\HIDE</b> permet cacher la couleur définie pour qu'elle n'apparaisse
+    pas dans les listes de couleurs d'XQuad. </a><br>
+    &nbsp;</li>
+</ol>
+
+<h3>Exemple :</h3>
+<tt>
+
+<p>\COLORLIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COLOR10{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{MyColor}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TRANSPARENCY0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\CMYK{.3&nbsp;.2&nbsp;.4&nbsp;.6}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COLOR7{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Vert}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TRANSPARENCY0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\RGB{0&nbsp;1&nbsp;0}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

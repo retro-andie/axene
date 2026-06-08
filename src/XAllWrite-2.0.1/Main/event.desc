@@ -1,0 +1,97 @@
+Description de la boucle d'Event XAllWrite
+
+
+Si !(doc ouvert)
+ OFF F[general]
+ OFF F[text]
+ OFF F[image]
+ OFF F[vect]
+ OFF F[cadre]
+ OFF F[multicadre]
+ OFF F[lock]
+
+Sinon
+
+ ON F[general] 
+
+ Si !(cadre select)
+  ON F[text]
+  OFF F[image]
+  OFF F[vect]
+  OFF F[cadre]
+  OFF F[multicadre]
+  OFF F[lock]
+
+ Sinon ***cadre select****
+
+  ON F[lock]
+
+  Si F[lockedframe]
+   OFF F[cadre]
+  Sinon
+   ON F[cadre]
+  is
+
+  Si (multi cadre select)
+   OFF F[text]
+   OFF F[image]
+   OFF F[vect]
+
+  Sinon
+
+   Si (cadre TEXT select)
+    ON F[text]
+   Sinon
+    OFF F[text]
+   is
+
+   Si (cadre IMG select)
+    ON F[image]
+   Sinon
+    Si (cadre VECT select)
+     ON F[vect]
+    Sinon
+     OFF F[vect]
+     OFF F[image]
+    is
+   is 
+
+
+  Si (cadre VECT select)
+    ON F[image]
+    ON F[vect]
+  Sinon
+    OFF F[vect]
+    Si (cadre IMG select)
+     ON F[image]
+    Sinon
+     OFF F[image]
+        
+
+
+
+
+  is
+
+ is
+is
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F[text] = 

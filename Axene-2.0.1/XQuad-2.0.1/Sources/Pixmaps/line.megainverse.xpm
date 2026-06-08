@@ -1,0 +1,28 @@
+/* XPM */
+static char * line_megainverse_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"50 18 5 1",
+" 	s None	c None",
+".	c gray60",
+"X	c black",
+"o	c gray10",
+"O	c white",
+/* pixels */
+"                                                  ",
+"                                                  ",
+"                                                  ",
+"   ............................................   ",
+"   ............................................   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXo...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO...   ",
+"   ...OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ............................................   ",
+"   ............................................   ",
+"                                                  ",
+"                                                  ",
+"                                                  "};

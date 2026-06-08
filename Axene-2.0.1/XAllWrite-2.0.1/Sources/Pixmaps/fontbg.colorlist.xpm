@@ -1,0 +1,32 @@
+/* XPM */
+static char * fontbg_colorlist_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"26 22 4 1",
+/* colors */
+" 	s None	c None",
+".	c black",
+"X	c white",
+"O	c gray10",
+/*pixels*/
+"                          ",
+"                          ",
+"   ....................   ",
+"   .XXXXXXXXXXXXXXXXXX.   ",
+"   .XXXXXXXXXXXXXXXXXX.   ",
+"   .XXXX...........XXX.   ",
+"   .XXXX..XX...XX..XXX.   ",
+"   .XXXX.XXX...XXX.XXX.   ",
+"   .XXXX.XXX...XXX.XXX.   ",
+"   .XXXXXXXX...XXXXXXX.   ",
+"   .XXXXXXXX...XXXXXXX.   ",
+"   .XXXXXXXX...XXXXXXX.   ",
+"   .XXXXXXXX...XXXXXXX.   ",
+"   .XXXXXXXX...XXXXXXX.   ",
+"   .XXXXXXXX...XXXXXXX.   ",
+"   .XXXXXXXX...XXXXXXX.   ",
+"   .XXXXXX......OXXXXX.   ",
+"   .XXXXXXXXXXXXXXXXXX.   ",
+"   .XXXXXXXXXXXXXXXXXX.   ",
+"   ....................   ",
+"                          ",
+"                          "};

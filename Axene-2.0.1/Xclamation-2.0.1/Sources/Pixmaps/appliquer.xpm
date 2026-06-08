@@ -1,0 +1,27 @@
+/* XPM */
+static char * appliquer_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"32 18 4 1",
+" 	s None	c None",
+".	c white",
+"X	c black",
+"o	c gray90",
+/* pixels */
+"                                ",
+"      ...                       ",
+"      ...X                      ",
+"      ..oX                      ",
+"     ...XX                      ",
+"     ...X ... ....     .....    ",
+"     ...X .........  ........   ",
+"     ..oX ...oXX...X...oXX...X  ",
+"    ...XX...XXX ...X...XX  XXX  ",
+"    ...X ...X  o..XX .....o     ",
+"    ...X ...X  ...X   ......    ",
+"    ..oX ..oX  ...X    XX...X   ",
+"   ...XX...XX o..XX...  ....X   ",
+"   ...X ...X  ...X o.......XX   ",
+"   ...X ...X  ...X  o....XXX    ",
+"    XXX  XXX   XXX   XXXXX      ",
+"                                ",
+"                                "};

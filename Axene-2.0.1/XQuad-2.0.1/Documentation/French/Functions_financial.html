@@ -1,0 +1,278 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fonctions financières</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFunctionsFinancial.gif" ALT="Fonctions Financières" WIDTH="251" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+</p>
+
+<hr>
+
+<h3><a NAME="amorlin"><font COLOR="#2244AA">amorlin</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'amortissement linéaire d'un bien.</b> </p>
+  <p><b>amorlin(<i>cout</i>; <i>valeur_résiduelle</i>; <i>durée</i>)</b> <ul>
+    <li><i>cout&nbsp;:</i> valeur initiale du bien. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur du bien à la fin de l'amortissement. </li>
+    <li><i>durée&nbsp;:</i> nombre de périodes d'amortissement du bien (durée &gt; 0). </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> ((cout - valeur_résiduelle) / durée) </p>
+  <p>Cette fonction calcule l'amortissement linéaire d'un bien pour une période donnée.
+  Le bien est amorti par des montants égaux répartis sur la durée. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=amorlin(12000; 2000; 10)</tt><br>
+    <b>Valeur&nbsp;: </b>1000 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="db"><font COLOR="#2244AA">db</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'amortissement d'un bien pour une période.</b> </p>
+  <p><b>db(<i>cout</i>; <i>valeur_résiduelle</i>; <i>durée</i>; <i>période</i><font COLOR="#333333">; <i>année_periode</i></font>)</b> <ul>
+    <li><i>cout&nbsp;:</i> valeur initial du bien. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur du bien en fin d'amortissement. </li>
+    <li><i>durée&nbsp;:</i> durée de l'amortissement. (durée &gt; 0) </li>
+    <li><i>période&nbsp;:</i> période pour laquelle on calcule l'amortissement </li>
+    <li><i>année_période&nbsp;:</i> mois de l'année pour laquelle l'amortissement est
+      calculé. (défaut 0) </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> (cout - somme(i=1; periode-1; db(cout; valeur_résiduelle;
+  durée; i))) * (1 - ((valeur_résiduelle / cout)^(1 / durée))) </p>
+  <p>Renvoie l'amortissement d'un bien en utilisant la méthode d'amortissement à taux
+  double pour une période donnée. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=db(17000; 2000; 2; 1; 1)</tt><br>
+    <b>Valeur&nbsp;: </b>930.75401 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="ddb"><font COLOR="#2244AA">ddb</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'amortissement d'un bien pour une période.</b> </p>
+  <p><b>ddb(<i>cout</i>; <i>valeur_résiduelle</i>; <i>durée</i>; <i>période</i><font COLOR="#333333">; <i>facteur</i></font>)</b> <ul>
+    <li><i>cout&nbsp;:</i> valeur initiale du bien. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur du bien en fin d'amortissement. </li>
+    <li><i>durée&nbsp;:</i> durée de l'amortissement. </li>
+    <li><i>période&nbsp;:</i> période pour laquelle on calcule l'amortissement </li>
+    <li><i>facteur&nbsp;:</i> taux d'amortissement. (défaut 2) </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> ddb(période) = (valeur_résiduelle - somme(i=1;
+  i=période-1)ddb(i)) * facteur / durée </p>
+  <p>Renvoie l'amortissement d'un bien en utilisant la méthode d'amortissement à taux fixe
+  pour une période donnée. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=ddb (30000; 2000; 10; 1; 5)</tt><br>
+    <b>Valeur&nbsp;: </b>4032.9218 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="intper"><font COLOR="#2244AA">intper</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur du remboursement d'intérêt.</b> </p>
+  <p><b>intper(<i>taux</i>; <i>période</i>; <i>nombre_période</i>; <i>capital_emprunté</i><font COLOR="#333333">; <i>valeur_résiduelle</i>; <i>type</i></font>)</b> <ul>
+    <li><i>taux&nbsp;:</i> taux d'intérêt par période </li>
+    <li><i>période&nbsp;:</i> période pour laquelle les intéret sont calculés. </li>
+    <li><i>nombre_période&nbsp;:</i> nombre total de périodes. </li>
+    <li><i>capital_emprunté&nbsp;:</i> capital emprunté. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur résiduelle du remboursement. </li>
+    <li><i>type&nbsp;:</i> échance en début(1) ou fin(0) de période. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> (taux / (1+type*taux)) * ( capital_emprunté * ((1 -
+  (1+taux)^(-nombre_période+période-1)) / ((1+taux)^(-nombre_période) - 1)) -
+  valeur_résiduelle * ((1 - (1+taux)^(periode-1)) / ((1+taux)^(nombre_période) - 1)) ) </p>
+  <p>Renvoie pour une période la valeur des intérêts à rembourser. Le calcul est
+  effectué pour une durée <i>(nombre_période)</i> avec un taux d'intéret constant <i>(taux)</i>.
+  </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=intper(0.08; 6; 30; 8000)</tt><br>
+    <b>Valeur&nbsp;: </b>-606.85630 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="npm"><font COLOR="#2244AA">npm</font></a></h3>
+
+<ul>
+  <p><b>npm</b> </p>
+  <p><b>npm(<i>taux</i>; <i>remboursement</i>; <i>capital_emprunté</i><font COLOR="#333333">;
+  <i>valeur_résiduelle</i>; <i>type</i></font>)</b> <ul>
+    <li><i>taux&nbsp;:</i> taux d'intérêt par période </li>
+    <li><i>rembousement&nbsp;:</i> valeur des remboursements par période. </li>
+    <li><i>capital_emprunté&nbsp;:</i> capital emprunté. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur résiduelle du remboursement. </li>
+    <li><i>type&nbsp;:</i> échéance en début(1) ou fin(0) de période. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> ( <a HREF="Functions_numeric.html#ln">ln</a>((rembousement * (1
+  + taux * type) / taux - valeur_résiduelle) / (remboursement * (1 + taux * type) / taux +
+  capital_emprunté) ) / ln(1 + taux) ) </p>
+  <p>npm </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=npm(0.05; -450; 1000)</tt><br>
+    <b>Valeur&nbsp;: </b>2.4140734 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="princper"><font COLOR="#2244AA">princper</font></a></h3>
+
+<ul>
+  <p><b>princper(<i>taux</i>; <i>période</i>; <i>durée</i>; <i>capital_emprunté</i>; <i>valeur_résiduelle</i>;
+  <i>type</i>)</b> <ul>
+    <li><i>taux&nbsp;:</i> taux d'intérêt par période </li>
+    <li><i>période&nbsp;:</i> période pour laquelle on calcule le remboursement. </li>
+    <li><i>durée&nbsp;:</i> durée de l'emprunt. </li>
+    <li><i>capital_emprunté&nbsp;:</i> capital emprunté. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur résiduelle du remboursement. </li>
+    <li><i>type&nbsp;:</i> échéance en début(1) ou fin(0) de période. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> (taux / (1 + taux * type) * (capital_emprunté * ((1 +
+  taux)^(-durée+periode - 1)) / ((1 + taux)^(-durée) - 1) - valeur_résiduelle * ((1 +
+  taux)^(periode - 1)) / ((1 + taux)^(durée) - 1) </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=princper(0.06; 4; 10; 50000)</tt><br>
+    <b>Valeur&nbsp;: </b>-4517.9976 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="syd"><font COLOR="#2244AA">syd</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'amortissement d'un bien pour une période.</b> </p>
+  <p><b>syd(<i>cout</i>; <i>valeur_résiduelle</i>; <i>durée</i>; <i>période</i>)</b> <ul>
+    <li><i>cout&nbsp;:</i> cout initial du bien. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur résiduelle du bien. </li>
+    <li><i>durée&nbsp;:</i> durée de l'amortissement. </li>
+    <li><i>période&nbsp;:</i> période pour laquelle on désire connaître l'amortissement. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> (cout - valeur_résiduelle) * (durée + 1 - période) / (durée
+  * (durée + 1) / 2) </p>
+  <p>Renvoie l'amortissement d'un bien en utilisant la méthode américaine (Sum of years
+  digits) </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=syd(200000; 40000; 6; 1)</tt><br>
+    <b>Valeur&nbsp;: </b>45714.286 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="va"><font COLOR="#2244AA">va</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur actualisée d'un investissement.</b> </p>
+  <p><b>va(<i>taux</i>; <i>durée</i>; <i>paiement</i><font COLOR="#333333">; <i>valeur_résiduelle</i>;
+  <i>type</i></font>)</b> <ul>
+    <li><i>taux&nbsp;:</i> taux d'intérêt. </li>
+    <li><i>durée&nbsp;:</i> nombre de periode. </li>
+    <li><i>paiement&nbsp;:</i> montant du paiement à chaque période. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur résiduelle. </li>
+    <li><i>type&nbsp;:</i> échance en début(1) ou fin(0) de période. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> (-paiement * (1 + taux * type) * (1 - (1 + taux)^(-durée)) /
+  taux) - (valeur_résiduelle * (1 + taux)^(-durée)) </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=va(0.03; 20; 10000)</tt><br>
+    <b>Valeur&nbsp;: </b>-148774.75 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="van"><font COLOR="#2244AA">van</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur actualisée d'une série de flux financiers.</b> </p>
+  <p><b>van(<i>taux</i>; <i>valeur1</i><font COLOR="#333333">; <i>valeur2</i>; <i>...</i></font>)</b>
+  <ul>
+    <li><i>taux&nbsp;:</i> taux d'intérêt. </li>
+    <li><i>valeurN&nbsp;:</i> série de paiement. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> somme(i)[1; T] (valeur(i) / (1 + taux)^(i)) </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=van(0.06; -3000; 1000; 4000; 6000)</tt><br>
+    <b>Valeur&nbsp;: </b>6170.8469 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="vc"><font COLOR="#2244AA">vc</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur capitalisée d'un investissement.</b> </p>
+  <p><b>vc(<i>taux</i>; <i>durée</i>; <i>paiement</i><font COLOR="#333333">; <i>valeur_actuelle</i>;
+  <i>type</i></font>)</b> <ul>
+    <li><i>taux&nbsp;:</i> taux d'intérêt. </li>
+    <li><i>durée&nbsp;:</i> nombre de periodes de remboursement. </li>
+    <li><i>paiement&nbsp;:</i> paiement à chaque période. </li>
+    <li><i>valeur_actuelle&nbsp;:</i> valeur actuelle. </li>
+    <li><i>type&nbsp;:</i> échance en début(1) ou fin(0) de période. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> (-paiement * (1 + taux * type) * ((1 + taux)^(durée) - 1) /
+  taux) - (valeur_résiduelle * (1 + taux)^(durée)) </p>
+  <p>Renvoie la valeur à terme ou valeur capitalisée ou valeur future d'un investissement.
+  </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=vc(0.04;10;1200)</tt><br>
+    <b>Valeur&nbsp;: </b>-14407.329 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="vdb"><font COLOR="#2244AA">vdb</font></a></h3>
+
+<ul>
+  <p><b>Calcul l'amortissement d'un bien pour une période.</b> </p>
+  <p><b>vdb(<i>co</i>; <i>t</i>; <i>valeur_résiduelle</i>; <i>durée</i>; <i>début</i>; <i>fin</i>;
+  <i>facteur</i>; <i>type</i>)</b> <ul>
+    <li><i>coût&nbsp;:</i> coût initial du bien. </li>
+    <li><i>valeur_résiduelle&nbsp;:</i> valeur résiduelle du bien. </li>
+    <li><i>durée&nbsp;:</i> durée de l'amortissement. </li>
+    <li><i>début&nbsp;:</i> début de la période de calcul. </li>
+    <li><i>fin&nbsp;:</i> fin de la période de calcul. </li>
+    <li><i>facteur&nbsp;:</i> taux d'amortissement dégressif. </li>
+    <li><i>type&nbsp;:</i> ignoré. La méthode d'amortissement linéaire(1) ou pas(0). </li>
+    <li><i>formule:</i> somme(i)[début; fin]ddb ? </li>
+  </ul>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

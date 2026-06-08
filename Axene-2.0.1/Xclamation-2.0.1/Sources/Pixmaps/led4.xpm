@@ -1,0 +1,23 @@
+/* XPM */
+static char * led4_xpm[] = {
+"13 13 7 1",
+" 	s None	c None",
+".	c #618530C238E3",
+"o	c #C30B618575D6",
+"O	c red",
+"+	c #FFFF8A28A699",
+"@	c yellow",
+"#	c gray40",
+"             ",
+"             ",
+"    oOOOO    ",
+"   oO+OOOo   ",
+"  oO+@+OOoo  ",
+"  oOO+OOOo#  ",
+"  oOOOOOoo.  ",
+"  oOOOOOoo.  ",
+"  ooOOooo..  ",
+"   oooo...   ",
+"    o....    ",
+"             ",
+"             "};

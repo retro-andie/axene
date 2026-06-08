@@ -1,0 +1,33 @@
+/* XPM */
+static char * fill_colorlist_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"26 22 5 1 12 9",
+/* colors */
+" 	s None	c None",
+".	c black",
+"X	c gray75",
+"o	c white",
+"O	c gray50",
+/* pixels */
+"                          ",
+"                          ",
+"         ..               ",
+"         ...              ",
+"         .X.              ",
+"        .XX..             ",
+"        .oo.O.            ",
+"       .Xoo.XO...         ",
+"      .XooX...........    ",
+"     .XooXX.XXXXXXXXX.    ",
+"    .XooXXX.XXXXXXXXX.    ",
+"    ..ooXXO.XXXXXXXXX.    ",
+"      .XXOO.XXXXXXXXX.    ",
+"       .OOO.XXXXXXXXX.    ",
+"        ....XXXXXXXXX.    ",
+"           .XXXXXXXXX.    ",
+"           .XXXXXXXXX.    ",
+"           .XXXXXXXXX.    ",
+"           ...........    ",
+"                          ",
+"                          ",
+"                          "};

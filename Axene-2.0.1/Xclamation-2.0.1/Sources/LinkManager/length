@@ -1,0 +1,6 @@
+for pouet in *.c ; do cat $pouet >>toto; done
+for pouet in *.h ; do cat $pouet >>toto; done
+ls -l toto
+echo lines = 
+cat toto | wc -l
+rm toto

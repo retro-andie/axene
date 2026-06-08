@@ -1,0 +1,55 @@
+<!-- Documentation XMayday (c)1996-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Image Cache configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Configuration files" WIDTH="136" HEIGHT="25"> <img ALIGN="middle" SRC="Images/TitleConfigImageCache.gif" ALT="Image Cache configuration" WIDTH="297" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+This <a HREF="Config.html">configuration file</a> section defines the default parameters
+of the Image Cache. </p>
+
+<h3>Image Cache Configuration section: <i>\CACHE_CONFIG{...}</i></h3>
+
+<p>This section configures the disk space and memory space assigned to the Image Cache.
+The configuration parameters are: 
+
+<ol>
+  <li><b>\MEMORY_CACHE_SIZEX</b> where <i>X</i> represents the amount of memory space in
+    kilo-bytes assigned to the Image Cache. This value may be modified in the '<a HREF="Box_Image_Cache.html#max_memory_textfield">Image Cache Information</a>' dialog box. <br>
+    &nbsp;</li>
+  <li><b>\DISK_CACHE_SIZEX</b> where <i>X</i> represents the amount of disk space in
+    kilo-bytes assigned to the Image Cache. This value may be modified in the '<a HREF="Box_Image_Cache.html#max_memory_textfield">Image Cache Information</a>' dialog box. <br>
+    &nbsp;</li>
+  <li><b>\KEEP_DISK_CACHE</b>. If this parameter is present, the Image Cache will be saved
+    from one XMayday use to the next. This state can be modified from the '<a HREF="Box_Image_Cache.html#max_memory_textfield">Image Cache Information</a>' dialog box. <br>
+    &nbsp;</li>
+  <li><b>\CACHE_DIR{path}</b> where &quot;path&quot; is the absolute pathway of files assigned
+    to the Image Cache. The user's &quot;home directory&quot; may be indicated by a
+    &quot;~&quot;. <br>
+    &nbsp;</li>
+</ol>
+
+<h3>Example:</h3>
+<tt>
+
+<p>\CACHE_CONFIG{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\MEMORY_CACHE_SIZE2000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\DISK_CACHE_SIZE5000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\KEEP_DISK_CACHE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\CACHE_DIR{/tmp/.xmayday-cache}<br>
+} </tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXMayday.gif" ALT="XMayday (c)1997. Axene" WIDTH="164" HEIGHT="31"></p>
+</body>
+</html>

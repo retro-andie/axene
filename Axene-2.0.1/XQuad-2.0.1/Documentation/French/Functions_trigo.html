@@ -1,0 +1,208 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fonctions trigonométriques</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFunctionsTrigo.gif" ALT="Fonctions Trigonométriques" WIDTH="324" HEIGHT="41"> </p>
+
+<p><br>
+<br>
+</p>
+
+<hr>
+
+<h3><a NAME="acos"><font COLOR="#2244AA">acos</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'arccosinus d'un nombre.</b> </p>
+  <p><b>acos(<i>cosnombre</i>)</b> <ul>
+    <li><i>cosnombre&nbsp;:</i> valeur comprise entre -1 et 1 à convertir en angle. </li>
+  </ul>
+  <p>L'arccosinus renvoie un angle en radian. Angle dont le <a HREF="Functions_trigo.html#cos&gt;cosinus&lt;/A&gt; renvoie &lt;I&gt;cosnombre&lt;/I&gt;. Cette fonction s'apparente donc à la fonction inverse de &lt;A HREF=" Functions_trigo.html#cos">cosinus</a>. En fait à la <a HREF="Functions_numeric.html#abs">valeur
+  absolue</a> <a HREF="Functions_numeric.html#mod">modulo</a> <a HREF="Functions_numeric.html#pi">PI</a> appliquée à l'angle. Ainsi l'arccosinus renvoie
+  toujours une valeur entre 0 et <a HREF="Functions_numeric.html#pi">PI</a>. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=acos(0.5)</tt><br>
+    <b>Valeur&nbsp;: </b>1.0471976 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="acosh"><font COLOR="#2244AA">acosh</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'arccosinus hyperbolique d'un nombre.</b> </p>
+  <p><b>acosh(<i>nombre1</i>)</b> <ul>
+    <li><i>nombre1&nbsp;:</i> valeur supérieure ou égale à 1. </li>
+  </ul>
+  <p>L'arccosinus hyperbolique est la fonction inverse du <a HREF="Functions_trigo.html#cosh&gt;cosinus hyperbolique&lt;/A&gt;.&lt;P&gt;&lt;B&gt;&lt;U&gt;Exemple&lt;/U&gt;&nbsp;:&lt;/B&gt;&lt;BR&gt;&lt;UL&gt;&lt;TT&gt;=acosh(12.5)&lt;/TT&gt;&lt;BR&gt;&lt;B&gt;Valeur&nbsp;: &lt;/B&gt; 3.2172720&lt;/UL&gt;&lt;/UL&gt;&lt;HR&gt;&lt;H3&gt;&lt;A NAME=" asin"><font COLOR="#2244AA">asin</font></a> <ul>
+    <p><b>Renvoie l'arcsinus d'un nombre.</b> </p>
+    <p><b>asin(<i>sinnombre</i>)</b> <ul>
+      <li><i>sinnombre&nbsp;:</i> nombre compris entre -1 et 1, valeur à convertir en angle. </li>
+    </ul>
+    <p>L'arcsinus renvoie un angle en radian. Angle dont le <a HREF="Functions_trigo.html#sin&gt;sinus&lt;/A&gt; renvoie sinnombre. Cette fonction s'apparente donc à la fonction inverse de &lt;A HREF=" Functions_trigo.html#sin">sinus</a>. En fait au <a HREF="Functions_numeric.html#mod">modulo</a>
+    <a HREF="Functions_numeric.html#pi">PI</a> appliqué à l'angle entre -PI/2 et PI/2. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=asin(0.5)</tt><br>
+      <b>Valeur&nbsp;: </b>0.52359878 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="asinh"><font COLOR="#2244AA">asinh</font></a></h3>
+  <ul>
+    <p><b>Renvoie l'arcsinus hyperbolique d'un nombre.</b> </p>
+    <p><b>asinh(<i>nombre</i>)</b> <ul>
+      <li><i>nombre&nbsp;:</i> valeur à convertir en sinh. </li>
+    </ul>
+    <p>L'arcsinus hyperbolique est la fonction inverse du <a HREF="Functions_trigo.html#sinh">sinus
+    hyperbolique</a>. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=asinh(12)</tt><br>
+      <b>Valeur&nbsp;: </b>3.1797854 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="atan"><font COLOR="#2244AA">atan</font></a></h3>
+  <ul>
+    <p><b>Renvoie l'arctangente d'un nombre.</b> </p>
+    <p><b>atan(<i>nombre</i>)</b> <ul>
+      <li><i>nombre&nbsp;:</i> valeur à convertir en angle. </li>
+    </ul>
+    <p>L'arctangente renvoie l'angle en radians dont la tangente est l'argument nombre. La
+    valeur renvoyée est comprise entre -<a HREF="Functions_numeric.html#pi">PI</a>/2 et <a HREF="Functions_numeric.html#pi">PI</a>/2. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=atan(13.5)</tt><br>
+      <b>Valeur&nbsp;: </b>1.4968573 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="atan2"><font COLOR="#2244AA">atan2</font></a></h3>
+  <ul>
+    <p><b>Renvoie l'arctangente issu de coordonnées.</b> </p>
+    <p><b>atan2(<i>x</i>; <i>y</i>)</b> <ul>
+      <li><i>x&nbsp;:</i> coordonnée x de la droite servant de repère. </li>
+      <li><i>y&nbsp;:</i> coordonnée y de la droite servant de repère. </li>
+    </ul>
+    <p>L'arctangente renvoie l'angle formé par la droite [qui passe par (x;y) et par l'orgine
+    (0;0)] et l'axe des abscisses (axe des x). Cet angle est donc compris entre -<a HREF="Functions_numeric.html#pi">PI</a> et <a HREF="Functions_numeric.html#pi">PI</a>. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=atan2(10;10)</tt><br>
+      <b>Valeur&nbsp;: </b>0.78539816 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="atanh"><font COLOR="#2244AA">atanh</font></a></h3>
+  <ul>
+    <p><b>Renvoie l'arctangente hyperbolique d'un nombre.</b> </p>
+    <p><b>atanh(<i>nombre</i>)</b> <ul>
+      <li><i>nombre&nbsp;:</i> nombre compris entre -1 et 1 non inclus, valeur à convertir en
+        tanh. </li>
+    </ul>
+    <p>L'arctangente hyperbolique est la fonction inverse de la <a HREF="Functions_trigo.html#tanh">tangente hyperbolique</a>. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=atanh(0.5)</tt><br>
+      <b>Valeur&nbsp;: </b>0.54930614 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="cos"><font COLOR="#2244AA">cos</font></a></h3>
+  <ul>
+    <p><b>Renvoie le cosinus d'un angle.</b> </p>
+    <p><b>cos(<i>angle</i>)</b> <ul>
+      <li><i>angle&nbsp;:</i> angle exprimé en radians. </li>
+    </ul>
+    <p>Renvoie le cosinus du paramètre <i>angle</i> exprimé en radians. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=cos(1.5)</tt><br>
+      <b>Valeur&nbsp;: </b>0.070737202 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="cosh"><font COLOR="#2244AA">cosh</font></a></h3>
+  <ul>
+    <p><b>Renvoie le cosinus hyperbolique d'un <i>nombre</i>.</b> </p>
+    <p><b>cosh(<i>nombre</i>)</b> <ul>
+      <li><i>nombre&nbsp;:</i> valeur dont on veut connaître le cosinus hyperbolique. </li>
+    </ul>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=cosh(1)</tt><br>
+      <b>Valeur&nbsp;: </b>1.5430806 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="sin"><font COLOR="#2244AA">sin</font></a></h3>
+  <ul>
+    <p><b>Renvoie le sinus d'un angle.</b> </p>
+    <p><b>sin(<i>angle</i>)</b> <ul>
+      <li><i>angle&nbsp;:</i> angle exprimé en radians. </li>
+    </ul>
+    <p>Renvoie le sinus du paramètre <i>angle</i> exprimé en radian. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=sin(pi/2)</tt><br>
+      <b>Valeur&nbsp;: </b>1 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="sinh"><font COLOR="#2244AA">sinh</font></a></h3>
+  <ul>
+    <p><b>Renvoie le sinus hyperbolique d'un nombre.</b> </p>
+    <p><b>sinh(<i>nombre</i>)</b> <ul>
+      <li><i>nombre&nbsp;:</i> valeur dont on veut connaître le sinus hyperbolique. </li>
+    </ul>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=sinh(1)</tt><br>
+      <b>Valeur&nbsp;: </b>1.1752012 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="tan"><font COLOR="#2244AA">tan</font></a></h3>
+  <ul>
+    <p><b>Renvoie la tangente d'un angle.</b> </p>
+    <p><b>tan(<i>angle</i>)</b> <ul>
+      <li><i>angle&nbsp;:</i> nombre en radian dans le domaine {R / pi/2 * (n*2+1) , n dans N} </li>
+    </ul>
+    <p>Renvoie la tangente du paramètre angle exprimé en radian. </p>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=tan(pi/6)</tt><br>
+      <b>Valeur&nbsp;: </b>0.57735027 </p>
+    </ul>
+  </ul>
+  <hr>
+  <h3><a NAME="tanh"><font COLOR="#2244AA">tanh</font></a></h3>
+  <ul>
+    <p><b>Renvoie la tangente hyperbolique d'un nombre.</b> </p>
+    <p><b>tanh(<i>nombre</i>)</b> <ul>
+      <li><i>nombre&nbsp;:</i> nombre à convertir. </li>
+    </ul>
+    <p><b><u>Exemple</u>&nbsp;:</b><br>
+    <ul>
+      <tt><p>=tanh(2)</tt><br>
+      <b>Valeur&nbsp;: </b>0.96402758 </p>
+    </ul>
+  </ul>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

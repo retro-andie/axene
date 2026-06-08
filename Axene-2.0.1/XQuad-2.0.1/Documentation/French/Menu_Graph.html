@@ -1,0 +1,130 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Menu Grapheur</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleMenu.gif" ALT="Menu déroulant" WIDTH="129" HEIGHT="24"> <img ALIGN="middle" SRC="Images/TitleMenuGraph.gif" ALT="Menu Grapheur" WIDTH="188" HEIGHT="39"> </p>
+
+<p><br>
+<br>
+Le menu déroulant Grapheur donne accès à tout ce qui concernent la création de
+graphique et leur configuration. <br>
+<br>
+</p>
+
+<hr>
+
+<p align="center"><br>
+<img SRC="Images/Menu_Graph.gif" ALT="Image&nbsp;: Menu Grapheur" WIDTH="225" HEIGHT="310"> <br>
+<small><i>Photo d'écran&nbsp;: Menu déroulant Grapheur </i></small></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p><br>
+</p>
+
+<h3>Le menu Grapheur comporte les entrées suivantes&nbsp;:</h3>
+
+<ul>
+  <li><a NAME="hbars_menu_entry">l'entrée <i>&quot;Créer Barres...&quot;</i> permet de <b>créer
+    un graphique en barres</b>. Un graphique en barres est une représentation en barres
+    horizontales des valeurs. L'axe des ordonnées du graphique est divisé de façon
+    équitable entre les différentes séries et chaque sous-partie, correspondant à une
+    série, est sous-divisée de façon équitable entre les différentes valeurs de la
+    série. La légende d'un graphique en barres contient une entrée de couleur pour chaque
+    valeur des séries. </a><br>
+    &nbsp;</li>
+  <li><a NAME="vbars_menu_entry">l'entrée <i>&quot;Créer Histogrammes...&quot;</i> permet de
+    <b>créer un graphique en histogramme</b>. Un histogramme est une représentation en
+    barres verticales des valeurs. L'axe des abscisses du graphique est divisé de façon
+    équitable entre les différentes séries et chaque sous-partie correspondant à une
+    série est sous-divisée de façon équitable entre les valeurs de la série. La légende
+    d'un histogramme contient une entrée de couleur pour chaque valeur des séries. </a><br>
+    &nbsp;</li>
+  <li><a NAME="areas_menu_entry">l'entrée <i>&quot;Créer Aires...&quot;</i> permet de <b>créer
+    un graphique en aires</b>. Un graphique en courbes est une représentation 'surface
+    pleine' 2D des valeurs. Il y a autant de surfaces de couleurs différentes que de séries.
+    L'axe des abscisses est divisé de façon équitable entre les différentes valeurs des
+    séries. La légende d'un graphique en courbes contient une entrée de couleur pour chaque
+    série. Les valeurs d'une série sont additionnées aux valeurs correspondantes des
+    séries précédentes avant d'être reportées dans le graphique. </a><br>
+    &nbsp;</li>
+  <li><a NAME="curves_menu_entry">l'entrée <i>&quot;Créer Courbes...&quot;</i> permet de <b>créer
+    un graphique en courbes</b>. Un graphique en courbes est une représentation 'fils de fer'
+    2D des valeurs. Il y a autant de courbes de couleurs différentes que de séries. L'axe
+    des abscisses est divisé de façon équitable entre les différentes valeurs des séries.
+    La légende d'un graphique en courbes contient une entrée de couleur pour chaque série. </a><br>
+    &nbsp;</li>
+  <li><a NAME="pies_menu_entry">l'entrée <i>&quot;Créer Secteurs...&quot;</i> permet de <b>créer
+    un graphique en secteurs</b>. Un graphique en secteurs, aussi nommé 'camembert', est une
+    représentation en secteur angulaire d'un disque. Il y a autant de disques que de séries.
+    Chaque disque est divisé en autant de secteurs que de valeurs positives et non nulles de
+    chaque série (les valeurs négatives et nulles sont exclues). Chaque secteur est
+    caractérisé par une couleur et le pourcentage de la circonférence du disque utilisé.
+    La légende d'un graphique en secteurs contient une entrée de couleur pour chaque valeur
+    des séries. Dans un graphique en secteurs, il n'existe pas de lignes d'ordonnées. </a><br>
+    &nbsp;</li>
+  <li><a NAME="radars_menu_entry">l'entrée <i>&quot;Créer Radars...&quot;</i> permet de <b>créer
+    graphique en radars</b>. Un graphique en radars est une représentation polaire 2D
+    ressemblant à une antenne de radar. Pour chaque abscisse, un axe part d'une origine
+    commune dans des directions circulairement réparties. Les valeurs de chaque série sont
+    reportées sur les axes correspondants, formant une courbe de couleur. La légende d'un
+    graphique en courbes contient une entrée de couleur pour chaque série. </a></li>
+</ul>
+
+<p>Les entrées précédentes du menu déroulant Grapheur ont un double rôle&nbsp;: soit
+créer un graphique dans un cadre à partir des données des cellules sélectionnées,
+soit changer le type d'un graphique sélectionné. La fonction de ces boutons dépend donc
+de ce qui est sélectionné&nbsp;: soit des cellules de la feuille de calcul, soit un
+cadre contenant un graphique. Lorsque l'un de ces boutons sert à la création d'un
+nouveau graphique, XQuad passe en <a HREF="HBar_Graphics.html#rectangle_frame_icon">mode
+création d'un cadre rectangulaire</a>. Le cadre, une fois défini, servira de conteneur
+au graphique. Si XQuad n'arrive pas à détecter de façon certaine la <a HREF="Box_GraphSetup.html#geometry">géométrie</a> des régions de cellules
+sélectionnées, alors la boîte de dialogue '<a HREF="Box_GraphSetup.html">Configuration
+du graphique</a>' sera ouverte automatiquement. 
+
+<ul>
+  <li><a NAME="legend_menu_entry">l'entrée <i>&quot;Afficher/Cacher Légende&quot;</i> permet
+    d'<b>afficher/cacher la légende</b>. La légende peut être affichée ou cachée si, en
+    fonction du type de graphique, les noms des séries ou les étiquettes de l'axe des
+    abscisses existent. </a><br>
+    &nbsp;</li>
+  <li><a NAME="y_axes_menu_entry">l'entrée <i>&quot;Afficher/Cacher Lignes d'ordonnées&quot;</i>
+    permet d'<b>afficher/cacher les lignes d'ordonnées</b>. L'action de ce bouton peut
+    s'appliquer à tous les types de graphiques sauf les graphiques en secteurs. Les
+    graduations de l'axe des ordonnées seront étendues à toute la largeur du graphique. </a><br>
+    &nbsp;</li>
+  <li><a NAME="graph_name_menu_entry">l'entrée <i>&quot;Afficher/Cacher Titre&quot;</i>
+    permet d'<b>afficher/cacher le titre du graphique</b>. Le titre du graphique n'existe que
+    si les noms de séries et les étiquettes de l'axe des abscisses existent. </a><br>
+    &nbsp;</li>
+  <li><a NAME="absc_name_menu_entry">l'entrée <i>&quot;Afficher/Cacher Texte des
+    abscisses&quot;</i> permet d'<b>afficher/cacher les étiquettes de l'axe des abscisses</b>.
+    Les étiquettes de l'axe des abscisses n'existent que si le </a><a HREF="Box_GraphSetup.html#absc_label_button">troisième bouton</a> de la boîte de
+    dialogue 'Configuration du graphique' est enfoncé. <br>
+    &nbsp;</li>
+  <li><a NAME="series_name_menu_entry">l'entrée <i>&quot;Afficher/Cacher Nom des
+    séries&quot;</i> permet d'<b>afficher/cacher les noms des séries</b>. Les noms des
+    séries n'existent que si le </a><a HREF="Box_GraphSetup.html#legend_button">cinquième
+    bouton</a> de la boîte de dialogue 'Configuration du graphique' est enfoncé. <br>
+    &nbsp;</li>
+  <li><a NAME="setup_menu_entry">l'entrée <i>&quot;Configuration&quot;</i> permet de <b>changer
+    la géométrie des régions de cellules</b> servant de source aux valeurs reportées dans
+    le graphique. Sélectionner cette entrée ouvre la boîte de dialogue '</a><a HREF="Box_GraphSetup.html">Configuration du graphique</a>'. </li>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

@@ -1,0 +1,171 @@
+#!/bin/tcsh -f
+#
+# do_version for Xclamation, XQuad, XAllWrite, XMayday, XInstall and 
+# 	AxeneOffice in Utils/
+#
+# Copyright (C) 1994-2000 Axene.
+# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Email: xcalibur@axene.org
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+# Started on  Sometime during     1999 One of the authors
+# Last update Fri Jan  7 14:32:20 2000 Emmanuel Paris
+#
+
+set PWD=`pwd`
+set top=`dirname $PWD/$0`/../Main/
+set lastline = 1
+while ( 'cat $top/version | tail -$lastline | head -1 | cut -d"|" -f4' == "" )
+ set lastline = `expr $lastline + 1`
+end
+set phrase = `cat $top/version | tail -$lastline | head -1`
+set major = `echo $phrase | cut -c1`
+set minor = `echo $phrase | cut -c3`
+set pl = `echo $phrase | cut -c7-8`
+
+if (! $?USER_NICKNAME) then
+ switch ($HOST)
+ case "xibios":
+  setenv USER_FULLNAME "Emmanuel Paris"
+  breaksw
+ case "gudul":
+  setenv USER_FULLNAME "Antoine Buat"
+  breaksw
+ case "pacush":
+  setenv USER_FULLNAME "Robin Castanier"
+  breaksw
+ default:
+  echo -n "Nom du programmmeur: "
+  setenv USER_FULLNAME $<
+ endsw
+endif
+
+if ($# == 1) then
+ switch ($argv[1])
+ case "make_ok":
+  set lastline = 1
+  while ( 'cat $top/version | head -$lastline | tail -1 | cut -d"|" -f4' \
+    != "" )
+   set lastline = `expr $lastline + 1`
+  end
+  set phrase = `cat $top/version | tail -1`
+  cat $top/version | head -`expr $lastline - 1 `> version
+  echo $phrase OK >> $top/version
+  breaksw
+ case "pl++":
+  set pl = `echo $pl | awk '{if ($1==99) printf("00"); \
+    else printf("%02d",$1+1);}'`
+  echo ''$major'.'$minor' pl'$pl' | '`date`' | \
+    '$USER_FULLNAME'@'$HOST' |' >> $top/version
+  cat $top/version | tail -1
+  cat << EOF > $top/version.h
+/*
+** version.h  - generated header for version info
+**
+** Copyright (c) 1994-1996. All Rights reserved.
+** Xcalibur Team (S.Boisson, A.Buat, R.Castanier, E.Paris)
+** EMail: <xcalibur@axene.org>
+**
+*/
+ 
+#ifndef _version_h_
+#define _version_h_
+
+EOF
+  echo '#define MAJOR' `expr $major + 1 - 1` >> $top/version.h   
+  echo '#define MINOR' `expr $minor + 1 - 1` >> $top/version.h   
+  echo '#define PL' `expr $pl + 1 - 1` >> $top/version.h   
+  echo '#define DATE "'`date`'"' >> $top/version.h   
+  cat << EOF >> $top/version.h
+
+#endif
+EOF
+  breaksw
+ case "minor++":
+  set minor = `echo $minor | awk '{if ($1==9) printf("0"); else printf("%d",$1+1);}'`
+  set pl = '00'
+  echo ''$major'.'$minor' pl'$pl' | '`date`' | '$USER_FULLNAME'@'$HOST' |' \
+    >> $top/version
+  cat $top/version | tail -1
+  echo "Remarque:" 
+  if (-e $top/gato.tmp) then
+   rm $top/gato.tmp
+  endif
+  cat > $top/gato.tmp
+  if (! -z $top/gato.tmp) then
+   echo "Ok, remarque notee."
+   echo '0' | awk '{for (i=0; i<80; i++) printf("*"); \
+    printf("\n");}' >> $top/remark
+   echo 'AxeneOffice V'$major'.'$minor' pl'$pl' date: '`date`'' >> $top/remark
+   cat $top/gato.tmp >> $top/remark
+  endif
+  rm $top/gato.tmp
+  cat << EOF > $top/version.h
+/*
+** version.h  - generated header for version info
+**
+** Copyright (c) 1994-1996. All Rights reserved.
+** Xcalibur Team (S.Boisson, A.Buat, R.Castanier, E.Paris)
+** EMail: <xcalibur@axene.org>
+**
+*/
+ 
+#ifndef _version_h_
+#define _version_h_
+
+EOF
+  echo '#define MAJOR' `expr $major + 1 - 1` >> $top/version.h   
+  echo '#define MINOR' `expr $minor + 1 - 1` >> $top/version.h   
+  echo '#define PL' `expr $pl + 1 - 1` >> $top/version.h   
+  echo '#define DATE "'`date`'"' >> $top/version.h   
+  cat << EOF >> $top/version.h
+
+#endif
+EOF
+  breaksw
+ case "major++":
+  set major = `echo $major | awk '{printf("%d",$1+1);}'`
+  set minor = '0'
+  set pl = '00'
+  echo ''$major'.'$minor' pl'$pl' | '`date`' | '$USER_FULLNAME'@'$HOST' |' \
+    >> $top/version
+  cat $top/version | tail -1	
+  echo "Grosse Remarque:" 
+  if (-e $top/gato.tmp) then
+   rm $top/gato.tmp
+  endif
+  cat > $top/gato.tmp
+  if (! -z $top/gato.tmp) then
+   echo "Ok, remarque notee."
+   echo '0' | awk '{for (i=0; i<160; i++) printf("*"); \
+    printf("\n");}' >> $top/remark
+   echo 'AxeneOffice V'$major'.'$minor' pl'$pl' date: '`date`'' >> $top/remark
+   cat $top/gato.tmp >> $top/remark
+  endif
+  rm $top/gato.tmp
+  breaksw
+ default:
+  echo "Usage : `basename $0` minor++ major++ pl++"
+  breaksw
+ endsw
+ else
+  echo "No argument set. Abort".
+  echo "Usage : `basename $0` minor++ major++ pl++"
+endif
+
+
+
+

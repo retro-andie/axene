@@ -1,0 +1,65 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration des imprimantes</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigPrinter.gif" ALT="Configuration des imprimantes" WIDTH="355" HEIGHT="39"> </p>
+
+<p><br>
+<br>
+Cette section des <a HREF="Config.html">fichiers de configuration</a> permet de configurer
+les imprimantes. </p>
+
+<h3>Section de configuration d'une imprimante : <i>\PRINTER{...}</i></h3>
+
+<p>Cette section permet de définir une imprimante pour les impressions de vos documents
+XQuad. La définition d'une imprimante s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i>
+et avant l'accolade fermante correspondante <i>&quot;}&quot;</i>. Les paramètres de
+configuration sont : 
+
+<ol>
+  <li><b>\NAME{nom}</b> où <i>nom</i> représente le nom de l'imprimante tel qu'il sera
+    défini dans les menus correspondants d'XQuad. <br>
+    &nbsp;</li>
+  <li><b>\COMMAND{ligne de commande}</b> où <i>ligne de commande</i> représente la commande
+    d'impression de votre système. Si ce paramètre est oublié, l'impression se fera dans un
+    fichier. <br>
+    &nbsp;</li>
+</ol>
+<b>
+
+<p>Nota :</b> Il est possible de définir plusieurs imprimantes. Lors de l'impression il
+faudra choisir celle utilisée dans la boîte de dialogue '<a HREF="Box_Print.html#printer_list">Impression</a>'. </p>
+
+<h3>Exemple :</h3>
+<tt>
+
+<p>\PRINTER{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Laser&nbsp;Accueil}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COMMAND{lpr&nbsp;-PLaser_Acc}<br>
+}<br>
+</p>
+
+<p>\PRINTER{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Fichier}<br>
+}<br>
+</p>
+
+<p>\PRINTER{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Imprimante&nbsp;Postscript}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COMMAND{lpr}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

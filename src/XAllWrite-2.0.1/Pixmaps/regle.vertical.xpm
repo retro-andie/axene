@@ -1,0 +1,21 @@
+/* XPM */
+static char * regle_vertical_xpm[] = {
+"15 15 3 1 7 7",
+" 	s None	c None",
+".	c black",
+"X	c green",
+"      ...      ",
+"      . .      ",
+"      . .      ",
+"    . . . .    ",
+"   .. . . ..   ",
+"  .X... ...X.  ",
+" .XXXX. .XXXX. ",
+".XXXXX. .XXXXX.",
+" .XXXX. .XXXX. ",
+"  .X... ...X.  ",
+"   .. . . ..   ",
+"    . . . .    ",
+"      . .      ",
+"      . .      ",
+"      ...      "};

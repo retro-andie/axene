@@ -1,0 +1,38 @@
+#/bin/tcsh -fb
+#/usr/local/bin/tcsh -fb
+# 
+# view new file since arg1 day
+# 
+# Copyright (c) 1994-1995. All Rights reserved.
+# Xcalibur Team (S.Boisson, A.Buat, R.Castanier, E.Paris)
+# EMail: <xcalibur@axene.org>
+# 
+# Started on  Tue Oct  4 11:11:32 1994 Nucleus
+# Last update Fri Jun  6 16:47:27 1997 Xibios 2
+# 
+
+if ($# == 1) then
+ set t = `find . -mtime -$argv[1] -print | fgrep -v ".o" | fgrep -v "~" | fgrep -v ".a" | fgrep -v ".zpm" | fgrep -v "core" | fgrep -v "change_code" | fgrep -v "Headers/"`
+ set fi = ""
+ foreach name ($t)
+  if (! -d $name) then
+   if (! -x $name) then
+    echo $name
+    set fi = `echo $fi $name`
+   else
+    set siz = ""
+    set inc = 1
+    while ($siz == "")
+     set siz = `wc -c $name | cut -d" "  -f$inc`
+     set inc = `expr $inc + 1`
+    end
+    if ( `expr $siz` < 10000 ) then
+     set fi = `echo $fi $name`
+    endif
+   endif
+  endif
+ end
+else
+ echo "Usage viewNew number(day) "
+endif
+

@@ -1,0 +1,186 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Barre d'édition</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleEditBar.gif" ALT="Barre d'édition" WIDTH="184" HEIGHT="33">
+</p>
+
+<p><br>
+<br>
+La barre de saisie permet d'editer le contenu de la cellule active. Les styles appliqués
+aux cellules ne se voient pas dans la barre de saisie ; seule la formule est affichée. <br>
+<br>
+</p>
+
+<hr>
+
+<p align="center"><br>
+<img SRC="Images/EditBar.gif" ALT="Image: Barre d'edition" WIDTH="360" HEIGHT="54"> <br>
+<small><i>Photo d'écran&nbsp;: Barre d'édition. </i></small></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p><br>
+</p>
+
+<h3>La barre horizontale est composée par : </h3>
+
+<ul>
+  <li><a NAME="coord_label">un label qui permet de <b>voir les coordonnées de la cellule
+    active</b>. La coordonnée d'une cellule s'exprime par le numéro de colonne (sous forme
+    de série de lettres) et le numéro de la ligne. Lors de la sélection d'une région de
+    cellules, les nombre de lignes et de colonnes qui la composent apparaîssent sous la forme
+    de &quot;L<i>nombre_de_lignes</i> x C<i>nombre_de_colonnes</i>&quot;. </a></li>
+  <li><a NAME="red_led"><img SRC="Icons/Led_Red.gif" WIDTH="13" HEIGHT="13"> le bouton icône &quot;feu rouge&quot;
+    qui permet d'<b>annuler la saisie du champ texte</b> de la barre d'édition et remet
+    l'ancien contenu. Enfoncer la touche '<tt>Escape</tt>' du clavier a le même effet. </a></li>
+  <li><a NAME="green_led"><img SRC="Icons/Led_Green.gif" WIDTH="13" HEIGHT="13"> le bouton icône &quot;feu
+    vert&quot; qui permet d'<b>accepter la saisie du champ texte</b> de la barre d'édition.
+    Un click sur ce bouton ne change pas les coordonnées de la cellule active. Enfoncer la
+    touche '<tt>Enter</tt>' du pavé numérique a le même effet. </a></li>
+  <li><a NAME="textfield">le champ texte d'édition qui permet de <b>changer le contenu de la
+    cellule active</b>. Ce champ est limité à 4000 caractères. Pour valider une cellule, on
+    peut soit enfoncé la touche '<tt>Return</tt>' du pavé alphabétique ou numérique, ou
+    changer la cellule active par un click sur une autre cellule ou l'usage des touches
+    flèches. </a></li>
+</ul>
+
+<p><br>
+</p>
+
+<h3><a NAME="text_edition">Edition d'un texte. </a></h3>
+
+<p>Lorsque le contenu de la barre d'édition ne commence pas par le signe &quot;=&quot; et
+qu'il ne peut pas être assimilé à une valeur numérique, alors ce contenu est
+considéré comme étant un texte. Si l'on veut faire commencer un texte par le signe
+&quot;=&quot; ou faire en sorte qu'une valeur numérique soit considérée comme un texte,
+il suffit de faire débuter le champ texte par le signe &quot;'&quot; (apostrophe). Un
+texte contenu dans une cellule est par défaut aligné à gauche et peut dépasser dans
+les cellules adjacentes. </p>
+
+<p><br>
+</p>
+
+<h3><a NAME="value_edition">Edition d'une valeur numérique.</a></h3>
+
+<p>Il existe plusieurs <a HREF="Box_NumFormat.html#format_type_list">types de valeurs
+numériques</a>. Les valeurs numériques ne peuvent pas dépasser dans les cellules
+adjacentes et sont alignées par défaut à droite (centrées pour les valeurs
+booléennes). </p>
+
+<p>Pour qu'une cellule contienne une valeur numérique simple (type normal), il suffit
+d'entrer une suite de chiffre avec éventuellement un signe et un point &quot;.&quot;
+comme virgule (&nbsp;[+\-]XXXX[.XXX]&nbsp;). </p>
+
+<p>Il est également possible d'entrer une valeur de type pourcentage, en faisant suivre
+celle-ci du signe &quot;%&quot; (&nbsp;[+/-]XXXX[.XXX]%&nbsp;). </p>
+
+<p>Les valeurs numériques peuvent être entrées sous forme &quot;scientifique&quot;, en
+faisant suivre la mantisse de la partie exposant
+(&nbsp;[+/-]XXXX[.XXX][E/e][+/-]XXX&nbsp;). </p>
+
+<p>Les valeurs de type &quot;jour de la semaine&quot; et &quot;mois de l'année&quot;
+peuvent être entrées directement en écrivant au moins les trois premières lettres du
+mot (&nbsp;pas de distinction majuscule/minuscule ni accent/sans accent&nbsp;). </p>
+
+<p>Les entrées &quot;vrai&quot; et &quot;faux&quot; (pas de distinction
+majuscule/minuscule) permettent d'affecter une valeur de type booléenne aux cellules. </p>
+
+<p>Pour entrer une valeur de type &quot;date&quot;, on peut utiliser les formats
+suivants&nbsp;: 
+
+<ul>
+  <li>JJ/MM ou MM/[-]AA[AA] ou JJ/MM/[-]AA[AA]. </li>
+  <li>JJ-MM ou MM-[-]AA[AA] ou JJ-MM-[-]AA[AA]. </li>
+</ul>
+
+<p>On peut faire précéder l'année par le signe &quot;-&quot; pour indiquer des années
+avant J.C. Seules les dates valides seront considérées comme des valeurs numériques
+(texte sinon). </p>
+
+<p>Pour entrer une valeur de type &quot;heure&quot;, on peut utiliser les formats&nbsp;:
+HH:MM[:SS]. Les heures non valides ne seront pas considérées comme des valeurs
+numériques. </p>
+
+<p><br>
+</p>
+
+<h3><a NAME="formula_edition">Edition d'une formule. </a></h3>
+
+<p>Un formule doit toujours commencer par le signe &quot;=&quot;. Elle peut renvoyer une
+valeur numérique, un texte ou une erreur. Dans les trois cas, le résultat ne peut pas
+dépasser dans les cellules adjacentes. </p>
+
+<p>Comme paramètre d'une fonction, il est possible de mettre la référence d'une autre
+cellule. Pour cela, il suffit de mettre la coordonnée de cette cellule. Par exemple, si
+la cellule B3 contient la valeur 10 et que l'on veut que la cellule C3 contienne le
+cosinus de la valeur de B3 en degrés, il suffit de mettre dans la cellule C3 la formule :
+'<tt>=cos(radians(B3))</tt>'. </p>
+
+<p>La référence d'une cellule dans une formule peut se faire en relatif ou en absolu. </p>
+
+<p>Par défaut, la référence est relative, c'est à dire que si l'on déplace une
+cellule, les coordonnées des cellules référencées dans sa formule seront modifiées
+relativement au déplacement. Dans l'exemple précédent, si la cellule C3 est déplacée
+en E6 ( +2 colonnes, +3 lignes), la formule de cette dernière deviendra '<tt>=cos(radians(D6))</tt>'.
+</p>
+
+<p>Une référence peut se faire en absolu, c'est à dire que si l'on déplace une
+cellule, les coordonnées des cellules référencées dans sa formule ne seront pas
+modifiées. Pour ce faire, il suffit d'ajouter le signe '$' devant les coordonnées de
+ligne et de colonne à l'intérieur de la formule. Dans l'exemple précédent, pour que le
+déplacement de la cellule C3 en E6 s'effectue sans changer les coordonnées de la cellule
+B3 référencée, il faut mettre la formule '<tt>=cos(radians($B$3))</tt>' préalablement
+en C3. </p>
+
+<p>Une référence peut aussi être absolue pour les lignes et relative pour les colonnes
+ou inversement. Pour cela, il suffit de mettre le signe '$' devant la coordonnée que l'on
+veut garder en absolue. </p>
+
+<p>Certaines fonctions acceptent comme paramètre des régions de cellules (fonctions <a HREF="Functions_numeric.html#somme">somme</a>, <a HREF="Functions_numeric.html#produit">produit</a>,
+<a HREF="Functions_statistic.html#min">min</a>, <a HREF="Functions_statistic.html#max">max</a>...).
+On écrit de tel paramètre sous la forme 'C<sub>1</sub>L<sub>1</sub>:C<sub>2</sub>L<sub>2</sub>'
+ou 'C<sub>1</sub>:C<sub>2</sub>' ou 'L<sub>1</sub>:L<sub>2</sub>' (avec C identifiant de
+colonne et L identifiant de ligne). Le signe '$' pour garder une coordonnée en absolue
+est également applicable dans ces cas là. Par exemple, pour affecter dans le cellule B1
+la somme des valeurs de la colonne A, il faut mettre la formule '<tt>=somme(A:A)</tt>' en
+B1. </p>
+
+<p>On peut faire référence à une séquence de plusieurs cellules ou régions de
+cellules, en séparant les différentes références par le signe ';'. Par exemple, pour
+déterminer la plus petite valeur contenu dans les colonnes B et D, il faut écrire la
+formule '<tt>=min(B:B;D:D)</tt>'. </p>
+
+<p>Lors de l'édition d'une formule (&nbsp;le champ d'édition commence par le signe
+'='&nbsp;), il est possible de clicker sur une cellule de la feuille de calcul pour
+ajouter une référence à cette cellule dans le champ texte de la barre d'édition. Cette
+référence sera en relatif et sera éventuellement précédée automatiquement de
+l'opérateur '+' si la cohérence de la formule le requiert. </p>
+
+<p>Si l'on veut faire une référence à une région de cellule, il suffit de
+sélectionné la zone voulue à l'aide de la souris. Les coordonnées de la région
+apparaîtront en temps réel dans le champ d'édition. Pour faire des références à des
+régions du type 'C<sub>1</sub>:C<sub>2</sub>' (&nbsp;ou 'L<sub>1</sub>:L<sub>2</sub>'&nbsp;),
+il faut sélectionner des colonnes (&nbsp;ou des lignes&nbsp;) entières grâce aux
+en-têtes de colonnes (&nbsp;ou de lignes&nbsp;). </p>
+
+<p>Lorsque l'on ajoute dans la barre d'édition des références au moyen de la souris, il
+est possible de créer des séquences de cellules ou de régions de cellules en laissant
+la touche '<tt>Ctrl</tt>' du clavier enfoncée au cours de la sélection. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98. Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

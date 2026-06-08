@@ -1,0 +1,24 @@
+#
+# AD files generation
+#
+# Started on  Mon Dec  8 17:12:44 1997 Emmanuel Paris
+# Last update Thu Jan  6 17:15:14 2000 Emmanuel Paris
+#
+
+#destination file (ie: "Xclamation", "XQuad"...)
+dst_file="XQuad"
+	
+#ad sequence file
+ad_seq_file='ADHeader.$lang ADParameters ADInside ADTongue.$lang ADDoc ADColor.gray ADCommon'
+
+#inside ad sequence file
+inside_ad_seq_file='ADParameters ADInside ADTongue.$lang ADDoc ADColor.gray'
+
+#ad language
+ad_lang="english english french german spanish"
+
+#dest language
+dst_lang="English.us English.uk French German Spanish"
+
+#inside ad language
+inside_ad_lang="english"

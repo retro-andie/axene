@@ -1,0 +1,141 @@
+*title:					Axene XInstall
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Sí
+*action_area.No.labelString:		No
+*action_area.Apply.labelString:		Aplicar
+*action_area.Ok.labelString:		De acuerdo
+*action_area.Open.labelString:		Abrir...
+*action_area.Retry.labelString:		Repetir
+*action_area.Stop.labelString:		Parar
+*action_area.Reset.labelString:		Reinicializar
+*action_area.Cancel.labelString:	Cancelar
+*action_area.Close.labelString:		Cerrar
+*action_area.Help.labelString:		Ayuda
+*action_area.Save.labelString:		Salvaguardar
+*action_area.Continue.labelString:	Proseguir
+*action_area.Quit.labelString:		Salir
+*action_area.Save as.labelString:	Salvaguardar bajo...
+*action_area.Back.labelString:		<<< Precedente
+*action_area.Next.labelString:          Siguiente >>>
+*action_area.Install.labelString:	Instalar
+*action_area.DontAgree.labelString:	I do not agree
+*action_area.Agree.labelString:		I agree >>>
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:	Violación de privilegios (Segmentation fault)
+*sigErrorPIPEMsg:	Conexión interrumpida (Broken pipe)
+*sigErrorBUSMsg:        Error de bus (Bus error)
+*sigErrorFPEMsg:        Error de cálculo (Floating exception)
+*sigErrorIOTMsg:        Error interno (IOT trap)
+*sigErrorEMTMsg:        Desvío Error Memoria (EMT trap)
+*sigErrorXCPUMsg:       Rebasamiento de tiempo CPU (Cputime limit exceeded)
+*sigErrorXFSZMsg:       Rebasamiento de tamaño de fichero (Filesize limit exceeded)
+*sigErrorILLMsg:        Instrucción ilícita (Illegal instruction)
+*sigErrorINTMsg:        Axene XInstall ha sido (Interrupt)
+*sigErrorQuitingMsg:	Salir ahora de Axene XInstall
+*sigErrorSorryMsg:	Imposible seguir ejecutando
+
+*lCaughtSignal.labelString:		Un error se ha producido :
+*lCaughtIOerror.labelString:            Error fatal del servidor X
+*lCannotContinue.labelString:           Imposible proseguir
+
+! ************************************************************************
+! **				BOX LICENSE   				**
+! ************************************************************************
+
+*lBoxLicenseTitle.labelString:		Installation and use of Axene's\
+ softwares requires\nacceptance of the following terms and conditions:
+
+! ************************************************************************
+! **				BOX KEY   				**
+! ************************************************************************
+
+*lBKInfo.labelString:		Enter your key in this box or\n\
+enter '000-0000000000' to install without keys.
+*lBKInfoMsg:	LIVE INSTALLATION.\n\
+Enter your key in this box.
+
+*lBKFName.labelString:		Full Name
+*lBKCompany.labelString:	Company
+*lBKKey.labelString:		Key
+*keynotvalidMsg:		This key is not valid.
+
+! ************************************************************************
+! **				BOX DIRECTORY 				**
+! ************************************************************************
+
+*lBoxDirectoryTitleSrc.labelString: Packages will be installed from the\
+ following directory.\nTo install from an other directory, click on icon.
+
+*lBoxDirectoryTitleDst.labelString: Softwares will be installed into the\
+ following directory.\nTo install into an other directory, click on icon.
+
+
+*lBDSrc.labelString:			Origen :
+*lBDDst.labelString:			Destinación :
+*lFSCreate.labelString:			Sumar repertorio
+*lWaiting.labelString:			Busca de los archivos...
+*freeSpaceMsg:				Espacio libre : %ld Ko
+*createdirMsg:			Directory %s \ndoesn't exist. Create it?
+*cannotCreateDirMsg:		Can not create directory %s
+*dirNotWritableMsg:		You don't have write permission in\nthe directory %s.
+
+! ************************************************************************
+! **				BOX SELECT 				**
+! ************************************************************************
+
+*lBoxSelectTitle.labelString:		Selección de los archivos a instalar
+*browseDirectorySrcMsg:		Selección del repertorio origen
+*browseDirectoryDstMsg:		Selección del repertorio destinación
+*usedSpaceMsg:			Espacio utilizado : %ld Ko
+*noPackageFoundMsg:		Ningún archivo encontrado
+*onePackageFoundMsg:		1 archivo encondrado
+*manyPackageFoundMsg:		%d archivos encondrados
+*noPackageSelectedMsg:		Ningún archivo selecciónado
+*onePackageSelectedMsg:		1 archivo selecciónado
+*manyPackageSelectedMsg:	%d archivos selecciónados
+*sizeMsg:			Dimensión
+*demoMsg:			Versión de demostración
+*manualMsg:			Documentación
+*librariesMsg:			Ficheros comúnos
+*bytesMsg:			Octetos
+*kiloBytesMsg:			Ko
+*megaBytesMsg:			Mo
+*notEnoughSpaceMsg:		There is not enough disk space to install\nall selected packages. Free at least %d KB.
+
+! ************************************************************************
+! **				BOX INSTALL 				**
+! ************************************************************************
+
+*lBoxInstallTitle.labelString:	Installación pendiente...
+*lBDIfilep.labelString:		-%
+*lBDIpackagep.labelString:	-%
+*lBDItotalp.labelString:	-%
+*lBDIfile.labelString:		Fichero
+*lBDIpackage.labelString:	Archivo
+*lBDItotal.labelString:		Total
+*lBDIinfo.labelString:		
+*lBDIspace.labelString:		Espacio libre
+*lBDIspacep.labelString:	---%
+*lBDIspacea.labelString:	(dimensión desconocida)
+*freeSpace2Msg:			%ld Ko
+*installCompleteMsg:		Installación terminado
+*installQuitMsg:		Salir
+*installEndMessageMsg:		The installation of selected packages\n\
+is now complete.
+
+! ************************************************************************
+! **				RESOURCE 				**
+! ************************************************************************
+
+*notavailableMsg:		no disponible
+*quitMessageMsg:		The installation is not complete.\n\
+If you exit now, the software will not be installed.\n\
+You can choose Continue to return to installation process.

@@ -1,0 +1,510 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration des formats de nombre</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigFormat.gif" ALT="Configuration des formats de nombre" WIDTH="306" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+Cette section des fichiers de configuration permet de prédéfinir la liste des formats de
+nombres utilisée par défaut à la création d'une nouvelle feuille de calcul. Cette
+liste peut être étendue par la suite et modifiée à partir de la boîte de dialogue '<a HREF="Box_NumFormat.html">Mise en forme des nombres</a>'. </p>
+
+<h3>Section de définition de la liste des formats de nombres&nbsp;: <i>\FORMATLIST{...}</i>
+</h3>
+
+<p>Cette section introduit la définition de la liste des formats de nombres applicable à
+l'affichage des cellules dans XQuad. La définition des formats de nombres s'effectue
+après l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade fermante <i>&quot;}&quot;</i>.
+Chaque élément de la liste des formats de nombres est défini comme décrit ci-dessous. <a NAME="format"></p>
+
+<h3>Section de définition d'un format de nombre&nbsp;: <i>\FORMATX{...}</i></h3>
+</a>
+
+<p>Cette section défini le format de nombre X, où X doit être un numéro unique. La
+définition du format de nombre s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i>
+et avant l'accolade fermante <i>&quot;}&quot;</i>. Les paramètres communs à la
+définition des formats de nombres sont&nbsp;: 
+
+<ol>
+  <li><b>NAME{nom du format de nombre}</b> : nom du format de nombre tel qu'il apparaît dans
+    XQuad. Il est préférable de choisir des noms différents pour chaque format de
+    nombre afin d'éviter les confusions. <br>
+    &nbsp;</li>
+  <li><b>\LOCK</b> permet de verrouiller un format de nombre défini dans la base des formats
+    d'XQuad, de façon à ce qu'il ne puisse pas être supprimé de la boîte de dialogue '<a HREF="Box_NumFormat.html">Mise en forme des nombres</a>'. <br>
+    &nbsp;</li>
+  <li><b>\HIDE</b> permet de cacher un format de nombre défini afin qu'il n'apparaisse pas
+    dans les listes de formats de nombres d'XQuad. </li>
+</ol>
+
+<p><br>
+Chaque format de nombre permet l'affichage d'un certain type de nombre. En fonction de ce <a HREF="Box_NumFormat.html#format_type_list">type de nombre</a> ( valeur simple, valeur
+booléenne, date...), les paramètres de définition des formats changent. On peut
+appliquer tous les paramètres à un format de nombre mais seuls ceux qui ont une utilité
+pour un type de nombre donné seront pris en compte. Voici la liste des types de nombres
+et pour chacun d'eux les paramètres utiles : 
+
+<ol>
+  <li><b>\NORMAL_TYPE</b> : ce type de nombre s'applique aux valeurs numériques simples. Les
+    paramètres de définition utiles sont : <br>
+    &nbsp;<ul>
+      <li><b>\MIN_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_min_prec">précision minimale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_max_prec">précision maximale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\TRUNCATE_ENABLE</b> sert à autoriser la <a HREF="Box_NumFmt_Display.html#button_truncate">troncature des décimales</a> à
+        l'affichage. <br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> où X est le code ASCII du caractère servant à marquer la <a HREF="Box_NumFmt_Display.html#textfield_comma">séparation entre la partie entière et la
+        partie décimale</a> d'un nombre. <br>
+        &nbsp;</li>
+      <li><b>\SPACE<i>X</i></b> indique que les chiffres de la partie entière seront <a HREF="Box_NumFmt_Display.html#textfield_sep_position">groupés par X chiffres</a><i> </i>et
+        qu'un séparateur de milliers sera inséré entre chaque groupe. <br>
+        &nbsp;</li>
+      <li><b>\CHARSEP<i>X</i></b> où X est le code ASCII du <a HREF="Box_NumFmt_Display.html#textfield_sep_mstring">séparateur de milliers</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_pos">nombres positifs</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_neg">nombres </a>négatifs. <br>
+        &nbsp;</li>
+      <li><b>\STANDARD</b> sert à indiquer le format de nombre par défaut. Ce paramètre ne doit
+        figurer que dans la définition d'<u>un seul</u> format de nombre, du type normal et avec
+        troncature des décimales de préférence. <br>
+        &nbsp;</li>
+      <li><b>\THOUSANDS</b> sert à indiquer que c'est ce format de nombre qui sera appliqué
+        lorsque l'on click sur le premier <a HREF="HBar_Misc.html#thousands_icon">bouton icône</a>
+        de la quatrième section de la barre horizontale 'Manipulations générales'. Ce
+        paramètre ne doit figurer que dans la définition d'<u>un seul</u> format de nombre, du
+        type normal de préférence. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\UNIT_TYPE</b> : ce type de nombre s'applique aux valeurs numériques que l'on veut
+    faire suivre ou précéder d'un identifiant d'unité. Les paramètres de définition
+    utiles sont&nbsp;: <br>
+    &nbsp;<ul>
+      <li><b>\UNIT_AFTER</b> sert à indiquer que l'identifiant d'unité sera <a HREF="Box_NumFmt_UnitStyleText.html#button_unit">placé après</a> la valeur numérique. <br>
+        &nbsp;</li>
+      <li><b>\UNIT_NAME{identifiant d'unité}</b> sert à spécifier l'<a HREF="Box_NumFmt_UnitStyleText.html#textfield_unit">identifiant d'unité</a> à afficher
+        avant ou après un nombre. <br>
+        &nbsp;</li>
+      <li><b>\MIN_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_min_prec">précision minimale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_max_prec">précision maximale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> où X est le code ASCII du caractère servant à marquer la <a HREF="Box_NumFmt_Display.html#textfield_comma">séparation entre la partie entière et la
+        partie décimale</a> d'un nombre. <br>
+        &nbsp;</li>
+      <li><b>\SPACE<i>X</i></b> indique que les chiffres de la partie entière seront <a HREF="Box_NumFmt_Display.html#textfield_sep_position">groupés par X chiffres</a><i> </i>et
+        qu'un séparateur de milliers sera inséré entre chaque groupe. <br>
+        &nbsp;</li>
+      <li><b>\CHARSEP<i>X</i></b> où X est le code ASCII du <a HREF="Box_NumFmt_Display.html#textfield_sep_mstring">séparateur de milliers</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_pos">nombres positifs</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_neg">nombres </a>négatifs. <br>
+        &nbsp;</li>
+      <li><b>\CURRENCY</b> sert à indiquer que c'est ce format de nombre qui sera appliqué
+        lorsque l'on click sur le deuxième <a HREF="HBar_Misc.html#currency_icon">bouton icône</a>
+        de la quatrième section de la barre horizontale 'Manipulations générales'. Ce
+        paramètre doit être ajouté à la définition d'<u>un seul</u> format de nombre, du type
+        unité et permettant l'affichage de donnée monétaire de préférence. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\PERCENT_TYPE</b> : ce type de donnée s'applique aux valeurs exprimées en
+    pourcentage. Les paramètres de définition utiles sont : <br>
+    &nbsp;<ul>
+      <li><b>\MIN_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_min_prec">précision minimale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_max_prec">précision maximale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> où X est le code ASCII du caractère servant à marquer la <a HREF="Box_NumFmt_Display.html#textfield_comma">séparation entre la partie entière et la
+        partie décimale</a> d'un nombre. <br>
+        &nbsp;</li>
+      <li><b>\SPACE<i>X</i></b> indique que les chiffres de la partie entière seront <a HREF="Box_NumFmt_Display.html#textfield_sep_position">groupés par X chiffres</a><i> </i>et
+        qu'un séparateur de milliers sera inséré entre chaque groupe. <br>
+        &nbsp;</li>
+      <li><b>\CHARSEP<i>X</i></b> où X est le code ASCII du <a HREF="Box_NumFmt_Display.html#textfield_sep_mstring">séparateur de milliers</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_pos">nombres positifs</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_neg">nombres </a>négatifs. <br>
+        &nbsp;</li>
+      <li><b>\PERCENT</b> sert à indiquer que c'est ce format de nombre qui sera appliqué
+        lorsque l'on click sur le troisième <a HREF="HBar_Misc.html#percent_icon">bouton icône</a>
+        de la quatrième section de la barre horizontale 'Manipulations générales'. Ce
+        paramètre ne doit figurer que dans la définition d'<u>un seul</u> format de nombre, du
+        type pourcentage de préférence. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\EXPONENTIAL_TYPE</b> : ce type de donnée s'applique aux valeurs exprimées de
+    manière 'scientifique'. Les paramètres de définition utiles sont : <br>
+    &nbsp;<ul>
+      <li><b>\MIN_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_min_prec">précision minimale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_max_prec">précision maximale</a> d'affichage des
+        nombres à virgule. <br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> où X est le code ASCII du caractère servant à marquer la <a HREF="Box_NumFmt_Display.html#textfield_comma">séparation entre la partie entière et la
+        partie décimale</a> d'un nombre. <br>
+        &nbsp;</li>
+      <li><b>\EXP_STRING{symbole exposant}</b> sert à spécifier le <a HREF="Box_NumFmt_Display.html#textfield_sep_estring">symbole exposant</a>. <br>
+        &nbsp;</li>
+      <li><b>\EXP_DIGIT<i>X</i></b> où X est le <a HREF="Box_NumFmt_Display.html#textfield_exp_prec">nombre de chiffre minimum</a> de
+        l'exposant. <br>
+        &nbsp;</li>
+      <li><b>\EXP_MULTIPLE<i>X</i></b> sert à indiquer que l'exposant affiché doit être <a HREF="Box_NumFmt_Display.html#textfield_exp_multiple">multiple</a> de X. <br>
+        &nbsp;</li>
+      <li><b>\EXP_SIGN</b> sert à spécifier que l'on veut toujours voir apparaître le <a HREF="Box_NumFmt_Display.html#button_exp_sign">signe de l'exposant</a>. <br>
+        &nbsp;</li>
+      <li><b>\UNIT_AFTER</b> sert à indiquer que l'identifiant d'unité sera <a HREF="Box_NumFmt_UnitStyleText.html#button_unit">placé après</a> la valeur numérique. <br>
+        &nbsp;</li>
+      <li><b>\UNIT_NAME{identifiant d'unité}</b> sert à spécifier l'<a HREF="Box_NumFmt_UnitStyleText.html#textfield_unit">identifiant d'unité</a> à afficher
+        avant ou après le nombre. <br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_pos">nombres positifs</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_neg">nombres </a>négatifs. <br>
+        &nbsp;</li>
+      <li><b>\SCIENTIFIC</b> sert à indiquer que c'est ce format de nombre qui sera appliqué
+        lorsque l'on click sur le quatrième <a HREF="HBar_Misc.html#scientific_icon">bouton
+        icône</a> de la quatrième section de la barre horizontale 'Manipulations générales'.
+        Ce paramètre ne doit figurer que dans la définition d'<u>un seul</u> format de nombre,
+        du type scientifique de préférence. <br>
+        &nbsp;</li>
+      <li><b>\ENGINEER</b> sert à indiquer que c'est ce format de nombre qui sera appliqué
+        lorsque l'on click sur le dernier <a HREF="HBar_Misc.html#engineer_icon">bouton icône</a>
+        de la quatrième section de la barre horizontale 'Manipulations générales'. Ce
+        paramètre ne doit figurer que dans la définition d'<u>un seul</u> format de nombre, du
+        type scientifique de préférence. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\FRACTION_TYPE</b> : ce type de donnée s'applique aux valeurs numériques que l'on
+    veut afficher sous forme de fraction entière. Les paramètres de définition utiles sont
+    : <br>
+    &nbsp;<ul>
+      <li><b>\FRAC_DECIMAL</b> sert à indiquer que la fraction ne portera que sur la <a HREF="Box_NumFmt_Display.html#button_frac_decimal">partie décimale</a> des valeurs
+        numériques. <br>
+        &nbsp;</li>
+      <li><b>\FRAC_PREC<i>X</i></b> où X sert à spécifier la <a HREF="Box_NumFmt_Display.html#textfield_frac_prec">précision minimal du diviseur</a> de
+        la fraction. <br>
+        &nbsp;</li>
+      <li><b>\UNIT_AFTER</b> sert à indiquer que l'identifiant d'unité sera <a HREF="Box_NumFmt_UnitStyleText.html#button_unit">placé après</a> la valeur numérique. <br>
+        &nbsp;</li>
+      <li><b>\UNIT_NAME{identifiant d'unité}</b> sert à spécifier l'<a HREF="Box_NumFmt_UnitStyleText.html#textfield_unit">identifiant d'unité</a> à afficher
+        avant ou après le nombre. <br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> <a NAME="OLE_LINK5">où X est le numéro désignant une couleur
+        de </a><a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour
+        l'affichage des <a HREF="Box_NumFmt_Display.html#list_color_pos">nombres positifs</a>. <br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage des
+        <a HREF="Box_NumFmt_Display.html#list_color_neg">nombres </a>négatifs. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\BOOLEAN_TYPE</b> : ce type de donnée s'applique aux valeurs numériques que l'on
+    veut afficher sous forme booléenne (Vrai ou Faux). Les paramètres de définition utiles
+    sont : <br>
+    &nbsp;<ul>
+      <li><b>\TRUE_NAME{mot pour Vrai}</b> sert à spécifier <a HREF="Box_NumFmt_UnitStyleText.html#textfield_true">le texte</a> qui sera affiché dans
+        les cellules pour la valeur VRAI. <br>
+        &nbsp;</li>
+      <li><b>\FALSE_NAME{mot pour Faux}</b> sert à spécifier <a HREF="Box_NumFmt_UnitStyleText.html#textfield_false">le texte</a> qui sera affiché dans
+        les cellules pour la valeur FAUX. <br>
+        &nbsp;</li>
+      <li><b>\TRUE_COLOR<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage de
+        la <a HREF="Box_NumFmt_Colors.html#list_color_true">valeur VRAI</a>. <br>
+        &nbsp;</li>
+      <li><b>\FALSE_COLOR<i>X</i></b> où X est le numéro désignant une couleur de <a HREF="ConfigColor.html#color">la liste des couleurs</a>. Elle servira pour l'affichage de
+        la <a HREF="Box_NumFmt_Colors.html#list_color_false">valeur FAUX</a>. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\DAY_TYPE</b> : ce type de donnée s'applique aux valeurs que l'on veut afficher sous
+    forme d'un nom de jour de la semaine ( lundi, jeudi par exemple). Le paramètre de
+    définition à utiliser doit être l'un des trois suivants : <br>
+    &nbsp;<ul>
+      <li><b>\DAY_NAME_VERY_SHORT</b> sert à indiquer que l'on veut un affichage avec <a HREF="Box_NumFmt_UnitStyleText.html#button_very_short">le minimum de lettres</a> possible.
+        <br>
+        &nbsp;</li>
+      <li><b>\DAY_NAME_SHORT</b> sert à indiquer que l'on veut un affichage avec <a HREF="Box_NumFmt_UnitStyleText.html#button_short">toujours 3 lettres</a>. <br>
+        &nbsp;</li>
+      <li><b>\DAY_NAME_LONG</b> sert à indiquer que l'on veut un affichage avec les noms de jours
+        de la semaine <a HREF="Box_NumFmt_UnitStyleText.html#button_long">en entier</a>. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\MONTH_TYPE</b> : ce type de donnée s'applique aux valeurs que l'on veut afficher
+    sous forme d'un nom de mois de l'année (janvier, juillet par exemple). Le paramètre de
+    définition à utiliser doit être l'un des trois suivants : <br>
+    &nbsp;<ul>
+      <li><b>\MONTH_NAME_VERY_SHORT</b> sert à indiquer que l'on veut un affichage avec <a HREF="Box_NumFmt_UnitStyleText.html#button_very_short">le minimum de lettres</a> possible.
+        <br>
+        &nbsp;</li>
+      <li><b>\MONTH_NAME_SHORT</b> sert à indiquer que l'on veut un affichage avec <a HREF="Box_NumFmt_UnitStyleText.html#button_short">toujours 3 lettres</a>. <br>
+        &nbsp;</li>
+      <li><b>\MONTH_NAME_LONG</b> sert à indiquer que l'on veut un affichage avec les noms de
+        mois <a HREF="Box_NumFmt_UnitStyleText.html#button_long">en entier</a>. <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\TIME_TYPE</b> : ce type de donnée s'applique aux valeurs que l'on veut afficher
+    sous la forme d'un horaire (16:34 PM par exemple). Le paramètre de définition est : <br>
+    &nbsp;<ul>
+      <li><b>\TIME_SEQUENCE{...}</b>. Cette section défini la séquence de paramètres de
+        composition du format d'heure. L'ordre des paramètres dans cette section est très
+        important. La définition de la séquence s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i>
+        et avant l'accolade fermante <i>&quot;}&quot;</i>. Les différents éléments composant un
+        format d'heure sont : <br>
+        &nbsp;<ul>
+          <li><b>\PADDING_NONE</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) n'utilise pas de <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\PADDING_ZERO</b> sert <a NAME="OLE_LINK1">à indiquer que la suite de la séquence
+            (&nbsp;jusqu'au prochain \PADDING_</a><i>XXXX</i>&nbsp;) utilise &quot;0&quot; comme <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\PADDING_SPACE</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) utilise &quot;&nbsp;&quot; comme <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><a NAME="OLE_LINK7"><b>\HOUR</b> sert à insérer la composante </a><a HREF="Box_NumFmt_HourDate.html#hour_area">heure (24)</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\HOUR12</b> sert à insérer la composante <a HREF="Box_NumFmt_HourDate.html#hour_area">heure (12)</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\HOUR_AM_PM</b> sert à ajouter l'<a HREF="Box_NumFmt_HourDate.html#hour_area">indicateur
+            Matin/Après-midi</a> (AM/PM) au format d'heure. <br>
+            &nbsp;</li>
+          <li><b>\MINUTE</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#minute_area">minute</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\SECOND</b> <a NAME="OLE_LINK2">sert à ajouter la composante </a><a HREF="Box_NumFmt_HourDate.html#second_area">seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\TENTH_OF_SECOND</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#second_10_area">dixième de seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\HUNDREDTH_OF_SECOND</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#second_100_area">centième de seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\THOUSANDTH_OF_SECOND</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#second_1000_area">millième de seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\STRING{...}</b> sert à ajouter une chaîne de caractère de séparation entre les
+            premiers éléments et le reste de la séquence. <br>
+            &nbsp;</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>\DATE_TYPE</b> : ce type de donnée s'applique aux valeurs que l'on veut afficher
+    sous la forme d'une date (15 Juillet 1985 par exemple). Le paramètre de définition est :
+    <br>
+    &nbsp;<ul>
+      <li><b>\DATE_SEQUENCE{...}</b>.Cette section défini la séquence de paramètres de
+        composition du format de date. L'ordre des paramètres dans cette section est très
+        important. La définition de la séquence s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i>
+        et avant l'accolade fermante <i>&quot;}&quot;</i>. Les différents éléments composant un
+        format de date sont : <br>
+        &nbsp;<ul>
+          <li><b>\PADDING_NONE</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) n'utilise pas de <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\PADDING_ZERO</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) utilise &quot;0&quot; comme <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\PADDING_SPACE</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) utilise &quot;&nbsp;&quot; comme <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\YEAR</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#year_area">année</a>
+            au format. <br>
+            &nbsp;</li>
+          <li><b>\YEAR_SHORT</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#year_area">année avec affichage court</a> au format de
+            date. <br>
+            &nbsp;</li>
+          <li><b>\YEAR_JC_REF</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#year_area">année avec référence à J.C.</a> au format de
+            date. <br>
+            &nbsp;</li>
+          <li><b>\MONTH</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> (&nbsp;numéro [1;12]&nbsp;) au
+            format. <br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_VERY_SHORT</b> sert à<a NAME="OLE_LINK6"> ajouter le nom du </a><a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">le minimum de lettres</a> possible. <br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_SHORT</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">toujours 3 lettres</a>. <br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_LONG</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> avec les noms <a HREF="Box_NumFmt_HourDate.html#frame_namelength">en entier</a>. <br>
+            &nbsp;</li>
+          <li><b>\WEEK</b> sert à ajouter le numéro de la <a HREF="Box_NumFmt_HourDate.html#week_area">semaine</a> dans l'année au format de date. <br>
+            &nbsp;</li>
+          <li><b>\DAY</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#day_area">jour
+            dans le mois</a> au format de date. <br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_VERY_SHORT</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#area_area">jour de la semaine</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">le minimum de lettre</a> possible. <br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_SHORT</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#area_area">jour de la semaine</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">toujours 3 lettres</a>. <br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_LONG</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#area_area">jour de la semaine</a> avec les noms <a HREF="Box_NumFmt_HourDate.html#frame_namelength">en entier</a>. <br>
+            &nbsp;</li>
+          <li><b>\DAY_IN_YEAR</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#day_in_year_area">jour dans l'année</a> au format de date.
+            <br>
+            &nbsp;</li>
+          <li><b>\STRING{...}</b> sert à ajouter une chaîne de caractère de séparation entre les
+            premiers éléments et le reste de la séquence. </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>\DATE_AND_TIME_TYPE</b> ce type de donnée s'applique aux valeurs que l'on veut
+    afficher sous la forme d'une date et d'un horaire (15 Juillet 1985 16:34 par exemple). Le
+    paramètre de définition est&nbsp;: <br>
+    &nbsp;<ul>
+      <li><b>\DATE_AND_TIME_SEQUENCE{...}</b>.Cette section défini la séquence de paramètres de
+        composition du format de date et heure. L'ordre des paramètres dans cette section est
+        très important. La définition de la séquence s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i>
+        et avant l'accolade fermante <i>&quot;}&quot;</i>. Les différents éléments composant un
+        format de date et heure sont : <br>
+        &nbsp;<ul>
+          <li><b>\PADDING_NONE</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) n'utilise pas de <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\PADDING_ZERO</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) utilise &quot;0&quot; comme <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\PADDING_SPACE</b> sert à indiquer que la suite de la séquence (&nbsp;jusqu'au
+            prochain \PADDING_<i>XXXX</i>&nbsp;) utilise &quot;&nbsp;&quot; comme <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">caractère de remplissage</a>. <br>
+            &nbsp;</li>
+          <li><b>\YEAR</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#year_area">année</a>
+            au format. <br>
+            &nbsp;</li>
+          <li><b>\YEAR_SHORT</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#year_area">année avec affichage court</a> au format de
+            date et heure. <br>
+            &nbsp;</li>
+          <li><b>\YEAR_JC_REF</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#year_area">année avec référence à J.C.</a> au format de
+            date et heure. <br>
+            &nbsp;</li>
+          <li><b>\MONTH</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> (&nbsp;numéro [1;12]&nbsp;) au
+            format. <br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_VERY_SHORT</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">le minimum de lettres</a> possible. <br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_SHORT</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">toujours 3 lettres</a>. <br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_LONG</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#month_area">mois</a> avec les noms <a HREF="Box_NumFmt_HourDate.html#frame_namelength">en entier</a>. <br>
+            &nbsp;</li>
+          <li><b>\WEEK</b> sert à ajouter le numéro de la <a HREF="Box_NumFmt_HourDate.html#week_area">semaine</a> dans l'année au format de date et
+            heure. <br>
+            &nbsp;</li>
+          <li><b>\DAY</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#day_area">jour
+            dans le mois</a> au format de date. <br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_VERY_SHORT</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#area_area">jour de la semaine</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">le minimum de lettre</a> possible. <br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_SHORT</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#area_area">jour de la semaine</a> avec <a HREF="Box_NumFmt_HourDate.html#frame_namelength">toujours 3 lettres</a>. <br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_LONG</b> sert à ajouter le nom du <a HREF="Box_NumFmt_HourDate.html#area_area">jour de la semaine</a> avec les noms <a HREF="Box_NumFmt_HourDate.html#frame_namelength">en entier</a>. <br>
+            &nbsp;</li>
+          <li><b>\DAY_IN_YEAR</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#day_in_year_area">jour dans l'année</a> au format de date
+            et heure. <br>
+            &nbsp;</li>
+          <li><b>\HOUR</b> sert à insérer la composante <a HREF="Box_NumFmt_HourDate.html#hour_area">heure
+            (24)</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\HOUR12</b> sert à insérer la composante <a HREF="Box_NumFmt_HourDate.html#hour_area">heure (12)</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\HOUR_AM_PM</b> sert à ajouter l'<a HREF="Box_NumFmt_HourDate.html#hour_area">indicateur
+            Matin/Après-midi</a> (AM/PM) au format de date et heure. <br>
+            &nbsp;</li>
+          <li><b>\MINUTE</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#minute_area">minute</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\SECOND</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#second_area">seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\TENTH_OF_SECOND</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#second_10_area">dixième de seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\HUNDREDTH_OF_SECOND</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#second_100_area">centième de seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\THOUSANDTH_OF_SECOND</b> sert à ajouter la composante <a HREF="Box_NumFmt_HourDate.html#second_1000_area">millième de seconde</a> au format. <br>
+            &nbsp;</li>
+          <li><b>\STRING{...}</b> sert à ajouter une chaîne de caractère de séparation entre les
+            premiers éléments et le reste de la séquence. </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><br>
+Un format de nombre spécial doit apparaître dans l'un des fichiers de configuration
+utilisé. Ce format, nommé &quot;Generic&quot;, doit comporter tous les paramètres de
+définition les plus standards possibles et le paramètre <b>\GENERIC</b>. Les composantes
+de ce format seront utilisés, dans certains cas particuliers, où le format de nombre
+appliqué à une cellule ne convient pas au type de valeur que la cellule contient. </p>
+
+<h3>Exemple :</h3>
+<tt>
+
+<p>\FORMATLIST{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT0{\NAME{Standard} \COMMA44 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TRUNCATE_ENABLE
+\NORMAL_TYPE <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STANDARD} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT10{\NAME{Monétaire [2d, nég rouge]} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\MIN_PREC2
+\MAX_PREC2 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\SPACE3
+\UNIT{ F} \UNITAFTER <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COMMA44
+\COLORNEG6 \UNIT_TYPE <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\CURRENCY}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT30{\NAME{Date [DD/MM/YY]} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\DATE_SEQUENCE{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\PADDING_ZERO
+\DAY <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STRING{/}
+\MONTH \STRING{/} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\YEAR_SHORT}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\DATE_TYPE}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT34{\NAME{Heure [HH:MM:SS [AP]M]} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TIME_SEQUENCE{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\PADDING_SPACE
+\HOUR12 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STRING{:}
+\PADDING_ZERO <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\MINUTE
+\STRING{:} \SECOND <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STRING{\x20}
+\HOUR_AM_PM} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TIME_TYPE}
+<br>
+} </tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

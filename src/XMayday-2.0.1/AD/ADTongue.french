@@ -1,0 +1,216 @@
+
+! ************************************************************************
+! **			MNEMONICS for PULLDOWN MENUS			**
+! ************************************************************************
+
+*pmFile.mnemonic:			F
+*pmDisplay.mnemonic:			A
+*pmGo.mnemonic:				l
+*pmHelp.mnemonic:			i
+
+*pmFile.mNewXMayday.mnemonic:		N
+*pmFile.mOpenIndex.mnemonic:		O
+*pmFile.mOpenFile.mnemonic:		F
+*pmFile.mPrint.mnemonic:		I
+*pmFile.mClose.mnemonic:		e
+*pmFile.mQuit.mnemonic:			Q
+
+*pmDisplay.mRefresh.mnemonic:		R
+*pmDisplay.mReload.mnemonic:		e
+*pmDisplay.mTransfert.mnemonic:		C
+*pmDisplay.mMaskIndex.mnemonic:		I
+*pmDisplay.mShowIndex.mnemonic:		I
+*pmDisplay.mMaskInfobar.mnemonic:	U
+*pmDisplay.mShowInfobar.mnemonic:	U
+
+*pmGo.mHome.mnemonic:			I
+*pmGo.mBack.mnemonic:			P
+*pmGo.mForward.mnemonic:		S
+
+*pmHelp.mOverview.mnemonic:		G
+*pmHelp.mContent.mnemonic:		M
+*pmHelp.mKeyboard.mnemonic:		C
+*pmHelp.mOnItem.mnemonic:		I
+*pmHelp.mUsingHelp.mnemonic:		U
+*pmHelp.mCache.mnemonic:		n
+*pmHelp.mAbout.mnemonic:		A
+
+
+! ************************************************************************
+! **				PULLDOWN MENUS				**
+! ************************************************************************
+
+*pmFile.labelString:  			Fichier
+*pmFile.mNewXMayday.labelString:	Nouvelle fenêtre...
+*pmFile.mOpenIndex.labelString:		Ouvrir Index...
+*pmFile.mOpenFile.labelString:		Ouvrir Fichier...
+*pmFile.mPrint.labelString:  		Imprimer...
+*pmFile.mClose.labelString:  		Fermer
+*pmFile.mQuit.labelString:  		Quitter...
+
+*pmDisplay.labelString:			Affichage
+*pmDisplay.mRefresh.labelString:	Tout Redessiner
+*pmDisplay.mReload.labelString:		Tout Recharger
+*pmDisplay.mTransfert.labelString:	Créer Index
+*pmDisplay.mMaskIndex.labelString:	Cacher Index
+*pmDisplay.mShowIndex.labelString:	Afficher Index
+*pmDisplay.mMaskInfobar.labelString:	Cacher URL
+*pmDisplay.mShowInfobar.labelString:	Afficher URL
+
+*pmGo.labelString:			Aller à
+*pmGo.mHome.labelString:		Page Initiale
+*pmGo.mBack.labelString:		Page Précédente
+*pmGo.mForward.labelString:		Page Suivante
+
+*pmHelp.labelString:			Aide
+*pmHelp.mOverview.labelString:		Aide Générale...
+*pmHelp.mContent.labelString:		Table des Matières...
+*pmHelp.mKeyboard.labelString:		Clavier...
+*pmHelp.mOnItem.labelString:		Aide sur Item
+*pmHelp.mUsingHelp.labelString:		Utiliser l'aide...
+*pmHelp.mCache.labelString:		Informations Cache...
+*pmHelp.mAbout.labelString:		A propos d'XMayday...
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:	Violation de privilèges (Segmentation fault)
+*sigErrorPIPEMsg:	Connexion interrompue (Broken pipe)
+*sigErrorBUSMsg:	Erreur de bus (Bus error)
+*sigErrorFPEMsg:	Erreur de calcul (Floating exception)
+*sigErrorIOTMsg:	Erreur interne (IOT trap)
+*sigErrorEMTMsg:	Déroutement Erreur mémoire (EMT trap)
+*sigErrorXCPUMsg:	Dépassement de temps CPU (Cputime limit exceeded)
+*sigErrorXFSZMsg:	Dépassement de taille fichier (Filesize limit exceeded)
+*sigErrorILLMsg:	Instruction illicite (Illegal instruction)
+*sigErrorINTMsg:	XMayday a été interrompu (Interrupt)
+*sigErrorQuitingMsg:	Quitter XMayday maintenant
+*sigErrorSorryMsg:	Impossible de continuer l'exécution
+
+*loadErrorMsg:		Erreur de chargement
+*notBitmapErrorMsg:	Format d'image non reconnu
+
+*lCaughtSignal.labelString:		Une erreur est survenue :
+*lCaughtIOerror.labelString:		Erreur fatale du serveur X
+*lCannotContinue.labelString:		Impossible de continuer
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Oui
+*action_area.No.labelString:		Non
+*action_area.Apply.labelString:		Appliquer
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Ouvrir...
+*action_area.Retry.labelString:		Recommencer
+*action_area.Stop.labelString:		Arrêter
+*action_area.Reset.labelString:		Réinitialiser
+*action_area.Cancel.labelString:	Annuler
+*action_area.Close.labelString:		Fermer
+*action_area.Help.labelString:		Aide
+*action_area.Save.labelString:		Sauver
+*action_area.Continue.labelString:	Continuer
+*action_area.Quit.labelString:		Quitter
+*action_area.Save as.labelString:	Sauver sous...
+
+
+! ************************************************************************
+! **				DIALOG BOXES				**
+! ************************************************************************
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:		Impression
+*lBPsize.labelString:			Taille
+*rbDraftMode.labelString:		Sans les images
+*rbColorMode.labelString:		Couleur
+*rbBanners.labelString:			En-têtes
+*rbFootnotes.labelString:		Bas de page
+*postscriptMsg:				PostScript
+*plainTextMsg:				Texte
+*formatedTextMsg:			Texte formaté
+*fPrinter.labelString:			Imprimer sur...
+*fParams.labelString:			Paramètres
+*fFormat.labelString:			Format de page
+*fExportType.labelString:		Imprimer au format...
+*fFontType.labelString:			Famille de polices
+
+
+! ** Dialog Box: IMAGE CACHE *********************************************
+
+*lBoxCacheTitle.labelString:		Informations Cache Images
+*lMemTotal.labelString:			Mémoire cache totale
+*lMemUsed.labelString:			Mémoire cache utilisée
+*lMemFree.labelString:			Mémoire cache libre
+*lDiskTotal.labelString:		Disque cache total
+*lDiskUsed.labelString:			Disque cache utilisé
+*lDiskFree.labelString:			Disque cache libre
+*lKb.labelString:			Ko
+*tbBCKeepCacheOnDisk.labelString:	Sauver le cache en quittant
+*pbBCCleanMemCache.labelString:		V\n i \n d \n e \nr
+*pbBCCleanDiskCache.labelString:	V\n i \n d \n e \nr
+*fBCmemoryCache.labelString:		Cache mémoire
+*fBCdiskCache.labelString:		Cache disque
+
+
+! ** Dialog Box: ABOUT XMAYDAY *******************************************
+
+*aboutTitleMsg:			XMayday® - Documentation
+*aboutReleaseMsg:		XMayday version %d.%d
+*aboutReleaseBetaMsg:		XMayday version %d.%d.%d
+*lAboutIDDN.labelString:	Basé sur le widget HTML de NCSA Mosaic®
+*lAboutLicense.labelString:	XMayday ne peut être vendu,\n\
+son utilisation est libre de droits
+
+
+! ************************************************************************
+! **				FILE SELECTORS				**
+! ************************************************************************
+
+*indexOpenMsg:				Ouverture d'un index
+*OpenIndex*Ok.labelString:		Ouvrir
+
+*fileOpenMsg:				Ouverture d'un fichier
+*OpenFile*Ok.labelString:		Ouvrir
+
+*printDocumentMsg:			Impression dans le fichier...
+*Print*Ok.labelString:			Imprimer
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Quitter XMayday
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:	\
+L'aide d'XMayday est introuvable dans %s\n\
+Le chemin de l'aide est défini dans le fichier xmaydayrc.\n\
+Vous pouvez télécharger l'aide sur ftp.axene.org /pub/xmayday/doc/
+
+
+! ************************************************************************
+! **				HELP LINES				**
+! ************************************************************************
+
+*helpGoBackMsg:			Retourne à la page précedente|Précedente
+*helpGoForwardMsg:		Retourne à la page suivante|Suivante
+*helpGoIndexMsg:		Retourne à la première page|Home
+*helpOpenMsg:			Charge une nouvelle page HTML|Ouvrir
+*helpMoveIndexMsg:		Passe cette page en Index|Mettre en Index
+*helpPrintMsg:			Imprime la page courante|Imprimer
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!-- Documentation Xclamation (c)1994-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration du serveur de licences</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigServer.gif" ALT="Configuration du serveur de licences" WIDTH="380" HEIGHT="39"> </p>
+
+<p><br>
+<br>
+Cette section des <a HREF="Config.html">fichiers de configuration</a> permet de configurer
+le serveur de licences nécessaire au fonctionnement des licences flottantes. </p>
+
+<h3>Section de configuration de l'aide en ligne&nbsp;: <i>\KEYSERVER{...}</i></h3>
+
+<p>Cette section permet de définir la configuration du serveur de licences de Xclamation.
+La définition du serveur de licences s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i>
+et avant l'accolade fermante correspondante <i>&quot;}&quot;</i>. Les paramètres de
+configuration sont&nbsp;: 
+
+<ol>
+  <li><b>\SERVER{host}</b> où <i>host</i> représente la machine sur laquelle tourne le
+    serveur de licences. Si <i>host</i> = &quot;None&quot; alors Xclamation ne tentera
+    d'accéder à aucun serveur de licence. <br>
+    &nbsp;</li>
+  <li><b>\PORTX</b>&nbsp;: numéro du port sur lequel tourne le serveur de licences. <br>
+    &nbsp;</li>
+</ol>
+
+<h3>Exemple&nbsp;:</h3>
+<tt>
+
+<p>\KEYSERVER{ \SERVER{None} \PORT8110 }<br>
+\KEYSERVER{ \SERVER{foobar} \PORT8110 }<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXclamation.gif" ALT="Xclamation (c)1996-98 Axene" WIDTH="167" HEIGHT="29"></p>
+</body>
+</html>

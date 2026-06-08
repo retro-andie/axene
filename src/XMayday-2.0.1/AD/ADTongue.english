@@ -1,0 +1,222 @@
+
+! ************************************************************************
+! **			MNEMONICS for PULLDOWN MENUS			**
+! ************************************************************************
+
+*pmFile.mnemonic:			F
+*pmDisplay.mnemonic:			V
+*pmGo.mnemonic:				G
+*pmHelp.mnemonic:			H
+
+*pmFile.mNewXMayday.mnemonic:		N
+*pmFile.mOpenIndex.mnemonic:		O
+*pmFile.mOpenFile.mnemonic:		F
+*pmFile.mPrint.mnemonic:		P
+*pmFile.mClose.mnemonic:		C
+*pmFile.mQuit.mnemonic:			Q
+
+*pmDisplay.mRefresh.mnemonic:		R
+*pmDisplay.mReload.mnemonic:		e
+*pmDisplay.mTransfert.mnemonic:		C
+*pmDisplay.mMaskIndex.mnemonic:		I
+*pmDisplay.mShowIndex.mnemonic:		I
+*pmDisplay.mMaskInfobar.mnemonic:	U
+*pmDisplay.mShowInfobar.mnemonic:	U
+
+*pmGo.mHome.mnemonic:			H
+*pmGo.mBack.mnemonic:			B
+*pmGo.mForward.mnemonic:		F
+
+*pmHelp.mOverview.mnemonic:		v
+*pmHelp.mContent.mnemonic:		C
+*pmHelp.mKeyboard.mnemonic:		K
+*pmHelp.mOnItem.mnemonic:		O
+*pmHelp.mUsingHelp.mnemonic:		U
+*pmHelp.mCache.mnemonic:		n
+*pmHelp.mAbout.mnemonic:		A
+
+
+! ************************************************************************
+! **				PULLDOWN MENUS				**
+! ************************************************************************
+
+*pmFile.labelString:  			File
+*pmFile.mNewXMayday.labelString:	New window...
+*pmFile.mOpenIndex.labelString:		Open Index...
+*pmFile.mOpenFile.labelString:		Open File...
+*pmFile.mPrint.labelString:  		Print...
+*pmFile.mClose.labelString:  		Close...
+*pmFile.mQuit.labelString:  		Exit...
+
+*pmDisplay.labelString:			View
+*pmDisplay.mRefresh.labelString:	Redraw
+*pmDisplay.mReload.labelString:		Reload
+*pmDisplay.mTransfert.labelString:	Create Index
+*pmDisplay.mMaskIndex.labelString:	Hide Index
+*pmDisplay.mShowIndex.labelString:	Show Index
+*pmDisplay.mMaskInfobar.labelString:	Hide URL
+*pmDisplay.mShowInfobar.labelString:	Show URL
+
+*pmGo.labelString:			Go
+*pmGo.mHome.labelString:		Home
+*pmGo.mBack.labelString:		Backward
+*pmGo.mForward.labelString:		Forward
+
+*pmHelp.labelString:			Help
+*pmHelp.mOverview.labelString:		Overview...
+*pmHelp.mContent.labelString:		Table of Contents...
+*pmHelp.mKeyboard.labelString:		Keyboard...
+*pmHelp.mOnItem.labelString:		On Item
+*pmHelp.mUsingHelp.labelString:		Using Help...
+*pmHelp.mCache.labelString:		Cache Information...
+*pmHelp.mAbout.labelString:		About XMayday...
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:		Segmentation violation (Segmentation fault)
+*sigErrorPIPEMsg:		Connection broken (Broken pipe)
+*sigErrorBUSMsg:		Specification exception (Bus error)
+*sigErrorFPEMsg:		Arithmetic exception (Floating exception)
+*sigErrorIOTMsg:		Internal Error (IOT trap)
+*sigErrorEMTMsg:		EMT instruction (EMT trap)
+*sigErrorXCPUMsg:		Cputime limit exceeded
+*sigErrorXFSZMsg:		Filesize limit exceeded
+*sigErrorILLMsg:		Illegal instruction
+*sigErrorINTMsg:		XMayday has been interrupted (Interrupt)
+*sigErrorQuitingMsg:		Exit XMayday now
+*sigErrorSorryMsg:		Impossible to go on
+
+*loadErrorMsg:			Loading Error
+*notBitmapErrorMsg:		Unknown Image format
+
+*lCaughtSignal.labelString:		A failure has occured:
+*lCaughtIOerror.labelString:		X I/O fatal error
+*lCannotContinue.labelString:		Impossible to go on
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Yes
+*action_area.No.labelString:		No
+*action_area.Apply.labelString:		Apply
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Open...
+*action_area.Retry.labelString:		Retry
+*action_area.Stop.labelString:		Stop
+*action_area.Reset.labelString:		Reset
+*action_area.Cancel.labelString:	Cancel
+*action_area.Close.labelString:		Close
+*action_area.Help.labelString:		Help
+*action_area.Save.labelString:		Save
+*action_area.Continue.labelString:	Continue
+*action_area.Quit.labelString:		Exit
+*action_area.Save as.labelString:	Save as...
+
+
+! ************************************************************************
+! **				DIALOG BOXES				**
+! ************************************************************************
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:		Print
+*lBPsize.labelString:			Size
+*rbDraftMode.labelString:		Without images
+*rbColorMode.labelString:		Color
+*rbBanners.labelString:			Header
+*rbFootnotes.labelString:		Footer
+*postscriptMsg:				PostScript
+*plainTextMsg:				Plain text
+*formatedTextMsg:			Formated text
+*fPrinter.labelString:			Print on...
+*fParams.labelString:			Parameters
+*fFormat.labelString:			Page format
+*fExportType.labelString:		Printing format...
+*fFontType.labelString:			Font family
+
+
+! ** Dialog Box: IMAGE CACHE *********************************************
+
+*lBoxCacheTitle.labelString:		Image Cache Information
+*lMemTotal.labelString:			Max Memory cache
+*lMemUsed.labelString:			Used Memory cache
+*lMemFree.labelString:			Free memory cache
+*lDiskTotal.labelString:		Max Disk cache
+*lDiskUsed.labelString:			Used Disk cache
+*lDiskFree.labelString:			Free Disk cache
+*lKb.labelString:			kB
+*tbBCKeepCacheOnDisk.labelString:	Save cache before exit
+*pbBCCleanMemCache.labelString:		C\n l \n e \n a \nn
+*pbBCCleanDiskCache.labelString:	C\n l \n e \n a \nn
+*fBCmemoryCache.labelString:		Memory Cache
+*fBCdiskCache.labelString:		Disk Cache
+
+
+! ** Dialog Box: ABOUT XMAYDAY *******************************************
+
+*aboutTitleMsg:			XMayday® - Documentation
+*aboutReleaseMsg:		XMayday release %d.%d
+*aboutReleaseBetaMsg:		XMayday release %d.%d.%d
+*lAboutIDDN.labelString:		NCSA Mosaic® HTML Widget based
+*lAboutLicense.labelString:		XMayday can't be sold,\n\
+use it free
+
+
+! ************************************************************************
+! **				FILE SELECTORS				**
+! ************************************************************************
+
+*indexOpenMsg:				Open an index
+*OpenIndex*Ok.labelString:		Open
+
+*fileOpenMsg:				Open a file
+*OpenFile*Ok.labelString:		Open
+
+*printDocumentMsg:			Print in file...
+*Print*Ok.labelString:			Print
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Quit XMayday
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:	\
+XMayday help can't be found in %s\n\
+Help path is defined in xmaydayrc file.\n\
+You can download help files on ftp.axene.org /pub/xmayday/doc/
+
+
+! ************************************************************************
+! **				HELP LINES				**
+! ************************************************************************
+
+*helpGoBackMsg:			Go back to previous page|Back
+*helpGoForwardMsg:		Go back to next page|Next
+*helpGoIndexMsg:		Go back on first page|Home
+*helpOpenMsg:			Open a new HTML page|Open
+*helpMoveIndexMsg:		Move this page in Index area|Put to Index
+*helpPrintMsg:			Print current page|Print
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

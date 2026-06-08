@@ -1,0 +1,98 @@
+<!-- Documentation Xclamation (c)1994-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration des règles</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigParagraph.gif" ALT="Configuration des r&amp;eagrave;gles." WIDTH="282" HEIGHT="38"> </p>
+
+<p><br>
+<br>
+Cette section des <a HREF="Config.html">fichiers de configuration</a> permet de
+prédéfinir une liste de règles. </p>
+
+<h3>Section de définition de la liste des règles&nbsp;: <i>\RULERLIST{...}</i></h3>
+
+<p>Cette section introduit la définition de la liste des règles accessibles dans les
+menus correspondants d'Xclamation. La définition des règles de la liste s'effectue
+après l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade fermante
+correspondante <i>&quot;}&quot;</i>. Chaque élément de la liste des règles est défini
+comme il l'est décrit ci-dessous. </p>
+
+<h3>Section de définition d'une règle&nbsp;: <i>\RULERX{...}</i></h3>
+
+<p>Cette section définit la règle X de la liste des règles. La définition d'une règle
+s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade fermante <i>&quot;}&quot;</i>.
+Les paramètres de définition d'une règle sont&nbsp;: 
+
+<ol>
+  <li>La valeur de la <a HREF="Box_Paragraph.html#textfield_left_margin">marge gauche</a> en
+    DTP. <br>
+    &nbsp;</li>
+  <li>La valeur de la <a HREF="Box_Paragraph.html#textfield_right_margin">marge droite</a> en
+    DTP. <br>
+    &nbsp;</li>
+  <li>La valeur de l'<a HREF="Box_Paragraph.html#textfield_alinea">alinéa</a> en DTP. <br>
+    &nbsp;</li>
+  <li><i>False</i> ou <i>True</i> suivant que l'<a HREF="Box_Paragraph.html#toggle_automatic_interline">interlignage</a> est respectivement
+    relatif ou absolu. <br>
+    &nbsp;</li>
+  <li>La valeur de l'<a HREF="Box_Paragraph.html#textfield_interline">interligne</a> en DTP. <br>
+    &nbsp;</li>
+  <li>La valeur de l'<a HREF="Box_Paragraph.html#textfield_interparagraph">interparagraphe</a>
+    en DTP. <br>
+    &nbsp;</li>
+  <li>Le <a HREF="Box_Paragraph.html#icons_aligment">mode d'alignement</a> <b>\LEFT</b>, <b>\RIGHT</b>,
+    <b>\CENTER</b>, <b>\JUSTIFY</b> respectivement&nbsp;: aligner à gauche, aligner à
+    droite, centrer, justifier. <br>
+    &nbsp;</li>
+  <li>Le pourcentage de <a HREF="Box_Paragraph.html#textfield_word_distribution">distribution
+    des mots</a> compris entre 0 et 1 (0 = 0% et 1 = 100%). <br>
+    &nbsp;</li>
+  <li>Le pourcentage de <a HREF="Box_Paragraph.html#textfield_min_ratio">ratio-min</a>. <br>
+    &nbsp;</li>
+  <li>Le pourcentage de <a HREF="Box_Paragraph.html#textfield_max_ratio">ratio-max</a>. <br>
+    &nbsp;</li>
+  <li><b>NAME{nom de la règle}</b>&nbsp;: nom de la règle telle qu'elle apparaît dans
+    Xclamation. <br>
+    &nbsp;</li>
+  <li><a NAME="lock"><b>\LOCK</b> permet de verrouiller une règle définie dans la base des
+    règles d'Xclamation de façon à ce qu'elle ne puisse être supprimée dans la boîte de
+    dialogue '</a><a HREF="Box_Paragraph.html#button_del">Composition des règles</a>'. <br>
+    &nbsp;</li>
+  <li><a NAME="hide"><b>\HIDE</b> permet cacher la règle définie pour qu'elle n'apparaisse
+    pas dans les listes de règles d'Xclamation. </a><br>
+    &nbsp;</li>
+</ol>
+
+<h3>Exemple&nbsp;:</h3>
+<tt>
+
+<p>\RULERLIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\RULER2{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 3 10<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False 0 5<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\LEFT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5 0.75 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Texte&nbsp;Normal}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\RULER4{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False 0 5<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\JUSTIFIED<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.8 0.75 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Justifié}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+} </tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXclamation.gif" ALT="Xclamation (c)1996. Axene" WIDTH="167" HEIGHT="29"></p>
+</body>
+</html>

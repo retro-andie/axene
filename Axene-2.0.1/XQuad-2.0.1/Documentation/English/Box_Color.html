@@ -1,0 +1,283 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Dialog box: Color</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleDialogBox.gif" ALT="Dialog box" WIDTH="89" HEIGHT="29"> <img ALIGN="middle" SRC="Images/TitleBoxColor.gif" ALT="Color" WIDTH="78" HEIGHT="28"> </p>
+
+<p><br>
+<br>
+This dialog box defines the colors used in XQuad, for example, when <a HREF="Box_Frame_Attributes.html#background_color_list">adding color to frames</a> or <a HREF="Box_Font.html#color_list">fonts</a>. It matches color elements to color names. <br>
+<br>
+</p>
+
+<hr>
+
+<p align="center"><br>
+<img SRC="Images/Box_Color.gif" ALT="Image&nbsp;: boîte de 
+préparation des couleurs" WIDTH="322" HEIGHT="223"><br>
+<small><i>Screen shot: Color dialog box</i></small></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p><br>
+</p>
+
+<h3>Left portion of the dialog box:</h3>
+
+<ul>
+  <li><a NAME="color_list">The <b>color list</b> displays pre-defined colors. When a color
+    from the list is selected, its compositional elements appear on the right. Several colors
+    may be selected simultaneously by holding down the CTRL key. All pre-defined colors are
+    stored in the </a><a HREF="ConfigColor.html">configuration files</a>. <br>
+    &nbsp;</li>
+  <li><a NAME="edit_color_name">The text field beneath the list serves to <b>modify the name
+    of the selected color</b>.</a><br>
+    &nbsp;</li>
+  <li><a NAME="button_new">The <i>&quot;add color&quot;</i> button <b>creates a new color</b>.
+    By default this color will have the same characteristics as the color currently selected,
+    as well as the same name followed by a number. </a><br>
+    &nbsp;</li>
+  <li><a NAME="button_del">The <i>&quot;delete color&quot;</i> button <b>deletes a color</b>.
+    Colors utilized in the application or defined in the </a><a HREF="ConfigColor.html">configuration
+    files</a> with the <a HREF="ConfigColor.html#lock">\LOCK</a> paramater cannot be deleted. <br>
+    &nbsp;</li>
+</ul>
+
+<p><br>
+</p>
+
+<h3>Right Portion of the Dialog Box:</h3>
+
+<ul>
+  <a NAME="navbar">
+  <li>The four buttons <em>&quot;CMYK&quot;</em>, <em>&quot;RGB&quot;</em>, <em>&quot;HSB&quot;</em>,
+    and <em>&quot;Gray&quot;</em> change the contents of the configuration section. Any of
+    these modes may be used to define the selected color. If the <em>&quot;gray&quot;</em>
+    button is engaged, the color is converted to a corresponding gray tone</a><br>
+    &nbsp;</li>
+  <li><a NAME="setup">The <em>&quot;configuration&quot;</em> section displays the
+    compositional elements of the selected chromatic mode:</a><ul>
+      <li><a HREF="Box_Color.html#color_CMYK">CMYK chromatic mode</a></li>
+      <li><a HREF="Box_Color.html#color_RGB">RGB chromatic mode</a>&nbsp;</li>
+      <li><a HREF="Box_Color.html#color_HSB">HSB chromatic mode</a></li>
+      <li><a HREF="Box_Color.html#color_gray">Gray tones</a><br>
+        &nbsp;<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><a NAME="color_preview">The <em>&quot;color preview&quot;</em> displays a color as
+    defined by its compositional elements. This color sample is shown under ideal display
+    conditions, therefore it's not exactly identical to the color obtained upon printing. </a><br>
+    &nbsp;<br>
+  </li>
+</ul>
+
+<h3>Lower Portion of the Dialog Box:</h3>
+
+<ul>
+  <li><a NAME="button_ok"><i>&quot;Ok&quot;</i> <strong>confirms all the modifications</strong>
+    made to the color list and closes the box.</a><br>
+    &nbsp;</li>
+  <li><a NAME="button_cancel"><i>&quot;Annuler&quot;</i> <strong>cancels all operations</strong>
+    on the list and closes the box.</a><br>
+    &nbsp;</li>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+<a NAME="color_CMYK">
+
+<h2 align="center">CMYK chromatic mode</h2>
+</a>
+
+<p><br>
+Click on the CMYK button to activate this mode. The color is then defined by the elements <em>Cyan</em>,
+<em>Magenta</em>, <em>Yellow</em>, and <em>Black</em>. </p>
+
+<h3>Description</h3>
+
+<p>Primary colors&nbsp;: 
+
+<ul>
+  <li>Cyan (Green and Blue): complimentary color to Red</li>
+  <li>Magenta (Red and Blue): Complimentary color to Green</li>
+  <li>Yellow(Red and Green): Complimentary color to Blue<br>
+    &nbsp;</li>
+</ul>
+
+<p>These primary colors are called &quot;subtractive&quot; because they must be removed to
+produce white.</p>
+
+<p>CMYK chromatic mode is the one used by computer printers. </p>
+
+<h3>Creating a color</h3>
+
+<p>Text fields and vertical risers allow the user to <strong>set the level of a
+compositional element</strong>. These values demonstrate the amount of an element in a
+color in linear fashion. A 0% value indicates an absence of the element in the color; a
+value of 100% indicates the maximum possible amount of an element in the color.</p>
+
+<p>When the primary colors C, M, and Y are combined, the theoretical result is black;
+however, when printed, the mixture of inks will produce a type of brown. To compensate for
+this problem when printing in four colors, the element &quot;black&quot; has been added.
+Adding 30% Black is equivalent to adding 30% Cyan + 30% Magenta + 30% Yellow.</p>
+
+<p><em><strong>Note</strong>: XQuad optimises the color so that it utilises a maximum
+amount of pure Black; it's therefore possible that the values entered will be modified
+automatically when this dialog box is next displayed.</em></p>
+
+<p>&nbsp;</p>
+
+<p><br>
+</p>
+
+<hr>
+<a NAME="color_RGB">
+
+<h2 align="center">RGB chromatic mode</h2>
+</a>
+
+<p><br>
+Click on the RGB button to activate this mode. The color is then defined by the elements <em>Red</em>,
+<em>Green</em> and <em>Blue</em>. </p>
+
+<h3>Description</h3>
+
+<p>primary colors: 
+
+<ul>
+  <li>Red (Magenta and Yellow) - Complimentary color to Cyan </li>
+  <li>Green (Cyan and Yellow) - Complimentary color to Magenta </li>
+  <li>Blue (Cyan and Magenta) - Complimentary color to Yellow <br>
+    &nbsp;</li>
+</ul>
+
+<p>These primary colors are called additives because they must be combined to produce
+white. </p>
+
+<p>RGB chromatic mode is the one used by computer monitors. </p>
+
+<h3>Creating a color</h3>
+
+<p>Text fields and vertical sliders allow the user to <strong>set the level of a
+compositional element</strong>. These values demonstrate the amount of an element in a
+color in linear fashion. A 0% value indicates an absence of the element in the color; a
+value of 100% indicates the maximum possible amount of an element in the color.</p>
+
+<p>When the primary colors RGB are combined, the result is white. The absence of these
+colors creates black.</p>
+
+<p><br>
+</p>
+
+<hr>
+<a NAME="color_HSB">
+
+<h2 align="center">HSB chromatic mode</h2>
+</a>
+
+<p><br>
+Click on the HSB button to activate this mode. The color is then defined by its <em>Hue</em>,
+<em>Saturation</em>, and <em>Brightness</em>. </p>
+
+<h3>Description</h3>
+
+<p>The common problem with CMYK and RGB modes is that they are difficult to understand
+intuitively. HSB mode is a more natural way of thinking about color. </p>
+
+<h3>Creating a Color</h3>
+<b>
+
+<p>Hue </b><br>
+<em>Hue</em> values are set between O and 360 degrees. They are equivalent to the values
+of the color wheel, where 0 degrees is equal to 360 degrees. <br>
+The primary color values:</p>
+<div align="center"><center>
+
+<table BGCOLOR="#000000" BORDER="0" CELLPADDING="1" WIDTH="50%">
+  <tr>
+    <td><table BORDER="0" WIDTH="100%" BGCOLOR="#FFFFFF" CELLPADDING="2" CELLSPACING="0">
+      <tr BGCOLOR="#000000">
+        <th><font COLOR="#AAAAAA" FACE="helvetica">&nbsp;Angle&nbsp;</font></th>
+        <th COLSPAN="2"><font COLOR="#AAAAAA" FACE="helvetica">&nbsp;Color&nbsp;</font></th>
+      </tr>
+      <tr>
+        <td ALIGN="center">0°</td>
+        <td ALIGN="center">Red</td>
+        <td BGCOLOR="#FF0000" ALIGN="center"><font COLOR="#FF0000">R</font></td>
+      </tr>
+      <tr BGCOLOR="#EEEEEE">
+        <td ALIGN="center">60°</td>
+        <td ALIGN="center">Yellow</td>
+        <td BGCOLOR="#FFFF00" ALIGN="center"><font COLOR="#FFFF00">J</font></td>
+      </tr>
+      <tr>
+        <td ALIGN="center">120°</td>
+        <td ALIGN="center">Green</td>
+        <td BGCOLOR="#00FF00" ALIGN="center"><font COLOR="#00FF00">V</font></td>
+      </tr>
+      <tr BGCOLOR="#EEEEEE">
+        <td ALIGN="center">180°</td>
+        <td ALIGN="center">Cyan</td>
+        <td BGCOLOR="#00FFFF" ALIGN="center"><font COLOR="#00FFFF">C</font></td>
+      </tr>
+      <tr>
+        <td ALIGN="center">240°</td>
+        <td ALIGN="center">Blue</td>
+        <td BGCOLOR="#0000FF" ALIGN="center"><font COLOR="#0000FF">B</font></td>
+      </tr>
+      <tr BGCOLOR="#EEEEEE">
+        <td ALIGN="center">300°</td>
+        <td ALIGN="center">Magenta</td>
+        <td BGCOLOR="#FF00FF" ALIGN="center"><font COLOR="#FF00FF">M</font></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <caption valign="bottom"><font SIZE="-1">Primary colors</font></caption>
+</table>
+</center></div>
+
+<p><b>Saturation</b><br>
+<em>Saturation</em> is associated with the intensity of a color. This value is given in
+the form of a percentage, from 0% (no hue present) to 100% (the hue is pure). The higher
+this value, the greater the presence of a particular hue in the color being created. </p>
+
+<p><b>Brightness</b><br>
+<em>Brightness</em> refers to the quantity of black added to a color. This value is given
+in the form of a percentage, from 0% (pure black) to 100% (pure white). The higher the
+level of brightness, the lighter the color. The more black present in a color (low
+brightness), the darker it is.</p>
+
+<p><br>
+</p>
+
+<hr>
+<a NAME="color_gray">
+
+<h2 align="center">Gray Tones</h2>
+</a>
+
+<p><br>
+Click on the <em>&quot;Gray&quot;</em> button to activate this mode. A color is then
+defined by its percentage of white [from 0% (black) to 100% (white)]. When entering into
+this mode, the selected color is transformed to gray and loses all trace of its hue. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

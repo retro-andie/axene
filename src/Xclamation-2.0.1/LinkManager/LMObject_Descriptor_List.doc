@@ -1,0 +1,101 @@
+
+
+		Documentation de la classe 'Object Descriptor List'
+
+
+******************************************************************************
+
+int 	XcLM_Client_Initialize_Object_Descriptor_List(List)
+XcLM_Object_Descriptor_List	**List;
+
+
+	Alloue une structure de type "XcLM_Object_Descriptor_List' 
+	a l'adresse 'List'
+
+	Les champs Prev, Next, Descriptor sont fixes a NULL;
+
+
+	erreur = XcLM_MALLOC_ERROR
+
+
+******************************************************************************
+
+int 	XcLM_Client_Destroy_Object_Descriptor_List(List)
+XcLM_Object_Descriptor_List	**List;
+
+	Detruit la liste ainsi que les descripteurs qu'elle contenait.
+
+	erreur = -1 si 'List' = NULL;
+
+******************************************************************************
+
+int 	XcLM_Client_Remove_Object_Descriptor_List(List)
+XcLM_Object_Descriptor_List	**List;
+
+	Detruit la liste mais pas les descripteurs qu'elle contenait.
+
+	erreur = -1 si 'List' = NULL;
+
+******************************************************************************
+
+int	XcLM_Client_Register_Object_Descriptor(list , object_desc)
+XcLM_Object_Descriptor_List	**list;
+XcLM_Object_Descriptor		*object_desc;
+
+	Enregistre le descripteur 'object_desc' dans la liste 'list'
+
+	le descripteur de la liste est celui passe en parametre, il
+	n'est pas recopie ...
+	Attention a l'effacement de la liste qui effacera le descripteur
+
+
+******************************************************************************
+
+int XcLM_Client_Test_Object_Descriptor_List(List, object_desc)
+XcLM_Object_Descriptor_List	*List;
+XcLM_Object_Descriptor	*object_desc;
+
+	Teste si l'objet decrit appartient a la liste de descripteurs.
+	Le teste ne porte que sur le nom.
+
+	Ne pas confondre cette fonction avec "Test_Object_List" qui realise
+	le test dans une liste d'objets et non une liste de descripteurs.
+
+	erreur = -1 si descripteur non trouve ...
+	
+******************************************************************************
+
+int XcLM_Global_List_Object_Descriptor(List, class)
+XcLM_Object_Descriptor_List	*List;
+XcLM_ClassMask			class;
+
+	Affiche la liste des descripteurs de la liste 'List'
+	repondant au critere 'class'
+
+	erreur = -1 si 'List' = NULL;
+******************************************************************************
+
+int	XcLM_Client_Remove_Element_Object_Descriptor_List(List)
+XcLM_Object_Descriptor_List	**List;
+
+	Enleve le maillon pointe par 'List' de la liste.
+	A la sortie de la procedure, List pointe sur l'element suivant
+	l'element enleve.
+	L'element n'est pas efface de la memoire.
+
+	erreur = -1 si '*List' = NULL
+******************************************************************************
+
+int	XcLM_Client_Destroy_Element_Object_Descriptor_List(List)
+XcLM_Object_Descriptor_List	**List;
+
+	Enleve le maillon pointe par 'List' de la liste.
+	A la sortie de la procedure, List pointe sur l'element suivant
+	l'element enleve.
+	L'element est efface de la memoire.
+
+	erreur = -1 si '*List' = NULL
+
+******************************************************************************
+
+

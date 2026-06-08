@@ -1,0 +1,486 @@
+#! /bin/sh
+#
+# Configure Script for Axene Softwares.
+#
+# Copyright (C) 1998-2000 Axene.
+# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Email: xcalibur@axene.org
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+# Started on  Tue May 30 16:17:26 2000 Emmanuel Paris
+# Last update Fri Oct 20 14:28:31 2000 Emmanuel Paris
+#
+
+PWD=`pwd`
+THIS="$0"
+NAME=`basename $THIS`
+TOP=`dirname $PWD/$THIS`
+
+##############################################################################
+
+# default env
+PREFIX=`dirname $PWD`
+LANGUAGE='English.us'
+CC='gcc'
+CFLAGS='-O2'
+CPPFLAGS=''
+LDFLAGS=''
+MOTIF_LIBS='-lXm'
+X11_LIBS='-lXt -lXext -lX11'
+SOCK_LIBS=''
+X11CONFIG='-DXc_XTOP=\"/usr/lib/X11\"'
+ARFLAGS='rvs'
+# default flags and path
+quiet="no"
+nocreate="no"
+witheditres="no"
+withxpm="no"
+language=""
+xincdir=""
+xlibdir=""
+motifincdir=""
+motiflibdir=""
+xpmlibdir=""
+#
+
+while [ "$#" -ge 1 ]; do
+
+ case "$1" in
+  -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+  *) optarg= ;;
+ esac
+
+ case "$1" in
+  --help | -help | -h | -\? | --hel | --he)
+   cat << EOF
+Usage: $NAME [options]
+Options: [defaults in brackets after descriptions]
+Configuration
+    --help                  print this message
+    --quiet, --silent       do not print any messages
+    --no-create             do not create output files
+Directory and file names:
+    --prefix=PREFIX         install all files in PREFIX [$PREFIX]
+    --lang=LANGUAGE         install language files for LANGUAGE [$LANGUAGE]
+                            LANGUAGE can be English.us, English.uk, French, 
+                            Spanish or German.
+    --x-includes=DIR        X include files are in DIR
+    --x-libraries=DIR       X library files are in DIR
+    --motif-includes=DIR    Motif include files are in DIR
+    --motif-libraries=DIR   Motif library files are in DIR
+    --with-editres          Enable editres protocol	
+    --with-xpm              if Xpm library is needed by Motif library
+    --xpm-libraries=DIR     Xpm library files are in DIR
+EOF
+  exit 0
+  ;;
+  -q | -quiet | --quiet | --quie | --qui | --qu | --q \
+	| -silent | --silent | --silen | --sile | --sil)
+   quiet="yes";;
+  -no-create | --no-create | --no-creat | --no-crea | --no-cre \
+  | --no-cr | --no-c)
+    nocreate="yes";;
+  -prefix=* | --prefix=* | --prefi=* | --pref=* | --pre=* | --pr=* | --p=*)
+   PREFIX="$optarg";;
+  -lang=* | --lang=* | -l=* | --l=*)
+   language="$optarg";;
+  -x-includes=* | --x-includes=* | --x-include=* | --x-includ=* | --x-inclu=* \
+  | --x-incl=* | --x-inc=* | --x-in=* | --x-i=*)
+    xincdir="$optarg";;
+  -x-libraries=* | --x-libraries=* | --x-librarie=* | --x-librari=* \
+  | --x-librar=* | --x-libra=* | --x-libr=* | --x-lib=* | --x-li=* | --x-l=*)
+    xlibdir="$optarg";;
+  -motif-includes=* | --motif-includes=* | --motif-include=* \
+  | -motif-include=* | --motif-inc=* | -motif-inc=*)
+    motifincdir="$optarg";;
+  -motif-libraries=* | --motif-libraries=* | --motif-librarie=* \
+  | -motif-librarie=* | --motif-lib=* | -motif-lib=*)
+    motiflibdir="$optarg";;
+  --with-editres | -with-editred | -weditres | -wedit)
+   witheditres="yes";;
+  --with-xpm | -with-xpm | -wxpm)
+   withxpm="yes";;
+  --xpm-libraries=* | -xpm-libraries=* | --xpm-lib=* | -xpm-lib=*)
+   xpmlibdir="$optarg";;
+  -*) 
+   echo "$NAME: error: $1: invalid option; use --help to show usage" 1>&2
+   exit 1;;
+ esac
+
+ shift
+done
+
+##############################################################################
+
+FILES_LIST=`ls -1 $TOP`
+SUBDIRS=""
+for i in $FILES_LIST; do
+ [ -d $TOP/$i -a -f $TOP/$i/Makefile ] && SUBDIRS=${SUBDIRS}$i" "
+done
+
+if [ "$quiet" = "no" ]; then
+ cat << EOF
+Products found:
+$SUBDIRS
+
+EOF
+fi
+
+##############################################################################
+
+ARCH=`./config.guess`
+set - `echo $ARCH | sed "s:-: :g"`
+CPU=$1
+MACH=$2
+OS=$3
+shift 3
+EXTRA=$@
+OSNAME=`echo $OS | sed "s:[0-9].*$::"`
+OSVERSION=`echo $OS | sed "s:^[^0-9]*::"`
+
+OSLOWER=`echo $OSNAME | tr "A-Z" "a-z"`
+MACHLOWER=`echo $MACH | tr "A-Z" "a-z"`
+
+case $OSLOWER in
+ linux)
+  case $CPU in
+   i*86)
+    OSFLAGS="-D___i386_linux"
+    COMPFLAGS="-m486";;
+   alpha*)
+    OSFLAGS="-D___alpha -D___alpha_linux";;
+   sparc*)
+    OSFLAGS="-D___sparc_linux";;
+   *);;
+  esac
+  
+  if [ `uname -r | cut -c1` != "1" ]; then
+   glibc=`ls -1 /lib/libc.so.6* 2> /dev/null`
+   if [ -n "$glibc" ]; then
+    OSFLAGS=${OSFLAGS}" -D___linux_glibc"
+    EXTRAS="-glibc"
+   else
+    OSFLAGS=${OSFLAGS}" -D___linux_libc"
+    EXTRAS="-libc"
+   fi
+  else
+   EXTRAS="-aout"
+  fi
+
+  OSVERSION=`uname -r | sed "s:^\([0-9][0-9]*\.[0-9][0-9]*\).*$:\1:"`
+  COMPFLAGS="-O2 -Wall "${COMPFLAGS}
+  DEFFLAGS="-D_NO_PROTO"
+  xlibdir=${xlibdir:-'/usr/X11R6/lib'}
+  ;;
+ freebsd)
+  OSFLAGS="-D___freebsd"
+  COMPFLAGS="-O2 -m486 -Wall"
+  DEFFLAGS="-DULONG_NOT_DEFINED"
+  xlibdir=${xlibdir:-'/usr/X11R6/lib'}
+  ARFLAGS="cq"
+  ;;
+ netbsd)
+  OSFLAGS="-D___NetBSD"
+  COMPFLAGS="-O2 -m486 -Wall"
+  DEFFLAGS="-DULONG_NOT_DEFINED"
+  LDFLAGS="-Xlinker -Bstatic"
+  ;;
+ sco)
+  if [ `echo $OSVERSION | cut -c5` = "4" ]; then
+   CC="cc"
+   OSFLAGS="-D___sco386"
+   COMPFLAGS="-O x -K -quiet -W0"
+   SOCK_LIBS='-lsocket'
+   LDFLAGS='-nointl'
+  else
+   CC="icc"
+   OSFLAFS="-D___sco386sV"
+   COMPLAGS="-ip -mem -pad -tp p5 -w1"
+   DEFFLAGS="-D_NO_PROTO"
+   LDFLAGS '-Wl,-b elf -d y'
+   SOCK_LIBS="-lsocket"
+  fi
+  ;;
+ dgux)
+  
+  ;;
+ aix)
+   case $CPU in
+    powerpc)
+     OSFLAGS="-D___rs6000ppc";;
+    rs6000|*)
+     OSFLAGS="-D___rs6000"
+     DEFFLAGS="-DHAVE_MEMMOVE -D__STR31__";;
+   esac
+      
+  ;;
+ sunos)
+   OSFLAGS="-D___sun4"
+   xlibdir=${xlibdir:-"/usr/openwin/lib"}
+   SOCK_LIBS="-lnsl -lsocket"
+   ARFLAGS="cq"
+  ;;
+ solaris)
+   case $CPU in
+    i*86)
+     OSFLAGS="-D___sun5_x86";;
+    sparc*)
+     OSFLAGS="-D___sun5";;
+   esac
+   motiflibdir=${motiflibdir:-"/usr/dt/lib"}
+   xlibdir=${xlibdir:-"/usr/openwin/lib"}
+   SOCK_LIBS="-lnsl -lsocket"
+   ARFLAGS="cq"
+   PATH=/usr/xpg4/bin:${PATH}
+   export PATH
+  ;;
+ irix)
+
+  ;;
+ 
+ osf)
+   CC="cc"
+   OSFLAGS="-D___alpha"
+   COMPFLAGS="-std0 -arch generic -O2 -msg_disable addrarray"
+ ;;
+
+ *)
+
+ ;;
+esac
+
+# set final CFLAGS
+[ -n "$COMPFLAGS" ] && CFLAGS=$COMPFLAGS
+[ -n "$motifincdir" ] && CFLAGS=${CFLAGS}" -I"$motifincdir
+[ -n "$xincdir" ] && CFLAGS=${CFLAGS}" -I"$xincdir
+
+# set final CPPFLAGS
+CPPFLAGS=${CPPFLAGS}" "${OSFLAGS}" "${DEFFLAGS} 
+
+# set motif and X11 libs
+if [ -n "$motiflibdir" ]; then
+ MOTIF_LIBS="-L"${motiflibdir}" "${MOTIF_LIBS}
+elif [ -n "$xlibdir" ]; then
+ libxm=`ls -1 ${xlibdir}/libXm.[sa]* 2> /dev/null`
+ if [ -n "$libxm" ]; then
+  MOTIF_LIBS="-L"${xlibdir}" "${MOTIF_LIBS}
+  motiflibdir="Already set"
+ fi
+fi
+
+if [ "$withxpm" = "yes" ]; then
+ [ -n "$xpmlibdir" ] && MOTIF_LIBS=${MOTIF_LIBS}" -L"${xpmlibdir}
+ MOTIF_LIBS=${MOTIF_LIBS}" "-lXpm
+fi
+if [ -n "$xlibdir" ]; then
+ libsm=`ls -1 ${xlibdir}/libSM.[sa]* 2> /dev/null`
+ [ -n "$libsm" ] && X11_LIBS="-lXt -lSM -lICE -lXext -lX11"
+ [ ! "$motiflibdir" = "Already set" ] && X11_LIBS="-L"${xlibdir}" "${X11_LIBS}
+fi
+
+# editres is enable by default for linux on x86 arch
+if echo $OSFLAGS | grep -e "-D___i386_linux" > /dev/null 2>&1; then
+ echo $X11_LIBS | grep -e "-lXmu" > /dev/null 2>&1 || \
+    X11_LIBS=${X11_LIBS}" -lXmu"
+elif [ "$witheditres" = "yes" ]; then
+ CPPFLAGS=${CPPFLAGS}" -DEDITRES_COMPATIBLE"
+ echo $X11_LIBS | grep -e "-lXmu" > /dev/null 2>&1 || \
+    X11_LIBS=${X11_LIBS}" -lXmu"
+fi
+
+# try to deternmine motif revision
+[ -n "$motifincdir" ] && xmh="${motifincdir}/Xm/Xm.h" \
+    || xmh="/usr/include/Xm/Xm.h"
+if [ -f "$xmh" ]; then
+ XmVERSION=`sed -n "/^#define XmVERSION[	]/s/^.*ION[^0-9]*//p" $xmh`
+ XmREVISION=`sed -n "/^#define XmREVISION[	]/s/^.*ION[^0-9]*//p" $xmh`
+ XmUPDATELVL=`sed -n "/^#define XmUPDATE_LEVEL[		]/s/^.*VEL[^0-9]*//p" \
+    $xmh`
+ [ -z "$XmVERSION" ] && XmVERSION="0"
+ [ -z "$XmREVISION" ] && XmREVISION="0"
+ [ -z "$XmUPDATE_LEVEL" ] && XmUPDATE_LEVEL="0"
+ if [ "$XmVERSION" -ge 2 -a "$XmREVISION" -ge 1 \
+    -a "$XmUPDATELVL" -ge 30 ]; then
+  X11_LIBS=$X11_LIBS" -lXp"
+ fi
+fi
+
+# try to find XKeysymDB location for X11CONFIG
+for i in ${xlibdir}/X11 /usr/X11R6/lib/X11 /usr/lib/X11 /usr/X11/lib/X11 \
+    /usr/X11R5/lib/X11 /usr/openwin/lib; do
+ if [ -f "$i/XKeysymDB" ]; then
+  X11CONFIG="'-DXc_XTOP="'\"'$i'\"'"'"
+  [ -d $i/locale ] && X11CONFIG=$X11CONFIG" -DXc_NEED_LOCALE"
+  [ -d $i/nls ] && X11CONFIG=$X11CONFIG" -DXc_NEED_NLS"
+  break
+ fi
+done
+
+# try to find user language
+if [ -n "$language" ]; then
+ LANGUAGE="$language";
+else
+ if [ -n "$LANG" ]; then
+  _LANG=`echo $LANG | tr "[A-Z]" "[a-z]"`
+  case $_LANG in
+   uk*) LANGUAGE="English.uk";;
+   fr*) LANGUAGE="French";;
+   es* | sp*) LANGUAGE="Spanish";;
+   de* | ge*) LANGUAGE="German";;
+   *) LANGUAGE="English.us";;
+  esac
+ fi
+fi
+case $LANGUAGE in
+ English.us | English.uk | French | Spanish | German) ;;
+ *) LANGUAGE="English.us";
+esac
+
+[ -z "$CPU" ] && CPU="unknown"
+[ -z "$OSNAME" ] && OSNAME="unknown"
+[ -z "$OSVERSION" ] && OSVERSION="unknown"
+
+# adjust cpu type to compilation options
+case $CPU in
+ i*86)
+  CPU="i386"
+  echo $CFLAGS | grep -e "-m486" > /dev/null 2>&1 && CPU="i486"
+  echo $CFLAGS | grep -e "-m586" > /dev/null 2>&1 && CPU="i586"
+  echo $CFLAGS | grep -e "-tp p5" > /dev/null 2>&1 && CPU="i586"
+  ;;
+ alpha*)
+  echo $CFLAGS | grep -vqe "-arch ev" && CPU="alpha"
+  ;;
+esac
+
+# selectively uppercase osname
+PRETYOS=`echo $OSNAME | cut -c1 | tr "[a-z]" "[A-Z]"``echo $OSNAME | cut -c2-`
+echo $PRETYOS | grep "^...$" > /dev/null 2>&1 && \
+    PRETYOS=`echo $PRETYOS | tr "[a-z]" "[A-Z]"`
+PRETYOS=`echo $PRETYOS | sed "s:bsd:BSD:"`
+
+SYSTEM_NAME=${PRETYOS}" "${CPU}" "${OSVERSION}
+PACKAGE_NAME=$CPU"-"$OSNAME"-"${OSVERSION}${EXTRAS}
+
+# Suppress leading, ending and consecutive spaces
+SUBDIRS=`echo $SUBDIRS | sed -e "s/^ *//" -e "s/ *$//" -e "s/  */ /g"`
+CFLAGS=`echo $CFLAGS | sed -e "s/^ *//" -e "s/ *$//" -e "s/  */ /g"`
+CPPFLAGS=`echo $CPPFLAGS | sed -e "s/^ *//" -e "s/ *$//" -e "s/  */ /g"`
+LDFLAGS=`echo $LDFLAGS | sed -e "s/^ *//" -e "s/ *$//" -e "s/  */ /g"`
+MOTIF_LIBS=`echo $MOTIF_LIBS | sed -e "s/^ *//" -e "s/ *$//" -e "s/  */ /g"`
+X11_LIBS=`echo $X11_LIBS | sed -e "s/^ *//" -e "s/ *$//" -e "s/  */ /g"`
+SOCK_LIBS=`echo $SOCK_LIBS | sed -e "s/^ *//" -e "s/ *$//" -e "s/  */ /g"`
+
+if [ "$quiet" = "no" ]; then
+ cat << EOF 
+Building Environment:
+ CC="$CC"
+ CFLAGS="$CFLAGS"
+ CPPFLAGS="$CPPFLAGS"
+ LDFLAGS="$LDFLAGS"
+ MOTIF_LIBS="$MOTIF_LIBS"
+ X11_LIBS="$X11_LIBS"
+ SOCK_LIBS="$SOCK_LIBS"
+ X11CONFIG="$X11CONFIG"
+ ARFLAGS="$ARFLAGS"
+
+ SYSTEM_NAME="$SYSTEM_NAME"
+ PACKAGE_NAME="$PACKAGE_NAME"
+
+ PREFIX="$PREFIX"
+ LANGUAGE="$LANGUAGE"
+EOF
+fi
+
+##############################################################################
+
+if [ "$nocreate" = "yes" ]; then
+ exit 0
+fi
+
+# Generation of global Makefile
+if [ "$quiet" = "no" ]; then
+ cat << EOF
+
+Creating Makefiles:
+ Makefile
+EOF
+fi
+
+rm -f $TOP/Makefile
+cp $TOP/Makefile.in $TOP/Makefile
+
+ed - $TOP/Makefile > /dev/null 2>&1 << EOF
+/^$/i
+
+# PLEASE DO NOT EDIT THIS FILE, it is generated by configure
+
+.
+/^SUBDIRS =/s:^.*$:SUBDIRS = $SUBDIRS:
+/^CC =/s/^.*$/CC = $CC/
+/^CFLAGS =/s:^.*$:CFLAGS = $CFLAGS:
+/^CPPFLAGS =/s:^.*$:CPPFLAGS = $CPPFLAGS:
+/^LDFLAGS =/s:^.*$:LDFLAGS = $LDFLAGS:
+/^SOCK_LIBS =/s:^.*$:SOCK_LIBS = $SOCK_LIBS:
+/^MOTIF_LIBS =/s:^.*$:MOTIF_LIBS = $MOTIF_LIBS:
+/^X11_LIBS =/s:^.*$:X11_LIBS = $X11_LIBS:
+/^X11CONFIG =/s:^.*$:X11CONFIG = $X11CONFIG:
+s/"/\\\\"/g
+/^ARFLAGS =/s:^.*$:ARFLAGS = $ARFLAGS:
+/^SYSTEM_NAME =/s:^.*$:SYSTEM_NAME = $SYSTEM_NAME:
+/^PACKAGE_NAME =/s:^.*$:PACKAGE_NAME = $PACKAGE_NAME:
+/^PREFIX =/s:^.*$:PREFIX = $PREFIX:
+/^LANGUAGE =/s:^.*$:LANGUAGE = $LANGUAGE:
+w
+q
+EOF
+
+for i in $SUBDIRS; do
+
+ ed - $TOP/Makefile > /dev/null 2>&1 << EOF
+/^# BEGIN SUBST/,/^# END SUBST/t/^# BEGIN SUBST/-
++1d
+.,/^# END SUBST/s/<<SUBST>>/$i/g
+1
+/^# END SUBST/
+/^# END SUBST/d
+w
+q
+EOF
+
+done
+
+# cleanup global makefile
+ed - $TOP/Makefile > /dev/null 2>&1 << EOF
+/^# BEGIN SUBST/,/^# END SUBST/d
+w
+q
+EOF
+
+for i in $SUBDIRS; do
+ if [ -x "$TOP/$i/Utils/mkmakefile" ]; then
+  export CPPFLAGS
+  ( cd $i; Utils/mkmakefile ) > /dev/null
+  if [ "$quiet" = "no" ]; then
+   echo " $i/Makefile"
+  fi
+ fi
+done
+
+if [ "$quiet" = "no" ]; then
+ echo ""
+ echo "Configuration is done. Next run 'make'."
+fi

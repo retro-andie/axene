@@ -1,0 +1,65 @@
+<!-- Documentation XMayday (c)1996-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration Files</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFiles.gif" ALT="Configuration Files" WIDTH="212" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+</p>
+
+<p>XMayday permits the user to define certain configuration parameters by default: 
+
+<ul>
+  <li><a HREF="ConfigHelp.html">Help configuration</a> </li>
+  <li><a HREF="ConfigImageCache.html">Image Cache configuration</a> </li>
+  <li><a HREF="ConfigPrinter.html">Printer configuration</a> </li>
+</ul>
+
+<p>These parameters are described in the &quot;xmaydayrc&quot; file. Each user may also
+add his or her own default parameter definitions by creating an &quot;.xmaydayrc&quot;
+file in the home directory. </p>
+
+<p>XMayday reads configuration files sequentially in this order: 
+
+<ol>
+  <li>&quot;<b>xmaydayrc</b>&quot; </li>
+  <li>&quot;<b>.xmaydayrc</b>&quot; </li>
+</ol>
+
+<p><br>
+</p>
+
+<h3>Configuration file syntax:</h3>
+
+<p>XMayday's configuration files are stored in several overlapping sections. Each section
+begins with &quot;\TYPESECTION {&quot;, where <i>TYPESECTION</i> is the specified word
+indicating the section type. Sections end with a closing bracket <i>&quot;}&quot;</i>. The
+structure of an XMayday configuration file takes on the following form: </p>
+<tt>
+
+<p><a HREF="Config.html#config" ">\CONFIG</a>{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a HREF="ConfigHelp.html">\HELP_CONFIG</a>{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a HREF="ConfigImageCache.html">\CACHE_CONFIG</a>{...} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a HREF="ConfigPrinter.html">\PRINTER</a>{...} <br>
+} </tt><a NAME="config"></p>
+
+<h3>Main section of the Configuration file: <i>\CONFIG {...}</i></h3>
+
+<p>Main section of the configuration file. A configuration file must begin with: <i>&quot;\CONFIG
+{&quot;</i> and end with the corresponding closing bracket &quot;}&quot;. Each element's
+configuration section appears between two brackets. </a></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXMayday.gif" ALT="XMayday (c)1997. Axene" WIDTH="164" HEIGHT="31"></p>
+</body>
+</html>

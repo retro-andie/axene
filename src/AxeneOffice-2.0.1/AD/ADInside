@@ -1,0 +1,45 @@
+! ************************************************************************
+! **				CURSORS					**
+! ************************************************************************
+
+*menuCursor:				right_ptr
+
+! ************************************************************************
+! **			TRAVERSAL & HIGHLIGHT THICKNESS			**
+! ************************************************************************
+
+*highlightThickness:			1
+
+! ************************************************************************
+! **                               ALIGNMENTS				**
+! ************************************************************************
+
+! ************************************************************************
+! **				SHADOW THICKNESS			**
+! ************************************************************************
+
+*shadowThickness:				1
+*XmSeparatorGadget.shadowThickness:		2
+*XmRowColumn.shadowThickness:			0
+*XmCascadeButtonGadget.shadowThickness:		1
+*XmForm.shadowThickness:			0
+
+! ************************************************************************
+! **				MARGINS	& SPACINGS			**
+! ************************************************************************
+
+*XmPushButton.marginWidth:			2
+*XmPushButton.marginHeight:			2
+*XmToggleButtonGadget.marginLeft:		5
+*XmToggleButtonGadget.marginRight:		5
+*XmPushButtonGadget.marginLeft:			5
+*XmPushButtonGadget.marginRight:		5
+*rcMain.marginWidth:				3
+*rcMain.marginHeight:				3
+*rcMain.spacing:				2
+
+! ************************************************************************
+! **				BACKGROUND PIXMAPS  			**
+! ************************************************************************
+
+*rcMain.backgroundPixmap:		leather_dark

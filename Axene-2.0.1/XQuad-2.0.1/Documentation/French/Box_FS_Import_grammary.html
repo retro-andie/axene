@@ -1,0 +1,130 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Importation de texte - Grammaire</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFileSelector.gif" ALT="Sélecteur de fichier" WIDTH="156" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleFSImport.gif" ALT="Importation de texte" WIDTH="272" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+Le champ nommé <i>&quot;colonnes&quot;</i> permet de définir selon quel critère telle
+ou telle partie du texte va aller dans une même colonne ou passer dans les colonnes
+suivantes. Cette définition s'effectue suivant la chaîne de caractères que l'on entre
+dans ce champ. Voici la description de sa grammaire&nbsp;:<br>
+la chaîne doit se présenter sous une forme de séries de séquences séparées par des
+points virgules. </p>
+
+<p align="center"><font COLOR="#EE3333">&lt;sequence1&gt;</font><b>;</b><font COLOR="#EE3333">&lt;sequence2&gt;</font><b>;</b><font COLOR="#EE3333">&lt;sequence3&gt; </font></p>
+
+<p align="center">Chaque séquence a pour but de trouver ce qui va séparer le texte en
+colonnes. </p>
+
+<p>Une séquence peut prendre deux formes&nbsp;: 
+
+<ol>
+  <li><b>un nombre</b>, indiquant le nombre de caractères devant entrer dans une colonne
+    avant de passer à la colonne suivante. <br>
+    &nbsp;</li>
+  <li><b>une chaîne de caractères</b> servant de délimiteur, entourée par des guillemets
+    (&quot; &quot;). Lorsque la chaîne de caractères est trouvée dans le texte importé,
+    XQuad la considère comme un changement de colonne.<br>
+    Pour inclure des caractères spéciaux dans cette chaîne, il est possible de les entrer
+    par leur code ASCII en décimal, octal ou hexadécimal sous les formes respectives: <b>\65
+    \0101 \0x41</b> pour le caractère <b>A</b>, etc. Vous pouvez vous référer à la <a HREF="Keyboard.html#special_car">table ASCII</a> fournie en Annexe. <br>
+    Certains caractères spéciaux peuvent avoir une autre forme dont voici la liste&nbsp;: <ul>
+      <li><b>\t</b> pour le caractère de code ASCII 0x9 (tabulation). </li>
+      <li><b>\n</b> pour le caractère de code ASCII 0xa (new line). </li>
+      <li><b>\r</b> pour le caractère de code ASCII 0xd (carriage return). </li>
+      <li><b>\\</b> pour le caractère slash. </li>
+    </ul>
+  </li>
+</ol>
+
+<p>Le caractère <b>!</b>, placé en début de séquence, sert à indiquer que la colonne
+qui devrait être normalement générée par la séquence n'apparaîtra pas dans le
+tableau. Il permet donc de 'sauter' des informations. </p>
+
+<p>Le caractère <b>*</b>, placé après une séquence de type 'chaîne de caractères',
+sert à indiquer que le séparateur de colonne est la chaîne de caractères trouvée dans
+le texte importé, une fois ou plus. </p>
+
+<p>La séparation en ligne du fichier importé s'effectue au premier caractère <b>\n</b>
+(new line) ou <b>\r</b> (carriage return) ou <b>\n\t</b> (new line + carriage return)
+rencontré, après que chaque séquence ait été vérifiée. Deux possibilités s'offrent
+à vous, si le champ <i>&quot;colonnes&quot;</i> se termine par&nbsp;: 
+
+<ul>
+  <li>une séquence&nbsp;: cela indique que le découpage en colonnes s'effectuera suivant
+    cette séquence jusqu'au premier retour à la ligne rencontré. </li>
+  <li>un caractère &quot;<b>;</b>&quot;&nbsp;: cela indique que tous les caractères avant le
+    premier caractère retour à la ligne s'entasseront dans la dernière colonne de la ligne.
+  </li>
+</ul>
+
+<p><b>Exemple&nbsp;:</b><br>
+Pour importer un fichier last.txt généré par la commande&nbsp;: </p>
+
+<p>$ <tt>last &gt; last.txt</tt> </p>
+
+<p>dont voici un rendu&nbsp;: </p>
+
+<p align="center"><tt>register&nbsp;&nbsp;ttyq0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;14:45&nbsp;-&nbsp;14:46&nbsp;&nbsp;(00:00)<br>
+rlogin&nbsp;&nbsp;&nbsp;&nbsp;ttyq0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;14:45&nbsp;-&nbsp;14:45&nbsp;&nbsp;(00:00)<br>
+support&nbsp;&nbsp;&nbsp;ttyq0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;14:45&nbsp;-&nbsp;14:45&nbsp;&nbsp;(00:00)<br>
+rlogin&nbsp;&nbsp;&nbsp;&nbsp;ttyq0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;14:45&nbsp;-&nbsp;14:45&nbsp;&nbsp;(00:00)<br>
+axene&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ttyq0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;14:43&nbsp;-&nbsp;14:45&nbsp;&nbsp;(00:01)<br>
+rlogin&nbsp;&nbsp;&nbsp;&nbsp;ttyq0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;14:43&nbsp;-&nbsp;14:43&nbsp;&nbsp;(00:00)<br>
+</tt>[....]<br>
+<tt>rc2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:18&nbsp;-&nbsp;06:18&nbsp;&nbsp;(00:00)<br>
+rc2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:17&nbsp;-&nbsp;06:18&nbsp;&nbsp;(00:00)<br>
+uadmin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:16&nbsp;-&nbsp;06:17&nbsp;&nbsp;(00:01)<br>
+echo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:16&nbsp;-&nbsp;06:16&nbsp;&nbsp;(00:00)<br>
+echo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:16&nbsp;-&nbsp;06:16&nbsp;&nbsp;(00:00)<br>
+rc0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:16&nbsp;-&nbsp;06:16&nbsp;&nbsp;(00:00)<br>
+rc0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:16&nbsp;-&nbsp;06:16&nbsp;&nbsp;(00:00)<br>
+LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;Apr&nbsp;12&nbsp;06:16&nbsp;-&nbsp;06:18&nbsp;&nbsp;(00:02)<br>
+LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thu&nbsp;Apr&nbsp;11&nbsp;06:19&nbsp;-&nbsp;06:16&nbsp;&nbsp;(23:56)<br>
+getty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thu&nbsp;Apr&nbsp;11&nbsp;06:19&nbsp;-&nbsp;06:16&nbsp;&nbsp;(23:56)<br>
+rc2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thu&nbsp;Apr&nbsp;11&nbsp;06:19&nbsp;-&nbsp;06:19&nbsp;&nbsp;(00:00)<br>
+</tt>[....]<br>
+&nbsp;on peut utiliser la chaîne suivante pour le champ <i>&quot;colonnes&quot;</i> : <br>
+<tt><b>10;13;&quot; &quot;;&quot; &quot;*;&quot; &quot;;&quot; &quot;;!&quot;-
+&quot;;&quot; &quot;*;!&quot;(&quot;;&quot;)&quot;; </b></tt></p>
+
+<p align="center"><b>Explications&nbsp;:</b> <br>
+<tt><b><font COLOR="#EE3333">10</font>;<font COLOR="#EE3333">13</font>;<font COLOR="#EE3333">&quot; &quot;</font>;<font COLOR="#EE3333">&quot; &quot;*</font>;<font COLOR="#EE3333">&quot; &quot;</font>;<font COLOR="#EE3333">&quot; &quot;</font>;<font COLOR="#EE3333">!&quot;- &quot;</font>;<font COLOR="#EE3333">&quot; &quot;*</font>;<font COLOR="#EE3333">!&quot;(&quot;</font>;<font COLOR="#EE3333">&quot;)&quot;</font>;</b></tt>
+</p>
+
+<p><tt><b><font COLOR="#EE3333">10</font>;<font COLOR="#EE3333">13</font></b></tt> permet
+de récupérer les 2 premières colonnes, celles-ci ayant respectivement 10 et 13
+caractères. On aurait pu mettre <tt><b><font COLOR="#EE3333">&quot; &quot;*</font>;<font COLOR="#EE3333">&quot; &quot;*</font></b></tt> mais la deuxième colonne n'existe pas
+forcément. </p>
+
+<p><tt><b><font COLOR="#EE3333">&quot; &quot;</font>;<font COLOR="#EE3333">&quot; &quot;*</font>;<font COLOR="#EE3333">&quot; &quot;</font>;<font COLOR="#EE3333">&quot; &quot;</font></b></tt>
+permet de récupérer respectivement les champs jour (Fri), mois (Apr), jour du mois (12)
+et heure de connection (14:14). </p>
+
+<p><tt><b><font COLOR="#EE3333">!&quot;- &quot;</font></b></tt> permet de sauter le tiret
+qui sépare l'heure de connexion de l'heure de déconnexion. </p>
+
+<p><tt><b><font COLOR="#EE3333">&quot; &quot;*</font></b></tt> permet de récupérer
+l'heure de déconnexion et de sauter les espaces suivants. </p>
+
+<p><tt><b><font COLOR="#EE3333">!&quot;(&quot;</font></b></tt> permet de sauter la
+parenthèse ouvrante. </p>
+
+<p><tt><b><font COLOR="#EE3333">&quot;)&quot;</font>;</b></tt> permet de récupérer le
+delta entre l'heure de connexion et l'heure de déconnexion. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

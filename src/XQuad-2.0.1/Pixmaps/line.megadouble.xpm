@@ -1,0 +1,28 @@
+/* XPM */
+static char * line_megadouble_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"50 18 5 1",
+" 	s None	c None",
+".	c gray60",
+"X	c black",
+"o	c white",
+"O	c gray10",
+/* pixels */
+"                                                  ",
+"                                                  ",
+"                                                  ",
+"   ............................................   ",
+"   ............................................   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...oooooooooooooooooooooooooooooooooooooo...   ",
+"   ...oooooooooooooooooooooooooooooooooooooo...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...OXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ............................................   ",
+"   ............................................   ",
+"                                                  ",
+"                                                  ",
+"                                                  "};

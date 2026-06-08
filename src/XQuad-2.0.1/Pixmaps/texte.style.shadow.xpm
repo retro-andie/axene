@@ -1,0 +1,38 @@
+/* XPM */
+static char * texte_style_shadow_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"28 28 4 1",
+/* colors */
+" 	s None	c None",
+".	c white",
+"X	c black",
+"o	c gray10",
+/*pixels*/
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"           .                ",
+"           .X               ",
+"           .Xo              ",
+"    ....   .X...    ....    ",
+"   ..XX..  ...Xo.  ..XX..   ",
+"    XXoo.X .XXoo.X .XXooXX  ",
+"    .....Xo.Xoo .Xo.Xo oooo ",
+"   ..XXX.Xo.Xo  .Xo.Xo    o ",
+"   .XXoo.Xo.Xo  .Xo.Xo  .   ",
+"   ..o ..Xo..o ..Xo..o ..Xo ",
+"    ......o.X...XXo ....XXo ",
+"    oXXXoXXoXoXXXo  oXXXXo  ",
+"     oooo o  oooo    oooo   ",
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"                            ",
+"                            "};

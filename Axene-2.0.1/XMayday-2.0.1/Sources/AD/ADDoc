@@ -1,0 +1,100 @@
+
+! ************************************************************************
+! **				ONLINE HELP FILES			**
+! ************************************************************************
+
+! ** Online Help files: GENERAL INTERFACE ********************************
+
+*XmForm.userData:				Main_Interface.html
+
+*hwTOP*userData:			Main_Interface.html#index_section
+*hwBOTTOM*userData:			Main_Interface.html#browse_section
+*BottomBar*userData:			Main_Interface.html#bottom_bar
+*hIconBar.userData:			Main_Interface.html#browse_section
+*IconNav_prev.userData:			Main_Interface.html#icon_prev
+*IconNav_next.userData:			Main_Interface.html#icon_next
+*IconNav_indx.userData:			Main_Interface.html#icon_home
+*Menu.userData:				Menu_Bar.html
+
+
+! ** Online Help files: PULLDOWN MENUS ***********************************
+
+*pmFile*userData:			Menu_Bar.html#file
+*pmFile.mNewXMayday.userData:		Menu_Bar.html#new_menu_entry
+*pmFile.mOpenIndex.userData:		Menu_Bar.html#open_index_menu_entry
+*pmFile.mOpenFile.userData:		Menu_Bar.html#open_file_menu_entry
+*pmFile.mPrint.userData:		Menu_Bar.html#print_menu_entry
+*pmFile.mClose.userData:		Menu_Bar.html#close_menu_entry
+*pmFile.mQuit.userData:			Menu_Bar.html#quit_menu_entry
+
+*pmDisplay*userData:			Menu_Bar.html#view
+*pmDisplay.mRefresh.userData:		Menu_Bar.html#refresh_menu_entry
+*pmDisplay.mReload.userData:		Menu_Bar.html#reload_menu_entry
+*pmDisplay.mTransfert.userData:		Menu_Bar.html#transfert_menu_entry
+*pmDisplay.mMaskIndex.userData:		Menu_Bar.html#view_index_menu_entry
+*pmDisplay.mShowIndex.userData:		Menu_Bar.html#view_index_menu_entry
+*pmDisplay.mShowInfobar.userData:	Menu_Bar.html#view_url_menu_entry
+*pmDisplay.mMaskInfobar.userData:	Menu_Bar.html#view_url_menu_entry
+
+*pmGo*userData:				Menu_Bar.html#goto
+*pmGo.mBack.userData:			Menu_Bar.html#prev_menu_entry
+*pmGo.mForward.userData:		Menu_Bar.html#next_menu_entry
+*pmGo.mHome.userData:			Menu_Bar.html#home_menu_entry
+
+*pmHelp*userData:			Menu_Bar.html#help
+*pmHelp.mOverview.userData:		Overview.html
+*pmHelp.mContent.userData:		index.html
+*pmHelp.mKeyboard.userData:		Keyboard.html
+*pmHelp.mOnItem.userData:		Menu_Bar.html#help_on_item_menu_entry
+*pmHelp.mUsingHelp.userData:		Help_Usage.html
+*pmHelp.mCache.userData:		Menu_Bar.html#cache_menu_entry
+*pmHelp.mAbout.userData:		Menu_Bar.html#about_xmayday_menu_entry
+
+
+! ** Online Help files: FILE SELECTORS ***********************************
+
+*OpenFile*userData:			Box_File_Selectors.html#fs_open_file
+*OpenIndex*userData:			Box_File_Selectors.html#fs_open_index
+*Print*userData:			Box_File_Selectors.html#fs_print_in_file
+
+
+! ** Online Help files: PRINT DIALOG BOX *********************************
+
+*BoxPrint*userData:			Box_Print.html
+*BoxPrint*fPrinter*userData:		Box_Print.html#printer_list
+*BoxPrint*fExportType*userData:		Box_Print.html#section_print_format
+*BoxPrint*fFontType*userData:		Box_Print.html#section_font_family
+*BoxPrint*fFontType*userData:		Box_Print.html#section_font_family
+*BoxPrint*imFontType.userData:		Box_Print.html#section_font_family
+*BoxPrint*fFormat*userData:		Box_Print.html#section_page_format
+*BoxPrint*fParams.userData:		Box_Print.html#section_parameters
+*BoxPrint*rbBanners.userData:		Box_Print.html#headers_button
+*BoxPrint*rbFootnotes.userData:		Box_Print.html#footnotes_button
+*BoxPrint*rbDraftMode.userData:		Box_Print.html#without_image_button
+*BoxPrint*rbColorMode.userData:		Box_Print.html#color_button
+*BoxPrint*action_area.Ok.userData:	Box_Print.html#button_ok
+*BoxPrint*action_area.Cancel.userData:	Box_Print.html#button_cancel
+
+
+! ** Online Help files: IMAGE CACHE DIALOG BOX ****************************
+
+*BoxCache*userData:			Box_Image_Cache.html
+*BoxCache*fBCmemoryCache.userData:	Box_Image_Cache.html#memory_cache_frame
+*BoxCache*lMemTotal.userData:		Box_Image_Cache.html#max_memory_textfield
+*BoxCache*tfMemTotal.userData:		Box_Image_Cache.html#max_memory_textfield
+*BoxCache*lMemUsed.userData:		Box_Image_Cache.html#used_memory_textfield
+*BoxCache*tfMemUsed.userData:		Box_Image_Cache.html#used_memory_textfield
+*BoxCache*lMemFree.userData:		Box_Image_Cache.html#free_memory_textfield
+*BoxCache*tfMemFree.userData:		Box_Image_Cache.html#free_memory_textfield
+*BoxCache*pbBCCleanMemCache.userData:	Box_Image_Cache.html#memory_clear_button
+*BoxCache*fBCdiskCache.userData:	Box_Image_Cache.html#disk_cache_frame
+*BoxCache*lDiskTotal.userData:		Box_Image_Cache.html#max_disk_textfield
+*BoxCache*tfDiskTotal.userData:		Box_Image_Cache.html#max_disk_textfield
+*BoxCache*lDiskUsed.userData:		Box_Image_Cache.html#used_disk_textfield
+*BoxCache*tfDiskUsed.userData:		Box_Image_Cache.html#used_disk_textfield
+*BoxCache*lDiskFree.userData:		Box_Image_Cache.html#free_disk_textfield
+*BoxCache*tfDiskFree.userData:		Box_Image_Cache.html#free_disk_textfield
+*BoxCache*pbBCCleanDiskCache.userData:	Box_Image_Cache.html#disk_clear_button
+*BoxCache*tbBCKeepCacheOnDisk.userData:	Box_Image_Cache.html#save_cache_button
+*BoxCache*action_area.Ok.userData:	Box_Image_Cache.html#button_ok
+

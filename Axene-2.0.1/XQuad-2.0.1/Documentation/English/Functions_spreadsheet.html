@@ -1,0 +1,94 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fonctions tableurs</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFunctionsSpreadsheet.gif" ALT="Fonctions Tableurs" WIDTH="210" HEIGHT="33"> </p>
+
+<p><br>
+<br>
+</p>
+
+<hr>
+
+<h3><a NAME="adresse"><font COLOR="#2244AA">adresse</font></a></h3>
+
+<ul>
+  <p><b>Crée une adresse en texte.</b> </p>
+  <p><b>adresse(<i>ligne</i>; <i>colonne</i><font COLOR="#333333">; <i>type</i>; <i>booleen_ignoré</i>;
+  <i>text_ignoré</i></font>)</b> <ul>
+    <li><i>ligne&nbsp;:</i> valeur de la ligne comprise entre 1 et 100000. </li>
+    <li><i>colonne&nbsp;:</i> valeur de la colonne comprise entre 1 et 702. </li>
+    <li><i>type&nbsp;:</i> valeur parmis 1, 2, 3 ou 4. </li>
+    <li><i>booléen_ignoré&nbsp;:</i> valeur ignorée. Existe pour la compatibilité Excel. </li>
+    <li><i>text_ignoré&nbsp;:</i> valeur ignoré. Existe pour la compatibilité Excel. </li>
+  </ul>
+  <p>Cette adresse en texte se base sur les numéros de ligne et de colonne passés en
+  paramètres. L'argument type prend par défault la valeur 1. Les valeurs possibles de type
+  sont&nbsp;: 1 (ligne et colonne absolue), 2 (ligne absolue, colonne relative), 3 (ligne
+  relative, colonne absolue), 4 (ligne relative, colonne relative) </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=adresse(100; 72 ; 2)</tt><br>
+    <b>Valeur&nbsp;: </b>BT$100 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="col"><font COLOR="#2244AA">col</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le numéro de la colonne courante.</b> </p>
+  <p><b>col()</b> </p>
+  <p>Col renvoie le numéro de colonne dans laquelle se trouve la formule. Ce nombre varie
+  donc de 1 à 702 </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=col()</tt><br>
+    </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="indirect"><font COLOR="#2244AA">indirect</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le contenu d'une cellule.</b> </p>
+  <p><b>indirect(<i>texte</i>; <i>booleen_ignoré</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à interpreter comme une cellule XQuad. </li>
+    <li><i>booléen_ignoré&nbsp;:</i> valeur ignorée. Existe pour la compatibilité Excel. </li>
+  </ul>
+  <p>Renvoie la valeur contenue par la cellule spécifiée dans le paramètre <i>texte</i>.
+  Ce texte doit contenir un format de cellule valide pour XQuad. </p>
+</ul>
+
+<hr>
+
+<h3><a NAME="ligne"><font COLOR="#2244AA">ligne</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le numéro de la ligne courante.</b> </p>
+  <p><b>ligne()</b> </p>
+  <p>Renvoie le numéro de la ligne dans laquelle se trouve la formule. Ce nombre varie donc
+  de 1 à 100000. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=ligne()</tt><br>
+    </p>
+  </ul>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

@@ -1,0 +1,1087 @@
+
+*title:				Axene XQuad 2.0.1 - Tableur
+*lPleaseWait.labelString:     		Lancement en cours...
+
+*defaultFrameNameMsg:			Cadre
+*defaultDocumentNameMsg:		Sans Titre
+*defaultSheetNameMsg:			Feuille
+*automaticColorMsg:			Automatique
+
+
+! ************************************************************************
+! **			MNEMONICS for PULLDOWN MENUS			**
+! ************************************************************************
+
+*pmFile.mnemonic:			F
+*pmEdit.mnemonic:			E
+*pmSelect.mnemonic:			S
+*pmDisplay.mnemonic:			A
+*pmFormat.mnemonic:			o
+*pmGraph.mnemonic:			G
+*pmWindows.mnemonic:			n
+*pmHelp.mnemonic:			i
+
+*pmFile.mNew.mnemonic:			N
+*pmFile.mOpen.mnemonic:			O
+*pmFile.mClose.mnemonic:		F
+*pmFile.mSave.mnemonic:			S
+*pmFile.mSaveAs.mnemonic:		a
+*pmFile.mSaveAll.mnemonic:		T
+*pmFile.mAcquire.mnemonic:		m
+*pmFile.mExport.mnemonic:		E
+*mExportVector.mnemonic:		V
+*mExportText.mnemonic:			T
+*mExportHTML.mnemonic:			H
+*pmFile.mPrintSetup.mnemonic:		C
+*pmFile.mPrint.mnemonic:		I
+*pmFile.mQuit.mnemonic:			Q
+
+*pmEdit.mCut.mnemonic:  		C
+*pmEdit.mCopy.mnemonic:  		o
+*pmEdit.mPaste.mnemonic:  		l
+*pmEdit.mDeleteFrame.mnemonic:	 	S
+*pmEdit.mDelete.mnemonic:		S
+*mDeleteAll.mnemonic:	  		T
+*mDeleteFormula.mnemonic:	  	F
+*mDeleteFormat.mnemonic:	  	a
+*mDeletePattern.mnemonic:	  	n
+*mDeleteBorder.mnemonic:		B
+*mDeleteStyle.mnemonic:	  		S
+*mDeletePosition.mnemonic:	  	P
+*mDeleteFont.mnemonic:	  		o
+*pmEdit.mInsertRow.mnemonic:		I
+*pmEdit.mDeleteRow.mnemonic:		e
+*pmEdit.mInsertColumn.mnemonic:		n
+*pmEdit.mDeleteColumn.mnemonic:		t
+*pmEdit.mCopyBottom.mnemonic:		B
+*pmEdit.mCopyRight.mnemonic:		D
+*pmEdit.mColors.mnemonic:  		u
+
+*pmSelect.mPasteFunction.mnemonic:	F
+*pmSelect.mGotoCell.mnemonic:		A
+*pmSelect.mGotoActiveCell.mnemonic:	t
+*pmSelect.mGotoLastCell.mnemonic:	d
+*pmSelect.mSelectToLastCell.mnemonic:	Z
+*pmSelect.mSelectAllCells.mnemonic:	S
+*pmSelect.mSelectAllFrames.mnemonic:	C
+
+*pmDisplay.mRedraw.mnemonic:		R
+*pmDisplay.mMaskGrid.mnemonic:		G
+*pmDisplay.mShowGrid.mnemonic:		G
+*pmDisplay.mMaskInfobar.mnemonic:	I
+*pmDisplay.mShowInfobar.mnemonic:	I
+*pmDisplay.mMaskFrameBorders.mnemonic:	B
+*pmDisplay.mShowFrameBorders.mnemonic:	B
+*pmDisplay.mMaskColOrigin.mnemonic:	C
+*pmDisplay.mShowColOrigin.mnemonic:	C
+*pmDisplay.mMaskRowOrigin.mnemonic:	L
+*pmDisplay.mShowRowOrigin.mnemonic:	L
+*pmDisplay.mMaskSeparator.mnemonic:	S
+*pmDisplay.mShowSeparator.mnemonic:	S
+*pmDisplay.mShowFormula.mnemonic:	u
+*pmDisplay.mMaskFormula.mnemonic:	u
+*pmDisplay.mMaskZeroCell.mnemonic:	Z
+*pmDisplay.mShowZeroCell.mnemonic:	Z
+*pmDisplay.mActivMagnet.mnemonic:	M
+*pmDisplay.mStopMagnet.mnemonic:	M
+
+*pmFormat.mNumbers.mnemonic:		N
+*pmFormat.mPatterns.mnemonic:		F
+*pmFormat.mBorders.mnemonic:		B
+*pmFormat.mFonts.mnemonic:		P
+*pmFormat.mRowColSize.mnemonic:		T
+
+*pmGraph.mGraphHBar.mnemonic:		B
+*pmGraph.mGraphVBar.mnemonic:		H
+*pmGraph.mGraphLayer.mnemonic:		A
+*pmGraph.mGraphLine.mnemonic:		C
+*pmGraph.mGraphPie.mnemonic:		S
+*pmGraph.mGraphRadar.mnemonic:		R
+*pmGraph.mMaskLegend.mnemonic:		L
+*pmGraph.mShowLegend.mnemonic:		L
+*pmGraph.mMaskAxeMarks.mnemonic:	o
+*pmGraph.mShowAxeMarks.mnemonic:	o
+*pmGraph.mMaskTitle.mnemonic:		T
+*pmGraph.mShowTitle.mnemonic:		T
+*pmGraph.mMaskFirstSerieLabel.mnemonic:	e
+*pmGraph.mShowFirstSerieLabel.mnemonic:	e
+*pmGraph.mMaskSerieTitles.mnemonic:	g
+*pmGraph.mShowSerieTitles.mnemonic:	g
+*pmGraph.mGraphSetup.mnemonic:		n
+
+*pmWindows.mCascade.mnemonic:		C
+*pmWindows.mTile.mnemonic:		M
+
+*pmHelp.mOverview.mnemonic:		G
+*pmHelp.mContent.mnemonic:		T
+*pmHelp.mKeyboard.mnemonic:		C
+*pmHelp.mMouse.mnemonic:		S
+*pmHelp.mOnItem.mnemonic:		I
+*pmHelp.mUsingHelp.mnemonic:		U
+*pmHelp.mLegal.mnemonic:		L
+*pmHelp.mRegistration.mnemonic:		D
+*pmHelp.mAbout.mnemonic:		A
+
+
+! ************************************************************************
+! **				PULLDOWN MENUS				**
+! ************************************************************************
+
+*pmFile.labelString:  			Fichier
+*pmFile.mNew.labelString:		Nouveau
+*pmFile.mOpen.labelString:		Ouvrir...
+*pmFile.mClose.labelString:		Fermer
+*pmFile.mSave.labelString:  		Sauver
+*pmFile.mSaveAs.labelString:		Sauver sous...
+*pmFile.mSaveAll.labelString:  		Tout sauver
+*pmFile.mAcquire.labelString:  		Importer...
+*pmFile.mExport.labelString:  		Exporter
+*mExportVector.labelString:  		Dessin Vectoriel...
+*mExportText.labelString:  		Texte...
+*mExportHTML.labelString:  		HTML...
+*pmFile.mPrintSetup.labelString:  	Configurer l'impression...
+*pmFile.mPrint.labelString:  		Imprimer...
+*pmFile.mQuit.labelString:  		Quitter...
+
+*pmEdit.labelString:  			Edition
+*pmEdit.mCut.labelString:  		Couper
+*pmEdit.mCopy.labelString:  		Copier
+*pmEdit.mPaste.labelString:  		Coller
+*pmEdit.mDeleteFrame.labelString:	Supprimer
+*pmEdit.mDelete.labelString:		Supprimer
+*mDeleteAll.labelString:	  	Tout supprimer
+*mDeleteFormula.labelString:	  	Supprimer Formules
+*mDeleteFormat.labelString:	  	Supprimer Formats
+*mDeletePattern.labelString:	  	Supprimer Fonds
+*mDeleteBorder.labelString:		Supprimer Bordures
+*mDeleteStyle.labelString:	  	Supprimer Styles
+*mDeletePosition.labelString:	  	Supprimer Positions
+*mDeleteFont.labelString:	  	Supprimer Polices
+*pmEdit.Tout selectionner.labelString:	Tout sélectionner
+*pmEdit.mColors.labelString:  		Couleurs...
+*pmEdit.mInsertRow.labelString:		Insérer Lignes
+*pmEdit.mInsertColumn.labelString:	Insérer Colonnes
+*pmEdit.mDeleteRow.labelString:		Détruire Lignes
+*pmEdit.mDeleteColumn.labelString:	Détruire Colonnes
+*pmEdit.mCopyBottom.labelString:	Copier vers le Bas
+*pmEdit.mCopyRight.labelString:		Copier vers la Droite
+
+*pmSelect.labelString:			Sélection
+*pmSelect.mPasteFunction.labelString:	Coller une Fonction...
+*pmSelect.mGotoCell.labelString:	Atteindre la cellule...
+*pmSelect.mGotoActiveCell.labelString:	Atteindre la cellule active
+*pmSelect.mGotoLastCell.labelString:	Atteindre la dernière cellule
+*pmSelect.mSelectToLastCell.labelString: Sélectionner la Zone utile
+*pmSelect.mSelectAllCells.labelString: 	Sélectionner toutes les Cellules
+*pmSelect.mSelectAllFrames.labelString: Sélectionner tous les Cadres
+
+*pmDisplay.labelString:			Affichage
+*pmDisplay.mRedraw.labelString:		Tout Redessiner
+*pmDisplay.mMaskGrid.labelString:	Cacher Grille
+*pmDisplay.mShowGrid.labelString:	Afficher Grille
+*pmDisplay.mMaskInfobar.labelString:	Cacher barre d'Infos
+*pmDisplay.mShowInfobar.labelString:	Afficher barre d'Infos
+*pmDisplay.mMaskFrameBorders.labelString: Cacher Bords des cadres
+*pmDisplay.mShowFrameBorders.labelString: Afficher Bords des cadres
+*pmDisplay.mMaskColOrigin.labelString:	Cacher en-têtes des Colonnes
+*pmDisplay.mShowColOrigin.labelString:	Afficher entêtes des Colonnes
+*pmDisplay.mMaskRowOrigin.labelString:	Cacher entêtes des Lignes
+*pmDisplay.mShowRowOrigin.labelString:	Afficher en-têtes des Lignes
+*pmDisplay.mShowSeparator.labelString:	Afficher Séparateurs
+*pmDisplay.mMaskSeparator.labelString:	Cacher Séparateurs
+*pmDisplay.mShowFormula.labelString:	Afficher Formules
+*pmDisplay.mMaskFormula.labelString:	Afficher Résultats
+*pmDisplay.mMaskZeroCell.labelString:	Cacher les Zéros
+*pmDisplay.mShowZeroCell.labelString:	Afficher les Zéros
+*pmDisplay.mActivMagnet.labelString:	Activer Magnétisme
+*pmDisplay.mStopMagnet.labelString:	Stopper Magnétisme
+
+*pmFormat.labelString:			Format
+*pmFormat.mNumbers.labelString:		Nombres...
+*pmFormat.mPatterns.labelString:	Fonds...
+*pmFormat.mBorders.labelString:		Bordures...
+*pmFormat.mFonts.labelString:		Polices...
+*pmFormat.mRowColSize.labelString:	Lignes et colonnes...
+
+*pmGraph.labelString:			Grapheur
+*pmGraph.mGraphHBar.labelString:	Créer Barres...
+*pmGraph.mGraphVBar.labelString:	Créer Histogrammes...
+*pmGraph.mGraphLayer.labelString:	Créer Aires...
+*pmGraph.mGraphLine.labelString:	Créer Courbes...
+*pmGraph.mGraphPie.labelString:		Créer Secteurs...
+*pmGraph.mGraphRadar.labelString:	Créer Radars...
+*pmGraph.mMaskLegend.labelString:	Cacher Légende
+*pmGraph.mShowLegend.labelString:	Afficher Légende
+*pmGraph.mMaskAxeMarks.labelString:	Cacher Lignes d'ordonnées
+*pmGraph.mShowAxeMarks.labelString:	Afficher Lignes d'ordonnées
+*pmGraph.mMaskTitle.labelString:	Cacher Titre
+*pmGraph.mShowTitle.labelString:	Afficher Titre
+*pmGraph.mMaskFirstSerieLabel.labelString: Cacher Texte des abscisses
+*pmGraph.mShowFirstSerieLabel.labelString: Afficher Texte des abscisses
+*pmGraph.mMaskSerieTitles.labelString:	Cacher Nom des séries
+*pmGraph.mShowSerieTitles.labelString:	Afficher Nom des séries
+*pmGraph.mGraphSetup.labelString:	Configuration...
+
+*pmWindows.labelString:			Fenêtres
+*pmWindows.mCascade.labelString:	Cascade
+*pmWindows.mTile.labelString:		Mosaïque
+
+*pmHelp.labelString:			Aide
+*pmHelp.mOverview.labelString:		Aide Générale...
+*pmHelp.mContent.labelString:		Table des Matières...
+*pmHelp.mKeyboard.labelString:		Clavier...
+*pmHelp.mMouse.labelString:		Souris...
+*pmHelp.mOnItem.labelString:		Aide sur Item
+*pmHelp.mUsingHelp.labelString:		Utiliser l'aide...
+*pmHelp.mAbout.labelString:		A propos d'XQuad...
+*pmHelp.mLegal.labelString:		Licence...
+*pmHelp.mRegistration.labelString:	Listes de Diffusion...
+
+
+! ************************************************************************
+! **				DIALOG BOXES				**
+! ************************************************************************
+
+
+! ** Dialog Box: REPLACE FONT ********************************************
+
+*lFontSelekeyFirsct.labelString:	Police indisponible
+*tbKeepAlias.labelString:		Garder l'association
+
+
+! ** Dialog Box: LICENSE *************************************************
+
+*lBoxLicense.labelString: Fichier Licence non trouvé.\n\
+Il devrait se trouver dans $AXENE_LIB/license/\n\
+L'installation est peut-être incomplète.
+
+*keyFirstMsg:		Licence enregistrée par %s
+*keySecondMsg:		%s
+*noKeyFirstMsg:		Vous n'avez pas de clef
+*noVKeyFirstMsg:	Clef non valide
+*noKeySecondMsg:	Pensez à vous enregistrer
+*noVKeySecondMsg:	Veuillez contacter support@axene.org
+*deadlineExpiredMsg:	Votre clef est expirée
+*deadlineExpired2Msg:	Vous devez vous ré-enregistrer
+
+*lLegalAdress.labelString: Email: contact@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org
+
+*lLegalCopy.labelString: Copyright ©1995-2000 Axene, Inc. Tous droits réservés.\n\
+XQuad est une marque déposée.
+
+*BoxLegal*Ok.labelString:		Comment s'enregistrer...
+*BoxLegal*Cancel.labelString:		S'enregister plus tard
+
+
+! ** Dialog Box: LICENSE2 *************************************************
+
+*lLegal2Title.labelString:		Où et comment s'enregistrer ?
+*lBoxLegal2.labelString: Fichier Register non trouvé.\n\
+Il devrait se trouver dans $AXENE_LIB/license/\n\
+L'installation est peut-être incomplète.
+
+
+ ! ** Dialog Box: COLORS **************************************************
+
+*editColorsMsg:			Préparation des couleurs
+*lColor.labelString:		Témoin de couleur
+*l_C.labelString:		Cyan
+*l_M.labelString:		Magenta
+*l_Y.labelString:		Jaune
+*l_K.labelString:		Noir
+*l_R.labelString:		Rouge
+*l_G.labelString:		Vert
+*l_B.labelString:		Bleu
+*l_H.labelString:		Teinte
+*l_S.labelString:		Saturation
+*l_L.labelString:		Luminosité
+*l_G1.labelString:		Gris
+*lColorAdd.labelString:		Ajouter couleur
+*lColorDel.labelString:		Détruire couleur
+*fBCmain.labelString:		Configuration	
+*tbBC_CMYK.labelString:		CMJN
+*tbBC_RGB.labelString:		RVB
+*tbBC_HSL.labelString:		TSL
+*tbBC_GRAY.labelString:		Gris
+
+
+! ** Dialog Box: FRAME ATTRIBUTES ****************************************
+
+*frameAttribsMsg:		Attributs des cadres
+*lBABackColor.labelString:	Couleur de fond
+*lBABorderColor.labelString:	Couleur de la bordure
+*lBABorderWidth.labelString:	Epaisseur de la bordure
+*fBAPreview.labelString:	Témoin
+
+
+! ** Dialog Box: CELLS PATTERNS ******************************************
+
+*lBoxPatternTitle.labelString:	Fond des cellules
+*lBPForeColor.labelString:	Couleur d'avant-plan
+*lBPBackColor.labelString:	Couleur d'arrière-plan
+*fBPColors.labelString:		Couleurs
+*fBPPatterns.labelString:	Catalogue des motifs
+
+
+! ** Dialog Box: CELLS BORDERS *******************************************
+
+*lBoxBordersTitle.labelString:	Attribution de bordures aux cellules
+*lBBOutline.labelString:	Contour
+*lBBTop.labelString:		Haut
+*lBBBottom.labelString:		Bas
+*lBBLeft.labelString:		Gauche
+*lBBRight.labelString:		Droite
+*lBBPattern.labelString:	Facture du trait
+*lBBDash.labelString:		Pointillés
+*lBBForeColor.labelString:	Couleur d'avant-plan
+*lBBBackColor.labelString:	Couleur d'arrière-plan
+*fBBBorders.labelString:	Appliquer sur...
+*fBBLineStyle.labelString:	Style de la ligne
+
+
+! ** Dialog Box: NUMBER FORMAT *******************************************
+
+*styleNumbersMsg:		Mise en forme des nombres
+*tbColor.labelString:		Couleurs
+*tbColor2.labelString:		Couleurs
+*tbStdPrec.labelString:		Affichage
+*tbExpPrec.labelString:		Affichage
+*tbLinks.labelString:		Liens
+*tbUnit.labelString:		Unité
+*tbFracPrec.labelString:	Affichage
+*tbBoolean.labelString:		Texte
+*tbDay.labelString:		Style
+*tbMonth.labelString:		Style
+*lBNPositiveColor.labelString:	Couleur des nombres positifs
+*lBNNegativeColor.labelString:	Couleur des nombres négatifs
+*lBNUnitString.labelString:	Unité du nombre
+*tbBNUnitAfter.labelString:	Placer l'unité après le nombre
+*tbBNTruncate.labelString:	Tronquer les décimales à l'affichage
+*lBNMaxPrecision.labelString:	Précision Maximale
+*lBNMinPrecision.labelString:	Précision Minimale
+*lBNSeparatorString.labelString:	Séparateur de décimales
+*lBNSeparatorMString.labelString:	Séparateur de milliers
+*lBNSeparatorPosition.labelString:	Séparateur tous les groupes de
+*tbBNfracDecimal.labelString:	Fraction sur la partie décimale
+*lBNFracPrecision.labelString:	Précision du dénominateur
+*lBNTrueString.labelString:	Texte pour VRAI
+*lBNFalseString.labelString:	Texte pour FAUX
+*BnColPositiveMsg:		Couleur des nombres positifs
+*BnColNegativeMsg:		Couleur des nombres négatifs
+*BnColTrueMsg:			Couleur pour VRAI
+*BnColFalseMsg:			Couleur pour FAUX
+*rbDayNameVeryShort.labelString:Format très court
+*rbDayNameShort.labelString:	Format court
+*rbDayNameLong.labelString:	Format long
+*rbMonthNameVeryShort.labelString:Format très court
+*rbMonthNameShort.labelString:	Format court
+*rbMonthNameLong.labelString:	Format long
+*lBNLnormal.labelString:	Nombres
+*lBNLunit.labelString:		Unités
+*lBNLpercent.labelString:	Pourcentages
+*lBNLfraction.labelString:	Fractions
+*lBNLboolean.labelString:	Booléens
+*lBNLday.labelString:		Jours
+*lBNLmonth.labelString:		Mois
+*lBNLtime.labelString:		Heures
+*lBNLdate.labelString:		Dates
+*lBNLdate_time.labelString:	Dates + Heures
+*tbTime.labelString:		Heure
+*lHour.labelString:		Heures (12)
+*lMinute.labelString:		Minutes
+*lSecond.labelString:		Secondes
+*lTenthOfSecond.labelString:	Dixièmes de secondes
+*lHundredthOfSecond.labelString: Centièmes de secondes
+*lThousandthOfSecond.labelString: Millièmes de secondes
+*tbDate.labelString:		Date
+*lYear.labelString:		Année
+*lMonth.labelString:		Mois
+*lWeek.labelString:		Semaine
+*lDay.labelString:		Jour
+*lDayInYear.labelString:	Jour de l'année
+*lPadding.labelString:		Remplissage
+*tbNoPad.labelString:		Aucun
+*tbPadWith0.labelString:	avec '0'
+*tbPadWithSpace.labelString:	avec ' '
+*lNameSize.labelString:		Taille
+*tbNSVeryShort.labelString:	Très court
+*tbNSShort.labelString:		Court
+*tbNSLong.labelString:		Long
+*lSep.labelString:		Séparateurs
+*lBNStringEString.labelString:	Représentation de l'exposant
+*lBNExpMinDigit.labelString:	Taille minimale de l'exposant
+*lBNExpMul.labelString:		Exposant multiple de
+*tbBNExpSign.labelString:	Toujours afficher le signe de l'exposant
+*lBNumAdd.labelString:		Ajouter format
+*lBNumDel.labelString:		Détruire format
+*fBNSetup.labelString:		Configuration
+*fBNPreview.labelString:	Témoin
+*fPadding.labelString:		Alignement
+*fNameSize.labelString:		Longueur des noms
+
+*BnFmtAllMsg:		Tous types
+*BnFmtNormalMsg:	Nombres
+*BnFmtUnitMsg:		Unités
+*BnFmtExponantialMsg:	Scientifiques
+*BnFmtPercentMsg:	Pourcentages
+*BnFmtFracMsg:		Fractions
+*BnFmtBooleanMsg:	Booléens
+*BnFmtDayMsg:		Jours de la semaine
+*BnFmtMonthMsg:		Mois dans l'année
+*BnFmtTimeMsg:		Heures
+*BnFmtDateMsg:		Dates
+*BnFmtDateTimeMsg:	Dates + Heures
+
+
+! ** Dialog Box: ROWS & COLUMNS SIZE *************************************
+
+*lBoxColSizeTitle.labelString:	Taille des lignes et des colonnes
+*lCSColSize.labelString:	Largeur de colonne
+*lCSRowSize.labelString:	Hauteur de ligne
+*tbCSColSize.labelString:	Appliquer
+*tbCSRowSize.labelString:	Appliquer
+*fCSColSize.labelString:	Colonnes
+*fCSRowSize.labelString:	Lignes
+
+
+! ** Dialog Box: FONTS ***************************************************
+
+*editStylesMsg:				Composition des polices
+*lAddFont.labelString:			Ajouter police
+*lDelFont.labelString:			Détruire police
+*tbBSglobal.labelString:		Attributs
+*tbBSconfig.labelString:		Configurations
+*lBSfamily.labelString:			Famille
+*lBSfontsize.labelString:		Taille
+*lBSwidth.labelString:			Largeur
+*lBSthickness.labelString:		Ep.
+*lBSypos.labelString:			Y-Pos
+*lBSscale.labelString:			Taille
+*lBSshadow_dx.labelString:		dX
+*lBSshadow_dy.labelString:		dY
+*lBSstrikeout_dy.labelString:		dY
+*lBSunderline_dy.labelString:		dY
+*tbBSsupscript.labelString:		Exposant...
+*tbBSsubscript.labelString:		Indice...
+*tbBSsmallcaps.labelString:		Petites majuscules
+*tbBSbigcaps.labelString:		Majuscules
+*tbBSwidth.labelString:			Largeur...
+*fBSoverview.labelString:		Resumé des paramètres
+*fBSpreview.labelString:		Témoin
+*fBSmain.labelString:			Configuration
+*fBSwidth.labelString:			Largeur
+*fBSunderline.labelString:		Souligné
+*fBSstrikeout.labelString:		Barré
+*fBSshadow.labelString:			Ombré
+*fBSsupscript.labelString:		Exposant
+*fBSsubscript.labelString:		Indice
+*styleBoldMsg:				Gras
+*styleItalicMsg:			Italique
+*styleUnderlineMsg:			Souligné
+*styleThicknessMsg:			Ep
+*styleSimpleMsg:			simple
+*styleDoubleMsg:			double
+*styleTripleMsg:			triple
+*styleNoSpaceMsg:			sauf espaces
+*styleStrikeoutMsg:			Barré
+*styleShadowMsg:			Ombré
+*styleWidthMsg:				Largeur
+*styleSubscriptMsg:			Indice
+*styleScaleMsg:				T
+*styleSupscriptMsg:			Exposant
+*styleSmallCapsMsg:			Petites Majuscules
+*styleBigCapsMsg:			Grandes majuscules
+
+
+! ** Dialog Box: CHART SETTINGS ******************************************
+
+*lBoxAskGraphTitle.labelString:	Configuration du graphique
+*fAGSerial.labelString:		Lecture des séries
+*askGraphRowMsg:		Lire la première ligne comme :
+*askGraphColMsg:		Lire la première colonne comme :
+*askGraphRow2Msg:		Première ligne
+*askGraphCol2Msg:		Première colonne
+*lAGFirstSerial.labelString:	Lire les séries en :
+*rbAGLegend.labelString:	Textes de la légende
+*rbAGDatas.labelString:		Première série de données
+*rbAGLabels.labelString:	Etiquettes de l'axe des abscisses
+*rbAGColumns.labelString:	Colonnes
+*rbAGRows.labelString:		Lignes
+
+
+! ** Dialog Box: PRINT SETTINGS ******************************************
+
+*lBoxPrintSetupTitle.labelString: Configuration de l'impression
+*riPortrait.labelString:	Portrait
+*riLandscape.labelString:	Paysage
+*lPSMarginT.labelString:	Haut
+*lPSMarginB.labelString:	Bas
+*lPSMarginL.labelString:	Gauche
+*lPSMarginR.labelString:	Droite
+*riZ.labelString:		Imprimer de gauche à droite
+*riN.labelString:		Imprimer de haut en bas
+*riGrid.labelString:		Imprimer grille
+*riRowColumn.labelString:	Imprimer entêtes de lignes et colonnes
+*lPSSize.labelString:		Taille
+*rbPSCenterV.labelString:	Centrer verticalement
+*rbPSCenterH.labelString:	Centrer horizontalement
+*tbPSReduce.labelString:	Réduction
+*tbPSPrintOnPage.labelString:	Tenir sur
+*fPSPrintDirection.labelString:	Sens de l'impression
+*fPSOrientation.labelString:	Orientation
+*fPSScale.labelString:		Réduction
+*fPSFormat.labelString:		Format
+*fPSMargin.labelString:		Marges
+*fPSWhatPrint.labelString:	Ajouts à l'impression
+
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:	Impression
+*lBPNbCopy.labelString:		Nombre de copies
+*tbBPPrintAllPages.labelString:	Tout le document
+*tbBPPrintArea.labelString:	Seulement la sélection
+*lBPPrintFrom.labelString:	Page
+*lBPPrintTo.labelString:	à
+*fBPPrinter.labelString:	Imprimer sur...
+*fBPPrintPage.labelString:	Zone d'impression
+
+
+! ** Dialog Box: PASTE FUNCTION ******************************************
+
+*lBoxFunctionsTitle.labelString:	Collage d'une fonction
+*tbBFFuncTypeAll.labelString:	Tous types
+*tbBFFuncTypeNume.labelString:	Numériques
+*tbBFFuncTypeStat.labelString:	Statistiques
+*tbBFFuncTypeBusi.labelString:	Financières
+*tbBFFuncTypeDate.labelString:	Dates/Heures
+*tbBFFuncTypeShee.labelString:	Tableur
+*tbBFFuncTypeText.labelString:	Textes
+*tbBFFuncTypeLogi.labelString:	Logiques
+*fBFFuncType.labelString:	Type
+
+
+! ** Dialog Box: GOTO CELL ***********************************************
+
+*lGCGotoCell.labelString:	Aller à la cellule
+
+
+! ** Dialog Box: ABOUT XQUAD *********************************************
+
+*aboutTitleMsg:		XQuad® - Tableur
+*aboutReleaseBetaMsg:	XQuad version %d.%d.%d
+*aboutReleaseMsg:	XQuad version %d.%d
+*aboutNoLicenseMsg:	Version non enregistrée\nL'enregistrement est Gratuit
+*licenseCommercialMsg:	Logiciel enregistrer par :\n%s\n%s
+*licensePersonalMsg:	Logiciel enregistrer par :\n%s
+
+
+! ** Dialog Box: MAILING LISTS *******************************************
+
+*lBoxRegisterTitle.labelString:		Listes de diffusion
+*lBRegisterAdress.labelString:		écrire à: majordomo@axene.org
+*BoxRegistration*Ok.labelString:	Poster
+*rbRegisterAnnounces.labelString:	S'inscrire à "axene-announce"
+*rbRegisterBugs.labelString:		S'inscrire à "xquad-bugs"
+*rbRegisterUsers.labelString:		S'inscrire à "axene-users"
+*lRegisterReply.labelString:		Votre adresse Email
+*lMailCommand.labelString:		Commande
+*mailingListMsg: \n\
+    Axene met à votre disposition des listes de \
+diffusion (mailing lists) qui vous permettent de \
+recevoir des informations par courrier électronique.\n\
+\n\
+    "axene-announce" vous permet de recevoir les \
+annonces officielles de nouveaux produits ou \
+de nouvelles versions.\n\
+\n\
+    "xquad-bugs" vous informe des corrections \
+apportées à XQuad. Il existe d'autres listes \
+propres à chaque produit Axene, que vous \
+pourrez découvrir dans nos autres logiciels.\n\
+\n\
+    "axene-users" vous permet de discuter avec \
+d'autres utilisateurs de produits Axene. \
+Cette liste est modérée (chaque message posté \
+est validé manuellement par nos soins) afin \
+de vous éviter un encombrement en messages \
+inutiles.\n\
+\n\
+    Pour chaque inscription dans une de ces listes, \
+vous recevrez une confirmation par Email ainsi \
+que les instructions nécessaires à un eventuel \
+futur désenregistrement.\n
+
+*fBRRegistered.labelString:		S'inscrire à...
+*fBRegisterCommand.labelString:		Commande de mail
+
+
+! ************************************************************************
+! **				FILE SELECTORS				**
+! ************************************************************************
+
+! ** File selector: IMPORT SHEET *****************************************
+
+*importDocumentMsg:		Importation de document
+*tbFSITdoc.labelString:		Dans le document actif
+*rbTrimBefore.labelString:	Couper Espaces avant
+*rbTrimAfter.labelString:	Couper Espaces après
+*lFSITseparators.labelString:	Colonnes :
+*lFSITcharCode.labelString:	Type d'accents :
+*rbCodeWindows.labelString:	Unix, Windows
+*rbCodeDos.labelString:		Dos, OS/2
+*rbCodeMac.labelString:		Macintosh
+*tbFSETformula.labelString:	Exporter les formules
+*tbFSETselection.labelString:	Exporter la sélection
+*tbFSETgrid.labelString:	Ajouter la grille
+*tbFSETheaders.labelString:	Ajouter les entêtes
+*lFSETcharCode.labelString:	Type d'accents :
+*lFSETseparators.labelString:	Séparateur :
+*importDocTextSpaceUnixMsg:	Texte Unix Espace
+*importDocTextSpaceDosMsg:	Texte Dos Espace
+*importDocTextSpaceMacMsg:	Texte Mac Espace
+*importDocTextTabUnixMsg:	Texte Unix Tab
+*importDocTextTabDosMsg:	Texte Dos Tab
+*importDocTextTabMacMsg:	Texte Mac Tab
+**importDocTextCSVUnixMsg:	Texte Unix CSV
+*importDocTextCSVDosMsg:	Texte Dos CSV
+*importDocTextCSVMacMsg:	Texte Mac CSV
+*ImportDocument*Ok.labelString:	Importer
+*fFSITSetup.labelString:	Configuration
+
+
+! ** File selector: EXPORT SHEET *****************************************
+
+*exportDocumentMsg:		Exportation de document
+*exportDocTextSpaceUnixMsg:	Texte Unix Formaté
+*exportDocTextSpaceDosMsg:	Texte Dos Formaté
+*exportDocTextSpaceMacMsg:	Texte Mac Formaté
+*exportDocTextTabUnixMsg:	Texte Unix Tab
+*exportDocTextTabDosMsg:	Texte Dos Tab
+*exportDocTextTabMacMsg:	Texte Mac Tab
+*exportDocTextCSVUnixMsg:	Texte Unix CSV
+*exportDocTextCSVDosMsg:	Texte Dos CSV
+*exportDocTextCSVMacMsg:	Texte Mac CSV
+*ExportVector*Ok.labelString:	Exporter
+
+*ExportText*Ok.labelString:	Exporter
+
+*ExportHTML*Ok.labelString:	Exporter
+
+
+! ** File selector: SIMPLE SELECTORS *************************************
+
+*loadDocumentMsg:		Ouverture d'un document
+*OpenDocument*Ok.labelString:	Ouvrir
+
+*saveDocumentMsg:		Sauvegarde du document sous...
+*CloseDocument*Ok.labelString:	Sauver
+
+*printDocumentMsg:		Impression dans le fichier...
+*Print*Ok.labelString:		Imprimer
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: SAVE UNDER ******************************************
+*lSaveDocument.labelString:		Sauver le document :
+*lSavingName.labelString:		sous le nom de fichier :
+
+! ** Warning dialog: CLOSE DOCUMENT **************************************
+*lCloseDocument.labelString:		Fermer le document :
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Quitter XQuad
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:       \
+L'aide d'XQuad est introuvable dans %s\n\
+Le chemin de l'aide est défini dans le fichier xquadrc.\n\
+Vous pouvez télécharger l'aide sur ftp.axene.org /pub/xquad/doc/
+
+! ** Warning dialog: NO VALID KEY ****************************************
+*functionNeedKeyMsg: Vous devez posséder une clef pour utiliser cette fonctionnalité.\n\
+Vous pouvez demander une clef temporaire sur le site web d'Axene\n\
+http://www.axene.org/french/freekey.html
+*autosaveNeedKeyMsg:	Sauvegarde impossible.\n\
+Vous pouvez demander une clef temporaire sur le site web d'Axene\n\
+http://www.axene.org/french/freekey.html
+
+
+! ************************************************************************
+! **				HELP LINES				**
+! ************************************************************************
+
+! ** Help lines: MISC ****************************************************
+
+*helpMiscMsg:		Caisse à outils générale|Outils généraux
+*helpMiscNewMsg:	Crée un nouveau document vide|Nouveau
+*helpMiscOpenMsg:	Ouvre un document précédement sauvé|Ouvrir
+*helpMiscSaveMsg:	Sauve le document dans un fichier|Sauver
+*helpMiscPrintMsg:	Imprime le document|Imprimer
+*helpMiscCutMsg:	Coupe la sélection et la copie dans le clipboard|Couper
+*helpMiscCopyMsg:	Copie la sélection dans le clipboard|Copier
+*helpMiscPasteMsg:	Colle le contenu du clipboard|Coller
+*helpMiscDeleteMsg:	Efface la sélection|Effacer
+*helpMiscUndoMsg:	Annuler '%s'|Annuler
+*helpMiscRedoMsg:	Refaire '%s'|Refaire
+
+! ** Help lines: GENERAL *************************************************
+*helpCalcMsg:		Caisse à outils de calculs|Outils Calcul
+*helpPasteEqualMsg:	Ajoute / Enlève un '='
+*helpCalcSummMsg:	Colle la fonction SOMME|Fonction Somme
+*helpToolsFunctionsMsg:	Colle une fonction...|Colle Fonction
+*helpToolsThousandsMsg:	Applique le format "Milliers"|Format "Milliers"
+*helpToolsCurrencyMsg:	Applique le format "Monétaire"|Format "Monétaire"
+*helpToolsPercentMsg:	Applique le format "Pourcentages"|Format "Pourcentages"
+*helpToolsScientificMsg: Applique le format "Scientifique"|Format "Scientifique"
+*helpToolsEngineerMsg:	Applique le format "Ingénieur"|Format "Ingénieur"
+*helpAddDigitMsg:	Ajoute une décimale aux nombres|Ajouter décimale
+*helpSubDigitMsg:	Enlève une décimale aux nombres|Retirer décimale
+
+! ** Help lines: FONT ****************************************************
+*helpFontMsg:		Caisse à outils de changement de polices|Outils Police
+*helpToolsBoldMsg:	Passe la police en Gras|Gras
+*helpToolsItalicMsg:	Passe la police en Italique|Italique
+*helpToolsUnderlineMsg:	Souligne la police|Souligné
+*helpToolsStrikeoutMsg:	Barre la police|Barré
+*helpToolsShadowMsg:	Ombre la police|Ombré
+*helpToolsSmallCapsMsg:	Change les minuscules en petites majuscules|Petites Majuscules
+*helpToolsBigCapsMsg:	Change les minscules en majuscules|Grandes Majuscules
+*helpFontMinusMsg:	Réduit la taille de la police|Réduire la taille
+*helpFontPlusMsg:	Augmente la taille de la police|Augmenter la taille
+
+! ** Help lines: TEXT ****************************************************
+*helpCellsMsg:		Caisse à outils de manipulation des textes|Outils Texte
+*helpCellsLeftMsg:	Aligne le texte à gauche de la cellule|Aligné à gauche
+*helpCellsCenterMsg:	Centre le texte horizontalement dans la cellule|Centré
+*helpCellsRightMsg:	Aligne le texte à droite de la cellule|Aligné à droite
+*helpCellsHJustifyMsg:	Justifie le texte horizontalement dans la cellule|Justifié horizontalement
+*helpCellsVJustifyMsg:	Justifie le texte verticalement dans la cellule|Justifié Verticalement
+*helpCellsTopMsg:	Aligne le texte en haut de la cellule|Aligné en haut
+*helpCellsBottomMsg:	Aligne le texte au bas de la cellule|Aligné en bas
+*helpCellsMultilinesMsg: Affiche le texte sur plusieurs lignes|Multi-lignes
+*helpCellsAngle90Msg:	Affiche le texte suivant un angle de +90 degrés|Angle +90°
+*helpCellsAngle270Msg:	Affiche le texte suivant un angle de -90 degrés|Angle -90°
+  
+! ** Help lines: CELLS ***************************************************
+*helpBordersMsg:	Caisse à outils de décoration des cellules|Outils Décoration
+*helpBordersCleanMsg:	Efface les bords des cellules|Effacer les bords
+*helpBordersLeftMsg:	Place un bord fin à gauche des cellules|Bord gauche
+*helpBordersBottomMsg:	Place un bord fin en bas des cellules|Bord bas
+*helpBordersRightMsg:	Place un bord fin à droite des cellules|Bord droite
+*helpBordersTopMsg:	Place un bord fin en haut des cellules|Bord haut
+*helpBordersOutlineMsg:	Place un bord épais autour de la sélection|Bords autour
+
+*helpBackgroundDefaultMsg:	Applique le fond par défaut|Fond par défaut
+*helpVideoReverseMsg:	Inversion vidéo de la zone sélectionnée|Inverse vidéo
+
+! ** Help lines: CHARTS **************************************************
+*helpGraphMsg:		Caisse à outils de manipulation de graphiques|Outils Graphiques
+*helpFrameSelectMsg:	Mode sélection
+*helpFrameCreateMsg:	Construit un cadre|Construire cadres
+*helpFramePlanFirstMsg:	Passe le cadre au premier plan|Premier plan
+*helpFramePlanLastMsg:	Passe le cadre à l'arrière-plan|Arrière plan
+*helpFramePlanUpMsg:	Monte le cadre au plan supérieur|Plan supérieur
+*helpFramePlanDownMsg:	Descend le cadre au plan inférieur|Plan inférieur
+*helpGraphVBarMsg:	Graphique en Histogrammes|Histogrammes
+*helpGraphHBarMsg:	Graphique en Barres|Barres
+*helpGraphLineMsg:	Graphique en Courbes|Courbes
+*helpGraphAreaMsg:	Graphique en Aires|Aires
+*helpGraphPieMsg:	Graphique en Secteurs|Secteurs
+*helpGraphRadarMsg:	Graphique en Radars|Radars
+*helpFrameLockMsg:	Verrouille / Déverrouille un cadre ou un groupe de cadres|Verrou
+*helpGraphAxesMsg:	Affiche / Cache les lignes d'ordonnées|Lignes ordonnées
+*helpGraphLegendMsg:	Affiche / Cache la légende du graphique|Légende
+*helpGraphTitleMsg:	Affiche / Cache le titre du graphique|Titre
+*helpGraphSetupMsg:	Ouvre la boîte de configuration du graphique|Configuration...
+*helpGraphAbsMsg:	Affiche / Cache le texte des abscisses|Texte abscisses
+*helpGraphNamesMsg:	Affiche / Cache le nom des séries|Nom séries
+
+! ** Help lines: ZOOM ****************************************************
+*helpZoomMsg:		Caisse à outils de changement de zoom|Outils Zoom
+*helpZoomInMsg:		Augmente le zoom de 25%|+25%
+*helpZoomOutMsg:	Diminue le zoom de 25%|-25%
+*helpZoom50Msg:		Zoom à 50%
+*helpZoom75Msg:		Zoom à 75%
+*helpZoom100Msg:	Zoom à 100%
+*helpZoom200Msg:	Zoom à 200%
+*helpZoom400Msg:	Zoom à 400%
+  
+! ** Help lines: SEPARATE ************************************************
+*helpTrashMsg:		Poubelle : destruction des objets|Poubelle
+
+! ** Help lines: EDIT BAR ************************************************
+*helpEditbarOkMsg:	Applique la formule|Appliquer
+*helpEditbarEscMsg:	Annule / Desélectionne / Sélectionne|Annuler
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:		Violation de privilèges (Segmentation fault)
+*sigErrorPIPEMsg:		Connexion interrompue (Broken pipe)
+*sigErrorBUSMsg:		Erreur de bus (Bus error)
+*sigErrorFPEMsg:		Erreur de calcul (Floating exception)
+*sigErrorIOTMsg:		Erreur interne (IOT trap)
+*sigErrorEMTMsg:		Déroutement Erreur mémoire (EMT trap)
+*sigErrorXCPUMsg:		Dépassement de temps CPU (Cputime limit exceeded)
+*sigErrorXFSZMsg:		Dépassement de taille fichier (Filesize limit exceeded)
+*sigErrorILLMsg:		Instruction illicite (Illegal instruction)
+*sigErrorINTMsg:		XQuad a été interrompu (Interrupt)
+*sigErrorQuitingMsg:		Quitter XQuad maintenant
+*sigErrorSorryMsg:		Impossible de continuer l'exécution
+
+*lCaughtSignal.labelString:	Une erreur est survenue :
+*lCaughtIOerror.labelString:	Erreur fatale du serveur X
+*lCannotContinue.labelString:	Impossible de continuer
+
+*loadErrorMsg:			Erreur de chargement
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Oui
+*action_area.No.labelString:		Non
+*action_area.Apply.labelString:		Appliquer
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Ouvrir...
+*action_area.Retry.labelString:		Recommencer
+*action_area.Stop.labelString:		Arrêter
+*action_area.Reset.labelString:		Réinitialiser
+*action_area.Cancel.labelString:	Annuler
+*action_area.Close.labelString:		Fermer
+*action_area.Help.labelString:		Aide
+*action_area.Save.labelString:		Sauver
+*action_area.Continue.labelString:	Continuer
+*action_area.Quit.labelString:		Quitter
+*action_area.Save as.labelString:	Sauver sous...
+
+
+! ************************************************************************
+! **			FORMULA ERRORS					**
+! ************************************************************************
+
+*formulaCircErrorMsg:			!DEPENDANCE CIRCULAIRE
+*formulaValErrorMsg:			!MAUVAIS TYPE DE VALEUR
+*formulaNameErrorMsg:			!FONCTION INCONNUE
+*formulaCharErrorMsg:			!CARACTERE INCONNU
+*formulaCalcErrorMsg:			!ERREUR DE CALCUL
+*formulaDivzErrorMsg:			!DIVISION PAR ZERO
+*formulaParamLessErrorMsg:		!PAS ASSEZ DE PARAMETRES
+*formulaParamMoreErrorMsg:		!TROP DE PARAMETRES
+*formulaCellRangeErrorMsg:		!CELLULE HORS LIMITES
+*formulaDIntErrorMsg:			!PARAMETRE ENTIER REQUIS
+*formulaDOneOneErrorMsg:		!PARAMETRE [-1,1] REQUIS
+*formulaDOverOneErrorMsg:		!PARAMETRE >= 1 REQUIS
+*formulaDOneOneOpenErrorMsg:		!PARAMETRE ]-1,1[ REQUIS
+*formulaDAlleZeroErrorMsg:		!PARAMETRE != 0 REQUIS
+*formulaDOverZeroErrorMsg:		!PARAMETRE > 0 REQUIS
+*formulaDPositiveErrorMsg:		!PARAMETRE >= 0 REQUIS
+*formulaMissingParamErrorMsg:		!PARENTHESE MANQUANTE
+*formulaErrorMsg:			!ERREUR DE FORMULE
+
+
+! ************************************************************************
+! **			FUNCTIONS					**
+! ************************************************************************
+
+*funcAbsMsg:		abs
+*funcAcosMsg:		acos
+*funcAcoshMsg:		acosh
+*funcAdressMsg:		adresse
+*funcAleaMsg:		alea
+*funcAleabMsg:		alea.entre.bornes
+*funcSlnMsg:		amorlin
+*funcRoundMsg:		arrondi
+*funcAsinMsg:		asin
+*funcAsinhMsg:		asinh
+*funcAtanMsg:		atan
+*funcAtan2Msg:		atan2
+*funcAtanhMsg:		atanh
+*funcBaseMsg:		base
+*funcBesseljMsg:	besselj
+*funcBesselkMsg:	besselk
+*funcCharMsg:		car
+*funcCeilMsg:		arrondi.sup
+*funcFindMsg:		cherche
+*funcCnumMsg:		cnum
+*funcColMsg:		col
+*funcCodeMsg:		code
+*funcCosMsg:		cos
+*funcCoshMsg:		cosh
+*funcCountMsg:		nbval
+*funcCountnMsg:		nb
+*funcCtxtMsg:		ctxt
+*funcDegreesMsg:	degrés
+*funcRightMsg:		droite
+*funcEMsg:		e
+*funcIntMsg:		ent
+*funcPurgeMsg:		épurage
+*funcAndMsg:		et
+*funcExactMsg:		exact
+*funcExpMsg:		exp
+*funcFactMsg:		fact
+*funcFalseMsg:		faux
+*funcFloorMsg:		arrondi.inf
+*funcFracMsg:		frac
+*funcCurrencyMsg:	franc
+*funcLeftMsg:		gauche
+*funcIndirectMsg:	indirect
+*funcInvMsg:		inv
+*funcRowMsg:		ligne
+*funcLnMsg:		ln
+*funcLogMsg:		log
+*funcLog10Msg:		log10
+*funcUpperMsg:		majuscule
+*funcMaxMsg:		max
+*funcMinMsg:		min
+*funcLowerMsg:		minuscule
+*funcModMsg:		mod
+*funcAvgMsg:		moyenne
+*funcLengthMsg:		nbcar
+*funcProperMsg:		nompropre
+*funcPiMsg:		pi
+*funcProdMsg:		produit
+*funcSqrtMsg:		racine
+*funcRandomMsg:		random
+*funcReplaceMsg:	remplacer
+*funcRepeatMsg:		répéter
+*funcSignMsg:		signe
+*funcSinMsg:		sin
+*funcSinhMsg:		sinh
+*funcSummMsg:		somme
+*funcSqrMsg:		carré
+*funcMidMsg:		stxt
+*funcSubstituteMsg:	substitue
+*funcTrimMsg:		supprespace
+*funcRadiansMsg:	radians
+*funcTMsg:		t
+*funcTanMsg:		tan
+*funcTanhMsg:		tanh
+*funcTextMsg:		texte
+*funcTruncMsg:		tronque
+*funcMatchMsg:		trouve
+*funcTrueMsg:		vrai
+*funcDbMsg:		db
+*funcDdbMsg:		ddb
+*funcIpmtMsg:		intper
+*funcNperMsg:		npm
+*funcPpmtMsg:		princper
+*funcSydMsg:		syd
+*funcRateMsg:		taux
+*funcIrrMsg:		tri
+*funcMirrMsg:		trim
+*funcPvMsg:		va
+*funcNpvMsg:		van
+*funcFvMsg:		vc
+*funcVdbMsg:		vdb
+*funcPmtMsg:		vpm
+*funcConcatMsg:		concat
+
+*funcDay360Msg:		jours360
+*funcTodayMsg:		aujourdhui
+*funcDateMsg:		date
+*funcDatevalMsg:	dateval
+*funcNowMsg:		maintenant
+*funcTimeMsg:		temps
+*funcTimevalMsg:	tempsval
+*funcYearMsg:		année
+*funcDayMsg:		jour
+*funcDayweekMsg:	joursem
+*funcHourMsg:		heure
+*funcMinuteMsg:		minute
+*funcMonthMsg:		mois
+*funcSecondMsg:		seconde
+*funcMillisecondMsg:	milliseconde
+
+*funcNotMsg:		non
+*funcOrMsg:		ou
+*funcIfMsg:		si
+
+
+! ** File selector: ALIASES **********************************************
+  
+*funcColAlias1Msg:	colonne
+*funcBesselkAlias1Msg:	kbessel
+*funcBesseljAlias1Msg:	jbessel
+*funcIntAlias1Msg:	entier
+*funcFactAlias1Msg:	factoriel
+*funcFracAlias1Msg:	fraction
+*funcInvAlias1Msg:	inverse
+*funcMaxAlias1Msg:	maximum
+*funcMinAlias1Msg:	minimum
+*funcModAlias1Msg:	modulo
+*funcAvgAlias1Msg:	moy
+*funcProdAlias1Msg:	produit
+*funcSummAlias1Msg:	som
+
+
+! ************************************************************************
+! **				SPECIAL FORMATS				**
+! ************************************************************************
+
+! ** Special formats: DATES **********************************************
+
+*dateMonthJanMsg:	Janvier
+*dateMonthFebMsg:	Février
+*dateMonthMarMsg:	Mars
+*dateMonthAprMsg:	Avril
+*dateMonthMayMsg:	Mai
+*dateMonthJunMsg:	Juin
+*dateMonthJulMsg:	Juillet
+*dateMonthAugMsg:	Août
+*dateMonthSepMsg:	Septembre
+*dateMonthOctMsg:	Octobre
+*dateMonthNovMsg:	Novembre
+*dateMonthDecMsg:	Décembre
+
+*dateMonthJanShortMsg:	Jan
+*dateMonthFebShortMsg:	Fév
+*dateMonthMarShortMsg:	Mar
+*dateMonthAprShortMsg:	Avr
+*dateMonthMayShortMsg:	Mai
+*dateMonthJunShortMsg:	Jun
+*dateMonthJulShortMsg:	Jul
+*dateMonthAugShortMsg:	Aoû
+*dateMonthSepShortMsg:	Sep
+*dateMonthOctShortMsg:	Oct
+*dateMonthNovShortMsg:	Nov
+*dateMonthDecShortMsg:	Déc
+*dateMonthVeryShortMsg:	Ja F Mr Av Mi Jn Jt Ao S O N D
+	     
+*dateDayMonMsg:		Lundi
+*dateDayTueMsg:		Mardi
+*dateDayWedMsg:		Mercredi
+*dateDayThuMsg:		Jeudi
+*dateDayFriMsg:		Vendredi
+*dateDaySatMsg:		Samedi
+*dateDaySunMsg:		Dimanche
+
+*dateDayMonShortMsg:	Lun
+*dateDayTueShortMsg:	Mar
+*dateDayWedShortMsg:	Mer
+*dateDayThuShortMsg:	Jeu
+*dateDayFriShortMsg:	Ven
+*dateDaySatShortMsg:	Sam
+*dateDaySunShortMsg:	Dim
+*dateDayVeryShortMsg:	L M Me J V S D
+  
+*dateYearBeforeJCMsg:	av. J.-C.
+*dateYearAfterJCMsg:	apr. J.-C.
+  
+*timeHourAMMsg:	AM
+*timeHourPMMsg:	PM
+
+! ** Special formats: BOOLEANS *******************************************
+
+*trueMsg:		Vrai
+*falseMsg:		Faux
+

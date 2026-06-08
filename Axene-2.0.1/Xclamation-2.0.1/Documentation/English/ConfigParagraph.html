@@ -1,0 +1,80 @@
+<!-- Documentation Xclamation (c)1994-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Paragraphs Configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Configuration files" width="136" height="25"> <img ALIGN="middle" SRC="Images/TitleConfigParagraph.gif" ALT="Paragraphs Configuration." width="288" height="35"> </p>
+
+<p><br>
+<br>
+This <a HREF="Config.html">configuration files</a> section pre-defines a list of
+paragraph's rules. </p>
+
+<h3>Definition of the Ruler List: <i>\RULERLIST{...}</i></h3>
+
+<p>This section presents the definition of the paragraphs list accessible in corresponding
+Xclamation menus. The definition of the paragraphs list begins after the opening bracket <i>&quot;{&quot;</i>
+and before the corresponding closing bracket <i>&quot;}&quot;</i>. Each element of the
+ruler list is defined as described below. <a NAME="ruler"></p>
+
+<h3>Paragraphs Definition Section: <i>\RULERX{...}</i></h3>
+
+<p>This section defines the <i>X</i> Paragraph rule from the paragraph list. The
+definition of a paragraph begins after the opening bracket <i>&quot;{&quot;</i> and before
+the closing bracket <i>&quot;}&quot;</i>. The definition parameters of a paragraph are: </a>
+
+<ol>
+  <li>The <a HREF="Box_Paragraph.html#textfield_left_margin">left margin</a> value in DTP. <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#textfield_right_margin">tight margin</a> value in DTP. <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#textfield_alinea">paragraph indent</a> value in DTP. <br>&nbsp;</li>
+  <li><i>True</i> or <i>False</i> depending upon whether the <a HREF="Box_Paragraph.html#toggle_automatic_interline">line spacing</a> is absolute or
+    relative, respectively. <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#textfield_interline">line spacing</a> value in DTP. <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#textfield_interparagraph">paragraph spacing</a> value in
+    DTP. <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#icons_aligment">alignment mode</a> <b>\RIGHT</b>, <b>\LEFT</b>,
+    <b>\CENTER</b>, <b>\JUSTIFY</b> to align right, left, center, or justified, respectively. <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#textfield_word_distribution">word distribution</a>
+    percentage, set between 0 and 1 (0 = 0% and 1=100%). <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#textfield_min_ratio">ratio-min.</a> percentage. <br>&nbsp;</li>
+  <li>The <a HREF="Box_Paragraph.html#textfield_max_ratio">ratio-max.</a> percentage. <br>&nbsp;</li>
+  <li><b>NAME{paragraph name}</b>: the paragraph name as it appears in Xclamation. <br>&nbsp;</li>
+  <li><a NAME="lock"><b>\LOCK</b> locks a paragraph defined in Xclamation's paragraph base so
+    that it cannot be removed from the '</a><a HREF="Box_Paragraph.html#button_del">paragraphs
+    composition</a>' dialog box. <br>&nbsp;</li>
+  <li><a NAME="hide"><b>\HIDE</b> hides the defined ruler so that it no longer appears in
+    Xclamation's paragraphs list. </a><br>&nbsp;</li>
+</ol>
+
+<h3>Example:</h3>
+<tt>
+
+<p>\RULERLIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\RULER2{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 3 10<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False 0 5<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\LEFT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5 0.75 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Normal&nbsp;Text}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\RULER4{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False 0 5<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\JUSTIFIED<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.8 0.75 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Justify}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+} </tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXclamation.gif" ALT="Xclamation (c)1996. Axene" width="167" height="29"></p>
+</body>
+</html>

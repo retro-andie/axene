@@ -1,0 +1,176 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Sheet cells</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleSheetCells.gif" ALT="Sheet cells" WIDTH="97" HEIGHT="34"> </p>
+
+<p><br>
+<br>
+Most main XQuad functions have an effect on the sheet cells. Many functions alter selected
+cells and the active cell serves as entry point for new data. Frames and charts are
+displayed on top of the sheet cells as well.<br>
+<br>
+</p>
+
+<hr>
+
+<p align="center"><br>
+<img SRC="Images/Sheet_Cells.gif" ALT="Image: Sheet cells." WIDTH="275" HEIGHT="190"> <br>
+<small><i>Screen snap: Sheet cells.</i></small></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p><br>
+</p>
+
+<p>Only two kind of selection can be done on the sheet: either area of cells or frames.
+Selecting frames allows you to modify these ones. </p>
+
+<p>Selecting areas of cells put these ones in &quot;inverse video&quot;. The active cell
+is <u>always</u> selected, and it's often the only one selected. The active cell is not in
+&quot;inverse video&quot;, but it has a thick border. The attributes of the active cell
+have effect on the buttons state of the '<a HREF="HBar_Misc.html">Miscellaneous icon bar</a>',
+'<a HREF="HBar_Font.html">Font icon bar</a>', '<a HREF="HBar_Text.html">Text icon bar</a>',
+and the '<a HREF="HBar_Ornament.html">Ornament icon bar</a>'. You can edit active cell's
+content in the <a HREF="Edit_Bar.html">Edit bar</a>.</p>
+
+<p><br>
+</p>
+
+<h3>Moving active cell</h3>
+
+<p>At any moment, you can click on any cell of the sheet to make it active. You can also
+move it by the way of the arrow keys and the '<tt>Page Up</tt>' and '<tt>Page Down</tt>'
+keys. The sheet automatically scrolls when the active cell moves near of the viewable zone
+border.</p>
+
+<p>Change of active cell deselects the previous selection, and then the active cell
+becomes the new selection.</p>
+
+<p>If you validate the content of the Edit bar by the way of the '<tt>Return</tt>' key,
+the active cell moves one step down. When there is a selection larger than one cell, the
+active cell moves vertically and then horizontally among selected cell.</p>
+
+<p><br>
+<a NAME="select_region"></p>
+
+<h3>Selecting areas of cells</h3>
+</a>
+
+<p>You can select a cell by clicking on it, but you can also select a rectangular area of
+cell: 
+
+<ol>
+  <li>Click on the cell in a corner of the wanted area without releasing the mouse left
+    button.</li>
+  <li>Drag the mouse pointer to the cell in the opposite corner of the wanted area (to cancel
+    the selection, press the right mouse button).</li>
+  <li>Release the mouse button.</li>
+</ol>
+
+<p>Selecting a new area deselects the previous one. To select several areas at the same
+time you have to keep the '<tt>Ctrl</tt>' key pressed during area selection.</p>
+
+<p>To widen or to shrink the selected area, you have to press the '<tt>Shift</tt>' key and
+to either use the keyboard (arrows keys, '<tt>Page Up</tt>' key, '<tt>Page Down</tt>' key)
+or click with the mouse left button on a cell (the clicked cell will become a new corner
+of the area).</p>
+
+<p><br>
+<a NAME="cut_copy_paste"></p>
+
+<h3>Cutting, copying and pasting areas of cells</h3>
+</a>
+
+<p>You can cut, copy and paste cells without using any pull-down menu. This only works if
+there is a single rectangular area of cell (neither of '<tt>Ctrl</tt>' key use or whole
+column/row selections).</p>
+
+<p>To cut and paste the current selection: 
+
+<ol>
+  <li>Select area border with mouse left button without releasing it.</li>
+  <li>Drag the mouse pointer to move the area of cells (to cancel the action, press the right
+    mouse button).</li>
+  <li>Release the mouse button.</li>
+</ol>
+
+<p>If you want to copy the selection instead of cutting the selection, then you have to
+keep the '<tt>Shift</tt>' key pressed during all operations.</p>
+
+<p>When using the mouse middle button instead of the mouse left button, you may click
+anywhere on the selection and you do not have to click on the area border.</p>
+
+<p><br>
+<a NAME="extend"></p>
+
+<h3>Extending cell sequences</h3>
+</a>
+
+<p>You can avoid to type data from logical sequences thanks to the cell completing. For
+example, if you want to enter consecutive numbers in a column, you just have to enter the
+first two numbers and then extend the area to the whole column; numbers will be
+automatically completed and incremented.</p>
+
+<p>Prior to an extend, you have to enter and to select the first two values of the
+sequence at least. Extending a single cell does nothing but copying the content of the
+selected cell to the cell of the extended area.</p>
+
+<p>Sequences of numerical values, dates, times, days of the week, months can be
+arithmetically (constant increment) and geometrically (constant multiplier) extended. For
+geometrical cell extending, you need three starting values at least.</p>
+
+<p>Multi-selections (with the '<tt>Ctrl</tt>' key), whole column and line selections
+prevent XQuad from completing sequences. Extending an area can only be done either
+horizontally or vertically, but never both.</p>
+
+<p>To extend the current selection: 
+
+<ol>
+  <li>Keep the '<tt>Ctrl</tt>' key pressed.</li>
+  <li>Click on one of the selection borders, according to the extending direction (i.e. the
+    left border for a left side extending, etc...) , without releasing the mouse left button.</li>
+  <li>Drag the mouse pointer to vertically or horizontally extend the sequence (to cancel the
+    action, press the right mouse button).</li>
+  <li>Release the '<tt>Ctrl</tt>' key and the mouse button.</li>
+</ol>
+
+<p><br>
+<a NAME="insert"></p>
+
+<h3>Inserting lines and columns from a selection</h3>
+</a>
+
+<p>Multi-selections (with the '<tt>Ctrl</tt>' key), whole column and line selections
+prevent XQuad from inserting lines or columns from a selection.</p>
+
+<p>It will insert lines only at the level of the selection lines, and columns only at the
+selection columns.</p>
+
+<p>To insert lines or columns from the current selection: 
+
+<ol>
+  <li>Keep the '<tt>Shift</tt>' key pressed.</li>
+  <li>Click on one of the selection borders, according to the insertion direction (i.e. the
+    left border for a left side insertion, etc...) , without releasing the mouse left button.</li>
+  <li>Drag the mouse pointer horizontally to insert columns and vertically to insert lines (to
+    cancel the action, press the right mouse button).</li>
+  <li>Release the '<tt>Shift</tt>' key and the mouse button.</li>
+</ol>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98. Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

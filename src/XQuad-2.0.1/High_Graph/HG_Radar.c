@@ -1,0 +1,519 @@
+/*
+** HG_Radar.c for XQuad in High_Graph/
+** BasicGraph Radar object
+**
+** Copyright (C) 1995-2000 Axene.
+** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Email: xcalibur@axene.org
+**
+**    This program is free software; you can redistribute it and/or modify
+**    it under the terms of the GNU General Public License as published by
+**    the Free Software Foundation; either version 2 of the License, or
+**    (at your option) any later version.
+**
+**    This program is distributed in the hope that it will be useful,
+**    but WITHOUT ANY WARRANTY; without even the implied warranty of
+**    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**    GNU General Public License for more details.
+**
+**    You should have received a copy of the GNU General Public License
+**    along with this program; if not, write to the Free Software
+**    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+**
+** Started on  Sat Jun 24 18:07:33 1995 Emmanuel Paris
+** Last update Sat Oct 26 20:30:28 1996 One of the authors
+*/
+
+#include "HG_Radar.h"
+#include <varargs.h>
+#include <math.h>
+
+static void *cons();
+static void dest();
+static void *copy();
+static void regenerate ___PROTO((c_HG_Radar *This, bbox_t bbox,
+				 c_HG_Axe *HG_Axe));
+static void change_xinfo ___PROTO((c_HG_Radar *This));
+static error change_base ___PROTO((c_HG_Radar *This));
+static void display_redraw ___PROTO((c_HG_Radar *This));
+static void add_to_vectorgraph ___PROTO((c_HG_Radar *This));
+static void sub_to_vectorgraph ___PROTO((c_HG_Radar *This));
+static void setHG ___NPROTO((c_HG_Radar *This, ...));
+static void vset();
+static void calcul_radar ___PROTO((c_HG_Radar *This));
+static void ps_print ___PROTO((c_HG_Radar *This, c_PostScript *post));
+static boolean readHG ___PROTO((c_DocFile *doc,char *keyword,
+				long param, BaseStd_t *base));
+static boolean writeHG ___PROTO((c_HG_Radar *This, c_DocFile *doc));
+     
+sf_HG_Radar fc_HG_Radar =
+{
+  cons, dest, copy, regenerate, 
+  change_xinfo, change_base, display_redraw,
+  add_to_vectorgraph, sub_to_vectorgraph, setHG,
+  ps_print, readHG, writeHG
+};
+
+static void *cons(highg, sub_class)
+c_HighGraph	*highg;
+int		sub_class;
+{
+  c_HG_Radar	*This;
+  Xc_HISTORY(("constructor"));
+  
+  if ( (This = Xc_malloc("HG_Radar", sizeof(c_HG_Radar)) ) == NULL)
+    return NULL;
+  This->f = &fc_HG_Radar;
+  
+  This->highg = highg;
+  This->class = HG_RADAR;
+  This->sub_class = sub_class;
+
+  This->nb_radar = 0;
+  This->ordonnee = NULL;
+  This->curve = NULL;
+  
+  This->nb_abscisse = 0;
+  This->graduation = NULL;
+  This->string = NULL;
+  
+  Xc_TRACE(("constructor done"));
+  return This;
+}
+
+static void dest(This)
+c_HG_Radar	*This;
+{
+  int i;
+  Xc_HISTORY(("destructor")); 
+  if (This->nb_radar)
+  {
+    for(i=0; i<This->nb_radar; i++)
+    {
+      if (This->ordonnee)
+	BG_DELETE(This->ordonnee[i])(This->ordonnee[i]);
+      BG_DELETE(This->curve[i])(This->curve[i]);
+    }
+    if (This->ordonnee)
+      Xc_free(This->ordonnee);
+    Xc_free(This->curve);
+  }
+  if (This->nb_abscisse)
+  {
+    for(i=0; i<This->nb_abscisse; i++)
+    {
+      BG_DELETE(This->graduation[i])(This->graduation[i]);
+      BG_DELETE(This->string[i])(This->string[i]);
+    }
+    Xc_free(This->graduation);
+    Xc_free(This->string);
+  }
+  Xc_free(This);
+  Xc_TRACE(("destructor done"));
+}
+
+static void *copy(This, base)
+c_HG_Radar	*This;
+BaseStd_t	*base;
+{
+  c_HG_Radar	*hg_copy;
+  
+  if ( (hg_copy = Xc_malloc("HG_Radar", sizeof(c_HG_Radar)) ) == NULL)
+    return NULL;
+  memcpy(hg_copy, This, sizeof(c_HG_Radar));
+  
+  return hg_copy;
+}
+
+static void regenerate(This, bbox, HG_Axe)
+c_HG_Radar	*This;
+bbox_t		bbox;
+c_HG_Axe	*HG_Axe;
+{
+  c_HighGraph	*highg;
+  int		i, j, nbs, nbc;
+  coord_t	width, height;
+  vector_t	point1, point2, origin, t_orig, t_size;
+  double	angle, angle_step, rayon, rayon2, rayon3, ss, cs;
+  ruler_t	ruler;
+  char		*string;
+  c_Color	*color;
+  c_TextStyle	*tstyle;
+  boolean	one_absc;
+  
+  highg = This->highg;
+  width = bbox.urx - bbox.llx;
+  height = bbox.lly - bbox.ury;
+    
+  if (This->nb_radar)
+  {
+    for(i=0; i<This->nb_radar; i++)
+    {
+      if (This->ordonnee)
+	BG_DELETE(This->ordonnee[i])(This->ordonnee[i]);
+      BG_DELETE(This->curve[i])(This->curve[i]);
+    }
+    if (This->ordonnee)
+      Xc_free(This->ordonnee);
+    Xc_free(This->curve);
+    This->ordonnee = NULL;
+    This->curve = NULL;
+    This->nb_radar = 0;
+  }
+  if (This->nb_abscisse)
+  {
+    for(i=0; i<This->nb_abscisse; i++)
+    {
+      BG_DELETE(This->graduation[i])(This->graduation[i]);
+      BG_DELETE(This->string[i])(This->string[i]);
+    }
+    Xc_free(This->graduation);
+    Xc_free(This->string);
+    This->nb_abscisse = 0;
+  }
+     
+  if (highg->nb_abscisse == 1)
+  {  
+    This->nb_abscisse = nbs = 2;
+    one_absc = TRUE;
+  }
+  else
+  {    
+    This->nb_abscisse = nbs = highg->nb_abscisse;
+    one_absc = FALSE;
+  }
+  
+  This->graduation = (c_BG_Line **)Xc_malloc("radar grad **", 
+					    sizeof(c_BG_Line *)*nbs);
+  This->string = (c_BG_Text **)Xc_malloc("radar string **", 
+					 sizeof(c_BG_Text *)*nbs);
+  
+  origin.dx = bbox.llx + (width >> 1);
+  origin.dy = bbox.ury + (height >> 1);
+  rayon = height /3; 
+  rayon2 = SCALE_FROM_MILLIMETERS(0.5);
+  rayon3 = rayon + rayon2 * 2;
+  angle_step = M_PI * 2 / nbs; angle = M_PI / 2;
+  for(i = 0; i < nbs; i++)
+  {
+    This->graduation[i]=(c_BG_Line *)NEW(c_BG_Line)(_BaseStd);
+    cs = cos(angle); ss = sin(angle);
+    
+    t_orig.dx = origin.dx + cs * rayon;
+    t_orig.dy = origin.dy - ss * rayon;
+    
+    point1.dx = t_orig.dx - ss * rayon2;
+    point1.dy = t_orig.dy - cs * rayon2;
+    point2.dx = t_orig.dx + ss * rayon2;
+    point2.dy = t_orig.dy + cs * rayon2;
+    
+    BG_SET(This->graduation[i])(This->graduation[i],
+				XcBG_Line_POINT1, point1,
+				XcBG_Line_POINT2, point2,
+				XcBG_Line_END);
+    
+    This->string[i]=(c_BG_Text *)NEW(c_BG_Text)(_BaseStd);
+    if (one_absc)
+    {
+      if (i && highg->abscisse && highg->d_abscisse)
+      {
+	string = highg->tab_abscisse[0].string;
+	tstyle = highg->tab_abscisse[0].tstyle;
+      }
+      else
+      {
+	string = NULL;
+	tstyle = highg->tab_data.tstyle;
+      }
+    }
+    else
+    {
+      if (highg->abscisse && highg->d_abscisse)
+      {
+	string = highg->tab_abscisse[i].string;
+	tstyle = highg->tab_abscisse[i].tstyle;
+      }
+      else
+      {
+	string = NULL;
+	tstyle = highg->tab_data.tstyle;
+      }
+    }
+    
+    t_orig.dx = origin.dx + cs * rayon3;
+    t_orig.dy = origin.dy - ss * rayon3;
+    t_size.dy = XcText_SIZE_NOT_DEFINED;
+    
+    if (angle >= -(M_PI / 2))
+    {
+      ruler = XqR_H_ALIGN_LEFT | XqR_MULTILINE;
+      t_size.dx = bbox.urx - t_orig.dx;
+    }
+    else
+    {
+      ruler = XqR_H_ALIGN_RIGHT | XqR_MULTILINE;
+      t_size.dx = t_orig.dx - bbox.llx;      
+      t_orig.dx = bbox.llx;
+    }
+    t_orig.dy -= tstyle->point_size * ((ss + 1) / 2);
+    
+    BG_SET(This->string[i])(This->string[i],
+			    XcBG_Text_ORIGIN, t_orig,
+			    XcBG_Text_SIZE, t_size,
+			    XcBG_Text_STRING, string,
+			    XcBG_Text_STYLE, tstyle,
+			    XcBG_Text_RULER, ruler,
+			    XcBG_Text_END); 
+    angle -= angle_step;
+  }
+  
+  This->nb_radar = nbc = highg->nb_ordonnee;
+/*  if (highg->ordonnee && highg->d_ordonnee)
+    This->ordonnee = (c_BG_Text **)Xc_malloc("radar ord **", 
+					     sizeof(c_BG_Text *) * nbc); */
+  This->curve = (c_BG_Polyline **)Xc_malloc("radar poly **", 
+					    sizeof(c_BG_Polyline *) * nbc);
+  for(i=0; i<nbc; i++)
+  {
+    color = Get_BG_Color_Step(_BaseStd, i);
+    
+    This->curve[i] = (c_BG_Polyline *)NEW(c_BG_Polyline)(_BaseStd);
+    BG_SET(This->curve[i])(This->curve[i],
+			   XcBG_Polyline_FG_COLOR, color,
+			   XcBG_Polyline_LINE_THICKNESS, SCALE_FROM_POINTS(3),
+			   XcBG_Polyline_END);
+    
+    origin.dx = bbox.llx + (width >> 1);
+    origin.dy = bbox.ury + (height >> 1);
+    angle_step = M_PI * 2 / nbs; angle = M_PI / 2;
+    for(j=0; j<nbs; j++)
+    {
+      rayon = origin.dy - 
+	F(HG_Axe).convert_value(HG_Axe, highg->tab_value[i][one_absc?0:j]);
+      
+      point1.dx = origin.dx + cos(angle) * rayon;
+      point1.dy = origin.dy - sin(angle) * rayon;
+      if (j == 0)
+      {
+	point2.dx = point1.dx; point2.dy = point1.dy;
+      }
+      BG_SET(This->curve[i])(This->curve[i],
+			     XcBG_Polyline_ADD_POINT, point1,
+			     XcBG_Polyline_END);
+      angle -= angle_step;
+    }
+    if (j)
+      BG_SET(This->curve[i])(This->curve[i],
+			     XcBG_Polyline_ADD_POINT, point2,
+			     XcBG_Polyline_END);
+    
+/*    for(j = nbs -1; j>=0; j--)
+    {
+      if (j == nbs - 1)
+      {
+	origin.dy = point1.dy;
+	point1.dx -= size.dx;
+	point1.dy = F(HG_Axe).convert_value(HG_Axe, totaux[j]);
+	origin.dx = point1.dx;
+	origin.dy = origin.dy - (origin.dy - point1.dy) / 2;
+      }
+      else
+      {
+	point1.dx -= size.dx;
+	point1.dy = F(HG_Axe).convert_value(HG_Axe, totaux[j]);
+      }
+      BG_SET(This->curve[i])(This->curve[i],
+				XcBG_Polyline_ADD_POINT, point1,
+				XcBG_Polyline_END);
+    }
+    if (highg->ordonnee && highg->d_ordonnee)
+    {
+      This->ordonnee[i] = (c_BG_Text *)NEW(c_BG_Text)(_BaseStd);
+      string = highg->tab_ordonnee[i].string;
+      tstyle = highg->tab_ordonnee[i].tstyle;
+      origin.dx += SCALE_FROM_MILLIMETERS(1);
+      origin.dy -= tstyle->point_size / 2;
+      size.dx = width + SCALE_FROM_MILLIMETERS(10) - origin.dx + bbox.llx;
+      size.dy = XcText_SIZE_NOT_DEFINED;
+      BG_SET(This->ordonnee[i])
+	(This->ordonnee[i],
+	 XcBG_Text_ORIGIN, origin,
+	 XcBG_Text_SIZE, size,
+	 XcBG_Text_STRING, string, 
+	 XcBG_Text_STYLE, tstyle,
+	 XcBG_Text_RULER, XqR_H_ALIGN_LEFT|XqR_MULTILINE,
+	 XcBG_Text_END);
+    } */
+  }
+}
+
+static void change_xinfo(This)
+c_HG_Radar	*This;
+{
+  int i;
+  
+  for(i=0; i<This->nb_radar; i++)
+  {
+    if (This->ordonnee)
+      BG_CHANGE_XINFO(This->ordonnee[i])(This->ordonnee[i], 
+					 &This->highg->X_info);
+    BG_CHANGE_XINFO(This->curve[i])(This->curve[i], 
+				       &This->highg->X_info);
+  }
+  
+  for(i=0; i<This->nb_abscisse; i++)
+  {
+    BG_CHANGE_XINFO(This->graduation[i])(This->graduation[i], 
+					 &This->highg->X_info);
+    BG_CHANGE_XINFO(This->string[i])(This->string[i], &This->highg->X_info);
+  }
+}
+
+static error change_base(This)
+c_HG_Radar	*This;
+{
+  return XC_NO_ERROR;
+}
+
+static void display_redraw(This)
+c_HG_Radar	*This;
+{
+  int i;
+  c_HighGraph	*highg;
+  
+  Xc_TRACE(("redraw radar"));
+  
+  highg = This->highg;
+  
+  for(i=0; i<This->nb_radar; i++)
+  {
+    if (This->ordonnee)
+      BG_DISPLAY_REDRAW(This->ordonnee[i])(This->ordonnee[i], highg->matrix,
+					   highg->scale, 0, 0);
+    BG_DISPLAY_REDRAW(This->curve[i])(This->curve[i], highg->matrix,
+					 highg->scale, 0, 0);
+  }
+  for(i=0; i<This->nb_abscisse; i++)
+  {
+    BG_DISPLAY_REDRAW(This->graduation[i])(This->graduation[i], highg->matrix,
+					   highg->scale, 0, 0);
+    BG_DISPLAY_REDRAW(This->string[i])(This->string[i], highg->matrix,
+				       highg->scale, 0, 0);
+  }
+}
+
+static void add_to_vectorgraph(This)
+c_HG_Radar  *This;
+{
+  int	i;
+  
+  for(i=0; i<This->nb_radar; i++)
+  {
+    if (This->ordonnee)
+      BG_ADD_TO_VECTORGRAPH(This->ordonnee[i])(This->ordonnee[i], 
+					       This->highg->vectorg);
+    BG_ADD_TO_VECTORGRAPH(This->curve[i])(This->curve[i], 
+					  This->highg->vectorg);
+  }
+  for(i=0; i<This->nb_abscisse; i++)
+  {
+    BG_ADD_TO_VECTORGRAPH(This->graduation[i])(This->graduation[i], 
+					       This->highg->vectorg);
+    BG_ADD_TO_VECTORGRAPH(This->string[i])(This->string[i], 
+					   This->highg->vectorg);
+  }
+}
+
+static void sub_to_vectorgraph(This)
+c_HG_Radar  *This;
+{
+  int	i;
+  
+  for(i=0; i<This->nb_radar; i++)
+  {
+    if (This->ordonnee)
+      BG_SUB_TO_VECTORGRAPH(This->ordonnee[i])(This->ordonnee[i], 
+					       This->highg->vectorg);
+    BG_SUB_TO_VECTORGRAPH(This->curve[i])(This->curve[i], 
+					  This->highg->vectorg);
+  }
+  for(i=0; i<This->nb_abscisse; i++)
+  {
+    BG_SUB_TO_VECTORGRAPH(This->graduation[i])(This->graduation[i], 
+					       This->highg->vectorg);
+    BG_SUB_TO_VECTORGRAPH(This->string[i])(This->string[i], 
+					   This->highg->vectorg);
+  }
+}
+
+static void setHG(This, va_alist)
+c_HG_Radar *This;
+va_dcl
+{
+  va_list ap;
+  
+  Xc_HISTORY(("set"));
+
+  va_start(ap);
+  vset(This, ap);
+  va_end(ap);
+} 
+
+static void vset(This, ap)
+c_HG_Radar *This;
+va_list ap;
+{
+  boolean out_flag;
+  boolean calcul;
+  
+  Xc_TRACE(("vset"));
+  
+  out_flag = calcul = FALSE;
+  do {
+    switch(va_arg(ap, HG_Radar_set_code_t))
+    {
+    case XcHG_Radar_END:
+      Xc_TRACE(("XcHG_Radar_END"));
+      out_flag = TRUE;
+      break;
+    default:
+      Xc_BREAK(("Unknow HG_Radar_set_code"));
+      break;
+    }
+  } while(!out_flag);
+  if (calcul)
+    calcul_radar(This);
+}
+
+static void calcul_radar(This)
+c_HG_Radar	*This;
+{
+}
+
+/* -------------------------------------------------------------------- **
+** ps print, read & write HG_Radar					**
+** -------------------------------------------------------------------- */ 
+static void ps_print(This, post)
+c_HG_Radar *This;
+c_PostScript *post;
+{
+}
+
+static boolean readHG(doc, keyword, param, base)
+c_DocFile *doc;
+char *keyword;
+long param;
+BaseStd_t *base;
+{
+  return FALSE;
+}
+
+static boolean writeHG(This, doc)
+c_HG_Radar	 *This;
+c_DocFile	 *doc;
+{
+  return FALSE;
+}
+
+
+

@@ -1,0 +1,480 @@
+! ************************************************************************
+! **				ONLINE HELP FILES			**
+! ************************************************************************
+
+*Application.userData:			Main_Interface.html
+
+*pmFile*userData:			Menu_File.html
+*pmEdit*userData:			Menu_Edit.html
+*pmDisplay*userData:			Menu_View.html
+*pmFrame*userData:			Menu_Frame.html
+*pmOptions*userData:			Menu_Options.html
+*pmWindows*userData:			Menu_Window.html
+*pmHelp*userData:			Menu_Help.html
+
+*pmFile.mNew.userData:			Menu_File.html#new_menu_entry
+*pmFile.mOpen.userData:			Menu_File.html#open_menu_entry
+*pmFile.mClose.userData:		Menu_File.html#close_menu_entry
+*pmFile.mSave.userData:			Menu_File.html#save_menu_entry
+*pmFile.mSaveAs.userData:		Menu_File.html#save_as_menu_entry
+*pmFile.mSaveAll.userData:		Menu_File.html#save_all_menu_entry
+*pmFile.mImport.userData:		Menu_File.html#import_menu_entry
+*mImportImage.userData:			Menu_File.html#import_image_menu_entry
+*mImportText.userData:			Menu_File.html#import_text_menu_entry
+*mImportVector.userData:		Menu_File.html#import_vector_menu_entry
+*pmFile.mPrint.userData:		Menu_File.html#print_menu_entry
+*pmFile.mQuit.userData:			Menu_File.html#quit_menu_entry
+
+*pmEdit.mCut.userData:  		Menu_Edit.html#cut_menu_entry
+*pmEdit.mCopy.userData:  		Menu_Edit.html#copy_menu_entry
+*pmEdit.mPaste.userData:  		Menu_Edit.html#paste_menu_entry
+*pmEdit.mDelete.userData:  		Menu_Edit.html#delete_menu_entry
+*pmEdit.mSelectAll.userData:		Menu_Edit.html#select_all_menu_entry
+*pmEdit.mColors.userData:  		Menu_Edit.html#color_menu_entry
+*pmEdit.mStyles.userData:  		Menu_Edit.html#font_menu_entry
+*pmEdit.mRulers.userData:  		Menu_Edit.html#paragraph_menu_entry
+
+*pmDisplay.mRedraw.userData:		Menu_View.html#redraw_all_menu_entry
+*pmDisplay.mRealSize.userData:		Menu_View.html#real_size_menu_entry
+*pmDisplay.mScreenSize.userData:	Menu_View.html#full_page_menu_entry
+*pmDisplay.mFullWidth.userData:		Menu_View.html#full_width_menu_entry
+*pmDisplay.mMaskGrid.userData:		Menu_View.html#grid_menu_entry
+*pmDisplay.mShowGrid.userData:		Menu_View.html#grid_menu_entry
+*pmDisplay.mMaskHelplines.userData:	Menu_View.html#margin_menu_entry
+*pmDisplay.mShowHelplines.userData:	Menu_View.html#margin_menu_entry
+*pmDisplay.mMaskAlignlines.userData:	Menu_View.html#ruler_marks_menu_entry
+*pmDisplay.mShowAlignlines.userData:	Menu_View.html#ruler_marks_menu_entry
+*pmDisplay.mMaskRulers.userData:	Menu_View.html#rulers_menu_entry
+*pmDisplay.mShowRulers.userData:	Menu_View.html#rulers_menu_entry
+*pmDisplay.mMaskClipboard.userData:	Menu_View.html#clipboard_menu_entry
+*pmDisplay.mShowClipboard.userData:	Menu_View.html#clipboard_menu_entry
+*pmDisplay.mMaskInfobar.userData:	Menu_View.html#hint_line_menu_entry
+*pmDisplay.mShowInfobar.userData:	Menu_View.html#hint_line_menu_entry
+*pmDisplay.mMaskFrameBorders.userData:	Menu_View.html#frame_border_menu_entry
+*pmDisplay.mShowFrameBorders.userData:	Menu_View.html#frame_border_menu_entry
+*pmDisplay.mActivMagnet.userData:	Menu_View.html#magnet_menu_entry
+*pmDisplay.mStopMagnet.userData:	Menu_View.html#magnet_menu_entry
+
+*pmFrame.mDrawBar.userData:		Menu_Frame.html#create_rectangle_menu_entry
+*pmFrame.mDrawPolygon.userData:		Menu_Frame.html#create_polygon_menu_entry
+*pmFrame.mDrawEllipse.userData:		Menu_Frame.html#create_ellipse_menu_entry
+*pmFrame.mPointInsert.userData:		Menu_Frame.html#insert_vertex_menu_entry
+*pmFrame.mPointDelete.userData:		Menu_Frame.html#delete_vertex_menu_entry
+*pmFrame.mPointMove.userData:		Menu_Frame.html#vertex_mode_menu_entry
+*pmFrame.mMoveDown.userData:		Menu_Frame.html#backward_menu_entry
+*pmFrame.mMoveUp.userData:		Menu_Frame.html#forward_menu_entry
+*pmFrame.mBackground.userData:		Menu_Frame.html#background_menu_entry
+*pmFrame.mForeground.userData:		Menu_Frame.html#foreground_menu_entry
+*pmFrame.mFrameAdd.userData:		Menu_Frame.html#add_frames_menu_entry
+*pmFrame.mFrameSub.userData:		Menu_Frame.html#substract_frames_menu_entry
+*pmFrame.mFrameXor.userData:		Menu_Frame.html#fusion_frames_menu_entry
+*pmFrame.mFrameCut.userData:		Menu_Frame.html#outline_frames_menu_entry
+*pmFrame.mLock.userData:		Menu_Frame.html#lock_menu_entry
+*pmFrame.mUnlock.userData:		Menu_Frame.html#lock_menu_entry
+*pmFrame.mFrameDelete.userData:		Menu_Frame.html#destroy_menu_entry
+*pmFrame.mAlign.userData:		Menu_Frame.html#align_frames_menu_entry
+*pmFrame.mRotate.userData:		Menu_Frame.html#rotation_menu_entry
+*pmFrame.mScale.userData:		Menu_Frame.html#scaling_menu_entry
+*pmFrame.mAttribs.userData:		Menu_Frame.html#attributes_menu_entry
+
+*pmOptions.mCache.userData:		Menu_Options.html#cache_menu_entry
+
+*pmWindows*userData:			Menu_Window.html#document_menu_entries
+*pmWindows.mCascade.userData:		Menu_Window.html#cascade_menu_entry
+*pmWindows.mTile.userData:		Menu_Window.html#mosaic_menu_entry
+
+*pmHelp.mOverview.userData:		Overview.html
+*pmHelp.mContent.userData:		index.html
+*pmHelp.mKeyboard.userData:		Keyboard.html
+*pmHelp.mMouse.userData:		Mouse.html
+*pmHelp.mOnItem.userData:		Menu_Help.html#help_on_item_menu_entry
+*pmHelp.mUsingHelp.userData:		Help_Usage.html
+*pmHelp.mAbout.userData:		Menu_Help.html#about_xclamation_menu_entry
+*pmHelp.mLegal.userData:		Menu_Help.html#licence_menu_entry
+*pmHelp.mRegistration.userData:		Menu_Help.html#registration_menu_entry
+
+!***************************** ICONS ********************************
+
+*IconFra.userData:	Main_Interface.html#frame_icon_vbar
+*IconTex.userData:	Main_Interface.html#text_icon_vbar
+*IconIma.userData:	Main_Interface.html#image_icon_vbar
+*IconVec.userData:	Main_Interface.html#vector_icon_vbar
+*IconZoo.userData:	Main_Interface.html#zoom_icon_vbar
+*IconTra.userData:	Main_Interface.html#trash_icon_vbar
+
+*hIconBar1_1.userData:	HBar_Frame.html
+*IconFra_0.userData:	HBar_Frame.html#handle_mode_icon
+*IconFra_14.userData:	HBar_Frame.html#rotation_icon
+*IconFra_13.userData:	HBar_Frame.html#scaling_icon
+*IconFra_1.userData:	HBar_Frame.html#rectangle_icon
+*IconFra_10.userData:	HBar_Frame.html#polygon_icon
+*IconFra_12.userData:	HBar_Frame.html#ellipse_icon
+*IconFra_15.userData:	HBar_Frame.html#add_icon
+*IconFra_16.userData:	HBar_Frame.html#substract_icon
+*IconFra_11.userData:	HBar_Frame.html#fusion_icon
+*IconFra_17.userData:	HBar_Frame.html#outline_icon
+*IconFra_18.userData:	HBar_Frame.html#align_icon
+*IconFra_5.userData:	HBar_Frame.html#vertex_mode_icon
+*IconFra_3.userData:	HBar_Frame.html#add_vertex_icon
+*IconFra_4.userData:	HBar_Frame.html#del_vertex_icon
+*IconFra_9.userData:	HBar_Frame.html#foreground_icon
+*IconFra_8.userData:	HBar_Frame.html#background_icon
+*IconFra_7.userData:	HBar_Frame.html#forward_icon
+*IconFra_6.userData:	HBar_Frame.html#backward_icon
+*IconFra_19.userData:	HBar_Frame.html#lock_icon
+
+*hIconBar2_1.userData:	HBar_Text.html
+*IconTex_1.userData:	HBar_Text.html#editor_icon
+*IconTex_2.userData:	HBar_Text.html#link_end_icon
+*IconTex_3.userData:	HBar_Text.html#link_beginning_icon
+*IconTex_4.userData:	HBar_Text.html#link_before_icon
+*IconTex_5.userData:	HBar_Text.html#link_after_icon
+*IconTex_6.userData:	HBar_Text.html#unlink_icon
+
+*hIconBar3_1.userData:	HBar_Image.html
+*IconIma_1.userData:	HBar_Image.html#move_icon
+*IconIma_3.userData:	HBar_Image.html#center_icon
+*IconIma_4.userData:	HBar_Image.html#reset_icon
+*IconIma_12.userData:	HBar_Image.html#fliph_icon
+*IconIma_13.userData:	HBar_Image.html#flipv_icon
+*IconIma_9.userData:	HBar_Image.html#min_aspect_icon
+*IconIma_11.userData:	HBar_Image.html#max_aspect_icon
+*IconIma_10.userData:	HBar_Image.html#best_aspect_icon
+
+*hIconBar4_1.userData:	HBar_Vector.html
+*IconVec_1.userData:	HBar_Vector.html#move_icon
+*IconVec_2.userData:	HBar_Vector.html#center_icon
+*IconVec_3.userData:	HBar_Vector.html#reset_icon
+*IconVec_4.userData:	HBar_Vector.html#fliph_icon
+*IconVec_5.userData:	HBar_Vector.html#flipv_icon
+*IconVec_6.userData:	HBar_Vector.html#min_aspect_icon
+*IconVec_7.userData:	HBar_Vector.html#max_aspect_icon
+*IconVec_8.userData:	HBar_Vector.html#best_aspect_icon
+*IconVec_9.userData:	HBar_Vector.html#font_toggle_icon
+
+*hIconBar5_1.userData:	HBar_Zoom.html
+*IconZoo_1.userData:	HBar_Zoom.html#zoom_plus_icon
+*IconZoo_2.userData:	HBar_Zoom.html#zoom_minus_icon
+*IconZoo_3.userData:	HBar_Zoom.html#zoom_area_icon
+*IconZoo_4.userData:	HBar_Zoom.html#full_width_icon
+*IconZoo_5.userData:	HBar_Zoom.html#full_page_icon
+*IconZoo_12.userData:	HBar_Zoom.html#real_scale_icon
+*IconZoo_6.userData:	HBar_Zoom.html#predefined_scale_icons
+*IconZoo_7.userData:	HBar_Zoom.html#predefined_scale_icons
+*IconZoo_8.userData:	HBar_Zoom.html#predefined_scale_icons
+*IconZoo_9.userData:	HBar_Zoom.html#predefined_scale_icons
+*IconZoo_10.userData:	HBar_Zoom.html#predefined_scale_icons
+*IconZoo_11.userData:	HBar_Zoom.html#predefined_scale_icons
+
+*Menu.userData:			Main_Interface.html#menu_bar
+*vIconBar.userData:		Main_Interface.html#vertical_icon_bar
+*hIconBar.userData:		Main_Interface.html#horizontal_icon_bar
+*MainDocument.userData:		Main_Interface.html#worktop
+*BottomBar.userData:		Main_Interface.html#hint_line
+*FrameOfClipboard.userData:	Main_Interface.html#clipboard
+
+!***************************  Context Menus *************************
+*Page Empty Context Menu*Icon 0.userData:	Menu_Context.html#create_rectangle_icon
+*Page Empty Context Menu*Icon 2.userData:	Menu_Context.html#create_ellipse_icon
+*Page Empty Context Menu*Icon 4.userData:	Menu_Context.html#create_polygon_icon
+
+*Frame Empty Context Menu*Icon 0.userData:	Menu_Context.html#import_text_icon
+*Frame Empty Context Menu*Icon 2.userData:	Menu_Context.html#import_image_icon
+*Frame Empty Context Menu*Icon 4.userData:	Menu_Context.html#import_vector_icon
+*Frame Empty Context Menu*Icon 6.userData:	Menu_Context.html#editor_icon
+
+*Text Frame Context Menu*Icon 0.userData:	Menu_Context.html#cm_editor
+
+*Pager Context Menu*Icon 0.userData:	Menu_Context.html#add_page_before_icon
+*Pager Context Menu*Icon 2.userData:	Menu_Context.html#add_page_after_icon
+*Pager Context Menu*Icon 4.userData:	Menu_Context.html#modify_page_icon
+*Pager Context Menu*Icon 6.userData:	Menu_Context.html#destroy_page_icon
+
+!*************************  File Selectors **************************
+*ExportText.bboard.userData:			Box_FS_Export_Text.html
+*ExportText*FSForm.userData:			Box_FS_Export_Text.html#left_part
+*ExportText*Format.userData:			Box_FS_Export_Text.html#format_list
+*ExportText*fETSetup.userData:			Box_FS_Export_Text.html#format_list
+*ExportText*tbETHTMLRulers.userData:		Box_FS_Export_Text.html#export_ruler_button
+*ExportText*lETHTMLFrameBreak.userData:		Box_FS_Export_Text.html#frame_break_textfield
+*ExportText*tfETHTMLFrameBreak.userData:	Box_FS_Export_Text.html#frame_break_textfield
+*ExportText*lETHTMLCarrierReturn.userData:	Box_FS_Export_Text.html#carriage_return_button
+*ExportText*tfETHTMLCarrierReturn.userData:	Box_FS_Export_Text.html#carriage_return_button
+*ExportText*lETHTMLStyles.userData:		Box_FS_Export_Text.html#font_list
+*ExportText*imHTMLStyles.userData:		Box_FS_Export_Text.html#font_list
+*ExportText*lETHTMLStyleBegin.userData:		Box_FS_Export_Text.html#tag_beginning_textfield
+*ExportText*tfETHTMLStyleBegin.userData:	Box_FS_Export_Text.html#tag_beginning_textfield
+*ExportText*lETHTMLStyleEnd.userData:		Box_FS_Export_Text.html#tag_end_textfield
+*ExportText*tfETHTMLStyleEnd.userData:		Box_FS_Export_Text.html#tag_end_textfield
+*ExportText*action_area.Ok.userData:		Box_FS_Export_Text.html#button_export
+*ExportText*action_area.Cancel.userData:	Box_FS_Export_Text.html#button_cancel
+
+*textImport*userData:				Box_File_Selectors.html#fs_import_text
+*OpenDocument*userData:				Box_File_Selectors.html#fs_load
+*imageImport*userData:				Box_File_Selectors.html#fs_import_image
+*vectorImport*userData:				Box_File_Selectors.html#fs_import_vector
+*Print*userData:				Box_File_Selectors.html#fs_print_in_file
+*CloseDocument*userData:			Box_File_Selectors.html#fs_save
+
+!***************************  Box Color *****************************
+*BoxColors.bboard.userData:			Box_Color.html
+*BoxColors*ASLItemLSW.userData:			Box_Color.html#color_list
+*BoxColors*ASLeditor.userData:			Box_Color.html#edit_color_name
+*BoxColors*lColorAdd.userData:			Box_Color.html#button_new
+*BoxColors*lColorDel.userData:			Box_Color.html#button_del
+*BoxColors*gBCBar.userData:			Box_Color.html#navbar
+*BoxColors*fBCmain.userData:			Box_Color.html#setup
+*BoxColors*lColor.userData:			Box_Color.html#color_preview
+*BoxColors*action_area.Ok.userData:		Box_Color.html#button_ok
+*BoxColors*action_area.Cancel.userData:		Box_Color.html#button_cancel
+*BoxColors*gBC_CMYK*userData:			Box_Color.html#color_CMYK
+*BoxColors*gBC_RGB*userData:			Box_Color.html#color_RGB
+*BoxColors*gBC_HSL*userData:			Box_Color.html#color_HSB
+*BoxColors*gBC_GRAY*userData:			Box_Color.html#color_gray
+
+!**************************** Box Font *******************************
+*BoxStyles.bboard.userData:			Box_Font.html
+*BoxStyles*ASLItemLSW.userData:			Box_Font.html#style_list
+*BoxStyles*ASLeditor.userData:			Box_Font.html#style_name
+*BoxStyles*lAddFont.userData:			Box_Font.html#new_style
+*BoxStyles*lDelFont.userData:			Box_Font.html#delete_style
+*BoxStyles*gBSBar.userData:			Box_Font.html#button_bar
+*BoxStyles*fBSmain.userData:			Box_Font.html#configuration_section
+*BoxStyles*wdaBSpreview.userData:		Box_Font.html#preview_area
+*BoxStyles*action_area.Ok.userData:		Box_Font.html#button_ok
+*BoxStyles*action_area.Cancel.userData:		Box_Font.html#button_cancel
+*BoxStyles*gBSglobal.userData:			Box_Font.html#general_attributes
+*BoxStyles*lBSfamily.userData:			Box_Font.html#font_list
+*BoxStyles*imBSfont.userData:			Box_Font.html#font_list
+*BoxStyles*clBSfont.userData:			Box_Font.html#font_color_list
+*BoxStyles*lBSfontsize.userData:		Box_Font.html#font_size_textfield
+*BoxStyles*tfBSfontsize.userData:		Box_Font.html#font_size_textfield
+*BoxStyles*iBSbold.userData:			Box_Font.html#icon_bold
+*BoxStyles*iBSitalic.userData:			Box_Font.html#icon_italic
+*BoxStyles*iBSshadow.userData:			Box_Font.html#icon_shadow
+*BoxStyles*iBSunderline.userData:		Box_Font.html#icon_underline
+*BoxStyles*iBSstrikeout.userData:		Box_Font.html#icon_strikeout
+*BoxStyles*tbBSsupscript.userData:		Box_Font.html#button_superscript
+*BoxStyles*tbBSsubscript.userData:		Box_Font.html#button_subscript
+*BoxStyles*tbBSsmallcaps.userData:		Box_Font.html#button_smallcaps
+*BoxStyles*tbBSbigcaps.userData:		Box_Font.html#button_bigcaps
+*BoxStyles*tbBSwidth.userData:			Box_Font.html#button_width
+*BoxStyles*fBSoverview.userData:		Box_Font.html#summary_section
+*BoxStyles*gBSconfig.userData:			Box_Font.html#detailed_configuration
+*BoxStyles*fBSunderline.userData:		Box_Font.html#underline_section
+*BoxStyles*rcBSunderline.userData:		Box_Font.html#underline_section
+*BoxStyles*fBSstrikeout.userData:		Box_Font.html#strikeout_section
+*BoxStyles*rcBSstrikeout.userData:		Box_Font.html#strikeout_section
+*BoxStyles*fBSshadow.userData:			Box_Font.html#shadow_section
+*BoxStyles*rcBSshadow.userData:			Box_Font.html#shadow_section
+*BoxStyles*fBSwidth.userData:			Box_Font.html#width_section
+*BoxStyles*rcBSwidth.userData:			Box_Font.html#width_section
+*BoxStyles*fBSsubscript.userData:		Box_Font.html#subscript_section
+*BoxStyles*rcBSsubscript.userData:		Box_Font.html#subscript_section
+*BoxStyles*fBSsupscript.userData:		Box_Font.html#superscript_section
+*BoxStyles*rcBSsupscript.userData:		Box_Font.html#superscript_section
+
+!**************************** Box Paragraph **************************
+*BoxRulers.bboard.userData:		Box_Paragraph.html
+*BoxRulers*ASLItemLSW.userData:		Box_Paragraph.html#paragraph_list
+*BoxRulers*ASLeditor.userData:		Box_Paragraph.html#edit_paragraph_name
+*BoxRulers*lParagraphAdd.userData:	Box_Paragraph.html#button_new
+*BoxRulers*lParagraphDel.userData:	Box_Paragraph.html#button_del
+*BoxRulers*fBRMargin.userData:		Box_Paragraph.html#textfield_alinea
+*BoxRulers*lBRMarginL.userData:		Box_Paragraph.html#textfield_left_margin
+*BoxRulers*tfBRMarginL.userData:	Box_Paragraph.html#textfield_left_margin
+*BoxRulers*lBRMarginR.userData:		Box_Paragraph.html#textfield_right_margin
+*BoxRulers*tfBRMarginR.userData:	Box_Paragraph.html#textfield_right_margin
+*BoxRulers*fBRSpacing.userData:		Box_Paragraph.html#toggle_automatic_interline
+*BoxRulers*lInterParagraph.userData:	Box_Paragraph.html#textfield_interparagraph
+*BoxRulers*tfInterParagraph.userData:	Box_Paragraph.html#textfield_interparagraph
+*BoxRulers*lInterLine.userData:		Box_Paragraph.html#textfield_interline
+*BoxRulers*tfInterLine.userData:	Box_Paragraph.html#textfield_interline
+*BoxRulers*fJustify.userData:		Box_Paragraph.html#icons_aligment
+*BoxRulers*fDistribution.userData:	Box_Paragraph.html#textfield_word_distribution
+*BoxRulers*lRatioMin.userData:		Box_Paragraph.html#textfield_min_ratio
+*BoxRulers*tfRatioMin.userData:		Box_Paragraph.html#textfield_min_ratio
+*BoxRulers*lRatioMax.userData:		Box_Paragraph.html#textfield_max_ratio
+*BoxRulers*tfRatioMax.userData:		Box_Paragraph.html#textfield_max_ratio
+*BoxRulers*action_area.Ok.userData:	Box_Paragraph.html#button_ok
+*BoxRulers*action_area.Cancel.userData:	Box_Paragraph.html#button_cancel
+
+!**************************** Box New Document **************************
+*BoxDocument.bboard.userData:		Box_New_Document.html
+*BoxDocument*tfBDDocname.userData:	Box_New_Document.html#edit_document_name
+*BoxDocument*lNumberOfPages.userData:	Box_New_Document.html#nb_page_textfield
+*BoxDocument*tfNumberOfPages.userData:	Box_New_Document.html#nb_page_textfield
+*BoxDocument*fDirection.userData:	Box_New_Document.html#orientation_frame
+*BoxDocument*riPortrait.userData:	Box_New_Document.html#portrait_button
+*BoxDocument*riLandscape.userData:	Box_New_Document.html#landscape_button
+*BoxDocument*fFormat.userData:		Box_New_Document.html#page_format_list
+*BoxDocument*lSize.userData:		Box_New_Document.html#size_textfields
+*BoxDocument*tfDocWidth.userData:	Box_New_Document.html#size_textfields
+*BoxDocument* x .userData:		Box_New_Document.html#size_textfields
+*BoxDocument*tfDocHeight.userData:	Box_New_Document.html#size_textfields
+*BoxDocument*fPageStyle.userData:	Box_New_Document.html#recto_verso_button
+*BoxDocument*rbDouble Page.userData:	Box_New_Document.html#double_page_button
+*BoxDocument*fMargin.userData:		Box_New_Document.html#margins_frame
+*BoxDocument*tfMargeT.userData:		Box_New_Document.html#top_margin_textfield
+*BoxDocument*lMarginT.userData:		Box_New_Document.html#top_margin_textfield
+*BoxDocument*tfMargeL.userData:		Box_New_Document.html#intern_margin_textfield
+*BoxDocument*lMarginL.userData:		Box_New_Document.html#intern_margin_textfield
+*BoxDocument*tfMargeB.userData:		Box_New_Document.html#bottom_margin_textfield
+*BoxDocument*lMarginB.userData:		Box_New_Document.html#bottom_margin_textfield
+*BoxDocument*tfMargeR.userData:		Box_New_Document.html#extern_margin_textfield
+*BoxDocument*lMarginR.userData:		Box_New_Document.html#extern_margin_textfield
+*BoxDocument*fSections.userData:	Box_New_Document.html#sector_frame
+*BoxDocument*tfColumns.userData:	Box_New_Document.html#column_textfield
+*BoxDocument*lColumns.userData:		Box_New_Document.html#column_textfield
+*BoxDocument*tfVSpacing.userData:	Box_New_Document.html#column_gutter_textfield
+*BoxDocument*lVSpacing.userData:	Box_New_Document.html#column_gutter_textfield
+*BoxDocument*tfRows.userData:		Box_New_Document.html#line_textfield
+*BoxDocument*lRows.userData:		Box_New_Document.html#line_textfield
+*BoxDocument*tfHSpacing.userData:	Box_New_Document.html#line_gutter_textfield
+*BoxDocument*lHSpacing.userData:	Box_New_Document.html#line_gutter_textfield
+*BoxDocument*action_area.Ok.userData:	Box_New_Document.html#button_ok
+*BoxDocument*action_area.Open.userData:	Box_New_Document.html#button_load
+*BoxDocument*action_area.Cancel.userData: Box_New_Document.html#button_cancel
+
+!**************************** Box Modify Page **************************
+*BoxPage.bboard.userData:		Box_Modify_Page.html
+*BoxPage*lPageNumber.userData:		Box_Modify_Page.html#left_arrow_icon
+*BoxPage*iBP1.userData:			Box_Modify_Page.html#left_arrow_icon
+*BoxPage*tfPageNumber.userData:		Box_Modify_Page.html#page_number_textfield
+*BoxPage*iBP2.userData:			Box_Modify_Page.html#right_arrow_icon
+*BoxPage*fDirection*userData:		Box_Modify_Page.html#orientation_frame
+*BoxPage*fFormat.userData:		Box_Modify_Page.html#page_format_list
+*BoxPage*lSize.userData:		Box_Modify_Page.html#size_textfields
+*BoxPage*tfDocWidth.userData:		Box_Modify_Page.html#size_textfields
+*BoxPage* x .userData:			Box_Modify_Page.html#size_textfields
+*BoxPage*tfDocHeight.userData:		Box_Modify_Page.html#size_textfields
+*BoxPage*fPageStyle.userData:		Box_Modify_Page.html#recto_verso_button
+*BoxPage*rbRecto Verso.userData:	Box_Modify_Page.html#recto_verso_button
+*BoxPage*rbDouble Page.userData:	Box_Modify_Page.html#double_page_button
+*BoxPage*fMargin*userData:		Box_Modify_Page.html#margins_frame
+*BoxPage*fSections*userData:		Box_Modify_Page.html#sector_frame
+*BoxPage*action_area.Ok.userData:	Box_Modify_Page.html#button_ok
+*BoxPage*action_area.Cancel.userData:	Box_Modify_Page.html#button_cancel
+
+!**************************** Box Frame Attributes ***********************
+*BoxAttribs.bboard.userData:		Box_Frame_Attributes.html
+*BoxAttribs*ASLItemLSW.userData:	Box_Frame_Attributes.html#frame_list
+*BoxAttribs*ASLeditor.userData:		Box_Frame_Attributes.html#edit_frame_name
+*BoxAttribs*lBABackColor.userData:	Box_Frame_Attributes.html#background_color_list
+*BoxAttribs*clBABackColor.userData:	Box_Frame_Attributes.html#background_color_list
+*BoxAttribs*lBABorderColor.userData:	Box_Frame_Attributes.html#border_color_list
+*BoxAttribs*clBABorderColor.userData:	Box_Frame_Attributes.html#border_color_list
+*BoxAttribs*lBABorderWidth.userData:	Box_Frame_Attributes.html#thickness_textfield
+*BoxAttribs*tfBABorderWidth.userData:	Box_Frame_Attributes.html#thickness_textfield
+*BoxAttribs*XmFrame.userData:		Box_Frame_Attributes.html#frame_preview
+*BoxAttribs*action_area.Ok.userData:	Box_Frame_Attributes.html#button_ok
+*BoxAttribs*action_area.Cancel.userData: Box_Frame_Attributes.html#button_cancel
+
+!**************************** Box Font Replacement ***********************
+*font_select.bboard.userData:		Box_Font_Replacement.html
+*font_select*Font Name.userData:	Box_Font_Replacement.html#label
+*font_select*FSListSW.userData:		Box_Font_Replacement.html#font_list
+*font_select*tbKeepAlias.userData:	Box_Font_Replacement.html#keep_button
+*font_select*action_area.Ok.userData:	Box_Font_Replacement.html#button_ok
+*font_select*action_area.Cancel.userData: Box_Font_Replacement.html#button_cancel
+
+!**************************** Box Align **********************************
+*BoxAlign.bboard.userData:		Box_Align.html
+*BoxAlign*fAlignH.userData:		Box_Align.html#halignment_frame
+*BoxAlign*BALIcon1H.userData:		Box_Align.html#left_alignment_icon
+*BoxAlign*BALIcon2H.userData:		Box_Align.html#hcenter_alignment_icon
+*BoxAlign*BALIcon3H.userData:		Box_Align.html#right_alignment_icon
+*BoxAlign*BALIcon4H.userData:		Box_Align.html#hborder_alignment_icon
+*BoxAlign*lBASpacingH.userData:		Box_Align.html#hspacing_textfield
+*BoxAlign*tfBASpacingH.userData:	Box_Align.html#hspacing_textfield
+*BoxAlign*tbDistributionH.userData:	Box_Align.html#hdistribution_toggle
+*BoxAlign*fAlignV.userData:		Box_Align.html#valignment_frame
+*BoxAlign*BALIcon1V.userData:		Box_Align.html#top_alignment_icon
+*BoxAlign*BALIcon2V.userData:		Box_Align.html#vcenter_alignment_icon
+*BoxAlign*BALIcon3V.userData:		Box_Align.html#bottom_alignment_icon
+*BoxAlign*BALIcon4V.userData:		Box_Align.html#vborder_alignment_icon
+*BoxAlign*lBASpacingV.userData:		Box_Align.html#vspacing_textfield
+*BoxAlign*tfBASpacingV.userData:	Box_Align.html#vspacing_textfield
+*BoxAlign*tbDistributionV.userData:	Box_Align.html#vdistribution_toggle
+*BoxAlign*action_area.Ok.userData:	Box_Align.html#button_ok
+*BoxAlign*action_area.Cancel.userData: Box_Align.html#button_cancel
+
+!**************************** Box Image Cache ****************************
+*BoxCache.bboard.userData:		Box_Image_Cache.html
+*BoxCache*fBCmemoryCache.userData:	Box_Image_Cache.html#memory_cache_frame
+*BoxCache*lMemTotal.userData:		Box_Image_Cache.html#max_memory_textfield
+*BoxCache*tfMemTotal.userData:		Box_Image_Cache.html#max_memory_textfield
+*BoxCache*lMemUsed.userData:		Box_Image_Cache.html#used_memory_textfield
+*BoxCache*tfMemUsed.userData:		Box_Image_Cache.html#used_memory_textfield
+*BoxCache*lMemFree.userData:		Box_Image_Cache.html#free_memory_textfield
+*BoxCache*tfMemFree.userData:		Box_Image_Cache.html#free_memory_textfield
+*BoxCache*pbBCCleanMemCache.userData:	Box_Image_Cache.html#memory_clear_button
+*BoxCache*fBCdiskCache.userData:	Box_Image_Cache.html#disk_cache_frame
+*BoxCache*lDiskTotal.userData:		Box_Image_Cache.html#max_disk_textfield
+*BoxCache*tfDiskTotal.userData:		Box_Image_Cache.html#max_disk_textfield
+*BoxCache*lDiskUsed.userData:		Box_Image_Cache.html#used_disk_textfield
+*BoxCache*tfDiskUsed.userData:		Box_Image_Cache.html#used_disk_textfield
+*BoxCache*lDiskFree.userData:		Box_Image_Cache.html#free_disk_textfield
+*BoxCache*tfDiskFree.userData:		Box_Image_Cache.html#free_disk_textfield
+*BoxCache*pbBCCleanDiskCache.userData:	Box_Image_Cache.html#disk_clear_button
+*BoxCache*tbBCKeepCacheOnDisk.userData:	Box_Image_Cache.html#save_cache_button
+*BoxCache*action_area.Ok.userData:	Box_Image_Cache.html#button_ok
+
+!**************************** Box Print **********************************
+*BoxPrint.bboard.userData:		Box_Print.html
+*BoxPrint*fPrinter*userData:		Box_Print.html#printer_list
+*BoxPrint*lNbCopy.userData:		Box_Print.html#nb_copy_textfield
+*BoxPrint*tfNbCopy.userData:		Box_Print.html#nb_copy_textfield
+*BoxPrint*fHowPrint.userData:		Box_Print.html#draft_mode_toggle
+*BoxPrint*rbDraftMode.userData:		Box_Print.html#draft_mode_toggle
+*BoxPrint*rbBWMode.userData:		Box_Print.html#nb_mode_radio
+*BoxPrint*rbColorMode.userData:		Box_Print.html#color_mode_radio
+*BoxPrint*fWhatPrint.userData:		Box_Print.html#left_page_toggle
+*BoxPrint*rbLeftPages.userData:		Box_Print.html#left_page_toggle
+*BoxPrint*rbRightPages.userData:	Box_Print.html#right_page_toggle
+*BoxPrint*fPrintPage.userData:		Box_Print.html#all_document_toggle
+*BoxPrint*tbAllPages.userData:		Box_Print.html#all_document_toggle
+*BoxPrint*lFrom.userData:		Box_Print.html#page_from_to_textfields
+*BoxPrint*tfFrom.userData:		Box_Print.html#page_from_to_textfields
+*BoxPrint*lTo.userData:			Box_Print.html#page_from_to_textfields
+*BoxPrint*tfTo.userData:		Box_Print.html#page_from_to_textfields
+*BoxPrint*action_area.Ok.userData:	Box_Print.html#button_ok
+*BoxPrint*action_area.Cancel.userData:	Box_Print.html#button_cancel
+
+!**************************** Text Editor ********************************
+*AEditor.bboard.userData:		Box_Editor.html
+*AEditor*AEMenuBar.userData:		Box_Editor.html#menu_bar
+*AEditor*pmEdit.userData:		Box_Editor.html#edition_menu
+*AEditor*mCut.userData:			Box_Editor.html#cut_menu_entry
+*AEditor*mCopy.userData:		Box_Editor.html#copy_menu_entry
+*AEditor*mPaste.userData:		Box_Editor.html#paste_menu_entry
+*AEditor*pmOptions.userData:		Box_Editor.html#options_menu
+*AEditor*mInsertStyle.userData:		Box_Editor.html#insert_font_menu_entry
+*AEditor*mInsertRuler.userData:		Box_Editor.html#insert_paragraph_menu_entry
+*AEditor*mLineFeed.userData:		Box_Editor.html#insert_new_line_menu_entry
+*AEditor*mFrameBreak.userData:		Box_Editor.html#insert_frame_break_menu_entry
+*AEditor*mSetMark1.userData:		Box_Editor.html#drop_mark_menu_entry
+*AEditor*mSetMark2.userData:		Box_Editor.html#drop_mark_menu_entry
+*AEditor*mGoMark1.userData:		Box_Editor.html#go_to_mark_menu_entry
+*AEditor*mGoMark2.userData:		Box_Editor.html#go_to_mark_menu_entry
+*AEditor*mDelMark1.userData:		Box_Editor.html#destroy_mark_menu_entry
+*AEditor*mDelMark2.userData:		Box_Editor.html#destroy_mark_menu_entry
+*AEditor*mTextExport.userData:		Box_Editor.html#export_text_menu_entry
+*AEditor*XmText.userData:		Box_Editor.html#text_textfield
+*AEditor*Editor_DownRow.userData:	Box_Editor.html#new_line_icon
+*AEditor*IconNewline.userData:		Box_Editor.html#new_line_icon
+*AEditor*IconNextframe.userData:	Box_Editor.html#frame_break_icon
+*AEditor*lAERuler.userData:		Box_Editor.html#paragraph_list
+*AEditor*imAERuler.userData:		Box_Editor.html#paragraph_list
+*AEditor*IconRuler.userData:		Box_Editor.html#paragraph_ins_icon
+*AEditor*lAEStyle.userData:		Box_Editor.html#font_list
+*AEditor*imAEStyle.userData:		Box_Editor.html#font_list
+*AEditor*IconStyle.userData:		Box_Editor.html#font_ins_icon
+*AEditor*action_area.Ok.userData:	Box_Editor.html#button_ok
+*AEditor*action_area.Cancel.userData:	Box_Editor.html#button_cancel
+
+
+
+
+
+

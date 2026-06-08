@@ -1,0 +1,20 @@
+/* XPM */
+static char * plus_arm_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"11 11 4 1",
+" 	s None	c None",
+".	c black",
+"X	c gray80",
+"o	c gray10",
+/* pixels */
+"           ",
+"           ",
+"    ...    ",
+"    .XXX   ",
+"  ...XXX.  ",
+"  .XXXXXXX ",
+"  oXXXXXXX ",
+"   XXXXXXX ",
+"    .XXX   ",
+"     XXX   ",
+"           "};

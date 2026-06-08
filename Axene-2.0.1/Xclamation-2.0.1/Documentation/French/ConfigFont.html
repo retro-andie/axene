@@ -1,0 +1,100 @@
+<!-- Documentation Xclamation (c)1994-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration des polices</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigFont.gif" ALT="Configuration des polices" WIDTH="288" HEIGHT="37"> </p>
+
+<p><br>
+<br>
+Cette section des <a HREF="Config.html">fichiers de configuration</a> permet de définir
+les polices de caractères utilisées dans Xclamation. </p>
+
+<h3>Section de définition de la liste des polices&nbsp;: <i>\FONTLIST{...}</i></h3>
+
+<p>Cette section introduit la définition de la liste des polices accessibles dans les
+menus correspondants d'Xclamation. La définition des polices de la liste s'effectue
+après l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade fermante
+correspondante <i>&quot;}&quot;</i>. Chaque élément de la liste des polices est défini
+comme il l'est décrit ci-dessous. <a NAME="font"></p>
+
+<h3>Section de définition d'une police&nbsp;: <i>\FONT{...}</i></h3>
+
+<p>Cette section définit une police de la liste des polices. La définition d'une police
+s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade fermante <i>&quot;}&quot;</i>.
+</a></p>
+
+<p>Les paramètres de définition d'une police sont&nbsp;: 
+
+<ol>
+  <li><a NAME="id">L'<b>identifiant de la police</b>&nbsp;: nom interne utilisé pour
+    désigner cette police. Vous pouvez attribuer ce nom comme bon vous semble, mais il doit
+    être unique pour l'ensemble des fichiers de configuration chargé par Xclamation. </a><br>
+    &nbsp;</li>
+  <li><b>\FULLNAME{name}</b> où <i>name</i> représente le nom attribué à la police dans
+    les menus correspondants d'Xclamation. <br>
+    &nbsp;</li>
+  <li><b>\FAMILLY{name}</b> où <i>name</i> représente le nom de la famille à laquelle
+    appartient la police. Ce nom permet de regrouper des polices par famille, et le paramètre
+    suivant de caractériser une police dans sa famille. <br>
+    &nbsp;</li>
+  <li><b>\NORMAL</b>, <b>\BOLD</b>, <b>\ITALIC</b>, <b>\BOLD_ITALIC</b>&nbsp;: représentent
+    la caractéristique (normal, grasse, italique, grasse et italique ) de la police par
+    rapport à sa famille. <br>
+    &nbsp;</li>
+  <li><b>\DOWNLOAD</b>&nbsp;: indique que la police doit être ajoutée dans le fichier
+    PostScript. Si votre imprimante contient cette fonte, il est déconseillé de mettre ce
+    paramètre car le PostScript généré sera plus gros.<br>
+    Consultez le manuel de votre imprimante pour connaître les polices présentes. Une
+    imprimante PostScript niveau 1 possède de base au moins treize polices suivantes&nbsp;: <ul>
+      <li>Times (normal, italique, gras, gras-italique) </li>
+      <li>Courier (normal, italique, gras, gras-italique) </li>
+      <li>Helvetica (normal, italique, gras, gras-italique) </li>
+      <li>Symbol <br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li>Le dernier paramètre correspond au <b>nom du fichier contenant la police</b>. Les
+    fichier &quot;.pfa&quot; et &quot;.pfb&quot; sont acceptés. Les fichiers &quot;.pfc&quot;
+    sont des polices ne pouvant pas être chargés dans l'imprimante (le paramètre \DOWNLOAD
+    est inopérant). Ces polices doivent donc être déjà présentes dans votre imprimante. <br>
+    Il est à noter que le chemin d'accès n'est pas précisé car il est défini par une
+    variable d'environnement (voir Installation). <p><br>
+    </p>
+  </li>
+</ol>
+
+<h3>Exemple&nbsp;:</h3>
+<tt>
+
+<p>\FONTLIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FONT{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AvantGarde-Demi<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FULLNAME{ITC Avant Garde Gothic Demi}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\DOWNLOAD<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FAMILLY{ITC Avant Garde}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\BOLD<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AvantGarde-Demi.pfa<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FONT{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Times-BoldItalic<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FULLNAME{Times Bold Italic}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FAMILY{Times}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\BOLD_ITALIC<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Times-BoldItalic.pfc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXclamation.gif" ALT="Xclamation (c)1996. Axene" WIDTH="167" HEIGHT="29"></p>
+</body>
+</html>

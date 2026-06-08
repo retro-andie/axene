@@ -1,0 +1,27 @@
+/* XPM */
+static char * line_doublesizeup_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"50 18 4 1",
+" 	s None	c None",
+".	c gray60",
+"X	c black",
+"o	c white",
+/* pixels */
+"                                                  ",
+"                                                  ",
+"                                                  ",
+"   ............................................   ",
+"   ............................................   ",
+"   ............................................   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...   ",
+"   ...oooooooooooooooooooooooooooooooooooooo...   ",
+"   ...oooooooooooooooooooooooooooooooooooooo...   ",
+"   ............................................   ",
+"   ............................................   ",
+"   ............................................   ",
+"                                                  ",
+"                                                  ",
+"                                                  "};

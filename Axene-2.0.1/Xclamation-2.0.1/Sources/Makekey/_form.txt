@@ -1,0 +1,5 @@
+NAME: Xcalibur Dev Team
+SOCIETY: pb
+SOFT: xclamation
+TYPE: free
+DATE: 09/10/1998

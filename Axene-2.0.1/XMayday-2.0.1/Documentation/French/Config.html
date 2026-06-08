@@ -1,0 +1,71 @@
+<!-- Documentation XMayday (c)1996-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fichiers de configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFiles.gif"
+ALT="Fichiers de configuration" WIDTH="281" HEIGHT="37"> </p>
+
+<p><br>
+<br>
+</p>
+
+<p>XMayday vous permet de définir un certain nombre de paramètres de configuration par
+défaut&nbsp;: 
+
+<ul>
+  <li><a HREF="ConfigHelp.html">Configuration de l'aide</a> </li>
+  <li><a HREF="ConfigImageCache.html">Configuration du cache images</a> </li>
+  <li><a HREF="ConfigPrinter.html">Configuration des imprimantes</a> </li>
+</ul>
+
+<p>Ces paramètres sont décrits dans le fichier &quot;xmaydayrc&quot;. Chaque utilisateur
+peut également ajouter ses propres définitions de paramètres par défaut en créant
+dans son répertoire principal (HOME DIRECTORY) un fichier &quot;.xmaydayrc&quot;. </p>
+
+<p>Les fichiers de configuration sont lus séquentiellement dans cet ordre par
+XMayday&nbsp;: 
+
+<ol>
+  <li>&quot;<b>xmaydayrc</b>&quot; </li>
+  <li>&quot;<b>.xmaydayrc</b>&quot; </li>
+</ol>
+
+<p><br>
+</p>
+
+<h3>Syntaxe du fichier de configuration&nbsp;:</h3>
+
+<p>Le fichier de configuration d'XMayday est constitué de sections imbriquées. Chaque
+section commence par &quot;\TYPESECTION{&quot; où <i>TYPESECTION</i> est le mot réservé
+indiquant le type de la section. Une section s'achève par une accolade fermante <i>&quot;}&quot;</i>.
+Ainsi, le squelette type d'un fichier de configuration XMayday adoptera la forme
+suivante&nbsp;: </p>
+<tt>
+
+<p><a HREF="Config.html#config">\CONFIG</a>{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a HREF="ConfigHelp.html">\HELP_CONFIG</a>{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a HREF="ConfigImageCache.html">\CACHE_CONFIG</a>{...} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a HREF="ConfigPrinter.html">\PRINTER</a>{...} <br>
+} </tt><a NAME="config"></p>
+
+<h3>Section Principale du fichier de configuration&nbsp;: <i>\CONFIG{...}</i></h3>
+
+<p>Section principale du fichier de configuration. Le fichier de configuration doit
+commencer par&nbsp;: <i>&quot;\CONFIG{&quot;</i> et se terminer par l'accolade fermante
+correspondante &quot;}&quot;. Les sections de configuration de chaque élément prennent
+place entre les deux accolades. </a></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXMayday.gif" ALT="XMayday (c)1997. Axene" WIDTH="164"
+HEIGHT="31"></p>
+</body>
+</html>

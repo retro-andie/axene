@@ -1,0 +1,121 @@
+<!-- Documentation XMayday (c)1996-2000 AXENE contact axene@axene.org>
+<HTML>
+<HEAD>
+<TITLE>Aide g&eacute;n&eacute;rale</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF BACKGROUND="Images/back.gif" TEXT=#000000>
+<P ALIGN=right>
+<IMG ALIGN=middle SRC="Images/TitleOverview.gif" ALT="Comment d&eacute;buter">
+<P>
+<BR>
+<BR>
+XMayday est un <B>&quot;Navigateur HTML&quot;</B>, c'est-&agrave;-dire
+un logiciel capable de lire, afficher et g&eacute;rer des
+documents d&eacute;crits gr&acirc;ce au langage HTML (Hyper
+Text Markup Language). Le langage HTML est un langage de description
+de document. Il permet par exemple de d&eacute;finir des gras, des italiques,
+des listes d'&eacute;l&eacute;ments, des positionnements de textes, etc.
+Une des particularit&eacute; du langage HTML est qu'il permet de
+cr&eacute;er des liens entre les documents&nbsp;: un mot du document A,
+une fois activ&eacute; d'un clic de souris, renvoie sur un document
+B auquel il fait r&eacute;f&eacute;rence.<BR>
+XMayday a &eacute;t&eacute; sp&eacute;cialement
+con&ccedil;u pour consulter des documentations &eacute;crites
+en HTML. Les documentations &eacute;tant g&eacute;n&eacute;ralement architectur&eacute;es
+autour d'une page d'index ou de table des mati&egrave;res, XMayday propose
+d'isoler cette page pour la garder toujours rapidement accessible.
+L'<A HREF="Main_Interface.html">interface g&eacute;n&eacute;rale</A>
+d'XMayday propose deux sections&nbsp;:<BR>
+<UL>
+  <LI>une <A HREF="Main_Interface.html#index_section">premi&egrave;re section</A>
+     contient l'index ou la table des mati&egrave;res,
+     qui reste toujours accessible. La page affich&eacute;e dans cette partie
+     ne change jamais et les liens hypertextes qui la composent influent sur le
+     contenu de la deuxi&egrave;me section.
+     <P>
+  <LI>la <A HREF="Main_Interface.html#browse_section">deuxi&egrave;me section</A>
+     affiche les pages HTML de la documentation
+     consult&eacute;e. Ces pages changent en fonction des d&eacute;placements
+     au gr&eacute; des liens hypertextes qu'elles contiennent ou en fonction des
+     liens hypertextes de la page de la premi&egrave;re section.
+</UL>
+<P>
+Il est bien s&ucirc;r possible d'utiliser XMayday comme n'importe quel autre navigateur
+HTML, sans b&eacute;n&eacute;ficier de la table des mati&egrave;res
+pr&eacute;sent&eacute;e dans la premi&egrave;re section de l'interface.
+<P>
+Il est &agrave; noter que XMayday ne peut lire que les fichiers locaux. Il ne
+peut pas acc&eacute;der &agrave; des fichiers distants gr&acirc;ce au protocole HTTP, comme
+le font les navigateurs utilis&eacute;s sur l'Internet. C'est justement cette particularit&eacute;
+qui permet &agrave; XMayday d'&ecirc;tre peu gourmand en ressources syst&egrave;mes et en fait
+un outil particuli&egrave;rement adapt&eacute; &agrave; la consulation de documentations HTML.
+<P>
+<BR>
+<P>
+<HR>
+<H2>Cr&eacute;er vos propres documentations&nbsp;:</H2>
+XMayday &eacute;tant gratuit, il peut &ecirc;tre utilis&eacute; et distribu&eacute;
+conform&eacute;ment &agrave; la <A HREF="License.html">licence</A> d'utilisation.
+Les documentations peuvent &ecirc;tre r&eacute;alis&eacute;es selon la norme
+HTML 2.0 et peuvent inclure certains marqueurs suppl&eacute;mentaires,
+tels que ceux d&eacute;finissant les tables. Les images utilis&eacute;es dans les
+documentations peuvent &ecirc;tre aux formats GIF, JPEG, PNG, BMP et TGA
+(il est toutefois pr&eacute;f&eacute;rable d'utiliser les formats GIF ou JPEG car les
+autres formats ne sont pas reconnus par tous les navigateurs).
+<P>
+Pour utiliser pleinement XMayday, il est recommand&eacute; de cr&eacute;er une
+page (table des mati&egrave;res ou index), contenant des
+liens vers toutes les parties de la documentation. Cette page,
+g&eacute;n&eacute;ralement nomm&eacute;e &quot;index.html&quot;, doit &ecirc;tre charg&eacute;e dans
+la premi&egrave;re section de l'interface g&eacute;n&eacute;rale.
+<P>
+Pour &ecirc;tre proprement interfac&eacute; avec vos propres logiciels,
+une API permet de commander de mani&egrave;re externe le fonctionnement d'XMayday
+(cette API est notamment utilis&eacute;e dans tous les autres produits
+Axene pour leurs propres documentations).
+<P>
+<BR>
+<P>
+<HR>
+<H2>Le lancement</H2>
+<B>usage&nbsp;:</B> <TT>XMayday [-help] [-version] [-fg &lt;couleur&gt;]
+[-bg &lt;couleur&gt;] [-display &lt;nom_du_display&gt;] [-geometry
+&lt;geom&gt;] [-keepFreeColor &lt;nombre&gt;] [-index &lt;fichier&gt;]
+[fichier] </TT>
+<P>
+<B>d&eacute;tail&nbsp;:</B><BR>
+<TT><B>-help, --help, -h</B></TT><BR>
+Affiche un r&eacute;sum&eacute; des param&egrave;tres
+accept&eacute;s sur la ligne de commande.
+<P>
+<TT><B>-version, -v</B></TT><BR>
+Affiche le num&eacute;ro de version d'XMayday.
+<P>
+<TT><B>-fg couleur</B></TT><BR>
+Permet de d&eacute;finir la couleur d'avant plan.
+<P>
+<TT><B>-bg couleur</B></TT><BR>
+Permet de d&eacute;finir la couleur d'arri&egrave;re plan.
+<P>
+<TT><B>-display host:dpy</B></TT><BR>
+Sp&eacute;cifie le serveur X &agrave; utiliser.
+<P>
+<TT><B>-geometry geom</B></TT><BR>
+Fixe la taille de la fen&ecirc;tre au d&eacute;marrage.
+<P>
+<TT><B>-keepFreeColor nombre</B></TT><BR>
+D&eacute;finit le nombre de couleurs &agrave; laisser libres pour l'utilisation
+d'autres applications X. Par d&eacute;faut, la valeur est 10 pour une palette de 256
+couleurs. Cette option ne peut &ecirc;tre utile que dans le cas o&ugrave; votre
+serveur X travaille en Pseudo-Color.
+<P>
+<TT><B>-index fichier, -id fichier</B></TT><BR>
+Ouvre XMayday avec comme page d'index le <I>fichier</I>.
+<P>
+<BR>
+<HR>
+<P ALIGN=right>
+<IMG SRC="Images/SigXMayday.gif" ALT="XMayday (c)1997 Axene"><P>
+</BODY>
+</HTML>

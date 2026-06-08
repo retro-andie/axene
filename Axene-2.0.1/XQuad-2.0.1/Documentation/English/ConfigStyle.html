@@ -1,0 +1,92 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Style Configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif"
+ALT="Configuration files" width="136" height="25"> <img ALIGN="middle"
+SRC="Images/TitleConfigStyle.gif" ALT="Style Configuration" width="224" height="35"> </p>
+
+<p><br>
+<br>
+This <a HREF="Config.html">configuration file</a> section pre-defines a style-list. </p>
+
+<h3>Style-list Definition Section: <i>\STYLELIST{....}</i></h3>
+
+<p>This section presents the style-list definitions accessible in corresponding XQuad
+menus. The definition of the style-list appears between the opening bracket <i>&quot;{&quot;</i>
+and corresponding closing bracket <i>&quot;}&quot;</i>. Each element from the style-list
+is defined as described below. <a NAME="style"></p>
+
+<h3>Style Definition Section: \STYLEX{...}</h3>
+
+<p>This section defines style <i>X</i> in the XQuad styles-base. A style's definition
+appears between the opening bracket <i>&quot;{&quot;</i> and closing bracket <i>&quot;}&quot;</i>.
+Parameters of a style definition are: </a>
+
+<ol>
+  <li><b>\FONT{<a HREF="ConfigFont.html#id">font name</a>}</b>: font name attached to a
+    particular style. <br>
+    &nbsp;</li>
+  <li><b><a HREF="ConfigColor.html#color">\COLORX</a></b>: color name attached to a particular
+    style. <br>
+    &nbsp;</li>
+  <li>the <b>font size</b> attached to a particular style. <br>
+    &nbsp;</li>
+  <li><b>\NAME{style name}</b>: style name as it appears in XQuad. <br>
+    &nbsp;</li>
+  <li><b>\WIDTH{expansion}</b>: the horizontal expansion of this style's font (1 indicates the
+    font is normal size, 1.5 indicates it is one and a half times bigger than its normal
+    size.) <br>
+    &nbsp;</li>
+  <li><a NAME="lock"><b>\LOCK</b> locks a style defined in XQuad's style base so that it
+    cannot be deleted from the '</a><a HREF="Box_Font.html#button_del">style composition</a>'
+    dialog box. <br>
+    &nbsp;</li>
+  <li><a NAME="hide"><b>\HIDE</b> hides the defined style so that it does not appear in XQuad
+    style lists. </a><br>
+    &nbsp;</li>
+</ol>
+
+<h3>Example:</h3>
+<tt>
+
+<p>\STYLELIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\STYLE0{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FONT{Helvetica}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COLOR3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Normal&nbsp;12pts}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\WIDTH{1}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\STYLE1{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FONT{Helvetica-Bold}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COLOR1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Section&nbsp;16pts}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\WIDTH{.8}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\LOCK<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\STYLE2{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FONT{Helvetica-Bold}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COLOR1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Large&nbsp;20pts}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\WIDTH{1.7}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166"
+HEIGHT="28"></p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* XPM */
+static char * Page_Previous_xpm[] = {
+"13 11 4 1",
+" 	c gray60",
+".	c gray90",
+"X	c gray20",
+"o	c gray65",
+"             ",
+"         .X  ",
+"       ..oX  ",
+"     ..oooX  ",
+"   ..oooooX  ",
+"  .oooooooX  ",
+"   XXoooooX  ",
+"     XXoooX  ",
+"       XXoX  ",
+"         XX  ",
+"             "};

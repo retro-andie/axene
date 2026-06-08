@@ -1,0 +1,395 @@
+
+******************************************************************************
+                                     AXENE 
+                             http://www.axene.org
+******************************************************************************
+                            AXENE XCLAMATION 2.0.1
+                               AXENE XQUAD 2.0.1
+                            AXENE XALLWRITE 2.0.1 BETA
+                              AXENE XMAYDAY 2.0.1
+
+ Prior to using any of these applications, you must agree to the following as 
+         well as to the licensing terms contained in the LICENSE file.
+
+            Original locations :  ftp.axene.org
+
+******************************************************************************
+******************************************************************************
+
+  I. DOWNLOADING THE SOFTWARE FROM THE INTERNET
+
+ II. INSTALLATION PROCEDURE
+
+III. FILES AND DIRECTORIES INSTALLED
+
+ IV. SOME SPECIFIC CONFIGURATIONS
+
+  V. RUNNING THE APPLICATIONS
+
+ VI. TROUBLESHOOTING
+
+
+==============================================================================
+==============================================================================
+  I.  DOWNLOADING THE SOFTWARE FROM THE INTERNET
+==============================================================================
+==============================================================================
+
+In order to install a Xclamation, XQuad or XAllWrite package you must already
+have the archive file <common.tar.gz> as well as the installation script
+<install.sh>.
+To install XMayday, you just need the <install.sh> script.
+
+<common.tar.gz> contains the files and resources common to Xclamation and
+XQuad: 
+
+- Basic fonts
+- Fonts metrics
+- Directory nls/    for X11R5
+- Directory locale/ for X11R6
+- The file XKeysymDB
+
+Then, download at least one of the following packages, according to your 
+environment.
+
+Note: You do not need to be a System Administrator to install these 
+applications.
+
+*.alpha-digital-osf1-3.2.tar.gz: X11R5 Static   Motif 1.2.4 Static
+*.hppa-hpux-10.20.tar.gz       : X11R5 Dynamic  Motif 1.2.4 Dynamic
+*.i386-freebsd-2.2.tar.gz      : X11R6 Dynamic  Motif 1.2.0 Static
+*.i386-netbsd-1.0.tar.gz       : X11R6 Static   Motif 1.2.0 Static
+*.i386-sco-3.2v4.2.tar.gz      : X11R5 Static   Motif 1.2.1 Static
+*.i486-linux-1.2.tar.gz        : X11R6 Static   Motif 1.2.0 Static
+*.i486-linux-2.0-elf.tar.gz    : X11R6 Dynamic  Motif 1.2.0 Static
+*.i586-linux-2.0-elf.tar.gz    : X11R6 Dynamic  Motif 2.0.0 Dynamic
+*.i586-sco-3.2v5-elf.tar.gz    : X11R5 Dynamic  Motif 1.2.4 Dynamic
+*.mips-sgi-irix-5.3.tar.gz     : X11R5 Dynamic  Motif 1.2.4 Dynamic
+*.rs6000-aix-3.2.5.tar.gz      : X11R6 Static   Motif 1.2.0 Static
+*.rs6000-ppc-aix-4.1.3.tar.gz  : X11R5 Dynamic  Motif 1.2.4 Dynamic
+*.sparc-linux-2.0-elf.tar.gz   : X11R6 Dynamic  Motif 1.2.0 Static
+*.sparc-solaris-2.5.tar.gz     : X11R5 Dynamic  Motif 1.2.4 Dynamic
+*.sparc-sunos-4.1.4.tar.gz     : X11R6 Static   Motif 1.2.0 Static
+*.i486-solaris-2.4.tar.gz      : OW3.0 Dynamic  Motif 1.2.0 Static
+
+****************  COMING SOON:
+*.i386-unixware
+
+==============================================================================
+==============================================================================
+  II. INSTALLATION PROCEDURE
+==============================================================================
+==============================================================================
+
+If you get Axene's software on a CDROM... launch <AxeneInstall> program
+(graphical installation process) or you can use the <install.sh> shell
+script if you don't have the graphical installation program.
+
+
+Place the files <install.sh>, <common.tar.gz> and the above packages in the 
+same directory and enter the command:
+
+$ sh install.sh
+
+or 
+
+$ chmod +rx install.sh
+$ ./install.sh
+
+After consenting to be bound by the LICENSE agreement, the list of all 
+files in the current directory with extension '.tar.gz' will be 
+displayed. Select the packages you want to install:
+
+Example:
+Please select packages to be installed (ex: 1 2)
+  1. XMayday-v120.i386-sco-3.2v4.2.tar.gz
+  2. XMayday-v120.i486-linux-1.2.tar.gz
+  3. XMayday-v120.rs6000-ppc-aix-4.1.4.tar.gz
+  4. XMayday-v111.sparc-solaris-2.5.tar.gz
+  5. XQuad-v140.i386-sco-3.2v4.2.tar.gz
+  6. XQuad-v140.i486-linux-1.2.tar.gz
+  7. XQuad-v140.rs6000-ppc-aix-4.1.4.tar.gz
+  8. XQuad-v140.sparc-solaris-2.5.tar.gz
+  9. Xclamation-v140.i386-sco-3.2v4.2.tar.gz
+ 10. Xclamation-v140.i486-linux-1.2.tar.gz
+ 11. Xclamation-v140.rs6000-ppc-aix-4.1.4.tar.gz
+ 12. Xclamation-v140.sparc-solaris-2.5.tar.gz
+ 13. common.tar.gz
+Your choice: 
+
+Select the packages you want, by entering the corresponding numbers with a 
+"space" between each.
+
+Example: 2 4 6 8 10 12 13
+
+Note: 
+* The order in which you select package numbers, doesn't matter.
+* If you have not already installed <common.tar.gz>, do not forget to include 
+  it in your selection, otherwise Xclamation, XQuad and XAllWrite will not run.
+  XMayday doesn't required <common.tar.gz>'s installation.
+* If a package has already been installed and configured successfully, you do 
+  not need to install again <common.tar.gz>.
+
+
+Where do you want to install the software?
+(DEFAULT: /usr/Axene)
+Your location: 
+
+ The path you define here is referred to as <INSTALL_DIR> in the rest of this 
+document.
+
+Note:
+  If you work on an heterogeneous network, you are advised to install XQuad, 
+  Xclamation or XAllWrite programs for each environment within the same
+  directory. 
+
+The script will try to find `gunzip' and `tar' in your file system. If it
+failed in this search, it will prompt you the location of these files.
+
+Once the archive files have been decompressed, you are invited to select the 
+language for the user interface:
+
+Choose language
+  1. English.us (DEFAULT)
+  2. English.uk
+  3. French
+  4. German
+  5. Spanish
+Your choice: 
+
+Then the script will configure and create shell scripts to make running
+Xclamation, XQuad, XAllWrite or XMayday from everywhere in the file system.
+It will propose you to create a symlink of these shell script into 
+/usr/local/bin (only if you have right to write into this directory).
+
+ ========================
+ == INSTALLATION DONE. ==
+ ========================
+
+Then this message is displayed, the installation is finished and successful.
+
+==============================================================================
+==============================================================================
+  III. FILES AND DIRECTORIES INSTALLED
+==============================================================================
+==============================================================================
+
+
+You will find the following tree in your install directory:
+
+XAllWrite*		(if you install almost one XAllWrite package)
+XMayday*		(if you install almost one XMayday package)
+XQuad*			(if you install almost one XQuad package)
+Xclamation*		(if you install almost one Xclamation package)
+app-defaults/
+bin/
+lib/
+
+"XAllWrite" is the script for running XAllWrite
+"XMayday" is the script for running XMayday 
+"XQuad" is the script for running XQuad
+"Xclamation" is the script for running Xclamation
+
+
+The directory <INSTALL_DIR>/app-defaults contains the links to the resource
+files to be used, which are located in <INSTALL_DIR>/lib/locale/ , and are 
+named XQuad.*, Xclamation.*, XAllWrite.* or XMayday.*
+
+The directory <INSTALL_DIR>/lib includes the following directories and files:
+X11/
+fonts/
+locale/
+metrics/
+xcalibur.prc
+xallwriterc@
+xclamationrc@
+xmaydayrc@
+xquadrc@
+
+The directory <INSTALL_DIR>/lib/X11 contains the file XKeysymDB as well as 
+the directories nls/ and locale/, which will be used if the application cannot
+find the ones in your environment.
+
+The directory <INSTALL_DIR>/lib/fonts contains the PostScript fonts used by the
+Xclamation, XQuad & XAllWrite: *.pfa *.pfb (PostScript fonts) *.pfc (internal
+fonts).
+
+The directory <INSTALL_DIR>/lib/metrics contains the files *.afm, 
+(font metrics).
+
+The file <INSTALL_DIR>/lib/xcalibur.prc contains the procset needed for 
+PostScript printing (needless for XMayday). It is common to all AXENE 
+applications.
+
+The link <INSTALL_DIR>/lib/xclamationrc hooks to the right configuration file 
+to be used, according to the user language selected.
+Idem for <INSTALL_DIR>/lib/xquadrc and <INSTALL_DIR>/lib/xmaydayrc.
+
+The directory <INSTALL_DIR>/lib/locale contains the following files used by 
+the applications:
+<XQuad.*>, <Xclamation.*>, <XAllWrite.*> or <XMayday.*> : resource files for
+the different languages.
+
+<xquadrc.*>, <xclamationrc.*> or <xmaydayrc.*> : configuration files for the
+different languages (described below).
+
+<languages> : used to list the different languages that can be selected.
+
+<axene.hosts>: this file is automatically created when the scripts loading
+the applications are executed; it holds the host name and the name of the
+corresponding executable extension. If you grant the right to modify this file,
+the scripts will no longer ask you which executable to run if a number of
+them are installed on an heterogeneous network.
+
+
+
+==============================================================================
+==============================================================================
+  IV. SOME SPECIFIC CONFIGURATIONS
+==============================================================================
+==============================================================================
+
+<INSTALL_DIR>/lib/xclamationrc, <INSTALL_DIR>/lib/xquadrc,
+<INSTALL_DIR>/lib/xallwriterc and <INSTALL_DIR>/lib/xmaydayrc are
+configuration files for the applications.
+They hold the different sections you may customize. Refer to the documentation
+for details.
+
+In particular, the PRINTER section allows you to install new printers, 
+by adding the following line:
+\PRINTER{\NAME{printer name}\COMMAND{printing command}}
+Example:
+\PRINTER{\NAME{LaserWriter}\COMMAND{lpr -h -Plw}}
+
+You also can declare your printers in the files
+<~/.xclamationrc>, <~/.xquadrc>, <~/.xallwriterc> or <~/.xmaydayrc>.
+These files must begin with the command:
+
+\CONFIG{
+
+     followed by your personal definitions, such as:
+
+\PRINTER{\NAME{printer name}\COMMAND{printing command}}
+
+     and end with a closing brace:
+
+}
+
+\PRINTER is the only section important for the configuration of your system; 
+the other ones have default values that allow the applications to operate 
+properly.
+Note: the "lpr" command addresses a default printer
+
+
+
+
+
+==============================================================================
+==============================================================================
+  V. RUNNING THE APPLICATIONS
+==============================================================================
+==============================================================================
+
+To run Xclamation, enter the command <Xclamation>
+To run XQuad, enter the command <XQuad>
+To run XAllWrite, enter the command <XAllWrite>
+To run XMayday, enter the command <XMayday>
+
+------------------------------------------------------------------------------
+Notes: 
+* You may enter as parameters the names of one or more document files to be 
+  loaded. ex: 
+    $ Xclamation example.xc
+  try 
+    $ Xclamation -help 
+  to see the command line options.
+
+* If only one version of XQuad, Xclamation, XAllWrite or XMayday is installed,
+  the script will run it automatically.
+
+* If more than one version of an application is installed (for example, on a 
+  heterogeneous network) the first time you start the program, the script 
+  will ask you which is to be run. It will then write your answer in the file 
+  <INSTALL_DIR>/lib/locale/axene.hosts to avoid having to ask this question
+   again.
+
+* If you do not want this selection to be made automatically, remove write 
+  rights for this file.
+
+* If you do not want to use the scripts, you will have to create the following
+  environment variables:
+
+  $AXENE_LIB = <INSTALL_DIR>/lib
+    You can use $XCLAMATION_LIB, $XQUAD_LIB, $XALLWRITE_LIB or $XMAYDAY_LIB to
+    set a different path per software.
+  $XAPPLRESDIR = <INSTALL_DIR>/app-defaults
+                 (or the directory where you have stored the resources)
+
+
+
+
+*****************************************************************************
+For any comments or additional information, please contact:
+                         Email: contact@axene.org
+                          http://www.axene.org/
+
+*****************************************************************************
+
+==============================================================================
+==============================================================================
+  VI. TROUBLESHOOTING
+==============================================================================
+==============================================================================
+
+We would like to know about any bug found in this release. 
+Please send a mail to:
+
+xquad-bugs@axene.org       for XQuad
+xclamation-bugs@axene.org  for Xclamation
+xallwrite-bugs@axene.org   for XAllWrite
+xmayday-bugs@axene.org     for XMayday
+
+Do not forget to note your software and hardware environment, as well as the 
+release number of the application concerned.
+
+In you mail, add the result of the following commands
+(don't forget to substitute SOFTWARE_NAME by one of 
+ XAllWrite, Xclamation, XMayday, XQuad)
+
+$ SOFTWARE_NAME -v
+$ uname -a
+
+If you have a screen problem, add:
+$ xdpyinfo
+
+If you have a problem with your key, send us the result of the following
+command: 
+$ SOFTWARE_NAME -ck
+
+
+If you have a problem with small fonts display try to launch the software
+with the '-xbp' parameter.
+If you have a problem with lines display in vector based drawing try to launch
+the software with the '-xbl' parameter.
+If you have a problem with images display try to launch the software with the 
+'-nsp' parameter.
+
+
+
+*****************************************************************************
+
+Axene, XQuad, Xclamation, XAllWrite & XMayday are registered trademarks.
+Copyright (c)1994,95,96,97,98 Axene corporation. All rights reserved.
+PostScript is a registered trademark of Adobe Systems Inc.
+
+
+
+
+
+
+
+
+
+
+
+

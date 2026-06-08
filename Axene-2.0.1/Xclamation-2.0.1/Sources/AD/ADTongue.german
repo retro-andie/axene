@@ -1,0 +1,743 @@
+
+*title:				Axene Xclamation 2.0.1 - Desktop Publishing
+*lPleaseWait.labelString:		Bitte warten...
+
+*defaultFrameNameMsg:			Frame
+*defaultDocumentNameMsg:		Namenlos
+*defaultPageNameMsg:			Seite
+*automaticColorMsg:			Automatisch
+
+
+! ************************************************************************
+! **			MNEMONICS for PULLDOWN MENUS			**
+! ************************************************************************
+
+*pmFile.mnemonic:			D
+*pmEdit.mnemonic:			B
+*pmDisplay.mnemonic:			A
+*pmFrame.mnemonic:			F
+*pmWindows.mnemonic:			e
+*pmHelp.mnemonic:			H
+
+*pmFile.mNew.mnemonic:			N
+*pmFile.mOpen.mnemonic:			O
+*pmFile.mClose.mnemonic:		c
+*pmFile.mSave.mnemonic:			S
+*pmFile.mSaveAs.mnemonic:		u
+*pmFile.mSaveAll.mnemonic:		A
+*pmFile.mPrint.mnemonic:		D
+*pmFile*mImport.mnemonic:		I
+*mImportImage.mnemonic:			G
+*mImportText.mnemonic:			T
+*mImportVector.mnemonic:		V
+*pmFile.mQuit.mnemonic:			B
+
+*pmEdit.mCut.mnemonic:  		A
+*pmEdit.mCopy.mnemonic:  		K
+*pmEdit.mPaste.mnemonic:  		E
+*pmEdit.mDelete.mnemonic:  		n
+*pmEdit.mSelectAll.mnemonic:		l
+*pmEdit.mColors.mnemonic:  		F
+*pmEdit.mStyles.mnemonic:  		S
+*pmEdit.mRulers.mnemonic:  		b
+
+*pmDisplay.mRedraw.mnemonic:		d
+*pmDisplay.mRealSize.mnemonic:		A
+*pmDisplay.mScreenSize.mnemonic:	G
+*pmDisplay.mFullWidth.mnemonic:		V
+*pmDisplay.mMaskGrid.mnemonic:		i
+*pmDisplay.mShowGrid.mnemonic:		i
+*pmDisplay.mMaskHelplines.mnemonic:	R
+*pmDisplay.mShowHelplines.mnemonic:	R
+*pmDisplay.mMaskAlignlines.mnemonic:	m
+*pmDisplay.mShowAlignlines.mnemonic:	m
+*pmDisplay.mMaskRulers.mnemonic:	L
+*pmDisplay.mShowRulers.mnemonic:	L
+*pmDisplay.mMaskClipboard.mnemonic:	Z
+*pmDisplay.mShowClipboard.mnemonic:	Z
+*pmDisplay.mMaskInfobar.mnemonic:	H
+*pmDisplay.mShowInfobar.mnemonic:	H
+*pmDisplay.mMaskFrameBorders.mnemonic:	F
+*pmDisplay.mShowFrameBorders.mnemonic:	F
+*pmDisplay.mActivMagnet.mnemonic:	M
+*pmDisplay.mStopMagnet.mnemonic:	M
+
+*pmFrame.mDrawBar.mnemonic:		R
+*pmFrame.mDrawPolygon.mnemonic:		P
+*pmFrame.mDrawEllipse.mnemonic:		E
+*pmFrame.mPointInsert.mnemonic:		I
+*pmFrame.mPointDelete.mnemonic:		D
+*pmFrame.mPointMove.mnemonic:		M
+*pmFrame.mMoveDown.mnemonic:		H
+*pmFrame.mMoveUp.mnemonic:		u
+*pmFrame.mBackground.mnemonic:		g
+*pmFrame.mForeground.mnemonic:		V
+*pmFrame.mFrameAdd.mnemonic:		z
+*pmFrame.mFrameSub.mnemonic:		S
+*pmFrame.mFrameXor.mnemonic:		c
+*pmFrame.mFrameCut.mnemonic:		b
+*pmFrame.mLock.mnemonic:		A
+*pmFrame.mUnlock.mnemonic:		A
+*pmFrame.mAlign.mnemonic:		t
+*pmFrame.mRotate.mnemonic:		n
+*pmFrame.mScale.mnemonic:		k
+*pmFrame.mAttribs.mnemonic:		F
+*pmFrame.mFrameDelete.mnemonic:		L
+
+*pmOptions.mCache.mnemonic:		C
+*pmOptions.mGridSetup.mnemonic:		G
+
+*pmWindows.mCascade.mnemonic:		U
+*pmWindows.mTile.mnemonic:		N
+
+*pmHelp.mOverview.mnemonic:		b
+*pmHelp.mContent.mnemonic:		I
+*pmHelp.mKeyboard.mnemonic:		T
+*pmHelp.mMouse.mnemonic:		M
+*pmHelp.mOnItem.mnemonic:		e
+*pmHelp.mUsingHelp.mnemonic:		H
+*pmHelp.mLegal.mnemonic:		L
+*pmHelp.mRegistration.mnemonic:		a
+*pmHelp.mAbout.mnemonic:		X
+
+
+! ************************************************************************
+! **				PULLDOWN MENUS				**
+! ************************************************************************
+
+*pmFile.labelString:  			Datei
+*pmFile.mNew.labelString:		Neu...
+*pmFile.mOpen.labelString:		Öffnen...
+*pmFile.mClose.labelString:		Schließen
+*pmFile.mSave.labelString:  		Speichern
+*pmFile.mSaveAs.labelString:		Speichern unter...
+*pmFile.mSaveAll.labelString:  		Alle speichern
+*pmFile.mImport.labelString:  		Import
+*mImportImage.labelString: 		Grafik...
+*mImportText.labelString:	 	Text...
+*mImportVector.labelString:	 	Vektorgrafik...
+*pmFile.mPrint.labelString:  		Drucken...
+*pmFile.mQuit.labelString:  		Beenden...
+
+*pmEdit.labelString:  			Bearbeiten
+*pmEdit.mCut.labelString:  		Ausschneiden
+*pmEdit.mCopy.labelString:  		Kopieren
+*pmEdit.mPaste.labelString:  		Einsetzen
+*pmEdit.mDelete.labelString:  		Entfernen
+*pmEdit.mSelectAll.labelString:		Alles auswählen
+*pmEdit.mColors.labelString:  		Farben...
+*pmEdit.mStyles.labelString:  		Schriftarten...
+*pmEdit.mRulers.labelString:  		Absatz...
+
+*pmDisplay.labelString:			Ansicht
+*pmDisplay.mRedraw.labelString:		Alles neu darstellen
+*pmDisplay.mRealSize.labelString:	Aktuelle Größe
+*pmDisplay.mScreenSize.labelString:	Ganzseitig
+*pmDisplay.mFullWidth.labelString:	Volle Breite
+*pmDisplay.mMaskGrid.labelString:	Gitternetz ausblenden
+*pmDisplay.mShowGrid.labelString:	Gitternetz anzeigen
+*pmDisplay.mMaskHelplines.labelString:	Ränder & Flächen ausblenden
+*pmDisplay.mShowHelplines.labelString:	Ränder & Flächen anzeigen
+*pmDisplay.mMaskAlignlines.labelString:	Linealmarkierungen ausblenden
+*pmDisplay.mShowAlignlines.labelString:	Linealmarkierungen einblenden
+*pmDisplay.mMaskFrameBorders.labelString: Framerahmen ausblenden
+*pmDisplay.mShowFrameBorders.labelString: Framerahmen einblenden
+*pmDisplay.mMaskRulers.labelString:	Lineal ausblenden
+*pmDisplay.mShowRulers.labelString:	Lineal einblenden
+*pmDisplay.mMaskClipboard.labelString:	Zwischenablage ausblenden
+*pmDisplay.mShowClipboard.labelString:	Zwischenablage einblenden
+*pmDisplay.mMaskInfobar.labelString:	Hilfezeile ein
+*pmDisplay.mShowInfobar.labelString:	Hilfezeile aus
+*pmDisplay.mActivMagnet.labelString:	Magnet einschalten
+*pmDisplay.mStopMagnet.labelString:	Magnet abschalten
+
+*pmFrame.labelString:			Frame
+*pmFrame.mDrawBar.labelString:		Rechteck zeichnen
+*pmFrame.mDrawPolygon.labelString:	Polygon zeichnen
+*pmFrame.mDrawEllipse.labelString:	Ellipse zeichnen
+*pmFrame.mPointInsert.labelString:	Insert reshape point
+*pmFrame.mPointDelete.labelString:	Delete reshape point
+*pmFrame.mPointMove.labelString:	Move reshape point
+*pmFrame.mMoveDown.labelString:		Hochschieben
+*pmFrame.mMoveUp.labelString:		Herunterschieben
+*pmFrame.mBackground.labelString:	Hintergrund
+*pmFrame.mForeground.labelString:	Vordergrund
+*pmFrame.mFrameAdd.labelString:		Hinzufügen
+*pmFrame.mFrameSub.labelString:		Subtrahieren
+*pmFrame.mFrameXor.labelString:		Verschmelzen
+*pmFrame.mFrameCut.labelString:		Überdecken
+*pmFrame.mLock.labelString:		Abschließen
+*pmFrame.mUnlock.labelString:		Aufschließen
+*pmFrame.mFrameDelete.labelString:	Löschen
+*pmFrame.mAlign.labelString:		Ausrichten...
+*pmFrame.mRotate.labelString:		Drehen
+*pmFrame.mAttribs.labelString:		Frame-Eigenschaften...
+*pmFrame.mScale.labelString:		Skalieren
+
+*pmOptions.mCache.labelString:		Cache Information...
+*pmOptions.mGridSetup.labelString:	Grid setup...
+
+*pmWindows.labelString:			Fenster
+*pmWindows.mCascade.labelString:	Überlappend
+*pmWindows.mTile.labelString:		Nebeneinander
+
+*pmHelp.labelString:			Hilfe
+*pmHelp.mOverview.labelString:		Überblick...
+*pmHelp.mContent.labelString:		Inhalt...
+*pmHelp.mKeyboard.labelString:		Tastatur...
+*pmHelp.mMouse.labelString:		Maus...
+*pmHelp.mOnItem.labelString:		über ein Thema
+*pmHelp.mUsingHelp.labelString:		Hilfe benutzen...
+*pmHelp.mAbout.labelString:		Über Xclamation...
+*pmHelp.mLegal.labelString:		Lizenz...
+*pmHelp.mRegistration.labelString:	Mailinglisten...
+
+
+! ************************************************************************
+! **				DIALOG BOXES				**
+! ************************************************************************
+
+
+! ** Dialog Box: REPLACE FONT ********************************************
+
+*lFontSelect.labelString:		Schriftart nicht verfügbar
+*tbKeepAlias.labelString:		Alias beibehalten
+
+
+! ** Dialog Box: LICENSE *************************************************
+
+*lBoxLicense.labelString: The Licence file is missing.\n\
+It should be in $AXENE_LIB/license/\n\
+The installation may be incomplete.
+
+*keyFirstMsg:		Lizensiert für %s
+*keySecondMsg:		%s
+*noKeyFirstMsg:		Sie besitzen keinen Schlüssel
+*noVKeyFirstMsg:	Schlüssel ungültig
+*noKeySecondMsg:	Remember you can register
+*noVKeySecondMsg:	Benachrichtigen Sie support@axene.org
+*deadlineExpiredMsg:	Your key is expired
+*deadlineExpired2Msg:	You must register once again
+
+*lLegalAdress.labelString: Email: contact@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org
+
+*lLegalCopy.labelString: Copyright ©1994-2000 Axene, Inc. Alle Rechte vorbehalten.\n\
+Xclamation ist ein eigetragenes Warenzeichen.
+
+*BoxLegal*Ok.labelString:		How to registrer...
+*BoxLegal*Cancel.labelString:		Register later
+
+
+! ** Dialog Box: LICENSE2 *************************************************
+
+*lLegal2Title.labelString:		Why and How to register ?
+*lBoxLegal2.labelString: The Register file is missing.\n\
+It should be in $AXENE_LIB/license/\n\
+The installation may be incomplete.
+
+
+! ** Dialog Box: NEW DOCUMENT ********************************************
+
+*lBoxDocumentTitle.labelString:		Neues Dokument
+*lSize.labelString:			Größe
+*lNumberOfPages.labelString:		Seitenzahl
+*lMarginT.labelString:			Oben
+*lMarginB.labelString:			Unten
+*lMarginL.labelString:			Links
+*lMarginR.labelString:			Rechts
+*lColumns.labelString:			Spalten
+*lRows.labelString:			Zeilen
+*lVSpacing.labelString:			Abstand
+*lHSpacing.labelString:			Abstand
+*riPortrait.labelString:		Hochformat
+*riLandscape.labelString:		Querformat
+*rbRecto Verso.labelString:		Duplex
+*rbDouble Page.labelString:		Doppelseitig
+*fDirection.labelString:		Ausrichtung
+*fFormat.labelString:			Papierformat
+*fPageStyle.labelString:		Druckart
+*fMargin.labelString:			Ränder
+*fSections.labelString:			Spalten & Zeilen
+
+
+! ** Dialog Box: MODIFY PAGE *********************************************
+
+*lBoxPageTitle.labelString:		Seiteneinstellungen ändern
+*lPageNumber.labelString:		Seitenzahl
+! others labels are same than 'New Document' dialog box
+
+
+! ** Dialog Box: PARAGRAPHS  *********************************************
+
+*editRulersMsg:				Absatz
+*lBRAlinea.labelString:			Einzug
+*lBRMarginL.labelString:		Linker Rand 
+*lBRMarginR.labelString:		Rechter Rand
+*lInterParagraph.labelString:		Absatzabstand 
+*lInterLine.labelString:		Zeilenabstand
+*lWordDistribution.labelString:		Wortverteilung
+*tbRelativInterline.labelString:	Automatischer Zeilenabstand
+*lRatioMin.labelString:			Min Ratio
+*lRatioMax.labelString:			Max Ratio
+*lParagraphAdd.labelString:		Formatvorlage hinzufügen
+*lParagraphDel.labelString:		Formatvorlage entfernen
+*fBRMargin.labelString:			Einzug & Ránder
+*fBRSpacing.labelString:		Abstände
+*fJustify.labelString:			Ausrichtung
+*fDistribution.labelString:		Wortverteilung
+
+
+! ** Dialog Box: COLORS **************************************************
+
+*editColorsMsg:				Farben
+*lColor.labelString:			Farbvorschau
+*l_C.labelString:			Hellblau
+*l_M.labelString:			Magenta
+*l_Y.labelString:			Gelb
+*l_K.labelString:			Schwarz
+*l_R.labelString:			Rot
+*l_G.labelString:			Grün
+*l_B.labelString:			Blau
+*l_H.labelString:			Temperatur
+*l_S.labelString:			Sättigung
+*l_L.labelString:			Helligkeit
+*l_G1.labelString:			Grau
+*lColorAdd.labelString:			Farbe hinzufügen
+*lColorDel.labelString:			Farbe löschen
+*fBCmain.labelString:			Einstellung	
+*tbBC_CMYK.labelString:			CMYK
+*tbBC_RGB.labelString:			RGB
+*tbBC_HSL.labelString:			HSB
+*tbBC_GRAY.labelString:			Grau
+
+
+! ** Dialog Box: FRAME ATTRIBS *******************************************
+
+*frameAttribsMsg:			Frameeigenschaften
+*lBABackColor.labelString:		Hintergrundfarbe
+*lBABorderColor.labelString:		Randfarbe
+*lBABorderWidth.labelString:		Randbreite
+*fBAPreview.labelString:		Voransicht
+
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:		Drucken
+*lNbCopy.labelString:			Kopien
+*tbAllPages.labelString:		Ganzes Dokument
+*rbDraftMode.labelString:		Draft Mode
+*rbBWMode.labelString:			S/W (Graustufen)
+*rbColorMode.labelString:		Farbe
+*rbLeftPages.labelString:		Linke Seiten
+*rbRightPages.labelString:		Rechte Seiten
+*lFrom.labelString:			Seite
+*lTo.labelString:			bis
+*fPrinter.labelString:			Drucken bis...
+*fHowPrint.labelString:			Druckereinstellungen
+*fWhatPrint.labelString:		Druckoptionen
+*fPrintPage.labelString:		Seitenauswahl
+
+
+! ** Dialog Box: FONTS ***************************************************
+
+*editStylesMsg:				Schriftarten
+*lAddFont.labelString:			Schriftart zufügen
+*lDelFont.labelString:			Schriftart entfernen
+*tbBSglobal.labelString:		Attribute
+*tbBSconfig.labelString:		Einstellungen
+*lBSfamily.labelString:			Familie
+*lBSfontsize.labelString:		Größe
+*lBSwidth.labelString:			Breite
+*lBSthickness.labelString:		Di.
+*lBSypos.labelString:			Y-Pos
+*lBSscale.labelString:			Größe
+*lBSshadow_dx.labelString:		dX
+*lBSshadow_dy.labelString:		dY
+*lBSstrikeout_dy.labelString:		dY
+*lBSunderline_dy.labelString:		dY
+*tbBSsupscript.labelString:		Hochgestellt...
+*tbBSsubscript.labelString:		Tiefgestellt...
+*tbBSsmallcaps.labelString:		Kleine Großbuchstaben
+*tbBSbigcaps.labelString:		Große Großbuchstaben
+*tbBSwidth.labelString:			Breite...
+*fBSoverview.labelString:		überblick
+*fBSpreview.labelString:		Voransicht
+*fBSmain.labelString:			Einstellungen
+*fBSwidth.labelString:			Breite
+*fBSunderline.labelString:		Unterstrichen
+*fBSstrikeout.labelString:		Durchstrichen
+*fBSshadow.labelString:			Schattierung
+*fBSsupscript.labelString:		Hochgestellt
+*fBSsubscript.labelString:		Tiefgestellt
+*styleBoldMsg:				Fett
+*styleItalicMsg:			Kursiv
+*styleUnderlineMsg:			Unterstrichen
+*styleThicknessMsg:			Dicke
+*styleSimpleMsg:			einfach
+*styleDoubleMsg:			doppelt
+*styleTripleMsg:			dreifach
+*styleNoSpaceMsg:			außer Zwischenräume
+*styleStrikeoutMsg:			Durchstrichen
+*styleShadowMsg:			Schattiert
+*styleWidthMsg:				Breite
+*styleSubscriptMsg:			Tiefgestellt
+*styleScaleMsg:				S
+*styleSupscriptMsg:			Hochgestellt
+*styleSmallCapsMsg:			Kleine Großbuchstaben
+*styleBigCapsMsg:			Große Großbuchstaben
+
+
+! ** Dialog Box: FRAME ALIGN *********************************************
+
+*lBoxAlignTitle.labelString:		Frameausrichtung
+*lBASpacingH.labelString:		Spacing
+*lBASpacingV.labelString:		Spacing
+*tbDistributionH.labelString:		Horizontal Distribution
+*tbDistributionV.labelString:		Vertical Distribution
+*fAlignH.labelString:			Horizontale Ausrichtung
+*fAlignV.labelString:			Vertikale Ausrichtung
+
+
+! ** Dialog Box: IMAGE CACHE *********************************************
+
+*lBoxCacheTitle.labelString:		Grafik-Cache Information
+*lMemTotal.labelString:			Max. Speichercache 
+*lMemUsed.labelString:			Belegter Speichercache
+*lMemFree.labelString:			Freier Speichercache
+*lDiskTotal.labelString:		Max. Diskcache
+*lDiskUsed.labelString:			Belegter Diskcache
+*lDiskFree.labelString:			Freier Diskcache
+*lKb.labelString:			kB
+*tbBCKeepCacheOnDisk.labelString:	Cache vor Beenden speichern
+*pbBCCleanMemCache.labelString:		W\n e \n g \n ! 
+*pbBCCleanDiskCache.labelString:	W\n e \n g \n ! 
+*fBCmemoryCache.labelString:		Speichercache
+*fBCdiskCache.labelString:		Diskcache
+
+
+! ** Dialog Box: GRID SETUP **********************************************
+
+*lBoxGridSetupTitle.labelString:	Grid Setup
+*lOrigX.labelString:			Horizontal origin
+*lOrigY.labelString:			Verical origin
+*lSpacingX.labelString:			Horizontal spacing
+*lSpacingY.labelString:			Vertical spacing
+*fGridSetupH.labelString:		Horizontal
+*fGridSetupV.labelString:		Vertical
+
+
+! ** Dialog Box: ABOUT XCLAMATION ****************************************
+
+*aboutTitleMsg:		Xclamation® - Desktop Publishing
+*aboutReleaseBetaMsg:	Xclamation release %d.%d.%d
+*aboutReleaseMsg:	Xclamation release %d.%d
+*aboutNoLicenseMsg:	This software is UNREGISTERED\nRegistration is free
+*licenseCommercialMsg:	Software registered by\n%s\n%s
+*licensePersonalMsg:	Software registered by\n%s
+
+
+! ** Dialog Box: MAILING LISTS *******************************************
+
+*lBoxRegisterTitle.labelString:		Mailinglisten
+*lBRegisterAdress.labelString:		mailto: majordomo@axene.org
+*BoxRegistration*Ok.labelString: 	EMail abschicken
+*rbRegisterAnnounces.labelString: 	"axene-announce" abonnieren
+*rbRegisterBugs.labelString:		"xclamation-bugs" abonnieren
+*rbRegisterUsers.labelString:		"axene-users" abonnieren
+*lRegisterReply.labelString:		Ihre Email-Addresse
+*lMailCommand.labelString:		Mailkommando
+*mailingListMsg: \n\
+    Axene hält für Sie einige Mailinglisten bereit, die es \
+Ihnen gestatten, Informationen über EMail zu erhalten.\n\
+\n\
+    "axene-announce" bietet die Möglichkeit Ankündigungen \
+neuer Produkte oder Versionen zu beziehen.\n\
+\n\
+    "xclamation-bugs" informiert über Korrekturen \
+von Xclamation. Jedes Axene-Produkt hat seine eigene \
+Mailingliste, die sie in dem jeweiligen Produkt abonnieren \
+können.\n\
+\n\
+    "axene-users" ermöglicht Ihnen die Diskussion mit anderen Benutzern \
+von Axene-Produkten. Die Mailing-Liste wird moderiert (jede eingesandte \
+Nachricht wird von uns überprüft) um Ihnen unnütze Nachrichten zu ersparen. \n\
+Wenn Sie eine der Mailinglisten abonnieren werden Sie \
+eine Bestätigung via Email erhalten, die ihnen erklärt wie Sie \
+die Mailingliste wieder abbestellen.\n
+
+
+
+
+
+
+
+
+*fBRRegistered.labelString:		Abonnement
+*fBRegisterCommand.labelString:		Mailkommandos
+
+
+! ** Dialog Box: TEXT EDITOR *********************************************
+
+*pmOptions.labelString:			Optionen
+*pmOptions.mnemonic:			O
+*pmOptions*mInsertStyle.labelString:	Font einsetzen
+*pmOptions*mInsertStyle.mnemonic:	S
+*pmOptions*mInsertRuler.labelString:	Absatz einfügen
+*pmOptions*mInsertRuler.mnemonic:	R
+*pmOptions*mLineFeed.labelString:	Wagenrücklauf
+*pmOptions*mLineFeed.mnemonic:		C
+*pmOptions*mFrameBreak.labelString:	Frameunterbrechung
+*pmOptions*mFrameBreak.mnemonic:	F
+*pmOptions*mSetMark1.labelString:	Textmarke 1
+*pmOptions*mSetMark1.mnemonic:		M
+*pmOptions*mSetMark2.labelString:	Textmarke 2
+*pmOptions*mSetMark2.mnemonic:		t
+*pmOptions*mGoMark1.labelString:	Gehe zu Marke 1
+*pmOptions*mGoMark1.mnemonic:		1
+*pmOptions*mGoMark2.labelString:	Gehe zu Marke 2
+*pmOptions*mGoMark2.mnemonic:		2
+*pmOptions*mDelMark1.labelString:	Marke 1 entfernen
+*pmOptions*mDelMark1.mnemonic:		U
+*pmOptions*mDelMark2.labelString:	Marke 2 entfernen
+*pmOptions*mDelMark2.mnemonic:		n
+*pmOptions*mTextExport.labelString:	Textexport ...
+*pmOptions*mTextExport.mnemonic:	E
+*lAERuler.labelString:			Absatz:
+*lAEStyle.labelString:			Schriftart:
+
+
+! ** Dialog Box: KEYBOARD ************************************************
+
+*lBoxKeybTitle.labelString:		Gesetzte Zeichen:
+*font_nameMsg:				Schriftart: %s
+
+
+! ************************************************************************
+! **				FILE SELECTORS				**
+! ************************************************************************
+
+! ** File selector: EXPORT TEXT ******************************************
+
+*exportTextMsg:				Textexport
+*tbETHTMLRulers.labelString:		Exportiere Absatzregeln
+*lETHTMLFrameBreak.labelString:		Frameunterbrechung
+*lETHTMLCarrierRetur.labelString:	Wagenrücklauf
+*lETHTMLStyles.labelString:		Schriftarten
+*lETHTMLStyleBegin.labelString:		Markierung beginnen
+*lETHTMLStyleEnd.labelString:		Markierung beenden
+*fETSetup.labelString:			Setup
+*ExportText*Ok.labelString:		Export
+
+
+! ** File selector: IMPORT TEXT ******************************************
+
+*loadTextMsg:				Textimport
+*PageFormat.labelString:		Format
+*textImport*Ok.labelString:		Import
+
+
+! ** File selector: SIMPLE SELECTORS *************************************
+
+*loadDocumentMsg:			Dokument öffnen...
+*OpenDocument*Ok.labelString:		Öffnen
+
+*loadImageMsg:				Grafikimport
+*imageImport*Ok.labelString:		Import
+
+*loadVectorMsg:				Vektorgrafik importieren
+*vectorImport*Ok.labelString:		Import
+
+*saveDocumentMsg:			Speichern unter...
+*CloseDocument*Ok.labelString:		Speichern
+
+*printDocumentMsg:			Druckausgabe in Datei...
+*Print*Ok.labelString:			Drucken
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: SAVE UNDER ******************************************
+*lSaveDocument.labelString:		Dokument speichern:
+*lSavingName.labelString:		unter dem Namen:
+
+! ** Warning dialog: CLOSE DOCUMENT **************************************
+*lCloseDocument.labelString:		Dokument schließen:
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:                        Xclamation beenden
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:       \
+Xclamation-Hilfe nicht gefunden in %s\n\
+Hilfe-Pfad wird festgelegt in der xclamationrc-Datei.\n\
+Hilfedateien können heruntergeladen werden von ftp.axene.org /pub/xclamation/doc/
+
+! ** Warning dialog: NO VALID KEY ****************************************
+*functionNeedKeyMsg: Zur Nutzung dieser Funktion ist ein gültiger Schlüssel nötig.\n\
+Rufen sie einen Gratis-Demonstrationsschlüssel ab unter\n\
+http://www.axene.org/german/freekey.html
+*autosaveNeedKeyMsg:    Autospeicherung nicht möglich - ungültiger Schlüssel\n\
+Rufen sie einen Gratis-Demonstrationsschlüssel ab unter on 
+http://www.axene.org/german/freekey.html
+
+
+! ************************************************************************
+! **				HELP LINES				**
+! ************************************************************************
+
+! ** Help lines: FRAME ***************************************************
+*helpFrameMsg:			Framewerkzeuge
+*helpFrameSelectMsg:   		Frames auswählen oder bewegen
+*helpFrameRotateMsg:		Frames drehen
+*helpFrameScaleMsg:    		Frames vergrößern / verkleinern
+*helpFrameSquareMsg:		Rechteckige oder quadratische Frames zeichnen
+*helpFrameCircleMsg:		Elliptische oder kreisförmige Frames zeichnen
+*helpFramePolygonMsg:		Unregelmäßige oder polygone Frames zeichnen
+*helpFrameAddMsg:		Mehrere Frames verschmelzen
+*helpFrameSubMsg: 		Frame subtrahieren
+*helpFrameXorMsg: 		Frames verschmelzen und Schnittflächen subtrahieren
+*helpFrameOutlineMsg:		Frame überdecken
+*helpFrameAlignMsg:		Frames ausrichten
+*helpFrameMovePointMsg:		Form eines Frames ändern - von einem Punkt oder einer Grenze aus
+*helpFrameAddPointMsg:		Punkt zur Formänderung hinzufügen
+*helpFrameSubPointMsg:		Punkt zur Formänderung löschen
+*helpFramePlanFirstMsg:		Frame in den Vordergrund bringen
+*helpFramePlanLastMsg:		Frame in den Hintergrund bringen
+*helpFramePlanUpMsg:		Frame eine Ebene nach vorne bewegen
+*helpFramePlanDownMsg:		Frame eine Ebene nach hinten bewegen
+*helpFrameLockMsg:	  	Frame abschließen / aufschließen
+
+! ** Help lines: TEXT ****************************************************
+*helpTextMsg:			Textverarbeitungswerkzeuge
+*helpTextEditorMsg:		Text im gewählten Frame bearbeiten
+*helpTextLinkEndMsg:		Frame mit dem Ende einer Framekette verbinden
+*helpTextLinkBeginMsg:		Frame mit dem Anfang einer Framekette verbinden
+*helpTextInsertBeforeMsg:	Frame in Framekette einfügen - vor aktueller Position
+*helpTextInsertAfterMsg:	Frame in Framekette einfügen - nach aktueller Position
+*helpTextUnlinkMsg:		Ausgewählten Frame aus einer Framekette entfernen
+
+! ** Help lines: IMAGE ***************************************************
+*helpPictureMsg:		Grafikbearbeitungswerkzeuge
+*helpPictureMoveMsg:		Grafik in einem Frame bewegen
+*helpPictureCenterMsg:		Grafik zentrieren
+*helpPictureResetMsg:		Grafik in gültiger Größe zentrieren
+*helpPictureVFlipMsg:		Horizontal spiegeln
+*helpPictureHFlipMsg:		Vertikal spiegeln
+*helpPictureBestMsg:		Ganze Grafik im Frame anzeigen
+*helpPictureMaxMsg:		Frame mit Grafik füllen
+*helpPictureStretchMsg:		Grafik ganz anzeigen und Frame mit Grafik füllen
+
+! ** Help lines: VECTOR ***************************************************
+*helpVectorMsg:			Vektorgrafikwerkzeuge
+*helpVectorMoveMsg:		Vectorgrafik in einem Frame bewegen
+*helpVectoreCenterMsg:		Vektorgrafik zentrieren
+*helpVectorResetMsg:		Vektorgrafik in gültiger Größe zentrieren
+*helpVectorVFlipMsg:		Horizontal spiegeln
+*helpVectorHFlipMsg:		Vertikal spiegeln
+*helpVectorBestMsg:		Ganze Vektorgrafik im Frame anzeigen
+*helpVectorMaxMsg:		Frame mit Vektorgrafik füllen
+*helpVectorStretchMsg:		Ganze Vektorgrafik im Frame anzeigen und Frame damit füllen
+*helpVectorTextsMsg:		Anzeigen / Ausblenden von vektorbasierendem Text
+
+! ** Help lines: ZOOM ****************************************************
+*helpZoomMsg:			Zoomwerkzeuge
+*helpZoomInMsg:			Vergrößern
+*helpZoomOutMsg:		Verkleinern
+*helpZoomZoneMsg:		Ausschnitt zum Vergrößern wählen
+*helpZoomWidthMsg:		Auf Seitenbreite zoomen
+*helpZoomFullMsg:		Auf Seitengröße zoomen
+*helpZoomRealMsg:		Gültige Größe
+*helpZoom25Msg:			25% Zoom
+*helpZoom50Msg:			50% Zoom
+*helpZoom75Msg:			75% Zoom
+*helpZoom100Msg:		100% Zoom
+*helpZoom200Msg:		200% Zoom
+*helpZoom400Msg:		400% Zoom
+
+! ** Help lines: SEPARATE ************************************************
+*helpTrashMsg:			Tonne: Um Objekte zu entsorgen diese mit dem Mauszeiger greifen und hineinwerfen
+
+! ** Help lines: FRAME FUNCTIONS *****************************************
+*helpFFrameSelectMsg:		Frameauswahl im Greifmodus
+*helpFFrameRotateMsg:		Rotation (+ Shift = in 45° - Stufen drehen)
+*helpFFrameScaleMsg:		Frame skalieren
+*helpFFrameSquareMsg:		Rechteck zeichnen (+ shift = Quadrat)
+*helpFFrameCircleMsg:		Ellipse zeichnen (+ shift = Kreis)
+*helpFFramePolygonMsg:		Polygon zeichnen
+*helpFFrameMovePointMsg:	Frameauswahl im Punktmodus
+*helpFFrameAddPointMsg:		Punkt zur Formänderung hinzufügen
+*helpFFrameSubPointMsg:		Punkt zur Formänderung löschen
+
+! ** Help lines: IMAGE FUNCTIONS *****************************************
+*helpFPictureMoveMsg:		Grafik bewegen
+
+! ** Help lines: VECTOR FUNCTIONS ****************************************
+*helpFVectorMoveMsg:		Vektorgrafik bewegen
+
+! ** Help lines: ZOOM FUNCTIONS ******************************************
+*helpFZoomInMsg:		Um 25% vergrößern
+*helpFZoomOutMsg:		Um 25% verkleinern
+*helpFZoomZoneMsg:		Ausschnittvergrößerung
+
+! ** Help lines: PAGER FUNCTIONS *****************************************
+*helpCMPgrInsBefMsg:		Seite vor aktueller Seite einfügen
+*helpCMPgrInsAftMsg:		Seite hinter aktueller Seite einfügen
+*helpCMPgrModifyMsg:		Ändern gewählter Seiten...
+*helpCMPgrDeleteMsg:		Löschen gewählter Seiten
+
+! ** Help lines: EMPTY FRAME CONTEXTUAL **********************************
+*helpCMCdeImpImageMsg:		Grafik importieren
+*helpCMCdeImpTexteMsg:		Text importieren
+*helpCMCdeImpVectorMsg:		Vektorgrafik importieren
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:		Schutzverletzung (Segmentation fault)
+*sigErrorPIPEMsg:		Verbindung unterbrochen (Broken pipe)
+*sigErrorBUSMsg:		Specification exception (Bus error)
+*sigErrorFPEMsg:		Arithmetic exception (Floating exception)
+*sigErrorIOTMsg:		Interner Fehler (IOT trap)
+*sigErrorEMTMsg:		EMT instruction (EMT trap)
+*sigErrorXCPUMsg:		CPU-Zeitlimit überschritten (Cputime limit exceeded)
+*sigErrorXFSZMsg:		Maximale Dateigröße überschritten (Filesize limit exceeded)
+*sigErrorILLMsg:		Ungültige Anweisung (Illegal instruction)
+*sigErrorINTMsg:		Xclamation wurde unterbrochen (Interrupt)
+*sigErrorQuitingMsg:		Xclamation verlassen
+*sigErrorSorryMsg:		Programmfortführung nicht möglich
+
+*lCaughtSignal.labelString:		Ein Fehler ist aufgetreten:
+*lCaughtIOerror.labelString:		X I/O: Fataler Fehler
+*lCannotContinue.labelString:		Programmfortführung nicht möglich
+
+*loadErrorMsg:				Ladefehler
+*noFrameErrorMsg:			Kein Frame gewählt
+*notBitmapErrorMsg:			Unbekanntes Bildformat
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Ja
+*action_area.No.labelString:		Nein
+*action_area.Apply.labelString:		Anwenden
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Öffnen...
+*action_area.Retry.labelString:		Wiederholen
+*action_area.Stop.labelString:		Stop
+*action_area.Reset.labelString:		Reset
+*action_area.Cancel.labelString:	Abbrechen
+*action_area.Close.labelString:		Schließen
+*action_area.Help.labelString:		Hilfe
+*action_area.Save.labelString:		Speichern
+*action_area.Continue.labelString:	Fortfahren
+*action_area.Quit.labelString:		Beenden
+*action_area.Save as.labelString:	Speichern unter...
+

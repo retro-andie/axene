@@ -1,0 +1,75 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration de l'aide</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigHelp.gif" ALT="Configuration de l'aide" WIDTH="252" HEIGHT="38"> </p>
+
+<p><br>
+<br>
+Cette section des <a HREF="Config.html">fichiers de configuration</a> permet de configurer
+les chemins et logiciels utilisés dans l'appel à l'aide. </p>
+
+<h3>Section de configuration de l'aide en ligne : <i>\HELP_CONFIG{...}</i></h3>
+
+<p>Cette section permet de définir la configuration de l'aide en ligne d'XQuad. La
+définition de l'aide s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i> et avant
+l'accolade fermante correspondante <i>&quot;}&quot;</i>. Les paramètres de configuration
+sont : 
+
+<ol>
+  <li><b>\BASE_LOCATION{chemin}</b> où <i>chemin</i> représente le chemin des fichiers
+    d'aide. <br>
+    &nbsp;</li>
+  <li><b>\HELP_COMMAND{...}</b>. Chaque paramètre \HELP_COMMAND contient une manière de
+    lancer la documentation en ligne. Si la première ne marche pas, il prend la deuxième,
+    etc. Cette sous-section peut contenir les paramètres suivants : <br>
+    &nbsp;<ol>
+      <li><b>\COMMAND{command}</b> où <i>command</i> représente la ligne de commande à
+        exécuter. Lorsque vous appelerez la documentation en ligne depuis XQuad, la page
+        associée à la partie de documentation demandée sera ajoutée à cette ligne de
+        commande. <br>
+        &nbsp;</li>
+      <li><b>\XMAYDAY_PROTOCOL</b>. Si le logiciel pour lire la documentation est <i>XMayday</i>,
+        vous pouvez mettre ce paramètre. Dans ce cas, le protocole de communication avec XMayday
+        sera activé, ce qui permet par exemple de ne pas le relancer une nouvelle fois à chaque
+        fois que vous appellez la documentation depuis XQuad. <br>
+        &nbsp;</li>
+      <li><b>\NETSCAPE_PROTOCOL</b> marche de la même manière que \XMAYDAY_PROTOCOL, à
+        l'exception qu'il s'applique à Netscape Navigator®. </li>
+    </ol>
+  </li>
+</ol>
+
+<h3>Exemple :</h3>
+<tt>
+
+<p>\HELP_CONFIG{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\BASE_LOCATION{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$XQUAD_LIB/doc/XQuad/French<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\HELP_COMMAND{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COMMAND{XMayday}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\XMAYDAY_PROTOCOL<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\HELP_COMMAND{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COMMAND{netscape}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NETSCAPE_PROTOCOL<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\HELP_COMMAND{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COMMAND{Mosaic}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+} </tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

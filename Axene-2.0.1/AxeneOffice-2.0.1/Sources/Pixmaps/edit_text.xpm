@@ -1,0 +1,22 @@
+/* XPM */
+static char * edit_text_xpm[] = {
+"9 16 3 1 4 9",
+" 	s None	c None",
+".	c gray40",
+"X	c white",
+".... ....",
+".XXX.XXX.",
+"...XXX...",
+"   .X.   ",
+"   .X.   ",
+"   .X.   ",
+"   .X.   ",
+"   .X.   ",
+"  ..X..  ",
+"  .XXX.  ",
+"  ..X..  ",
+"   .X.   ",
+"   .X.   ",
+"...XXX...",
+".XXX.XXX.",
+".... ...."};

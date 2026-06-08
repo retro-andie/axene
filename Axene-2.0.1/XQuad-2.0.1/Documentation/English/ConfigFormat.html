@@ -1,0 +1,593 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Numeric Formats Configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif"
+ALT="Configuration Files" WIDTH="136" HEIGHT="25"> <img ALIGN="middle"
+SRC="Images/TitleConfigFormat.gif" ALT="Numeric Formats Configuration" WIDTH="306"
+HEIGHT="35"> </p>
+
+<p><br>
+<br>
+This configuration files section defines the numeric formats used by default in XQuad.
+Numeric formats can be created and modified in the '<a HREF="Box_NumFormat.html">Numeric
+Format</a>' dialog box.</p>
+
+<h3>Format list definition section: <i>\FORMATLIST{...}</i> </h3>
+
+<p>This section presents the format-list accessible from XQuad. The definition of formats
+from the list appears between the opening bracket &quot;{&quot; and corresponding closing
+bracket &quot;}&quot;. Each element of the format list is defined as described below.<a
+NAME="format"></p>
+
+<h3>Format definition section: <i>\FORMAT{...}</i></h3>
+</a>
+
+<p>A format is defined by <b>\FORMAT<i>X</i></b> where <i>X</i> is an entity which
+uniquely identifies the format.</p>
+
+<p>Watch out for problems that might occur when using more than one configuration file.
+Preventive measures must be in place in order to insure that the same name is not used
+more than once between the system configuration files (xquadrc) and the user configuration
+files (.xquadrc). To avoid this, the user configuration files can be set to start with <i>X</i>
+at 100.</p>
+
+<p>Formats definition parameters appear between the opening bracket <i>&quot;{&quot;</i>
+and corresponding closing bracket <i>&quot;}&quot;</i>. They contain: 
+
+<ol>
+  <li><b>\NAME{<i>name</i>}</b> where <i>name</i> represents the name attributed to the format
+    in corresponding XQuad menus.<br>
+    &nbsp;</li>
+  <li><b>\LOCK</b> locks a format defined in the XQuad format base so that it cannot be
+    deleted from the '<a HREF="Box_NumFormat.html">Numeric Format</a>' dialog box.<br>
+    &nbsp;</li>
+  <li><b>\HIDE</b> hides the defined format so that it does not appear in XQuad format lists.</li>
+</ol>
+
+<p><br>
+Each numeric format allows formatting of a specific <a
+HREF="Box_NumFormat.html#format_type_list">type of number</a>. According to the format
+type (standard numbers, boolean values, the format parameters are not always the same.
+Only available parameters are taken into account. </p>
+
+<p>The format types and its options are: 
+
+<ol>
+  <li><b>\NORMAL_TYPE</b> is a format type is for simple numeric values. The available
+    parameters are:<br>
+    &nbsp;<ul>
+      <li><b>\MIN_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_min_prec">minimum precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_max_prec">maximal precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\TRUNCATE_ENABLE</b> allows XQuad to <a
+        HREF="Box_NumFmt_Display.html#button_truncate">truncate decimal</a> numbers in drawing.<br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> where <i>X</i> represents the ASCII code of the <a
+        HREF="Box_NumFmt_Display.html#textfield_comma">separator</a> between the integer part and
+        the decimal part of the numbers.<br>
+        &nbsp;</li>
+      <li><b>\SPACE<i>X</i></b> where <i>X</i> represents how many numbers of the integer part are
+        grouped. <a HREF="Box_NumFmt_Display.html#textfield_sep_position">Groups</a> are separated
+        by the integer part separator.<br>
+        &nbsp;</li>
+      <li><b>\CHARSEP<i>X</i></b> where <i>X</i> represents the ASCII code of the <a
+        HREF="Box_NumFmt_Display.html#textfield_sep_mstring">separator</a> between groups of the
+        integer part of the numbers.<br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_pos">positive numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_neg">negative numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\STANDARD</b> marks the format as the default format. There can only be <u>one</u> in
+        the format list, preferably with a normal type and decimal truncating enabled.<br>
+        &nbsp;</li>
+      <li><b>\THOUSANDS</b> marks the format as the default thousands numeric format, which is
+        used when clicking on the <a HREF="HBar_Misc.html#thousands_icon">first icon button</a> of
+        the fourth section of the 'General Functions' toolbar. There can only be <u>one</u> in the
+        format list, preferably with a normal type.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\UNIT_TYPE</b> is a format type is for numeric values requiring an identifying unit
+    (monetary formats, for example). The available parameters are:<br>
+    &nbsp;<ul>
+      <li><b>\UNIT_AFTER</b> indicates the unit label will be drawn <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_unit">after the number</a>.<br>
+        &nbsp;</li>
+      <li><b>\UNIT_NAME{<i>unit label</i>}</b> indicates the <a
+        HREF="Box_NumFmt_UnitStyleText.html#textfield_unit">unit label</a> text to draw before or
+        after the number.<br>
+        &nbsp;</li>
+      <li><b>\MIN_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_min_prec">minimum precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_max_prec">maximal precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> where <i>X</i> represents the ASCII code of the <a
+        HREF="Box_NumFmt_Display.html#textfield_comma">separator</a> between the integer part and
+        the decimal part of the numbers.<br>
+        &nbsp;</li>
+      <li><b>\SPACE<i>X</i></b> where <i>X</i> represents how many numbers of the integer part are
+        grouped. <a HREF="Box_NumFmt_Display.html#textfield_sep_position">Groups</a> are separated
+        by the integer part separator.<br>
+        &nbsp;</li>
+      <li><b>\CHARSEP<i>X</i></b> where <i>X</i> represents the ASCII code of the <a
+        HREF="Box_NumFmt_Display.html#textfield_sep_mstring">separator</a> between of the integer
+        part of the numbers.<br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_pos">positive numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_neg">negative numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\CURRENCY</b> marks the format as the default currency numeric format, which is used
+        when clicking on the <a HREF="HBar_Misc.html#currency_icon">second icon button</a> of the
+        fourth section of the 'General Functions' toolbar. There can only be <u>one</u> in the
+        format list, preferably with a unit type.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\PERCENT_TYPE</b> is a format type is for numeric values to be displayed as
+    percentage values (numbers followed by % sign). The available parameters are:<br>
+    &nbsp;<ul>
+      <li><b>\MIN_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_min_prec">minimum precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_max_prec">maximal precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> where <i>X</i> represents the ASCII code of the <a
+        HREF="Box_NumFmt_Display.html#textfield_comma">separator</a> between the integer part and
+        the decimal part of the numbers.<br>
+        &nbsp;</li>
+      <li><b>\SPACE<i>X</i></b> where <i>X</i> represents how many numbers of the integer part are
+        grouped. <a HREF="Box_NumFmt_Display.html#textfield_sep_position">Groups</a> are separated
+        by the integer part separator.<br>
+        &nbsp;</li>
+      <li><b>\CHARSEP<i>X</i></b> where <i>X</i> represents the ASCII code of the <a
+        HREF="Box_NumFmt_Display.html#textfield_sep_mstring">separator</a> between groups of the
+        integer part of the numbers.<br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_pos">positive numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_neg">negative numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\PERCENT</b> marks the format as the default percentage numeric format, which is used
+        when clicking on the <a HREF="HBar_Misc.html#percent_icon">third icon button</a> of the
+        fourth section of the General Functions' toolbar. There can only be <u>one</u> in the
+        format list, preferably with a percentage type.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\EXPONANTIAL_TYPE</b>is a format type is for numeric values requiring in an
+    exponential form (for example: 1.123E+15). The available parameters are:<br>
+    &nbsp;<ul>
+      <li><b>\MIN_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_min_prec">minimum precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\MAX_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_max_prec">maximal precision</a> in drawing of
+        decimal numbers.<br>
+        &nbsp;</li>
+      <li><b>\COMMA<i>X</i></b> where <i>X</i> represents the ASCII code of the <a
+        HREF="Box_NumFmt_Display.html#textfield_comma">separator</a> between the integer part and
+        the decimal part of the numbers.<br>
+        &nbsp;</li>
+      <li><b>\EXP_STRING{<i>exponent label</i>}</b> indicates the <a
+        HREF="Box_NumFmt_Display.html#textfield_sep_estring">exponent label</a> text.. <br>
+        &nbsp;</li>
+      <li><b>\EXP_DIGIT<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_exp_prec">minimum number of digits</a> in the
+        exponent.<br>
+        &nbsp;</li>
+      <li><b>\EXP_MULTIPLE<i>X</i></b> where <i>X</i> represents the number which the exponent
+        must be <a HREF="Box_NumFmt_Display.html#textfield_exp_multiple">multiple</a> of.<br>
+        &nbsp;</li>
+      <li><b>\EXP_SIGN</b> indicates that the <a HREF="Box_NumFmt_Display.html#button_exp_sign">exponent's
+        sign</a> must always be displayed.<br>
+        &nbsp;</li>
+      <li><b>\UNIT_AFTER</b> indicates the unit label will be drawn <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_unit">after the number</a>.<br>
+        &nbsp;</li>
+      <li><b>\UNIT_NAME{<i>unit label</i>}</b> indicates the <a
+        HREF="Box_NumFmt_UnitStyleText.html#textfield_unit">unit label</a> text to draw before or
+        after the number.<br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_pos">positive numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_neg">negative numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\SCIENTIFIC</b> marks the format as the default scientific numeric format, which is
+        used when clicking on the <a HREF="HBar_Misc.html#scientific_icon">fourth icon button</a>
+        of the fourth section of the 'General Functions' toolbar. There can only be <u>one</u> in
+        the format list, preferably with a unit type.<br>
+        &nbsp;</li>
+      <li><b>\ENGINEER</b> marks the format as the default engineer numeric format, which is used
+        when clicking on the <a HREF="HBar_Misc.html#engineer_icon">last icon button</a> of the
+        fourth section of the 'General Functions' toolbar. There can only be <u>one</u> in the
+        format list, preferably with a unit type.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\FRACTION_TYPE</b> is a format type is for numbers to be displayed as numeric
+    fractions (0,125 will be displayed as <i>1/8</i>). The available parameters are:<br>
+    &nbsp;<ul>
+      <li><b>\FRAC_DECIMAL</b> indicates that only the <a
+        HREF="Box_NumFmt_Display.html#button_frac_decimal">decimal part</a> of the number if taken
+        into consideration.<br>
+        &nbsp;</li>
+      <li><b>\FRAC_PREC<i>X</i></b> where <i>X</i> represents the <a
+        HREF="Box_NumFmt_Display.html#textfield_frac_prec">minimum precision of the fraction
+        divisor</a>.<br>
+        &nbsp;</li>
+      <li><b>\UNIT_AFTER</b> indicates the unit label will be drawn <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_unit">after the number</a>.<br>
+        &nbsp;</li>
+      <li><b>\UNIT_NAME{<i>unit label</i>}</b> indicates the <a
+        HREF="Box_NumFmt_UnitStyleText.html#textfield_unit">unit label</a> text to draw before or
+        after the number.<br>
+        &nbsp;</li>
+      <li><b>\COLORPOS<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_pos">positive numbers</a>.<br>
+        &nbsp;</li>
+      <li><b>\COLORNEG<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used to draw <a
+        HREF="Box_NumFmt_Display.html#list_color_neg">negative numbers</a>.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\BOOLEAN_TYPE</b> is a format type is for boolean values. The available parameters
+    are:<br>
+    &nbsp;<ul>
+      <li><b>\TRUE_NAME{<i>true text</i>}</b> indicates the <a
+        HREF="Box_NumFmt_UnitStyleText.html#textfield_true">text</a> to use when a number has the
+        value TRUE.<br>
+        &nbsp;</li>
+      <li><b>\FALSE_NAME{<i>false text</i>}</b> indicates the <a
+        HREF="Box_NumFmt_UnitStyleText.html#textfield_false">text</a> to use when a number has the
+        value FALSE.<br>
+        &nbsp;</li>
+      <li><b>\TRUE_COLOR<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used when a number has the <a
+        HREF="Box_NumFmt_Colors.html#list_color_true">value TRUE</a>.<br>
+        &nbsp;</li>
+      <li><b>\FALSE_COLOR<i>X</i></b> where <i>X</i> represents a <a HREF="ConfigColor.html#color">color</a>
+        identifier in the color list which will be used when a number has the <a
+        HREF="Box_NumFmt_Colors.html#list_color_false">value FALSE</a>.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\DAY_TYPE</b> is a format type is for numbers to be displayed as the names of days of
+    the week (&quot;Monday&quot; for example). The available parameters are:<br>
+    &nbsp;<ul>
+      <li><b>\DAY_NAME_VERY_SHORT</b> indicates that the day name must be the <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_very_short">shortest possible</a>.<br>
+        &nbsp;</li>
+      <li><b>\DAY_NAME_SHORT</b> indicates that the day name must be <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_short">three letters long</a>.<br>
+        &nbsp;</li>
+      <li><b>\DAY_NAME_LONG</b> indicates that the day name must be the <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_long">full name</a>.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\MONTH_TYPE</b>is a format type is for numbers to be displayed as the names of months
+    of the year (&quot;January&quot; for example). The available parameters are:<br>
+    &nbsp;<ul>
+      <li><b>\MONTH_NAME_VERY_SHORT</b> indicates that the month name must be the <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_very_short">shortest possible</a>.<br>
+        &nbsp;</li>
+      <li><b>\MONTH_NAME_SHORT</b> indicates that the month name must be <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_short">three letters long</a>.<br>
+        &nbsp;</li>
+      <li><b>\MONTH_NAME_LONG</b> indicates that the month name must be the <a
+        HREF="Box_NumFmt_UnitStyleText.html#button_long">full name</a>.<br>
+        &nbsp;</li>
+    </ul>
+  </li>
+  <li><b>\TIME_TYPE</b>is a format type is for numbers to be displayed as time (14:21:12PM for
+    example) The parameter is:<br>
+    &nbsp;<ul>
+      <li><b>\TIME_SEQUENCE{...}</b>. This section presents the parameter list for the time format
+        composition. The options of the format appear in a specific order between the opening
+        bracket &quot;{&quot; and corresponding closing bracket &quot;}&quot;. Each element of the
+        time format is defined as described below:<br>
+        &nbsp;<ul>
+          <li><b>\PADDING_NONE</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will not use a <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding character</a>.<br>
+            &nbsp;</li>
+          <li><b>\PADDING_ZERO</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will use &quot;0&quot; as the <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding
+            character</a>.<br>
+            &nbsp;</li>
+          <li><b>\PADDING_SPACE</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will use &quot; &quot; as the <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding
+            character</a>.<br>
+            &nbsp;</li>
+          <li><b>\HOUR</b> adds the <a HREF="Box_NumFmt_HourDate.html#hour_area">hour (24)</a> part of
+            the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HOUR12</b> adds the <a HREF="Box_NumFmt_HourDate.html#hour_area">hour (12)</a> part
+            of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HOUR_AM_PM</b> adds the <a HREF="Box_NumFmt_HourDate.html#hour_area">part of the day
+            (AM/PM)</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MINUTE</b> adds the <a HREF="Box_NumFmt_HourDate.html#minute_area">minutes</a> part
+            of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_area">seconds</a> part
+            of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\TENTH_OF_SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_10_area">tenths
+            of second</a> part of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HUNDREDTH_OF_SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_100_area">hundredths
+            of second</a> part of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HUNDREDTH_OF_SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_1000_area">thousandths
+            of second</a> part of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\STRING{...}</b> adds the character string to the format.<br>
+            &nbsp;</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>\DATE_TYPE</b>is a format type is for numbers to be displayed as dates (25/12/1995
+    for example). The parameter is:<br>
+    &nbsp;<ul>
+      <li><b>\DATE_SEQUENCE{...}</b>. This section presents the parameter list for the date format
+        composition. The options of the format appear in a specific order between the opening
+        bracket &quot;{&quot; and corresponding closing bracket &quot;}&quot;. Each element of the
+        date format is defined as described below:<br>
+        &nbsp;<ul>
+          <li><b>\PADDING_NONE</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will not use a <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding character</a>.<br>
+            &nbsp;</li>
+          <li><b>\PADDING_ZERO</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will use &quot;0&quot; as the <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding
+            character</a>.<br>
+            &nbsp;</li>
+          <li><b>\PADDING_SPACE</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will use &quot; &quot; as the <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding
+            character</a>.<br>
+            &nbsp;</li>
+          <li><b>\YEAR</b> adds the <a HREF="Box_NumFmt_HourDate.html#year_area">year</a> part of the
+            date to the format.<br>
+            &nbsp;</li>
+          <li><b>\YEAR_SHORT</b> adds the year part of the date in a <a
+            HREF="Box_NumFmt_HourDate.html#year_area">short form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\YEAR_JC_REF</b> adds the year part of the date <a
+            HREF="Box_NumFmt_HourDate.html#year_area">from J.C.</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month</a> part
+            (number in [1;12]) of the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_VERY_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month
+            name</a> of the date in the <a HREF="Box_NumFmt_HourDate.html#frame_namelength">shortest
+            possible form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month
+            name</a> of the date in a <a HREF="Box_NumFmt_HourDate.html#frame_namelength">three
+            letters form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_LONG</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month</a>
+            <a HREF="Box_NumFmt_HourDate.html#frame_namelength">full name</a> of the date to the
+            format.<br>
+            &nbsp;</li>
+          <li><b>\WEEK</b> adds the <a HREF="Box_NumFmt_HourDate.html#week_area">week in the year</a>
+            of the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY</b> adds the <a HREF="Box_NumFmt_HourDate.html#day_area">day in the month</a> of
+            the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_VERY_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#area_area">day
+            name</a> in the week of the date in the <a
+            HREF="Box_NumFmt_HourDate.html#frame_namelength">shortest possible form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#area_area">day name</a>
+            in the week of the date in a <a HREF="Box_NumFmt_HourDate.html#frame_namelength">three
+            letters form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_LONG</b> adds the <a HREF="Box_NumFmt_HourDate.html#area_area">day</a> <a
+            HREF="Box_NumFmt_HourDate.html#frame_namelength">full name</a> in the week of the date the
+            format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_IN_YEAR</b> adds the <a HREF="Box_NumFmt_HourDate.html#day_in_year_area">day in
+            the year</a> of the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\STRING{...}</b> adds the character string to the format.<br>
+            &nbsp;</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>\DATE_AND_TIME_TYPE</b> is a format type is for numbers to be displayed as dates
+    followed by time (25/12/1995 14:21 PM for example). The parameter is:<br>
+    &nbsp;<ul>
+      <li><b>\DATE_AND_TIME_SEQUENCE{...}</b>. This section presents the parameter list for the
+        date and time format composition. The options of the format appear in a specific order
+        between the opening bracket &quot;{&quot; and corresponding closing bracket &quot;}&quot;.
+        Each element of the date and time format is defined as described below:<br>
+        &nbsp;<ul>
+          <li><b>\PADDING_NONE</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will not use a <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding character</a>.<br>
+            &nbsp;</li>
+          <li><b>\PADDING_ZERO</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will use &quot;0&quot; as the <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding
+            character</a>.<br>
+            &nbsp;</li>
+          <li><b>\PADDING_SPACE</b> indicates that remaining of the sequence (until the next \PADDING_<i>XXX</i>)
+            will use &quot; &quot; as the <a HREF="Box_NumFmt_HourDate.html#frame_alignment_1">padding
+            character</a>.<br>
+            &nbsp;</li>
+          <li><b>\YEAR</b> adds the <a HREF="Box_NumFmt_HourDate.html#year_area">year</a> part of the
+            date to the format.<br>
+            &nbsp;</li>
+          <li><b>\YEAR_SHORT</b> adds the year part of the date in a <a
+            HREF="Box_NumFmt_HourDate.html#year_area">short form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\YEAR_JC_REF</b> adds the year part of the date <a
+            HREF="Box_NumFmt_HourDate.html#year_area">from J.C.</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month</a> part
+            (number in [1;12]) of the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_VERY_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month
+            name</a> of the date in the <a HREF="Box_NumFmt_HourDate.html#frame_namelength">shortest
+            possible form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month
+            name</a> of the date in a <a HREF="Box_NumFmt_HourDate.html#frame_namelength">three
+            letters form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MONTH_NAME_LONG</b> adds the <a HREF="Box_NumFmt_HourDate.html#month_area">month</a>
+            <a HREF="Box_NumFmt_HourDate.html#frame_namelength">full name</a> of the date to the
+            format.<br>
+            &nbsp;</li>
+          <li><b>\WEEK</b> adds the <a HREF="Box_NumFmt_HourDate.html#week_area">week in the year</a>
+            of the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY</b> adds the <a HREF="Box_NumFmt_HourDate.html#day_area">day in the month</a> of
+            the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_VERY_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#area_area">day
+            name</a> in the week of the date in the <a
+            HREF="Box_NumFmt_HourDate.html#frame_namelength">shortest possible form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_SHORT</b> adds the <a HREF="Box_NumFmt_HourDate.html#area_area">day name</a>
+            in the week of the date in a <a HREF="Box_NumFmt_HourDate.html#frame_namelength">three
+            letters form</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_NAME_LONG</b> adds the <a HREF="Box_NumFmt_HourDate.html#area_area">day</a> <a
+            HREF="Box_NumFmt_HourDate.html#frame_namelength">full name</a> in the week of the date the
+            format.<br>
+            &nbsp;</li>
+          <li><b>\DAY_IN_YEAR</b> adds the <a HREF="Box_NumFmt_HourDate.html#day_in_year_area">day in
+            the year</a> of the date to the format.<br>
+            &nbsp;</li>
+          <li><b>\HOUR</b> adds the <a HREF="Box_NumFmt_HourDate.html#hour_area">hour (24)</a> part of
+            the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HOUR12</b> adds the <a HREF="Box_NumFmt_HourDate.html#hour_area">hour (12)</a> part
+            of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HOUR_AM_PM</b> adds the <a HREF="Box_NumFmt_HourDate.html#hour_area">part of the day
+            (AM/PM)</a> to the format.<br>
+            &nbsp;</li>
+          <li><b>\MINUTE</b> adds the <a HREF="Box_NumFmt_HourDate.html#minute_area">minutes</a> part
+            of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_area">seconds</a> part
+            of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\TENTH_OF_SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_10_area">tenths
+            of second</a> part of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HUNDREDTH_OF_SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_100_area">hundredths
+            of second</a> part of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\HUNDREDTH_OF_SECOND</b> adds the <a HREF="Box_NumFmt_HourDate.html#second_1000_area">thousandths
+            of second</a> part of the time to the format.<br>
+            &nbsp;</li>
+          <li><b>\STRING{...}</b> adds the character string to the format.<br>
+            &nbsp;</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><br>
+A special numeric format must appear in one of the configuration files. This format must
+be named &quot;Generic&quot; and must be defined with the most basic parameters possible
+more the <b>\GENERIC</b> parameter. In special cases, this generic format will be applied
+to the cells when the format type is not suitable with the content.</p>
+
+<h3>Example :</h3>
+<tt>
+
+<p>\FORMATLIST{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT0{\NAME{Standard} \COMMA44 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TRUNCATE_ENABLE
+\NORMAL_TYPE <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STANDARD} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT10{\NAME{Money [2d, neg. red]} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\MIN_PREC2
+\MAX_PREC2 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\SPACE3
+\UNIT{$} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COMMA44
+\COLORNEG6 \UNIT_TYPE <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\CURRENCY}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT30{\NAME{Date [MM/DD/YY]} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\DATE_SEQUENCE{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\PADDING_ZERO
+\DAY <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STRING{/}
+\MONTH \STRING{/} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\YEAR_SHORT}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\DATE_TYPE}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\FORMAT34{\NAME{Time [HH:MM:SS [AP]M]} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TIME_SEQUENCE{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\PADDING_SPACE
+\HOUR12 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STRING{:}
+\PADDING_ZERO <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\MINUTE
+\STRING{:} \SECOND <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\STRING{\x20}
+\HOUR_AM_PM} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TIME_TYPE}
+<br>
+} </tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996,97 Axene" WIDTH="166"
+HEIGHT="28"></p>
+</body>
+</html>

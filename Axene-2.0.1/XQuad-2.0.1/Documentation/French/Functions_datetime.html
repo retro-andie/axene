@@ -1,0 +1,309 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fonctions de dates et heures</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFunctionsDatetime.gif" ALT="Fonctions de Date et Heures" WIDTH="321" HEIGHT="32"> </p>
+
+<p><br>
+<br>
+</p>
+
+<hr>
+
+<h3><a NAME="année"><font COLOR="#2244AA">année</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'année associée au nombre.</b> </p>
+  <p><b>année(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur de correspondance pour les dates. </li>
+  </ul>
+  <p>Ce nombre est un codage interne utilisé par Xquad pour gérer les dates. Le nombre
+  peut aussi être exprimé par une date valide en texte. </p>
+  <p><b><u>Exemples</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=année(-345435)</tt><br>
+    <b>Valeur&nbsp;: </b>1054 </p>
+    <p><tt>=année(&quot;21-janvier-1996&quot;)</tt><br>
+    <b>Valeur : </b>1996 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="aujourdhui"><font COLOR="#2244AA">aujourdhui</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la date courante.</b> </p>
+  <p><b>aujourdhui()</b> </p>
+  <p>Renvoie la date du sytème. Cette date depend donc du réglage de votre ordinateur. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=aujourdhui()</tt><br>
+    <b>Valeur&nbsp;: </b>12/06/96 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="date"><font COLOR="#2244AA">date</font></a></h3>
+
+<ul>
+  <p><b>Crée une date à partir des paramètres.</b> </p>
+  <p><b>date(<i>année</i>; <i>mois</i>; <i>jour</i>)</b> <ul>
+    <li><i>année&nbsp;:</i> valeur représentant l'année. </li>
+    <li><i>mois&nbsp;:</i> valeur représentant le mois. </li>
+    <li><i>jour&nbsp;:</i> valeur représentant le jour. </li>
+  </ul>
+  <p>Renvoie une date en se basant sur les paramètres <i>année</i>, <i>mois</i> et <i>jour</i>.
+  Si le nombre de mois est supérieur à 12, l'année est incrementée en conséquence. Si
+  le nombre de jours est supérieur au nombre de jours dans le mois, le mois est
+  incrémenté en conséquence. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=date(1912; 14; 31)</tt><br>
+    <b>Valeur&nbsp;: </b>3/03/1913 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="dateval"><font COLOR="#2244AA">dateval</font></a></h3>
+
+<ul>
+  <p><b>Convertit le texte en date.</b> </p>
+  <p><b>dateval(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> date en texte à convertir. </li>
+  </ul>
+  <p>Convertit le <i>texte</i> en un codage utilisé par XQuad pour représenter les dates. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=dateval(&quot;1-Mai-1901&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>-36039 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="heure"><font COLOR="#2244AA">heure</font></a></h3>
+
+<ul>
+  <p><b>Convertit le nombre en heure.</b> </p>
+  <p><b>heure(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur de codage de l'heure. </li>
+  </ul>
+  <p>Renvoie l'heure que code la valeur nombre. XQuad utilise un format interne pour stocker
+  les heures. Dans ce format les heures sont codées sur la partie décimale du nombre. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=heure(0.75)</tt><br>
+    <b>Valeur&nbsp;: </b>18 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="jour"><font COLOR="#2244AA">jour</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le jour associé au nombre.</b> </p>
+  <p><b>jour(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur de correspondance pour les dates. </li>
+  </ul>
+  <p>Ce nombre est un codage interne utilisé par XQuad pour gérer les dates. Le nombre
+  peut aussi être exprimé par une date valide en texte. </p>
+  <p><b><u>Exemples</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=jour(732811)</tt><br>
+    <b>Valeur&nbsp;: </b>15 </p>
+    <p><tt>=jour(&quot;28-janvier-1996&quot;)</tt><br>
+    <b>Valeur : </b>28 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="jours360"><font COLOR="#2244AA">jours360</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le nombre de jours entre deux dates.</b> </p>
+  <p><b>jours360(<i>date_début</i>; <i>date_fin</i>)</b> <ul>
+    <li><i>date_début&nbsp;:</i> date de départ. </li>
+    <li><i>date_fin&nbsp;:</i> date de fin. </li>
+  </ul>
+  <p>Renvoie le nombre de jours entre deux dates en considérant qu'une année comprend 360
+  jours. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=jours360(&quot;12/10/1995&quot;; &quot;12/4/1997&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>540 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="joursem"><font COLOR="#2244AA">joursem</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le jour correspondant à la <i>date</i>.</b> </p>
+  <p><b>joursem(<i>date</i>)</b> <ul>
+    <li><i>date&nbsp;:</i> date à traiter. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=joursem(&quot;28-11-1996&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>4 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="maintenant"><font COLOR="#2244AA">maintenant</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la date courante.</b> </p>
+  <p><b>maintenant()</b> </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=maintenant()</tt><br>
+    <b>Valeur&nbsp;: </b>16/4/1996 0:18 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="milliseconde"><font COLOR="#2244AA">milliseconde</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la milliseconde associée au nombre.</b> </p>
+  <p><b>milliseconde(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur de correspondance pour les dates. </li>
+  </ul>
+  <p>Ce nombre est un codage interne utilisé par XQuad pour gérer les dates. Le nombre
+  peut aussi être exprimé par une heure valide en texte. </p>
+  <p><b><u>Exemples</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=milliseconde(0.732811)</tt><br>
+    <b>Valeur&nbsp;: </b>870 </p>
+    <p><tt>=milliseconde(&quot;17:12:45.512&quot;)</tt><br>
+    <b>Valeur : </b>512 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="minute"><font COLOR="#2244AA">minute</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la minute associée au nombre.</b> </p>
+  <p><b>minute(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur de correspondance pour les dates. </li>
+  </ul>
+  <p>Ce nombre est un codage interne utilisé par XQuad pour gérer les dates. Le nombre
+  peut aussi être exprimé par une heure valide en texte. </p>
+  <p><b><u>Exemples</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=minute(0.732811)</tt><br>
+    <b>Valeur&nbsp;: </b>35 </p>
+    <p><tt>=minute(&quot;17:12:45.512&quot;)</tt><br>
+    <b>Valeur : </b>12 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="mois"><font COLOR="#2244AA">mois</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le mois associé au nombre.</b> </p>
+  <p><b>mois(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur de correspondance pour les dates. </li>
+  </ul>
+  <p>Ce nombre est un codage interne utilisé par XQuad pour gérer les dates. Le nombre
+  peut aussi être exprimé par une date valide en texte. </p>
+  <p><b><u>Exemples</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=mois(732811)</tt><br>
+    <b>Valeur&nbsp;: </b>5 </p>
+    <p><tt>=mois(&quot;21-janvier-1996&quot;)</tt><br>
+    <b>Valeur : </b>1 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="seconde"><font COLOR="#2244AA">seconde</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la seconde associée au nombre.</b> </p>
+  <p><b>seconde(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur de correspondance pour les dates. </li>
+  </ul>
+  <p>Ce nombre est un codage interne utilisé par XQuad pour gérer les dates. Le nombre
+  peut aussi être exprimé par une heure valide en texte. </p>
+  <p><b><u>Exemples</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=seconde(0.732811)</tt><br>
+    <b>Valeur&nbsp;: </b>14 </p>
+    <p><tt>=seconde(&quot;17:12:45.512&quot;)</tt><br>
+    <b>Valeur : </b>45 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="temps"><font COLOR="#2244AA">temps</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'heure.</b> </p>
+  <p><b>temps(<i>heure</i>; <i>minute</i>; <i>seconde</i><font COLOR="#333333">; <i>milliseconde</i></font>)</b>
+  <ul>
+    <li><i>heure&nbsp;:</i> valeur représentant les heures. </li>
+    <li><i>minute&nbsp;:</i> valeur représentant les minutes. </li>
+    <li><i>seconde&nbsp;:</i> valeur représentant les secondes. </li>
+    <li><i>milliseconde&nbsp;:</i> valeur représentant les millisecondes. </li>
+  </ul>
+  <p>Renvoie une heure en se basant sur les paramètres. Si le nombre de minutes est
+  supérieur à 59, l'heure est incrémentée en conséquence. Si le nombre de secondes est
+  supérieur à 59, les minutes sont incrémentées en conséquence. Si le nombre de
+  millisecondes est supérieur à 1000, les secondes sont incrémentées en conséquence. La
+  valeur 1000 millisecondes n'est pas exacte due au codage de l'heure dans XQuad. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=temps(12; 34; 12)</tt><br>
+    <b>Valeur&nbsp;: </b>12:34 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="tempsval"><font COLOR="#2244AA">tempsval</font></a></h3>
+
+<ul>
+  <p><b>Convertit une date en un nombre.</b> </p>
+  <p><b>tempsval(<i>date</i>)</b> <ul>
+    <li><i>date&nbsp;:</i> date a convertir </li>
+  </ul>
+  <p>Convertit une date et heure en un nombre qui est le codage interne de cette date et
+  heure. </p>
+  <p><b><u>Exemples</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=tempsval(&quot;28/11/1983&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>-5878 </p>
+    <p><tt>=tempsval(&quot;1:41:45&quot;)</tt><br>
+    <b>Valeur : </b>0.070659722 </p>
+  </ul>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

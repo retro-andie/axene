@@ -1,0 +1,33 @@
+/* XPM */
+static char * zoom_arriere_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"24 24 3 1 9 9",
+/* colors */
+" 	s None	c None",
+".	c gray80",
+"X	c black",
+/*pixels*/
+"      ......            ",
+"    ..XXXXXX..          ",
+"   .XXX....XXX.         ",
+"  .XX... . ..XX.        ",
+" .XX. . . . ..XX.       ",
+" .X. . . . . ..X.       ",
+".XX.. . . . . .XX.      ",
+".X.. ......... .X.      ",
+".X. ..XXXXXX. ..X.      ",
+".X.. .XXXXXX.. .X.      ",
+".X. ......... ..X.      ",
+".XX. . . . . ..XX.      ",
+" .X.. . . . . .X.       ",
+" .XX.. . . . .XX.       ",
+"  .XX.. . ...XX..       ",
+"   .XXX....XXX.XX.      ",
+"    ..XXXXXX...XXX.     ",
+"      ......   .XXX.    ",
+"                .XXX.   ",
+"                 .XXX.  ",
+"                  .XXX. ",
+"                   .XXX.",
+"                    .XX.",
+"                     .. "};

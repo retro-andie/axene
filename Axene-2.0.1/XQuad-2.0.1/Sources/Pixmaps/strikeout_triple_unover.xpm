@@ -1,0 +1,28 @@
+/* XPM */
+static char * strikeout_triple_unover_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"28 18 4 1",
+/* colors */
+" 	s None	c None",
+".	c white",
+"X	c black",
+"o	c gray10",
+/*pixels*/
+"                            ",
+"                            ",
+"         .                  ",
+"         .X                 ",
+"         .X                 ",
+"  ....   .X...       ....   ",
+" ..XX..  ...Xo.     ..XX..  ",
+" ...............    ....... ",
+"  XXXXXXXXXXXXXXX   XXXXXXXX",
+" ...............    ....... ",
+"  XXXXXXXXXXXXXXX   XXXXXXXX",
+" ...............    ....... ",
+"  XXXXXXXXXXXXXXX   XXXXXXXX",
+"   XXX XX X XXX       XXXX  ",
+"                            ",
+"                            ",
+"                            ",
+"                            "};

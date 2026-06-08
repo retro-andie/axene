@@ -1,0 +1,253 @@
+\CONFIG{
+
+\FONTLIST{
+\FONT{Helvetica
+	\FULLNAME{Helvetica} \FAMILY{Helvetica} \NORMAL 
+	Helvetica.pfc}
+\FONT{Helvetica-Bold
+	\FULLNAME{Helvetica Bold} \FAMILY{Helvetica} \BOLD 
+	Helvetica-Bold.pfc}
+\FONT{Helvetica-Oblique
+	\FULLNAME{Helvetica Oblique} \FAMILY{Helvetica} \ITALIC 
+	Helvetica-Oblique.pfc}
+\FONT{Helvetica-BoldOblique
+	\FULLNAME{Helvetica Bold Oblique} \FAMILY{Helvetica} \BOLD_ITALIC
+	Helvetica-BoldOblique.pfc}
+
+\FONT{AvantGarde-Book
+	\FULLNAME{ITC Avant Garde Gothic Book} 
+	\FAMILY{ITC Avant Garde} \NORMAL
+	AvantGarde-Book.pfc}
+\FONT{AvantGarde-BookOblique
+	\FULLNAME{ITC Avant Garde Gothic Book Oblique} 
+	\FAMILY{ITC Avant Garde} \ITALIC
+	AvantGarde-BookOblique.pfc}
+\FONT{AvantGarde-Demi
+	\FULLNAME{ITC Avant Garde Gothic Demi}
+	\FAMILY{ITC Avant Garde} \BOLD
+	AvantGarde-Demi.pfc}
+\FONT{AvantGarde-DemiOblique
+	\FULLNAME{ITC Avant Garde Gothic Demi Oblique}
+	\FAMILY{ITC Avant Garde} \BOLD_ITALIC
+	AvantGarde-DemiOblique.pfc}
+
+\FONT{NewCenturySchlbk-Roman
+	\FULLNAME{New Century Schoolbook Roman}
+	\FAMILY{New Century Schoolbook} \NORMAL
+	NewCenturySchlbk-Roman.pfc}
+\FONT{NewCenturySchlbk-Bold
+	\FULLNAME{New Century Schoolbook Bold}
+	\FAMILY{New Century Schoolbook} \BOLD
+	NewCenturySchlbk-Bold.pfc}
+\FONT{NewCenturySchlbk-Italic
+	\FULLNAME{New Century Schoolbook Italic}
+	\FAMILY{New Century Schoolbook} \ITALIC
+	NewCenturySchlbk-Italic.pfc}
+\FONT{NewCenturySchlbk-BoldItalic
+	\FULLNAME{New Century Schoolbook Bold Italic}
+	\FAMILY{New Century Schoolbook} \BOLD_ITALIC
+	NewCenturySchlbk-BoldItalic.pfc}
+
+\FONT{Utopia-Regular \FULLNAME{Utopia Regular} 
+	\FAMILY{Utopia} \NORMAL \DOWNLOAD putr.pfa}
+\FONT{Utopia-Bold \FULLNAME{Utopia Bold} 
+	\FAMILY{Utopia} \BOLD \DOWNLOAD putb.pfa}
+\FONT{Utopia-Italic \FULLNAME{Utopia Italic} 
+	\FAMILY{Utopia} \ITALIC \DOWNLOAD putri.pfa}
+\FONT{Utopia-BoldItalic \FULLNAME{Utopia Bold Italic} 
+	\FAMILY{Utopia} \BOLD_ITALIC \DOWNLOAD putbi.pfa}
+
+\FONT{Courier
+	\FULLNAME{Courier}
+	\FAMILY{Courier} \NORMAL
+	Courier.pfc}
+\FONT{Courier-Bold
+	\FULLNAME{Courier Bold}
+	\FAMILY{Courier} \BOLD
+	Courier-Bold.pfc}
+\FONT{Courier-Oblique
+	\FULLNAME{Courier Oblique}
+	\FAMILY{Courier} \ITALIC
+	Courier-Oblique.pfc}
+\FONT{Courier-BoldOblique
+	\FULLNAME{Courier Bold Oblique}
+	\FAMILY{Courier} \BOLD_ITALIC
+	Courier-BoldOblique.pfc}
+
+\FONT{Times-Roman
+	\FULLNAME{Times Roman}
+	\FAMILY{Times} \NORMAL
+	Times-Roman.pfc}
+\FONT{Times-Bold
+	\FULLNAME{Times Bold}
+	\FAMILY{Times} \BOLD
+	Times-Bold.pfc}
+\FONT{Times-Italic
+	\FULLNAME{Times Italic}
+	\FAMILY{Times} \ITALIC
+	Times-Italic.pfc}
+\FONT{Times-BoldItalic
+	\FULLNAME{Times Bold Italic}
+	\FAMILY{Times} \BOLD_ITALIC
+	Times-BoldItalic.pfc}
+
+\FONT{ZapfDingbats \FULLNAME{ITC Zapf Dingbats} ZapfDingbats.pfc}
+\FONT{Symbol \FULLNAME{Symbol} Symbol.pfc}
+}
+
+
+\COLORLIST{
+	\COLOR0{\NAME{Transparent} \TRANSPARENCY255 \GRAY{0} \LOCK}
+	\COLOR1{\NAME{Black} \TRANSPARENCY0 \GRAY{0} \LOCK}
+	\COLOR2{\NAME{White} \TRANSPARENCY0 \GRAY{1} \LOCK}
+
+	\COLOR200{\NAME{Red} \TRANSPARENCY0 \RGB{1 0 0}}
+	\COLOR201{\NAME{Yellow} \TRANSPARENCY0 \CMYK{0 0 1 0}}
+	\COLOR202{\NAME{Green} \TRANSPARENCY0 \RGB{0 1 0}}
+	\COLOR203{\NAME{Cyan} \TRANSPARENCY0 \CMYK{1 0 0 0}}
+	\COLOR204{\NAME{Blue} \TRANSPARENCY0 \RGB{0 0 1}}
+	\COLOR205{\NAME{Magenta} \TRANSPARENCY0 \CMYK{0 1 0 0}}
+
+	\COLOR210{\NAME{Maroon} \TRANSPARENCY0 \RGB{.5 0 0}}
+	\COLOR211{\NAME{Olive} \TRANSPARENCY0 \CMYK{0 0 .5 .5}}
+	\COLOR212{\NAME{Dark Green} \TRANSPARENCY0 \RGB{0 .5 0}}
+	\COLOR213{\NAME{Teal} \TRANSPARENCY0 \CMYK{.5 0 0 .5}}
+	\COLOR214{\NAME{Navy blue} \TRANSPARENCY0 \RGB{0 0 .5}}
+	\COLOR215{\NAME{Purple} \TRANSPARENCY0 \CMYK{0 .5 0 .5}}
+
+	\COLOR105{\NAME{Gray 05%} \TRANSPARENCY0 \GRAY{.95}}
+	\COLOR110{\NAME{Gray 10%} \TRANSPARENCY0 \GRAY{.90}}
+	\COLOR115{\NAME{Gray 15%} \TRANSPARENCY0 \GRAY{.85}}
+	\COLOR120{\NAME{Gray 20%} \TRANSPARENCY0 \GRAY{.80}}
+	\COLOR125{\NAME{Gray 25%} \TRANSPARENCY0 \GRAY{.75}}
+	\COLOR130{\NAME{Gray 30%} \TRANSPARENCY0 \GRAY{.70}}
+	\COLOR135{\NAME{Gray 35%} \TRANSPARENCY0 \GRAY{.65}}
+	\COLOR140{\NAME{Gray 40%} \TRANSPARENCY0 \GRAY{.60}}
+	\COLOR145{\NAME{Gray 45%} \TRANSPARENCY0 \GRAY{.55}}
+	\COLOR150{\NAME{Gray 50%} \TRANSPARENCY0 \GRAY{.50}}
+	\COLOR155{\NAME{Gray 55%} \TRANSPARENCY0 \GRAY{.45}}
+	\COLOR160{\NAME{Gray 60%} \TRANSPARENCY0 \GRAY{.40}}
+	\COLOR165{\NAME{Gray 65%} \TRANSPARENCY0 \GRAY{.35}}
+	\COLOR170{\NAME{Gray 70%} \TRANSPARENCY0 \GRAY{.30}}
+	\COLOR175{\NAME{Gray 75%} \TRANSPARENCY0 \GRAY{.25}}
+	\COLOR180{\NAME{Gray 80%} \TRANSPARENCY0 \GRAY{.20}}
+	\COLOR185{\NAME{Gray 85%} \TRANSPARENCY0 \GRAY{.15}}
+	\COLOR190{\NAME{Gray 90%} \TRANSPARENCY0 \GRAY{.10}}
+	\COLOR195{\NAME{Gray 95%} \TRANSPARENCY0 \GRAY{.05}}
+
+	\COLOR10{\NAME{[L] Salmon} \TRANSPARENCY0 \RGB{1 .5 .5}}
+	\COLOR14{\NAME{[L] Orange} \TRANSPARENCY0 \RGB{1 .833 .5}}
+	\COLOR20{\NAME{[L] Yellow} \TRANSPARENCY0 \CMYK{0 0 .5 0}}
+	\COLOR24{\NAME{[L] Yellow-Green} \TRANSPARENCY0 \RGB{.75 1 .5}}
+	\COLOR30{\NAME{[L] Green} \TRANSPARENCY0 \RGB{.5 1 .5}}
+	\COLOR40{\NAME{[L] Cyan} \TRANSPARENCY0 \CMYK{.5 0 0 0}}
+	\COLOR44{\NAME{[L] Sky blue} \TRANSPARENCY0 \RGB{.5 .75 1}}
+	\COLOR50{\NAME{[L] Blue} \TRANSPARENCY0 \RGB{.5 .5 1}}
+	\COLOR54{\NAME{[L] Blue-Magenta} \TRANSPARENCY0 \RGB{.75 .5 1}}
+	\COLOR60{\NAME{[L] Fuchsia} \TRANSPARENCY0 \CMYK{0 .5 0 0}}
+	\COLOR64{\NAME{[L] Pink} \TRANSPARENCY0 \RGB{1 .5 .75}}
+
+	\COLOR11{\NAME{Red} \TRANSPARENCY0 \RGB{1 0 0}}
+	\COLOR15{\NAME{Orange} \TRANSPARENCY0 \RGB{1 .667 0}}
+	\COLOR21{\NAME{Yellow} \TRANSPARENCY0 \CMYK{0 0 1 0}}
+	\COLOR25{\NAME{Yellow-Green} \TRANSPARENCY0 \RGB{.5 1 0}}
+	\COLOR31{\NAME{Green} \TRANSPARENCY0 \RGB{0 1 0}}
+	\COLOR41{\NAME{Cyan} \TRANSPARENCY0 \CMYK{1 0 0 0}}
+	\COLOR45{\NAME{Royal blue} \TRANSPARENCY0 \RGB{0 .5 1}}
+	\COLOR51{\NAME{Blue} \TRANSPARENCY0 \RGB{0 0 1}}
+	\COLOR55{\NAME{Blue-Magenta} \TRANSPARENCY0 \RGB{.5 0 1}}
+	\COLOR61{\NAME{Magenta} \TRANSPARENCY0 \CMYK{0 1 0 0}}
+	\COLOR65{\NAME{Magenta-Red} \TRANSPARENCY0 \RGB{1 0 .5}}
+
+	\COLOR12{\NAME{[M] Red} \TRANSPARENCY0 \RGB{.75 0 0}}
+	\COLOR16{\NAME{[M] Orange} \TRANSPARENCY0 \RGB{.75 .50 0}}
+	\COLOR22{\NAME{[M] Yellow} \TRANSPARENCY0 \CMYK{0 0 .75 .25}}
+	\COLOR26{\NAME{[M] Yellow-Green} \TRANSPARENCY0 \RGB{.375 .75 0}}
+	\COLOR32{\NAME{[M] Green} \TRANSPARENCY0 \RGB{0 .75 0}}
+	\COLOR42{\NAME{[M] Turquoise} \TRANSPARENCY0 \CMYK{.75 0 0 .25}}
+	\COLOR46{\NAME{[M] Turquoise-Blue} \TRANSPARENCY0 \RGB{0 .375 .75}}
+	\COLOR52{\NAME{[M] Blue} \TRANSPARENCY0 \RGB{0 0 .75}}
+	\COLOR56{\NAME{[M] Blue-Violet} \TRANSPARENCY0 \RGB{.375 0 .75}}
+	\COLOR62{\NAME{[M] Violet} \TRANSPARENCY0 \CMYK{0 .75 0 .25}}
+	\COLOR66{\NAME{[M] Violet-Red} \TRANSPARENCY0 \RGB{.75 0 .375}}
+
+	\COLOR13{\NAME{[D] Maroon} \TRANSPARENCY0 \RGB{.5 0 0}}
+	\COLOR17{\NAME{[D] Brown} \TRANSPARENCY0 \RGB{.50 .333 0}}
+	\COLOR23{\NAME{[D] Olive} \TRANSPARENCY0 \CMYK{0 0 .5 .5}}
+	\COLOR27{\NAME{[D] Olive-Green} \TRANSPARENCY0 \RGB{.25 .5 0}}
+	\COLOR33{\NAME{[D] Green} \TRANSPARENCY0 \RGB{0 .5 0}}
+	\COLOR43{\NAME{[D] Teal} \TRANSPARENCY0 \CMYK{.5 0 0 .5}}
+	\COLOR47{\NAME{[D] Teal-Blue} \TRANSPARENCY0 \RGB{0 .25 .5}}
+	\COLOR53{\NAME{[D] Navy blue} \TRANSPARENCY0 \RGB{0 0 .5}}
+	\COLOR57{\NAME{[D] Blue-Purple} \TRANSPARENCY0 \RGB{.25 0 .5}}
+	\COLOR63{\NAME{[D] Purple} \TRANSPARENCY0 \CMYK{0 .5 0 .5}}
+	\COLOR67{\NAME{[D] Purple-Red} \TRANSPARENCY0 \RGB{.5 0 .25}}
+}
+
+\STYLELIST{
+	\STYLE0{\FONT{Helvetica}
+		\COLOR1 12 \NAME{Normal}
+	}
+	\STYLE1{\FONT{AvantGarde-DemiOblique}
+		\COLOR1 30 \NAME{Title}
+		\WIDTH{0.8}
+		\UNDERLINE{0.2 0 0.1 \COLOR11 0 False}
+		\SMALLCAPS
+	}
+	\STYLE2{\FONT{Helvetica-Bold}
+		\COLOR1 16 \NAME{Section}
+	}
+	\STYLE3{\FONT{NewCenturySchlbk-BoldItalic}
+		\COLOR120 24 \NAME{Shadow Title}
+		\SHADOW{0.1 0.1 \COLOR190}
+		\SMALLCAPS
+	}
+	\STYLE4{\FONT{Times-Italic}
+		\COLOR43 14 \NAME{Quotation}
+		\UNDERLINE{0.2 0 0.05 \COLOR150 0 False}
+	}
+	\STYLE5{\FONT{Helvetica}
+		\COLOR1 12 \NAME{Normal Superscript}
+		\UNDERLINE{0.2 0 0.1 \COLOR1 0 False}
+		\SUPERSCRIPT{0.4 0.6}
+	}
+	\STYLE6{\FONT{ZapfDingbats}
+		\COLOR53 16 \NAME{Dingbats}
+	}
+	\STYLE7{\FONT{AvantGarde-Book}
+		\COLOR13 40 \NAME{Special}
+		\WIDTH{3}
+		\STRIKEOUT{-0.25 0.3 0.2 \COLOR2 0 False}
+		\SMALLCAPS
+	}
+}
+
+\RULERLIST{
+        \RULER0{2.83398 2.83398 8.50391 False 0 5 \LEFT 0.5 0.75 1 
+		\NAME{Normal Text}}
+        \RULER1{0 0 0 False 0 5 \LEFT 0.8 0.75 1 \NAME{Left}}
+        \RULER2{0 0 0 False 0 5 \CENTER 0.8 0.75 1 \NAME{Center}}
+        \RULER3{0 0 0 False 0 5 \RIGHT 0.8 0.75 1 \NAME{Right}}
+        \RULER4{0 0 0 False 0 5 \JUSTIFIED 0.8 0.75 1 \NAME{Justify}}
+        }
+
+\CACHE_CONFIG{
+	\MEMORY_CACHE_SIZE3000 \DISK_CACHE_SIZE10000
+	\KEEP_DISK_CACHE \CACHE_DIR{~/.xclamation-cache}
+	}
+\HELP_CONFIG{
+	\BASE_LOCATION{$XCLAMATION_LIB/doc/Xclamation/English}
+        \HELP_COMMAND{ \COMMAND{XMayday} \XMAYDAY_PROTOCOL}
+        \HELP_COMMAND{ \COMMAND{netscape} \NETSCAPE_PROTOCOL}
+	\HELP_COMMAND{ \COMMAND{Mosaic}}
+	}
+
+
+
+
+
+\PRINTER{\NAME{File}}
+\PRINTER{\NAME{Postscript Printer}\COMMAND{lpr}}
+
+\KEYSERVER{ \SERVER{localhost} \PORT2707 }
+}

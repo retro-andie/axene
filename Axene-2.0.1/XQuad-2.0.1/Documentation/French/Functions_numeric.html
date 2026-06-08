@@ -1,0 +1,503 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fonctions numeriques</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFunctionsNumeric.gif" ALT="Fonctions Numeriques" WIDTH="262" HEIGHT="36"> </p>
+
+<p><br>
+<br>
+</p>
+
+<hr>
+
+<h3><a NAME="abs"><font COLOR="#2244AA">abs</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur absolue d'un nombre. </b></p>
+  <p><b>abs(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur à traiter. </li>
+  </ul>
+  <p>La valeur absolue renvoie toujours un résultat supérieur ou égal à 0. (Le nombre
+  sans son signe). </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=abs(-12.3)</tt><br>
+    <b>Valeur&nbsp;: </b>12.3 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="alea"><font COLOR="#2244AA">alea</font></a></h3>
+
+<ul>
+  <p><b>Renvoie un nombre aléatoire.</b> </p>
+  <p><b>alea()</b> </p>
+  <p>Le nombre renvoyé par la fonction alea est compris entre 0 et 1. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=alea()</tt><br>
+    <b>Valeur&nbsp;: </b>0.45254464 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="alea.entre.bornes"><font COLOR="#2244AA">alea.entre.bornes</font></a></h3>
+
+<ul>
+  <p><b>Renvoie un nombre aléatoire.</b> </p>
+  <p><b>alea.entre.bornes(<i>borne1</i>; <i>borne2</i>)</b> <ul>
+    <li><i>borne1&nbsp;:</i> borne utilisée pour l'interval de choix. </li>
+    <li><i>borne2&nbsp;:</i> borne utilisée pour l'interval de choix. </li>
+  </ul>
+  <p>Le nombre renvoyé par la fonction alea.entre.bornes est compris entre les deux nombres
+  spécifiés en paramètres. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=alea.entre.bornes(12; 45)</tt><br>
+    <b>Valeur&nbsp;: </b>23 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="arrondi"><font COLOR="#2244AA">arrondi</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur arrondie d'un nombre.</b> </p>
+  <p><b>arrondi(<i>nombre</i>; <i>nombre_chiffres</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à arrondir. </li>
+    <li><i>nombre_chiffres&nbsp;:</i> nombre de chiffres après la virgule. </li>
+  </ul>
+  <p>Arrondi un nombre en lui laissant un nombre de chiffres après la virgule défini par
+  le deuxième paramètre. Le deuxième paramètre peut être négatif. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=arrondi(12.3465; 2)</tt><br>
+    <b>Valeur&nbsp;: </b>12.35 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="arrondi.inf"><font COLOR="#2244AA">arrondi.inf</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur arrondie d'un nombre.</b> </p>
+  <p><b>arrondi.inf(<i>nombre</i>; <i>nombre_chiffres</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à arrondir. </li>
+    <li><i>nombre_chiffres&nbsp;:</i> nombre de chiffres après la virgule. </li>
+  </ul>
+  <p>Arrondi un nombre en lui laissant un nombre de chiffres après la virgule défini par
+  le deuxième paramètre. Le deuxième paramètre peut être négatif. Le chiffre est
+  arrondi en s'approchant de zéro. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=arrondi(12.3465; 2)</tt><br>
+    <b>Valeur&nbsp;: </b>12.34 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="arrondi.sup"><font COLOR="#2244AA">arrondi.sup</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur arrondie d'un nombre.</b> </p>
+  <p><b>arrondi.inf(<i>nombre</i>; <i>nombre_chiffres</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à arrondir. </li>
+    <li><i>nombre_chiffres&nbsp;:</i> nombre de chiffres après la virgule. </li>
+  </ul>
+  <p>Arrondi un nombre en lui laissant un nombre de chiffres après la virgule défini par
+  le deuxième paramètre. Le deuxième paramètre peut être négatif. Le chiffre est
+  arrondi en s'éloignant de zéro. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=arrondi(12.3465; 2)</tt><br>
+    <b>Valeur&nbsp;: </b>12.35 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="base"><font COLOR="#2244AA">base</font></a></h3>
+
+<ul>
+  <p><b>Convertit un nombre dans une autre base.</b> </p>
+  <p><b>base(<i>nombre</i><font COLOR="#333333">; <i>basecible</i>; <i>précision</i></font>)</b>
+  <ul>
+    <li><i>nombre&nbsp;:</i> valeur à convertir. </li>
+    <li><i>basecible&nbsp;:</i> nombre de symboles (ou signes) dans la base cible. </li>
+    <li><i>précision&nbsp;:</i> nombre de chiffres après la virgule du résultat. </li>
+  </ul>
+  <p>Convertit un nombre en base dix dans une base spécifiée par le paramètre <i>basecible</i>.
+  Le nombre est affiché en texte. Un troisième paramètre permet d'obtenir la <i>précision</i>
+  (le nombre de chiffre après la virgule) du résultat. La valeur par défault du
+  paramètre <i>basecible</i> est 16. La valeur par défaut du paramètre <i>précision</i>
+  est 0. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=base(12.67;16;5)</tt><br>
+    <b>Valeur&nbsp;: </b>C.AB851 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="carré"><font COLOR="#2244AA">carré</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le carré d'un nombre.</b> </p>
+  <p><b>carré(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur à calculer. </li>
+  </ul>
+  <p>Renvoie le <i>nombre</i> au carré. C'est à dire le produit de la multiplication
+  nombre*nombre. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=carré(4)</tt><br>
+    <b>Valeur&nbsp;: </b>16 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="degrés"><font COLOR="#2244AA">degrés</font></a></h3>
+
+<ul>
+  <p><b>Convertit les radians en degrés.</b> </p>
+  <p><b>degrés(<i>radians</i>)</b> <ul>
+    <li><i>radians&nbsp;:</i> valeur en radian à convetir. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=degrés(pi/3)</tt><br>
+    <b>Valeur&nbsp;: </b>60 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="e"><font COLOR="#2244AA">e</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur de exponentielle de 1.</b> </p>
+  <p><b>e()</b> </p>
+  <p>Renvoie la constante e base du logarithme népérien. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=e()</tt><br>
+    <b>Valeur&nbsp;: </b>2.7182818 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="ent"><font COLOR="#2244AA">ent</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'entier le plus proche du <i>nombre</i>.</b> </p>
+  <p><b>ent(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur à arrondir. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=ent(-4.6)</tt><br>
+    <b>Valeur&nbsp;: </b>-5 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="exp"><font COLOR="#2244AA">exp</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'exponentielle d'un nombre.</b> </p>
+  <p><b>exp(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur à traiter. </li>
+  </ul>
+  <p>Renvoie l'exponentielle d'un nombre, c'est à dire la constante e élevée à la
+  puissance de ce nombre. exp est la fonction inverse du <a HREF="Functions_numeric.html#ln">logarithme
+  néperien</a>. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=exp(4)</tt><br>
+    <b>Valeur&nbsp;: </b>54.598150 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="fact"><font COLOR="#2244AA">fact</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la factorielle d'un nombre.</b> </p>
+  <p><b>fact(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur à traiter. </li>
+  </ul>
+  <p>La factorielle d'un nombre et le produit des <i>nombre</i> premiers entiers naturels à
+  l'exception de zéro (1*2*3*4*...*nombre). </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=fact(12)</tt><br>
+    <b>Valeur&nbsp;: </b>479001600 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="frac"><font COLOR="#2244AA">frac</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la partie fractionnaire d'un nombre.</b> </p>
+  <p><b>frac(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur à traiter. </li>
+  </ul>
+  <p>Renvoie la partie fractionnaire d'un nombre, c'est à dire le nombre sans sa partie
+  entière. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=frac(12.345)</tt><br>
+    <b>Valeur&nbsp;: </b>0.345 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="inv"><font COLOR="#2244AA">inv</font></a></h3>
+
+<ul>
+  <p><b>Renvoie l'inverse d'un nombre.</b> </p>
+  <p><b>inv(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à traiter. </li>
+  </ul>
+  <p><b><u>Formule</u> :</b> 1 / nombre </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=inv(5)</tt><br>
+    <b>Valeur&nbsp;: </b>0.2 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="ln"><font COLOR="#2244AA">ln</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le logarithme népérien d'un nombre.</b> </p>
+  <p><b>ln(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à traiter. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=ln(28)</tt><br>
+    <b>Valeur&nbsp;: </b>3.3322045 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="log"><font COLOR="#2244AA">log</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le logarithme d'un nombre.</b> </p>
+  <p><b>log(<i>nombre</i>; <i>base</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à traiter. </li>
+    <li><i>base&nbsp;:</i> base du logarithme. </li>
+  </ul>
+  <p>Renvoie le logarithme d'un nombre dans la base spécifiée. La base par défaut est 10.
+  </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=log(6; 2)</tt><br>
+    <b>Valeur&nbsp;: </b>2.5849625 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="log10"><font COLOR="#2244AA">log10</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le logarithme de base 10 d'un nombre.</b> </p>
+  <p><b>log10(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à traiter. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=log10(7)</tt><br>
+    <b>Valeur&nbsp;: </b>0.60205999 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="mod"><font COLOR="#2244AA">mod</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le modulo d'un nombre.</b> </p>
+  <p><b>mod(<i>nombre</i>; <i>diviseur</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à traiter. </li>
+    <li><i>diviseur&nbsp;:</i> valeur du diviseur. </li>
+  </ul>
+  <p>Renvoie le modulo d'un nombre, c'est à dire le reste de la division du <i>nombre</i>
+  par le <i>diviseur</i>. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=mod(17; 4)</tt><br>
+    <b>Valeur&nbsp;: </b>1 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="pi"><font COLOR="#2244AA">pi</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le nombre pi.</b> </p>
+  <p><b>pi()</b> </p>
+  <p>Renvoie le nombre irrationel pi. Pi est défini comme le rapport entre la
+  circonférence d'un cercle et le diamètre d'un cercle. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=pi()</tt><br>
+    <b>Valeur&nbsp;: </b>3.1415927 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="produit"><font COLOR="#2244AA">produit</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le produit des nombres passés en paramètre.</b> </p>
+  <p><b>produit(<i>nombre1</i><font COLOR="#333333">; <i>nombre2</i>; <i>...</i></font>)</b>
+  <ul>
+    <li><i>nombreN&nbsp;:</i> nombre à traiter. </li>
+  </ul>
+  <p>Renvoie le produit des nombres passés en paramètre. Cette commande admet aussi des
+  paramètres au format zones (ex: A3:B7). </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=produit(12;4;6;17;21)</tt><br>
+    <b>Valeur&nbsp;: </b>102816 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="racine"><font COLOR="#2244AA">racine</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la racine carrée d'un nombre.</b> </p>
+  <p><b>racine(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur dont on veut connaître la racine. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=racine(16)</tt><br>
+    <b>Valeur&nbsp;: </b>4 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="radians"><font COLOR="#2244AA">radians</font></a></h3>
+
+<ul>
+  <p><b>Convertit les degrés en radians.</b> </p>
+  <p><b>radians(<i>degrés</i>)</b> <ul>
+    <li><i>degrés&nbsp;:</i> valeur en degrés à convetir. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=radians(60)</tt><br>
+    <b>Valeur&nbsp;: </b>1.0471976 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="random"><font COLOR="#2244AA">random</font></a></h3>
+
+<ul>
+  <p><b>Renvoie un nombre aléatoire.</b> </p>
+  <p><b>random()</b> </p>
+  <p>Le nombre renvoyé par la fonction random est un entier. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=random()</tt><br>
+    <b>Valeur&nbsp;: </b>7185688576 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="signe"><font COLOR="#2244AA">signe</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le signe du nombre.</b> </p>
+  <p><b>signe(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre dont on veut connaître le signe. </li>
+  </ul>
+  <p>Renvoie 0, -1 ou 1 selon si le <i>nombre</i> passé en paramètre est nul, négatif ou
+  positif. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=signe(-28)</tt><br>
+    <b>Valeur&nbsp;: </b>-1 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="somme"><font COLOR="#2244AA">somme</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la somme des nombres passés en paramètre.</b> </p>
+  <p><b>somme(<i>nombre1</i><font COLOR="#333333">; <i>nombre2</i>; <i>...</i></font>)</b> <ul>
+    <li><i>nombreN&nbsp;:</i> nombre à traiter. </li>
+  </ul>
+  <p>Renvoie la somme des nombres passés en paramètre. Cette commande admet aussi des
+  paramètres au format zones (ex: A3:B7). </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=somme(1;7;6;15;31)</tt><br>
+    <b>Valeur&nbsp;: </b>60 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="tronque"><font COLOR="#2244AA">tronque</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur arrondie d'un nombre.</b> </p>
+  <p><b>tronque(<i>nombre</i>; <i>nombre_chiffres</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> nombre à arrondir. </li>
+    <li><i>nombre_chiffres&nbsp;:</i> nombre de chiffres apres la virgule. </li>
+  </ul>
+  <p>Arrondi un nombre en lui laissant un nombre de chiffres après la virgule égal au
+  deuxième paramètre. Le deuxième paramètre peut être négatif. Le chiffre est arrondi
+  en s'approchant de zéro. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=arrondi(12.3465; 2)</tt><br>
+    </p>
+  </ul>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

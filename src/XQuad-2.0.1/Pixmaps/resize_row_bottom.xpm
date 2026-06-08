@@ -1,0 +1,15 @@
+/* XPM */
+static char * resize_row_bottom_xpm[] = {
+"15 9 3 1 7 0",
+" 	s None	c None",
+".	c black",
+"X	c gray90",
+"...............",
+".XXXXXXXXXXXXX.",
+"......XXX......",
+"     .XXX.     ",
+"   ...XXX...   ",
+"    .XXXXX.    ",
+"     .XXX.     ",
+"      .X.      ",
+"       .       "};

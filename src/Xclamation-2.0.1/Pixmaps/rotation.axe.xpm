@@ -1,0 +1,32 @@
+/* XPM */
+static char * rotation_axe_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"22 24 3 1 10 12",
+" 	s None	c None",
+".	c white",
+"X	c black",
+/* pixels */
+"  .                   ",
+" .X.   .......        ",
+" .X. ..XXXXXXX..      ",
+".XX..XXXXXXXXXXX.     ",
+".XXXXXXXXXXXXXXXX.    ",
+".XXXXXX.......XXXX.   ",
+".XXXXX...     ..XXX.  ",
+".XXXXXXXX.      .XXX. ",
+".XXXXXX.....    .XXX. ",
+".......  .X.     .XXX.",
+"         .X.     .XXX.",
+"      ....X....  .XXX.",
+"      .XXX XXX.  .XXX.",
+"      ....X....  .XXX.",
+"         .X.     .XXX.",
+"...      .X.     .XXX.",
+".XX.     ...    .XXX. ",
+".XXX.           .XXX. ",
+" .XXX..       ..XXX.  ",
+"  .XXXX.......XXXX.   ",
+"   .XXXXXXXXXXXXX.    ",
+"    .XXXXXXXXXXX.     ",
+"     ..XXXXXXX..      ",
+"       .......        "};

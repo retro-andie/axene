@@ -1,0 +1,69 @@
+AXENE OFFICE is a formerly proprietary office suite for Linux 
+(word processor, desktop publishing program, spreadsheet, help
+and support files), quietly re-released under the GNU GPL.  
+
+Web pages for the product:  http://xibios.free.fr/
+
+
+
+        Date/Time of
+   Size File Arrival Filename           Description
+------- ------------ ------------       -----------
+    2614 2003-03-27 00index.txt         This file you are reading.
+  173852 2003-03-27 AxeneOffice-v201.src.tar.gz
+                                        Axene XOffice LaunchBar, v.  2.0.1.  
+                                        Requires Motif/Lesstif library.
+                                        C++ source code under the GNU GPL. From:
+                                        http://xibios2.free.fr/
+10902830 2003-03-27 AxeneSDK-v2.0.1.tar.gz
+                                        Axene XOffice 2.0.1 complete C++ source
+                                        code and build kit for all components.  
+                                        Requires Motif/Lesstif library.
+                                        C++ source code under the GNU GPL. From:
+                                        http://xibios2.free.fr/
+ 1123170 2001-08-27 XAllWrite-v201.src.tar.gz
+                                        Axene XAllWrite word processor v. 2.0.1,
+                                        a full-featured Motif/Lesstif-based app
+                                        with good language support, handling of 
+                                        many bitmap and vector graphics formats,
+                                        and frame orientation.  Supports its 
+                                        own, HTML, and ASCII formats.
+                                        Requires Motif/Lesstif library.
+                                        C++ source code under the GNU GPL. From:
+                                        http://xibios2.free.fr/
+ 1518137 2003-03-27 Xclamation-v201.src.tar.gz
+                                        Axene Xclamation desktop publishing 
+                                        package.  Frame-oriented.  Good 
+                                        language support, handling of many 
+                                        bitmap and vector graphics formats.
+                                        Supports its own, HTML, & ASCII formats.
+                                        Requires Motif/Lesstif library.
+                                        C++ source code under the GNU GPL. From:
+                                        http://xibios2.free.fr/
+  635798 2003-03-27 XInstall-v201.src.tar.gz
+                                        Axene XInstall 2.0.1 graphical installer                                        for Axene XOffice components (XQuad, 
+                                        Xlamation, XAllWrite, XMayday, and 
+                                        related documentation).  
+                                        Requires Motif/Lesstif library.
+                                        C++ source code under the GNU GPL. From:
+                                        http://xibios2.free.fr/
+  703795 2003-03-27 XMayday-v201.src.tar.gz
+                                        Axene XMayday 2.0.1 HTML-format help 
+                                        browser for Axene XOffice.
+                                        Requires Motif/Lesstif library.
+                                        C++ source code under the GNU GPL. From:
+                                        http://xibios2.free.fr/
+ 1577968 2003-03-27 XQuad-v201.src.tar.gz
+                                        Axene XQuad 2.0.1 spreadsheet.  Good 
+                                        language support.  Imports Excel or 
+                                        delimited text data.  Exports Adobe
+                                        Illustrator, Xclamation, delimited text,
+                                        or HTML data.  Requires Motif/Lesstif 
+                                        library.  C++ source code under the 
+                                        GNU GPL.  From:
+                                        http://xibios2.free.fr/
+ 1099766 2000-05-29 common.tar.gz       Files and resources common to Xclamation
+                                        and XQuad: fonts, fonts metrics, NLS 
+                                        support, locale data, XKeysymDB file.
+                                        C source code under the GNU GPL.  From:
+                                        http://xibios2.free.fr/

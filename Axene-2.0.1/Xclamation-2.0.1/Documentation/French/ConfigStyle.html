@@ -1,0 +1,90 @@
+<!-- Documentation Xclamation (c)1994-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Configuration des styles</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Fichiers de configuration" WIDTH="188" HEIGHT="27"> <img ALIGN="middle" SRC="Images/TitleConfigStyle.gif" ALT="Configuration des styles" WIDTH="291" HEIGHT="40"> </p>
+
+<p><br>
+<br>
+Cette section des <a HREF="Config.html">fichiers de configuration</a> permet de
+prédéfinir une liste de styles. </p>
+
+<h3>Section de définition de la liste des styles&nbsp;: <i>\STYLELIST{...}</i></h3>
+
+<p>Cette section introduit la définition de la liste des styles accessibles dans les
+menus correspondants d'Xclamation. La définition des styles de la liste s'effectue après
+l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade fermante correspondante <i>&quot;}&quot;</i>.
+Chaque élément de la liste des styles est défini comme il l'est décrit ci-dessous. <a NAME="style"></p>
+
+<h3>Section de définition d'un style&nbsp;: <i>\STYLEX{...}</i></h3>
+
+<p>Cette section définit le style X dans la base des styles d'Xclamation. La définition
+d'un style s'effectue après l'accolade ouvrante <i>&quot;{&quot;</i> et avant l'accolade
+fermante <i>&quot;}&quot;</i>. Les paramètres de définitions d'un style sont&nbsp;: </a>
+
+<ol>
+  <li><b>\FONT{<a HREF="ConfigFont.html#id">identifiant de la police</a>}</b>&nbsp;:
+    identifiant de la police attachée au style. <br>
+    &nbsp;</li>
+  <li><b><a HREF="ConfigColor.html#color">\COLORX</a></b>&nbsp;: identifiant de la couleur
+    attachée au style. <br>
+    &nbsp;</li>
+  <li>La <b>taille de la police</b> attachée au style. <br>
+    &nbsp;</li>
+  <li><b>\NAME{nom du style}</b>&nbsp;: nom du style tel qu'il apparaît dans Xclamation. <br>
+    &nbsp;</li>
+  <li><b>\WIDTH{expansion}</b>&nbsp;: l'expansion horizontale de la police pour ce style (1
+    signifie que la police aura une largeur normale, 1.5 signifie qu'elle aura une largeur 1,5
+    fois plus grande que la largeur normale). <br>
+    &nbsp;</li>
+  <li><a NAME="lock"><b>\LOCK</b> permet de verrouiller un style défini dans la base des
+    styles d'Xclamation de façon à ce qu'il ne puisse être supprimé dans la boîte de
+    dialogue '</a><a HREF="Box_Font.html#button_del">Composition des styles</a>'. <br>
+    &nbsp;</li>
+  <li><a NAME="hide"><b>\HIDE</b> permet cacher le style défini pour qu'il n'apparaisse pas
+    dans les listes de styles d'Xclamation. </a><br>
+    &nbsp;</li>
+</ol>
+
+<h3>Exemples&nbsp;:</h3>
+<tt>
+
+<p>\STYLELIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\STYLE0{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FONT{Helvetica}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COLOR3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Normal&nbsp;12pts}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\WIDTH{1}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\STYLE1{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FONT{Helvetica-Bold}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COLOR1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Section&nbsp;16pts}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\WIDTH{.8}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\LOCK<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\STYLE2{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\FONT{Helvetica-Bold}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\COLOR1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Large&nbsp;20pts}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\WIDTH{1.7}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXclamation.gif" ALT="Xclamation (c)1996. Axene" WIDTH="167" HEIGHT="29"></p>
+</body>
+</html>

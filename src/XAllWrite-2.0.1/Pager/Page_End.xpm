@@ -1,0 +1,18 @@
+/* XPM */
+static char * Page_End_xpm[] = {
+"14 11 4 1",
+" 	c gray60",
+".	c gray90",
+"X	c gray65",
+"o	c gray20",
+"              ",
+"  ..     ...  ",
+"  .X..   .Xo  ",
+"  .XXX.. .Xo  ",
+"  .XXXXX..Xo  ",
+"  .XXXXXXXXo  ",
+"  .XXXXXo.Xo  ",
+"  .XXXoo .Xo  ",
+"  .Xoo   .Xo  ",
+"  oo     .oo  ",
+"              "};

@@ -1,0 +1,62 @@
+<!-- Documentation XMayday (c)1996-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Printer Configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Configuration files" WIDTH="136" HEIGHT="25"> <img ALIGN="middle" SRC="Images/TitleConfigPrinter.gif" ALT="Printer Configuration" WIDTH="252" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+This <a HREF="Config.html">configuration files</a> section configures the printers. </p>
+
+<h3>Printer configuration section: <i>\PRINTER{...}</i></h3>
+
+<p>This section selects a printer to print your HTML pages. The printer definition begins
+after the opening bracket <i>&quot;{&quot;</i> and before the corresponding closing
+bracket <i>&quot;}&quot;</i>. The configuration parameters are: 
+
+<ol>
+  <li><b>\NAME{name}</b> where <i>name</i> represents the printer name as it is defined in the
+    '<a HREF="Box_Print.html#printer_list">print</a>' dialog box. <br>
+    &nbsp;</li>
+  <li><b>\COMMAND{command line}</b> where <i>command line</i> represents the print command for
+    your system. If this parameter is forgotten, printing will occur in a file. <br>
+    &nbsp;</li>
+</ol>
+<b>
+
+<p>Note:</b> It is possible to select several printers. At print time the printer to be
+used must be chosen in the '<a HREF="Box_Print.html#printer_list">print</a>' dialog box. </p>
+
+<h3>Example:</h3>
+<tt>
+
+<p>\PRINTER{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Laser&nbsp;16}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COMMAND{lpr&nbsp;-PLaser_R16}<br>
+}<br>
+</p>
+
+<p>\PRINTER{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\NAME{File}<br>
+}<br>
+</p>
+
+<p>\PRINTER{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Postscript&nbsp;Printer}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COMMAND{lpr}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXMayday.gif" ALT="XMayday (c)1997. Axene" WIDTH="164" HEIGHT="31"></p>
+</body>
+</html>

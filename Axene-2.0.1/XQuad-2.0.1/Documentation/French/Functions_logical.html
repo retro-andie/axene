@@ -1,0 +1,123 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fonctions logiques</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFunctionsLogical.gif" ALT="Fonctions Logiques" WIDTH="225" HEIGHT="38"> </p>
+
+<p><br>
+<br>
+</p>
+
+<hr>
+
+<h3><a NAME="et"><font COLOR="#2244AA">et</font></a></h3>
+
+<ul>
+  <p><b>Opération logique ET.</b> </p>
+  <p><b>et(<i>valeur1</i><font COLOR="#333333">; <i>valeur2</i>; <i>...</i></font>)</b> <ul>
+    <li><i>valeurN&nbsp;:</i> valeur logique (0 = FAUX; !0 = VRAI). </li>
+  </ul>
+  <p>Renvoie une addition logique des valeurs de vérité de tout les arguments. Si au moins
+  un des arguments est faux alors le résultat est faux sinon le résultat est vrai. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=ET(vrai; vrai)</tt><br>
+    <b>Valeur&nbsp;: </b>vrai </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="faux"><font COLOR="#2244AA">faux</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur logique FAUX.</b> </p>
+  <p><b>faux()</b> </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=faux()</tt><br>
+    <b>Valeur&nbsp;: </b>Faux </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="non"><font COLOR="#2244AA">non</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur logique inverse de la proposition.</b> </p>
+  <p><b>non(<i>valeur</i>)</b> <ul>
+    <li><i>valeur&nbsp;:</i> proposition logique. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=non(1=2)</tt><br>
+    <b>Valeur&nbsp;: </b>Vrai </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="ou"><font COLOR="#2244AA">ou</font></a></h3>
+
+<ul>
+  <p><b>Opération logique OU.</b> </p>
+  <p><b>ou(<i>valeur1</i><font COLOR="#333333">; <i>valeur2</i>; <i>...</i></font>)</b> <ul>
+    <li><i>valeurN&nbsp;:</i> valeur logique (0 = FAUX; !0 = VRAI) </li>
+  </ul>
+  <p>Effectue un OU logique ente les valeurs de vérités de tout les arguments. Si au moins
+  un des arguments est vrai alors le résultat est vrai sinon le résultat est faux. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=ou(faux; vrai)</tt><br>
+    <b>Valeur&nbsp;: </b>Vrai </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="si"><font COLOR="#2244AA">si</font></a></h3>
+
+<ul>
+  <p><b>Renvoie un résultat conditionnel.</b> </p>
+  <p><b>si(<i>test</i>; <i>valeur_vrai</i>; <i>valeur_faux</i>)</b> <ul>
+    <li><i>test&nbsp;:</i> test logique à évaluer. </li>
+    <li><i>valeur_vrai&nbsp;:</i> valeur à retourner si le test est vrai. </li>
+    <li><i>valeur_faux&nbsp;:</i> valeur à retourner si le test est faux. </li>
+  </ul>
+  <p>Renvoie le deuxième paramètre si le <i>test</i> évalué en premier paramètre est
+  vrai sinon renvoie le troisième paramètre. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=si(1&lt;2; 23; 45)</tt><br>
+    <b>Valeur&nbsp;: </b>23 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="vrai"><font COLOR="#2244AA">vrai</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la valeur logique VRAI.</b> </p>
+  <p><b>vrai()</b> </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=vrai()</tt><br>
+    <b>Valeur&nbsp;: </b>Vrai </p>
+  </ul>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

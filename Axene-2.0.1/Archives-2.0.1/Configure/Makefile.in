@@ -1,0 +1,84 @@
+#
+# Makefile.in for Axene Softwares in src/
+#  GLOBAL MAKEFILE
+#
+# Copyright (C) 1997-2000 Axene.
+# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Email: xcalibur@axene.org
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+# Started on  Wed May 31 17:01:19 2000 Emmanuel Paris
+# Last update Thu Jun  8 14:02:50 2000 Emmanuel Paris
+#
+
+SHELL= /bin/sh
+SUBDIRS =
+
+CC =
+CFLAGS =
+CPPFLAGS =
+LDFLAGS =
+SOCK_LIBS =
+MOTIF_LIBS =
+X11_LIBS =
+X11CONFIG =
+ARFLAGS =
+
+SYSTEM_NAME = 
+PACKAGE_NAME =
+
+PREFIX =
+LANGUAGE =
+
+all:	$(SUBDIRS)
+	@echo ""; echo "Ok, everything is built now. Next, run 'make install'."
+
+install:	$(DEPFILES)
+	@PREFIX="$(PREFIX)"; LANGUAGE="$(LANGUAGE)"; export PREFIX LANGUAGE; \
+	for i in $(SUBDIRS); do \
+	echo ""; echo ""; echo Install all in $$i; echo ""; echo "" ; \
+	cd $$i; $(MAKE) install; cd ..; done
+
+clean:	
+	@for i in $(SUBDIRS); do \
+	echo ""; echo ""; echo Clean all in $$i; echo ""; echo "" ; \
+	cd $$i; $(MAKE) zclean; rm -f buildenv; cd ..; done
+
+# BEGIN SUBST
+<<SUBST>>:	<<SUBST>>/buildenv <<SUBST>>/main
+	@echo "Ok, everything is built in <<SUBST>>"
+
+<<SUBST>>/buildenv:
+	@echo ""; echo ""; echo Build env. in <<SUBST>>; echo ""; echo "" 
+	@cd <<SUBST>>; SYSTEM_NAME="$(SYSTEM_NAME)"; \
+	PACKAGE_NAME="$(PACKAGE_NAME)"; export SYSTEM_NAME PACKAGE_NAME; \
+	$(MAKE) buildenv
+	touch <<SUBST>>/buildenv
+
+<<SUBST>>/main:
+	@echo ""; echo ""; echo Compile all in <<SUBST>>; echo ""; echo "" 
+	@cd <<SUBST>>; CC="$(CC)"; CFLAGS="$(CFLAGS)"; \
+	CPPFLAGS="$(CPPFLAGS)"; \
+	LDFLAGS="$(LDFLAGS)"; SOCK_LIBS="$(SOCK_LIBS)"; \
+	MOTIF_LIBS="$(MOTIF_LIBS)"; X11_LIBS="$(X11_LIBS)"; \
+	X11CONFIG="$(X11CONFIG)"; ARFLAGS="$(ARFLAGS)"; \
+	export CC CFLAGS CPPFLAGS LDFLAGS; \
+	export SOCK_LIBS MOTIF_LIBS X11_LIBS X11CONFIG ARFLAGS; \
+	$(MAKE) notrace; \
+	$(MAKE) realname
+
+# END SUBST
+# End of global Makefile

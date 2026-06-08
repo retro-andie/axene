@@ -1,0 +1,16 @@
+/* XPM */
+static char * bot_right_xpm[] = {
+"9 8 5 1 4 0",
+" 	s None	c None",
+".	c black",
+"X	c gray35",
+"o	c gray90",
+"O	c gray60",
+"    .    ",
+"   .X.   ",
+"  .ooX.  ",
+" .ooOOX. ",
+".ooOOOOX.",
+".ooOOOOX.",
+".XXXXXXX.",
+"........."};

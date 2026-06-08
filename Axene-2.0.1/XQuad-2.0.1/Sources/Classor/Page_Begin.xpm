@@ -1,0 +1,18 @@
+/* XPM */
+static char * Page_Begin_xpm[] = {
+"14 11 4 1",
+" 	c gray60",
+".	c gray90",
+"X	c gray20",
+"o	c gray65",
+"              ",
+"  ..X     .X  ",
+"  .oX   ..oX  ",
+"  .oX ..oooX  ",
+"  .oX.oooooX  ",
+"  .ooooooooX  ",
+"  .oXXoooooX  ",
+"  .oX XXoooX  ",
+"  .oX   XXoX  ",
+"  .XX     XX  ",
+"              "};

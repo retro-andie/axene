@@ -1,0 +1,21 @@
+/* XPM */
+static char * resize_1_xpm[] = {
+"9 15 3 1 4 7",
+" 	s None	c None",
+".	c black",
+"X	c white",
+"    .    ",
+"   .X.   ",
+"  .XXX.  ",
+" .XXXXX. ",
+".XXXXXXX.",
+"...XXX...",
+"  .XXX.  ",
+"  .XXX.  ",
+"  .XXX.  ",
+"...XXX...",
+".XXXXXXX.",
+" .XXXXX. ",
+"  .XXX.  ",
+"   .X.   ",
+"    .    "};

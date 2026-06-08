@@ -1,0 +1,92 @@
+#/*
+# * makefile 		- Makefile for Selector
+# *
+# * Copyright (c) 1994-1995. All Rights reserved.
+# * Xcalibur Team (S.Boisson, A.Buat, R.Castanier, E.Paris)
+# * EMail: <xcalibur@axene.org>
+# */
+
+SHELL=	/bin/sh
+DEFS=		-DHAVE_STRDUP   -I../Headers/
+#SRC_SERVER=	LMServer.c ../Managers/MemoryManager.c ../Managers/ErrorManager.c
+OBJ_SERVER=	LMServer.o../Managers/MemoryManager.o ../Managers/ErrorManager.o
+#SRC_CLIENT=	LMClient.c ../Managers/MemoryManager.c ../Managers/ErrorManager.c
+OBJ_CLIENT=	LMClient.o ../Managers/MemoryManager.o ../Managers/ErrorManager.o \
+	LMAttrib_Class.o \
+	LMObject_List.o \
+	LMObject_Descriptor_List.o \
+	LMComData.o \
+	LMComData_List.o \
+	LMObject.o \
+	LMObject_Descriptor.o  \
+	LMClient_Descriptor.o \
+	LMClient_Descriptor_List.o 
+
+
+SRC=	LMServer.c LMClient.c ../Managers/MemoryManager.c ../Managers/ErrorManager.c \
+	LMAttrib_Class.c \
+	LMObject_List.c \
+	LMObject_Descriptor_List.c \
+	LMComData.c \
+	LMComData_List.c \
+	LMObject.c \
+	LMObject_Descriptor.c \
+	LMClient_Descriptor.c \
+	LMClient_Descriptor_List.c  
+
+
+server:	$(OBJ_SERVER)
+	$(CC) $(DEFS) -o $@ $(OBJ_SERVER)
+#	strip $@
+symbserver:	$(OBJ_SERVER)
+	$(CC) $(DEFS) -o server $(OBJ_SERVER)
+#	strip $@
+
+client:	$(OBJ_CLIENT)
+	$(CC) $(DEFS) -o $@ $(OBJ_CLIENT)
+#	strip $@
+symbclient:	$(OBJ_CLIENT)
+	$(CC) $(DEFS) -g -o client $(OBJ_CLIENT)
+#	strip $@
+
+main.o:	main.c
+	$(CC) $(DEFS)  -c main.c 
+
+LMAttrib_Class.o : LMAttrib_Class.c
+	$(CC) $(DEFS) -c LMAttrib_Class.c
+
+LMObject_List.o : LMObject_List.c
+	$(CC) $(DEFS) -c LMObject_List.c
+
+LMObject_Descriptor_List.o : LMObject_Descriptor_List.c
+	$(CC) $(DEFS) -c LMObject_Descriptor_List.c
+
+LMComData.o: LMComData.c 
+	$(CC) $(DEFS) -c LMComData.c 
+
+LMComData_List.o: LMComData_List.c 
+	$(CC) $(DEFS) -c LMComData_List.c 
+
+LMObject.o: LMObject.c 
+	$(CC) $(DEFS) -c LMObject.c 
+ 
+LMObject_Descriptor.o: LMObject_Descriptor.c 
+	$(CC) $(DEFS) -c LMObject_Descriptor.c 
+ 
+LMServer.o: LMServer.c 
+	$(CC) $(DEFS) -c LMServer.c 
+ 
+LMClient.o: LMClient.c 
+	$(CC) $(DEFS) -c LMClient.c 
+
+LMClient_Descriptor.o: LMClient_Descriptor.c 
+	$(CC) $(DEFS) -c LMClient_Descriptor.c 
+
+LMClient_Descriptor_List.o : LMClient_Descriptor_List.c
+	$(CC) $(DEFS) -c LMClient_Descriptor_List.c
+
+
+
+clean:
+	rm -f *.o *~ server client
+

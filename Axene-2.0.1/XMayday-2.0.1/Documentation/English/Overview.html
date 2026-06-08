@@ -1,0 +1,111 @@
+<!-- Documentation XMayday (c)1996-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Overview</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleOverview.gif" ALT="Overview" WIDTH="113" HEIGHT="29"> </p>
+
+<p><br>
+<br>
+XMayday is an <b>&quot;HTML Browser&quot;</b>, that is, an application capable of reading,
+displaying, and managing documents created with HTML language (Hypertext Markup Language).
+HTML is a document description language; with it the user may set items in bold or
+italics, arrange a list of elements, position text, and so forth. HTML is unique because
+it creates links between documents: clicking on a word in Document A refers XMayday to a
+particular Document B.<br>
+XMayday was specially designed for viewing HTML documents. Because application
+documentations are generally structured around an index or a table of contents, XMayday
+isolates this page so it always remains quickly accessible. XMayday's <a HREF="Main_Interface.html">Main Interface</a> contains two sections:<br>
+
+<ul>
+  <li>The Index or Table of Contents is always accessible from the <a HREF="Main_Interface.html#index_section">first section</a>. This page remains the same
+    while the hypertext links it is made of determine the contents of the second section. <br>
+    &nbsp;</li>
+  <li>The <a HREF="Main_Interface.html#browse_section" second section>second section</a>
+    displays the HTML pages for the requested documentation. The pages in this section change
+    according to the hypertext links they contain, or according to the hypertext links from
+    the first section. <br>
+    &nbsp;</li>
+</ul>
+
+<p>Xmayday may also be used like any other HTML browser by not using the Table of Contents
+presented in the first interface section. </p>
+
+<p>Please note that Xmayday can only read local files. Unlike Internet browsers which
+utilize the HTTP protocol, it cannot access distant files. This unique feature allows
+XMayday to take full advantage of system resources, making it a particularly good tool for
+HTML documentation display. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<h2>To create your own documents:</h2>
+
+<p>Xmayday is freeware; it may only be used and distributed according to the usage <a HREF="License.html">license</a>. XMayday is capable of producing documents according to
+the HTML 2.0 norm, and is capable of displaying other features such as tables. Images used
+in documentation may be in GIF, JPEG, PNG, BMP, or TGA formats, although it is always
+recommended to use GIF or JPEG format because the others are not recognized by all
+browsers. </p>
+
+<p>To utilize Xmayday to its fullest, create a page (Table of Contents or Index)
+containing links to all parts of the documentation. Generally called
+&quot;index.html&quot;, this page must be loaded in the first section of the Main
+Interface. </p>
+
+<p>An API performs an external inquiry into XMayday operations, in order to remain
+properly interfaced with your other applications. API is also used for documentation in
+all other Axene products. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<h2>The Launch</h2>
+<b>
+
+<p>usage:</b> <tt>XMayday [-help] [-version] [-fg &lt;color&gt;] [-bg &lt;color&gt;]
+[-display &lt;displayname&gt;] [-geometry &lt;geom&gt;] [-keepFreeColor &lt;number&gt;]
+[-index &lt;file&gt;] [file] </tt></p>
+
+<p><b>detail:</b><br>
+<tt><b>-help, --help, -h</b></tt><br>
+displays a summary of valid parameters on the command line. </p>
+
+<p><tt><b>-version, -v</b></tt><br>
+displays XMayday's version number. </p>
+
+<p><tt><b>-fg color</b></tt><br>
+defines the foreground color. </p>
+
+<p><tt><b>-bg color</b></tt><br>
+defines the background color. </p>
+
+<p><tt><b>-display host:dpy</b></tt><br>
+specifies which X server to use. </p>
+
+<p><tt><b>-geometry geom</b></tt><br>
+sets the size of the application window. </p>
+
+<p><tt><b>-keepFreeColor number</b></tt><br>
+sets the number of colors to be left free for use by other X applications. This value is
+10 by default for a 256 color palette. This option may only be used when your X server
+works in Pseudo-Color. </p>
+
+<p><tt><b>-index file, -id file</b></tt><br>
+Opens XMayday with a <i>file</i> as the index page. </p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXMayday.gif" ALT="XMayday (c)1997 Axene" WIDTH="164" HEIGHT="31"></p>
+</body>
+</html>

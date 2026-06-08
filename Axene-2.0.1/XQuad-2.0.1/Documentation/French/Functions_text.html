@@ -1,0 +1,398 @@
+<!-- Documentation XQuad (c)1995-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Fonctions textes</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleFunctionsText.gif" ALT="Fonctions Textes" WIDTH="208" HEIGHT="37"> </p>
+
+<p><br>
+<br>
+</p>
+
+<hr>
+
+<h3><a NAME="car"><font COLOR="#2244AA">car</font></a></h3>
+
+<ul>
+  <p><b>Convertit un nombre en caractères.</b> </p>
+  <p><b>car(<i>nombre</i>)</b> <ul>
+    <li><i>nombre&nbsp;:</i> valeur comprise entre 0 et 255 à convertir. </li>
+  </ul>
+  <p>Convertit le <i>nombre</i> en sa représentation caractère dans le table ASCII. Cette
+  fonction est la fonction inverse de <a HREF="Functions_text.html#code">code</a>. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=car(71)</tt><br>
+    <b>Valeur&nbsp;: </b>G </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="cherche"><font COLOR="#2244AA">cherche</font></a></h3>
+
+<ul>
+  <p><b>Renvoie la position d'un texte dans un autre.</b> </p>
+  <p><b>cherche(<i>texte_cherché</i>; <i>texte</i><font COLOR="#333333">; <i>départ</i></font>)</b>
+  <ul>
+    <li><i>texte_cherché&nbsp;:</i> texte à chercher. </li>
+    <li><i>texte&nbsp;:</i> texte dans lequel la recherche est effectuée. </li>
+    <li><i>départ&nbsp;:</i> position dans le texte à partir de laquelle il faut chercher. </li>
+  </ul>
+  <p>Renvoie la position du <i>texte recherché</i> dans le <i>texte</i>. Cette position est
+  forcement supérieure au paramètre <i>départ</i>. Si le paramètre <i>départ</i> n'est
+  pas spécifié, il prend la valeur 0 (recherche à partir du début du texte). Si le texte
+  n'est pas trouvé une erreur l'indique. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=cherche(&quot;chien&quot;; &quot;le gros chien est noir&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>9 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="cnum"><font COLOR="#2244AA">cnum</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le nombre correspondant au texte.</b> </p>
+  <p><b>cnum(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à interpreter comme nombre. </li>
+  </ul>
+  <p>Renvoie un nombre correspondant à un <i>texte</i> interpretable par XQuad (date,
+  nombre entre &quot;&quot; ou heure) </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=cnum(&quot;123&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>123 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="code"><font COLOR="#2244AA">code</font></a></h3>
+
+<ul>
+  <p><b>Convertit un caractère en nombre.</b> </p>
+  <p><b>code(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à convertir. </li>
+  </ul>
+  <p>Renvoie la valeur décimale du code Ascii du premier caractère du paramètre <i>texte</i>.
+  </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=code(&quot;G&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>71 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="ctxt"><font COLOR="#2244AA">ctxt</font></a></h3>
+
+<ul>
+  <p><b>Convertit un nombre en texte.</b> </p>
+  <p><b>ctxt(<i>nombre</i><font COLOR="#333333">; <i>décimal</i>; <i>séparateur</i></font>)</b>
+  <ul>
+    <li><i>nombre&nbsp;:</i> valeur à convetir. </li>
+    <li><i>décimal&nbsp;:</i> nombre de chiffre après la virgule. </li>
+    <li><i>séparateur&nbsp;:</i> booléen indiquant la séparation des milliers. </li>
+  </ul>
+  <p>Convertit un <i>nombre</i> en texte en prenant en compte le <i>nombre de décimales</i>
+  à afficher et si il faut placer un <i>séparateur</i> des millers. Si la valeur de <i>séparateur</i>
+  est vraie alors il n'y a pas de séparateur sinon un espace est inséré tout les trois
+  chiffres. la valeur par défaut pour <i>décimal</i> est 2; La valeur par défaut pour <i>séparateur</i>
+  est FAUX. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=ctxt(12345.346; 2; 0)</tt><br>
+    <b>Valeur&nbsp;: </b>12 345,35 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="droite"><font COLOR="#2244AA">droite</font></a></h3>
+
+<ul>
+  <p><b>Découpe un texte en partant de la fin.</b> </p>
+  <p><b>droite(<i>texte</i>; <i>nombre</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+    <li><i>nombre&nbsp;:</i> index à partir de la droite. </li>
+  </ul>
+  <p>Renvoie les <i>nombre</i> derniers caractères du <i>texte</i>. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=droite(&quot;machine&quot;, 5)</tt><br>
+    <b>Valeur&nbsp;: </b>chine </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="épurage"><font COLOR="#2244AA">épurage</font></a></h3>
+
+<ul>
+  <p><b>Epure un texte.</b> </p>
+  <p><b>épurage(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+  </ul>
+  <p>Supprime tout les caractères de controle d'un <i>texte</i>. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=épurage(&quot;^Ateste&quot;) / avec ^A caractère unique de code 0</tt><br>
+    <b>Valeur&nbsp;: </b>teste </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="exact"><font COLOR="#2244AA">exact</font></a></h3>
+
+<ul>
+  <p><b>Compare deux textes.</b> </p>
+  <p><b>exact(<i>texte1</i>; <i>texte2</i>)</b> <ul>
+    <li><i>texte1&nbsp;:</i> texte à comparer. </li>
+    <li><i>texte2&nbsp;:</i> texte à comparer. </li>
+  </ul>
+  <p>Renvoie vrai si les deux textes sont identiques, sinon le résultat est faux. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=exact(&quot;Gateau&quot;; &quot;Gato&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>faux </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="gauche"><font COLOR="#2244AA">gauche</font></a></h3>
+
+<ul>
+  <p><b>Découpe un texte en partant du début.</b> </p>
+  <p><b>gauche(<i>texte</i>; <i>nombre</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+    <li><i>nombre&nbsp;:</i> index à partir de la gauche. </li>
+  </ul>
+  <p>Renvoie les <i>nombre</i> premiers caractères du texte. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=gauche(&quot;épuisette&quot;, 6)</tt><br>
+    <b>Valeur&nbsp;: </b>épuise </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="majuscule"><font COLOR="#2244AA">majuscule</font></a></h3>
+
+<ul>
+  <p><b>Convertit le texte en majuscules.</b> </p>
+  <p><b>majuscule(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à convertir. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=majuscule(&quot;maximum&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>MAXIMUM </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="minuscule"><font COLOR="#2244AA">minuscule</font></a></h3>
+
+<ul>
+  <p><b>Convertit le texte en minuscules.</b> </p>
+  <p><b>minuscule(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à convertir. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=minuscule(&quot;MINUSCULE&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>minuscule </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="nbcar"><font COLOR="#2244AA">nbcar</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le nombre de caractère du <i>texte</i>.</b> </p>
+  <p><b>nbcar(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=nbcar(&quot;une galette&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>12 </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="nompropre"><font COLOR="#2244AA">nompropre</font></a></h3>
+
+<ul>
+  <p><b>Renvoie le texte en nom propre.</b> </p>
+  <p><b>nompropre(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+  </ul>
+  <p>Le texte converti en nom propre prend une majuscule en début de chaque mot. Les autres
+  lettres sont converties en minuscules. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=nompropre(&quot;jEan piErre duPont&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>Jean Pierre Dupont </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="remplacer"><font COLOR="#2244AA">remplacer</font></a></h3>
+
+<ul>
+  <p><b>Remplace un morceau de texte par un autre.</b> </p>
+  <p><b>remplacer(<i>texte</i>; <i>départ</i>; <i>nombre</i>; <i>nouveau_texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+    <li><i>départ&nbsp;:</i> position de départ du remplacement. </li>
+    <li><i>nombre&nbsp;:</i> nombre de caractères à remplacer. </li>
+    <li><i>nouveau_texte&nbsp;:</i> texte remplacant. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=remplacer(&quot;polystyrène&quot;; 5; 4;&quot;éthyl&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>polyéthylène </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="répéter"><font COLOR="#2244AA">répéter</font></a></h3>
+
+<ul>
+  <p><b>Répète un texte un certain nombre de fois.</b> </p>
+  <p><b>répéter(<i>texte</i>; <i>nombre</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à répéter. </li>
+    <li><i>nombre&nbsp;:</i> nombre de répétitions. </li>
+  </ul>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=répéter(&quot;/\&quot;; 6)</tt><br>
+    <b>Valeur&nbsp;: </b>/\/\/\/\/\/\ </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="stxt"><font COLOR="#2244AA">stxt</font></a></h3>
+
+<ul>
+  <p><b>Extrait des caractères dans un texte.</b> </p>
+  <p><b>stxt(<i>texte</i>; <i>départ</i>; <i>nombre</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter </li>
+    <li><i>départ&nbsp;:</i> départ de l'extraction. </li>
+    <li><i>nombre&nbsp;:</i> nombre de caractères à extraire. </li>
+  </ul>
+  <p>Extrait un nombre de caractères spécifié en troisième paramètre au texte à partir
+  de la position spécifiée en deuxième paramètre. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=stxt(&quot;flan au pomme&quot;; 9; 5)</tt><br>
+    <b>Valeur&nbsp;: </b>pomme </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="substitue"><font COLOR="#2244AA">substitue</font></a></h3>
+
+<ul>
+  <p><b>Remplace un texte par un autre.</b> </p>
+  <p><b>substitue(<i>texte</i>; <i>texte1</i>; <i>texte2</i>; <i>départ</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+    <li><i>texte1&nbsp;:</i> texte à remplacer. </li>
+    <li><i>texte2&nbsp;:</i> texte de remplacement. </li>
+    <li><i>départ&nbsp;:</i> position de départ de la recherche. </li>
+  </ul>
+  <p>Si le texte passé en deuxième paramètre existe dans le texte passé en premier
+  parmètre, il est remplacé par le texte passé en troisième paramètre. Le quatrième
+  paramètre indique la position à partir de laquelle le deuxième paramètre est cherché
+  dans le texte. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=substitue(&quot;prendre l'avion&quot;; &quot;avion&quot;;
+    &quot;hélicoptère&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>prendre l'hélicoptère </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="supprespace"><font COLOR="#2244AA">supprespace</font></a></h3>
+
+<ul>
+  <p><b>Supprime les espaces d'un texte.</b> </p>
+  <p><b>supprespace(<i>texte</i>)</b> <ul>
+    <li><i>texte&nbsp;:</i> texte à traiter. </li>
+  </ul>
+  <p>Supprime les espaces inutiles d'un texte. La succection de plusieurs espaces se
+  transforme en un seul espace. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=supprespace(&quot;John&nbsp;&nbsp;&nbsp;&nbsp;Smith&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>John Smith </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="t"><font COLOR="#2244AA">t</font></a></h3>
+
+<ul>
+  <p><b>Renvoie du texte.</b> </p>
+  <p><b>t(<i>valeur</i>)</b> <ul>
+    <li><i>valeur&nbsp;:</i> valeur à traiter. </li>
+  </ul>
+  <p>Si la <i>valeur</i> est (ou fait référence à) du texte, ce texte est renvoyé, sinon
+  rien n'est renvoyé. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=t(&quot;Compatibilité&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>Compatibilité </p>
+  </ul>
+</ul>
+
+<hr>
+
+<h3><a NAME="trouve"><font COLOR="#2244AA">trouve</font></a></h3>
+
+<ul>
+  <p><b>Recherche une texte dans un autre.</b> </p>
+  <p><b>trouve(<i>texte_cherché</i>; <i>texte</i><font COLOR="#333333">; <i>départ</i></font>)</b>
+  <ul>
+    <li><i>texte_cherché:</i> texte à rechercher. </li>
+    <li><i>texte&nbsp;:</i> texte dans lequel il faut effectuer la recherche. </li>
+    <li><i>départ&nbsp;:</i> caractère de départ de la recherche. </li>
+  </ul>
+  <p>Renvoie la position de la <i>chaine cherchée</i> si elle existe dans le <i>texte</i>
+  sinon renvoie une erreur. </p>
+  <p><b><u>Exemple</u>&nbsp;:</b><br>
+  <ul>
+    <tt><p>=trouve(&quot;vac&quot;; &quot;poulets, légumes, vaches, cochons&quot;)</tt><br>
+    <b>Valeur&nbsp;: </b>19 </p>
+  </ul>
+</ul>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXQuad.gif" ALT="XQuad (c)1996-98 Axene" WIDTH="166" HEIGHT="28"></p>
+</body>
+</html>

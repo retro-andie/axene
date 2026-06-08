@@ -1,0 +1,92 @@
+<!-- Documentation Xclamation (c)1994-2000 AXENE contact axene@axene.org>
+<html>
+
+<head>
+<title>Colors Configuration</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="Images/back.gif" TEXT="#000000">
+
+<p ALIGN="right"><img ALIGN="middle" SRC="Images/TitleConfigFile.gif" ALT="Configuration files" WIDTH="136" HEIGHT="25"> <img ALIGN="middle" SRC="Images/TitleConfigColor.gif" ALT="Colors Configuration" WIDTH="230" HEIGHT="35"> </p>
+
+<p><br>
+<br>
+This <a HREF="Config.html">configuration files</a> section defines a color list. </p>
+
+<h3>Color list definition section: <i>\COLORLIST{...}</i></h3>
+
+<p>This section presents the color-list accessible from corresponding Xclamation menus.
+The definition of colors from the list appear between the opening bracket <i>&quot;{&quot;</i>
+and corresponding closing bracket <i>&quot;}&quot;</i>. Each element of the color list is
+defined as described below. <a NAME="color"></p>
+
+<h3>Colors definition section: <i>\COLORX{...}</i></h3>
+
+<p>A color is defined by <b>\COLORX</b> where <i>X</i> is an entity which uniquely
+identifies the color. </a></p>
+
+<p>Watch out for problems that might occur when using more than one configuration file.
+Preventive measures must be in place in order to insure that the same name is not used
+more than once between the system configuration files (xclamationrc) and the user
+configuration files (.xclamationrc). To avoid this, the user configuration files can be
+set to start with <i>X</i> at 100. </p>
+
+<p>Colors definition parameters appear between the opening bracket <i>&quot;{&quot;</i>
+and corresponding closing bracket <i>&quot;}&quot;</i>. They contain: 
+
+<ol>
+  <li><b>\NAME{name}</b> where <i>name</i> represents the name attributed to the color in
+    corresponding Xclamation menus. <br>
+    &nbsp;</li>
+  <li><b>\TRANSPARENCYXXX</b> where <i>XXX</i> represents the color's degree of transparency;
+    in the current version only two choices are possible: 0 or 255. <br>
+    &nbsp;</li>
+  <li>There are several ways to define a color: <br>
+    &nbsp; <ol>
+      <li><b>\GRAY{ b }</b> where <i>b</i> represents a percentage of white set between 0 and 1,
+        thus defining a shade of gray. <br>
+        &nbsp;</li>
+      <li><b>\CMYK{ c m y k }</b> where <i>c</i>, <i>m</i>, <i>y</i>, <i>k</i> represents
+        percentages set between 0 and 1 (0 for 0% and 1 for 100%) for the components Cyan,
+        Magenta, Yellow, and blacK, respectively, of the defined color. <br>
+        &nbsp;</li>
+      <li><b>\RGB{ r g b }</b> where <i>r</i>, <i>g</i>, and <i>b</i> represent percentages set
+        between 0 and 1 (0 for 0% and 1 for 100%) for the components Red, Green, and Blue,
+        respectively, of the defined color. <br>
+        &nbsp;</li>
+    </ol>
+  </li>
+  <li><a NAME="lock"><b>\LOCK</b> locks a color defined in the Xclamation color base so that
+    it cannot be deleted from the '</a><a HREF="Box_Color.html#button_del">Color Preparation</a>'
+    dialog box. <br>
+    &nbsp;</li>
+  <li><a NAME="hide"><b>\HIDE</b> hides the defined color so that it does not appear in
+    Xclamation color lists. </a><br>
+    &nbsp;</li>
+</ol>
+
+<h3>Example:</h3>
+<tt>
+
+<p>\COLORLIST{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COLOR10{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{MyColor}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TRANSPARENCY0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\CMYK{.3&nbsp;.2&nbsp;.4&nbsp;.6}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\COLOR7{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\NAME{Green}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\TRANSPARENCY0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\RGB{0&nbsp;1&nbsp;0}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</tt></p>
+
+<p><br>
+</p>
+
+<hr>
+
+<p ALIGN="right"><img SRC="Images/SigXclamation.gif" ALT="Xclamation (c)1996. Axene" WIDTH="167" HEIGHT="29"></p>
+</body>
+</html>

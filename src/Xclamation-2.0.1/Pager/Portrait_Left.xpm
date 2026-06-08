@@ -1,0 +1,17 @@
+/* XPM */
+static char * Portrait_Left_xpm[] = {
+"9 11 3 1",
+" 	c gray60",
+".	c black",
+"X	c gray80",
+"         ",
+"    ...  ",
+"   ..XX. ",
+"  .X.XX. ",
+" ....XX. ",
+" .XXXXX. ",
+" .XXXXX. ",
+" .XXXXX. ",
+" .XXXXX. ",
+"  .....  ",
+"         "};

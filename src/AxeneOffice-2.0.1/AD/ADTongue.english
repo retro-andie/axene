@@ -1,0 +1,87 @@
+*title:		Axene Office Launcher
+
+! ************************************************************************
+! **				POPUP MENU ENTRIES			**
+! ************************************************************************
+
+*mOverride.labelString:		WM Activ
+*mTransient.labelString:	WM Buttons
+*mFlipV.labelString:		Flip Verticaly
+*mFlipH.labelString:		Flip Horizontaly
+*mLaunch.labelString:		Execute
+*mQuit.labelString:		Quit Axene Office
+
+
+! ************************************************************************
+! **				HELP BUBBLES				**
+! ************************************************************************
+
+*helpXclamationMsg:		Xclamation DTP software
+*helpXQuadMsg:			XQuad Spreadsheet
+*helpXAllWriteMsg:		XAllWrite Word Processor
+*helpXMaydayMsg:		XMayday Documentation Browser
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:		Segmentation violation (Segmentation fault)
+*sigErrorPIPEMsg:		Connection broken (Broken pipe)
+*sigErrorBUSMsg:		Specification exception (Bus error)
+*sigErrorFPEMsg:		Arithmetic exception (Floating exception)
+*sigErrorIOTMsg:		Internal Error (IOT trap)
+*sigErrorEMTMsg:		EMT instruction (EMT trap)
+*sigErrorXCPUMsg:		Cputime limit exceeded
+*sigErrorXFSZMsg:		Filesize limit exceeded
+*sigErrorILLMsg:		Illegal instruction
+*sigErrorINTMsg:		Axene Office has been interrupted (Interrupt)
+*sigErrorQuitingMsg:		Exit Axene Office now
+*sigErrorSorryMsg:		Impossible to go on
+
+*loadErrorMsg:			Loading Error
+*notBitmapErrorMsg:		Unknown Image format
+
+*lCaughtSignal.labelString:		A failure has occured:
+*lCaughtIOerror.labelString:		X I/O fatal error
+*lCannotContinue.labelString:		Impossible to go on
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Yes
+*action_area.No.labelString:		No
+*action_area.Apply.labelString:		Apply
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Open...
+*action_area.Retry.labelString:		Retry
+*action_area.Stop.labelString:		Stop
+*action_area.Reset.labelString:		Reset
+*action_area.Cancel.labelString:	Cancel
+*action_area.Close.labelString:		Close
+*action_area.Help.labelString:		Help
+*action_area.Save.labelString:		Save
+*action_area.Continue.labelString:	Continue
+*action_area.Quit.labelString:		Exit
+*action_area.Save as.labelString:	Save as...
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Quit Axene Office
+
+
+
+
+
+
+
+
+
+
+

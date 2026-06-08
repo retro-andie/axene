@@ -1,0 +1,199 @@
+! ************************************************************************
+! **				CURSORS					**
+! ************************************************************************
+
+*menuCursor:				right_ptr
+*cursorPositionVisible:			False
+
+
+! ************************************************************************
+! **		TOGGLE INDICATOR SIZE, VISUAL & TYPE			**
+! ************************************************************************
+
+*indicatorSize:					13
+
+*XmToggleButton.enableToggleVisual:		True
+*XmToggleButtonGadget.enableToggleVisual:	True
+*XmMenuShell*XmToggleButtonGadget.indicatorSize:	9
+
+*XmToggleButton.indicatorType:			XmONE_OF_MANY
+*XmToggleButtonGadget.indicatorType:		XmONE_OF_MANY
+*rbDraftMode.indicatorType:			XmN_OF_MANY
+*rbBanners.indicatorType:			XmN_OF_MANY
+*rbFootnotes.indicatorType:			XmN_OF_MANY
+*rbColorMode.indicatorType:			XmN_OF_MANY
+*tbBCKeepCacheOnDisk.indicatorType:		XmN_OF_MANY
+
+*XmMenuShell*XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+
+
+! ************************************************************************
+! **			TRAVERSAL & HIGHLIGHT THICKNESS			**
+! ************************************************************************
+
+*hIconBar.traversalOn:			False
+*hIconBar2.traversalOn:			False
+*XmPanedWindow*traversalOn:		False
+
+*highlightThickness:			1
+
+*XmRadioBox.marginHeight:		0
+*XmRadioBox.spacing:			0
+
+
+! ************************************************************************
+! **				SIZE & RESIZE				**
+! ************************************************************************
+
+*Application.width:				420
+*Application.height:				600
+
+*foBottom.paneMinimum:				70
+*hwTOP.paneMinimum:				1
+
+*sashWidth:					22
+
+*XmTextField.resizeWidth:			False
+*XmFrame.XmRowColumn.resizeWidth:		False
+*XmFrame.XmRowColumn.resizeHeight:		False
+*booard.XmRowColumn.resizeWidth:		False
+*booard.XmRowColumn.resizeHeight:		False
+
+
+! ************************************************************************
+! **                               ALIGNMENTS				**
+! ************************************************************************
+
+*lMarginT.alignment:			ALIGNMENT_END
+*lMarginB.alignment:			ALIGNMENT_END
+*lMarginL.alignment:			ALIGNMENT_END
+*lMarginR.alignment:			ALIGNMENT_END
+*lMemTotal.alignment:			ALIGNMENT_END
+*lMemUsed.alignment:			ALIGNMENT_END
+*lMemFree.alignment:			ALIGNMENT_END
+*lDiskTotal.alignment:			ALIGNMENT_END
+*lDiskUsed.alignment:			ALIGNMENT_END
+*lDiskFree.alignment:			ALIGNMENT_END
+*lKb.alignment:				ALIGNMENT_BEGINNING
+*tbBCKeepCacheOnDisk.alignment:		ALIGNMENT_BEGINNING
+*lBPsize.alignment:			ALIGNMENT_END
+
+
+! ************************************************************************
+! **				SHADOW THICKNESS			**
+! ************************************************************************
+
+*shadowThickness:				1
+*XmFrame.shadowThickness:			2
+*XmSeparatorGadget.shadowThickness:		2
+*XmRowColumn.shadowThickness:			1
+*XmCascadeButtonGadget.shadowThickness:		1
+*XmScrollBar.shadowThickness:			1
+*XmBulletinBoard.shadowThickness:		0
+*XmForm.shadowThickness:			0
+
+*BottomBar.shadowThickness:                     1
+
+*XmFileSelectionBox*shadowThickness:            1
+
+*hIconBar*shadowThickness:                      0
+*hIconBar2.shadowThickness:                     0
+
+*fIconBar.shadowThickness:                      2
+*fPaned.shadowThickness:                        1
+*foBottom.shadowThickness:                      0
+*hwBOTTOM.shadowThickness:                      1
+*sashShadowThickness:                           1
+
+*tbBCKeepCacheOnDisk.shadowThickness:		0
+
+*foBottom.shadowType:                           XmSHADOW_IN
+
+
+! ************************************************************************
+! **				MARGINS	& SPACINGS			**
+! ************************************************************************
+
+*XmBulletinBoard.marginWidth:			0
+*XmBulletinBoard.marginHeight:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButtonGadget.marginWidth:		0
+*XmToggleButtonGadget.marginHeight:		0
+*XmFrame.XmBulletinBoard.marginWidth:		14
+*XmFrame.XmBulletinBoard.marginHeight:		10
+*XmFrame.XmRowColumn.marginHeight:		6
+
+*BoxAbout*XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginWidth:		10
+
+*XmLabel.marginLeft:				5
+*XmLabel.marginRight:				5
+*XmFrame.XmLabel.marginLeft:			1
+*XmFrame.XmLabel.marginRight:			1
+
+*IconRadian.marginLeft:				0
+*IconRadian.marginRight:			0
+
+*BottomBar.marginHeight:			1
+*BottomBar.marginWidth:				1
+
+*foIconBar*XmPushButton.marginWidth:		2
+*foIconBar*XmPushButton.marginHeight:		2
+*foIconBar*XmSeparatorGadget.margin:		0
+*foIconBar*XmSeparatorGadget.highlightThickness: 7
+*foIconBar*highlightThickness:			0
+*hIconBar.spacing:				0
+*hIconBar.marginWidth:				0
+*hIconBar.marginHeight:				0
+
+*hIconBar2.marginWidth:				0
+*hIconBar2.marginHeight:			0
+*hIconBar2.spacing:				0
+
+*XmCascadeButtonGadget.marginWidth:		8
+*XmCascadeButtonGadget.marginHeight:		2
+*XmPushButtonGadget.marginWidth:		8
+*XmPushButtonGadget.marginHeight:		2
+*XmToggleButtonGadget.marginWidth:		5
+*XmToggleButtonGadget.marginHeight:		1
+*XmLabel.marginWidth:				0
+*XmLabel.marginHeight:				0
+
+*Application.verticalSpacing:			0
+
+*XmScrolledWindow.scrolledWindowMarginWidth:	2
+*XmScrolledWindow.scrolledWindowMarginHeight:	2
+
+*XmFrame.marginHeight:				0
+*XmFrame.marginWidth:				0
+
+*item_menu.XmLabel.marginLeft:			6
+*item_menu.XmLabel.marginRight:			12
+
+*gPrinter.marginWidth:				0
+*gPrinter.marginHeight:				0
+*gBPFormat.marginWidth:				0
+*gBPFormat.marginHeight:			0
+*gBPparams.marginWidth:				4
+*gBPparams.marginHeight:			0
+
+*XmToggleButton.borderWidth:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButton.spacing:			0
+*XmToggleButton.indicatorSize:			0
+*XmToggleButton.indicatorOn:			False
+
+*foBottom.marginHeight:				1
+*foBottom.marginWidth:				1
+*XmPanedWindow.marginWidth:			5
+*XmPanedWindow.marginHeight:			5
+
+*XmPanedWindow.spacing:				14
+
+*aboutCommentsMsg:	EMail: contact@axene.org\n\
+Bug-report: support@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org/
+

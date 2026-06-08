@@ -1,0 +1,475 @@
+
+! ************************************************************************
+! **				CURSORS					**
+! ************************************************************************
+
+*menuCursor:				right_ptr
+*cursorPositionVisible:			False
+
+
+! ************************************************************************
+! **		TOGGLE INDICATOR SIZE, VISUAL & TYPE			**
+! ************************************************************************
+
+*indicatorSize:					13
+*XmToggleButton.indicatorSize:			0
+*XmFrame.XmToggleButtonGadget.indicatorSize:	10
+*XmMenuShell*XmToggleButtonGadget.indicatorSize:	9
+*gBSBar.XmToggleButtonGadget.indicatorSize:	0
+*gBCBar.XmToggleButtonGadget.indicatorSize:	0
+*gBNBar.XmToggleButtonGadget.indicatorSize: 0
+
+
+*BoxFunctions*XmLabel.recomputeSize:	False
+*XmScale.showValue:			True
+*XmScale.orientation:			HORIZONTAL
+
+
+*BoxBorders*XmToggleButton.spacing:	0
+
+*XmToggleButton.enableToggleVisual:	True
+*XmToggleButtonGadget.enableToggleVisual: True
+
+*XmToggleButton.indicatorType:		XmONE_OF_MANY
+*XmToggleButtonGadget.indicatorType:	XmONE_OF_MANY
+*tbFSITdoc.indicatorType:		XmN_OF_MANY
+*rbFSITtrim*indicatorType:		XmN_OF_MANY
+*tbFSETformula.indicatorType:		XmN_OF_MANY
+*tbFSETselection.indicatorType:		XmN_OF_MANY
+*tbFSETgrid.indicatorType:		XmN_OF_MANY
+*tbFSETheaders.indicatorType:		XmN_OF_MANY
+*rbPSCenter*indicatorType:		XmN_OF_MANY
+*riWhatPrint*indicatorType:		XmN_OF_MANY
+*tbCSRowSize.indicatorType:		XmN_OF_MANY
+*tbCSColSize.indicatorType:		XmN_OF_MANY
+*tbBNTruncate.indicatorType:		XmN_OF_MANY
+*tbBNUnitAfter.indicatorType:		XmN_OF_MANY
+*tbBNfracDecimal.indicatorType:		XmN_OF_MANY
+*tbBNExpSign.indicatorType:		XmN_OF_MANY
+*rbRegistered*indicatorType:		XmN_OF_MANY
+*tbKeepAlias.indicatorType:		XmN_OF_MANY
+*XmFrame.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*gBSglobal.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*gPSScale.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*fBSsubscript.indicatorType:		XmONE_OF_MANY
+*fBSsupscript.indicatorType:		XmONE_OF_MANY
+
+*XmMenuShell*XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+
+
+! ************************************************************************
+! **			TRAVERSAL & HIGHLIGHT THICKNESS			**
+! ************************************************************************
+
+*vIconBar*traversalOn:				False
+*hIconBar.rchIconBar.traversalOn:		False
+*hIconBar*XmPushButton.traversalOn:		False
+*hIconBar*XmToggleButton.traversalOn:		False
+*hIconBar*XmTextField.traversalOn:		True
+*imFontFamily*traversalOn:			False
+*clArrow.traversalOn:				False
+*MainDocument.traversalOn:			False
+
+*highlightThickness:				1
+*hIconBar*highlightThickness:			0
+*hIconBar*sbTextField.highlightThickness:	1
+*hIconBar*XmSeparatorGadget.highlightThickness:	7
+*hIconBar.XmRowColumn.highlightThickness:	0
+*vIconBar*highlightThickness:			0
+*gASLcommands*highlightThickness:		1
+*tfEditBar.highlightThickness:			0
+*clLabel.highlightThickness:			3
+*lColor.highlightThickness:			3
+*XmArrowButton.highlightThickness:		0
+
+! ************************************************************************
+! **				SIZE & RESIZE				**
+! ************************************************************************
+
+*ASLItemL.resizable:				False
+
+*ASLItemL.width:				200
+
+*XmTextField.resizeWidth:			False
+*XmFrame.XmBulletinBoard.resizePolicy:		XmRESIZE_NONE
+*bboard.XmRowColumn.resizeWidth:		False
+*booard.XmRowColumn.resizeHeight:		False
+
+*PrivateClipArea.resizeHeight:			False
+*PrivateClipArea.resizeWidth:			False
+
+*hIconBar.XmRowColumn.resizeHeight:		False
+*vIconBar.XmRowColumn.resizeWidth:		False
+
+! ************************************************************************
+! *				DISPLAY POLICY				**
+! ************************************************************************
+
+*ClipboardPrivate.scrollBarDisplayPolicy:	XmAS_NEEDED
+*BoxFunction*scrollBarDisplayPolicy:		XmAS_NEEDED
+*stBoxLicense*scrollBarDisplayPolicy:		XmAS_NEEDED
+*stBoxLegal2*scrollBarDisplayPolicy:		XmAS_NEEDED
+
+! ************************************************************************
+! **                               ALIGMENTS				**
+! ************************************************************************
+
+!-- Font replacement dialog box -----------------------------------------
+*tbKeepAlias.alignment:			ALIGNMENT_BEGINNING
+
+*lBPForeColor.alignment:		ALIGNMENT_END
+*lBPBackColor.alignment:		ALIGNMENT_END
+*lBBOutline.alignment:			ALIGNMENT_END
+*lBBTop.alignment:			ALIGNMENT_END
+*lBBBottom.alignment:			ALIGNMENT_END
+*lBBLeft.alignment:			ALIGNMENT_END
+*lBBRight.alignment:			ALIGNMENT_END
+*lBBPattern.alignment:			ALIGNMENT_END
+*lBBDash.alignment:			ALIGNMENT_END
+*lBBForeColor.alignment:		ALIGNMENT_END
+*lBBBackColor.alignment:		ALIGNMENT_END
+*lBNPositiveColor.alignment:		ALIGNMENT_END
+*lBNNegativeColor.alignment:		ALIGNMENT_END
+*lBNUnitString.alignment:		ALIGNMENT_END
+*tbBNTruncate.alignment:		ALIGNMENT_BEGINNING
+*tbBNUnitAfter.alignment:		ALIGNMENT_BEGINNING
+*lBNMaxPrecision.alignment:		ALIGNMENT_END
+*lBNMinPrecision.alignment:		ALIGNMENT_END
+*lBNSeparatorString.alignment:		ALIGNMENT_END
+*lBNSeparatorMString.alignment:		ALIGNMENT_END
+*lBNSeparatorPosition.alignment:	ALIGNMENT_END
+*lBNStringEString.alignment:		ALIGNMENT_END
+*lBNExpMinDigit.alignment:		ALIGNMENT_END
+*lBNExpMul.alignment:			ALIGNMENT_END
+*tbBNExpSign.alignment:			ALIGNMENT_BEGINNING
+
+*lAGFirstSerial.alignment:		ALIGNMENT_BEGINNING
+*lAGFirstQuestion.alignment:		ALIGNMENT_BEGINNING
+*lAGSecondQuestion.alignment:		ALIGNMENT_BEGINNING
+
+!-- Fonts dialog box ----------------------------------------------------
+*lBSwidth.alignment:			ALIGNMENT_END
+*lBSfamily.alignment:			ALIGNMENT_END
+*lBSfontsize.alignment:			ALIGNMENT_END
+*lBSscale.alignment:			ALIGNMENT_END
+*lBSypos.alignment:			ALIGNMENT_END
+*lBSundeline_dy.alignment:		ALIGNMENT_END
+*lBSstrikeout_dy.alignment:		ALIGNMENT_END
+*lBSshadow_dy.alignment:		ALIGNMENT_END
+*lBSshadow_dx.alignment:		ALIGNMENT_END
+*tbBSsupscript.alignment:		ALIGNMENT_BEGINNING
+*tbBSsubscript.alignment:		ALIGNMENT_BEGINNING
+*tbBSsmallcaps.alignment:		ALIGNMENT_BEGINNING
+*tbBSbigcaps.alignment:			ALIGNMENT_BEGINNING
+*tbBSwidth.alignment:			ALIGNMENT_BEGINNING
+
+*lCSColSize.alignment:			ALIGNMENT_END
+*lCSRowSize.alignment:			ALIGNMENT_END
+*tbCSColSize.alignment:			ALIGNMENT_BEGINNING
+*tbCSRowSize.alignment:			ALIGNMENT_BEGINNING
+
+!-- Frame attributes dialog box -----------------------------------------
+*lBABackColor.alignment:		ALIGNMENT_END
+*lBABorderColor.alignment:		ALIGNMENT_END
+*lBABorderWidth.alignment:		ALIGNMENT_END
+
+*tbBPPrintArea.alignment:		ALIGNMENT_BEGINNING
+*tbBPPrintAllPages.alignment:		ALIGNMENT_BEGINNING
+
+*tbPSPrintOnPage.alignment:		ALIGNMENT_BEGINNING
+*tbPSReduce.alignment:			ALIGNMENT_BEGINNING
+*lPSMarginT.alignment:			ALIGNMENT_END
+*lPSMarginB.alignment:			ALIGNMENT_END
+*lPSMarginL.alignment:			ALIGNMENT_END
+*lPSMarginR.alignment:			ALIGNMENT_END
+
+*lBFFunction.alignment:			ALIGNMENT_BEGINNING
+*tbBFFuncTypeAll.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeNume.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeStat.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeBusi.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeDate.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeShee.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeText.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeLogi.alignment:		ALIGNMENT_BEGINNING
+
+!-- Goto cell dialog box ------------------------------------------------
+*lGCGotoCell.alignment:			ALIGNMENT_END
+
+*tbFSITdoc.alignment:			ALIGNMENT_BEGINNING
+*tbFSETformula.alignment:		ALIGNMENT_BEGINNING
+*tbFSETselection.alignment:		ALIGNMENT_BEGINNING
+*tbFSETgrid.alignment:			ALIGNMENT_BEGINNING
+*tbFSETheaders.alignment:		ALIGNMENT_BEGINNING
+
+*tbBNfracDecimal.alignment:		ALIGNMENT_BEGINNING
+*lBNFracPrecision.alignment:		ALIGNMENT_END
+*gBNLinks.XmLabel.alignment:		ALIGNMENT_END
+*gBNColors.XmLabel.alignment:		ALIGNMENT_END
+*gBNBoolean.XmLabel.alignment:		ALIGNMENT_END
+
+!-- Mailing Lists dialog box --------------------------------------------
+*lMailCommand.alignment:		ALIGNMENT_END
+*lRegisterReply.alignment:		ALIGNMENT_END
+
+*lYear.alignment:			ALIGNMENT_END
+*lMonth.alignment:			ALIGNMENT_END
+*lWeek.alignment:			ALIGNMENT_END
+*lDay.alignment:			ALIGNMENT_END
+*lDayInYear.alignment:			ALIGNMENT_END
+*lHour.alignment:			ALIGNMENT_END
+*lHour24.alignment:			ALIGNMENT_END
+*lMinute.alignment:			ALIGNMENT_END
+*lSecond.alignment:			ALIGNMENT_END
+*lTenthOfSecond.alignment:		ALIGNMENT_END
+*lHundredthOfSecond.alignment:		ALIGNMENT_END
+*lThousandthOfSecond.alignment:		ALIGNMENT_END
+
+*lSep.alignment:			ALIGNMENT_END
+*XmOptionMenu*alignment:		ALIGNMENT_BEGINNING
+
+!-- Colors dialog box ---------------------------------------------------
+*l_C.alignment:			ALIGNMENT_END
+*l_M.alignment:			ALIGNMENT_END
+*l_Y.alignment:			ALIGNMENT_END
+*l_K.alignment:			ALIGNMENT_END
+*l_R.alignment:			ALIGNMENT_END
+*l_G.alignment:			ALIGNMENT_END
+*l_B.alignment:			ALIGNMENT_END
+*l_H.alignment:			ALIGNMENT_END
+*l_S.alignment:			ALIGNMENT_END
+*l_L.alignment:			ALIGNMENT_END
+*l_G1.alignment:		ALIGNMENT_END
+
+!-- Legal box -----------------------------------------------------------
+*lBoxLicense.alignment:			ALIGNMENT_BEGINNING
+*lBoxLegal2.alignment:			ALIGNMENT_BEGINNING
+
+! ************************************************************************
+! **				SHADOW THICKNESS			**
+! ************************************************************************
+
+*shadowThickness:				1
+*XmFrame.shadowThickness:			2
+*XmFrame.XmToggleButtonGadget.shadowThickness:	0
+*XmSeparatorGadget.shadowThickness:		2
+*XmRowColumn.shadowThickness:			1
+*XmCascadeButtonGadget.shadowThickness:		1
+*XmScrollBar.shadowThickness:			1
+*XmBulletinBoard.shadowThickness:		0
+*XmForm.shadowThickness:			0
+*XmRadioBox*shadowThickness:			0
+
+*ebGlobalEditBar.shadowThickness:		1
+*ebGlobalEditBar.XmFrame.shadowThickness:	1
+
+*XmFileSelectionBox*shadowThickness:		1
+*sbRowColumnH.shadowThickness:			0
+
+*vIconBar.shadowThickness:			0
+*vIconBar3.shadowThickness:			1
+*IconVlogo.shadowThickness:			0
+*vIconBar*XmRowColumn.shadowThickness:		0
+*vIconBar*XmToggleButton.shadowThickness:	1
+*vIconBar*XmPushButton.shadowThickness:		1
+
+*hIconBar.shadowThickness:			1
+*hIconBar*XmRowColumn.shadowThickness:		0
+*hIconBar*XmToggleButton.shadowThickness:	1
+*hIconBar*XmPushButton.shadowThickness:		1
+*hIconBar*item_menu.shadowThickness:		1
+*BottomBar.shadowThickness:			1
+
+*tbBNUnitAfter.shadowThickness:			0
+*tbBNTruncate.shadowThickness:			0
+*tbBNExpSign.shadowThickness:			0
+*tbCSColSize.shadowThickness:			0
+*tbCSRowSize.shadowThickness:			0
+*MainDocument.borderWidth:			1
+
+*tbPSReduce.shadowThickness:			0
+*tbPSPrintOnPage.shadowThickness:		0
+
+*tbBPPrintArea.shadowThickness:			0
+*tbBPPrintAllPages.shadowThickness:		0
+
+*tbFSITdoc.shadowThickness:			0
+*tbFSETformula.shadowThickness:			0
+*tbFSETselection.shadowThickness:		0
+*tbFSETgrid.shadowThickness:			0
+*tbFSETheaders.shadowThickness:			0
+
+*tbBFFuncTypeAll.shadowThickness:		0
+*tbBFFuncTypeNume.shadowThickness:		0
+*tbBFFuncTypeStat.shadowThickness:		0
+*tbBFFuncTypeBusi.shadowThickness:		0
+*tbBFFuncTypeDate.shadowThickness:		0
+*tbBFFuncTypeShee.shadowThickness:		0
+*tbBFFuncTypeText.shadowThickness:		0
+*tbBFFuncTypeLogi.shadowThickness:		0
+
+*gBSconfig*XmRowColumn.shadowThickness:		0
+*tbBSsupscript.shadowThickness:			0
+*tbBSsubscript.shadowThickness:			0
+*tbBSsmallcaps.shadowThickness:			0
+*tbBSbigcaps.shadowThickness:			0
+*tbBSwidth.shadowThickness:			0
+
+*omBBOMenu1.shadowThickness:			0
+*omBBOMenu2.shadowThickness:			0
+
+*tbBNfracDecimal.shadowThickness:		0
+*rcPadding*XmToggleButtonGadget.shadowThickness:	0
+*rcNameSize*XmToggleButtonGadget.shadowThickness:	0
+
+! ************************************************************************
+! **					MARGINS				**
+! ************************************************************************
+
+*XmRadioBox.marginHeight:			0
+*XmRadioBox.spacing:				0
+
+*XmBulletinBoard.marginWidth:			0
+*XmBulletinBoard.marginHeight:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButtonGadget.marginWidth:		0
+*XmToggleButtonGadget.marginHeight:		0
+*XmFrame.XmBulletinBoard.marginWidth:		14
+*XmFrame.XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginWidth:		10
+*XmFrame.XmLabel.marginLeft:			1
+*XmFrame.XmLabel.marginRight:			1
+*XmLabel.marginLeft:				3
+*XmLabel.marginRight:				3
+
+*gBNBar.XmToggleButtonGadget.marginWidth:	0
+*gBNBar.XmToggleButtonGadget.marginLeft:	10
+*gBNBar.XmToggleButtonGadget.marginRight:	10
+
+*gPSFormat.marginHeight:			5
+*gBoxNumbers.marginHeight:			0
+
+*BottomBar.marginHeight:			1
+*BottomBar.marginWidth:				1
+
+*hIconBar.verticalSpacing:			3
+*hIconBar.XmRowColumn.leftOffset:		34
+*hIconBar.XmRowColumn.rightOffset:		3
+
+*hIconBar*XmPushButton.marginWidth:		0
+*hIconBar*XmPushButton.marginHeight:		0
+*hIconBar*XmSeparatorGadget.margin:		0
+*hIconBar.XmRowColumn.spacing:			0
+*hIconBar.XmRowColumn.marginWidth:		2
+*hIconBar.XmRowColumn.marginHeight:		2
+*hIconBar*sbTextField.marginHeight:		3
+
+*rchIconBarFontSize.borderWidth:		0
+*rchIconBarFontSize.marginHeight:		0
+*rchIconBarFontSize.spacing:			0
+
+*vIconBar.verticalSpacing:			0
+*vIconBar.horizontalSpacing:			0
+*vIconBar*XmPushButton.marginWidth:		0
+*vIconBar*XmPushButton.marginHeight:		0
+*vIconBar.XmRowColumn.spacing:			0
+*vIconBar.XmRowColumn.marginWidth:		0
+*vIconBar.XmRowColumn.marginHeight:		0
+*vIconBar.XmRowColumn.borderWidth:		0
+
+*XmCascadeButtonGadget.marginWidth:		8
+*XmCascadeButtonGadget.marginHeight:		2
+*XmPushButtonGadget.marginWidth:		8
+*XmPushButtonGadget.marginHeight:		2
+!*XmToggleButtonGadget.marginWidth:		5
+!*XmToggleButtonGadget.marginHeight:		1
+*XmLabel.marginWidth:				0
+*XmLabel.marginHeight:				0
+
+*fBNPreview.marginWidth:			5
+*fBNPreview.marginHeight:			5
+*fBAPreview.marginWidth:			5
+*fBAPreview.marginHeight:			5
+
+*Application.verticalSpacing:			0
+
+*clDrawing.marginLeft:				0
+*clDrawing.marginRight:				0
+
+*rcPadding.spacing:				0
+*rcNameSize.spacing:				0
+
+*XmFrame.marginHeight:				0
+*XmFrame.marginWidth:				0
+*Color results.marginWidth:			3
+*Color results.marginHeight:			3
+*Color results.borderWidth:			10
+
+*IconVlogo.marginLeft:				0
+*IconVlogo.marginRight:				0
+
+**lColor.marginHeight:				5
+
+*ebGlobalEditBar.horizontalSpacing:		3
+*ebGlobalEditBar.verticalSpacing:		3
+
+*XmScrolledWindow.scrolledWindowMarginWidth:	2
+*XmScrolledWindow.scrolledWindowMarginHeight:	2
+
+*tfEditBar.blinkRate:				0
+*lPositionLabel.recomputeSize:			False
+*lPositionLabel.width:				100
+
+*item_menu.XmLabel.marginLeft:			6
+*item_menu.XmLabel.marginRight:			12
+
+*XmToggleButton.borderWidth:			0
+*XmToggleButton.spacing:			0
+*XmToggleButton.indicatorOn:			False
+
+*lStartupMessage.labelString:  ©1995-99 Axene.
+*aboutCommentsMsg:	EMail: contact@axene.org\n\
+Bugs-report: xquad-bugs@axene.org\n\
+http://www.axene.org/\n\
+ftp://www.axene.org/
+
+*gBLFrame2_1*marginHeight:			0
+*gBLFrame2_1*marginWidth:			0
+
+*lBoxLicense.marginLeft:			2
+*lBoxLicense.marginRight:			2
+*lBoxLicense.highlightThickness: 		0
+
+*lBoxLegal2.marginLeft:				2
+*lBoxLegal2.marginRight:			2
+*lBoxLegal2.highlightThickness: 		0
+
+*stBoxLicense*borderWidth: 			0
+*stBoxLicense.highlightThickness: 		2
+*stBoxLicense.shadowThickness: 			0
+*stBoxLicense.spacing: 				0
+*stBoxLicense*traversalOn: 			True
+*stBoxLicense*scrolledWindowMarginWidth:	0
+*stBoxLicense*scrolledWindowMarginHeight:	0
+
+*stBoxLicense*XmScrollBar.showArrows:		False
+
+*stBoxLegal2*borderWidth: 			0
+*stBoxLegal2.highlightThickness: 		2
+*stBoxLegal2.shadowThickness: 			0
+*stBoxLegal2.spacing: 				0
+*stBoxLegal2*traversalOn: 			True
+*stBoxLegal2*scrolledWindowMarginWidth:		0
+*stBoxLegal2*scrolledWindowMarginHeight:	0
+
+*stBoxLegal2*XmScrollBar.showArrows:		False
+
+
+
+
+
+
+
+

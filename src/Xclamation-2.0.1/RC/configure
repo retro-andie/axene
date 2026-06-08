@@ -1,0 +1,21 @@
+#
+# RC files generation
+#
+# Started on  Mon Dec  8 17:12:44 1997 Emmanuel Paris
+# Last update Thu Jan  6 17:15:47 2000 Emmanuel Paris
+#
+
+#destination file (ie: "xclamationrc", "xquadrc"...)
+dst_file="xclamationrc"
+	
+#rc sequence file
+rc_seq_file='RC.FONTS RC.COLORLIST.$lang RC.STYLELIST.$lang RC.RULERLIST.$lang RC.CACHE_CONFIG RC.HELP_CONFIG.$lang RC.PRINTER.$lang'
+
+#rc language	
+rc_lang="usa english french german spanish"
+
+#dest language
+dst_lang="English.us English.uk French German Spanish"
+
+
+

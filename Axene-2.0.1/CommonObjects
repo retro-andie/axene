@@ -1,0 +1,518 @@
+# Common Objects for Axene's projetcs.
+# C=xClamation  Q=xQuad  A=xAllwrite  M=xMayday  I=xInstall  O=axeneOffice 
+
+########################################
+# Ressources & Config files            #
+########################################
+
+CQA... RC/RC.COLORLIST.english
+CQA... RC/RC.COLORLIST.usa
+CQA... RC/RC.COLORLIST.french
+CQA... RC/RC.COLORLIST.german
+CQA... RC/RC.COLORLIST.spanish
+
+CQA... RC/RC.FONTS
+
+#C.A... RC/RC.RULERLIST.english
+#C.A... RC/RC.RULERLIST.usa
+#C.A... RC/RC.RULERLIST.french
+#C.A... RC/RC.RULERLIST.german
+#C.A... RC/RC.RULERLIST.spanish
+
+C.A... RC/RC.STYLELIST.english
+C.A... RC/RC.STYLELIST.usa
+C.A... RC/RC.STYLELIST.french
+C.A... RC/RC.STYLELIST.german
+C.A... RC/RC.STYLELIST.spanish
+
+CQAM.. RC/RC.PRINTER.english
+CQAM.. RC/RC.PRINTER.usa
+CQAM.. RC/RC.PRINTER.french
+CQAM.. RC/RC.PRINTER.german
+CQAM.. RC/RC.PRINTER.spanish
+
+########################################
+# Global Objects                       #
+########################################
+CQAMIO Resource/Resource.c
+CQAMIO Resource/Resource.h
+CQAMIO Xpm/Xpm.c
+CQAMIO Xpm/Xpm.h
+CQAMIO Xpm/fsdither.c
+CQAMIO Xpm/fsdither.h
+CQAMIO Colormap/Colormap.c
+CQAMIO Colormap/Colormap.h
+CQAMIO Cursor/Cursor.c
+CQAMIO Cursor/Cursor.h
+CQAM.O DocIcon/DocIcon.c
+CQAM.. DocFile/DocFile.h
+CQAM.. DocFile/DocFileP.h
+CQAM.. DocFile/DocFile.c
+
+CQAM.O ImageManager/ImageManager.c
+CQAM.O ImageManager/ImageManager.h
+CQAMIO XErrorHandler/XErrorHandler.c
+CQAMIO XErrorHandler/XErrorHandler.h
+CQAMIO SignalHandler/SignalHandler.c
+CQAMIO SignalHandler/SignalHandler.h
+CQAMIO ManageWidget/ManageWidget.c
+CQAMIO ManageWidget/ManageWidget.h
+CQAM.. RegisterHelp/ClientWin.c
+CQAM.. RegisterHelp/RH_netscape.c
+CQAM.. RegisterHelp/RH_vroot.h
+CQAM.. RegisterHelp/RH_xmayday.c
+CQAM.. RegisterHelp/RegisterHelp.c
+CQAM.. RegisterHelp/RegisterHelp.h
+CQAM.O HelpLine/HelpLine.c
+CQAM.O HelpLine/HelpLine.h
+
+########################################
+# Specific Objects                     #
+########################################
+CQA... Drag_And_Drop/Drag_And_Drop.c
+CQA... Drag_And_Drop/Drag_And_Drop.h
+CQA... TrashCan/TrashCan.c
+CQA... TrashCan/TrashCan.h
+C.AM.. ImageCache/ImageCache.c
+C.AM.. ImageCache/ImageCache.h
+CQA... MainInterface/MainInterface.c
+CQA... MainInterface/MainInterface.h
+CQA... MainInterface/Translations.c
+CQA... MainInterface/Translations.h
+CQA... Readkey/Readkey.c
+CQA... Readkey/Readkey.h
+CQ.... WinManager/WinManager.c
+CQA... WinManager/WinManager.h
+CQA... FontManager/FontManager.c
+CQA... FontManager/FontManager.h
+CQA... ModifList/ModifList.c
+CQA... ModifList/ModifList.h
+CQA... DocumentList/DocumentList.c
+CQA... DocumentList/DocumentList.h
+
+C.A... Keyboard/Keyboard.c
+C.A... Keyboard/Keyboard.h
+C.A... Keyboard/Keyboard_Box.c
+C.A... Keyboard/Keyboard_Box.h
+C.A... Keyboard/Keyboard_Specs.c
+C.A... Keyboard/Keyboard_Specs.h
+
+.QA... FileSelector/ImportDocument.c
+
+C.A... AIDocFile/AIDocFile.c
+C.A... AIDocFile/AIDocFile.h
+C.A... XFIGDocFile/XFIGDocFile.c
+C.A... XFIGDocFile/XFIGDocFile.h
+
+CQA... Cadre/Cadre.c
+CQA... Cadre/Cadre.h
+CQA... Cadre/CadreP.h
+CQA... Cadre/contour.c
+CQA... Cadre/contour.h
+CQA... Cadre/geometry.c
+CQA... Cadre/geometry.h
+CQA... Cadre/polygone.c
+CQA... Cadre/polygone.h
+CQA... Cadre/load.c
+
+.QA... FrameManager/Delete_Selected_Cadre.c
+.QA... FrameManager/Delete_Selected_Cadre.h
+
+C..M.. Images/png_.c
+C..M.. Images/png_.h
+C.AM.. Images/bmp.c
+C.AM.. Images/bmp.h
+C.AM.. Images/gif.c
+C.AM.. Images/gif.h
+C.AM.. Images/jpg.c
+C.AM.. Images/jpg.h
+C.AM.. Images/tga.c
+C.AM.. Images/tga.h
+C.A... Images/pcx.c
+C.A... Images/pcx.h
+C.A... Images/ppm.c
+C.A... Images/ppm.h
+C.A... Images/sun_raster.c
+C.A... Images/sun_raster.h
+C.A... Images/xwd.c
+C.A... Images/xwd.h
+C.A... Images/XWDFile.h
+C.A... Images/Xmd.h
+C.A... Images/Zoom_Mode_And_Reinit.c
+C.A... Images/Zoom_Mode_And_Reinit.h
+C.A... Images/Move_Image.c
+C.A... Images/Move_Image.h
+
+C.AMI. Dither/Dither.c
+C.AMI. Dither/Dither.h
+
+CQA... Decrypt/Decrypt.c
+CQA... Decrypt/Decrypt.h
+CQA... Decrypt/DecryptP.h
+CQA.I. Encrypt/Encrypt.c
+CQA.I. Encrypt/Encrypt.h
+CQA.I. Encrypt/EncryptP.h
+
+CQA... Hook/Hook.c
+CQA... Hook/Hook.h
+
+CQA... Color/Color.c
+CQA... Color/Color.h
+
+CQA... TextStyle/TextStyle.c
+CQA... TextStyle/TextStyle.h
+CQA... TextStyle/TextStyleP.h
+CQA... TextStyle/docfile.c
+
+CQA... PostScript/PostScript.c
+CQA... PostScript/PostScript.h
+CQA... PostScript/PostScriptP.h
+CQA... PostScript/filters.c
+CQA... PostScript/images.c
+CQA... PostScript/resources.c
+CQA... PostScript/xcalibur.prc
+
+########################################
+# Lib Managers                         #
+########################################
+CQAMIO Managers/ErrorManager.c
+CQAMIO Managers/ErrorManager.h
+CQAM.O Managers/Makefile
+CQAMIO Managers/MemoryManager.h
+CQAMIO Managers/MemoryManagerP.h
+CQAMIO Managers/memdebug.c
+CQAMIO Managers/memnormal.c
+CQAMIO Managers/memspool.c
+CQAMIO Managers/memstack.c
+CQAMIO Managers/memtrace.h
+
+########################################
+# Lib T1imager                         #
+########################################
+CQA... T1imager/Makefile
+CQA... T1imager/t1_arith.c
+CQA... T1imager/t1_arith.h
+CQA... T1imager/t1_blues.h
+CQA... T1imager/t1_cluts.h
+CQA... T1imager/t1_curves.c
+CQA... T1imager/t1_curves.h
+CQA... T1imager/t1_digit.h
+CQA... T1imager/t1_fontfcn.c
+CQA... T1imager/t1_fontfcn.h
+CQA... T1imager/t1_fontmisc.h
+CQA... T1imager/t1_fonts.h
+CQA... T1imager/t1_hdigit.h
+CQA... T1imager/t1_hints.c
+CQA... T1imager/t1_hints.h
+CQA... T1imager/t1_lines.c
+CQA... T1imager/t1_lines.h
+CQA... T1imager/t1_objects.c
+CQA... T1imager/t1_objects.h
+CQA... T1imager/t1_paths.c
+CQA... T1imager/t1_paths.h
+CQA... T1imager/t1_pictures.h
+CQA... T1imager/t1_port.h
+CQA... T1imager/t1_regions.c
+CQA... T1imager/t1_regions.h
+CQA... T1imager/t1_scanfont.c
+CQA... T1imager/t1_spaces.c
+CQA... T1imager/t1_spaces.h
+CQA... T1imager/t1_strokes.h
+CQA... T1imager/t1_t1hdigit.h
+CQA... T1imager/t1_t1imager.h
+CQA... T1imager/t1_t1io.c
+CQA... T1imager/t1_t1malloc.c
+CQA... T1imager/t1_t1snap.c
+CQA... T1imager/t1_t1stdio.h
+CQA... T1imager/t1_t1stub.c
+CQA... T1imager/t1_token.c
+CQA... T1imager/t1_token.h
+CQA... T1imager/t1_tokst.h
+CQA... T1imager/t1_trig.h
+CQA... T1imager/t1_type1.c
+CQA... T1imager/t1_util.c
+CQA... T1imager/t1_util.h
+
+########################################
+# Lib VectorFont                       #
+########################################
+CQA... VectorFont/AFM.gperf
+CQA... VectorFont/AFM.h
+CQA... VectorFont/AFM_parse.c
+CQA... VectorFont/CharMetrics.c
+CQA... VectorFont/CharMetrics.h
+CQA... VectorFont/Makefile
+CQA... VectorFont/VectorFont.c
+CQA... VectorFont/VectorFont.h
+CQA... VectorFont/dialog.c
+CQA... VectorFont/gperfpatch.sh
+
+########################################
+# Lib VectorGraph                      #
+########################################
+C.A... VectorGraph/Makefile
+C.A... VectorGraph/Makefile.sco
+C.A... VectorGraph/VectorGraph.c
+C.A... VectorGraph/VectorGraph.h
+C.A... VectorGraph/VectorGraphP.h
+C.A... VectorGraph/Move_Vector.c
+C.A... VectorGraph/Move_Vector.h
+C.A... VectorGraph/commands.c
+C.A... VectorGraph/dispatch.c
+C.A... VectorGraph/docfile.c
+C.A... VectorGraph/load.c
+C.A... VectorGraph/path.c
+C.A... VectorGraph/print.c
+C.A... VectorGraph/redraw.c
+
+########################################
+# Lib FontEncoding                     #
+########################################
+CQA... FontEncoding/Makefile
+CQA... FontEncoding/gperfpatch.sh
+CQA... FontEncoding/Latin1.gperf
+CQA... FontEncoding/AdobeStd.gperf
+CQA... FontEncoding/Dingbats.gperf
+CQA... FontEncoding/ASCII.gperf
+CQA... FontEncoding/Symbol.gperf
+CQA... FontEncoding/Latin1.c
+CQA... FontEncoding/AdobeStd.c
+CQA... FontEncoding/Dingbats.c
+CQA... FontEncoding/ASCII.c
+CQA... FontEncoding/Symbol.c
+CQA... FontEncoding/FontEncoding.h
+
+########################################
+# Lib Ufc                              #
+########################################
+CQA.I. Ufc/Makefile
+CQA.I. Ufc/crypt.c
+CQA.I. Ufc/crypt_util.c
+CQA.I. Ufc/patchlevel.h
+CQA.I. Ufc/ufc-crypt.h
+
+########################################
+# Pixmaps                              #
+########################################
+CQAM.O Pixmaps/Makefile
+CQAM.O Pixmaps/Makefile.sco
+CQAM.O Pixmaps/Makefile.unixware
+
+########################################
+# Global                               #
+########################################
+CQAMIO Global/fileutils.c
+CQAMIO Global/filename.c
+CQAMIO Global/file.h
+CQAMIO Global/fnmatch.c
+CQAMIO Global/fnmatch.h
+CQAM.. Global/types.h
+CQA... Global/typeseed.h
+CQAMIO Global/osname.h
+CQA... Global/char_translate.h
+CQA... Global/char_translate.c
+CQAM.. Global/encoding_sym.h
+CQAM.. Global/encodings.h
+CQAM.. Global/encodings.c
+CQAM.. Global/dos_encoding.h
+CQAM.. Global/html_encoding.h
+CQAM.. Global/isolat1_encoding.h
+CQAM.. Global/mac_encoding.h
+CQAMIO Global/readkey.c
+CQAMIO Global/readkey.h
+CQAMIO Global/units.h
+CQAM.. Global/vectors.h
+CQAMIO Global/ObjStd.h
+CQA... Global/ObjectStd.h
+CQAM.. Global/PageFormat.h
+CQA... Global/CadreStd.h
+CQA... Global/DocumentStd.h
+C.A... Global/ImageStd.h
+C.A... Global/VectorStd.h
+CQA... Global/Xinfo.h
+CQAMIO Global/WInterface.h
+
+########################################
+# Additional Program                   #
+########################################
+
+# Makekey
+CQA... Makekey/Makekey.c
+CQA... Makekey/form.tcl
+CQA... Makekey/getdate.y
+
+########################################
+# Utils                                #
+########################################
+CQAM.O Utils/do_ad
+CQAM.. Utils/do_rc
+CQAMIO Utils/do_clean
+CQAMIO Utils/do_cleano
+CQAMIO Utils/do_cleantar
+CQAMIO Utils/do_header
+CQAMIO Utils/do_header2
+CQAMIO Utils/do_link
+CQAMIO Utils/do_version
+CQAMIO Utils/tarNew
+CQAMIO Utils/tarhNew
+CQAMIO Utils/viewNew
+CQAMIO Utils/ad2c.script
+CQAMIO Utils/echonl.sh
+CQAMIO Utils/get_realname.c
+CQAMIO Utils/mkmakefile
+CQAMIO Utils/xpmrsize.c
+CQAMIO Utils/xpmtozpm.c
+CQAMIO Utils/zpmrsize.c
+CQAMIO Utils/install.sh
+
+########################################
+# Interface                            #
+########################################
+
+CQAMIO Icon/Icon.c
+CQAMIO Icon/Icon.h
+CQAMI. Label/Label.c
+CQAMI. Label/Label.h
+CQA.I. XLabel/XLabel.c
+CQA.I. XLabel/XLabel.h
+CQAMI. Form/Form.c
+CQAMI. Form/Form.h
+CQA... Scale/Scale.c
+CQA... Scale/Scale.h
+CQAMI. Frame/Frame.c
+CQAMI. Frame/Frame.h
+CQAM.. Grid/Grid.h
+CQAM.. Grid/Grid.c
+CQAMI. ToggleButton/ToggleButton.c
+CQAMI. ToggleButton/ToggleButton.h
+CQAM.O RowColumn/RowColumn.c
+CQAM.O RowColumn/RowColumn.h
+CQA... DrawingArea/DrawingArea.c
+CQA... DrawingArea/DrawingArea.h
+CQAMI. ItemList/ItemList.c
+CQAMI. ItemList/ItemList.h
+CQAMI. ItemMenu/ItemMenu.c
+CQAMI. ItemMenu/ItemMenu.h
+CQAM.. MenuBar/MenuBar.c
+CQAM.. MenuBar/MenuBar.h
+CQAM.. PulldownMenu/PulldownMenu.c
+CQAM.. PulldownMenu/PulldownMenu.h
+C.A..O PopupMenu/PopupMenu.c
+C.A..O PopupMenu/PopupMenu.h
+CQA... OptionMenu/OptionMenu.c
+CQA... OptionMenu/OptionMenu.h
+CQ.M.. PanedWindow/PanedWindow.c
+CQ.M.. PanedWindow/PanedWindow.h
+CQAM.O CustomDialog/CustomDialog.c
+CQAM.O CustomDialog/CustomDialog.h
+CQAM.O CustomDialog/AlertBox.c
+CQAM.O CustomDialog/AlertBox.h
+CQAM.. RadioBox/RadioBox.c
+CQAM.. RadioBox/RadioBox.h
+CQA... ASLBox/ASLBox.c
+CQA... ASLBox/ASLBox.h
+CQA... ColorList/ColorList.c
+CQA... ColorList/ColorList.h
+CQA... SpinBox/SpinBox.c
+CQA... SpinBox/SpinBox.h
+CQA... SpinBox/SpinBoxP.h
+CQAM.. FileSelector/FileSelector.c
+CQAM.. FileSelector/FileSelector.h
+CQAMI. WTextField/WTextField.c
+CQAMI. WTextField/WTextField.h
+CQAM.. WTextField/UnitConvertion.c
+CQAM.. WTextField/UnitConvertion.h
+CQAM.. WTextField/UnitConvertionP.h
+CQAM.. WTextField/UnitAngle.c
+CQAM.. WTextField/UnitAngle.h
+CQAM.. WTextField/UnitLength.c
+CQAM.. WTextField/UnitLength.h
+CQAM.. WTextField/UnitRatio.c
+CQAM.. WTextField/UnitRatio.h
+
+########################################
+# Dialog Box                           #
+########################################
+
+CQA... Box_color/Box_color.c
+CQA... Box_color/Box_color.h
+CQA... Box_styles/Box_styles.c
+CQA... Box_styles/Box_styles.h
+CQA... Box_legal/Box_legal.c
+CQA... Box_legal/Box_legal.h
+CQA... Box_legal2/Box_legal2.c
+CQA... Box_legal2/Box_legal2.h
+CQAM.. Box_about/Box_about.c
+CQAM.. Box_about/Box_about.h
+CQA... Box_attrib/Box_attrib.c
+CQA... Box_attrib/Box_attrib.h
+C.AM.. Box_cache/Box_cache.c
+C.AM.. Box_cache/Box_cache.h
+C.A... Box_gotopage/Box_gotopage.c
+C.A... Box_gotopage/Box_gotopage.h
+CQA... Box_registration/Box_registration.c
+CQA... Box_registration/Box_registration.h
+
+########################################
+# Pixmaps                              #
+########################################
+
+CQA... Pixmaps/minus.xpm
+CQA... Pixmaps/minus.arm.xpm
+CQA... Pixmaps/plus.xpm
+CQA... Pixmaps/plus.arm.xpm
+CQA... Pixmaps/logo_editor.xpm
+CQA... Pixmaps/delete.xpm
+CQA... Pixmaps/undo.xpm
+CQA... Pixmaps/redo.xpm
+
+CQA... Pixmaps/misc.tools.xpm
+CQA... Pixmaps/document.imprimer.xpm
+CQA... Pixmaps/document.save.xpm
+CQA... Pixmaps/document.new.xpm
+CQA... Pixmaps/document.open.xpm
+CQA... Pixmaps/copier.xpm
+CQA... Pixmaps/couper.xpm
+CQA... Pixmaps/coller.xpm
+
+C.A... Pixmaps/image.xpm
+C.A... Pixmaps/image.center.xpm
+C.A... Pixmaps/image.deplacer.xpm
+C.A... Pixmaps/image.normal.xpm
+C.A... Pixmaps/image.autoresize.xpm
+C.A... Pixmaps/image.bestaspect.xpm
+C.A... Pixmaps/image.maxaspect.xpm
+C.A... Pixmaps/image.default.xpm
+C.A... Pixmaps/image.flip.vertical.xpm
+C.A... Pixmaps/image.flip.horizontal.xpm
+C.A... Pixmaps/vector.fonts.xpm
+
+CQA... Pixmaps/loupe.xpm
+CQA... Pixmaps/loupe.arriere.xpm
+CQA... Pixmaps/loupe.avant.xpm
+C.A... Pixmaps/loupe.entier.xpm
+C.A... Pixmaps/loupe.reel.xpm
+C.A... Pixmaps/loupe.largeur.xpm
+C.A... Pixmaps/loupe.zone.xpm
+C.A... Pixmaps/loupe.25.xpm
+CQA... Pixmaps/loupe.50.xpm
+CQA... Pixmaps/loupe.75.xpm
+CQA... Pixmaps/loupe.100.xpm
+CQA... Pixmaps/loupe.200.xpm
+CQA... Pixmaps/loupe.400.xpm
+
+C.A... Pixmaps/cadre.xpm
+C.A... Pixmaps/cadre.creer.xpm
+C.A... Pixmaps/cadre.creer.lignes.xpm
+C.A... Pixmaps/cadre.creer.ovale.xpm
+C.A... Pixmaps/cadre.selectionner.xpm
+C.A... Pixmaps/cadre.aligner.xpm
+C.A... Pixmaps/cadre.inserer.point.xpm
+C.A... Pixmaps/cadre.detruire.point.xpm
+C.A... Pixmaps/cadre.bouger.point.xpm
+C.A... Pixmaps/cadre.eloigner.xpm
+C.A... Pixmaps/cadre.approcher.xpm
+C.A... Pixmaps/cadre.premierplan.xpm
+C.A... Pixmaps/cadre.arriereplan.xpm
+C.A... Pixmaps/cadre.lock.xpm
+
