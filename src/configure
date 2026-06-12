@@ -353,19 +353,6 @@ esac
 [ -z "$OSNAME" ] && OSNAME="unknown"
 [ -z "$OSVERSION" ] && OSVERSION="unknown"
 
-# adjust cpu type to compilation options
-case $CPU in
- i*86)
-  CPU="i386"
-  echo $CFLAGS | grep -e "-m486" > /dev/null 2>&1 && CPU="i486"
-  echo $CFLAGS | grep -e "-m586" > /dev/null 2>&1 && CPU="i586"
-  echo $CFLAGS | grep -e "-tp p5" > /dev/null 2>&1 && CPU="i586"
-  ;;
- alpha*)
-  echo $CFLAGS | grep -vqe "-arch ev" && CPU="alpha"
-  ;;
-esac
-
 # selectively uppercase osname
 PRETYOS=`echo $OSNAME | cut -c1 | tr "[a-z]" "[A-Z]"``echo $OSNAME | cut -c2-`
 echo $PRETYOS | grep "^...$" > /dev/null 2>&1 && \
