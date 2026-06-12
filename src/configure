@@ -159,7 +159,7 @@ case $OSLOWER in
   case $CPU in
    i*86)
     OSFLAGS="-D___i386_linux"
-    COMPFLAGS="-m486";;
+    COMPFLAGS="";;
    alpha*)
     OSFLAGS="-D___alpha -D___alpha_linux";;
    sparc*)
@@ -187,14 +187,14 @@ case $OSLOWER in
   ;;
  freebsd)
   OSFLAGS="-D___freebsd"
-  COMPFLAGS="-O2 -m486 -Wall"
+  COMPFLAGS="-O2 -Wall"
   DEFFLAGS="-DULONG_NOT_DEFINED"
   xlibdir=${xlibdir:-'/usr/X11R6/lib'}
   ARFLAGS="cq"
   ;;
  netbsd)
   OSFLAGS="-D___NetBSD"
-  COMPFLAGS="-O2 -m486 -Wall"
+  COMPFLAGS="-O2 -Wall"
   DEFFLAGS="-DULONG_NOT_DEFINED"
   LDFLAGS="-Xlinker -Bstatic"
   ;;
