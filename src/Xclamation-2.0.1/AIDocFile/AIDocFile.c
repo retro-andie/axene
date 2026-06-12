@@ -28,7 +28,7 @@
 #define NTRACE
 
 #include "AIDocFileP.h"
-#include <varargs.h>
+#include <stdarg.h>
 #include <math.h>
 
 #ifdef __GNUC__

@@ -3,7 +3,7 @@
 #                    GENERIC MAKEFILE
 #
 # Copyright (C) 1996-2000 Axene.
-# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 # Email: xcalibur@axene.org
 #
 #    This program is free software; you can redistribute it and/or modify
@@ -53,7 +53,12 @@ PROG_NAME	= main
 REAL_PROG_NAME	= AxeneOffice
 SHELL		= /bin/sh
 
-# --------------------------------------------------------------------- 
+# ---------------------------------------------------------------------
+# POSIX.1-1997 / ANSI C89 portability flags
+# Set POSIX_FLAGS per platform (see XAllWrite-2.0.1/Makefile.in for table).
+POSIX_FLAGS = -D_POSIX_C_SOURCE=199506L
+
+# ---------------------------------------------------------------------
 # Systems libraries variable
 LIBS=	$(MOTIF_LIBS) $(X11_LIBS) $(SOCK_LIBS) -lm
 
@@ -255,6 +260,8 @@ clean:
 zclean:	clean clean_lib clean_pixmaps clean_ad
 	@echo "Cleaning *.o"
 	@rm -f $(OBJ) $(PROG_NAME) Utils/*.o
+	@rm -f Main/builtdate.h
+	@rm -f Headers/*
 
 clean_lib:
 	@Utils/echonl.sh "Cleaning LIBS: "
@@ -298,6 +305,15 @@ install:	get_realname
 	Utils/install.sh $(REAL_PROG_NAME) $$REALNAME $$PREFIX; \
 	echo "Customize for $$LANGUAGE language."; \
 	Utils/postinstall.sh $$PREFIX $$LANGUAGE
+
+uninstall:
+	@PREFIX=$${PREFIX:-"/usr/local/Axene"}; \
+	echo "Uninstalling $(REAL_PROG_NAME) from $$PREFIX"; \
+	rm -f $$PREFIX/bin/AxeneOffice.*; \
+	rm -f $$PREFIX/lib/locale/AxeneOffice.*; \
+	rm -f $$PREFIX/app-defaults/AxeneOffice; \
+	rm -f $$PREFIX/AxeneOffice; \
+	echo "$(REAL_PROG_NAME) uninstalled from $$PREFIX."
 
 # ---------------------------------------------------------------------
 # Dependencies rules

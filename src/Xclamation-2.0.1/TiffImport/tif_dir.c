@@ -549,17 +549,14 @@ ttag_t tag;
  * updated.
  */
 int
-TIFFSetField(tif, tag, va_alist)
-TIFF* tif;
-ttag_t tag;
-va_dcl
+TIFFSetField(TIFF* tif, ttag_t tag, ...)
 {
 	int status = 0;
 
 	if (OkToChangeTag(tif, tag)) {
 		va_list ap;
 
-		va_start(ap);
+		va_start(ap, tag);
 		status = TIFFSetField1(tif, tag, ap);
 		va_end(ap);
 	} else {
@@ -832,10 +829,7 @@ va_list ap;
  * internal directory structure.
  */
 int
-TIFFGetField(tif, tag, va_alist)
-TIFF* tif;
-ttag_t tag;
-va_dcl
+TIFFGetField(TIFF* tif, ttag_t tag, ...)
 {
 	 TIFFFieldInfo *fip = TIFFFindFieldInfo(tag, TIFF_ANY);
 
@@ -843,7 +837,7 @@ va_dcl
 		u_short bit = fip->field_bit;
 		if (bit != FIELD_IGNORE && TIFFFieldSet(tif, bit)) {
 			va_list ap;
-			va_start(ap);
+			va_start(ap, tag);
 			TIFFGetField1(&tif->tif_dir, tag, ap);
 			va_end(ap);
 			return (1);
@@ -882,13 +876,10 @@ va_list ap;
  * Internal interface to TIFFGetField...
  */
 void
-_TIFFgetfield(td, tag, va_alist)
-TIFFDirectory* td;
-ttag_t tag;
-va_dcl
+_TIFFgetfield(TIFFDirectory* td, ttag_t tag, ...)
 {
 	va_list ap;
-	va_start(ap);
+	va_start(ap, tag);
 	TIFFGetField1(td, tag, ap);
 	va_end(ap);
 }

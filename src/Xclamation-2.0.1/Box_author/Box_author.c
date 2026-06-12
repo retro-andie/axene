@@ -2,7 +2,7 @@
 ** Box_author.c for Xclamation in Box_author/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -35,7 +35,7 @@
 #include <X11/Xlib.h>
 
 /*--- define ---*/
-//#define BA_STAND_DELAY 4000L
+/* #define BA_STAND_DELAY 4000L */
 #define BA_STAND_DELAY 1000L
 #define BA_SELECT_DELAY 2L
 #define BA_LINEAR_DELAY 2L
@@ -68,7 +68,7 @@ static void loadXpmGet();
 
 static char *AB = "Antoine BUAT";
 static char *EP = "Emmanuel Paris";
-static char *SB = "Stéphane Boisson";
+static char *SB = "Stï¿½phane Boisson";
 static char *RC = "Robin Castanier";
 
 static void stand_still();
@@ -85,7 +85,7 @@ static void genericfunc_wavel();
 static void random_copy();
 static void gradient_copy();
 
-// anim. functions
+/* anim. functions */
 static void *funcTbl[] =
 {
  gradient_copy
@@ -1023,7 +1023,7 @@ int max_y;
  double phaseY = (double)y * (2.0 * 3.14 / (double)max_y);
  double phaseX = (double)x * (2.0 * 3.14 / (double)max_x);
  return (sin( 3.0*phaseY  + phaseX )+1) * (max_y / 14);
-// return (sin( 3.0*phaseY  + phaseX )+1) * 9 * sin(phaseX);
+/* return (sin( 3.0*phaseY  + phaseX )+1) * 9 * sin(phaseX); */
 }
 
 static void genericfunc_coverl(This)

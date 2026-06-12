@@ -3,7 +3,7 @@
 ** Methods for the TextStyle class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 02:10:50 1994 Stéphane Boisson
+** Started on  Sun Jun 12 02:10:50 1994 Stï¿½phane Boisson
 ** Last update Fri Aug 14 17:20:40 1998 Emmanuel Paris
 */
 
@@ -28,7 +28,7 @@
 
 /*--- include ---*/
 #include "TextStyle.h"
-#include <varargs.h>
+#include <stdarg.h>
 #include "char_translate.h"
 
 /*--- external ---*/
@@ -38,7 +38,7 @@ extern c_VectorFont	*GlobFontBase;
 static void *contructor();
 static void destructor();
 static void *copy();
-static void set_params ___NPROTO((c_TextStyle *style, ...));
+static void set_params ___PROTO((c_TextStyle *style, ...));
 static boolean compare ___PROTO((c_TextStyle *a, c_TextStyle *b,
 				 boolean with_name));
 static void merge ___PROTO((c_TextStyle *source, c_TextStyle **target,
@@ -52,8 +52,8 @@ static boolean ps_print ___PROTO((c_TextStyle *this, c_PostScript *post));
 
 static void reactualize ___PROTO((c_TextStyle *style));
 
-static c_TextStyle *getStyle() /* ___PROTO((c_TextStyle *style, 
-				  BaseStd_t base, ...))*/;
+static c_TextStyle *getStyle ___PROTO((c_TextStyle *style,
+				  BaseStd_t *base, ...));
 
 static boolean ps_print_text ___PROTO((c_TextStyle *this, char *text, int len,
 				       c_PostScript *post,
@@ -482,15 +482,13 @@ BaseStd_t *base;
 /* ----------------------------------------------------------------- ** 
 ** set_params - Set parameters for styles                            ** 
 ** ----------------------------------------------------------------- */
-static void set_params(style, va_alist)
-c_TextStyle *style;
-va_dcl
+static void set_params(c_TextStyle *style, ...)
 {
  va_list ap;
-  
+
  Xc_HISTORY(("set(`%s')", style->name));
 
- va_start(ap);
+ va_start(ap, style);
  vset(style, ap);
  va_end(ap);
 }
@@ -1378,16 +1376,13 @@ c_PostScript *post;
 /* ----------------------------------------------------------------- ** 
 ** getStyle - Get or create style                                    ** 
 ** ----------------------------------------------------------------- */
-static c_TextStyle *getStyle(style, base, va_alist)
-c_TextStyle	*style;
-BaseStd_t	*base;
-va_dcl
+static c_TextStyle *getStyle(c_TextStyle *style, BaseStd_t *base, ...)
 {
  c_TextStyle *ptr, *tstyle;
  va_list ap;
 
  Xc_HISTORY(("getStyle"));
-  
+
  if (style)
  {
   tstyle = (c_TextStyle *)COPY(c_TextStyle)(style, base);
@@ -1395,11 +1390,11 @@ va_dcl
  else
  {
   tstyle =  (c_TextStyle *)NEW(c_TextStyle)
-   (&(base->text_style_base), NULL, GlobFontBase, 
+   (&(base->text_style_base), NULL, GlobFontBase,
     SCALE_FROM_POINTS(12.0), base->color_base);
  }
 
- va_start(ap);
+ va_start(ap, base);
  vset(tstyle, ap);
  va_end(ap);
 

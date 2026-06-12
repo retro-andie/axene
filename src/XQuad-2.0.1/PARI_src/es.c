@@ -38,7 +38,7 @@
 /*******************************************************************/
 
 #include "genpari.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 static void monome ___PROTO((long v, long deg)),texnome ___PROTO((long v, long deg));
 
@@ -1747,13 +1747,11 @@ GEN x;
   tmpfile=outfile;outfile=errfile;output(x);outfile=tmpfile;
 }
 
-void fprintferr(pat, va_alist)
-char* pat;
-va_dcl
+void fprintferr(char* pat, ...)
 {
     va_list args;
 
-    va_start(args);
+    va_start(args, pat);
 /*     va_start(args, pat);
 */
 

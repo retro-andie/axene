@@ -3,7 +3,7 @@
 ** Object and method for ModifList
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -27,10 +27,10 @@
 /*#define NHISTORY */
 /*#define NTRACE */
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "ModifList.h"
 
-static void *cons_ModifList();
+static void *cons_ModifList ___PROTO((void *Box, void (*func)(), int num, ...));
 static void dest_ModifList();
 static void *copy_ModifList();
 static void ModifList_set();
@@ -58,11 +58,7 @@ sf_ModifList fc_ModifList =
 /* ----------------------------------------------------------------- ** 
 ** Constructor                                                       ** 
 ** ----------------------------------------------------------------- */
-static void *cons_ModifList(Box, func, num, va_alist)
-void 	*Box;
-void	(*func)();
-int	num;
-va_dcl
+static void *cons_ModifList(void *Box, void (*func)(), int num, ...)
 {
  va_list 	ap;
  c_ModifList	*This;
@@ -83,7 +79,7 @@ va_dcl
  This->func = func;
  This->last_use = NULL;
  numtmp = 0;
- va_start(ap);
+ va_start(ap, num);
  while (numtmp < num)
  {
   (This->off_inout)[numtmp*3]=va_arg(ap, int);

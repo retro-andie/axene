@@ -30,7 +30,7 @@
 #define _CELLSTYLE_PATTERN_
 #define _CELLSTYLE_DASHES_
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "CellStyleP.h"
 #include "Moteur.h"
 #include "char_translate.h"

@@ -60,7 +60,7 @@
 */
 
 #include "xcalibur.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 #include <time.h>
 /*#include <sys/time.h>*/
@@ -241,9 +241,7 @@ HTMLWidget hw;
 *
 */
 
-static int PSprintf(format, va_alist)
-char* format;
-va_dcl
+static int PSprintf(char* format, ...)
 {
  int len;
  char *s;
@@ -259,7 +257,7 @@ va_dcl
   }
   PS_string = s;
  }
- va_start(args);
+ va_start(args, format);
  len = vsprintf(PS_string+PS_len, format, args);
  /* this is a hack to make it work on systems were vsprintf(s,...)
  * returns s, instead of the len.

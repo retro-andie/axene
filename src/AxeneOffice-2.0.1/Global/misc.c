@@ -2,7 +2,7 @@
 ** misc.c for AxeneOffice in Global/
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -31,7 +31,7 @@
 #include "xcalibur.h"
 #include <sys/time.h>
 #include <sys/types.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 extern int select();
 
@@ -190,27 +190,32 @@ long int	u_during;
 /* ----------------------------------------------------------------- ** 
 ** Xc_strconcat - Concat multiples strings into one                  ** 
 ** ----------------------------------------------------------------- */
-char *Xc_strconcat(va_alist)
-va_dcl
+char *Xc_strconcat(const char *first, ...)
 {
  register char *string, *ptr, *source;
  va_list ap;
  long total;
 
+ if (first == NULL) return NULL;
+
  /*--- Get final string length ---*/
- va_start(ap);
- for(total = 0; (ptr = va_arg(ap, char *)) != NULL; total += strlen(ptr));
+ total = (long)strlen(first);
+ va_start(ap, first);
+ while ((ptr = va_arg(ap, char *)) != NULL)
+  total += (long)strlen(ptr);
  va_end(ap);
 
  if((string = Xc_malloc("string", total + 1)) == NULL) return NULL;
 
  /*--- Concat all strings ---*/
- va_start(ap);
- for(ptr = string; (source = va_arg(ap, char *)) != NULL; )
+ ptr = string;
+ source = (char *)first;
+ while (*source) *ptr++ = *source++;
+ va_start(ap, first);
+ while ((source = va_arg(ap, char *)) != NULL)
  {
   register char c;
-
-  while((c = *source++) != 0) *ptr++ = c; 
+  while((c = *source++) != 0) *ptr++ = c;
  }
  va_end(ap);
  *ptr = 0;

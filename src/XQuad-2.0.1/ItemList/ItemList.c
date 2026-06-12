@@ -4,7 +4,7 @@
 ** Methods for the ItemList class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Mon Oct 17 14:27:44 1994 Stéphane Boisson
+** Started on  Mon Oct 17 14:27:44 1994 Stï¿½phane Boisson
 ** Last update Sat Aug 14 15:10:08 1999 Emmanuel Paris
 */
 
@@ -32,7 +32,7 @@
 #define NTRACE
 #endif
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "ItemList.h"
 #include "RegisterHelp.h"
 
@@ -47,9 +47,9 @@ static void setCallback ___PROTO((c_ItemList *this,
 				  XcItemListCallbackProc cb_func,
 				  void *cb_data));
 
-static boolean add_items();
-static void delete_items();
-static boolean updateItems();
+static boolean add_items ___PROTO((c_ItemList *this, boolean state, int mode, int count, ...));
+static void delete_items ___PROTO((c_ItemList *this, int mode, int count, ...));
+static boolean updateItems ___PROTO((c_ItemList *this, int mode, int count, ...));
 
 /*static void unmap ___PROTO((c_ItemList *this));*/
 static void map ___PROTO((c_ItemList *this, int mode,
@@ -62,7 +62,7 @@ static void show_item ___PROTO((c_ItemList *this, void *item));
 static boolean getSelection ___PROTO((c_ItemList *this,
 				      void ***arrayp, int *countp));
 static boolean getState ___PROTO((c_ItemList *this, void *item));
-static void setState();
+static void setState ___PROTO((c_ItemList *this, boolean state, int mode, int count, ...));
 static void select_item ___PROTO((c_ItemList *this, void *item));
 static void *getFirstUnselectItem ___PROTO((c_ItemList *this));
 
@@ -209,12 +209,7 @@ boolean (*filter) ___PROTO((void *));
 /* ----------------------------------------------------------------- ** 
 ** addItems - Add new items in the ItemList                      ** 
 ** ----------------------------------------------------------------- */
-static boolean add_items(this, state, mode, count, va_alist)
-c_ItemList *this;
-boolean state;
-int mode;
-int count;
-va_dcl
+static boolean add_items(c_ItemList *this, boolean state, int mode, int count, ...)
 {
  boolean speed_flag;
  long next_offset = 0L;
@@ -226,7 +221,7 @@ va_dcl
  Xc_HISTORY(("addItems(%d)", count));
 
  /*--- Initialize item list data ---*/
- va_start(ap);
+ va_start(ap, count);
  if((mode == XcIL_LINKED_LIST) || (mode == XcIL_ARRAY))
  {
   item_list = va_arg(ap, char *);
@@ -417,11 +412,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** deleteItems - Delete some item in the ItemList                ** 
 ** ----------------------------------------------------------------- */
-static void delete_items(this, mode, count, va_alist)
-c_ItemList *this;
-int mode;
-int count;
-va_dcl
+static void delete_items(c_ItemList *this, int mode, int count, ...)
 {
  long next_offset = 0L;
  char *item_list = NULL;
@@ -439,7 +430,7 @@ va_dcl
  }      
 
  /*--- Initialize ---*/
- va_start(ap);
+ va_start(ap, count);
  if((mode == XcIL_LINKED_LIST) || (mode == XcIL_ARRAY))
  {
   item_list = va_arg(ap, char *);
@@ -646,20 +637,15 @@ void *item;
 /* ----------------------------------------------------------------- ** 
 ** setState - Select or Deslect items                                ** 
 ** ----------------------------------------------------------------- */
-static void setState(this, state, mode, count, va_alist)
-c_ItemList *this;
-boolean state;
-int mode;
-int count;
-va_dcl
+static void setState(c_ItemList *this, boolean state, int mode, int count, ...)
 {
  long next_offset = 0L;
  char *item_list = NULL;
  va_list ap;
 
  Xc_HISTORY(("setState(%d)", count));
-  
- va_start(ap);
+
+ va_start(ap, count);
 
  if(this->mode == XcIL_EXTENDED_MODE)
   XtVaSetValues(LIST(this), XmNselectionPolicy, XcIL_MULTIPLE_MODE, NULL);
@@ -735,11 +721,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** updateItems - Update items name in list                           ** 
 ** ----------------------------------------------------------------- */
-static boolean updateItems(this, mode, count, va_alist)
-c_ItemList *this;
-int mode;
-int count;
-va_dcl
+static boolean updateItems(c_ItemList *this, int mode, int count, ...)
 {
  long next_offset = 0L;
  char *item_list = NULL;
@@ -747,8 +729,8 @@ va_dcl
  va_list ap;
 
  Xc_HISTORY(("updateItems(%d)", count));
-  
- va_start(ap);
+
+ va_start(ap, count);
 
  /*--- Delete all items ---*/
  if(count == -1)

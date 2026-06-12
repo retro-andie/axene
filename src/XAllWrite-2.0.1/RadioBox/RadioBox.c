@@ -3,7 +3,7 @@
 ** Method for Class RadioBox
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -27,15 +27,15 @@
 #include "RadioBox.h"
 #include "RegisterHelp.h"
 
-void *cons_RadioBox();
+void *cons_RadioBox ___PROTO((Widget w_Parent, c_ManageWidget *ManageW, int Norme, char *Title, ...));
 void dest_RadioBox();
 void *copy_RadioBox();
 void RadioBox_AddCallback();
 void RadioBox_AddCallbackByName();
-void RadioBox_AddSetCondition();
-void RadioBox_AddUnsetCondition();
-void RadioBox_AddSetfCondition();
-void RadioBox_AddUnsetfCondition();
+void RadioBox_AddSetCondition ___PROTO((c_RadioBox *This, int buttonnum, ...));
+void RadioBox_AddUnsetCondition ___PROTO((c_RadioBox *This, int buttonnum, ...));
+void RadioBox_AddSetfCondition ___PROTO((c_RadioBox *This, int buttonnum, ...));
+void RadioBox_AddUnsetfCondition ___PROTO((c_RadioBox *This, int buttonnum, ...));
 void Callback_Test();
 
 /* ----------------------------------------------------------------- ** 
@@ -57,12 +57,7 @@ sf_RadioBox fc_RadioBox =
 /* ----------------------------------------------------------------- ** 
 ** constructor                                                       ** 
 ** ----------------------------------------------------------------- */
-void *cons_RadioBox(w_Parent, ManageW, Norme, Title, va_alist)
-Widget		w_Parent; 
-c_ManageWidget	*ManageW;
-int		Norme;
-char 		*Title;
-va_dcl
+void *cons_RadioBox(Widget w_Parent, c_ManageWidget *ManageW, int Norme, char *Title, ...)
 {
   va_list 	other_arg;
   c_RadioBox	*ObjTmp;
@@ -87,7 +82,7 @@ va_dcl
   ObjTmp->state = 0;
   PtrButton = &ObjTmp->Button;
  
-  va_start(other_arg);
+  va_start(other_arg, Title);
   names_number = 0;
   while ((titletmp = va_arg(other_arg, char *)))
     {
@@ -98,7 +93,7 @@ va_dcl
   ObjTmp->number = names_number;
   if (names_number)
     {
-      va_start(other_arg);
+      va_start(other_arg, Title);
       names_number = 0;
       while (names_number < ObjTmp->number)
 	{
@@ -259,10 +254,7 @@ char		*data;
 /* ----------------------------------------------------------------- ** 
 ** Add condition for a button to be set                              ** 
 ** ----------------------------------------------------------------- */
-void RadioBox_AddSetCondition(This, buttonnum, va_alist)
-c_RadioBox	*This;
-int		buttonnum;
-va_dcl
+void RadioBox_AddSetCondition(c_RadioBox *This, int buttonnum, ...)
 {
   va_list	 	other_arg;
   listbutton		*ptrbutton;
@@ -292,7 +284,7 @@ va_dcl
   (*ptrcondition)->scondition = 0;
   (*ptrcondition)->ucondition = 0;
 
-  va_start(other_arg);
+  va_start(other_arg, buttonnum);
   while ((buttonplace = va_arg(other_arg, int)) != COND_END)
     {
       flag =  va_arg(other_arg, int);
@@ -317,10 +309,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** Add condition for a button to be unset                            ** 
 ** ----------------------------------------------------------------- */
-void RadioBox_AddUnsetCondition(This, buttonnum, va_alist)
-c_RadioBox	*This;
-int		buttonnum;
-va_dcl
+void RadioBox_AddUnsetCondition(c_RadioBox *This, int buttonnum, ...)
 {
   va_list	 	other_arg;
   listbutton		*ptrbutton;
@@ -350,7 +339,7 @@ va_dcl
   (*ptrcondition)->scondition = 0;
   (*ptrcondition)->ucondition = 0;
 
-  va_start(other_arg);
+  va_start(other_arg, buttonnum);
   while ((buttonplace = va_arg(other_arg, int)) != COND_END)
     {
       flag =  va_arg(other_arg, int);
@@ -375,10 +364,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** Add condition for a button to be set                              ** 
 ** ----------------------------------------------------------------- */
-void RadioBox_AddSetfCondition(This, buttonnum, va_alist)
-c_RadioBox	*This;
-int		buttonnum;
-va_dcl
+void RadioBox_AddSetfCondition(c_RadioBox *This, int buttonnum, ...)
 {
   va_list	 	other_arg;
   listbutton		*ptrbutton;
@@ -408,7 +394,7 @@ va_dcl
   (*ptrcondition)->scondition = 0;
   (*ptrcondition)->ucondition = 0;
 
-  va_start(other_arg);
+  va_start(other_arg, buttonnum);
   while ((buttonplace = va_arg(other_arg, int)) != COND_END)
     {
       flag =  va_arg(other_arg, int);
@@ -430,10 +416,7 @@ va_dcl
   va_end(other_arg);
 }
 
-void RadioBox_AddUnsetfCondition(This, buttonnum, va_alist)
-c_RadioBox	*This;
-int		buttonnum;
-va_dcl
+void RadioBox_AddUnsetfCondition(c_RadioBox *This, int buttonnum, ...)
 {
   va_list	 	other_arg;
   listbutton		*ptrbutton;
@@ -463,19 +446,19 @@ va_dcl
   (*ptrcondition)->scondition = 0;
   (*ptrcondition)->ucondition = 0;
 
-  va_start(other_arg);
+  va_start(other_arg, buttonnum);
   while ((buttonplace = va_arg(other_arg, int)) != COND_END)
     {
       flag =  va_arg(other_arg, int);
       switch (flag)
 	{
 	case B_IS_SET:
-	  Xc_TRACE(("button %d must be set to force disable %d\n", 
+	  Xc_TRACE(("button %d must be set to force disable %d\n",
 		 buttonplace, buttonnum));
 	  (*ptrcondition)->scondition |= 1 << buttonplace;
 	  break;
 	case B_IS_UNSET:
-	  Xc_TRACE(("button %d must be uset to force disable %d\n", 
+	  Xc_TRACE(("button %d must be uset to force disable %d\n",
 		 buttonplace, buttonnum));
 	  (*ptrcondition)->ucondition |= 1 << buttonplace;
 	  break;

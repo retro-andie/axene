@@ -2,7 +2,7 @@
 ** BG_Line.c for XQuad in Basic_Graph/
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -27,7 +27,7 @@
 #define NHISTORY
 
 #include "BG_Line.h"
-#include <varargs.h>
+#include <stdarg.h>
 #include <math.h>
 
 static void *cons();
@@ -45,7 +45,7 @@ static void sub_to_vectorgraph ___PROTO((c_BG_Line *This,
 					 c_VectorGraph *vectorg));
 static bbox_t *get_bounding_box ___PROTO((c_BG_Line *This));
 static boolean is_in ___PROTO((c_BG_Line *This, coord_t x, coord_t y));
-static void setBG (); /* ___PROTO((c_BG_Line *This, ...)); */
+static void setBG ___PROTO((c_BG_Line *This, ...));
 static void vset();
 static void calcul_Line ___PROTO((c_BG_Line *This));
 static boolean ps_print ___PROTO((c_BG_Line *This, c_PostScript *post));
@@ -206,15 +206,13 @@ coord_t		y;
   return FALSE;
 }
 
-static void setBG(This, va_alist)
-c_BG_Line *This;
-va_dcl
+static void setBG(c_BG_Line *This, ...)
 {
   va_list ap;
-  
+
   Xc_HISTORY(("set"));
 
-  va_start(ap);
+  va_start(ap, This);
   vset(This, ap);
   va_end(ap);
 } 

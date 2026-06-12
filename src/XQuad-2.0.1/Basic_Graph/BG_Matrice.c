@@ -2,7 +2,7 @@
 ** BG_Matrice.c for XQuad in Basic_Graph/
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 */
 
 #include "BG_Matrice.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 static void *cons();
 static void dest();
@@ -39,7 +39,7 @@ static void add_to_vectorgraph ___PROTO((c_BG_Matrice *This,
 					 c_VectorGraph *vectorg));
 static bbox_t *get_bounding_box ___PROTO((c_BG_Matrice *This));
 static boolean is_in ___PROTO((c_BG_Matrice *This, coord_t x, coord_t y));
-static void setBG(); /* ___PROTO((c_BG_Matrice *This, ...)); */
+static void setBG ___PROTO((c_BG_Matrice *This, ...));
 static void vset();
 static boolean ps_print ___PROTO((c_BG_Matrice *This, c_PostScript *post));
 static boolean readBG___PROTO((c_DocFile *doc, char *keyword,
@@ -167,15 +167,13 @@ coord_t		y;
   return FALSE;
 }
 
-static void setBG(This, va_alist)
-c_BG_Matrice *This;
-va_dcl
+static void setBG(c_BG_Matrice *This, ...)
 {
   va_list ap;
-  
+
   Xc_HISTORY(("set"));
 
-  va_start(ap);
+  va_start(ap, This);
   vset(This, ap);
   va_end(ap);
 } 

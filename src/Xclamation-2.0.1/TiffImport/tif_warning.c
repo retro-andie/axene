@@ -59,14 +59,11 @@ TIFFErrorHandler handler;
 }
 
 void
-TIFFWarning(module, fmt, va_alist)
- char* module;
- char* fmt;
- va_dcl
+TIFFWarning(char* module, char* fmt, ...)
 {
 	if (_warningHandler) {
 		va_list ap;
-		va_start(ap);
+		va_start(ap, fmt);
 		(*_warningHandler)(module, fmt, ap);
 		va_end(ap);
 	}

@@ -3,7 +3,7 @@
 ** Main part of Install
 **
 ** Copyright (C) 1997-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -198,7 +198,7 @@ char	*fname = NULL;
 char	cdkey[40];
 int	selected_tongue = Xi_USENGLISH;
 
-int	seed;
+extern int seed;
 int	soft;
 int	version;
 char	*Globprog_name;

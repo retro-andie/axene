@@ -3,7 +3,7 @@
 ** Export_FText Object Interface
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -33,7 +33,7 @@ static void toggle_code_latin1();
 static void toggle_code_dos();
 static void toggle_code_mac();
 
-c_Export_FText	*cb_object;
+static c_Export_FText	*cb_object;
 
 void export_ftxt_create_attribs_box(This, Parent, size)
 c_Export_FText *This;

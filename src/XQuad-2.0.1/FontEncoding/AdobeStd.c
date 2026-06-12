@@ -9,9 +9,6 @@
 #define MAX_HASH_VALUE 511
 /* maximum key range = 511, duplicates = 0 */
 
-#ifdef __GNUC__
-__inline
-#endif
 static unsigned int
 hash (str, len)
      register const char *str;
@@ -314,9 +311,6 @@ encoding_name_t hashlist_AdobeStd[] =
     {"R", 82}
   };
 
-#ifdef __GNUC__
-__inline
-#endif
 encoding_name_t *
 is_AdobeStd_char (str, len)
      register const char *str;

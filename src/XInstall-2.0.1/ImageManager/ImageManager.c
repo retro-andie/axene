@@ -183,7 +183,7 @@ boolean		xshm_flag;
  if (this->real_depth > 8)
  {
   ximage = XCreateImage(display, None, this->real_depth, ZPixmap,
-			0, NULL, 16, 16, 8, 2);
+			0, NULL, 16, 16, 8, 0);
   if(ximage != NULL)
   {
    this->real_depth = ximage->bits_per_pixel;

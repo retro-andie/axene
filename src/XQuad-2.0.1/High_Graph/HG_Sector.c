@@ -2,7 +2,7 @@
 ** HG_Sector.c for XQuad in High_Graph/
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 */
 
 #include "HG_Sector.h"
-#include <varargs.h>
+#include <stdarg.h>
 #include <math.h>
 
 static void *cons();
@@ -37,7 +37,7 @@ static error change_base ___PROTO((c_HG_Sector *This));
 static void display_redraw ___PROTO((c_HG_Sector *This));
 static void add_to_vectorgraph ___PROTO((c_HG_Sector *This));
 static void sub_to_vectorgraph ___PROTO((c_HG_Sector *This));
-static void setHG (); /* ___PROTO((c_HG_Sector *This, ...)); */
+static void setHG ___PROTO((c_HG_Sector *This, ...));
 static void vset();
 static void calcul_sector ___PROTO((c_HG_Sector *This));
 static void ps_print ___PROTO((c_HG_Sector *This, c_PostScript *post));
@@ -277,15 +277,13 @@ c_HG_Sector  *This;
 					   This->highg->vectorg);
 }
 
-static void setHG(This, va_alist)
-c_HG_Sector *This;
-va_dcl
+static void setHG(c_HG_Sector *This, ...)
 {
   va_list ap;
-  
+
   Xc_HISTORY(("set"));
 
-  va_start(ap);
+  va_start(ap, This);
   vset(This, ap);
   va_end(ap);
 } 

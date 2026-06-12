@@ -3,7 +3,7 @@
 ** Global definitions
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 01:49:44 1994 Stéphane Boisson
+** Started on  Sun Jun 12 01:49:44 1994 Stï¿½phane Boisson
 ** Last update Sat May 27 17:59:26 2000 Emmanuel Paris
 */
 
@@ -66,7 +66,7 @@ defined(___sun5_x86)
 # define Xc_BYTE_ORDER Xc_BIG_ENDIAN
 #endif
 
-#if defined(___NetBSD)
+#if defined(___NetBSD) || defined(___openbsd)
 # define gethostent _gethtent
 #endif
 
@@ -126,14 +126,16 @@ defined(___hpux10) || defined(___hpux9)
 #define setenv(a,b,c) Xsetenv(a,b)
 #endif
 
-#if defined(___ncr_svr4) || defined(___sco386)
-#define strcasecmp(a,b) Xstrcasecmp(a,b)
-#else
+/* ___HAVE_STRCASECMP is defined in PortCompat.h for platforms that
+   provide POSIX strcasecmp.  NCR SVR4 and SCO use Xstrcasecmp(). */
+#ifdef ___HAVE_STRCASECMP
 extern int strcasecmp();
+#else
+# define strcasecmp(a,b) Xstrcasecmp(a,b)
 #endif
 
-#if (!defined(HAVE_MEMMOVE) && !defined(__GNUC__)) || defined(___sun4)
-#define memmove(dest, src, len) bcopy(src, dest, len)
+#if !defined(___HAVE_MEMMOVE) || defined(___sun4)
+# define memmove(dest, src, len) bcopy((src), (dest), (len))
 #endif
 
 #if defined(___ncr_svr4) || defined(___sco386) || defined(___sun5_x86)
@@ -159,8 +161,8 @@ extern unsigned long rand();
 #endif
 #endif
 
-#if defined(___sco386) || defined(___ncr_svr4)
-#define rint(a) Xrint(a)
+#ifndef ___HAVE_RINT
+# define rint(a) Xrint(a)
 #endif
 
 #ifdef NXERROR

@@ -15,7 +15,7 @@
 #define INIT_CONST
 
 #include        "genpari.h"
-#include <varargs.h>
+#include <stdarg.h>
 #ifdef HPPA
 #define SIGBUS 10
 #endif
@@ -414,9 +414,7 @@ long	GlobErrNum;
 __volatile__
 #endif
 void
-err(numerr, va_alist)
-long numerr;
-va_dcl
+err(long numerr, ...)
 {
   char c;
   va_list poer;
@@ -440,7 +438,7 @@ va_dcl
     }
   longjmp(G_erreur, numerr);
 
-  va_start(poer);
+  va_start(poer, numerr);
   if (numerr!=memer) {
     flusherr();
   } else {

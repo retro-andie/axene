@@ -3,7 +3,7 @@
 ** Generate the Keys for installed softwares.
 **
 ** Copyright (C) 1997-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -97,69 +97,8 @@ char *society;
 char *display;
 char *installdir;
 {
- FILE *file;
- char fname[100];
- char fsociety[100];
- char hostname[100];
- struct info ninfo;
- int	i, soft;
- char	*sZcrypt;
-
- for(i = 0; i < (int)strlen(key_struct); i++)
-  key_struct[i] -= 4;
- 
- if (!name) name = "";
- if (!society) society = "";
-
- conv_7_bits(name, fname);
- conv_7_bits(society, fsociety);
- gethostname(hostname, 100);
- soft = get_soft(cdkey);
-
- ninfo.uniqueid = calcul_uniqueid(cdkey);
- ninfo.name = name;
- ninfo.society = society;
- ninfo.type = get_type(cdkey);
- ninfo.date = (ninfo.type ? 0 : time(NULL));
- 
- ninfo.soft = soft_conv_id[soft];
- sZcrypt = crypt_it(&ninfo);
-  
- if (GlobLiveOpt && !GlobKeyOpt)
- {
-  char *home = getenv("HOME");
-   
-  if (home == NULL)
-  {
-   Xc_WARNING(("$HOME not defined."));
-   return;
-  }
-   
-  sprintf(key_file, "%s/.%s", home, decode_soft_name(soft_conv_id[soft]));
- }
- else
-  sprintf(key_file, "%s/lib/%s", installdir, 
-	  decode_soft_name(soft_conv_id[soft]));
-  
- Xc_TRACE(("Writing key file: %s.", key_file));
-  
- file = fopen(key_file, "wb");
- if (!file)
- {
-  Xc_TRACE(("Write key failed"));
-  return;
- }
-  
- fprintf(file, key_struct,
-	 print_uniqueid(ninfo.uniqueid),
-	 strlen(name), fname,
-	 strlen(society), fsociety,
-	 ninfo.soft,
-	 ninfo.type,
-	 ninfo.date,
-	 sZcrypt);
-
- fclose(file);
+ /* GPL release: CD key validation removed */
+ (void)cdkey; (void)name; (void)society; (void)display; (void)installdir;
 }
 
 static void conv_7_bits(str, ret_str)

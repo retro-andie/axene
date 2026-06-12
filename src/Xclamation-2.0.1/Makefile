@@ -3,7 +3,7 @@
 #                    GENERIC MAKEFILE
 #
 # Copyright (C) 1994-2000 Axene.
-# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 # Email: xcalibur@axene.org
 #
 #    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
-# Started on  Tue Oct  4 11:11:32 1994 Stéphane Boisson
+# Started on  Tue Oct  4 11:11:32 1994 Stï¿½phane Boisson
 # Last update Tue Aug  8 09:42:48 2000 Emmanuel Paris
 #
 
@@ -55,7 +55,19 @@ PROG_NAME	= main
 REAL_PROG_NAME	= Xclamation
 SHELL		= /bin/sh
 
-# --------------------------------------------------------------------- 
+# ---------------------------------------------------------------------
+# POSIX.1-1997 / ANSI C89 portability flags
+# Set POSIX_FLAGS in environment or on make command line per platform:
+#   Linux glibc: -D_POSIX_C_SOURCE=199506L -D_BSD_SOURCE
+#   AIX 4.3:     -D_POSIX_C_SOURCE=199506L -D_ALL_SOURCE
+#   HP-UX 10.x:  -D_POSIX_C_SOURCE=199506L -D_HPUX_SOURCE
+#   IRIX 6.x:    -D_POSIX_C_SOURCE=199506L -D_SGI_SOURCE
+#   Solaris 8:   -D_POSIX_C_SOURCE=199506L
+#   SunOS 4.1:   -D_POSIX_SOURCE
+#   FreeBSD/NetBSD/OpenBSD: -D_POSIX_C_SOURCE=199506L
+POSIX_FLAGS = -D_POSIX_C_SOURCE=199506L
+
+# ---------------------------------------------------------------------
 # Systems libraries variable
 LIBS=	$(MOTIF_LIBS) $(X11_LIBS) $(SOCK_LIBS) -lm
 
@@ -500,6 +512,8 @@ zclean: clean clean_lib clean_pixmaps clean_ad clean_rc
 	@rm -f $(MKOBJ) $(LAOBJ) Utils/*.o
 	@rm -f $(OBJ1)
 	@rm -f $(OBJ2)
+	@rm -f Main/builtdate.h
+	@rm -f Headers/*
 
 clean_lib:
 	@cd TextFrame; $(MAKE) clean
@@ -553,6 +567,18 @@ install:	get_realname
 	Utils/install.sh $(REAL_PROG_NAME) $$REALNAME $$PREFIX; \
 	echo "Customize for $$LANGUAGE language."; \
 	Utils/postinstall.sh $$PREFIX $$LANGUAGE
+
+uninstall:
+	@PREFIX=$${PREFIX:-"/usr/local/Axene"}; \
+	echo "Uninstalling $(REAL_PROG_NAME) from $$PREFIX"; \
+	rm -f $$PREFIX/bin/Xclamation.*; \
+	rm -f $$PREFIX/lib/locale/Xclamation.*; \
+	rm -f $$PREFIX/lib/locale/xclamationrc.*; \
+	rm -f $$PREFIX/lib/xcalibur.prc; \
+	rm -f $$PREFIX/lib/xclamationrc; \
+	rm -f $$PREFIX/app-defaults/Xclamation; \
+	rm -f $$PREFIX/Xclamation; \
+	echo "$(REAL_PROG_NAME) uninstalled from $$PREFIX."
 
 # ---------------------------------------------------------------------
 # Dependencies rules

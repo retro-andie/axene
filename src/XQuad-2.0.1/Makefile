@@ -3,7 +3,7 @@
 #                    GENERIC MAKEFILE
 #
 # Copyright (C) 1994-2000 Axene.
-# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 # Email: xcalibur@axene.org
 #
 #    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
-# Started on  Tue Oct  4 11:11:32 1994 Stéphane Boisson
+# Started on  Tue Oct  4 11:11:32 1994 Stï¿½phane Boisson
 # Last update Tue Aug  8 09:43:06 2000 Emmanuel Paris
 #
 
@@ -55,7 +55,12 @@ PROG_NAME	= main
 REAL_PROG_NAME	= XQuad
 SHELL		= /bin/sh
 
-# --------------------------------------------------------------------- 
+# ---------------------------------------------------------------------
+# POSIX.1-1997 / ANSI C89 portability flags
+# Set POSIX_FLAGS per platform (see XAllWrite-2.0.1/Makefile.in for table).
+POSIX_FLAGS = -D_POSIX_C_SOURCE=199506L
+
+# ---------------------------------------------------------------------
 # Systems libraries variable
 LIBS=	$(MOTIF_LIBS) $(X11_LIBS) $(SOCK_LIBS) -lm
 
@@ -513,6 +518,8 @@ zclean: clean clean_lib clean_pixmaps clean_ad clean_rc
 	@rm -f $(OBJ1)
 	@rm -f $(OBJ2)
 	@rm -f $(OBJ3)
+	@rm -f Main/builtdate.h
+	@rm -f Headers/*
 
 clean_lib:
 	@cd Managers; $(MAKE) clean
@@ -562,6 +569,18 @@ install:	get_realname
 	Utils/install.sh $(REAL_PROG_NAME) $$REALNAME $$PREFIX; \
 	echo "Customize for $$LANGUAGE language."; \
 	Utils/postinstall.sh $$PREFIX $$LANGUAGE
+
+uninstall:
+	@PREFIX=$${PREFIX:-"/usr/local/Axene"}; \
+	echo "Uninstalling $(REAL_PROG_NAME) from $$PREFIX"; \
+	rm -f $$PREFIX/bin/XQuad.*; \
+	rm -f $$PREFIX/lib/locale/XQuad.*; \
+	rm -f $$PREFIX/lib/locale/xquadrc.*; \
+	rm -f $$PREFIX/lib/xcalibur.prc; \
+	rm -f $$PREFIX/lib/xquadrc; \
+	rm -f $$PREFIX/app-defaults/XQuad; \
+	rm -f $$PREFIX/XQuad; \
+	echo "$(REAL_PROG_NAME) uninstalled from $$PREFIX."
 
 # ---------------------------------------------------------------------
 # Dependencies rules

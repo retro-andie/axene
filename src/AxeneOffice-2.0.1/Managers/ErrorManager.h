@@ -4,7 +4,7 @@
 ** Definitions for errors and debugging
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 01:59:12 1994 Stéphane Boisson
+** Started on  Sun Jun 12 01:59:12 1994 Stï¿½phane Boisson
 ** Last update Thu Dec 30 17:52:13 1999 Emmanuel Paris
 */
 
@@ -44,7 +44,7 @@ extern void exit ___PROTO((int));
 #else
 extern FILE *Xc_log_file, *Xc_history_file;
 #endif
-extern void Xc_SyserrorAlert() /*___PROTO((char *format, ...))*/;
+extern void Xc_SyserrorAlert(char *format, ...);
 
 #ifndef NDEBUG
 

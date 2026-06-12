@@ -32,7 +32,7 @@
 #include <X11/Intrinsic.h>
 #include <Xm/RowColumn.h>
 #include <Xm/ToggleBG.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 #define B_IS_NONE	0
 #define B_IS_SET	1

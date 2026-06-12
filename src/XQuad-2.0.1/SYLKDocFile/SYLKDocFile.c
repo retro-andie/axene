@@ -26,7 +26,7 @@
 
 #include "SYLKDocFileP.h"
 #include "file.h"
-#include <varargs.h>
+#include <stdarg.h>
 #include <math.h>
 
 #ifdef __GNUC__

@@ -58,14 +58,11 @@ TIFFErrorHandler handler;
 }
 
 void
-TIFFError(module, fmt, va_alist)
- char* module;
- char* fmt;
- va_dcl
+TIFFError(char* module, char* fmt, ...)
 {
 	if (_errorHandler) {
 		va_list ap;
-		va_start(ap);
+		va_start(ap, fmt);
 		(*_errorHandler)(module, fmt, ap);
 		va_end(ap);
 	}

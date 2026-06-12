@@ -2,7 +2,7 @@
 ** PopupMenu.h for Xclamation, XAllWrite and AxeneOffice in PopupMenu/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -47,7 +47,7 @@
 #include <Xm/PushBG.h>
 #include <Xm/LabelG.h>
 #include <Xm/SeparatoG.h>
-#include <varargs.h>
+#include <stdarg.h>
 #include <X11/Intrinsic.h>
 #include "WInterface.h"
 #include "Icon.h"

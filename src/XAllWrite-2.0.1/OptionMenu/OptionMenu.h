@@ -50,7 +50,7 @@
 #include <Xm/PushBG.h>
 #include <Xm/LabelG.h>
 #include <Xm/SeparatoG.h>
-#include <varargs.h>
+#include <stdarg.h>
 #include <X11/Intrinsic.h>
 #include <Xm/CascadeB.h>
 #include "WInterface.h"

@@ -2,7 +2,7 @@
 ** VectorPolygon.c for XAllWrite in VectorPolygon/
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Tue Jul 18 12:56:37 1995 Stéphane Boisson
+** Started on  Tue Jul 18 12:56:37 1995 Stï¿½phane Boisson
 ** Last update Thu Oct 24 19:21:39 1996 Emmanuel Paris
 */
 
@@ -28,7 +28,7 @@
 #define NTRACE
 
 #include "VectorPolygon.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 #define BEZIER_SCALEBITS 16
 #define BEZIER_SCALE(value) (((long)(value)) << BEZIER_SCALEBITS)
@@ -67,7 +67,7 @@ static boolean addCurveto ___PROTO((c_VectorPolygon *this,
 				    coord_t x2, coord_t y2,
 				    coord_t x3, coord_t y3));
 static boolean addClosepath ___PROTO((c_VectorPolygon *this));
-static boolean set ___NPROTO((c_VectorPolygon *this, ...));
+static boolean set ___PROTO((c_VectorPolygon *this, ...));
 static boolean polyStroke ___PROTO((c_VectorPolygon *this));
 static boolean polyFill ___PROTO((c_VectorPolygon *this));
 static boolean polyClip ___PROTO((c_VectorPolygon *this));
@@ -664,16 +664,14 @@ c_Cadre *frame;
 /* ----------------------------------------------------------------- ** 
 ** set - Set the polygon parameters                                  ** 
 ** ----------------------------------------------------------------- */
-static boolean set(this, va_alist)
-c_VectorPolygon *this;
-va_dcl
+static boolean set(c_VectorPolygon *this, ...)
 {
   boolean exit_flag, rc;
   va_list ap;
 
   Xc_HISTORY(("set"));
 
-  va_start(ap);
+  va_start(ap, this);
   for(exit_flag = FALSE, rc = TRUE; exit_flag == FALSE; )
     switch(va_arg(ap, polygon_set_code_t))
       {

@@ -1,9 +1,0 @@
-
-\RULERLIST{
-        \RULER0{0 0 42.519685 False 0 5 \LEFT 0.5 0.75 1 
-		\NAME{Texte Normal}}
-        \RULER1{0 0 0 False 0 5 \LEFT 0.8 0.75 1 \NAME{Gauche}}
-        \RULER2{0 0 0 False 0 5 \CENTER 0.8 0.75 1 \NAME{Centré}}
-        \RULER3{0 0 0 False 0 5 \RIGHT 0.8 0.75 1 \NAME{Droite}}
-        \RULER4{0 0 0 False 0 5 \JUSTIFIED 0.8 0.75 1 \NAME{Justifié}}
-        }

@@ -1238,9 +1238,12 @@ int scan_font(FontP)
         break;
       case TOKEN_NAME:
             if (0 == strncmp(tokenStartP,"eexec",5) ) {
-               /* if file started with x'80', check next 5 bytes */
+               /* if file started with x'80' or 0, skip any secondary
+                  6-byte Axene (.pfc) or PFB segment header */
                if (starthex80) {
-                 V = _getc(fileP);
+                 /* skip whitespace (e.g. newline after eexec) */
+                 do { V = _getc(fileP); }
+                 while (V == '\n' || V == '\r' || V == ' ' || V == '\t');
                  if ( (V == 0X80) || (V == 0) ) {
                    for (i=0;i<5;i++) V = _getc(fileP);
                  }

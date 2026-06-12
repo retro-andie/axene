@@ -3,7 +3,7 @@
 ** Resource methods for PostScript calss
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,13 +20,13 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Wed Mar 29 16:07:22 1995 Stéphane Boisson
+** Started on  Wed Mar 29 16:07:22 1995 Stï¿½phane Boisson
 ** Last update Fri Jan  7 15:01:54 2000 Emmanuel Paris
 */
 
 #define NTRACE
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "PostScriptP.h"
 
 #define BUFFER_SIZE 4096
@@ -38,17 +38,14 @@ static boolean includeFont ___PROTO((c_PostScript *this, c_VectorFont *font));
 /* ----------------------------------------------------------------- ** 
 ** includeResource - Include resource in output file                 ** 
 ** ----------------------------------------------------------------- */
-boolean ps_includeResource(this, type, va_alist)
-c_PostScript *this;
-ps_resource_t type;
-va_dcl
+boolean ps_includeResource(c_PostScript *this, ps_resource_t type, ...)
 {
  boolean rc = FALSE;
  va_list ap;
 
  Xc_HISTORY(("includeResource"));
 
- va_start(ap);
+ va_start(ap, type);
  switch(type)
  {
   /*--- Font dictionary ---*/

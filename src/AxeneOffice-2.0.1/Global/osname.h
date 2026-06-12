@@ -4,7 +4,7 @@
 ** define Xc_SYSTEM_NAME & Xc_PACKAGE_NAME
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -38,84 +38,143 @@
 #define Xc_def_SYSTEM_NAME "DGUX 5.4.1"
 #define Xc_def_PACKAGE_NAME "m88k-dgux-5.4"
 #endif
+/* --- IBM AIX --- */
 #ifdef ___rs6000
 #define Xc_def_SYSTEM_NAME "AIX 3.2.5"
 #define Xc_def_PACKAGE_NAME "rs6000-aix-3.2.5"
 #endif
 #ifdef ___rs6000ppc
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
 #define Xc_def_SYSTEM_NAME "AIX 4.1.3"
 #define Xc_def_PACKAGE_NAME "rs6000ppc-aix-4.1.3"
 #endif
+#ifdef ___aix43
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "AIX 4.3"
+#define Xc_def_PACKAGE_NAME "powerpc-ibm-aix4.3"
+#endif
+
+/* --- Sun / Solaris --- */
 #ifdef ___sun4
 #define Xc_def_SYSTEM_NAME "SunOS 4.1.4"
 #define Xc_def_PACKAGE_NAME "sparc-sunos-4.1.4"
 #endif
 #ifdef ___sun5
-#define Xc_def_SYSTEM_NAME "Solaris 2.5"
-#define Xc_def_PACKAGE_NAME "sparc-solaris-2.5"
+#define Xc_def_SYSTEM_NAME "Solaris 7 / SunOS 5.7"
+#define Xc_def_PACKAGE_NAME "sparc-solaris-5.7"
+#endif
+#ifdef ___sun5_8
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "Solaris 8 / SunOS 5.8"
+#define Xc_def_PACKAGE_NAME "sparc-solaris-5.8"
 #endif
 #ifdef ___sun5_x86
-#define Xc_def_SYSTEM_NAME "Solaris 2.4 x86"
-#define Xc_def_PACKAGE_NAME "i486-solaris-2.4"
+#define Xc_def_SYSTEM_NAME "Solaris 7 x86"
+#define Xc_def_PACKAGE_NAME "i486-solaris-5.7-x86"
 #endif
+
+/* --- DEC/Compaq Alpha --- */
 #ifdef ___alpha
-#define Xc_def_SYSTEM_NAME "OSF/1 1.3"
-#define Xc_def_PACKAGE_NAME "alpha-digital-osf1-3.2"
+#define Xc_def_SYSTEM_NAME "Tru64 UNIX 4.0 / OSF1"
+#define Xc_def_PACKAGE_NAME "alpha-dec-osf4.0"
 #endif
+
+/* --- Windows NT (placeholder) --- */
 #ifdef ___WIN32
 #define Xc_def_SYSTEM_NAME "WinNT 4.0"
 #define Xc_def_PACKAGE_NAME "i486-winnt-4.0"
 #endif
+
+/* --- BSD family --- */
 #ifdef ___NetBSD
-#define Xc_def_SYSTEM_NAME "NetBSD 1.0"
-#define Xc_def_PACKAGE_NAME "i386-netbsd-1.0"
+#define Xc_def_SYSTEM_NAME "NetBSD 1.4"
+#define Xc_def_PACKAGE_NAME "i386-netbsd-1.4"
 #endif
+#ifdef ___netbsd15
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "NetBSD 1.5"
+#define Xc_def_PACKAGE_NAME "i386-netbsd-1.5"
+#endif
+#ifdef ___netbsd9
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "NetBSD 9.x"
+#define Xc_def_PACKAGE_NAME "amd64-netbsd-9"
+#endif
+#ifdef ___netbsd_modern
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "NetBSD 10.x"
+#define Xc_def_PACKAGE_NAME "amd64-netbsd-10"
+#endif
+#ifdef ___freebsd
+#define Xc_def_SYSTEM_NAME "FreeBSD 3.4"
+#define Xc_def_PACKAGE_NAME "i386-freebsd-3.4"
+#endif
+#ifdef ___freebsd4
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "FreeBSD 4.0"
+#define Xc_def_PACKAGE_NAME "i386-freebsd-4.0"
+#endif
+#ifdef ___freebsd12
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "FreeBSD 12.x"
+#define Xc_def_PACKAGE_NAME "amd64-freebsd-12"
+#endif
+#ifdef ___freebsd_modern
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "FreeBSD 14.x"
+#define Xc_def_PACKAGE_NAME "amd64-freebsd-14"
+#endif
+#ifdef ___openbsd
+#define Xc_def_SYSTEM_NAME "OpenBSD 2.8"
+#define Xc_def_PACKAGE_NAME "i386-openbsd-2.8"
+#endif
+#ifdef ___openbsd7
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "OpenBSD 7.x"
+#define Xc_def_PACKAGE_NAME "amd64-openbsd-7"
+#endif
+#ifdef ___openbsd_modern
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "OpenBSD 7.x"
+#define Xc_def_PACKAGE_NAME "amd64-openbsd-7"
+#endif
+
+/* --- Apple macOS --- */
+#ifdef ___macos
+#define Xc_def_SYSTEM_NAME "macOS 12.x / Darwin 21.x"
+#define Xc_def_PACKAGE_NAME "x86_64-apple-darwin21"
+#endif
+
+/* --- SCO / UnixWare / NCR SVR4 --- */
 #ifdef ___sco386
 #define Xc_def_SYSTEM_NAME "SCO 3.2v4.2"
 #define Xc_def_PACKAGE_NAME "i386-sco-3.2v4.2"
 #endif
 #ifdef ___sco386sV
-#define Xc_def_SYSTEM_NAME "SCO 3.2v5"
-#define Xc_def_PACKAGE_NAME "i586-sco-3.2v5"
+#define Xc_def_SYSTEM_NAME "SCO UnixWare 2.1"
+#define Xc_def_PACKAGE_NAME "i586-sco-unixware-2.1"
 #endif
 #ifdef ___ncr_svr4
 #define Xc_def_SYSTEM_NAME "NCR UNIX SVR4"
 #define Xc_def_PACKAGE_NAME "i386-ncr-svr4"
 #endif
-#ifdef ___i386_linux
-#define Xc_def_SYSTEM_NAME "Linux 1.2"
-#define Xc_def_PACKAGE_NAME "i486-linux-1.2"
-#endif
 #ifdef ___i386_unixware
-#define Xc_def_SYSTEM_NAME "Unixware 2.1.2"
-#define Xc_def_PACKAGE_NAME "a_definir"
+#define Xc_def_SYSTEM_NAME "Novell UnixWare 2.1.2"
+#define Xc_def_PACKAGE_NAME "i386-novell-unixware-2.1.2"
 #endif
-#ifdef ___linux_libc
-#undef Xc_def_SYSTEM_NAME
-#undef Xc_def_PACKAGE_NAME
-#define Xc_def_SYSTEM_NAME "Linux 2.0 libc"
-#define Xc_def_PACKAGE_NAME "i486-linux-2.0-libc"
-#endif
-#ifdef ___linux_2_0p
-#undef Xc_def_SYSTEM_NAME
-#undef Xc_def_PACKAGE_NAME
-#define Xc_def_SYSTEM_NAME "Linux 2.0 ELF [p]"
-#define Xc_def_PACKAGE_NAME "i586-linux-2.0-elf-xm2d"
-#endif
-#ifdef ___linux_glibc
-#undef Xc_def_SYSTEM_NAME
-#undef Xc_def_PACKAGE_NAME
-#define Xc_def_SYSTEM_NAME "Linux 2.0 glibc"
-#define Xc_def_PACKAGE_NAME "i486-linux-glibc"
-#endif
-#ifdef ___freebsd
-#define Xc_def_SYSTEM_NAME "FreeBSD 2.2.2"
-#define Xc_def_PACKAGE_NAME "i386-freebsd-2.2"
-#endif
-#ifdef ___iris4d
-#define Xc_def_SYSTEM_NAME "IRIX 5.3"
-#define Xc_def_PACKAGE_NAME "mips-sgi-irix-5.3"
-#endif
+
+/* --- HP-UX --- */
 #ifdef ___hpux10
 #define Xc_def_SYSTEM_NAME "HP-UX 10.20"
 #define Xc_def_PACKAGE_NAME "hppa-hpux-10.20"
@@ -124,16 +183,63 @@
 #define Xc_def_SYSTEM_NAME "HP-UX 9.03"
 #define Xc_def_PACKAGE_NAME "hppa-hpux-9.03"
 #endif
+
+/* --- SGI IRIX --- */
+#ifdef ___iris4d
+#define Xc_def_SYSTEM_NAME "IRIX 6.5"
+#define Xc_def_PACKAGE_NAME "mips-sgi-irix-6.5"
+#endif
+
+/* --- Linux --- */
+#ifdef ___i386_linux
+#define Xc_def_SYSTEM_NAME "Linux 2.2 i386"
+#define Xc_def_PACKAGE_NAME "i486-linux-2.2"
+#endif
+#ifdef ___linux_libc
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "Linux 2.0 libc5"
+#define Xc_def_PACKAGE_NAME "i486-linux-2.0-libc5"
+#endif
+#ifdef ___linux_2_0p
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "Linux 2.0 ELF"
+#define Xc_def_PACKAGE_NAME "i586-linux-2.0-elf"
+#endif
+#ifdef ___linux_glibc
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "Linux 2.2 glibc"
+#define Xc_def_PACKAGE_NAME "i486-linux-2.2-glibc"
+#endif
+#ifdef ___linux_modern
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "Linux 5.x / glibc 2.17+"
+#define Xc_def_PACKAGE_NAME "x86_64-linux-modern"
+#endif
 #ifdef ___sparc_linux
-#define Xc_def_SYSTEM_NAME "Linux Sparc 2.0 glibc"
-#define Xc_def_PACKAGE_NAME "sparc-linux-2.0-glibc"
+#define Xc_def_SYSTEM_NAME "Linux 2.2 SPARC glibc"
+#define Xc_def_PACKAGE_NAME "sparc-linux-2.2-glibc"
 #endif
 #ifdef ___alpha_linux
-#undef Xc_def_SYSTEM_NAME
-#undef Xc_def_PACKAGE_NAME
-#define Xc_def_SYSTEM_NAME "Linux Alpha 2.0 glibc"
-#define Xc_def_PACKAGE_NAME "alpha-linux-2.0-glibc"
+#undef  Xc_def_SYSTEM_NAME
+#undef  Xc_def_PACKAGE_NAME
+#define Xc_def_SYSTEM_NAME "Linux 2.2 Alpha glibc"
+#define Xc_def_PACKAGE_NAME "alpha-linux-2.2-glibc"
 #endif
+
+/* --- Other platforms (placeholders) --- */
+#ifdef ___mips
+#define Xc_def_SYSTEM_NAME "RISC OS 4.52"
+#define Xc_def_PACKAGE_NAME "mips-riscos-4.5"
+#endif
+#ifdef ___m88k
+#define Xc_def_SYSTEM_NAME "DGUX 5.4.1"
+#define Xc_def_PACKAGE_NAME "m88k-dgux-5.4"
+#endif
+/* Add new platform entries here following the pattern above. */
 
 #ifdef MAKE_SYSTEM
 # define Xc_SYSTEM_NAME MAKE_SYSTEM

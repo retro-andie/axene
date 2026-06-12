@@ -3,7 +3,7 @@
 ** Definitions for the Resource class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Thu Dec 15 18:44:46 1994 Stéphane Boisson
+** Started on  Thu Dec 15 18:44:46 1994 Stï¿½phane Boisson
 ** Last update Fri Feb  4 11:38:26 2000 Emmanuel Paris
 */
 
@@ -522,13 +522,13 @@ static XtResource resources[]=
  XcR_STRING(memoryError, "Out of memory for %ld bytes"),
  XcR_STRING(loadingError, "Loading error for `%s'"),
  XcR_STRING(frameAttribs, "Frame Attribs"),
- XcR_STRING(aboutTitle, "XQuad® - SpreadSheet"),
+ XcR_STRING(aboutTitle, "XQuadï¿½ - SpreadSheet"),
  XcR_STRING(aboutComments, "EMail: contact@axene.org\nBug-report: support@axene.org\nhttp://www.axene.org/\nftp://ftp.axene.org/"),
- XcR_STRING(aboutEnd, "©%d-%d Axene."),
+ XcR_STRING(aboutEnd, "ï¿½%d-%d Axene."),
 #ifdef PL
- XcR_STRING(aboutReleaseBeta, "XQuad® %d.%d.%d"),
+ XcR_STRING(aboutReleaseBeta, "XQuadï¿½ %d.%d.%d"),
 #else
- XcR_STRING(aboutRelease, "XQuad® %d.%d"),
+ XcR_STRING(aboutRelease, "XQuadï¿½ %d.%d"),
 #endif
  XcR_STRING(editColors, "x"),
  XcR_STRING(editStyles, "x"),
@@ -923,7 +923,7 @@ static XtResource resources[]=
  XcR_STRING(BnColFalse, "x"),
  
  XcR_STRING(greetings, "x"),
- XcR_STRING(authors, "Stephane BOISSONAntoine BUATRobin CASTANIEREmmanuel PARIS"),
+ XcR_STRING(authors, "Stephane BOISSON\\nAntoine BUAT\\nRobin CASTANIER\\nEmmanuel PARIS"),
 
  XcR_STRING(dateEntryMode, "monthfirst"),
  

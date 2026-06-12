@@ -3,7 +3,7 @@
 ** 	AxeneOffice in Global/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -24,13 +24,20 @@
 ** Last update Thu Dec 30 17:47:08 1999 Emmanuel Paris
 */
 
-#if defined(___freebsd) || defined(___NetBSD) || defined(___linux_glibc)
+#include "PortCompat.h"
+
+#if defined(___freebsd) || defined(___NetBSD) || defined(___openbsd) || \
+    defined(___linux_glibc) || defined(___i386_linux) || \
+    defined(___linux_libc) || defined(___linux_2_0p) || \
+    defined(___sparc_linux) || defined(___alpha_linux) || \
+    defined(___alpha) || defined(___rs6000) || defined(___rs6000ppc) || \
+    defined(___hpux9) || defined(___hpux10) || defined(___sun4)
 #include <sys/termios.h>
 #else
 #include <sys/termio.h>
 #endif
 
-#ifdef __GNUC__
+#ifdef ___HAVE_UNISTD_H
 #include <unistd.h>
 #include <sys/ioctl.h>
 #endif

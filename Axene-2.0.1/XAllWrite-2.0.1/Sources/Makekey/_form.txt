@@ -1,5 +1,0 @@
-NAME: Xcalibur Dev Team
-SOCIETY: pb
-SOFT: xallwrite
-TYPE: free
-DATE: 10/09/1998

@@ -4,7 +4,7 @@
 ** of a cd key.
 **
 ** Copyright (C) 1997-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -49,7 +49,7 @@ static int roll_digit[10][10] =
 
 #define DIGIT_SUM_BASE	50
 
-___INLINE boolean start_cdkey_check(keys)
+boolean start_cdkey_check(keys)
 char	*keys;
 {
  int i, j;
@@ -89,7 +89,7 @@ char	*keys;
  return TRUE;
 }
 
-___INLINE boolean check_cdkey_stage1()
+boolean check_cdkey_stage1()
 {
  if ((digit[0] == digit[8] && digit[1] == digit[9]) || digit[0] == digit[9])
   return FALSE;
@@ -99,7 +99,7 @@ ___INLINE boolean check_cdkey_stage1()
  return TRUE;
 }
 
-___INLINE boolean check_cdkey_stage2()
+boolean check_cdkey_stage2()
 {
  if ((!digit[0] && !digit[1]) || (!digit[8] && !digit[9]))
   return FALSE;
@@ -109,7 +109,7 @@ ___INLINE boolean check_cdkey_stage2()
  return TRUE;
 }
 
-___INLINE boolean check_cdkey_stage3()
+boolean check_cdkey_stage3()
 {
  int i, prod;
  
@@ -128,7 +128,7 @@ ___INLINE boolean check_cdkey_stage3()
  return TRUE;
 }
 
-___INLINE boolean check_cdkey_stage4()
+boolean check_cdkey_stage4()
 {
  int i, prod;
  
@@ -147,7 +147,7 @@ ___INLINE boolean check_cdkey_stage4()
  return TRUE;
 }
 
-___INLINE boolean check_cdkey_stage5()
+boolean check_cdkey_stage5()
 {
  int i, value;
 
@@ -174,7 +174,7 @@ ___INLINE boolean check_cdkey_stage5()
  return TRUE;
 }
 
-___INLINE boolean check_cdkey_stage6()
+boolean check_cdkey_stage6()
 {
  int i, sum, value;
 
@@ -193,7 +193,7 @@ ___INLINE boolean check_cdkey_stage6()
  return TRUE;
 } 
 
-___INLINE int end_cdkey_check()
+int end_cdkey_check()
 {
  stage -= 564521;
  return stage;

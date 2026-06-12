@@ -482,7 +482,7 @@ static XtResource resources[]=
  XcR_STRING(exportTextASCII, "ASCII"),
  XcR_STRING(exportTextHTML, "HTML"),
   
- XcR_STRING(authors, "Stephane BOISSONAntoine BUATRobin CASTANIEREmmanuel PARIS"),
+ XcR_STRING(authors, "Stephane BOISSON, Antoine BUAT, Robin CASTANIER, Emmanuel PARIS"),
 
  XcR_STRING(setupPrinters, "x"),
  XcR_STRING(setupPaths, "x"),

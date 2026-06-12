@@ -3,7 +3,7 @@
 ** Object and methods for FormatNbr
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -32,7 +32,7 @@
 #include "Moteur.h"
 #include "Resource.h"
 #include "TimeFuncs.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 extern c_Resource *GlobResources;
 extern c_Color	*GlobColorAuto;
@@ -40,13 +40,13 @@ extern c_Color	*GlobColorAuto;
 static void *cons_FormatNbr ___PROTO((c_FormatNbr **format_base, char *name));
 static void dest_FormatNbr();
 static void *copy_FormatNbr();
-static void set_format ___NPROTO((c_FormatNbr *f, ...));
+static void set_format ___PROTO((c_FormatNbr *f, ...));
 static boolean compare ___PROTO((c_FormatNbr *a, c_FormatNbr *b,
 				 boolean with_name));
 static void merge ___PROTO((c_FormatNbr *source, c_FormatNbr **target,
 			    boolean fusion));
 static c_FormatNbr *virtualCopy();
-static c_FormatNbr *get_format ___NPROTO((c_FormatNbr *f, ...));
+static c_FormatNbr *get_format(c_FormatNbr *, format_type_t, BaseStd_t *, ...);
 static void FormatNbr_convert_string ___PROTO((c_FormatNbr *this, char *str,
 					       int type, conv_info_t *info));
 
@@ -316,15 +316,13 @@ BaseStd_t *base;
 /* ----------------------------------------------------------------- ** 
 ** set_format - Set format parameters                                ** 
 ** ----------------------------------------------------------------- */
-static void set_format(f, va_alist)
-c_FormatNbr *f;
-va_dcl
+static void set_format(c_FormatNbr *f, ...)
 {
  va_list ap;
   
  Xc_HISTORY(("set(`%s')", f->name));
 
- va_start(ap);
+ va_start(ap, f);
  vset(f, ap);
  va_end(ap);
  F(f->hook).callback(f->hook, XcH_CONTENT_CHANGED, f);
@@ -503,11 +501,7 @@ boolean fusion_flag;
 /* ----------------------------------------------------------------- ** 
 ** get_format - get special format, or creat new one                 ** 
 ** ----------------------------------------------------------------- */
-static c_FormatNbr *get_format(format, type, base, va_alist)
-c_FormatNbr	*format;
-format_type_t	type;
-BaseStd_t	*base;
-va_dcl
+static c_FormatNbr *get_format(c_FormatNbr *format, format_type_t type, BaseStd_t *base, ...)
 {
  c_FormatNbr *ptr, *format2;
  va_list ap;
@@ -527,7 +521,7 @@ va_dcl
    format2->BaseStd = base;
   }
       
-  va_start(ap);
+  va_start(ap, base);
   vset(format2, ap);
   va_end(ap);
       

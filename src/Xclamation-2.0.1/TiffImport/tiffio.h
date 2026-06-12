@@ -100,7 +100,7 @@ typedef	int32 toff_t;		/* file offset */
 /*
 #include <stdarg.h>
 */
-#include <varargs.h>
+#include <stdarg.h>
 
 
 #if defined(__cplusplus)
@@ -119,9 +119,9 @@ extern	 char* TIFFGetVersion ___PROTO((void));
 extern	void TIFFClose ___PROTO((TIFF*));
 extern	int TIFFFlush ___PROTO((TIFF*));
 extern	int TIFFFlushData ___PROTO((TIFF*));
-extern	int TIFFGetField ___PROTO((TIFF*, ttag_t, ...));
+extern	int TIFFGetField(TIFF*, ttag_t, ...);
 extern	int TIFFVGetField ___PROTO((TIFF*, ttag_t, va_list));
-extern	int TIFFGetFieldDefaulted ___PROTO((TIFF*, ttag_t, ...));
+extern	int TIFFGetFieldDefaulted(TIFF*, ttag_t, ...);
 extern	int TIFFVGetFieldDefaulted ___PROTO((TIFF*, ttag_t, va_list));
 extern	int TIFFReadDirectory ___PROTO((TIFF*));
 extern	tsize_t TIFFScanlineSize ___PROTO((TIFF*));
@@ -141,7 +141,7 @@ extern	ttile_t TIFFCurrentTile ___PROTO((TIFF*));
 extern	int TIFFReadBufferSetup ___PROTO((TIFF*, tdata_t, tsize_t));
 extern	int TIFFLastDirectory ___PROTO((TIFF*));
 extern	int TIFFSetDirectory ___PROTO((TIFF*, tdir_t));
-extern	int TIFFSetField ___PROTO((TIFF*, ttag_t, ...));
+extern	int TIFFSetField(TIFF*, ttag_t, ...);
 extern	int TIFFVSetField ___PROTO((TIFF*, ttag_t, va_list));
 extern	int TIFFWriteDirectory ___PROTO((TIFF *));
 #if defined (c_plusplus) || defined (__cplusplus)
@@ -166,8 +166,8 @@ extern	TIFF* TIFFClientOpen ___PROTO(( char* name,  char* mode,
 	    TIFFSizeProc sizeproc,
 	    TIFFMapFileProc mapproc, TIFFUnmapFileProc unmapproc));
 extern	 char* TIFFFileName ___PROTO((TIFF*));
-extern	void TIFFError ___PROTO(( char*,  char*, ...));
-extern	void TIFFWarning ___PROTO(( char*,  char*, ...));
+extern	void TIFFError(char*, char*, ...);
+extern	void TIFFWarning(char*, char*, ...);
 extern	TIFFErrorHandler TIFFSetErrorHandler ___PROTO((TIFFErrorHandler handler));
 extern	TIFFErrorHandler TIFFSetWarningHandler ___PROTO((TIFFErrorHandler handler));
 extern	ttile_t TIFFComputeTile ___PROTO((TIFF*, uint32, uint32, uint32, tsample_t));

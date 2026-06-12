@@ -9,9 +9,6 @@
 #define MAX_HASH_VALUE 137
 /* maximum key range = 137, duplicates = 0 */
 
-#ifdef __GNUC__
-__inline
-#endif
 static unsigned int
 hash (str, len)
      register const char *str;
@@ -162,9 +159,6 @@ static AFM_keyword_t wordlist[] =
     {"WX", AK_WX}
   };
 
-#ifdef __GNUC__
-__inline
-#endif
 AFM_keyword_t *
 is_AFM_keyword (str, len)
      register const char *str;

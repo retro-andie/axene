@@ -2,7 +2,7 @@
 ** Drag_And_Drop.c for Xclamation, XQuad and XAllWrite in Drag_And_Drop/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 ** Last update Mon May 18 14:27:11 1998 Emmanuel Paris
 */
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "Drag_And_Drop.h"
 
 void *cons_DragAndDrop();
@@ -32,7 +32,7 @@ void *copy_DragAndDrop();
 
 boolean eventlook_drag();
 void eventlook_drop();
-void select_input_drag();
+void select_input_drag ___PROTO((c_DragAndDrop *This, Window window, int mode, ...));
 void change_argument();
 void create_context_drag();
 void test_context_drag();
@@ -253,11 +253,7 @@ XEvent	*event;
 }
 
 
-void select_input_drag(This, window, mode, va_alist)
-c_DragAndDrop	*This;
-Window		window;
-int		mode;
-va_dcl
+void select_input_drag(c_DragAndDrop *This, Window window, int mode, ...)
 {
  va_list	list_arg;
  char		window_name[256];
@@ -285,7 +281,7 @@ va_dcl
  icon_name[1] = (char)sizeof(long)+'0';
  icon_name[2] = '|';
  icon_name[3] = '\0';
- va_start(list_arg);
+ va_start(list_arg, mode);
  if ((i_value = va_arg(list_arg, int)))
  {
   while(1)

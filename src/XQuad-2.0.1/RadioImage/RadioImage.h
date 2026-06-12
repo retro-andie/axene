@@ -34,7 +34,7 @@
 #include "Icon.h"
 #include "ToggleButton.h"
 #include <Xm/RowColumn.h>
-#include <varargs.h>
+#include <stdarg.h>
 #include <X11/Intrinsic.h>
 
 /*--- define the method for Class RadioImage ---*/

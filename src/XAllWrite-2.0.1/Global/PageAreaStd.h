@@ -2,7 +2,7 @@
 ** PageAreaStd.h for XAllWrite in Global/
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -92,12 +92,12 @@ typedef struct _sf_pagearea_function
 #define GET_DATA(a) data=(d_##a## *)This->function_data
 #define	d(a)   (data->##a##)
 #else
-#define	DATA(a)	d_/**/a/**/ *data	 
-#define	DATA_ITSELF(a)	(d_/**/a/**/ *)This->function_data	 
-#define	SET_DATA(a) data=(d_/**/a/**/ *)Xc_malloc("/**/a/**/",sizeof(d_/**/a/**/)); \
+#define	DATA(a)	d_##a *data
+#define	DATA_ITSELF(a)	(d_##a *)This->function_data
+#define	SET_DATA(a) data=(d_##a *)Xc_malloc(#a,sizeof(d_##a)); \
 		    This->function_data=(void *)data
-#define GET_DATA(a) data=(d_/**/a/**/ *)This->function_data
-#define	d(a)   (data->/**/a/**/)
+#define GET_DATA(a) data=(d_##a *)This->function_data
+#define	d(a)   (data->a)
 #endif
 #define FREE_DATA Xc_free(data); \
                   This->function_data=NULL

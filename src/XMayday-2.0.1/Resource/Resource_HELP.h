@@ -151,7 +151,7 @@ static XtResource resources[]=
  XcR_STRING(aboutRelease, "XMayday® Release %d.%d"),
  XcR_STRING(aboutReleaseBeta, "XMayday® Release %d.%d.%d"),
  
- XcR_STRING(authors, "Emmanuel PARISRobin CASTANIERAntoine BUATStephane BOISSON"),
+ XcR_STRING(authors, "Emmanuel PARIS\nRobin CASTANIER\nAntoine BUAT\nStephane BOISSON"),
  
  XcR_STRING(postscript, "PostScript"),
  XcR_STRING(plainText, "Plain Text"),

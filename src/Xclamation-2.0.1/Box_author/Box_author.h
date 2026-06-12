@@ -2,7 +2,7 @@
 ** Box_author.h for Xclamation in Box_author/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -82,8 +82,8 @@ typedef struct
   c_Frame	*Frame2;
   c_Grid	*Grid2;
   c_Form	*FormIcon;
-  Widget	Drawing;	// drawing area for animation
-  Window	WDraw;		// window for the former widget
+  Widget	Drawing;	/* drawing area for animation */
+  Window	WDraw;		/* window for the former widget */
   c_Label       *Label1;
   c_Label       *Label2;
   c_Label       *Label3;

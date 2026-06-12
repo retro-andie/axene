@@ -3,7 +3,7 @@
 ** Import_Text Object Interface
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -36,7 +36,7 @@ static void toggle_code_dos();
 static void toggle_code_mac();
 static void certify_cmd_line();
 
-c_Import_Text	*cb_object;
+static c_Import_Text	*cb_object;
 
 void txt_create_attribs_box(This, Parent)
 c_Import_Text *This;

@@ -3,7 +3,7 @@
 ** Methods for the TextRuler class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,14 +20,14 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 02:12:36 1994 Stéphane Boisson
+** Started on  Sun Jun 12 02:12:36 1994 Stï¿½phane Boisson
 ** Last update Wed Apr 16 17:08:36 1997 Emmanuel Paris
 */
 
 #define NHISTORY
 #define NTRACE
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "TextRuler.h"
 #include "Document.h"
 
@@ -35,7 +35,7 @@
 static void *contructor();
 static void destructor();
 static void *copy();
-static void set() /* ___PROTO((c_TextRuler *this, ...)) */;
+static void set ___PROTO((c_TextRuler *this, ...));
 static boolean compare ___PROTO((c_TextRuler *a, c_TextRuler *b));
 static void merge ___PROTO((c_TextRuler *source, c_TextRuler **target,
 			    boolean fusion));
@@ -226,9 +226,7 @@ BaseStd_t *base;
 /* ----------------------------------------------------------------- ** 
 ** set - Set method                                                  ** 
 ** ----------------------------------------------------------------- */
-static void set(this, va_alist)
-c_TextRuler *this;
-va_dcl
+static void set(c_TextRuler *this, ...)
 {
   boolean out_flag;
   va_list ap;
@@ -236,7 +234,7 @@ va_dcl
   Xc_HISTORY(("set(`%s')", this->name));
 
   out_flag = FALSE;
-  va_start(ap);
+  va_start(ap, this);
   do {
     switch(va_arg(ap, textruler_set_code_t))
       {

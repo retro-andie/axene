@@ -3,7 +3,7 @@
 ** Methods for the Color class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 02:16:38 1994 Stéphane Boisson
+** Started on  Sun Jun 12 02:16:38 1994 Stï¿½phane Boisson
 ** Last update Mon Nov  2 16:38:19 1998 Emmanuel Paris
 */
 
@@ -30,17 +30,17 @@
 #include "Color.h"
 #include <string.h>
 #include <math.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 
 /*--- Prototypes ---*/
 static void *constructor();
 static void destructor();
 static void *copy();
-static void set_color ()  /* ___PROTO((c_Color *c, ...)) */ ;
+static void set_color ___PROTO((c_Color *c, ...));
 static boolean compare ___PROTO((c_Color *a, c_Color *b, boolean with_name));
 static void merge ___PROTO((c_Color *source, c_Color **target,boolean fusion));
-static c_Color *getColor ___NPROTO((c_Color **base, ...));
+static c_Color *getColor ___PROTO((c_Color **base, ...));
 
 static rgb_t *get_RGB_Color ___PROTO((c_Color *c));
 static cmyk_t *get_CMYK_Color ___PROTO((c_Color *c));
@@ -264,27 +264,23 @@ BaseStd_t *base;
 /* ----------------------------------------------------------------- ** 
 ** set_color - Set color parameters                                  ** 
 ** ----------------------------------------------------------------- */
-static void set_color(c, va_alist)
-c_Color *c;
-va_dcl
+static void set_color(c_Color *c, ...)
 {
  va_list ap;
-  
+
  Xc_HISTORY(("set(`%s')", c->name));
 
- va_start(ap);
+ va_start(ap, c);
  vset(c, ap);
  va_end(ap);
  F(c->hook).callback(c->hook, XcH_CONTENT_CHANGED, c);
 }
 
 
-/* ----------------------------------------------------------------- ** 
-** getColor - Get or create color                                    ** 
+/* ----------------------------------------------------------------- **
+** getColor - Get or create color                                    **
 ** ----------------------------------------------------------------- */
-static c_Color *getColor(base, va_alist)
-c_Color **base;
-va_dcl
+static c_Color *getColor(c_Color **base, ...)
 {
  c_Color color, *ptr;
  va_list ap;
@@ -292,7 +288,7 @@ va_dcl
  Xc_HISTORY(("getColor"));
 
  memset(&color, 0, sizeof(c_Color));
- va_start(ap);
+ va_start(ap, base);
  vset(&color, ap);
  va_end(ap);
 

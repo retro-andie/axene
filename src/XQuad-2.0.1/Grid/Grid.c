@@ -3,7 +3,7 @@
 ** Methods for the Grid class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Tue Dec  6 11:40:44 1994 Stéphane Boisson
+** Started on  Tue Dec  6 11:40:44 1994 Stï¿½phane Boisson
 ** Last update Sun Jan 16 15:55:37 2000 Emmanuel Paris
 */
 
@@ -33,7 +33,7 @@
 #include <X11/StringDefs.h>
 #include <Xm/BulletinB.h>
 #include <Xm/Frame.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 /*#define XcG_INSTANT_MAP*/
 
@@ -42,7 +42,7 @@
 static void *constructor();
 static void destructor();
 static void *copy();
-static void addColumn ___NPROTO((c_Grid *this, int size, ...));
+static void addColumn ___PROTO((c_Grid *this, int size, ...));
 static void callResize ___PROTO((c_Grid *this));
 
 static void cb_resize ___PROTO((CompositeWidget w, XConfigureEvent *event,
@@ -140,10 +140,7 @@ c_Grid *this;
 /* ----------------------------------------------------------------- ** 
 ** addColumn - Add a column of widgets                               ** 
 ** ----------------------------------------------------------------- */
-static void addColumn(this, size, va_alist)
-c_Grid *this;
-int size;
-va_dcl
+static void addColumn(c_Grid *this, int size, ...)
 {
  Dimension row_width, row_height;
  grid_item_t *column;
@@ -157,7 +154,7 @@ va_dcl
  this->row_count[this->column_count][1] = 0;
  row_width = row_height = 0;
 
- va_start(ap);
+ va_start(ap, size);
  for(count = 0; (column->w = va_arg(ap, Widget)) != NULL; column++, count++)
  {
   XtWidgetGeometry geometry;

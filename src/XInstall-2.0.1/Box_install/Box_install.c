@@ -2,7 +2,7 @@
 ** Box_install.c for XInstall in Box_install/
 **
 ** Copyright (C) 1997-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -425,7 +425,7 @@ icon_list	*pack_list;
  while (i < XcCD_NB_BUTTON_DEF)
  {
   i++;
-  if (This->Dialog->w_button[i] && i < XcCD_NB_BUTTON_DEF)
+  if (i < XcCD_NB_BUTTON_DEF && This->Dialog->w_button[i])
    XtSetSensitive(This->Dialog->w_button[i], False);
  }
 
@@ -521,7 +521,7 @@ icon_list	*pack_list;
  while (i < XcCD_NB_BUTTON_DEF)
  {
   i++;
-  if (This->Dialog->w_button[i] && i < XcCD_NB_BUTTON_DEF)
+  if (i < XcCD_NB_BUTTON_DEF && This->Dialog->w_button[i])
    XtSetSensitive(This->Dialog->w_button[i], True);
  }
 
@@ -614,8 +614,8 @@ unsigned long	*all_total;
  int		ret;
  int		pid;
  int		status;
- char		cur_dir[1000];
- char		exec_file[1000];
+ char		cur_dir[4352];
+ char		exec_file[2048];
 
  
  F(This->LpackageName).set_string(This->LpackageName, GetBasename(tar, FALSE));
@@ -643,7 +643,7 @@ unsigned long	*all_total;
   gunzip(tar);
   exit(0);
  }
- getcwd(cur_dir, 1000);
+ getcwd(cur_dir, sizeof(cur_dir));
  chdir(This->DstDir);
  close(std_prg_tar[1]);
  /*printf("%d\n", std_prg_tar[0]);*/
@@ -658,11 +658,11 @@ unsigned long	*all_total;
   wait(&status);
 
  /* teste l'existence de .post_exec et execute*/
- sprintf(exec_file, "%s/%s", This->DstDir, ".post_exec");
+ snprintf(exec_file, sizeof(exec_file), "%s/%s", This->DstDir, ".post_exec");
  if (IsFileExecutable(exec_file))
  {
-  sprintf(cur_dir, "%s %s %s", exec_file, This->DstDir, 
-	  strlanguage[selected_tongue -1]);
+  snprintf(cur_dir, sizeof(cur_dir), "%s %s %s", exec_file, This->DstDir,
+	   strlanguage[selected_tongue -1]);
   /*printf("exec: %s\n", cur_dir);*/
   system(cur_dir); 
  } 

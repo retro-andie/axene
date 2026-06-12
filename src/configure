@@ -3,7 +3,7 @@
 # Configure Script for Axene Softwares.
 #
 # Copyright (C) 1998-2000 Axene.
-# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 # Email: xcalibur@axene.org
 #
 #    This program is free software; you can redistribute it and/or modify
@@ -32,7 +32,7 @@ TOP=`dirname $PWD/$THIS`
 ##############################################################################
 
 # default env
-PREFIX=`dirname $PWD`
+PREFIX=`cd $TOP && pwd`
 LANGUAGE='English.us'
 CC='gcc'
 CFLAGS='-O2'

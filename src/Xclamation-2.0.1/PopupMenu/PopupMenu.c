@@ -2,7 +2,7 @@
 ** PopupMenu.c for Xclamation, XAllWrite and AxeneOffice in PopupMenu/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -30,14 +30,14 @@
 extern c_HelpLine *GlobHelpLine;
 #endif
 
-static void *cons_PopupMenu();
+static void *cons_PopupMenu(Widget w_Parent, char *Title, ...);
 static void dest_PopupMenu();
 static void *copy_PopupMenu();
 static void PopupMenu_ButtonFlag();
 static void PopupMenu_ToggleManage();
 static void PopupMenu_ToggleButton();
 static void PopupMenu_AddCallback();
-static void PopupMenu_AddCallback2();
+static void PopupMenu_AddCallback2(c_PopupMenu *This, void *arg, int buttonnum, ...);
 static void mapAndWaitForMap();
 static void waitForUserAction();
 
@@ -59,10 +59,7 @@ sf_PopupMenu fc_PopupMenu =
  waitForUserAction
 };
 
-static void *cons_PopupMenu(w_Parent, Title, va_alist)
-Widget		w_Parent; 
-char 		*Title;
-va_dcl
+static void *cons_PopupMenu(Widget w_Parent, char *Title, ...)
 {
  va_list 		other_arg;
  Display		*display;
@@ -95,7 +92,7 @@ va_dcl
  nargs = 0;
  ObjTmp->w_This = XmCreatePopupMenu(w_Parent, Title, NULL, 0);
   
- va_start(other_arg);
+ va_start(other_arg, Title);
  names_number = 0;
  while ((temp = va_arg(other_arg, char *)))
  {
@@ -107,7 +104,7 @@ va_dcl
  ObjTmp->numberw = names_number;
  if (names_number)
  {
-  va_start(other_arg);
+  va_start(other_arg, Title);
 
   if ((ObjTmp->Buttons = 
        (strPopupContent *)Xc_malloc("WidgetId",
@@ -375,17 +372,13 @@ void 		*argument2;
  }
 }
 
-static void PopupMenu_AddCallback2(This, arg, buttonnum, va_alist)
-c_PopupMenu	*This;
-void		*arg;
-int		buttonnum;
-va_dcl
+static void PopupMenu_AddCallback2(c_PopupMenu *This, void *arg, int buttonnum, ...)
 {
  va_list	other_arg;
  void		(*temp)();
  WidgetClass	wclass;
 
- va_start(other_arg);
+ va_start(other_arg, buttonnum);
  while ((temp = va_arg(other_arg, void *)))
  {
   wclass = XtClass(This->Buttons[buttonnum-1].w_content);

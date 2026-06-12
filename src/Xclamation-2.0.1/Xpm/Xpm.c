@@ -3,7 +3,7 @@
 ** 	in Xpm/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -108,22 +108,23 @@ boolean	mono;
  byte_order = (*ximage)->byte_order == LSBFirst;
   
  XPMCreateImage(Image, color, bit, &ImgBuffer, width, height, convert,
-		PalColors, byte_order, depth);
-  
+                PalColors, byte_order, (mono && depth > 24) ? 24 : depth);
+
  if ((color==2 && mask==0) || (color==3 && mask))
  {
-  ImgBufferMono = (char *)Xc_malloc("IconMaskBuffer", 
+  ImgBufferMono = (char *)Xc_malloc("IconMaskBuffer",
 				    ((width + 7) >> 3) * height);
   memset(ImgBufferMono, 0, ((width + 7) >> 3) * height);
   if (convert[0] == mask)
    foreground = PalColors[1].pixel;
-  else 
+  else
    foreground = PalColors[0].pixel;
   XPMCreateImageMono(ImgBuffer, ImgBufferMono, width, height,
-		     foreground, bit_order, byte_order, depth);
+                     foreground, bit_order, byte_order,
+                     (mono && depth > 24) ? 24 : depth);
   (*ximage)->data = ImgBufferMono;
-  Xc_free(ImgBuffer); 
- }      
+  Xc_free(ImgBuffer);
+ }
  else
  {
   switch(depth)

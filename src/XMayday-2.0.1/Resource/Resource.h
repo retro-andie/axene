@@ -69,7 +69,7 @@ typedef struct sc_Resource c_Resource;
 #define XcR_FONT_OFFSET(number) XtOffsetOf(c_Resource, font_name[number])
 #define XcR_INT_OFFSET(number) XtOffsetOf(c_Resource, value[number])
 
-#ifdef ___GNUC_COMPOSE_MACRO
+#if defined(___GNUC_COMPOSE_MACRO) || defined(___PSEUDO_COMPOSE_MACRO)
 # define XcR_STRING(id_string, default_string) \
 {XcR_MAKE_STRING(id_string##Msg), "Message", XtRString, sizeof(String), \
   XcR_STRING_OFFSET(XcR_##id_string), XtRString, default_string} 

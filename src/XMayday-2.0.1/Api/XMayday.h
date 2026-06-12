@@ -3,7 +3,7 @@
 ** XMayday.h
 **
 ** Copyright (C) 1996-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -53,32 +53,22 @@
 
 #ifndef QUIET_MODE
 
-#include <varargs.h>
+#include <stdarg.h>
 
 #ifdef STATIC_DEF
 FILE *Xc_log_file = stderr;
-void Xc_LogPrintf(format, va_alist)
-char *format;
-va_dcl
+void Xc_LogPrintf(char *format, ...)
 {
  va_list ap;
-  
- va_start(ap);
+
+ va_start(ap, format);
  vfprintf(Xc_log_file, format, ap);
  va_end(ap);
 }
 
-#if !defined(___freebsd) && !defined(___NetBSD)
-extern char *sys_errlist[];
-extern int sys_nerr;
-#endif
-
-char *Xc_strerror(errorcode)
-int errorcode;
+char *Xc_strerror(int errorcode)
 {
- if((errorcode > 0) && (errorcode < sys_nerr))
-  return (char *)sys_errlist[errorcode];
- return("Unknow error");
+ return strerror(errorcode);
 }
 
 #else

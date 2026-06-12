@@ -772,7 +772,7 @@ char* gen2str ___PROTO((GEN x));
 char* g2str ___PROTO((GEN x, long dec));
 char* g2estr ___PROTO((GEN x, long dec));
 
-void fprintferr ___NPROTO((char* pat, ...));
+void fprintferr ___PROTO((char* pat, ...));
 void flusherr();
 
 char *gitoascii ___PROTO((GEN g, char *buf));
@@ -835,7 +835,7 @@ extern
 #ifdef __GNUC__
 __volatile__
 #endif
-void    err ___NPROTO((long numerr, ...));
+void    err ___PROTO((long numerr, ...));
 #endif
 
 void    recover ___PROTO((long listloc)),changevalue ___PROTO((entree *ep, GEN val)),allocatemoremem ___PROTO((ulong newsize));

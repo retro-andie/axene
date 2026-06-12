@@ -2,7 +2,7 @@
 ** RadioImage.c for Xclamation in RadioImage/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -25,7 +25,7 @@
 
 #include "RadioImage.h"
 
-void *cons_RadioImage();
+void *cons_RadioImage(Widget, c_ManageWidget *, int *, ...);
 void dest_RadioImage();
 void *copy_RadioImage();
 void SelectIcon();
@@ -37,11 +37,7 @@ sf_RadioImage fc_RadioImage =
  copy_RadioImage
 };
 
-void *cons_RadioImage(w_Parent, ManageW, the_pointer, va_alist)
-Widget 		w_Parent;
-c_ManageWidget	*ManageW;
-int		*the_pointer;
-va_dcl
+void *cons_RadioImage(Widget w_Parent, c_ManageWidget *ManageW, int *the_pointer, ...)
 {
  va_list	other_arg;
  Display	*display;
@@ -77,7 +73,7 @@ va_dcl
 				   "RCRadioImage", args, nargs);
  F(ManageW).Add_child(ManageW, ObjTmp->w_Row, WIDGET(ObjTmp->Grid));
 
- va_start(other_arg);
+ va_start(other_arg, the_pointer);
  arg_count = 0;
  while ((titletmp = va_arg(other_arg, char *)))
  {
@@ -109,7 +105,7 @@ va_dcl
  }
 
  
- va_start(other_arg);
+ va_start(other_arg, the_pointer);
  arg_count = 0;
  while ((titletmp = va_arg(other_arg, char *)))
  {

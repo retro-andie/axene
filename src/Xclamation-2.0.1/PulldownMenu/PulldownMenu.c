@@ -2,7 +2,7 @@
 ** PulldownMenu.c for Xclamation, XQuad, XAllWrite and XMayday in PulldownMenu/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -26,14 +26,14 @@
 #include "PulldownMenu.h"
 #include "RegisterHelp.h"
 
-static void *cons_PulldownMenu();
+static void *cons_PulldownMenu(Widget w_Parent, c_ManageWidget *ManageW, char *Title, ...);
 static void dest_PulldownMenu();
 static void *copy_PulldownMenu();
 static void PulldownMenu_ButtonFlag();
 static void PulldownMenu_ToggleManage();
 static void PulldownMenu_ToggleButton();
 static void PulldownMenu_AddCallback();
-static void PulldownMenu_AddCallback2();
+static void PulldownMenu_AddCallback2(c_PulldownMenu *This, int buttonnum, ...);
 static void PulldownMenu_SetDynamicFlag();
 static void PulldownMenu_SetDynamicList();
 static void PulldownMenu_ToggleDynamicButton();
@@ -60,11 +60,7 @@ sf_PulldownMenu fc_PulldownMenu =
 };
 
 
-static void *cons_PulldownMenu(w_Parent, ManageW, Title, va_alist)
-Widget		w_Parent;	/* w_Parent must be the menu bar */
-c_ManageWidget	*ManageW;
-char 		*Title;
-va_dcl
+static void *cons_PulldownMenu(Widget w_Parent, c_ManageWidget *ManageW, char *Title, ...)
 {
  va_list 		other_arg;
  c_PulldownMenu	*This;
@@ -90,7 +86,7 @@ va_dcl
  This->w_This = XmCreatePulldownMenu(w_Parent, Title, NULL, 0);
  Xc_REGISTER_HELP(This->w_This);
 
- va_start(other_arg);
+ va_start(other_arg, Title);
  names_number = nb_pmd = num_wid = 0;
  while ((temp = va_arg(other_arg, char *)))
  {
@@ -154,8 +150,8 @@ va_dcl
  bRadioBox = FALSE;
  bManage = TRUE;
   
- va_start(other_arg);
-  
+ va_start(other_arg, Title);
+
  while (nb_names < names_number)
  {
   temp = va_arg(other_arg, char *); 
@@ -361,15 +357,12 @@ Boolean	state;
  XmToggleButtonSetState(This->w_Buttons[button], state, False);
 }
 
-static void PulldownMenu_AddCallback2(This, buttonnum, va_alist)
-c_PulldownMenu	*This;
-int		buttonnum;
-va_dcl
+static void PulldownMenu_AddCallback2(c_PulldownMenu *This, int buttonnum, ...)
 {
  va_list	other_arg;
  void		(*temp)();
 
- va_start(other_arg);
+ va_start(other_arg, buttonnum);
  while ((temp = (void (*)())va_arg(other_arg, void *)))
  {
   

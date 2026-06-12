@@ -2,7 +2,7 @@
 ** SpinBox.c for Xclamation, XQuad and XAllWrite in SpinBox/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -28,7 +28,7 @@
 #include <Xm/ArrowB.h>
 #include "RegisterHelp.h"
 #include "Xpm.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 static void *constructor();
 static void destructor();
@@ -40,8 +40,8 @@ static void setUnit_SpinBox ___PROTO((c_SpinBox *This, int unit,
 				      boolean text_in_unit));
 static void setAutoRepeatDelay_SpinBox ___PROTO((c_SpinBox *This, long delay));
 static void setIncrement_SpinBox ___PROTO((c_SpinBox *This, real increment));
-static void setValueTable_SpinBox ___NPROTO((c_SpinBox *This, ...));
-static void setStringTable_SpinBox ___NPROTO((c_SpinBox *This, ...));
+static void setValueTable_SpinBox ___PROTO((c_SpinBox *This, ...));
+static void setStringTable_SpinBox ___PROTO((c_SpinBox *This, ...));
 
 static void cb_textfield ___PROTO((c_WTextField *tf, c_SpinBox *This, 
 				   XmAnyCallbackStruct *cbs));
@@ -377,7 +377,7 @@ static void setAutoRepeatDelay_SpinBox(This, delay)
 c_SpinBox *This;
 long delay;
 {
- Xc_TRACE(("set AutoRepeat delay: %ld µs", delay));
+ Xc_TRACE(("set AutoRepeat delay: %ld ï¿½s", delay));
 
  This->auto_repeat = delay;
 }
@@ -396,28 +396,26 @@ real increment;
 /* ----------------------------------------------------------------- ** 
 ** setValueTable                                                     ** 
 ** ----------------------------------------------------------------- */
-static void setValueTable_SpinBox(This, va_alist)
-c_SpinBox *This;
-va_dcl
+static void setValueTable_SpinBox(c_SpinBox *This, ...)
 {
  real value, *vt;
  int count;
  va_list ap;
- 
+
  Xc_TRACE(("setValueTable"));
- 
+
  count = 0;
- va_start(ap);
+ va_start(ap, This);
  while((value = va_arg(ap, real)) != SB_VALUE_TABLE_END) count++;
  va_end(ap);
- 
+
  if (This->value_table) Xc_free(This->value_table);
 
  if (count)
  {
   This->value_table = vt = (real *)Xc_malloc("vt", sizeof(real) * (count + 1));
 
-  va_start(ap);
+  va_start(ap, This);
   value = va_arg(ap, real);
   This->limit_inf = This->limit_sup = value;
   *vt++ = value;
@@ -436,9 +434,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** setStringTable                                                    ** 
 ** ----------------------------------------------------------------- */
-static void setStringTable_SpinBox(This, va_alist)
-c_SpinBox *This;
-va_dcl
+static void setStringTable_SpinBox(c_SpinBox *This, ...)
 {
  Xc_TRACE(("setStringTable"));
  

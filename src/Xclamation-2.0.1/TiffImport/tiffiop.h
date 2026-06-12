@@ -363,7 +363,7 @@ extern	void _TIFFfree ___PROTO((void*));
 extern	int _TIFFgetMode ___PROTO(( char* mode,  char* module));
 extern	 TIFFFieldInfo *TIFFFindFieldInfo ___PROTO((ttag_t, TIFFDataType));
 extern	 TIFFFieldInfo *TIFFFieldWithTag ___PROTO((ttag_t));
-extern	void _TIFFgetfield ___PROTO((TIFFDirectory*, ttag_t, ...));
+extern	void _TIFFgetfield(TIFFDirectory*, ttag_t, ...);
 extern	int TIFFNoRowEncode ___PROTO((TIFF*, tidata_t, tsize_t, tsample_t));
 extern	int TIFFNoStripEncode ___PROTO((TIFF*, tidata_t, tsize_t, tsample_t));
 extern	int TIFFNoTileEncode ___PROTO((TIFF*, tidata_t, tsize_t, tsample_t));

@@ -2,7 +2,7 @@
 ** Keyboard_Specs.c for Xclamation and XAllWrite in Keyboard/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -146,21 +146,19 @@ static char	tab_threequarters[1] = { '4' };
 static KeySym	ks_threequarters[1] = { XK_threequarters };
 static char	kc_threequarters[1] = { 0xbe };
 
-#ifdef ___GNUC_COMPOSE_MACRO
 #define KB_Convert(accent, nbchar) \
-static boolean	convertion_##accent##(This) \
-c_Keyboard	*This; \
+static boolean	convertion_##accent(c_Keyboard *This) \
 { \
  int	i; \
    \
  if (This->buf_length == 1) \
  { \
-   for(i=0; i<##nbchar##; i++) \
+   for(i=0; i<nbchar; i++) \
    { \
-     if (This->buf_keyb[0] == tab_##accent##[i]) \
+     if (This->buf_keyb[0] == tab_##accent[i]) \
      { \
-	This->keysym = ks_##accent##[i]; \
-	This->buf_keyb[0] = kc_##accent##[i]; \
+	This->keysym = ks_##accent[i]; \
+	This->buf_keyb[0] = kc_##accent[i]; \
 	This->buf_keyb[1] = '\0'; \
 	This->buf_length = 1; \
 	return FALSE; \
@@ -169,30 +167,6 @@ c_Keyboard	*This; \
   } \
  return FALSE; \
 }
-#else
-#define KB_Convert(accent, nbchar) \
-static boolean	convertion_/**/accent/**/(This) \
-c_Keyboard	*This; \
-{ \
- int	i; \
- \
- if (This->buf_length == 1) \
- { \
-    for(i=0; i<	/**/nbchar/**/; i++) \
-   { \
-      if (This->buf_keyb[0] == tab_/**/accent/**/[i]) \
-     { \
-	This->keysym = ks_/**/accent/**/[i]; \
-	This->buf_keyb[0] = kc_/**/accent/**/[i]; \
-	This->buf_keyb[1] = '\0'; \
-	This->buf_length = 1; \
-	return FALSE; \
-      } \
-    } \
-  } \
- return FALSE; \
-}
-#endif
 
 KB_Convert(acute, KEYB_NB_ACUTE);
 KB_Convert(grave, KEYB_NB_GRAVE);

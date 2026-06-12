@@ -2,7 +2,7 @@
 ** OptionMenu.c for Xclamation, XQuad and XAllWrite in OptionMenu/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -28,13 +28,13 @@
 
 extern c_HelpLine *GlobHelpLine;
 
-static void *cons_OptionMenu();
+static void *cons_OptionMenu(Widget w_Parent, c_ManageWidget *ManageW, char *Title, ...);
 static void dest_OptionMenu();
 static void *copy_OptionMenu();
 static void OptionMenu_ButtonFlag();
 static void OptionMenu_setSelection();
 static void OptionMenu_AddCalback();
-static void OptionMenu_AddCalback2();
+static void OptionMenu_AddCalback2(c_OptionMenu *This, int buttonnum, ...);
 static void OptionMenu_SetGlobalCallback();
 static void waitForUserAction();
 
@@ -55,11 +55,7 @@ sf_OptionMenu fc_OptionMenu =
  OptionMenu_SetGlobalCallback
 };
 
-static void *cons_OptionMenu(w_Parent, ManageW, Title, va_alist)
-Widget		w_Parent; 
-c_ManageWidget  *ManageW;
-char 		*Title;
-va_dcl
+static void *cons_OptionMenu(Widget w_Parent, c_ManageWidget *ManageW, char *Title, ...)
 {
  va_list 		other_arg;
  Display               *display;
@@ -90,7 +86,7 @@ va_dcl
  nargs = 0;
  ObjTmp->w_Pulldown = XmCreatePulldownMenu(w_Parent, Title, NULL, 0);
 
- va_start(other_arg);
+ va_start(other_arg, Title);
  names_number = 0;
  while ((temp = va_arg(other_arg, char *)))
  {
@@ -99,11 +95,11 @@ va_dcl
  }
  va_end(other_arg);
 
-  
+
  ObjTmp->numberw = names_number;
  if (names_number)
  {
-  va_start(other_arg);
+  va_start(other_arg, Title);
 
   if ((ObjTmp->Buttons = 
        (strPopupContent *)Xc_malloc("WidgetId",
@@ -352,15 +348,12 @@ void 		*argument2;
 	       function, argument2);
 }
 
-static void OptionMenu_AddCalback2(This, buttonnum, va_alist)
-c_OptionMenu	*This;
-int		buttonnum;
-va_dcl
+static void OptionMenu_AddCalback2(c_OptionMenu *This, int buttonnum, ...)
 {
  va_list	other_arg;
  void		(*temp)();
 
- va_start(other_arg);
+ va_start(other_arg, buttonnum);
  while ((temp = (void (*)())va_arg(other_arg, void *)))
  {
   XtAddCallback(This->Buttons[buttonnum-1].w_content,

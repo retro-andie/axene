@@ -44,7 +44,7 @@ extern char *Globprog_name;
 static char fileid[5] = { 48, 5, 8, 24, 0};
 #endif
 
-___INLINE boolean test_idfile()
+boolean test_idfile()
 {
 #ifdef ___noid
  seed ^= 66513;

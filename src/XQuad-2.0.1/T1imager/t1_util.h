@@ -63,9 +63,8 @@ typedef unsigned char boolean;
  */
 #define MAX_ULONG             (~(uint32_t)(0))
 /* This code is portable, assuming K&R C and 2's complement arithmetic */
-#define MAX_INTEGER      \
-     ((int32_t)((((uint32_t) 1)<<(sizeof(uint32_t)*8-1))-1))
-#define MIN_INTEGER           ((-MAX_INTEGER)-1)
+#define MAX_INTEGER  ((int32_t)0x7FFFFFFF)
+#define MIN_INTEGER  ((int32_t)(-0x7FFFFFFF-1))
  
 #define MAX_ARRAY_CNT         (65535)
 #define MAX_DICT_CNT          (65535)

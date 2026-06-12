@@ -3,7 +3,7 @@
 ** CellStyle Object
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -27,7 +27,7 @@
 #define NTRACE
 #define NHISTORY
 
-#include <varargs.h>
+#include <stdarg.h>
 #define _CELLSTYLE_PRIVATE_
 #include "CellStyleP.h"
 #include "Feuille.h" 
@@ -45,8 +45,8 @@ static CellStyle_t *AddCellStyleToBase();
 static void RemoveCellStyleFromBase();
 static void DisplayCellStyle();
 static boolean compare ___PROTO((CellStyle_t *a, CellStyle_t *b));
-static void setCellStyle() /* ___PROTO((CellStyle_t *this, ...)) */;
-static CellStyle_t *getCellStyle() /* ___PROTO((c_CellStyle *base, ...)) */;
+static void setCellStyle ___PROTO((CellStyle_t *this, ...));
+static CellStyle_t *getCellStyle ___PROTO((c_CellStyle *base, ...));
 
 /*--- Private functions ---*/
 static void vset ___PROTO((CellStyle_t *thiXcFt_s, va_list ap));
@@ -665,15 +665,13 @@ int		part;
 /* ----------------------------------------------------------------- ** 
 ** setCellStyle - Set CellStyle parameters                           ** 
 ** ----------------------------------------------------------------- */
-static void setCellStyle(this, va_alist)
-CellStyle_t *this;
-va_dcl
+static void setCellStyle(CellStyle_t *this, ...)
 {
   va_list ap;
 
   Xc_HISTORY(("set"));
 
-  va_start(ap);
+  va_start(ap, this);
   vset(this, ap);
   va_end(ap);
 /*F(this->hook).callback(this->hook, XcH_CONTENT_CHANGED, this);*/
@@ -685,9 +683,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** getCellStyle - Get or create a cell style                         ** 
 ** ----------------------------------------------------------------- */
-static CellStyle_t *getCellStyle(this, va_alist)
-c_CellStyle *this;
-va_dcl
+static CellStyle_t *getCellStyle(c_CellStyle *this, ...)
 {
   CellStyle_t *cstyle, *ptr;
 
@@ -697,7 +693,7 @@ va_dcl
 
   if((cstyle = F(this).CreateNewCellStyle(this, CELL_STYLE_NONE)) == NULL)
     return NULL;
-  va_start(ap);
+  va_start(ap, this);
   vset(cstyle, ap);
   va_end(ap);
 

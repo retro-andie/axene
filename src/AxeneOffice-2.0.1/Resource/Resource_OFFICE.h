@@ -3,7 +3,7 @@
 ** Resource definition for Axene Office
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -103,7 +103,7 @@ static XtResource resources[]=
  
  XcR_STRING(ownColormap, "No"),
  XcR_STRING(helpBubbles, "Classic"),
- XcR_STRING(authors, "Emmanuel PARISRobin CASTANIERAntoine BUATStephane BOISSON"),
+ XcR_STRING(authors, "Emmanuel PARIS\\nRobin CASTANIER\\nAntoine BUAT\\nStephane BOISSON"),
  
  XcR_FONT(bubbleFont, "-*-helvetica-medium-r-*-*-10-*-*-*-*-*-*-*"),
 

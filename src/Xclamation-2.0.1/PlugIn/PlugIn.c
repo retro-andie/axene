@@ -3,7 +3,7 @@
 ** Methods for PlugIn class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Thu Oct 12 11:43:37 1995 Stéphane Boisson
+** Started on  Thu Oct 12 11:43:37 1995 Stï¿½phane Boisson
 ** Last update Thu Oct 24 19:19:27 1996 Emmanuel Paris
 */
 
@@ -28,7 +28,7 @@
 #include "file.h"
 #include "fnmatch.h"
 #include <ctype.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 /*--- Prototypes ---*/
 static void *constructor();
@@ -39,8 +39,7 @@ static plugin_item_t *createItem ___PROTO((c_PlugIn *this, char *id));
 static boolean addItem ___PROTO((c_PlugIn *this, char *path, char *file));
 static void removeItem ___PROTO((c_PlugIn *this, plugin_item_t *item));
 static plugin_item_t *pluginGetByName ___PROTO((c_PlugIn *this, char *name));
-static int pluginRequest ___NPROTO((c_PlugIn *this, plugin_item_t *item,
-				    char *request, ...));
+static int pluginRequest(c_PlugIn *, plugin_item_t *, char *, ...);
 
 plugin_header_t *pluginAddHeader ___PROTO((char *key, char *value));
 plugin_header_list_t *pluginReadHeader ___PROTO((int fd));
@@ -516,11 +515,7 @@ char *name;
 /* ----------------------------------------------------------------- ** 
 ** pluginRequest - Send a request to a plug-in module                ** 
 ** ----------------------------------------------------------------- */
-static int pluginRequest(this, item, request, va_alist)
-c_PlugIn *this;
-plugin_item_t *item;
-char *request;
-va_dcl
+static int pluginRequest(c_PlugIn *this, plugin_item_t *item, char *request, ...)
 {
   char buffer[XcPLUGIN_LINE_LENGTH + 1], *argv[2], *key;
   plugin_header_list_t *list;
@@ -537,7 +532,7 @@ va_dcl
   list->header = NULL;
   pheader = &list->header;
 
-  va_start(ap);
+  va_start(ap, request);
   
   in = -1;
   do {

@@ -4,7 +4,7 @@
 ** Methods for the ItemMenu class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -21,13 +21,13 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Mon Oct 17 14:27:44 1994 Stéphane Boisson
+** Started on  Mon Oct 17 14:27:44 1994 Stï¿½phane Boisson
 ** Last update Tue Jan 25 00:13:02 2000 Emmanuel Paris
 */
 
 /*#define NTRACE*/
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "ItemMenu.h"
 #include <Xm/CascadeB.h>
 #include <Xm/CascadeBG.h>
@@ -53,9 +53,9 @@ static void setCallback ___PROTO((c_ItemMenu *this,
 							    void *item)),
 				  void *cb_data));
 
-static boolean add_items();
-static void delete_items();
-static boolean updateItems();
+static boolean add_items ___PROTO((c_ItemMenu *this, int mode, int count, ...));
+static void delete_items ___PROTO((c_ItemMenu *this, int mode, int count, ...));
+static boolean updateItems ___PROTO((c_ItemMenu *this, int mode, int count, ...));
 static void deleteAllItems();
 static void calculSize ___PROTO((c_ItemMenu *this, int maxsize));
 
@@ -227,11 +227,7 @@ boolean (*filter_func) ___PROTO((void *));
 /* ----------------------------------------------------------------- ** 
 ** addItems - Add new items in the ItemMenu                          ** 
 ** ----------------------------------------------------------------- */
-static boolean add_items(this, mode, count, va_alist)
-c_ItemMenu *this;
-int mode;
-int count;
-va_dcl
+static boolean add_items(c_ItemMenu *this, int mode, int count, ...)
 {
  long next_offset = 0L;
  char *item_list = NULL;
@@ -242,7 +238,7 @@ va_dcl
  Xc_HISTORY(("nb item before: %d", this->item_count));
 
  /*--- Initialize item list data ---*/
- va_start(ap);
+ va_start(ap, count);
  if((mode == XcIM_LINKED_LIST) || (mode == XcIM_ARRAY))
  {
   item_list = va_arg(ap, char *);
@@ -399,11 +395,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** deleteItems - Delete some item in the ItemMenu                    ** 
 ** ----------------------------------------------------------------- */
-static void delete_items(this, mode, count, va_alist)
-c_ItemMenu *this;
-int mode;
-int count;
-va_dcl
+static void delete_items(c_ItemMenu *this, int mode, int count, ...)
 {
  Widget selected_w;
  long next_offset = 0L;
@@ -417,10 +409,10 @@ va_dcl
  {
   Xc_TRACE(("delete all"));
   count = this->item_count;
- }      
+ }
 
  /*--- Initialize ---*/
- va_start(ap);
+ va_start(ap, count);
  if((mode == XcIM_LINKED_LIST) || (mode == XcIM_ARRAY))
  {
   item_list = va_arg(ap, char *);
@@ -520,11 +512,7 @@ c_ItemMenu *this;
 /* ----------------------------------------------------------------- ** 
 ** updateItems - Update items name in list                           ** 
 ** ----------------------------------------------------------------- */
-static boolean updateItems(this, mode, count, va_alist)
-c_ItemMenu *this;
-int mode;
-int count;
-va_dcl
+static boolean updateItems(c_ItemMenu *this, int mode, int count, ...)
 {
 #if 0
  long next_offset;
@@ -534,7 +522,7 @@ va_dcl
 #endif
  Xc_HISTORY(("updateItems(%d)", count));
 #if 0
- va_start(ap);
+ va_start(ap, count);
 
  /*--- Delete all items ---*/
  if(count == -1)

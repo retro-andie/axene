@@ -9,9 +9,6 @@
 #define MAX_HASH_VALUE 577
 /* maximum key range = 574, duplicates = 0 */
 
-#ifdef __GNUC__
-__inline
-#endif
 static unsigned int
 hash (str, len)
      register const char *str;
@@ -377,9 +374,6 @@ encoding_name_t hashlist_Symbol[] =
     {"dotmath", 215}
   };
 
-#ifdef __GNUC__
-__inline
-#endif
 encoding_name_t *
 is_Symbol_char (str, len)
      register const char *str;

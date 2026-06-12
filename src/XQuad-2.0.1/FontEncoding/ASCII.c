@@ -9,9 +9,6 @@
 #define MAX_HASH_VALUE 213
 /* maximum key range = 213, duplicates = 0 */
 
-#ifdef __GNUC__
-__inline
-#endif
 static unsigned int
 hash (str, len)
      register const char *str;
@@ -207,9 +204,6 @@ encoding_name_t hashlist_ASCII[] =
     {"six", 54}
   };
 
-#ifdef __GNUC__
-__inline
-#endif
 encoding_name_t *
 is_ASCII_char (str, len)
      register const char *str;

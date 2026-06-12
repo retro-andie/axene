@@ -2,7 +2,7 @@
 ** Box_registration.c for Xclamation, XQuad and XAllWrite in Box_registration/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -53,6 +53,11 @@ void *cons_Box_registration(w_Parent, pszTitle)
 Widget w_Parent;
 char   *pszTitle;
 {
+  /* GPL release: registration dialog removed */
+  (void)w_Parent; (void)pszTitle;
+  return NULL;
+
+  {
   Display        *display;
   c_Box_registration	 *ObjTmp;
   listbutton	*buttonptr;
@@ -191,6 +196,7 @@ char   *pszTitle;
 
   Xc_TRACE(("Object Box_registration build"));
   return ObjTmp;
+  } /* end of unreachable stub block */
 }
 
 void dest_Box_registration(This)

@@ -3,7 +3,7 @@
 ** Object and method for PostScript
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -30,7 +30,7 @@
 #define XcPS_INCLUDE_BUFFER 8096
 
 #include "PostScriptP.h"
-#include <varargs.h>
+#include <stdarg.h>
 #include <sys/types.h>
 #include <sys/time.h>
 #include <time.h>
@@ -44,10 +44,10 @@ static void destructor();
 static void *copy();
 static boolean addFont ___PROTO((c_PostScript *This, c_VectorFont *font));
 static boolean addColor ___PROTO((c_PostScript *this, c_Color *color));
-static boolean putLine ___NPROTO((c_PostScript *this, char *format, ...));
-static boolean putLine2 ___NPROTO((c_PostScript *this, int type, 
-				   char *format, ...));
-static boolean deferredWrite ___NPROTO((c_PostScript *this, int type));
+static boolean putLine ___PROTO((c_PostScript *this, unsigned char *format, ...));
+static boolean putLine2 ___PROTO((c_PostScript *this, int type,
+				   unsigned char *format, ...));
+static boolean deferredWrite ___PROTO((c_PostScript *this, int type));
 static boolean endPage ___PROTO((c_PostScript *this));
 static boolean beginPage ___PROTO((c_PostScript *this, unsigned int number));
 static boolean putString ___PROTO((c_PostScript *this,
@@ -411,10 +411,7 @@ long len;
 /* ----------------------------------------------------------------- ** 
 ** putLine - Write a text line                                       ** 
 ** ----------------------------------------------------------------- */
-static boolean putLine(this, format, va_alist)
-c_PostScript *this;
-unsigned char *format;
-va_dcl
+static boolean putLine(c_PostScript *this, unsigned char *format, ...)
 {
  unsigned char *output, c, buffer[512];
  va_list ap;
@@ -424,7 +421,7 @@ va_dcl
 
  if(this->error_flag) return FALSE;
 
- va_start(ap);
+ va_start(ap, format);
  for(output = buffer; (c = *format++) != '\0'; )
   if(c == '$')
    switch(c = *format++)
@@ -602,11 +599,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** putLine2 - Deferred Write typed text line                         ** 
 ** ----------------------------------------------------------------- */
-static boolean putLine2(this, type, format, va_alist)
-c_PostScript	*this;
-int		type;
-unsigned char	*format;
-va_dcl
+static boolean putLine2(c_PostScript *this, int type, unsigned char *format, ...)
 {
  unsigned char	*output, c, buffer[512];
  va_list	ap;
@@ -618,7 +611,7 @@ va_dcl
 
  if(this->error_flag) return FALSE;
 
- va_start(ap);
+ va_start(ap, format);
  for(output = buffer; (c = *format++) != '\0'; )
   if(c == '$')
    switch(c = *format++)

@@ -35,7 +35,7 @@
 #include "t1_token.h"
 #include "t1_tokst.h"
 #include "t1_hdigit.h"
- 
+
 static double P10();
 
 /*
@@ -289,13 +289,13 @@ static int add_digits(ch)
   value = ch - '0';
   save_unsafe_ch(ch);
   ch = next_ch();
- 
+
   while(isDECIMAL_DIGIT(ch) && value < (MAX_INTEGER/10)) {
     value = (value << 3) + (value << 1) + (ch - '0');
     save_unsafe_ch(ch);
     ch = next_ch();
   }
- 
+
   /* Quick exit for small integers --
    *    |x| <= 10*((MAX_INTEGER/10)-1)+9
    *    |x| <= 2,147,483,639 for 32 bit integers

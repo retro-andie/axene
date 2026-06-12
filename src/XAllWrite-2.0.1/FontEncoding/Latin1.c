@@ -9,9 +9,6 @@
 #define MAX_HASH_VALUE 546
 /* maximum key range = 546, duplicates = 0 */
 
-#ifdef __GNUC__
-__inline
-#endif
 static unsigned int
 hash (str, len)
      register const char *str;
@@ -381,9 +378,6 @@ encoding_name_t hashlist_Latin1[] =
     {"ocircumflex", 244}
   };
 
-#ifdef __GNUC__
-__inline
-#endif
 encoding_name_t *
 is_Latin1_char (str, len)
      register const char *str;

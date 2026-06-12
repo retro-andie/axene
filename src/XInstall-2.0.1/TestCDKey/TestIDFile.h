@@ -27,6 +27,6 @@
 #ifndef _TestIDFile_h_
 #define _TestIDFile_h_
 
-extern ___INLINE boolean test_idfile();
+extern boolean test_idfile();
 
 #endif /* _TestIDFile_h_ */

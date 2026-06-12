@@ -4,7 +4,7 @@
 ** Functions for errors and debugging
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -21,21 +21,19 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 02:00:44 1994 Stéphane Boisson
+** Started on  Sun Jun 12 02:00:44 1994 Stï¿½phane Boisson
 ** Last update Thu Dec 30 17:51:38 1999 Emmanuel Paris
 */
 
+#include "PortCompat.h"
 #include <stdio.h>
-#include <varargs.h>
+#include <stdarg.h>
+#include <string.h>
 #include <time.h>
 #include <sys/types.h>
 #include <sys/times.h>
 #include <limits.h>
-
-#if !defined(___freebsd) && !defined(___NetBSD) && !defined(___linux_glibc)
-extern char *sys_errlist[];
-extern int sys_nerr;
-#endif
+#include <unistd.h>
 
 #if defined(___WIN32) || defined(___linux_glibc)
 #define Xc_log_file stderr
@@ -48,40 +46,33 @@ FILE *Xc_history_file = stderr;
 /* ----------------------------------------------------------------- ** 
 ** Xc_strerror - strerror implementation                             ** 
 ** ----------------------------------------------------------------- */
-char *Xc_strerror(errorcode)
-int errorcode;
+char *Xc_strerror(int errorcode)
 {
- if((errorcode > 0) && (errorcode < sys_nerr))
-  return (char *)sys_errlist[errorcode];
- return("Unknow error");
+ return strerror(errorcode);
 }
 
 
 /* ----------------------------------------------------------------- ** 
 ** Xc_LogPrintf - Output informations to log-file                    ** 
 ** ----------------------------------------------------------------- */
-void Xc_LogPrintf(format, va_alist)
-char *format;
-va_dcl
+void Xc_LogPrintf(char *format, ...)
 {
  va_list ap;
-  
- va_start(ap);
+
+ va_start(ap, format);
  vfprintf(Xc_log_file, format, ap);
  va_end(ap);
 }
 
 
-/* ----------------------------------------------------------------- ** 
-** Xc_HistoryPrintf - Output informations to history file            ** 
+/* ----------------------------------------------------------------- **
+** Xc_HistoryPrintf - Output informations to history file            **
 ** ----------------------------------------------------------------- */
-void Xc_HistoryPrintf(format, va_alist)
-char *format;
-va_dcl
+void Xc_HistoryPrintf(char *format, ...)
 {
  va_list ap;
-  
- va_start(ap);
+
+ va_start(ap, format);
  vfprintf(Xc_history_file, format, ap);
  va_end(ap);
 }
@@ -103,9 +94,9 @@ int report;
   int user, sys, elapsed;
 
   current = times(&now);
-  user = 1000 * (now.tms_utime - last.tms_utime) / CLK_TCK;
-  sys = 1000 * (now.tms_stime - last.tms_stime) / CLK_TCK;
-  elapsed = 1000 * (current - prev) / CLK_TCK;
+  user = (int)(1000 * (now.tms_utime - last.tms_utime) / sysconf(_SC_CLK_TCK));
+  sys = (int)(1000 * (now.tms_stime - last.tms_stime) / sysconf(_SC_CLK_TCK));
+  elapsed = (int)(1000 * (current - prev) / sysconf(_SC_CLK_TCK));
   fprintf(Xc_log_file, "  Elapsed Time = %d.%03d\n",
 	  elapsed / 1000, elapsed % 1000);
   fprintf(Xc_log_file, "  User Time = %d.%03d\n",

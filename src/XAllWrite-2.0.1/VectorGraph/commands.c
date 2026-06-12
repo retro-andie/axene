@@ -3,7 +3,7 @@
 ** Commands methods for VectorGraph class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Wed Dec 13 16:12:44 1995 Stéphane Boisson
+** Started on  Wed Dec 13 16:12:44 1995 Stï¿½phane Boisson
 ** Last update Fri Dec 31 16:08:56 1999 Emmanuel Paris
 */
 
@@ -28,7 +28,7 @@
 #define NTRACE
 
 #include "VectorGraphP.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 
 /*--- Constants ---*/
@@ -41,7 +41,7 @@ static vector_item_t *allocItem ___PROTO((c_VectorGraph *this,
 					  enum vector_type_e type));
 static boolean addPathControl ___PROTO((c_VectorGraph *this,
 					unsigned char op));
-static boolean addPathData ___NPROTO((c_VectorGraph *this, int count, ...));
+static boolean addPathData ___PROTO((c_VectorGraph *this, int count, ...));
 static boolean packPath ___PROTO((c_VectorGraph *this));
 
 
@@ -157,10 +157,7 @@ unsigned char op;
 /* ----------------------------------------------------------------- ** 
 ** addPathData - Add data coord to current path                      ** 
 ** ----------------------------------------------------------------- */
-static boolean addPathData(this, count, va_alist)
-c_VectorGraph *this;
-int count;
-va_dcl
+static boolean addPathData(c_VectorGraph *this, int count, ...)
 {
  va_list ap;
 
@@ -182,7 +179,7 @@ va_dcl
   this->path.data = ptr;
  }
 
- va_start(ap);
+ va_start(ap, count);
  while(count--)
  {
   this->path.data[this->path.data_count++] = va_arg(ap, coord_t);

@@ -3,7 +3,7 @@
 ** Methods for the TextRuler class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,14 +20,14 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 02:12:36 1994 Stéphane Boisson
+** Started on  Sun Jun 12 02:12:36 1994 Stï¿½phane Boisson
 ** Last update Mon Sep  7 14:53:14 1998 Emmanuel Paris
 */
 
 /*#define NHISTORY*/
 /*#define NTRACE*/
 
-#include <varargs.h>
+#include <stdarg.h>
 #include "TextRuler.h"
 #include "Document.h"
 
@@ -35,8 +35,8 @@
 static void *contructor();
 static void destructor();
 static void *copy();
-static c_TextRuler *get ___NPROTO((c_TextStyle *ruler, BaseStd_t base, ...));
-static void set_params ___NPROTO((c_TextRuler *this, ...));
+static c_TextRuler *get ___PROTO((c_TextRuler *ruler, BaseStd_t *base, ...));
+static void set_params ___PROTO((c_TextRuler *this, ...));
 static boolean compare ___PROTO((c_TextRuler *a, c_TextRuler *b, 
 				 boolean with_name));
 static void merge ___PROTO((c_TextRuler *source, c_TextRuler **target,
@@ -283,16 +283,13 @@ BaseStd_t *base;
 ** Get method: search if there is a similar ruler                    ** 
 ** or create a new one.                                              ** 
 ** ----------------------------------------------------------------- */
-static c_TextRuler *get(ruler, base, va_alist)
-c_TextRuler	*ruler;
-BaseStd_t	*base;
-va_dcl
+static c_TextRuler *get(c_TextRuler *ruler, BaseStd_t *base, ...)
 {
  c_TextRuler *ptr, *truler;
  va_list ap;
 
  Xc_HISTORY(("get Ruler"));
-  
+
  if (ruler)
  {
   truler = (c_TextRuler *)COPY(c_TextRuler)(ruler, base);
@@ -302,7 +299,7 @@ va_dcl
   truler =  (c_TextRuler *)NEW(c_TextRuler)(&(base->text_ruler_base), NULL);
  }
 
- va_start(ap);
+ va_start(ap, base);
  vset(truler, ap);
  va_end(ap);
 
@@ -320,15 +317,13 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** set_params - Set parameters for styles                            ** 
 ** ----------------------------------------------------------------- */
-static void set_params(ruler, va_alist)
-c_TextRuler *ruler;
-va_dcl
+static void set_params(c_TextRuler *ruler, ...)
 {
  va_list ap;
-  
+
  Xc_HISTORY(("set(`%s')", ruler->name));
 
- va_start(ap);
+ va_start(ap, ruler);
  vset(ruler, ap);
  va_end(ap);
 }

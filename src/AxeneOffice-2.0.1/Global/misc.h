@@ -2,7 +2,7 @@
 ** misc.h for AxeneOffice in Global/
 **
 ** Copyright (C) 1995-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -70,7 +70,7 @@ extern int Xsetenv();
 extern double Xrint();
 
 extern void Zusleep ___PROTO((long int u_during));
-char *Xc_strconcat() /* ___PROTO((...)) */;
+char *Xc_strconcat(const char *first, ...);
 char *Xc_strndup ___PROTO((char *desc, char *string, long size));
 
 #endif

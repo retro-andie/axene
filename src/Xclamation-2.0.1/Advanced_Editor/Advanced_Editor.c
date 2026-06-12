@@ -43,7 +43,7 @@
 #include <Xm/Label.h>
 #include <Xm/Separator.h>
 #include <Xm/List.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 extern void XcHandleEvent ___PROTO((XEvent *event));
 extern void XcFlushEvents ___PROTO((Widget w,

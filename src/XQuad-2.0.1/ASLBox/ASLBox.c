@@ -2,7 +2,7 @@
 ** ASLBox.c for Xclamation, XQuad and XAllWrite in ASLBox/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -29,15 +29,15 @@
 #include "ASLBox.h"
 #include <X11/Intrinsic.h>
 #include <Xm/DrawingA.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 static void *constructor();
 static void destructor();
 static void *copy();
 static void map();
 static void unmap();
-static int  Add_Buttons();
-static int  Add_Icons();
+static int  Add_Buttons ___PROTO((c_ASLBox *This, ...));
+static int  Add_Icons ___PROTO((c_ASLBox *This, ...));
 static void setCallback ___PROTO((c_ASLBox *This, void (*cb_func)
 				  ___PROTO((c_ASLBox *box, void *data,
 					    void *item)),
@@ -285,9 +285,7 @@ c_ASLBox	*This;
 **		Add Buttons in Row2 (bottom row_column)			**
 **----------------------------------------------------------------------*/
 
-static int	Add_Buttons(This, va_alist)
-c_ASLBox		*This;
-va_dcl
+static int	Add_Buttons(c_ASLBox *This, ...)
 {
  va_list	other_arg;
  char		*TmpStr;
@@ -309,7 +307,7 @@ va_dcl
   break;
  }
 
- va_start(other_arg);
+ va_start(other_arg, This);
  while ((TmpStr = va_arg(other_arg, char *)) != NULL)
  {
   Widget wid;
@@ -369,9 +367,7 @@ va_dcl
 **		Add Icons in Row2 (bottom row_column)			**
 **----------------------------------------------------------------------*/
 
-static int	Add_Icons(This, va_alist)
-c_ASLBox		*This;
-va_dcl
+static int	Add_Icons(c_ASLBox *This, ...)
 {
  va_list	other_arg;
  char		*TmpStr;
@@ -396,7 +392,7 @@ va_dcl
   
  display = XtDisplay(WIDGET(This->Dialog));
   
- va_start(other_arg);
+ va_start(other_arg, This);
  while ((TmpStr = va_arg(other_arg, char *)) != NULL)
  {
   c_Icon	*The_Icon;

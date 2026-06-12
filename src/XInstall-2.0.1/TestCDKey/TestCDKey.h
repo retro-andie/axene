@@ -28,14 +28,14 @@
 #ifndef _TestCDKey_h_
 #define _TestCDKey_h_
 
-extern ___INLINE boolean start_cdkey_check ___PROTO((char *keys));
-extern ___INLINE boolean check_cdkey_stage1();
-extern ___INLINE boolean check_cdkey_stage2();
-extern ___INLINE boolean check_cdkey_stage3();
-extern ___INLINE boolean check_cdkey_stage4();
-extern ___INLINE boolean check_cdkey_stage5();
-extern ___INLINE boolean check_cdkey_stage6();
-extern ___INLINE int end_cdkey_check();
+extern boolean start_cdkey_check ___PROTO((char *keys));
+extern boolean check_cdkey_stage1();
+extern boolean check_cdkey_stage2();
+extern boolean check_cdkey_stage3();
+extern boolean check_cdkey_stage4();
+extern boolean check_cdkey_stage5();
+extern boolean check_cdkey_stage6();
+extern int end_cdkey_check();
 
 #endif
 

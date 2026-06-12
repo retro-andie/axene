@@ -4,7 +4,7 @@
 ** Simple warnings dialogs
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -21,14 +21,14 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Fri Dec  2 13:17:46 1994 Stéphane Boisson
+** Started on  Fri Dec  2 13:17:46 1994 Stï¿½phane Boisson
 ** Last update Tue Jan 20 17:00:55 1998 Robin Castanier
 */
 
 #define ___ALERT_BOX
 
 #include <stdio.h>
-#include <varargs.h>
+#include <stdarg.h>
 #include "CustomDialog.h"
 #include "MainInterface.h"
 #include <Xm/Label.h>
@@ -170,9 +170,7 @@ char *text;
 /* ----------------------------------------------------------------- ** 
 ** Xc_SyserrorAlert - System error alert                             ** 
 ** ----------------------------------------------------------------- */
-void Xc_SyserrorAlert(format, va_alist)
-char *format;
-va_dcl
+void Xc_SyserrorAlert(char *format, ...)
 {
  static char buffer[512];
  c_CustomDialog *dialog;
@@ -183,7 +181,7 @@ va_dcl
 
  Xc_TRACE(("Xc_SyserrorAlert"));
 
- va_start(ap);
+ va_start(ap, format);
  vsprintf(buffer, format, ap);
  va_end(ap);
  size = strlen(buffer);

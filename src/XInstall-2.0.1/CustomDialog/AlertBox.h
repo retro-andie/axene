@@ -3,7 +3,7 @@
 ** Declaration for the simple alert boxes
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Fri Dec  2 13:29:39 1994 Stéphane Boisson
+** Started on  Fri Dec  2 13:29:39 1994 Stï¿½phane Boisson
 ** Last update Tue Dec 30 19:32:14 1997 Emmanuel Paris
 */
 
@@ -34,7 +34,7 @@ boolean Xc_YesNoAlert ___PROTO((char *text));
 int Xc_CancelRetryContinueAlert ___PROTO((char *text));
 int Xc_CancelRetryAlert ___PROTO((char *text));
 boolean Xc_OkCancelAlert ___PROTO((char *text));
-void Xc_SyserrorAlert() /* ___PROTO((char *format, ...)) */;
+void Xc_SyserrorAlert ___PROTO((char *format, ...));
 int Xc_SigErrorAlert ___PROTO((XmString mtext, boolean save));     
 int Xc_IOErrorAlert ___PROTO((boolean save));     
 int Xc_CloseDocAlert ___PROTO((char *doc_name, char *file_name));

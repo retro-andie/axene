@@ -2,7 +2,7 @@
 ** PageStd.h for Xclamation in Global/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -118,27 +118,27 @@ typedef struct _sf_page_function
 #ifndef DATA_MACROS
 #define DATA_MACROS
 #ifdef ___PSEUDO_COMPOSE_MACRO
-#define	DATA(a)	d_##a *data	 
+#define	DATA(a)	d_##a *data
 #define DATA_ITSELF(a) (d_##a *)cpage->function_data
-#define	SET_DATA(a) data=(d_##a *)Xc_malloc(#a ,sizeof(d_##a)); \
-cpage->function_data=(void *)data
+#define	SET_DATA(a) data=(d_##a *)Xc_malloc(#a,sizeof(d_##a)); \
+		    cpage->function_data=(void *)data
 #define GET_DATA(a) data=(d_##a *)cpage->function_data
 #define	d(a)   (data->a)
 #else
 #ifdef ___GNUC_COMPOSE_MACRO
-#define	DATA(a)	d_##a## *data	 
-#define DATA_ITSELF(a) (d_##a## *)cpage->function_data
-#define	SET_DATA(a) data=(d_##a## *)Xc_malloc("##a##",sizeof(d_##a##)); \
-cpage->function_data=(void *)data
-#define GET_DATA(a) data=(d_##a## *)cpage->function_data
-#define	d(a)   (data->##a##)
+#define	DATA(a)	d_##a *data
+#define DATA_ITSELF(a) (d_##a *)cpage->function_data
+#define	SET_DATA(a) data=(d_##a *)Xc_malloc(#a,sizeof(d_##a)); \
+		    cpage->function_data=(void *)data
+#define GET_DATA(a) data=(d_##a *)cpage->function_data
+#define	d(a)   (data->a)
 #else
-#define	DATA(a)	d_/**/a/**/ *data	 
-#define	DATA_ITSELF(a)	(d_/**/a/**/ *)cpage->function_data	 
-#define	SET_DATA(a) data=(d_/**/a/**/ *)Xc_malloc("/**/a/**/",sizeof(d_/**/a/**/)); \
-cpage->function_data=(void *)data
-#define GET_DATA(a) data=(d_/**/a/**/ *)cpage->function_data
-#define	d(a)   (data->/**/a/**/)
+#define	DATA(a)	d_##a *data
+#define	DATA_ITSELF(a)	(d_##a *)cpage->function_data
+#define	SET_DATA(a) data=(d_##a *)Xc_malloc(#a,sizeof(d_##a)); \
+		    cpage->function_data=(void *)data
+#define GET_DATA(a) data=(d_##a *)cpage->function_data
+#define	d(a)   (data->a)
 #endif
 #endif /* PSEUDO */
 #define FREE_DATA Xc_free(data); \

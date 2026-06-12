@@ -3,7 +3,7 @@
 ** Methods for the DocFile class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Tue Nov  1 17:34:48 1994 Stéphane Boisson
+** Started on  Tue Nov  1 17:34:48 1994 Stï¿½phane Boisson
 ** Last update Sun Jun 11 19:48:33 2000 Emmanuel Paris
 */
 
@@ -29,7 +29,7 @@
 
 #include "DocFileP.h"
 #include "file.h"
-#include <varargs.h>
+#include <stdarg.h>
 #include <math.h>
 
 #ifdef __GNUC__
@@ -61,15 +61,8 @@ static void *copy();
 
 static boolean expectKeyword ___PROTO((c_DocFile *doc, char *keyword,
 				       boolean persist_flag));
-static boolean addCallbacks() /*___PROTO((c_DocFile *doc,
-				char *keyword,
-				int (*function)(c_DocFile *doc,
-						char *keyword,
-						long param,
-						void *data),
-						void *data, ..., NULL)) */ ;
-static boolean removeCallbacks() /*___PROTO((c_DocFile *doc,
-				   char *keyword, ..., NULL)) */;
+static boolean addCallbacks ___PROTO((c_DocFile *this, ...));
+static boolean removeCallbacks ___PROTO((c_DocFile *this, ...));
 static boolean readData ___PROTO((c_DocFile *doc,
 				  unsigned char **ptr, long *len));
 static boolean readWord ___PROTO((c_DocFile *doc,
@@ -682,9 +675,7 @@ boolean persist_flag;
 /* ----------------------------------------------------------------- ** 
 ** addCallbacks - Add callbacks to the current context                ** 
 ** ----------------------------------------------------------------- */
-static boolean addCallbacks(this, va_alist)
-c_DocFile *this;
-va_dcl
+static boolean addCallbacks(c_DocFile *this, ...)
 {
  docfile_context_t *context;
  char *keyword;
@@ -693,7 +684,7 @@ va_dcl
  Xc_HISTORY(("addCallbacks(`%s')", this->basename));
 
  context = this->context + this->context_pos - 1;
- va_start(ap);
+ va_start(ap, this);
  while((keyword = va_arg(ap, char *)) != NULL)
  {
   docfile_keyword_t *cb;
@@ -739,9 +730,7 @@ va_dcl
 /* ----------------------------------------------------------------- ** 
 ** removeCallbacks - Remove callbacks                                ** 
 ** ----------------------------------------------------------------- */
-static boolean removeCallbacks(this, va_alist)
-c_DocFile *this;
-va_dcl
+static boolean removeCallbacks(c_DocFile *this, ...)
 {
  docfile_context_t *context;
  char *keyword;
@@ -751,7 +740,7 @@ va_dcl
  Xc_ASSERT(this->context_pos > 0);
 
  context = this->context + this->context_pos - 1;
- va_start(ap);
+ va_start(ap, this);
  while((keyword = va_arg(ap, char *)) != NULL)
  {
   unsigned long key;

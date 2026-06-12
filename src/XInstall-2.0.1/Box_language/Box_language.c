@@ -2,7 +2,7 @@
 ** Box_language.c for XInstall in Box_language/
 **
 ** Copyright (C) 1997-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -29,6 +29,7 @@
 #include "Cursor.h"
 #include <time.h>
 #include <sys/times.h>
+#include <unistd.h>
 
 /*--- define ---*/
 #define BL_ANIM_DELAY 14L
@@ -76,7 +77,7 @@ static char *lang_next[] =
  "Next >>>",
  "Next >>>",
  "Suivant >>>",
- "Nächst >>>",
+ "Nï¿½chst >>>",
  "Siguiente >>>",
 };
 static XmString lang_nextXm[5];
@@ -804,7 +805,7 @@ c_Box_language *This;
  This->angle += 3.1415926 / 50;
 
 #if !defined(___mips) && !defined(___sun4)
-#define ELAPSED_TIME  1000 * (current - prev) / CLK_TCK
+#define ELAPSED_TIME  1000 * (current - prev) / sysconf(_SC_CLK_TCK)
  current = times(&now);
  This->id = XtAppAddTimeOut(This->app, MAX(1, BL_ANIM_DELAY - ELAPSED_TIME),
 			    anim_ball, This); 

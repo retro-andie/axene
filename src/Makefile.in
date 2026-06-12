@@ -3,7 +3,7 @@
 #  GLOBAL MAKEFILE
 #
 # Copyright (C) 1997-2000 Axene.
-# Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+# Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 # Email: xcalibur@axene.org
 #
 #    This program is free software; you can redistribute it and/or modify
@@ -29,6 +29,15 @@ SUBDIRS =
 
 CC =
 CFLAGS =
+# POSIX_FLAGS: POSIX.1-1997 feature-test macros.
+# Set _POSIX_C_SOURCE=199506L for all platforms.
+# Add platform extras after configure determines the target OS:
+#   Linux glibc:   -D_BSD_SOURCE -D_SVID_SOURCE
+#   AIX 4.3:       -D_ALL_SOURCE
+#   HP-UX 10.x:    -D_HPUX_SOURCE
+#   IRIX:          -D_SGI_SOURCE -D_XOPEN_SOURCE
+#   SunOS 4.1:     -D_POSIX_SOURCE
+POSIX_FLAGS =
 CPPFLAGS =
 LDFLAGS =
 SOCK_LIBS =
@@ -52,10 +61,30 @@ install:	$(DEPFILES)
 	echo ""; echo ""; echo Install all in $$i; echo ""; echo "" ; \
 	cd $$i; $(MAKE) install; cd ..; done
 
-clean:	
+clean:
 	@for i in $(SUBDIRS); do \
 	echo ""; echo ""; echo Clean all in $$i; echo ""; echo "" ; \
 	cd $$i; $(MAKE) zclean; rm -f buildenv; cd ..; done
+
+distclean: clean
+	@rm -f Makefile
+
+uninstall:
+	@PREFIX="$(PREFIX)"; export PREFIX; \
+	for i in $(SUBDIRS); do \
+	echo ""; echo ""; echo Uninstall $$i; echo ""; echo "" ; \
+	cd $$i; $(MAKE) uninstall; cd ..; done
+	@echo ""
+	@echo "Shared install directories (remove manually when empty):"
+	@echo "  $(PREFIX)/bin $(PREFIX)/lib/locale $(PREFIX)/lib $(PREFIX)/app-defaults $(PREFIX)"
+
+PKGSEL = 1-6
+
+package: $(SUBDIRS)
+	@./makearchives.sh $(PKGSEL)
+
+package-all: $(SUBDIRS)
+	@./makearchives.sh 1-6 10-17
 
 # BEGIN SUBST
 <<SUBST>>:	<<SUBST>>/buildenv <<SUBST>>/main
@@ -74,7 +103,7 @@ clean:
 	CPPFLAGS="$(CPPFLAGS)"; \
 	LDFLAGS="$(LDFLAGS)"; SOCK_LIBS="$(SOCK_LIBS)"; \
 	MOTIF_LIBS="$(MOTIF_LIBS)"; X11_LIBS="$(X11_LIBS)"; \
-	X11CONFIG="$(X11CONFIG)"; ARFLAGS="$(ARFLAGS)"; \
+	X11CONFIG='$(X11CONFIG)'; ARFLAGS="$(ARFLAGS)"; \
 	export CC CFLAGS CPPFLAGS LDFLAGS; \
 	export SOCK_LIBS MOTIF_LIBS X11_LIBS X11CONFIG ARFLAGS; \
 	$(MAKE) notrace; \

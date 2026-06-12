@@ -3,7 +3,7 @@
 ** Global definitions
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 01:49:44 1994 Stéphane Boisson
+** Started on  Sun Jun 12 01:49:44 1994 Stï¿½phane Boisson
 ** Last update Sat Jan  8 15:35:43 2000 Emmanuel Paris
 */
 
@@ -91,8 +91,10 @@ defined(___sun5_x86)
   { type c_swap; c_swap = (first); first = (second); (second) = c_swap; }
 #endif
 
-#if (!defined(HAVE_MEMMOVE) && !defined(__GNUC__)) || defined(___sun4)
-#define memmove(dest, src, len) bcopy(src, dest, len)
+/* ___HAVE_MEMMOVE is defined in PortCompat.h for all platforms that
+   provide memmove.  SunOS 4.1 (___sun4) ships only bcopy, not memmove. */
+#if !defined(___HAVE_MEMMOVE) || defined(___sun4)
+# define memmove(dest, src, len) bcopy((src), (dest), (len))
 #endif
 
 #if defined(___ncr_svr4) || defined(___sco386) || defined(___sun5_x86)
@@ -143,8 +145,9 @@ extern unsigned long rand();
 #endif
 #endif
 
-#if defined(___sco386) || defined(___hpux9)
-#define rint(a) Xrint(a)
+/* ___HAVE_RINT is defined in PortCompat.h for platforms with rint(3). */
+#ifndef ___HAVE_RINT
+# define rint(a) Xrint(a)
 #endif
 
 #if defined(___sco386) || defined(___sco386sV) || defined(___i386_unixware) ||\
@@ -156,7 +159,7 @@ defined(___hpux9) || defined(___sun5_x86)
 extern int gethostname ___PROTO((char *name, int namelen));
 #endif
 
-#if defined(___NetBSD)
+#if defined(___NetBSD) || defined(___openbsd)
 # define gethostent _gethtent
 #endif
 

@@ -3,7 +3,7 @@
 ** General includes for XCalibur
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Sun Jun 12 01:47:24 1994 Stéphane Boisson
+** Started on  Sun Jun 12 01:47:24 1994 Stï¿½phane Boisson
 ** Last update Mon Mar 16 20:09:43 1998 Emmanuel Paris
 */
 
@@ -35,6 +35,8 @@
 #define HAVE_XSHAPE
 #endif
 
+#include "PortCompat.h"
+
 #include <sys/types.h>
 #include <stddef.h>
 
@@ -42,7 +44,7 @@
 #include <setjmp.h>
 #endif
 
-#ifdef __GNUC__
+#ifdef ___HAVE_UNISTD_H
 #include <unistd.h>
 #endif
 
@@ -83,10 +85,10 @@
 #define ___NPROTO(x) ()
 
 /*--- Inline functions ---*/
-#if defined(__GNUC__) && !defined(___iris4d)
-#define ___INLINE inline
-#else
-#define ___INLINE
+/* inline is a GNU extension in C89; suppress it for strict ANSI C89.
+   PortCompat.h also defines ___INLINE as empty if not already defined. */
+#ifndef ___INLINE
+# define ___INLINE
 #endif
 
 /*--- Compose macros ---*/
@@ -94,7 +96,7 @@
 #undef ___GNUC_COMPOSE_MACRO
 #endif
 #if defined(__GNUC__) || defined(___iris4d) || defined(___sco386) || defined(___sco386sV) || defined(___ncr_svr4)
-#define ___GNUC_COMPOSE_MACRO
+#define ___PSEUDO_COMPOSE_MACRO
 #endif
 
 #include "ErrorManager.h"

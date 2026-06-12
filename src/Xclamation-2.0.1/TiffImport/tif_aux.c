@@ -197,15 +197,12 @@ va_list ap;
  * Like TIFFGetField, but return any default
  * value if the tag is not present in the directory.
  */
-int TIFFGetFieldDefaulted(tif, tag, va_alist)
-TIFF* tif;
-ttag_t tag;
-va_dcl
+int TIFFGetFieldDefaulted(TIFF* tif, ttag_t tag, ...)
 {
 	int ok;
 	va_list ap;
 
-	va_start(ap);
+	va_start(ap, tag);
 	ok =  TIFFVGetFieldDefaulted(tif, tag, ap);
 	va_end(ap);
 	return (ok);

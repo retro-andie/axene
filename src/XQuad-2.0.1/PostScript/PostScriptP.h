@@ -3,7 +3,7 @@
 ** Private header for PostScript class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,8 +20,8 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Wed Feb 22 17:59:58 1995 Stéphane Boisson
-** Last update Fri Jan 12 17:45:08 1996 Stéphane Boisson
+** Started on  Wed Feb 22 17:59:58 1995 Stï¿½phane Boisson
+** Last update Fri Jan 12 17:45:08 1996 Stï¿½phane Boisson
 */
 
 #ifndef __XC_POSTSCRIPT_P_H__
@@ -48,7 +48,7 @@ boolean ps_endImage ___PROTO((c_PostScript *this, ps_image_t *handle));
 boolean ps_encode_ASCIIHex ___PROTO((ps_image_t *handle, int len));
 
 /*--- Resources ---*/
-boolean ps_includeResource ___NPROTO((c_PostScript *this,
+boolean ps_includeResource ___PROTO((c_PostScript *this,
 				      ps_resource_t type, ...));
 
 #endif /* !__XC_POSTSCRIPT_P_H__ */

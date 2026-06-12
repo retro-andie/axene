@@ -4,7 +4,7 @@
 ** Definitions for the Resource class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Thu Dec 15 18:44:46 1994 Stéphane Boisson
+** Started on  Thu Dec 15 18:44:46 1994 Stï¿½phane Boisson
 ** Last update Thu Jan 27 11:57:20 2000 Emmanuel Paris
 */
 
@@ -69,13 +69,13 @@ typedef struct sc_Resource c_Resource;
 #define XcR_FONT_OFFSET(number) XtOffsetOf(c_Resource, font_name[number])
 #define XcR_INT_OFFSET(number) XtOffsetOf(c_Resource, value[number])
 
-#ifdef ___GNUC_COMPOSE_MACRO
+#if defined(___GNUC_COMPOSE_MACRO) || defined(___PSEUDO_COMPOSE_MACRO)
 # define XcR_STRING(id_string, default_string) \
 {XcR_MAKE_STRING(id_string##Msg), "Message", XtRString, sizeof(String), \
-  XcR_STRING_OFFSET(XcR_##id_string), XtRString, default_string} 
+  XcR_STRING_OFFSET(XcR_##id_string), XtRString, default_string}
 # define XcR_FONT(id_string, default_font) \
 {XcR_MAKE_STRING(id_string), "Font", XtRString, sizeof(String), \
-  XcR_FONT_OFFSET(XcR_##id_string), XtRString, default_font} 
+  XcR_FONT_OFFSET(XcR_##id_string), XtRString, default_font}
 # define XcR_INT(id_string, default_value) \
 {XcR_MAKE_STRING(id_string), "Value", XtRInt, sizeof(int), \
   XcR_INT_OFFSET(XcR_##id_string), XtRImmediate, (caddr_t)default_value}

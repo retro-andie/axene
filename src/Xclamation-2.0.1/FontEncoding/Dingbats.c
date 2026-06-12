@@ -9,9 +9,6 @@
 #define MAX_HASH_VALUE 693
 /* maximum key range = 692, duplicates = 0 */
 
-#ifdef __GNUC__
-__inline
-#endif
 static unsigned int
 hash (str, len)
      register const char *str;
@@ -368,9 +365,6 @@ encoding_name_t hashlist_Dingbats[] =
     {"a200", 238}
   };
 
-#ifdef __GNUC__
-__inline
-#endif
 encoding_name_t *
 is_Dingbats_char (str, len)
      register const char *str;
