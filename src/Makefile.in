@@ -64,7 +64,7 @@ install:	$(DEPFILES)
 clean:
 	@for i in $(SUBDIRS); do \
 	echo ""; echo ""; echo Clean all in $$i; echo ""; echo "" ; \
-	cd $$i; $(MAKE) zclean; rm -f buildenv; cd ..; done
+	cd $$i; $(MAKE) zclean; rm -f buildenv Makefile; cd ..; done
 
 distclean: clean
 	@rm -f Makefile
