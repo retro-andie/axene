@@ -27,7 +27,7 @@
 #define _png_h_
 
 #include "xcalibur.h"
-#include "png.h"
+#include "../PngImport/png.h"
 #include <sys/file.h>
 
 #define Xc_PNG_NAME	"PNG (Portable Network Graphics)"

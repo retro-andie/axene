@@ -128,7 +128,7 @@ done
 FILES_LIST=`ls -1 $TOP`
 SUBDIRS=""
 for i in $FILES_LIST; do
- [ -d $TOP/$i -a -f $TOP/$i/Makefile ] && SUBDIRS=${SUBDIRS}$i" "
+ [ -d $TOP/$i -a -f $TOP/$i/Makefile.in ] && SUBDIRS=${SUBDIRS}$i" "
 done
 
 if [ "$quiet" = "no" ]; then
@@ -195,8 +195,12 @@ case $OSLOWER in
  netbsd)
   OSFLAGS="-D___NetBSD"
   COMPFLAGS="-O2 -Wall"
-  DEFFLAGS="-DULONG_NOT_DEFINED"
-  LDFLAGS="-Xlinker -Bstatic"
+  DEFFLAGS="-DULONG_NOT_DEFINED -D_NETBSD_SOURCE"
+  xlibdir=${xlibdir:-'/usr/X11R7/lib'}
+  xincdir=${xincdir:-'/usr/X11R7/include'}
+  motiflibdir=${motiflibdir:-'/usr/pkg/lib'}
+  motifincdir=${motifincdir:-'/usr/pkg/include'}
+  ARFLAGS="cq"
   ;;
  sco)
   if [ `echo $OSVERSION | cut -c5` = "4" ]; then
@@ -322,7 +326,7 @@ fi
 for i in ${xlibdir}/X11 /usr/X11R6/lib/X11 /usr/lib/X11 /usr/X11/lib/X11 \
     /usr/X11R5/lib/X11 /usr/openwin/lib; do
  if [ -f "$i/XKeysymDB" ]; then
-  X11CONFIG="'-DXc_XTOP="'\"'$i'\"'"'"
+  X11CONFIG="-DXc_XTOP=\\\"$i\\\""
   [ -d $i/locale ] && X11CONFIG=$X11CONFIG" -DXc_NEED_LOCALE"
   [ -d $i/nls ] && X11CONFIG=$X11CONFIG" -DXc_NEED_NLS"
   break
@@ -460,7 +464,7 @@ EOF
 for i in $SUBDIRS; do
  if [ -x "$TOP/$i/Utils/mkmakefile" ]; then
   export CPPFLAGS
-  ( cd $i; Utils/mkmakefile ) > /dev/null
+  ( cd "$TOP/$i"; Utils/mkmakefile ) > /dev/null
   if [ "$quiet" = "no" ]; then
    echo " $i/Makefile"
   fi

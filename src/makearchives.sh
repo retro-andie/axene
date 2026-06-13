@@ -30,7 +30,6 @@ NAME=`basename $THIS`
 TOP=`dirname $PWD/$THIS`
 TMPDIR=`echo $TOP/Archives-*`/Temp
 DSTDIR=`echo $TOP/Archives-*`/Archives
-FIFO=$TMPDIR/..fifo
 OWN_UID=`id -u`
 OWN_GID=`id -g`
 
@@ -297,7 +296,7 @@ CreateBinArchive()
   _size=`du -s -b $TMPDIR/ 2>/dev/null`
   if [ $? -ne 0 ]; then
    _size=`du -s -k $TMPDIR/ 2>/dev/null | cut -f1`
-   _size=`expr $size \* 1024`
+   _size=`expr $_size \* 1024`
   else
    _size=`echo $_size | cut -d" " -f1`
   fi
@@ -312,16 +311,12 @@ CreateBinArchive()
   if [ $_arch_binfile -eq 1 ]; then
    _name=`basename $TMPDIR/bin/$_arch_name-v*`.tar.gz
   fi
-  rm -f $_name
+  rm -f $_name $DSTDIR/$_name
 
-  mkfifo $FIFO
-  $THIS ticker < $FIFO &
-  pidtick=$!
-  (cd $TMPDIR; tar cvpf - .[_0-9A-z]* * ) 2>$FIFO | gzip -c - > $DSTDIR/$_name
-  sleep 1; kill $pidtick; wait $pidtick
-  rm -f $FIFO
+  cd $TMPDIR; tar cvpf - .[_0-9A-z]* * | gzip -c - > $DSTDIR/$_name
   archname=${archname}${_name}" "
   echo -n "T"
+  cd -
 
  done
 
@@ -426,12 +421,7 @@ CreateDocArchive()
 
  # copy recursively doc subdirectory to tmpdir
  mkdir -p $TMPDIR/lib/doc/${_arch_name}/${_arch_lang}
- mkfifo $FIFO
- $THIS ticker < $FIFO &
- pidtick=$!
- cp -vpR $_subdir/* $TMPDIR/lib/doc/${_arch_name}/${_arch_lang} > $FIFO
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+ cp -vpR $_subdir/* $TMPDIR/lib/doc/${_arch_name}/${_arch_lang} 
  echo -n "C"
 
  # generate .Axene_desc
@@ -453,26 +443,16 @@ CreateDocArchive()
  find $TMPDIR -type d -exec chmod 755 {} \;
  echo -n "R"
 
- # Set UID/GID
- chown -R $OWN_UID $TMPDIR
- chgrp -R $OWN_GID $TMPDIR
- echo -n "O"
-
  # generate final tar
  _lang=`echo $_arch_lang | tr '[:upper:]' '[:lower:]'`
  _version=`echo $_arch_version | tr -d "."`x
  _name=${_arch_name}-v${_version}.doc.${_lang}.tar.gz
- rm -f $_name
+ rm -f $_name $DSTDIR/$_name
 
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
- (cd $TMPDIR; tar cvpf - .[_0-9A-z]* * ) 2>$FIFO | gzip -c - > $DSTDIR/$_name
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+ cd $TMPDIR; tar cvpf - .[_0-9A-z]* * | gzip -c - > $DSTDIR/$_name
  archname=${archname}${_name}" "
  echo -n "T"
-
+ cd -
  echo "] done."
  rm -fr $TMPDIR
 }
@@ -553,9 +533,6 @@ CreateSrcArchive()
  # get usefull file list
  _arch_adfiles="AD/"`echo ${_arch_name} | sed "s/\-.*$//"`
  _arch_rcfiles="RC/"`echo ${_arch_name} | sed "s/\-.*$//" | tr A-Z a-z`"rc"
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
  _files=`(cd $_subdir; find . ! -type d -print) | \
     grep -Ev "\.[ao]$" | grep -Ev "[~#]$" | grep -Ev ".zpm$" | \
     grep -v "core" | grep -v "uptodate" | grep -Ev "^\./Headers/" | \
@@ -565,28 +542,15 @@ CreateSrcArchive()
     grep -Ev "^\./launcher" | grep -Ev "^\./get_realname" | \
     grep -Ev "^\./${_arch_name}-v[0-9][0-9]*" | \
     grep -Ev "^\./AxeneLauncher-v.*" | grep -Ev "/\." | \
-    grep -v "g3states.h" | grep -Ev "Tongues/Tongue\..*" | tee $FIFO`
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+    grep -v "g3states.h" | grep -Ev "Tongues/Tongue\..*"`
  echo -n "F"
 
  # get directory list 
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
- _dirs=`(cd $_subdir; find . -type d) | tee $FIFO`
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+ dirs=`(cd $_subdir; find . -type d)`
  echo -n "D"
 
  # get executable script list
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
- _xfiles=`(cd $_subdir; find . -type f ! -name "*.[choa]" -exec file {} \; )| \
-  tee $FIFO | grep -wi "script" | cut -d":" -f1 | grep -Ev "[~#]$"`" "$_xfiles
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+ _xfiles=`(cd $_subdir; find . -type f ! -name "*.[choa]" -exec file {} \; )| grep -wi "script" | cut -d":" -f1 | grep -Ev "[~#]$"`" "$_xfiles 
  echo -n "X"
 
  # create all directory in tmpdir
@@ -598,14 +562,9 @@ CreateSrcArchive()
  echo -n "M"
 
  # copy recursively src subdirectory to tmpdir
-  mkfifo $FIFO
- $THIS ticker < $FIFO &
- pidtick=$!
  for _f in $_files; do
-  cp -vp ${_subdir}/${_f} $TMPDIR/src/${_arch_name}-${_version}/${_f} > $FIFO
+  cp -vp ${_subdir}/${_f} $TMPDIR/src/${_arch_name}-${_version}/${_f} 
  done
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
  echo -n "C"
 
  # copy launch and postinstall script in Utils/
@@ -646,21 +605,15 @@ CreateSrcArchive()
  echo -n "R"
 
  # Set UID/GID
- chown -R $OWN_UID $TMPDIR
- chgrp -R $OWN_GID $TMPDIR
  echo -n "O"
 
  # generate final tar
  _version=`echo $_version | tr -d "."`
  _name=${_arch_name}-v${_version}.src.tar.gz
- rm -f $_name
+ rm -f $_name $DSTDIR/$_name
 
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
- (cd $TMPDIR; tar cvpf - .[_0-9A-z]* * ) 2>$FIFO | gzip -c - > $DSTDIR/$_name
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+ cd $TMPDIR; tar cvpf - .[_0-9A-z]* * | gzip -c - > $DSTDIR/$_name
+ cd -
  archname=${archname}${_name}" "
  echo -n "T"
 
@@ -694,31 +647,17 @@ CreateSdkArchive()
  echo -n "S"
 
  # add common files
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
- (cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/$_arch_common_subdir ) > $FIFO 2>&1
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+ cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/$_arch_common_subdir 
+ cd -
  echo -n "C"
  
  # add archives files
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
  _files=`(cd $TOP/..; find $_top/$_arch_arch_subdir ! -type d -print) | \
     grep -Ev "[~#]$" | grep -Ev "tgz$" | grep -Ev "tar.gz$" | grep -vw Temp | \
-    grep -Ev "CrossBinaries/[^R][^E]" | tee $FIFO`
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+    grep -Ev "CrossBinaries/[^R][^E]"`
  echo -n "A"
 
- mkfifo $FIFO 
- $THIS ticker < $FIFO &
- pidtick=$!
- (cd $TOP/..; tar rvpf $DSTDIR/$_name $_files ) > $FIFO 2>&1
- sleep 1; kill $pidtick; wait $pidtick
- rm -f $FIFO
+ cd $TOP/..; tar rvpf $DSTDIR/$_name $_files 
  echo -n "m"
 
  # add axene products
@@ -728,9 +667,6 @@ CreateSdkArchive()
   _bin_name=`echo ${_arch_subdir} | sed "s/\-.*$//"`
   _arch_adfiles="AD/"`echo ${_arch_subdir} | sed "s/\-.*$//"`
   _arch_rcfiles="RC/"`echo ${_arch_subdir} | sed "s/\-.*$//" | tr A-Z a-z`"rc"
-  mkfifo $FIFO 
-  $THIS ticker < $FIFO &
-  pidtick=$!
   _files=`(cd $TOP/..; find $_top/${_arch_subdir} ! -type d -print) | \
     grep -Ev "\.[ao]$" | grep -Ev "[~#]$" | grep -Ev ".zpm$" | \
     grep -v "core" | grep -v "uptodate" | grep -Ev "/Headers/.*" | \
@@ -740,38 +676,22 @@ CreateSdkArchive()
     grep -Ev "/launcher$" | grep -Ev "/get_realname$" | \
     grep -Ev "/${_bin_name}-v[0-9][0-9]*" | \
     grep -Ev "/AxeneLauncher-v.*" | grep -Ev "/\." | \
-    grep -v "g3states.h" | grep -Ev "Tongues/Tongue\..*" | tee $FIFO`
-  sleep 1; kill $pidtick; wait $pidtick
-  rm -f $FIFO
+    grep -v "g3states.h" | grep -Ev "Tongues/Tongue\..*"`
   echo -n `echo $_arch_subdir | cut -b1`
 
-  mkfifo $FIFO 
-  $THIS ticker < $FIFO &
-  pidtick=$!
-  (cd $TOP/..; tar rvpf $DSTDIR/$_name $_files ) > $FIFO 2>&1
-  sleep 1; kill $pidtick; wait $pidtick
-  rm -f $FIFO
+  cd $TOP/..; tar rvpf $DSTDIR/$_name $_files 
+  cd -
   echo -n `echo $_arch_subdir | cut -b2`
 
   # add documentation
-  mkfifo $FIFO 
-  $THIS ticker < $FIFO &
-  pidtick=$!
-  (cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Documentation ) \
-    > $FIFO 2>&1
-  sleep 1; kill $pidtick; wait $pidtick
-  rm -f $FIFO
+  cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Documentation 
+  cd -
   echo -n `echo $_arch_subdir | cut -b3`
 
   # add examples
   if [ -d $_arch_subdir/Example ]; then
-   mkfifo $FIFO 
-   $THIS ticker < $FIFO &
-   pidtick=$!
-   (cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Example ) \
-     > $FIFO 2>&1
-   sleep 1; kill $pidtick; wait $pidtick
-   rm -f $FIFO
+   cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Example 
+   cd -
    echo -n `echo $_arch_subdir | cut -b4`
  fi
 
@@ -779,14 +699,11 @@ CreateSdkArchive()
 
  # gzip archive
  [ -f $DSTDIR/${_name}.gz ] && rm -f $DSTDIR/${_name}.gz
- $THIS ticker 1 &
- pidtick=$!
  gzip $DSTDIR/$_name
- kill $pidtick; wait $pidtick
  echo -n "G"
  
  archname=${archname}${_name}.gz" "
-
+ cd -
  echo "] done."
  #rm -fr $TMPDIR
 }
@@ -830,35 +747,6 @@ EOF
  echo ""
 else
  if [ $1 = "ticker" ]; then
-  exec 2> /dev/null
-  term=0
-  echo -n ">"
-  trap - EXIT HUP INT QUIT TRAP
-  trap 'term=1' TERM
-  ticker='-/|\'
-  tpnt=1
-  tlen=`expr length $ticker`
-  if [ -n "$2" ]; then
-   # turn ticker every n second
-   delay=$2
-   while [ $term -ne 1 ]; do
-    sleep $delay
-    tick="\b"`expr substr $ticker $tpnt 1`
-    tpnt=`expr $tpnt + 1`
-    [ $tpnt -gt $tlen ] && tpnt=1
-    echo -ne $tick
-   done
-  else
-   # turn ticker when stdin is full
-   while [ $term -ne 1 ]; do
-    read dummy
-    tick="\b"`expr substr $ticker $tpnt 1`
-    tpnt=`expr $tpnt + 1`
-    [ $tpnt -gt $tlen ] && tpnt=1
-    echo -ne $tick
-   done
-  fi
-  echo -ne "\b"
   exit
  fi
 
@@ -923,19 +811,6 @@ done
 
 [ ! -d $DSTDIR ] && mkdir -p $DSTDIR
 archname=""
-
-if [ -n "$binarch" -o -n "$docarch" -o -n "$srcarch" ]; then
- if [ "$OWN_UID" -ne 0 ] && [ -t 0 ]; then
-  echo "It's better to make archive with root uid and gid."
-  echo -n "Do you want to enter root passwd ? [Y/n] "
-   read Yn
-  [ -z "$Yn" ] && Yn="N"
-  if [ "$Yn" = "Y" -o "$Yn" = "y" ]; then
-   exec su -c "$THIS $choice"
-  fi
- fi
-fi
-
 
 if [ -n "$binarch" ]; then  
  for arch in $binarch; do

@@ -26,3 +26,11 @@ or OpenMotif 2.1.30 when we need to use an older Motif version.
 
 Eventually, there may be a branch to build this with modern compilers(2026) for current BSD and Linux distributions.
 
+
+In order to build this,
+./configure 
+make
+make <package or install>
+
+The packages are self-contained tgz files that can be extracted anywhere.
+

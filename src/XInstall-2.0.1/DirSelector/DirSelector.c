@@ -3,7 +3,7 @@
 ** Methods for the DirSelector class
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 **    along with this program; if not, write to the Free Software
 **    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 **
-** Started on  Fri Dec  9 15:59:15 1994 Stéphane Boisson
+** Started on  Fri Dec  9 15:59:15 1994 Stï¿½phane Boisson
 ** Last update Sat Jan 15 17:16:35 2000 Emmanuel Paris
 */
 
@@ -46,6 +46,9 @@
 #include <pwd.h>
 #include <Xm/DialogS.h>
 #include "Resource.h"
+#if !defined(___NetBSD)
+# include <sys/vfs.h>
+#endif
 
 /*--- externals ---*/
 extern c_Resource *GlobResources;

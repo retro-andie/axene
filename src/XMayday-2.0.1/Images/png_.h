@@ -2,7 +2,7 @@
 ** png_.h for Xclamation and XMayday in Images/
 **
 ** Copyright (C) 1994-2000 Axene.
-** Authors: Stéphane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
+** Authors: Stï¿½phane Boisson, Antoine Buat, Robin Castanier and Emmanuel Paris.
 ** Email: xcalibur@axene.org
 **
 **    This program is free software; you can redistribute it and/or modify
@@ -27,7 +27,7 @@
 #define _png_h_
 
 #include "xcalibur.h"
-#include "png.h"
+#include "../PngImport/png.h"
 #include <sys/file.h>
 
 #define Xc_PNG_NAME	"PNG (Portable Network Graphics)"

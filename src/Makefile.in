@@ -52,6 +52,8 @@ PACKAGE_NAME =
 PREFIX =
 LANGUAGE =
 
+.PHONY: all install clean distclean uninstall package package-all
+
 all:	$(SUBDIRS)
 	@echo ""; echo "Ok, everything is built now. Next, run 'make install'."
 
@@ -59,21 +61,24 @@ install:	$(DEPFILES)
 	@PREFIX="$(PREFIX)"; LANGUAGE="$(LANGUAGE)"; export PREFIX LANGUAGE; \
 	for i in $(SUBDIRS); do \
 	echo ""; echo ""; echo Install all in $$i; echo ""; echo "" ; \
-	cd $$i; $(MAKE) install; cd ..; done
+	(cd $$i && $(MAKE) install); done
 
 clean:
 	@for i in $(SUBDIRS); do \
 	echo ""; echo ""; echo Clean all in $$i; echo ""; echo "" ; \
-	cd $$i; $(MAKE) zclean; rm -f buildenv Makefile; cd ..; done
+	(cd $$i && $(MAKE) zclean && rm -f buildenv ); done
 
-distclean: clean
+distclean: 
+	@for i in $(SUBDIRS); do \
+	echo ""; echo ""; echo Clean all in $$i; echo ""; echo "" ; \
+	(cd $$i && rm -f Makefile ); done
 	@rm -f Makefile
 
 uninstall:
 	@PREFIX="$(PREFIX)"; export PREFIX; \
 	for i in $(SUBDIRS); do \
 	echo ""; echo ""; echo Uninstall $$i; echo ""; echo "" ; \
-	cd $$i; $(MAKE) uninstall; cd ..; done
+	(cd $$i && $(MAKE) uninstall); done
 	@echo ""
 	@echo "Shared install directories (remove manually when empty):"
 	@echo "  $(PREFIX)/bin $(PREFIX)/lib/locale $(PREFIX)/lib $(PREFIX)/app-defaults $(PREFIX)"
@@ -87,6 +92,7 @@ package-all: $(SUBDIRS)
 	@./makearchives.sh 1-6 10-17
 
 # BEGIN SUBST
+.PHONY: <<SUBST>>
 <<SUBST>>:	<<SUBST>>/buildenv <<SUBST>>/main
 	@echo "Ok, everything is built in <<SUBST>>"
 

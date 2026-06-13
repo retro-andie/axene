@@ -461,6 +461,14 @@ range.o:							#+S
 collate.o:							#+S
 	ar x /lib/libintl.a $@					#+S
 								#+S
+Images/png_.o:	Images/png_.c
+	@Utils/echonl.sh "Compile: "$@" "
+	@$(CC) $(CPPFLAGS) $(CFLAGS) -IPngImport -IHeaders -c $< -o $@	#-SU
+	@$(CC) $(CPPFLAGS) $(CFLAGS) -IPngImport -IHeaders -Fo$@ -c $<	#+S
+	@$(CC) $(CPPFLAGS) $(CFLAGS) -IPngImport -IHeaders -c $<		#+U
+	@mv `basename $@` $@					#+U
+	@echo "done."
+
 Main/check.o:	Main/check.c
 	@Utils/echonl.sh "Compile: "$@" using X11CONFIG='$(X11CONFIG)' "
 	@$(CC) $(CPPFLAGS) $(CFLAGS) $(X11CONFIG) -IHeaders -c $< -o $@	   #-SU

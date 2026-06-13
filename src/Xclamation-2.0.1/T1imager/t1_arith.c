@@ -477,7 +477,7 @@ register fractpel divisor;
 {
  int64_t w;
  
- return(((int64_t)dividend << FRACTBITS) / divisor)
+ return(((int64_t)dividend << FRACTBITS) / divisor);
 }
 
 /*

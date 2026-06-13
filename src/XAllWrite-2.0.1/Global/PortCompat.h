@@ -215,6 +215,22 @@
 #endif
 
 /*
+** NetBSD 9+ removed statfs(2) in favour of the POSIX statvfs(2).
+** Provide a source-level shim so existing code using struct statfs /
+** statfs() compiles unchanged.  f_frsize in statvfs maps to f_bsize
+** in the old BSD struct statfs (fundamental block size).
+*/
+#if defined(___NetBSD)
+# include <sys/statvfs.h>
+# ifndef statfs
+#  define statfs  statvfs
+# endif
+# ifndef f_bsize
+#  define f_bsize f_frsize
+# endif
+#endif
+
+/*
 ** OpenBSD 7+: map ___openbsd7 / ___openbsd_modern onto ___openbsd.
 */
 #if (defined(___openbsd7) || defined(___openbsd_modern)) && !defined(___openbsd)
