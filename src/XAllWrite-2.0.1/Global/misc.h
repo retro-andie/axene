@@ -61,7 +61,9 @@ extern int Xstrnchr();
 extern char *Xstrstr();
 
 /* alternative function to setenv */
+#ifndef ___HAVE_SETENV
 extern int Xsetenv();
+#endif
 
 /* alternative function to rint */
 extern double Xrint();

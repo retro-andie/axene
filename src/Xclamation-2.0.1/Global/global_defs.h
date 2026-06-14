@@ -132,11 +132,7 @@ typedef float real;
 typedef double real;
 #endif
 
-#if defined(___m88k) || defined(___rs6000) || defined(___rs6000ppc) || \
-defined(___sun4) || defined(___sun5) || defined(___sun5_x86) || \
-defined(___sco386) || defined(___sco386sV) || defined(___i386_unixware) || \
-defined(___ncr_svr4) || defined(___iris4d) || \
-defined(___hpux10) || defined(___hpux9)
+#ifndef ___HAVE_SETENV
 #define setenv(a,b,c) Xsetenv(a,b)
 #endif
 

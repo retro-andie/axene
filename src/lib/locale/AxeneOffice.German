@@ -1,0 +1,185 @@
+! ************************************************************************
+! ************************************************************************
+! **									**
+! **			AxeneOffice(tm) - Application Defaults		**
+! **			      (c)1998-2000 Axene   			**
+! **			http://www.axene.org/german/			**
+! **		           Email:  axene@axene.org			**
+! **		German localization by  Kai-Uwe W. Clauswitz		**
+! **									**
+! ************************************************************************
+! ************************************************************************
+
+! ************************************************************************
+! **				FONTS LIST				**
+! ************************************************************************
+
+*fontList:		-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmMenuShell*fontList:	-*-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1
+
+! ************************************************************************
+! **				DEFAULT SETTINGS			**
+! ************************************************************************
+
+! Define help bubble type. Could be "Off", "Classic" or "Fun"
+*helpBubblesMsg:	Classic
+! ************************************************************************
+! **				CURSORS					**
+! ************************************************************************
+
+*menuCursor:				right_ptr
+
+! ************************************************************************
+! **			TRAVERSAL & HIGHLIGHT THICKNESS			**
+! ************************************************************************
+
+*highlightThickness:			1
+
+! ************************************************************************
+! **                               ALIGNMENTS				**
+! ************************************************************************
+
+! ************************************************************************
+! **				SHADOW THICKNESS			**
+! ************************************************************************
+
+*shadowThickness:				1
+*XmSeparatorGadget.shadowThickness:		2
+*XmRowColumn.shadowThickness:			0
+*XmCascadeButtonGadget.shadowThickness:		1
+*XmForm.shadowThickness:			0
+
+! ************************************************************************
+! **				MARGINS	& SPACINGS			**
+! ************************************************************************
+
+*XmPushButton.marginWidth:			2
+*XmPushButton.marginHeight:			2
+*XmToggleButtonGadget.marginLeft:		5
+*XmToggleButtonGadget.marginRight:		5
+*XmPushButtonGadget.marginLeft:			5
+*XmPushButtonGadget.marginRight:		5
+*rcMain.marginWidth:				3
+*rcMain.marginHeight:				3
+*rcMain.spacing:				2
+
+! ************************************************************************
+! **				BACKGROUND PIXMAPS  			**
+! ************************************************************************
+
+*rcMain.backgroundPixmap:		leather_dark
+*title:		Axene Office Launcher
+
+! ************************************************************************
+! **				POPUP MENU ENTRIES			**
+! ************************************************************************
+
+*mOverride.labelString:		WM Activ
+*mTransient.labelString:	WM Buttons
+*mFlipV.labelString:		Vertikal spiegeln
+*mFlipH.labelString:		Horizontal spiegeln
+*mLaunch.labelString:		Execute
+*mQuit.labelString:		Axene Office beenden
+
+
+! ************************************************************************
+! **				HELP BUBBLES				**
+! ************************************************************************
+
+*helpXclamationMsg:		Xclamation DTP software
+*helpXQuadMsg:			XQuad Tabellenkalkulation
+*helpXAllWriteMsg:		XAllWrite Word Processor
+*helpXMaydayMsg:		XMayday Documentation Browser
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:	Schutzverletzung (Segmentation fault)
+*sigErrorPIPEMsg:	Verbindung unterbrochen (Broken pipe)
+*sigErrorBUSMsg:	Specification exception (Bus error)
+*sigErrorFPEMsg:	Arithmetic exception (Floating exception)
+*sigErrorIOTMsg:	Interner Fehler (IOT trap)
+*sigErrorEMTMsg:	EMT trap
+*sigErrorXCPUMsg:	CPU-Zeitlimit überschritten (Cputime limit exceeded)
+*sigErrorXFSZMsg:	Maximale Dateigröße überschritten (Filesize limit exceeded)
+*sigErrorILLMsg:	Ungültige Anweisung (Illegal instruction)
+*sigErrorINTMsg:	Axene Office wurde unterbrochen (Interrupt)
+*sigErrorQuitingMsg:	Axene Office verlassen
+*sigErrorSorryMsg:	Programmfortführung nicht möglich
+
+*loadErrorMsg:		Ladefehler
+*notBitmapErrorMsg:	Unbekanntes Bildformat
+
+*lCaughtSignal.labelString:		Ein Fehler ist aufgetreten:
+*lCaughtIOerror.labelString:		X-Server: Fataler Fehler
+*lCannotContinue.labelString:		Fortführung nicht möglich
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Ja
+*action_area.No.labelString:		Nein
+*action_area.Apply.labelString:		Anwenden
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Öffnen...
+*action_area.Retry.labelString:		Erneut versuchen
+*action_area.Stop.labelString:		Stop
+*action_area.Reset.labelString:		Reset
+*action_area.Cancel.labelString:	Abbrechen
+*action_area.Close.labelString:		Schließen
+*action_area.Help.labelString:		Hilfe
+*action_area.Save.labelString:		Speichern
+*action_area.Continue.labelString:	Weiter
+*action_area.Quit.labelString:		Beenden
+*action_area.Save as.labelString:	Speichern unter...
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Axene Office beenden
+
+! ************************************************************************
+! **				COLORS					**
+! ************************************************************************
+
+! ** Colors: BACKGROUND **************************************************
+
+*background:				gray65
+*XmPushButton.background:		#B1B0B8
+*TopLevelShell*borderColor:		gray65
+*Application*borderColor:		black
+
+! ** Colors: HIGHLIGHTS **************************************************
+
+*highlightColor:			black
+
+! ************************************************************************
+! **				BACKGROUND PIXMAPS			**
+! ************************************************************************
+
+*rcMain.translations:		#override				\n\
+                   <Btn3Down>:		xc_popup()			\n\
+	 ~Alt ~Meta Ctrl<Key>q:		xc_quit()			\n\
+	         <Btn1Down>(2):		xc_override()			\n\
+	         <Btn2Down>(2):		xc_transient()			\n\
+		    <Btn4Down>:		ManagerGadgetTraversePrev()	\n\
+		    <Btn5Down>:		ManagerGadgetTraverseNext()	\n
+	
+*XmPushButton.translations:	#override				\n\
+		<Btn4Down>:		xc_dispatch_up()		\n\
+		<Btn5Down>:		xc_dispatch_up()		\n\
+		<Btn3Down>:		xc_dispatch_up()		\n\
+	 ~Alt ~Meta Ctrl<Key>q:		xc_quit()			\n\
+		<Key>1:			xc_launch("Xclamation")		\n\
+		<Key>2:			xc_launch("XQuad")		\n\
+		<Key>3:			xc_launch("XAllWrite")		\n\
+		<Key>4:			xc_launch("XMayday")		\n
+
+

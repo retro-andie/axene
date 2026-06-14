@@ -1,0 +1,717 @@
+! ************************************************************************
+! ************************************************************************
+! **									**
+! **			XMayday(tm) - Application Defaults		**
+! **			     (c)1996-2000 Axene   			**
+! **			http://www.axene.org/french/			**
+! **		           Email:  axene@axene.org			**
+! **									**
+! ************************************************************************
+! ************************************************************************
+
+
+*title:					Axene XMayday 2.0.1
+
+
+! ************************************************************************
+! **				FONTS LIST				**
+! ************************************************************************
+
+*fontList:			-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmText.fontList:		-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmTextField.fontList:		-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmSrolledList.fontList:	-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmFrame.XmLabelGadget.fontList: -*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*lBoxPrintTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxCacheTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*FSTitle.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*FSList.fontList:		-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-iso8859-1
+*FSEditor.fontList:		-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-iso8859-1
+*BottomBar*fontList:		-*-helvetica-medium-*-*-*-14-*-*-*-*-*-iso8859-1
+*lAboutRelease.fontList:	-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutEnd.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lAboutTitle.fontList:		-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutLicense.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutIDDN.fontList:		-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*FileName.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*iconFont:			-*-helvetica-*-*-*-*-10-*-*-*-*-*-iso8859-1
+
+
+! ************************************************************************
+! **				DEFAULT SETTINGS			**
+! ************************************************************************
+
+! Overridden by -keepFreeColor option
+*keepFreeColorMsg:	10
+
+! Define help bubble type. Could be "Off", "Classic" or "Fun"
+*helpBubblesMsg:	Classic
+
+! ************************************************************************
+! **				SHORTCUTS				**
+! ************************************************************************
+
+*pmFile.mNewXMayday.AcceleratorText:	Ctrl+N
+*pmFile.mOpenIndex.AcceleratorText:	Ctrl+I
+*pmFile.mOpenFile.AcceleratorText:	Ctrl+O
+*pmFile.mPrint.AcceleratorText:		Ctrl+P
+*pmFile.mClose.AcceleratorText:		Ctrl+W
+*pmFile.mQuit.AcceleratorText:		Ctrl+Q
+
+*pmDisplay.mReload.AcceleratorText:	Meta+X
+
+*pmGo.mBack.AcceleratorText: 	 	Ctrl+B
+*pmGo.mForward.AcceleratorText:  	Ctrl+F
+*pmGo.mHome.AcceleratorText:  		Ctrl+H
+
+*pmFile.mNewXMayday.Accelerator:	Ctrl<Key>N
+*pmFile.mOpenIndex.Accelerator:		Ctrl<Key>I
+*pmFile.mOpenFile.Accelerator:		Ctrl<Key>O
+*pmFile.mPrint.Accelerator:		Ctrl<Key>P
+*pmFile.mClose.Accelerator:		Ctrl<Key>W
+*pmFile.mQuit.Accelerator:		Ctrl<Key>Q
+
+*pmDisplay.mReload.Accelerator:		Meta<Key>X
+
+*pmGo.mBack.Accelerator:  		Ctrl<Key>B
+*pmGo.mForward.Accelerator:  		Ctrl<Key>F
+*pmGo.mHome.Accelerator:  		Ctrl<Key>H
+
+
+
+
+! ************************************************************************
+! **				CURSORS					**
+! ************************************************************************
+
+*menuCursor:				right_ptr
+*cursorPositionVisible:			False
+
+
+! ************************************************************************
+! **		TOGGLE INDICATOR SIZE, VISUAL & TYPE			**
+! ************************************************************************
+
+*indicatorSize:					13
+
+*XmToggleButton.enableToggleVisual:		True
+*XmToggleButtonGadget.enableToggleVisual:	True
+*XmMenuShell*XmToggleButtonGadget.indicatorSize:	9
+
+*XmToggleButton.indicatorType:			XmONE_OF_MANY
+*XmToggleButtonGadget.indicatorType:		XmONE_OF_MANY
+*rbDraftMode.indicatorType:			XmN_OF_MANY
+*rbBanners.indicatorType:			XmN_OF_MANY
+*rbFootnotes.indicatorType:			XmN_OF_MANY
+*rbColorMode.indicatorType:			XmN_OF_MANY
+*tbBCKeepCacheOnDisk.indicatorType:		XmN_OF_MANY
+
+*XmMenuShell*XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+
+
+! ************************************************************************
+! **			TRAVERSAL & HIGHLIGHT THICKNESS			**
+! ************************************************************************
+
+*hIconBar.traversalOn:			False
+*hIconBar2.traversalOn:			False
+*XmPanedWindow*traversalOn:		False
+
+*highlightThickness:			1
+
+*XmRadioBox.marginHeight:		0
+*XmRadioBox.spacing:			0
+
+
+! ************************************************************************
+! **				SIZE & RESIZE				**
+! ************************************************************************
+
+*Application.width:				420
+*Application.height:				600
+
+*foBottom.paneMinimum:				70
+*hwTOP.paneMinimum:				1
+
+*sashWidth:					22
+
+*XmTextField.resizeWidth:			False
+*XmFrame.XmRowColumn.resizeWidth:		False
+*XmFrame.XmRowColumn.resizeHeight:		False
+*booard.XmRowColumn.resizeWidth:		False
+*booard.XmRowColumn.resizeHeight:		False
+
+
+! ************************************************************************
+! **                               ALIGNMENTS				**
+! ************************************************************************
+
+*lMarginT.alignment:			ALIGNMENT_END
+*lMarginB.alignment:			ALIGNMENT_END
+*lMarginL.alignment:			ALIGNMENT_END
+*lMarginR.alignment:			ALIGNMENT_END
+*lMemTotal.alignment:			ALIGNMENT_END
+*lMemUsed.alignment:			ALIGNMENT_END
+*lMemFree.alignment:			ALIGNMENT_END
+*lDiskTotal.alignment:			ALIGNMENT_END
+*lDiskUsed.alignment:			ALIGNMENT_END
+*lDiskFree.alignment:			ALIGNMENT_END
+*lKb.alignment:				ALIGNMENT_BEGINNING
+*tbBCKeepCacheOnDisk.alignment:		ALIGNMENT_BEGINNING
+*lBPsize.alignment:			ALIGNMENT_END
+
+
+! ************************************************************************
+! **				SHADOW THICKNESS			**
+! ************************************************************************
+
+*shadowThickness:				1
+*XmFrame.shadowThickness:			2
+*XmSeparatorGadget.shadowThickness:		2
+*XmRowColumn.shadowThickness:			1
+*XmCascadeButtonGadget.shadowThickness:		1
+*XmScrollBar.shadowThickness:			1
+*XmBulletinBoard.shadowThickness:		0
+*XmForm.shadowThickness:			0
+
+*BottomBar.shadowThickness:                     1
+
+*XmFileSelectionBox*shadowThickness:            1
+
+*hIconBar*shadowThickness:                      0
+*hIconBar2.shadowThickness:                     0
+
+*fIconBar.shadowThickness:                      2
+*fPaned.shadowThickness:                        1
+*foBottom.shadowThickness:                      0
+*hwBOTTOM.shadowThickness:                      1
+*sashShadowThickness:                           1
+
+*tbBCKeepCacheOnDisk.shadowThickness:		0
+
+*foBottom.shadowType:                           XmSHADOW_IN
+
+
+! ************************************************************************
+! **				MARGINS	& SPACINGS			**
+! ************************************************************************
+
+*XmBulletinBoard.marginWidth:			0
+*XmBulletinBoard.marginHeight:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButtonGadget.marginWidth:		0
+*XmToggleButtonGadget.marginHeight:		0
+*XmFrame.XmBulletinBoard.marginWidth:		14
+*XmFrame.XmBulletinBoard.marginHeight:		10
+*XmFrame.XmRowColumn.marginHeight:		6
+
+*BoxAbout*XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginWidth:		10
+
+*XmLabel.marginLeft:				5
+*XmLabel.marginRight:				5
+*XmFrame.XmLabel.marginLeft:			1
+*XmFrame.XmLabel.marginRight:			1
+
+*IconRadian.marginLeft:				0
+*IconRadian.marginRight:			0
+
+*BottomBar.marginHeight:			1
+*BottomBar.marginWidth:				1
+
+*foIconBar*XmPushButton.marginWidth:		2
+*foIconBar*XmPushButton.marginHeight:		2
+*foIconBar*XmSeparatorGadget.margin:		0
+*foIconBar*XmSeparatorGadget.highlightThickness: 7
+*foIconBar*highlightThickness:			0
+*hIconBar.spacing:				0
+*hIconBar.marginWidth:				0
+*hIconBar.marginHeight:				0
+
+*hIconBar2.marginWidth:				0
+*hIconBar2.marginHeight:			0
+*hIconBar2.spacing:				0
+
+*XmCascadeButtonGadget.marginWidth:		8
+*XmCascadeButtonGadget.marginHeight:		2
+*XmPushButtonGadget.marginWidth:		8
+*XmPushButtonGadget.marginHeight:		2
+*XmToggleButtonGadget.marginWidth:		5
+*XmToggleButtonGadget.marginHeight:		1
+*XmLabel.marginWidth:				0
+*XmLabel.marginHeight:				0
+
+*Application.verticalSpacing:			0
+
+*XmScrolledWindow.scrolledWindowMarginWidth:	2
+*XmScrolledWindow.scrolledWindowMarginHeight:	2
+
+*XmFrame.marginHeight:				0
+*XmFrame.marginWidth:				0
+
+*item_menu.XmLabel.marginLeft:			6
+*item_menu.XmLabel.marginRight:			12
+
+*gPrinter.marginWidth:				0
+*gPrinter.marginHeight:				0
+*gBPFormat.marginWidth:				0
+*gBPFormat.marginHeight:			0
+*gBPparams.marginWidth:				4
+*gBPparams.marginHeight:			0
+
+*XmToggleButton.borderWidth:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButton.spacing:			0
+*XmToggleButton.indicatorSize:			0
+*XmToggleButton.indicatorOn:			False
+
+*foBottom.marginHeight:				1
+*foBottom.marginWidth:				1
+*XmPanedWindow.marginWidth:			5
+*XmPanedWindow.marginHeight:			5
+
+*XmPanedWindow.spacing:				14
+
+*aboutCommentsMsg:	EMail: contact@axene.org\n\
+Bug-report: support@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org/
+
+
+! ************************************************************************
+! **			MNEMONICS for PULLDOWN MENUS			**
+! ************************************************************************
+
+*pmFile.mnemonic:			F
+*pmDisplay.mnemonic:			A
+*pmGo.mnemonic:				l
+*pmHelp.mnemonic:			i
+
+*pmFile.mNewXMayday.mnemonic:		N
+*pmFile.mOpenIndex.mnemonic:		O
+*pmFile.mOpenFile.mnemonic:		F
+*pmFile.mPrint.mnemonic:		I
+*pmFile.mClose.mnemonic:		e
+*pmFile.mQuit.mnemonic:			Q
+
+*pmDisplay.mRefresh.mnemonic:		R
+*pmDisplay.mReload.mnemonic:		e
+*pmDisplay.mTransfert.mnemonic:		C
+*pmDisplay.mMaskIndex.mnemonic:		I
+*pmDisplay.mShowIndex.mnemonic:		I
+*pmDisplay.mMaskInfobar.mnemonic:	U
+*pmDisplay.mShowInfobar.mnemonic:	U
+
+*pmGo.mHome.mnemonic:			I
+*pmGo.mBack.mnemonic:			P
+*pmGo.mForward.mnemonic:		S
+
+*pmHelp.mOverview.mnemonic:		G
+*pmHelp.mContent.mnemonic:		M
+*pmHelp.mKeyboard.mnemonic:		C
+*pmHelp.mOnItem.mnemonic:		I
+*pmHelp.mUsingHelp.mnemonic:		U
+*pmHelp.mCache.mnemonic:		n
+*pmHelp.mAbout.mnemonic:		A
+
+
+! ************************************************************************
+! **				PULLDOWN MENUS				**
+! ************************************************************************
+
+*pmFile.labelString:  			Fichier
+*pmFile.mNewXMayday.labelString:	Nouvelle fenêtre...
+*pmFile.mOpenIndex.labelString:		Ouvrir Index...
+*pmFile.mOpenFile.labelString:		Ouvrir Fichier...
+*pmFile.mPrint.labelString:  		Imprimer...
+*pmFile.mClose.labelString:  		Fermer
+*pmFile.mQuit.labelString:  		Quitter...
+
+*pmDisplay.labelString:			Affichage
+*pmDisplay.mRefresh.labelString:	Tout Redessiner
+*pmDisplay.mReload.labelString:		Tout Recharger
+*pmDisplay.mTransfert.labelString:	Créer Index
+*pmDisplay.mMaskIndex.labelString:	Cacher Index
+*pmDisplay.mShowIndex.labelString:	Afficher Index
+*pmDisplay.mMaskInfobar.labelString:	Cacher URL
+*pmDisplay.mShowInfobar.labelString:	Afficher URL
+
+*pmGo.labelString:			Aller à
+*pmGo.mHome.labelString:		Page Initiale
+*pmGo.mBack.labelString:		Page Précédente
+*pmGo.mForward.labelString:		Page Suivante
+
+*pmHelp.labelString:			Aide
+*pmHelp.mOverview.labelString:		Aide Générale...
+*pmHelp.mContent.labelString:		Table des Matières...
+*pmHelp.mKeyboard.labelString:		Clavier...
+*pmHelp.mOnItem.labelString:		Aide sur Item
+*pmHelp.mUsingHelp.labelString:		Utiliser l'aide...
+*pmHelp.mCache.labelString:		Informations Cache...
+*pmHelp.mAbout.labelString:		A propos d'XMayday...
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:	Violation de privilèges (Segmentation fault)
+*sigErrorPIPEMsg:	Connexion interrompue (Broken pipe)
+*sigErrorBUSMsg:	Erreur de bus (Bus error)
+*sigErrorFPEMsg:	Erreur de calcul (Floating exception)
+*sigErrorIOTMsg:	Erreur interne (IOT trap)
+*sigErrorEMTMsg:	Déroutement Erreur mémoire (EMT trap)
+*sigErrorXCPUMsg:	Dépassement de temps CPU (Cputime limit exceeded)
+*sigErrorXFSZMsg:	Dépassement de taille fichier (Filesize limit exceeded)
+*sigErrorILLMsg:	Instruction illicite (Illegal instruction)
+*sigErrorINTMsg:	XMayday a été interrompu (Interrupt)
+*sigErrorQuitingMsg:	Quitter XMayday maintenant
+*sigErrorSorryMsg:	Impossible de continuer l'exécution
+
+*loadErrorMsg:		Erreur de chargement
+*notBitmapErrorMsg:	Format d'image non reconnu
+
+*lCaughtSignal.labelString:		Une erreur est survenue :
+*lCaughtIOerror.labelString:		Erreur fatale du serveur X
+*lCannotContinue.labelString:		Impossible de continuer
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Oui
+*action_area.No.labelString:		Non
+*action_area.Apply.labelString:		Appliquer
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Ouvrir...
+*action_area.Retry.labelString:		Recommencer
+*action_area.Stop.labelString:		Arrêter
+*action_area.Reset.labelString:		Réinitialiser
+*action_area.Cancel.labelString:	Annuler
+*action_area.Close.labelString:		Fermer
+*action_area.Help.labelString:		Aide
+*action_area.Save.labelString:		Sauver
+*action_area.Continue.labelString:	Continuer
+*action_area.Quit.labelString:		Quitter
+*action_area.Save as.labelString:	Sauver sous...
+
+
+! ************************************************************************
+! **				DIALOG BOXES				**
+! ************************************************************************
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:		Impression
+*lBPsize.labelString:			Taille
+*rbDraftMode.labelString:		Sans les images
+*rbColorMode.labelString:		Couleur
+*rbBanners.labelString:			En-têtes
+*rbFootnotes.labelString:		Bas de page
+*postscriptMsg:				PostScript
+*plainTextMsg:				Texte
+*formatedTextMsg:			Texte formaté
+*fPrinter.labelString:			Imprimer sur...
+*fParams.labelString:			Paramètres
+*fFormat.labelString:			Format de page
+*fExportType.labelString:		Imprimer au format...
+*fFontType.labelString:			Famille de polices
+
+
+! ** Dialog Box: IMAGE CACHE *********************************************
+
+*lBoxCacheTitle.labelString:		Informations Cache Images
+*lMemTotal.labelString:			Mémoire cache totale
+*lMemUsed.labelString:			Mémoire cache utilisée
+*lMemFree.labelString:			Mémoire cache libre
+*lDiskTotal.labelString:		Disque cache total
+*lDiskUsed.labelString:			Disque cache utilisé
+*lDiskFree.labelString:			Disque cache libre
+*lKb.labelString:			Ko
+*tbBCKeepCacheOnDisk.labelString:	Sauver le cache en quittant
+*pbBCCleanMemCache.labelString:		V\n i \n d \n e \nr
+*pbBCCleanDiskCache.labelString:	V\n i \n d \n e \nr
+*fBCmemoryCache.labelString:		Cache mémoire
+*fBCdiskCache.labelString:		Cache disque
+
+
+! ** Dialog Box: ABOUT XMAYDAY *******************************************
+
+*aboutTitleMsg:			XMayday® - Documentation
+*aboutReleaseMsg:		XMayday version %d.%d
+*aboutReleaseBetaMsg:		XMayday version %d.%d.%d
+*lAboutIDDN.labelString:	Basé sur le widget HTML de NCSA Mosaic®
+*lAboutLicense.labelString:	XMayday ne peut être vendu,\n\
+son utilisation est libre de droits
+
+
+! ************************************************************************
+! **				FILE SELECTORS				**
+! ************************************************************************
+
+*indexOpenMsg:				Ouverture d'un index
+*OpenIndex*Ok.labelString:		Ouvrir
+
+*fileOpenMsg:				Ouverture d'un fichier
+*OpenFile*Ok.labelString:		Ouvrir
+
+*printDocumentMsg:			Impression dans le fichier...
+*Print*Ok.labelString:			Imprimer
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Quitter XMayday
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:	\
+L'aide d'XMayday est introuvable dans %s\n\
+Le chemin de l'aide est défini dans le fichier xmaydayrc.\n\
+Vous pouvez télécharger l'aide sur ftp.axene.org /pub/xmayday/doc/
+
+
+! ************************************************************************
+! **				HELP LINES				**
+! ************************************************************************
+
+*helpGoBackMsg:			Retourne à la page précedente|Précedente
+*helpGoForwardMsg:		Retourne à la page suivante|Suivante
+*helpGoIndexMsg:		Retourne à la première page|Home
+*helpOpenMsg:			Charge une nouvelle page HTML|Ouvrir
+*helpMoveIndexMsg:		Passe cette page en Index|Mettre en Index
+*helpPrintMsg:			Imprime la page courante|Imprimer
+
+
+
+
+
+
+
+
+
+
+! ************************************************************************
+! **				ONLINE HELP FILES			**
+! ************************************************************************
+
+! ** Online Help files: GENERAL INTERFACE ********************************
+
+*XmForm.userData:				Main_Interface.html
+
+*hwTOP*userData:			Main_Interface.html#index_section
+*hwBOTTOM*userData:			Main_Interface.html#browse_section
+*BottomBar*userData:			Main_Interface.html#bottom_bar
+*hIconBar.userData:			Main_Interface.html#browse_section
+*IconNav_prev.userData:			Main_Interface.html#icon_prev
+*IconNav_next.userData:			Main_Interface.html#icon_next
+*IconNav_indx.userData:			Main_Interface.html#icon_home
+*Menu.userData:				Menu_Bar.html
+
+
+! ** Online Help files: PULLDOWN MENUS ***********************************
+
+*pmFile*userData:			Menu_Bar.html#file
+*pmFile.mNewXMayday.userData:		Menu_Bar.html#new_menu_entry
+*pmFile.mOpenIndex.userData:		Menu_Bar.html#open_index_menu_entry
+*pmFile.mOpenFile.userData:		Menu_Bar.html#open_file_menu_entry
+*pmFile.mPrint.userData:		Menu_Bar.html#print_menu_entry
+*pmFile.mClose.userData:		Menu_Bar.html#close_menu_entry
+*pmFile.mQuit.userData:			Menu_Bar.html#quit_menu_entry
+
+*pmDisplay*userData:			Menu_Bar.html#view
+*pmDisplay.mRefresh.userData:		Menu_Bar.html#refresh_menu_entry
+*pmDisplay.mReload.userData:		Menu_Bar.html#reload_menu_entry
+*pmDisplay.mTransfert.userData:		Menu_Bar.html#transfert_menu_entry
+*pmDisplay.mMaskIndex.userData:		Menu_Bar.html#view_index_menu_entry
+*pmDisplay.mShowIndex.userData:		Menu_Bar.html#view_index_menu_entry
+*pmDisplay.mShowInfobar.userData:	Menu_Bar.html#view_url_menu_entry
+*pmDisplay.mMaskInfobar.userData:	Menu_Bar.html#view_url_menu_entry
+
+*pmGo*userData:				Menu_Bar.html#goto
+*pmGo.mBack.userData:			Menu_Bar.html#prev_menu_entry
+*pmGo.mForward.userData:		Menu_Bar.html#next_menu_entry
+*pmGo.mHome.userData:			Menu_Bar.html#home_menu_entry
+
+*pmHelp*userData:			Menu_Bar.html#help
+*pmHelp.mOverview.userData:		Overview.html
+*pmHelp.mContent.userData:		index.html
+*pmHelp.mKeyboard.userData:		Keyboard.html
+*pmHelp.mOnItem.userData:		Menu_Bar.html#help_on_item_menu_entry
+*pmHelp.mUsingHelp.userData:		Help_Usage.html
+*pmHelp.mCache.userData:		Menu_Bar.html#cache_menu_entry
+*pmHelp.mAbout.userData:		Menu_Bar.html#about_xmayday_menu_entry
+
+
+! ** Online Help files: FILE SELECTORS ***********************************
+
+*OpenFile*userData:			Box_File_Selectors.html#fs_open_file
+*OpenIndex*userData:			Box_File_Selectors.html#fs_open_index
+*Print*userData:			Box_File_Selectors.html#fs_print_in_file
+
+
+! ** Online Help files: PRINT DIALOG BOX *********************************
+
+*BoxPrint*userData:			Box_Print.html
+*BoxPrint*fPrinter*userData:		Box_Print.html#printer_list
+*BoxPrint*fExportType*userData:		Box_Print.html#section_print_format
+*BoxPrint*fFontType*userData:		Box_Print.html#section_font_family
+*BoxPrint*fFontType*userData:		Box_Print.html#section_font_family
+*BoxPrint*imFontType.userData:		Box_Print.html#section_font_family
+*BoxPrint*fFormat*userData:		Box_Print.html#section_page_format
+*BoxPrint*fParams.userData:		Box_Print.html#section_parameters
+*BoxPrint*rbBanners.userData:		Box_Print.html#headers_button
+*BoxPrint*rbFootnotes.userData:		Box_Print.html#footnotes_button
+*BoxPrint*rbDraftMode.userData:		Box_Print.html#without_image_button
+*BoxPrint*rbColorMode.userData:		Box_Print.html#color_button
+*BoxPrint*action_area.Ok.userData:	Box_Print.html#button_ok
+*BoxPrint*action_area.Cancel.userData:	Box_Print.html#button_cancel
+
+
+! ** Online Help files: IMAGE CACHE DIALOG BOX ****************************
+
+*BoxCache*userData:			Box_Image_Cache.html
+*BoxCache*fBCmemoryCache.userData:	Box_Image_Cache.html#memory_cache_frame
+*BoxCache*lMemTotal.userData:		Box_Image_Cache.html#max_memory_textfield
+*BoxCache*tfMemTotal.userData:		Box_Image_Cache.html#max_memory_textfield
+*BoxCache*lMemUsed.userData:		Box_Image_Cache.html#used_memory_textfield
+*BoxCache*tfMemUsed.userData:		Box_Image_Cache.html#used_memory_textfield
+*BoxCache*lMemFree.userData:		Box_Image_Cache.html#free_memory_textfield
+*BoxCache*tfMemFree.userData:		Box_Image_Cache.html#free_memory_textfield
+*BoxCache*pbBCCleanMemCache.userData:	Box_Image_Cache.html#memory_clear_button
+*BoxCache*fBCdiskCache.userData:	Box_Image_Cache.html#disk_cache_frame
+*BoxCache*lDiskTotal.userData:		Box_Image_Cache.html#max_disk_textfield
+*BoxCache*tfDiskTotal.userData:		Box_Image_Cache.html#max_disk_textfield
+*BoxCache*lDiskUsed.userData:		Box_Image_Cache.html#used_disk_textfield
+*BoxCache*tfDiskUsed.userData:		Box_Image_Cache.html#used_disk_textfield
+*BoxCache*lDiskFree.userData:		Box_Image_Cache.html#free_disk_textfield
+*BoxCache*tfDiskFree.userData:		Box_Image_Cache.html#free_disk_textfield
+*BoxCache*pbBCCleanDiskCache.userData:	Box_Image_Cache.html#disk_clear_button
+*BoxCache*tbBCKeepCacheOnDisk.userData:	Box_Image_Cache.html#save_cache_button
+*BoxCache*action_area.Ok.userData:	Box_Image_Cache.html#button_ok
+
+! ************************************************************************
+! **				COLORS					**
+! ************************************************************************
+
+! ** Colors: BACKGROUND **************************************************
+
+*background:				gray65
+*MainDocument.background:		gray50
+*XmList.background:			gray60
+
+*bboard*XmPushButton.background:	#B1B0B8
+
+*XmTextField.background:		#BCB5BA
+*XmText.background:			#BCB5BA
+
+*XmFrame.foreground:			navyblue
+
+*tfMemUsed.background:			gray60
+*tfMemFree.background:			gray60
+*tfDiskUsed.background:			gray60
+*tfDiskFree.background:			gray60
+
+*HTML.View.background:			gray60
+*XmSash.background:			gray70
+
+*TopLevelShell*borderColor:		gray65
+*Application*borderColor:		black
+
+*Menu*background:			#a0b4a0
+*XmMenuShell*background:		#a0b4a0
+
+*hIconBar*background:			gray75
+*hIconBar2*background:			#a0b4a0
+
+! ** Colors: PUSH ARM ****************************************************
+
+*hIconBar*armColor:                   gray75
+
+
+! ** Colors: FOREGROUND **************************************************
+
+*lAboutRelease.foreground:		white
+*lAboutLicense.foreground:		white
+*HTML.foreground:			black
+
+
+! ** Colors: TOGGLE SELECTORS ********************************************
+
+*XmToggleButtonGadget.selectColor:	yellow
+
+
+! ** Colors: HIGHLIGHTS **************************************************
+
+*highlightColor:			gray30
+
+
+! ************************************************************************
+! **				BACKGROUND PIXMAPS			**
+! ************************************************************************
+
+*BoxAbout*bboard.backgroundPixmap:		leather_light
+*BoxAbout*action_area.backgroundPixmap:		leather_light
+*BoxAbout*gBoxAbout.backgroundPixmap:		leather_light
+*BoxAbout*lAboutRelease.backgroundPixmap:	leather_light
+*BoxAbout*lAboutLicense.backgroundPixmap:	leather_light
+
+
+
+
+
+! --------- + Emacs-like bindings...
+
+*XmScrolledWindow*translations:         #override               \n\
+                        <Btn4Down>:     xc_dispatch_event()     \n\
+                        <Btn5Down>:     xc_dispatch_event()     \n
+
+*XmScrolledWindow.XmScrollBar.translations:	#override	\n\
+~Meta ~Alt Ctrl         <Btn4Down>:     PageUpOrLeft(0)         \n\
+                        <Btn4Down>:     IncrementUpOrLeft(0)    \n\
+~Meta ~Alt Ctrl         <Btn5Down>:     PageDownOrRight(0)      \n\
+                        <Btn5Down>:     IncrementDownOrRight(0)	\n
+
+*HTML.XmScrollBar.translations:		#override		\n\
+~Meta ~Alt Ctrl         <Btn4Down>:     PageUpOrLeft(0)         \n\
+                        <Btn4Down>:     IncrementUpOrLeft(0)    \n\
+~Meta ~Alt Ctrl         <Btn5Down>:     PageDownOrRight(0)      \n\
+                        <Btn5Down>:     IncrementDownOrRight(0)	\n
+
+*XmTextField.translations:		#override	\n\
+!<Key>KP_F1:		xc_insert_string("XMayday")\n\
+!<Key>KP_F2:		xc_insert_string(".html")\n\
+!<Key>KP_F3:		xc_insert_string("index.html")\n\
+!<Key>KP_F4:		xc_insert_string("Axene")\n\
+ ~Meta ~Alt Ctrl<Key>a:		beginning-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>b:		backward-character()		\n\
+ ~Meta ~Alt Ctrl<Key>d:		delete-next-character()		\n\
+ ~Meta ~Alt Ctrl<Key>e:		end-of-line()			\n\
+ ~Meta ~Alt Ctrl<Key>f:		forward-character()		\n\
+ ~Meta ~Alt Ctrl<Key>g:		process-cancel()		\n\
+ ~Meta ~Alt Ctrl<Key>h:		delete-previous-character()	\n\
+ ~Meta ~Alt Ctrl<Key>k:		delete-to-end-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>u:		beginning-of-line()		\
+				delete-to-end-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>w:		cut-clipboard()			\n\
+ Meta ~Ctrl<Key>b:		backward-word()			\n\
+  Alt ~Ctrl<Key>b:		backward-word()			\n\
+ Meta ~Ctrl<Key>d:		delete-next-word()		\n\
+  Alt ~Ctrl<Key>d:		delete-next-word()		\n\
+ Meta ~Ctrl<Key>f:		forward-word()			\n\
+  Alt ~Ctrl<Key>f:		forward-word()			\n\
+ Meta ~Ctrl<Key>w:		copy-clipboard()		\n\
+  Alt ~Ctrl<Key>w:		copy-clipboard()		\n\
+ Meta ~Ctrl<Key>osfLeft:	backward-word()			\n\
+  Alt ~Ctrl<Key>osfLeft:	backward-word()			\n\
+ Meta ~Ctrl<Key>osfRight:	forward-word()			\n\
+  Alt ~Ctrl<Key>osfRight:	forward-word()			\n\
+ Meta ~Ctrl<Key>osfBackSpace:	delete-previous-word()		\n\
+  Alt ~Ctrl<Key>osfBackSpace:	delete-previous-word()		\n\
+ Meta ~Ctrl<Key>osfDelete:	delete-next-word()		\n\
+  Alt ~Ctrl<Key>osfDelete:	delete-next-word()		\n

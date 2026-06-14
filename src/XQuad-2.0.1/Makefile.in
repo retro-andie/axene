@@ -403,9 +403,9 @@ sure:
 	@echo End time: `date`
 
 realname:	get_realname
-	@Utils/echonl.sh "Strip & Copy $(PROG_NAME) to "`get_realname`" "
+	@Utils/echonl.sh "Strip & Copy $(PROG_NAME) to "`./get_realname`" "
 	@strip $(PROG_NAME)
-	@cp $(PROG_NAME) `get_realname`
+	@cp $(PROG_NAME) `./get_realname`
 	@echo "done."
 
 # ---------------------------------------------------------------------
@@ -624,7 +624,7 @@ cross_makefile:
 install:	get_realname
 	@PREFIX=$${PREFIX:-"/usr/local/Axene"}; \
 	LANGUAGE=$${LANGUAGE:-English.us}; \
-	REALNAME=`get_realname`; \
+	REALNAME=`./get_realname`; \
 	echo "Installing $(REAL_PROG_NAME) in $$PREFIX"; \
 	Utils/install.sh $(REAL_PROG_NAME) $$REALNAME $$PREFIX; \
 	echo "Customize for $$LANGUAGE language."; \

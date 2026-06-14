@@ -367,11 +367,11 @@ sure:
 	@echo End time: `date`
 
 realname:	get_realname
-	@Utils/echonl.sh "Strip & Copy $(PROG_NAME) to "`get_realname`" "
+	@Utils/echonl.sh "Strip & Copy $(PROG_NAME) to "`./get_realname`" "
 	@strip $(PROG_NAME)
-	@cp $(PROG_NAME) `get_realname beta`
+	@cp $(PROG_NAME) `./get_realname beta`
 	@echo "done."
-	@launcher=$(REAL_LAUNCHER_NAME)"-"`get_realname | cut -d"-" -f2-`; \
+	@launcher=$(REAL_LAUNCHER_NAME)"-"`./get_realname | cut -d"-" -f2-`; \
 	Utils/echonl.sh "Strip & Copy $(LAUNCHER_NAME) to $$launcher "; \
 	strip $(LAUNCHER_NAME) ; cp $(LAUNCHER_NAME) $$launcher
 	@echo "done."
@@ -604,7 +604,7 @@ cross_makefile:
 install:	get_realname
 	@PREFIX=$${PREFIX:-"/usr/local/Axene"}; \
 	LANGUAGE=$${LANGUAGE:-English.us}; \
-	REALNAME=`get_realname beta`; \
+	REALNAME=`./get_realname beta`; \
 	echo "Installing $(REAL_PROG_NAME) in $$PREFIX"; \
 	Utils/install.sh $(REAL_PROG_NAME) $$REALNAME $$PREFIX; \
 	echo "Customize for $$LANGUAGE language."; \

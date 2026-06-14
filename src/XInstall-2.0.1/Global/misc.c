@@ -121,28 +121,30 @@ char	*chaine2;
     }
 }
 
+#ifndef ___HAVE_SETENV
 #define MAX_ENVIRONMENT_VARIABLE	3
 static char putenv_var[MAX_ENVIRONMENT_VARIABLE][300];
-static int  putenv_ptr = 0;    
+static int  putenv_ptr = 0;
 
 int Xsetenv(variable, argument)
 char *variable;
 char *argument;
-{ 
+{
   int  result;
-  
+
   if (putenv_ptr >= MAX_ENVIRONMENT_VARIABLE ||
       strlen(variable) + strlen(argument) + 2 > 300)
     {
       Xc_WARNING(("too many environment variable defined, or variable too large."));
       return -1;
     }
-  
+
   sprintf(putenv_var[putenv_ptr], "%s=%s", variable, argument);
   result = putenv(putenv_var[putenv_ptr]);
   putenv_ptr++;
   return result;
 }
+#endif /* ___HAVE_SETENV */
 
 double Xrint(value)
 double value;

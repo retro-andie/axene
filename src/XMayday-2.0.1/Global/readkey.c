@@ -26,12 +26,14 @@
 
 #include "PortCompat.h"
 
-#if defined(___freebsd) || defined(___NetBSD) || defined(___openbsd) || \
+#if defined(___rs6000) || defined(___rs6000ppc)
+#include <termios.h>
+#elif defined(___freebsd) || defined(___NetBSD) || defined(___openbsd) || \
     defined(___linux_glibc) || defined(___i386_linux) || \
     defined(___linux_libc) || defined(___linux_2_0p) || \
     defined(___sparc_linux) || defined(___alpha_linux) || \
-    defined(___alpha) || defined(___rs6000) || defined(___rs6000ppc) || \
-    defined(___hpux9) || defined(___hpux10) || defined(___sun4)
+    defined(___alpha) || defined(___hpux9) || defined(___hpux10) || \
+    defined(___sun4)
 #include <sys/termios.h>
 #else
 #include <sys/termio.h>

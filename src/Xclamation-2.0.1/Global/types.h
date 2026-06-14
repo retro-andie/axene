@@ -110,8 +110,12 @@ typedef unsigned char  uint8_t;
 
 /* BSD family (FreeBSD 2.x-4.x, NetBSD 1.x-1.5, OpenBSD 2.x):
    <sys/types.h> already defines u_int32_t etc; we provide the
-   POSIX names only if the system has not done so. */
-#  if !defined(_SYS_INT_TYPES_H_) && !defined(__int8_t_defined)
+   POSIX names only if the system has not done so.
+   NetBSD 1.6 sets __BIT_TYPES_DEFINED__ via machine/int_types.h and
+   defines uint32_t as a macro (#define uint32_t __uint32_t); guard
+   against both to avoid typedef conflicts. */
+#  if !defined(_SYS_INT_TYPES_H_) && !defined(__int8_t_defined) && \
+      !defined(__BIT_TYPES_DEFINED__)
 typedef signed char    int8_t;
 #  endif
 #  if !defined(__BIT_TYPES_DEFINED__) && !defined(_SYS_INT_TYPES_H_)
@@ -119,7 +123,7 @@ typedef short          int16_t;
 typedef long           int32_t;
 #  endif
 #  if !defined(_BITS_STDINT_UINTN_H) && !defined(_SYS_INT_TYPES_H_) && \
-     !defined(_UINT32_T)
+     !defined(_UINT32_T) && !defined(uint32_t)
 #   ifdef LONG_IS_64BIT
 typedef unsigned int   uint32_t;
 #   else

@@ -85,8 +85,17 @@
 ** =========================================================
 */
 
-#ifndef _POSIX_C_SOURCE
-# define _POSIX_C_SOURCE 199506L
+/*
+** NetBSD: _NETBSD_SOURCE already enables full POSIX + BSD extensions.
+** Setting _POSIX_C_SOURCE would suppress BSD-only symbols (M_PI, random(),
+** u_short, u_int, etc.) that system headers like sys/mount.h depend on.
+** For all other platforms, _POSIX_C_SOURCE=199506L requests POSIX.1-1995.
+*/
+#if !defined(___NetBSD) && !defined(___netbsd15) && \
+    !defined(___netbsd9) && !defined(___netbsd_modern)
+# ifndef _POSIX_C_SOURCE
+#  define _POSIX_C_SOURCE 199506L
+# endif
 #endif
 
 /*
@@ -219,8 +228,9 @@
 ** Provide a source-level shim so existing code using struct statfs /
 ** statfs() compiles unchanged.  f_frsize in statvfs maps to f_bsize
 ** in the old BSD struct statfs (fundamental block size).
+** NetBSD 1.x (1.5, 1.6) retains statfs() in <sys/mount.h>; no shim needed.
 */
-#if defined(___NetBSD)
+#if defined(___netbsd9) || defined(___netbsd_modern)
 # include <sys/statvfs.h>
 # ifndef statfs
 #  define statfs  statvfs
@@ -321,7 +331,7 @@
 */
 #if defined(___i386_linux) || defined(___linux_glibc) || \
     defined(___freebsd) || defined(___NetBSD) || defined(___openbsd) || \
-    defined(___alpha)
+    defined(___alpha) || defined(___rs6000) || defined(___rs6000ppc)
 # define ___HAVE_SETENV
 #endif
 

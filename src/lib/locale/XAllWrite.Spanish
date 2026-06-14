@@ -1,0 +1,1382 @@
+! ************************************************************************
+! ************************************************************************
+! **									**
+! **		    XAllWrite(tm) - Application Defaults		**
+! **			     (c)1997-1998 Axene   			**
+! **			http://www.axene.org/spanish/			**
+! **		           Email:  axene@axene.org			**
+! **									**
+! ************************************************************************
+! ************************************************************************
+
+
+! ************************************************************************
+! **				FONTS LIST				**
+! ************************************************************************
+
+*fontList:			-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+
+*XmText.fontList:		-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmTextField.fontList:		-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmSrolledList.fontList:	-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmFrame.XmLabelGadget.fontList: -*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*XmFrame.XmToggleButtonGadget.fontList: -*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*XmScale.fontList: 		-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+
+*FSList.fontList:		-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-iso8859-1
+*FSEditor.fontList:		-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-iso8859-1
+*hIconBar*fontList:		-*-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1
+
+*ASLBoxLabel.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxCacheTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxRegisterTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxGotoPageTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxPrintTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxKeybTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxKeybFontName.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*FSTitle.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lFontSelect.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBRegisterAdress.fontList:	-*-helvetica-medium-*-*-*-14-*-*-*-*-*-iso8859-1
+*lTitleStartup.fontList:	-*-helvetica-*-*-*-*-24-*-*-*-*-*-iso8859-1
+*lPleaseWait.fontList:		-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lStartupMessage.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*BottomBar*fontList:		-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutRelease.fontList:	-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutEnd.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lAboutTitle.fontList:		-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutLicense.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutIDDN.fontList:		-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*lLegalCopy.fontList:		-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*lBoxLicense.fontList:		-*-lucidatypewriter-medium-*-*-*-10-*-*-*-*-*-*-*
+*lBoxLegal2.fontList:		-*-lucidatypewriter-medium-*-*-*-10-*-*-*-*-*-*-*
+*lLoadingMessage.fontList:	-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*lBLSysInfo.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*FileName.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*DocumentName.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lDeadlineDate.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lDeadlineDay.fontList:		-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lLegalVersion.fontList:	-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*lLegal2Title.fontList:		-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*gBCBar*fontList: 		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*gBSBar*fontList: 		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*gASLcommands*fontList: 	-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*tBSoverview.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*clLabel.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*lColor.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*pagerFont:			-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*iconFont:			-*-helvetica-*-*-*-*-10-*-*-*-*-*-iso8859-1
+*sbTextField.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+
+
+! ************************************************************************
+! **				DEFAULT SETTINGS			**
+! ************************************************************************
+
+! Overridden by -opaqueMove option
+*opaqueMove:		10
+
+! Overridden by -/+opaqueResize option
+*opaqueResizeMsg:	No
+
+! Overridden by -keepFreeColor option
+*keepFreeColorMsg:	10
+
+! Define help bubble type. Could be "Off", "Classic" or "Fun"
+*helpBubblesMsg:	Classic
+
+! ************************************************************************
+! **				SHORTCUTS				**
+! ************************************************************************
+
+*pmFile.mNew.AcceleratorText:		Ctrl+N
+*pmFile.mOpen.AcceleratorText:		Ctrl+O
+*pmFile.mSave.AcceleratorText:		Ctrl+S
+*pmFile.mPrint.AcceleratorText:		Ctrl+P
+*mImportImage.AcceleratorText:		Ctrl+I
+*mImportText.AcceleratorText:		Ctrl+T
+*mImportVector.AcceleratorText:		Ctrl+H
+*pmFile.mQuit.AcceleratorText:		Ctrl+Q
+
+*pmEdit.mUndo.AcceleratorText:  	Ctrl+Z
+*pmEdit.mRedo.AcceleratorText:  	Ctrl+R
+*pmEdit.mCut.AcceleratorText:  		Ctrl+X
+*pmEdit.mCopy.AcceleratorText:  	Ctrl+C
+*pmEdit.mPaste.AcceleratorText:  	Ctrl+V
+*pmEdit.mDelete.AcceleratorText:  	Del
+*pmEdit.mSelectAll.AcceleratorText:	Ctrl+A
+
+*pmDisplay.mRedraw.AcceleratorText:	Meta+X
+
+*pmFile.mNew.Accelerator:		Ctrl<Key>N
+*pmFile.mOpen.Accelerator:		Ctrl<Key>O
+*pmFile.mSave.Accelerator:		Ctrl<Key>S
+*pmFile.mPrint.Accelerator:		Ctrl<Key>P
+*mImportImage.Accelerator:		Ctrl<Key>I
+*mImportText.Accelerator:		Ctrl<Key>T
+*mImportVector.Accelerator:		Ctrl<Key>H
+*pmFile.mQuit.Accelerator:		Ctrl<Key>Q
+
+*pmEdit.mUndo.Accelerator:  		Ctrl<Key>Z
+*pmEdit.mRedo.Accelerator:  		Ctrl<Key>R
+*pmEdit.mCut.Accelerator:  		Ctrl<Key>X
+*pmEdit.mCopy.Accelerator:  		Ctrl<Key>C
+*pmEdit.mPaste.Accelerator:  		Ctrl<Key>V
+*pmEdit.mSelectAll.Accelerator:		Ctrl<Key>A
+
+*pmDisplay.mRedraw.Accelerator:		Meta<Key>X
+
+
+
+! ************************************************************************
+! **				CURSORS					**
+! ************************************************************************
+
+*menuCursor:				right_ptr
+*cursorPositionVisible:			False
+
+
+! ************************************************************************
+! **		TOGGLE INDICATOR SIZE, VISUAL & TYPE			**
+! ************************************************************************
+
+*indicatorSize:					13
+*XmToggleButton.indicatorSize:			0
+*XmFrame.XmToggleButtonGadget.indicatorSize:	10
+*XmMenuShell*XmToggleButtonGadget.indicatorSize:	9
+*gBSBar.XmToggleButtonGadget.indicatorSize:	0
+*gBCBar.XmToggleButtonGadget.indicatorSize:	0
+
+*XmToggleButton.enableToggleVisual:		True
+*XmToggleButtonGadget.enableToggleVisual:	True
+
+*indicatorType:					XmONE_OF_MANY
+*rbPages*indicatorType:				XmN_OF_MANY
+*rbDraftMode.indicatorType:			XmN_OF_MANY
+*rbWhatPrint*indicatorType:			XmN_OF_MANY
+*tbRelativInterline.indicatorType:		XmN_OF_MANY
+*tbETHTMLRulers.indicatorType:			XmN_OF_MANY
+*tbBCKeepCacheOnDisk.indicatorType:		XmN_OF_MANY
+*rbRegistered*indicatorType:			XmN_OF_MANY
+*tbKeepAlias.indicatorType:			XmN_OF_MANY
+*tbBSwidth.indicatorType:			XmN_OF_MANY
+*tbFSITdoc.indicatorType:			XmN_OF_MANY
+*tbFSITsupNewline.indicatorType:		XmN_OF_MANY
+
+*XmFrame.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*gBSglobal.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*fBSsubscript.indicatorType:			XmONE_OF_MANY
+*fBSsupscript.indicatorType:			XmONE_OF_MANY
+
+*XmMenuShell*XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+
+
+! ************************************************************************
+! **			TRAVERSAL & HIGHLIGHT THICKNESS			**
+! ************************************************************************
+
+*vIconBar.XmRowColumn.traversalOn:              False
+*XmPanedWindow*traversalOn:                     False
+*hIconBar*XmPushButton.traversalOn:             False
+*hIconBar*XmToggleButton.traversalOn:           False
+*hIconBar*XmTextField.traversalOn:		False
+*imStyle*traversalOn:                           False
+*imFontFamily*traversalOn:                      False
+*clArrow.traversalOn:                           False
+*MainDocument.traversalOn:                      True
+
+*highlightThickness:				1
+*hIconBar*highlightThickness:			0
+*hIconBar*XmSeparatorGadget.highlightThickness:	7
+*hIconBar.XmRowColumn.highlightThickness:	0
+*vIconBar*highlightThickness:			0
+*gASLcommands*highlightThickness:		1
+*clLabel.highlightThickness:			3
+*lColor.highlightThickness:			3
+*hIconBar*sbTextField.highlightThickness:	1
+*XmArrowButton.highlightThickness:		0
+
+
+! ************************************************************************
+! **				SIZE & RESIZE				**
+! ************************************************************************
+
+*ASLItemL.resizable:				False
+
+*ASLItemL.width:				200
+*ClipboardPrivate.width:			104
+
+*XmTextField.resizeWidth:			False
+*XmFrame.XmBulletinBoard.resizePolicy:		XmRESIZE_NONE
+*bboard.XmRowColumn.resizeWidth:		False
+*bboard.XmRowColumn.resizeHeight:		False
+
+*PrivateClipArea.resizeHeight:			False
+*PrivateClipArea.resizeWidth:			False
+
+*hIconBar.XmRowColumn.resizeHeight:		False
+*vIconBar.XmRowColumn.resizeWidth:		False
+
+! ************************************************************************
+! *				DISPLAY POLICY				**
+! ************************************************************************
+
+*ClipboardPrivate.scrollBarDisplayPolicy:	XmAS_NEEDED
+*stBoxLicense*scrollBarDisplayPolicy:		XmAS_NEEDED
+*stBoxLegal2*scrollBarDisplayPolicy:		XmAS_NEEDED
+
+
+! ************************************************************************
+! **                               ALIGMENTS				**
+! ************************************************************************
+
+*XmOptionMenu*alignment:		ALIGNMENT_BEGINNING
+
+!-- Paragraphs dialog box -----------------------------------------------
+*lBRAlinea.alignment:			ALIGNMENT_END
+*lBRMarginL.alignment:			ALIGNMENT_END
+*lBRMarginR.alignment:			ALIGNMENT_END
+*lWordDistribution.alignment:		ALIGNMENT_END
+*lRatioMin.alignment:			ALIGNMENT_END
+*lRatioMax.alignment:			ALIGNMENT_END
+*lInterParagraph.alignment:		ALIGNMENT_END
+*lInterLine.alignment:			ALIGNMENT_END
+
+!-- Fonts dialog box ----------------------------------------------------
+*lBSwidth.alignment:			ALIGNMENT_END
+*lBSfamily.alignment:			ALIGNMENT_END
+*lBSfontsize.alignment:			ALIGNMENT_END
+*lBSscale.alignment:			ALIGNMENT_END
+*lBSypos.alignment:			ALIGNMENT_END
+*lBSundeline_dy.alignment:		ALIGNMENT_END
+*lBSstrikeout_dy.alignment:		ALIGNMENT_END
+*lBSshadow_dy.alignment:		ALIGNMENT_END
+*lBSshadow_dx.alignment:		ALIGNMENT_END
+*tbBSsupscript.alignment:		ALIGNMENT_BEGINNING
+*tbBSsubscript.alignment:		ALIGNMENT_BEGINNING
+*tbBSsmallcaps.alignment:		ALIGNMENT_BEGINNING
+*tbBSbigcaps.alignment:			ALIGNMENT_BEGINNING
+*tbBSwidth.alignment:			ALIGNMENT_BEGINNING
+
+!-- Colors dialog box ---------------------------------------------------
+*l_C.alignment:				ALIGNMENT_END
+*l_M.alignment:				ALIGNMENT_END
+*l_Y.alignment:				ALIGNMENT_END
+*l_K.alignment:				ALIGNMENT_END
+*l_R.alignment:				ALIGNMENT_END
+*l_G.alignment:				ALIGNMENT_END
+*l_B.alignment:				ALIGNMENT_END
+*l_H.alignment:				ALIGNMENT_END
+*l_S.alignment:				ALIGNMENT_END
+*l_L.alignment:				ALIGNMENT_END
+*l_G1.alignment:			ALIGNMENT_END
+
+!-- Image cache dialog box ----------------------------------------------
+*lMemTotal.alignment:			ALIGNMENT_END
+*lMemUsed.alignment:			ALIGNMENT_END
+*lMemFree.alignment:			ALIGNMENT_END
+*lDiskTotal.alignment:			ALIGNMENT_END
+*lDiskUsed.alignment:			ALIGNMENT_END
+*lDiskFree.alignment:			ALIGNMENT_END
+*lKb.alignment:				ALIGNMENT_BEGINNING
+*tbBCKeepCacheOnDisk.alignment:		ALIGNMENT_BEGINNING
+
+!-- Frame attributes dialog box -----------------------------------------
+*lBABackColor.alignment:		ALIGNMENT_END
+*lBABorderColor.alignment:		ALIGNMENT_END
+*lBABorderWidth.alignment:		ALIGNMENT_END
+
+!-- Print dialog box ----------------------------------------------------
+*tbAllPages.alignment:			ALIGNMENT_BEGINNING
+*tbBPDefaultPrinter.alignment:		ALIGNMENT_BEGINNING
+
+!-- Frame alignment dialog box ------------------------------------------
+*lBASpacingH.alignment:			ALIGNMENT_END
+*lBASpacingV.alignment:			ALIGNMENT_END
+*tbDistributionH.alignment:		ALIGNMENT_BEGINNING
+*tbDistributionV.alignment:		ALIGNMENT_BEGINNING
+
+!-- Mailing Lists dialog box --------------------------------------------
+*lMailCommand.alignment:		ALIGNMENT_END
+*lRegisterReply.alignment:		ALIGNMENT_END
+
+!-- Font replacement dialog box -----------------------------------------
+*tbKeepAlias.alignment:			ALIGNMENT_BEGINNING
+
+!-- Export HTML file selector -------------------------------------------
+*tbETHTMLRulers.alignment:		ALIGNMENT_BEGINNING
+*lETHTMLFrameBreak.alignment:		ALIGNMENT_END
+*lETHTMLCarrierReturn.alignment:	ALIGNMENT_END
+*lETHTMLStyleBegin.alignment:		ALIGNMENT_END
+*lETHTMLStyleEnd.alignment:		ALIGNMENT_END
+
+!-- Import TEXT file selector -------------------------------------------
+*tbFSITdoc.alignment:			ALIGNMENT_BEGINNING
+*tbFSITsupNewline.alignment:		ALIGNMENT_BEGINNING
+
+!-- Legal box -----------------------------------------------------------
+*lBoxLicense.alignment:			ALIGNMENT_BEGINNING
+*lBoxLegal2.alignment:			ALIGNMENT_BEGINNING
+
+! ************************************************************************
+! **				SHADOW THICKNESS			**
+! ************************************************************************
+
+*shadowThickness:				1
+*XmFrame.shadowThickness:			2
+*XmFrame.XmToggleButtonGadget.shadowThickness:	0
+*XmSeparatorGadget.shadowThickness:		2
+*XmRowColumn.shadowThickness:			1
+*XmCascadeButtonGadget.shadowThickness:		1
+*XmScrollBar.shadowThickness:			1
+*XmBulletinBoard.shadowThickness:		0
+*XmForm.shadowThickness:			0
+*XmRadioBox*shadowThickness:			0
+
+*XmFileSelectionBox*shadowThickness:		1
+*sbRowColumnH.shadowThickness:			0
+
+*vIconBar.shadowThickness:			0
+*vIconBar3.shadowThickness:			1
+*IconVlogo.shadowThickness:			0
+*vIconBar*XmRowColumn.shadowThickness:		0
+*vIconBar*XmToggleButton.shadowThickness:	1
+*vIconBar*XmPushButton.shadowThickness:		1
+
+*hIconBar.shadowThickness:			1
+*hIconBar*XmRowColumn.shadowThickness:		0
+*hIconBar*XmToggleButton.shadowThickness:	1
+*hIconBar*XmPushButton.shadowThickness:		1
+*hIconBar*item_menu.shadowThickness:		1
+*BottomBar.shadowThickness:			1
+
+*gBSconfig*XmRowColumn.shadowThickness:		0
+*tbDistributionH.shadowThickness:		0
+*tbDistributionV.shadowThickness:		0
+*tbAllPages.shadowThickness:			0
+*tbRelativInterline.shadowThickness:		0
+*tbBCKeepCacheOnDisk.shadowThickness:		0
+
+*tbBSsupscript.shadowThickness:			0
+*tbBSsubscript.shadowThickness:			0
+*tbBSsmallcaps.shadowThickness:			0
+*tbBSbigcaps.shadowThickness:			0
+*tbBSwidth.shadowThickness:			0
+
+*tbETHTMLRulers.shadowThickness:		0
+*tbBPDefaultPrinter.shadowThickness:		0
+
+*tbFSITdoc.shadowThickness:			0
+*tbFSITsupNewline.shadowThickness:		0
+
+*tbKeepAlias.shadowThickness:			0
+
+*Clipboard.sashShadowThickness:	 		1
+
+
+! ************************************************************************
+! **					MARGINS				**
+! ************************************************************************
+
+*XmBulletinBoard.marginWidth:			0
+*XmBulletinBoard.marginHeight:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButtonGadget.marginWidth:		0
+*XmToggleButtonGadget.marginHeight:		0
+*XmFrame.XmBulletinBoard.marginWidth:		14
+*XmFrame.XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginWidth:		10
+*XmFrame.XmLabel.marginLeft:			1
+*XmFrame.XmLabel.marginRight:			1
+*XmLabel.marginLeft:				3
+*XmLabel.marginRight:				3
+
+*fBAPreview.marginWidth:			5
+*fBAPreview.marginHeight:			5
+
+*BottomBar.marginHeight:			1
+*BottomBar.marginWidth:				1
+
+*hIconBar.verticalSpacing:			3
+*hIconBar.XmRowColumn.leftOffset:		34
+*hIconBar.XmRowColumn.rightOffset:		3
+
+*hIconBar*XmPushButton.marginWidth:		0
+*hIconBar*XmPushButton.marginHeight:		0
+*hIconBar*XmSeparatorGadget.margin:		0
+*hIconBar.XmRowColumn.spacing:			0
+*hIconBar.XmRowColumn.marginWidth:		2
+*hIconBar.XmRowColumn.marginHeight:		2
+*hIconBar*sbTextField.marginHeight:		3
+
+*rchIconBarFontSize.borderWidth:		0
+*rchIconBarFontSize.marginHeight:		0
+*rchIconBarFontSize.spacing:			0
+
+*vIconBar.verticalSpacing:			0
+*vIconBar.horizontalSpacing:			0
+*vIconBar*XmPushButton.marginWidth:		0
+*vIconBar*XmPushButton.marginHeight:		0
+*vIconBar.XmRowColumn.spacing:			0
+*vIconBar.XmRowColumn.marginWidth:		0
+*vIconBar.XmRowColumn.marginHeight:		0
+*vIconBar.XmRowColumn.borderWidth:		0
+
+*XmCascadeButtonGadget.marginWidth:		8
+*XmCascadeButtonGadget.marginHeight:		2
+*XmPushButtonGadget.marginWidth:		8
+*XmPushButtonGadget.marginHeight:		2
+*XmToggleButtonGadget.marginWidth:		5
+*XmToggleButtonGadget.marginHeight:		1
+*XmLabel.marginWidth:				0
+*XmLabel.marginHeight:				0
+
+*Application.verticalSpacing:			0
+
+*clDrawing.marginLeft:				0
+*clDrawing.marginRight:				0
+
+*gPrintPage.marginHeight:			4
+*gPrintPage.marginWidth:			4
+*gBDFormat.marginHeight:			2
+
+*XmScrolledWindow.scrolledWindowMarginWidth:	2
+*XmScrolledWindow.scrolledWindowMarginHeight:	2
+
+*XmFrame.marginHeight:				0
+*XmFrame.marginWidth:				0
+*Color results.marginWidth:			3
+*Color results.marginHeight:			3
+*Color results.borderWidth:			10
+
+*IconVlogo.marginLeft:				0
+*IconVlogo.marginRight:				0
+
+*lColor.marginHeight:				5
+
+*item_menu.XmLabel.marginLeft:			6
+*item_menu.XmLabel.marginRight:			12
+
+*imStyle*marginWidth:				0
+*imStyle*spacing:				0
+*imFontFamily*marginWidth:			0
+*imFontFamily*spacing:				0
+
+*BoxInsertChar.geometry:			-0+0
+
+*aboutCommentsMsg:	EMail: contact@axene.org\n\
+Troubles: support@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org/
+
+*lStartupMessage.labelString:  	 ©1997-1999 Axene.
+
+*MainDocument.borderWidth:			1
+
+*XmToggleButton.borderWidth:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButton.spacing:			0
+*XmToggleButton.indicatorOn:			False
+
+*rcAlignV.marginHeight:				0
+*rcAlignH.marginHeight:				0
+*rcAlignV.spacing:				0
+*rcAlignH.spacing:				0
+
+*XmRadioBox.marginHeight:			0
+*XmRadioBox.spacing:				0
+
+*PrivateClipArea.spacing:			0
+*XmScale.showValue:				True
+*XmScale.orientation:				HORIZONTAL
+
+*gBLFrame2_1*marginHeight:			0
+*gBLFrame2_1*marginWidth:			0
+
+*lBoxLicense.marginLeft:			2
+*lBoxLicense.marginRight:			2
+*lBoxLicense.highlightThickness: 		0
+
+*lBoxLegal2.marginLeft:				2
+*lBoxLegal2.marginRight:			2
+*lBoxLegal2.highlightThickness: 		0
+
+*stBoxLicense*borderWidth: 			0
+*stBoxLicense.highlightThickness: 		2
+*stBoxLicense.shadowThickness: 			0
+*stBoxLicense.spacing: 				0
+*stBoxLicense*traversalOn: 			True
+*stBoxLicense*scrolledWindowMarginWidth:	0
+*stBoxLicense*scrolledWindowMarginHeight:	0
+
+*stBoxLicense*XmScrollBar.showArrows:		False
+
+*stBoxLegal2*borderWidth: 			0
+*stBoxLegal2.highlightThickness: 		2
+*stBoxLegal2.shadowThickness: 			0
+*stBoxLegal2.spacing: 				0
+*stBoxLegal2*traversalOn: 			True
+*stBoxLegal2*scrolledWindowMarginWidth:		0
+*stBoxLegal2*scrolledWindowMarginHeight:	0
+
+*stBoxLegal2*XmScrollBar.showArrows:		False
+
+
+
+*title:					Axene XAllWrite 2.0.1 - Word Processor
+*lPleaseWait.labelString:		Lanzamiento en curso...
+
+*defaultFrameNameMsg:			Marco
+*defaultDocumentNameMsg:		Sin título
+*defaultPageNameMsg:			Página
+*automaticColorMsg:			Automático
+
+! ************************************************************************
+! **			MNEMONICS for PULLDOWN MENUS			**
+! ************************************************************************
+
+*pmFile.mnemonic:			F
+*pmEdit.mnemonic:			E
+*pmDisplay.mnemonic:			D
+*pmFormat.mnemonic:			o
+*pmInsert.mnemonic:			I
+*pmWindows.mnemonic:			W
+*pmHelp.mnemonic:			H
+
+*pmFile.mNew.mnemonic:			N
+*pmFile.mOpen.mnemonic:			O
+*pmFile.mClose.mnemonic:		C
+*pmFile.mSave.mnemonic:			S
+*pmFile.mSaveAs.mnemonic:		A
+*pmFile.mImport.mnemonic:		I
+*mImportImage.mnemonic:			I
+*mImportText.mnemonic:			T
+*mImportVector.mnemonic:		V
+*pmFile.mSaveAll.mnemonic:		v
+*pmFile.mPrint.mnemonic:		P
+*pmFile.mQuit.mnemonic:			x
+
+*pmEdit.mUndo.mnemonic:  		U
+*pmEdit.mRedo.mnemonic:  		R
+*pmEdit.mCut.mnemonic:  		t
+*pmEdit.mCopy.mnemonic:  		C
+*pmEdit.mPaste.mnemonic:  		P
+*pmEdit.mDelete.mnemonic:  		D
+*pmEdit.mSelectAll.mnemonic:		S
+*pmEdit.mColors.mnemonic:  		l
+*pmEdit.mPreferences.mnemonic:		P
+*mCache.mnemonic:			I
+
+*pmDisplay.mnemonic:			D
+*pmDisplay.mRedraw.mnemonic:		R
+*pmDisplay.mRealSize.mnemonic:		T
+*pmDisplay.mScreenSize.mnemonic:	E
+*pmDisplay.mShowFrameBorders.mnemonic:	B
+*pmDisplay.mFullWidth.mnemonic:		L
+*pmDisplay.mShowSpecChars.mnemonic:	t
+*pmDisplay.mShowInfobar.mnemonic:	I
+
+*pmInsert.mInsertPageBreak.mnemonic:	S
+*pmInsert.mInsertEuro.mnemonic:		u
+*pmInsert.mDrawBar.mnemonic:		R
+*pmInsert.mDrawPolygon.mnemonic:	P
+*pmInsert.mDrawEllipse.mnemonic:	E
+
+*pmFormat.mStyles.mnemonic:  		F
+*pmFormat.mRulers.mnemonic:  		P
+*pmFormat.mFonts.mnemonic:  		o
+*mBold.mnemonic:  			B
+*mItalic.mnemonic:  			I
+*mUnderline.mnemonic:  			U
+*mStrikeout.mnemonic:  			S
+*mShadow.mnemonic:  			h
+*mSmallCaps.mnemonic:  			m
+*mBigCaps.mnemonic:  			C
+*mSubscript.mnemonic:  			b
+*mSupscript.mnemonic:  			p
+*pmFormat.mFrame.mnemonic:		r
+*mPointInsert.mnemonic:			I
+*mPointDelete.mnemonic:			t
+*mPointMove.mnemonic:			c
+*mMoveDown.mnemonic:			l
+*mMoveUp.mnemonic:			h
+*mBackground.mnemonic:			n
+*mForeground.mnemonic:			P
+*mLock.mnemonic:			V
+*mAlign.mnemonic:			g
+*mAttribs.mnemonic:			b
+*mFrameDelete.mnemonic:			u
+*mTextFlow.mnemonic:			H
+*mTFaround.mnemonic:			A
+*mTFleft.mnemonic:			G
+*mTFright.mnemonic:			D
+*mTFskip.mnemonic:			S
+*mTFunder.mnemonic:			E
+*mTFover.mnemonic:			u
+*mTFouthole.mnemonic:			R
+
+*pmWindows.mCascade.mnemonic:		C
+*pmWindows.mTile.mnemonic:		T
+
+*pmHelp.mOverview.mnemonic:		v
+*pmHelp.mContent.mnemonic:		C
+*pmHelp.mKeyboard.mnemonic:		K
+*pmHelp.mMouse.mnemonic:		M
+*pmHelp.mOnItem.mnemonic:		O
+*pmHelp.mUsingHelp.mnemonic:		U
+
+*pmHelp.mAbout.mnemonic:		A
+*pmHelp.mLegal.mnemonic:		L
+*pmHelp.mRegistration.mnemonic:		i
+
+
+! ************************************************************************
+! **				PULLDOWN MENUS				**
+! ************************************************************************
+
+*pmFile.labelString:			Fichero
+*pmFile.mNew.labelString:		Nuevo...
+*pmFile.mOpen.labelString:		Abrir...
+*pmFile.mClose.labelString:		Cerrar
+*pmFile.mSave.labelString:		Salvaguardar
+*pmFile.mSaveAs.labelString:		Salvaguardar bajo...
+*pmFile.mSaveAll.labelString:		Salvaguardarlo todo
+*pmFile.mImport.labelString:		Importar
+*mImportImage.labelString:		Imagen...
+*mImportText.labelString:		Texto...
+*mImportVector.labelString:		Dibujo vectorial...
+*pmFile.mPrint.labelString:		Imprimir...
+*pmFile.mQuit.labelString:		Salir...
+
+*pmEdit.labelString:			Edición
+*pmEdit.mUndo.labelString:  		Undo*
+*pmEdit.mRedo.labelString:  		Redo*
+*pmEdit.mCut.labelString:		Cortar
+*pmEdit.mCopy.labelString:		Copiar
+*pmEdit.mPaste.labelString:		Pegar
+*pmEdit.mDelete.labelString:		Suprimir
+*pmEdit.mSelectAll.labelString:		Seleccionarlo todo
+*pmEdit.mColors.labelString:		Colores...
+*pmEdit.mPreferences.labelString:	Properties*
+*mCache.labelString:			Image Cache...*
+
+*pmDisplay.labelString:			Visualización
+*pmDisplay.mRedraw.labelString:		Refrescarlo Todo
+*pmDisplay.mRealSize.labelString:	Tamaño Real
+*pmDisplay.mScreenSize.labelString:	Página Entera
+*pmDisplay.mFullWidth.labelString:	Plena Anchura
+*pmDisplay.mMaskSpecChars.labelString:	Hide Typo marks*
+*pmDisplay.mShowSpecChars.labelString:	Show Typo marks*
+*pmDisplay.mMaskFrameBorders.labelString: Ocultar Lindes de los marcos
+*pmDisplay.mShowFrameBorders.labelString: Visualizar Lindes de los marcos
+*pmDisplay.mMaskInfobar.labelString:	Ocultar barra de Informaciones
+*pmDisplay.mShowInfobar.labelString:	Visualizar barra de Informaciones
+
+*pmInsert.labelString:			Insert*
+*pmInsert.mInsertPageBreak.labelString:	Page Break*
+*pmInsert.mInsertEuro.labelString:	Euro Symbol*
+*pmInsert.mDrawBar.labelString:		Crear Rectángulo
+*pmInsert.mDrawPolygon.labelString:	Crear Polígono
+*pmInsert.mDrawEllipse.labelString:	Crear Elipse
+
+*pmFormat.labelString:			Formato
+*pmFormat.mStyles.labelString: 		Estilos...
+*pmFormat.mRulers.labelString: 		Reglas...
+*pmFormat.mFonts.labelString:		Fonts*
+*mBold.labelString:			Negrilla
+*mItalic.labelString:			Bastardilla
+*mUnderline.labelString:		Subrayado
+*mStrikeout.labelString:		Barrado
+*mShadow.labelString:			Sombreado
+*mSmallCaps.labelString:		Pequeñas mayúsculas
+*mBigCaps.labelString:			Grandes mayúsculas
+*mSubscript.labelString:		Indice
+*mSupscript.labelString:		Exponente
+*pmFormat.mFrame.labelString:		Marco
+*mPointInsert.labelString:		Insertar punto
+*mPointDelete.labelString:		Suprimir punto
+*mPointMove.labelString:		Desplazar punto
+*mMoveDown.labelString:			Alejar
+*mMoveUp.labelString:			Acercar
+*mBackground.labelString:		Plano de fondo
+*mForeground.labelString:		Primer plano
+*mLock.labelString:			Bloquear
+*mUnlock.labelString:			Desbloquear
+*mAttribs.labelString:			Attributes...*
+*mFrameDelete.labelString:		Delete*
+*pmFormat.mTextFlow.labelString:	textflow*
+*mTFaround.labelString:			Around*
+*mTFleft.labelString:			Left*
+*mTFright.labelString:			Right*
+*mTFskip.labelString:			Skip frame*
+*mTFouthole.labelString:		Fill in hole*
+*mTFunder.labelString:			Under*
+*mTFover.labelString:			Over*
+
+*pmWindows.labelString:			Ventanas
+*pmWindows.mCascade.labelString:	Cascada
+*pmWindows.mTile.labelString:		Mosaico
+
+*pmHelp.labelString:			Ayuda
+*pmHelp.mOverview.labelString:		Ayuda General...
+*pmHelp.mContent.labelString:		Indice...
+*pmHelp.mKeyboard.labelString:		Teclado...
+*pmHelp.mMouse.labelString:		Ratón...
+*pmHelp.mOnItem.labelString:		Ayuda en un Item
+*pmHelp.mUsingHelp.labelString:		Utilizar la ayuda...
+*pmHelp.mAbout.labelString:		A propósito de XAllWrite...
+*pmHelp.mLegal.labelString:		Licencia...
+*pmHelp.mRegistration.labelString:	Listas de Difusión...
+
+
+! ************************************************************************
+! **				POPUP MENUS				**
+! ************************************************************************
+
+*Ruler Context Menu*mAlignment.labelString:	Alignment*
+*popup_Ruler Context Menu*mLeft.labelString:	Left*
+*popup_Ruler Context Menu*mRight.labelString:	Right*
+*popup_Ruler Context Menu*mCenter.labelString:	Center*
+*popup_Ruler Context Menu*mCperiod.labelString:	Center on decimal point*
+*Ruler Context Menu*mFiller.labelString:	Filling character*
+*popup_Ruler Context Menu*mNone.labelString:	None*
+*popup_Ruler Context Menu*mPoint.labelString:	. . . . . . . . . . . . .
+*popup_Ruler Context Menu*mDot.labelString:	· · · · · · · · · · ·
+*popup_Ruler Context Menu*mHyphen.labelString:	­­­­­­­­­­­­­­­­­­
+*popup_Ruler Context Menu*mUserdef.labelString:	User defined...*
+*Ruler Context Menu*mDelete.labelString:	Delete tabulation*
+
+
+! ************************************************************************
+! **				DIALOG BOXES				**
+! ************************************************************************
+
+
+! ** Dialog Box: REPLACE FONT ********************************************
+
+*lFontSelect.labelString:		Font not available
+*tbKeepAlias.labelString:		Keep alias
+
+
+! ** Dialog Box: LICENSE *************************************************
+
+*lBoxLicense.labelString: The Licence file is missing.\n\
+It should be in $AXENE_LIB/license/\n\
+The installation may be incomplete.
+
+*keyFirstMsg:		Licencia concedida a %s
+*keySecondMsg:		%s
+*noKeyFirstMsg:		Ud no tiene llave
+*noVKeyFirstMsg:	Llave no válida
+*noKeySecondMsg:	Ejecución en modo limitado
+*noVKeySecondMsg:	Sírvase llamar support@axene.org
+*deadlineExpiredMsg:	Su llave ha llegado a expiración
+*deadlineExpired2Msg:	You must register once again
+
+*lLegalAdress.labelString: Email: contact@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org
+
+*lLegalCopy.labelString: Copyright ©1997-2000 Axene, Inc. All rights reserved.\n\
+XAllWrite is a registered trademark.
+
+*BoxLegal*Ok.labelString:		How to register...*
+*BoxLegal*Cancel.labelString:		Register later*
+
+
+! ** Dialog Box: LICENSE2 ************************************************
+
+*lLegal2Title.labelString:		Where and how to register ?
+*lBoxLegal2.labelString:		REGISTER file not found.\n\
+This file should be in $AXENE_LIB/license/ directory\n\
+Maybe your installation is not complete.*
+
+
+! ** Dialog Box: COLORS **************************************************
+
+*editColorsMsg:				Colores
+*lColor.labelString:			Testigo de color
+*l_C.labelString:			Cian
+*l_M.labelString:			Magenta
+*l_Y.labelString:			Amarillo
+*l_K.labelString:			Negro
+*l_R.labelString:			Rojo
+*l_G.labelString:			Verde
+*l_B.labelString:			Azul
+*l_H.labelString:			Tinte
+*l_S.labelString:			Saturación
+*l_L.labelString:			Luminosidad
+*l_G1.labelString:			Grís
+*lColorAdd.labelString:			Añadir color
+*lColorDel.labelString:			Suprimir color
+*fBCmain.labelString:			Configuración
+*tbBC_CMYK.labelString:			CMAN
+*tbBC_RGB.labelString:			RVA
+*tbBC_HSL.labelString:			TSL
+*tbBC_GRAY.labelString:			Grís
+
+! ** Dialog Box: FRAME ATTRIBS *******************************************
+
+*frameAttribsMsg:			Atributos de los marcos
+*lBABackColor.labelString:		Color de fondo
+*lBABorderColor.labelString:		Color del linde
+*lBABorderWidth.labelString:		Grosor del linde
+*fBAPreview.labelString:		Testigo
+
+! ** Dialog Box: FONTS ***************************************************
+
+*editStylesMsg:				Placas
+*lAddFont.labelString:			Añadir placa
+*lDelFont.labelString:			Suprimir placa 
+*tbBSglobal.labelString:		Atributos
+*tbBSconfig.labelString:		Configuraciones 
+*lBSfamily.labelString:			Familia 
+*lBSfontsize.labelString:		Tamaño
+*lBSwidth.labelString:			Anchura
+*lBSthickness.labelString:		Gr.
+*lBSypos.labelString:                   Y-Pos
+*lBSscale.labelString:			Tamaño
+*lBSshadow_dx.labelString:              dX
+*lBSshadow_dy.labelString:              dY
+*lBSstrikeout_dy.labelString:           dY
+*lBSunderline_dy.labelString:           dY
+*tbBSsupscript.labelString:		Exponente...
+*tbBSsubscript.labelString:		Indice...
+*tbBSsmallcaps.labelString:		Pequeñas mayúsculas
+*tbBSbigcaps.labelString:		Mayúsculas
+*tbBSwidth.labelString:			Anchura...
+*fBSoverview.labelString:		Resumen de los parámetros
+*fBSpreview.labelString:		Testigo
+*fBSmain.labelString:			Configuración
+*fBSwidth.labelString:			Anchura
+*fBSunderline.labelString:		Subrayado
+*fBSstrikeout.labelString:		Barrado
+*fBSshadow.labelString:			Sombreado
+*fBSsupscript.labelString:		Exponente
+*fBSsubscript.labelString:		Indice
+*styleBoldMsg:				Negrilla
+*styleItalicMsg:			Bastardilla
+*styleUnderlineMsg:			Subrayado
+*styleThicknessMsg:                     Gr
+*styleSimpleMsg:			simple
+*styleDoubleMsg:			doble
+*styleTripleMsg:			triple
+*styleNoSpaceMsg:			salvo espacios
+*styleStrikeoutMsg:			Barrado
+*styleShadowMsg:			Sombreado
+*styleWidthMsg:				Anchura
+*styleSubscriptMsg:			Indice
+*styleScaleMsg:				E
+*styleSupscriptMsg:			Exponente
+*styleSmallCapsMsg:			Pequeñas mayúsculas
+*styleBigCapsMsg:			Grandes mayúsculas
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:		Impresión
+*lNbCopy.labelString:			Cantidad de copias
+*tbAllPages.labelString:		Todo el documento
+*rbDraftMode.labelString:		Modo Prueba
+*rbBWMode.labelString:			N/B (niveles de grís)
+*rbColorMode.labelString:		Color
+*rbLeftPages.labelString:		Páginas izquierdas
+*rbRightPages.labelString:		Páginas derechas
+*lFrom.labelString:			Página
+*lTo.labelString:			a
+*fPrinter.labelString:			Imprimir en...
+*fHowPrint.labelString:			Tipos de impresión
+*fWhatPrint.labelString:		Opciones de impresión
+*fPrintPage.labelString:		Selección de páginas
+
+! ** Dialog Box: IMAGE CACHE *********************************************
+
+*lBoxCacheTitle.labelString:		Informaciones Cache Imágenes
+*lMemTotal.labelString:			Memoria cache total
+*lMemUsed.labelString:			Memoria cache utilizada
+*lMemFree.labelString:			Memoria cache libre
+*lDiskTotal.labelString:		Disco cache total
+*lDiskUsed.labelString:			Disco cache utilizado
+*lDiskFree.labelString:			Disco cache libre
+*lKb.labelString:			Ko
+*tbBCKeepCacheOnDisk.labelString:	Salvaguardar el cache al salir
+*pbBCCleanMemCache.labelString:		V\n a \n c \n i \n a \nr
+*pbBCCleanDiskCache.labelString:        V\n a \n c \n i \n a \nr
+*fBCmemoryCache.labelString:		Cache memoria
+*fBCdiskCache.labelString:		Cache disco
+
+! ** Dialog Box: GOTO PAGE ***********************************************
+
+*lBoxGotoPageTitle.labelString:		Go to page*
+*lPage.labelString:			Page*
+*lOfPage.labelString:			of*
+
+
+! ** Dialog Box: ABOUT XALLWRITE *****************************************
+
+*aboutTitleMsg:		XAllWrite® - Word Processor
+*aboutReleaseBetaMsg:	XAllWrite versión %d.%d.%d
+*aboutReleaseMsg:	XAllWrite versión %d.%d
+*aboutNoLicenseMsg:	This software is UNREGISTERED\nRegistration is free
+*licenseCommercialMsg:	This software is registered by\n%s\n%s
+*licensePersonalMsg:	This software is registered by\n%s\n
+
+
+! ** Dialog Box: MAILING LISTS *******************************************
+
+*lBoxRegisterTitle.labelString:		Mailing Lists
+*lBRegisterAdress.labelString:		mailto: majordomo@axene.org
+*BoxRegistration*Ok.labelString: 	Send Mail
+*rbRegisterAnnounces.labelString: 	Subscribe to "axene-announce"
+*rbRegisterBugs.labelString:		Subscribe to "xallwrite-bugs"
+*rbRegisterUsers.labelString:		Subscribe to "axene-users"
+*lRegisterReply.labelString:		Your Email address
+*lMailCommand.labelString:		Mail command
+*mailingListMsg: \n\
+    Axene puts at your disposal some mailing lists which \
+allow you to receive information by electronic mail.\n\
+\n\
+    "axene-announce" allows you to receive official announces \
+of new products or new versions.\n\
+\n\
+    "xallwrite-bugs" informs you about corrections \
+made in XAllWrite. Each Axene's product has its own \
+mailing list that you can subscribe in our other \
+products.\n\
+\n\
+    "axene-users" allows you to discuss with some other users of \
+Axene's products. It's a moderated mailing list (each sended \
+message is ratified by us) in order to avoid you a clutter \
+of useless messages.\n
+\n\
+For each subscription to one of these mailing lists, you will \
+receive an acknowledge by Email with necessary instructions \
+on how to unsubscribe.\n
+
+
+
+
+
+
+*fBRRegistered.labelString:		Subscribe to...
+*fBRegisterCommand.labelString:		Mail command
+
+
+! ** Dialog Box: KEYBOARD ************************************************
+
+*lBoxKeybTitle.labelString:		Characters set
+*font_nameMsg:				Font: %s
+
+
+! ************************************************************************
+! **				FILE SELECTORS				**
+! ************************************************************************
+
+! ** File selector: IMPORT SHEET *****************************************
+
+*importDocumentMsg:		Import document
+*tbFSITdoc.labelString:		Merge with current document
+*tbFSITsupNewline.labelString:	Remove line feed
+*lFSITcharCode.labelString:	Char codification:
+*rbCodeWindows.labelString:	Unix, Windows
+*rbCodeDos.labelString:		Dos, OS/2
+*rbCodeMac.labelString:		Macintosh
+*importDocTextMsg:		Text
+*ImportDocument*Ok.labelString:	Import
+*fFSITSetup.labelString:	Setup
+
+! ** File selector: SIMPLE SELECTORS *************************************
+
+*loadDocumentMsg:			Open document...
+*OpenDocument*Ok.labelString:		Open
+
+
+*loadImageMsg:				Import image
+*imageImport*Ok.labelString:		Import
+
+*loadVectorMsg:				Import vector-based
+*vectorImport*Ok.labelString:		Import
+
+*saveDocumentMsg:			Save document as...
+*CloseDocument*Ok.labelString:		Save
+
+*printDocumentMsg:			Print in file...
+*Print*Ok.labelString:			Print
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: SAVE UNDER ******************************************
+*lSaveDocument.labelString:		Save document:
+*lSavingName.labelString:		with the name:
+
+! ** Warning dialog: CLOSE DOCUMENT **************************************
+*lCloseDocument.labelString:		Close document:
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Exit XAllWrite
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:       \
+XAllWrite help can't be found in %s\n\
+Help path is defined in xallwriterc file.\n\
+You can download help files on ftp.axene.org /pub/xallwrite/doc/
+
+
+! ************************************************************************
+! **				HELP LINES				**
+! ************************************************************************
+
+! ** Help lines: MISC ****************************************************
+
+*helpMiscMsg:		Misc Toolbox|Misc tools
+*helpMiscNewMsg:	Create a new empty document|New
+*helpMiscOpenMsg:	Open a saved document|Open
+*helpMiscSaveMsg:	Save document into file|Save
+*helpMiscPrintMsg:	Print the document|Print
+*helpMiscCutMsg:	Cut selection and copy it into clipboard|Cut
+*helpMiscCopyMsg:	Copy selection into clipboard|Copy
+*helpMiscPasteMsg:	Paste clipboard content|Paste
+*helpMiscDeleteMsg:	Delete the selection|Delete
+*helpMiscUndoMsg:	Undo '%s'|Undo
+*helpMiscRedoMsg:	Redo '%s'|Redo
+
+! ** Help lines: FONT ****************************************************
+*helpFontMsg:		Font Toolbox|Font tools
+*helpFontBoldMsg:	Apply Bold to the selected area|Bold
+*helpFontItalicMsg:	Apply Italic to the selected area|Italic
+*helpFontUnderlineMsg:	Underline the selected area|Underline
+*helpFontStrokeMsg:	Strikeout the selected area|Strikeout
+*helpFontShadowMsg:	Shadow the selected area|Shadow
+*helpFontSubscriptMsg:	Apply Subscript|Subscript
+*helpFontSupscriptMsg:	Apply Supscript|Supscript
+*helpFontSmallcapsMsg:	Change lower case characters into Small caps|SmallCaps
+
+! ** Help lines: RULER ***************************************************
+*helpRulerMsg:		Paragraph Toolbox|Paragraph tools
+*helpRulerLeftMsg:	Align text on Left side|Align Left
+*helpRulerCenterMsg:	Align text to Center|Align Center
+*helpRulerRightMsg:	Align text on Right side|Align Right
+*helpRulerJustifyMsg:	Align text on both Left & Right side|Justify
+*helpRulerIndentDecMsg:	Decrease left margin|Move to Left
+*helpRulerIndentIncMsg:	Increase left margin|Move to Right
+*helpRulerInterlineIncMsg: Increase interline space|Increase interline
+*helpRulerInterlineDecMsg: Decrease interline space|Decrease interline
+*helpRulerInterparIncMsg: Increase space before the paragraph|Increase interparagraph
+*helpRulerInterparDecMsg: Decrease space before the paragraph|Decrease interparagraph
+*helpRulerSpecialCharMsg: Show/Hide Typo characters|Typo characters
+
+! ** Help lines: FRAME ***************************************************
+*helpFrameMsg:		Frame Toolbox|Frame tools
+*helpFrameSelectMsg:	Select or move frames|Select
+*helpFrameRotateMsg:	Rotate frames|Rotate
+*helpFrameScaleMsg:	Frame scaling|Scale
+*helpFrameSquareMsg:	Draw rectangular or square frames|Rectangular frame
+*helpFrameCircleMsg:	Draw elliptical or circular frames|Elliptical frame
+*helpFramePolygonMsg:	Draw irregular polygonal frames|Polygonal frame
+*helpFrameAlignMsg:	Aligns frames...|Align
+*helpFrameMovePointMsg:	Reshape a frame from a point or a border|Move point
+*helpFrameAddPointMsg:	Add a reshape point to a frame|Add point
+*helpFrameSubPointMsg:	Delete a reshape point from a frame|Delete point
+*helpFramePlanFirstMsg:	Moves frame to foreground|Foreground
+*helpFramePlanLastMsg:	Moves frame to background|Background
+*helpFramePlanUpMsg:	Moves a frame forward one level|Up
+*helpFramePlanDownMsg:	Moves a frame back one level|Down
+*helpFrameLockMsg:	Locks / Unlocks frames|Lock
+*helpFrameTFaroundMsg:	Text flows around the frame|Textflow around
+*helpFrameTFleftMsg:	Text flow on frame's left side|Textflow Left
+*helpFrameTFrightMsg:	Text flow on frame's right side|Textflow Right
+*helpFrameTFskipMsg:	Text skip the frame|Skip frame
+*helpFrameTFholeMsg:	Text fills frame's hole|Fill hole
+*helpFrameTFunderMsg:	Text flows under the frame|Textflow under
+*helpFrameTFoverMsg:	Text flows over the frame|Textflow over
+
+! ** Help lines: IMAGE ***************************************************
+*helpPictureMsg:	Image-processing Toolbox|Image-processing Tools
+*helpPictureMoveMsg:	Move image inside frame|Move
+*helpPictureCenterMsg:	Centers image|Center
+*helpPictureResetMsg:	Centers actual size image|Reset
+*helpPictureVFlipMsg:	Horizontal flipping effect|Horizontal flip
+*helpPictureHFlipMsg:	Vertical flipping effect|Vertical flip
+*helpPictureNormalMsg:	Don't change image even if frame changes|Mode: normal
+*helpPictureBestMsg:	Adjust image to show the whole image|Mode: Full image
+*helpPictureMaxMsg:	Adjust image to fill the whole frame|Mode: Full frame
+*helpPictureStretchMsg:	Adjust image to frame size|Mode: Stretch
+
+! ** Help lines: VECTOR **************************************************
+*helpVectorTextsMsg:	Displays / Hides vector-based text|Vector texts
+
+! ** Help lines: ZOOM ****************************************************
+*helpZoomMsg:		Zoom Toolbox|Zoom tools
+*helpZoomInMsg:		Zoom Up mode|Zoom Up
+*helpZoomOutMsg:	Zoom Down mode|Zoom Down
+*helpZoomZoneMsg:	Select an area to blow up|Zoom area
+*helpZoomWidthMsg:	Page width zoom|Page width
+*helpZoomFullMsg:	Full page zoom|Full page
+*helpZoomRealMsg:	Actual size
+*helpZoom25Msg:		25% zoom
+*helpZoom50Msg:		50% zoom
+*helpZoom75Msg:		75% zoom
+*helpZoom100Msg:	100% zoom
+*helpZoom200Msg:	200% zoom
+*helpZoom400Msg:	400% zoom
+
+! ** Help lines: CONTEXT MENU FRAME **************************************
+
+*helpCMCdeImpImageMsg:	Import image
+*helpCMCdeImpVectorMsg:	Import vector-based drawing
+
+
+! ************************************************************************
+! **				UNDO FUNCTION NAMES			**
+! ************************************************************************
+*NoUndoMsg:			Undo
+*UndoMsg:			Undo %s
+*RedoMsg:			Redo %s
+*UCutMsg:			Cut
+*UPasteMsg:			Paste
+*UChangeStyle:			Change Style
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:		Segmentation violation (Segmentation fault)
+*sigErrorPIPEMsg:		Connection broken (Broken pipe)
+*sigErrorBUSMsg:		Specification exception (Bus error)
+*sigErrorFPEMsg:		Arithmetic exception (Floating exception)
+*sigErrorIOTMsg:		Internal Error (IOT trap)
+*sigErrorEMTMsg:		EMT instruction (EMT trap)
+*sigErrorXCPUMsg:		Cputime limit exceeded
+*sigErrorXFSZMsg:		Filesize limit exceeded
+*sigErrorILLMsg:		Illegal instruction
+*sigErrorINTMsg:		XAllWrite has been interrupted (Interrupt)
+*sigErrorQuitingMsg:		Exit XAllWrite now
+*sigErrorSorryMsg:		Impossible to go on
+
+*lCaughtSignal.labelString:		A failure has occured:
+*lCaughtIOerror.labelString:		X I/O fatal error
+*lCannotContinue.labelString:		Impossible to go on
+
+*loadErrorMsg:				Loading Error
+*noFrameErrorMsg:			No frame selected
+*notBitmapErrorMsg:			Unknown Image format
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Yes
+*action_area.No.labelString:		No
+*action_area.Apply.labelString:		Apply
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Open...
+*action_area.Retry.labelString:		Retry
+*action_area.Stop.labelString:		Stop
+*action_area.Reset.labelString:		Reset
+*action_area.Cancel.labelString:	Cancel
+*action_area.Close.labelString:		Close
+*action_area.Help.labelString:		Help
+*action_area.Save.labelString:		Save
+*action_area.Continue.labelString:	Continue
+*action_area.Quit.labelString:		Exit
+*action_area.Save as.labelString:	Save as...
+! ************************************************************************
+! **				ONLINE HELP FILES			**
+! ************************************************************************
+
+*Application.userData:			index.html
+
+*pmHelp.mOverview.userData:             index.html
+*pmHelp.mContent.userData:              index.html
+*pmHelp.mKeyboard.userData:             Keyboard.html
+*pmHelp.mMouse.userData:                index.html
+*pmHelp.mUsingHelp.userData:            index.html
+
+
+! ************************************************************************
+! **				COLORS					**
+! ************************************************************************
+
+! ** Colors: BACKGROUND **************************************************
+
+*background:				gray65
+*MainDocument.background:		gray50
+*XmList.background:			gray60
+*XmTextField.background:		#BCB5BA
+*XmText.background:			#BCB5BA
+*clArrow.background:			#B1B0B8
+
+*bboard*XmPushButton.background:	#B1B0B8
+*hIconBar*XmPushButton.background:	#B1B0B8
+*bboard*XmToggleButton.background:	#B1B0B8
+*hIconBar*XmToggleButton.background:	#B1B0B8
+*OptionButton.background:		#B1B0B8
+
+*RowStartup*background:			#BCB5BA
+
+*gASLcommands.background:		gray60
+
+*sBRegisterText.background:		gray60
+
+*dBKeyb.background:			#BCB5BA
+*wdaBSpreview.background:		white
+*tBSoverview.background:		gray65
+*ClipboardPrivate.PrivateClipArea.background: gray60
+*PrivateClipArea*XmLabel.background:	gray60
+
+*tfMemUsed.background:			gray60
+*tfMemFree.background:			gray60
+*tfDiskUsed.background:			gray60
+*tfDiskFree.background:			gray60
+
+*borderColor:				gray65
+*Application*borderColor:		black
+
+*vIconBarlogo*background:		gray80
+
+*fLicense*background:			gray50
+*fRegister*background:			gray50
+
+*fLicense*stBoxLicense*XmScrollBar*background:	gray60
+*fLicense*stBoxLicense*XmScrollBar.troughColor:	yellow
+*fRegister*stBoxLegal2*XmScrollBar*background:	gray60
+*fRegister*stBoxLegal2*XmScrollBar.troughColor:	yellow
+
+*clIcon.background:			#B1B0B8
+*sbRowColumnH.background:		#B1B0B8
+*sbRowColumnV*background:		#B1B0B8
+*bboard*sbIconTop.background:		#B1B0B8
+*bboard*sbIconBottom.background:	#B1B0B8
+*hIconBar*sbIconTop.background:		#B1B0B8
+*hIconBar*sbIconBottom.background:	#B1B0B8
+
+*Menu*background:                     #b0b090
+*XmMenuShell*background:              #b0b090
+
+! ** Colors: FOREGROUND **************************************************
+
+*RowStartup.lPleaseWait.foreground:	gray40
+*XmFrame.foreground:			navyblue
+*lAboutRelease.foreground:		white
+*lAboutLicense.foreground:		white
+*lLegalVersion.foreground:		white
+*lLegal2Title.foreground:		white
+
+*clArrow.foreground:			gray75
+*sbArrowUp.foreground:			gray60
+*sbArrowDown.foreground:		gray60
+
+! ** Colors: PUSH ARM ****************************************************
+
+*sbIconTop.armColor:			gray65
+*sbIconBottom.armColor:			gray65
+
+! ** Colors: TOGGLE SELECTORS ********************************************
+
+*XmToggleButtonGadget.selectColor:   	yellow
+*gBSBar.XmToggleButtonGadget.selectColor:	gray60
+*gBCBar.XmToggleButtonGadget.selectColor:	gray60
+
+! ** Colors: BOTTOM SHADOW ***********************************************
+
+*sbArrowUp.bottomShadowColor:		gray40
+*sbArrowDown.bottomShadowColor:		gray40
+
+! ** Colors: HIGHLIGHTS **************************************************
+
+*highlightColor:			gray30
+*tf_C.highlightColor:			cyan
+*s_C.highlightColor:			cyan
+*tf_M.highlightColor:			magenta
+*s_M.highlightColor:			magenta
+*tf_Y.highlightColor:			yellow
+*s_Y.highlightColor:			yellow
+*tf_K.highlightColor:		 	black
+*s_K.highlightColor:		 	black
+*tf_R.highlightColor:			red
+*s_R.highlightColor:			red
+*tf_G.highlightColor:			green
+*s_G.highlightColor:			green
+*tf_B.highlightColor:			blue
+*s_B.highlightColor:			blue
+
+
+! ************************************************************************
+! **				BACKGROUND PIXMAPS			**
+! ************************************************************************
+
+*BoxAbout*bboard.backgroundPixmap:		leather_light
+*BoxAbout*action_area.backgroundPixmap:		leather_light
+*BoxAbout*gBoxAbout.backgroundPixmap:		leather_light
+*BoxAbout*lAboutRelease.backgroundPixmap:	leather_light
+*BoxAbout*lAboutLicense.backgroundPixmap:	leather_light
+
+*BoxLegal*bboard.backgroundPixmap:		leather_light
+*BoxLegal*action_area.backgroundPixmap:		leather_light
+*BoxLegal*gBoxLegal.backgroundPixmap:		leather_light
+*BoxLegal*lLegalVersion.backgroundPixmap:	leather_light
+
+*BoxLegal2*bboard.backgroundPixmap:		leather_light
+*BoxLegal2*action_area.backgroundPixmap:	leather_light
+*BoxLegal2*gBoxLegal2.backgroundPixmap:		leather_light
+*BoxLegal2*lLegal2Title.backgroundPixmap:	leather_light
+
+
+
+
+
+
+
+
+!--------- Translations for ISO-8859/1 characters set --------
+!--------- + Emacs-like bindings...
+
+*XmScrolledWindow*translations:         #override               \n\
+                        <Btn4Down>:     xc_dispatch_event()     \n\
+                        <Btn5Down>:     xc_dispatch_event()     \n
+
+*XmScrolledWindow.XmScrollBar.translations:	#override	\n\
+~Meta ~Alt Ctrl         <Btn4Down>:     PageUpOrLeft(0)         \n\
+                        <Btn4Down>:     IncrementUpOrLeft(0)    \n\
+~Meta ~Alt Ctrl         <Btn5Down>:     PageDownOrRight(0)      \n\
+                        <Btn5Down>:     IncrementDownOrRight(0)	\n
+
+*XmTextField.translations:	#override			\n\
+ ~Meta ~Alt Ctrl<Key>a:		beginning-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>b:		backward-character()		\n\
+ ~Meta ~Alt Ctrl<Key>d:		delete-next-character()		\n\
+ ~Meta ~Alt Ctrl<Key>e:		end-of-line()			\n\
+ ~Meta ~Alt Ctrl<Key>f:		forward-character()		\n\
+ ~Meta ~Alt Ctrl<Key>g:		process-cancel()		\n\
+ ~Meta ~Alt Ctrl<Key>h:		delete-previous-character()	\n\
+ ~Meta ~Alt Ctrl<Key>k:		delete-to-end-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>u:		beginning-of-line()		\
+				delete-to-end-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>w:		cut-clipboard()			\n\
+ Meta ~Ctrl<Key>b:		backward-word()			\n\
+  Alt ~Ctrl<Key>b:		backward-word()			\n\
+ Meta ~Ctrl<Key>d:		delete-next-word()		\n\
+  Alt ~Ctrl<Key>d:		delete-next-word()		\n\
+ Meta ~Ctrl<Key>f:		forward-word()			\n\
+  Alt ~Ctrl<Key>f:		forward-word()			\n\
+ Meta ~Ctrl<Key>w:		copy-clipboard()		\n\
+  Alt ~Ctrl<Key>w:		copy-clipboard()		\n\
+ Meta ~Ctrl<Key>osfLeft:	backward-word()			\n\
+  Alt ~Ctrl<Key>osfLeft:	backward-word()			\n\
+ Meta ~Ctrl<Key>osfRight:	forward-word()			\n\
+  Alt ~Ctrl<Key>osfRight:	forward-word()			\n\
+ Meta ~Ctrl<Key>osfBackSpace:	delete-previous-word()		\n\
+  Alt ~Ctrl<Key>osfBackSpace:	delete-previous-word()		\n\
+ Meta ~Ctrl<Key>osfDelete:	delete-next-word()		\n\
+  Alt ~Ctrl<Key>osfDelete:	delete-next-word()		\n\
+	!<Key>KP_F1:	xc_insert_string("XQuad")\n\
+	!<Key>KP_F2:	xc_insert_string("Xclamation")\n\
+	!<Key>KP_F3:	xc_insert_string("XAllWrite")\n\
+	!<Key>KP_F4:	xc_insert_string("Axene")\n
+

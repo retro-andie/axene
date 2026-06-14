@@ -1,4 +1,5 @@
 #!/bin/sh
+set -xv
 #
 # makearchives.sh for makearchives.sh in Axene-2.0.1/
 #
@@ -316,7 +317,7 @@ CreateBinArchive()
   cd $TMPDIR; tar cvpf - .[_0-9A-z]* * | gzip -c - > $DSTDIR/$_name
   archname=${archname}${_name}" "
   echo -n "T"
-  cd -
+  cd "$TOP"
 
  done
 
@@ -452,7 +453,7 @@ CreateDocArchive()
  cd $TMPDIR; tar cvpf - .[_0-9A-z]* * | gzip -c - > $DSTDIR/$_name
  archname=${archname}${_name}" "
  echo -n "T"
- cd -
+ cd "$TOP"
  echo "] done."
  rm -fr $TMPDIR
 }
@@ -613,7 +614,7 @@ CreateSrcArchive()
  rm -f $_name $DSTDIR/$_name
 
  cd $TMPDIR; tar cvpf - .[_0-9A-z]* * | gzip -c - > $DSTDIR/$_name
- cd -
+ cd "$TOP"
  archname=${archname}${_name}" "
  echo -n "T"
 
@@ -647,8 +648,8 @@ CreateSdkArchive()
  echo -n "S"
 
  # add common files
- cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/$_arch_common_subdir 
- cd -
+ cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/$_arch_common_subdir
+ cd "$TOP"
  echo -n "C"
  
  # add archives files
@@ -679,19 +680,19 @@ CreateSdkArchive()
     grep -v "g3states.h" | grep -Ev "Tongues/Tongue\..*"`
   echo -n `echo $_arch_subdir | cut -b1`
 
-  cd $TOP/..; tar rvpf $DSTDIR/$_name $_files 
-  cd -
+  cd $TOP/..; tar rvpf $DSTDIR/$_name $_files
+  cd "$TOP"
   echo -n `echo $_arch_subdir | cut -b2`
 
   # add documentation
-  cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Documentation 
-  cd -
+  cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Documentation
+  cd "$TOP"
   echo -n `echo $_arch_subdir | cut -b3`
 
   # add examples
   if [ -d $_arch_subdir/Example ]; then
-   cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Example 
-   cd -
+   cd $TOP/..; tar rvpf $DSTDIR/$_name $_top/${_arch_subdir}Example
+   cd "$TOP"
    echo -n `echo $_arch_subdir | cut -b4`
  fi
 
@@ -703,7 +704,7 @@ CreateSdkArchive()
  echo -n "G"
  
  archname=${archname}${_name}.gz" "
- cd -
+ cd "$TOP"
  echo "] done."
  #rm -fr $TMPDIR
 }

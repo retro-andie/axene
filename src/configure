@@ -38,6 +38,7 @@ CC='gcc'
 CFLAGS='-O2'
 CPPFLAGS=''
 LDFLAGS=''
+LIBPATH=''
 MOTIF_LIBS='-lXm'
 X11_LIBS='-lXt -lXext -lX11'
 SOCK_LIBS=''
@@ -196,8 +197,8 @@ case $OSLOWER in
   OSFLAGS="-D___NetBSD"
   COMPFLAGS="-O2 -Wall"
   DEFFLAGS="-DULONG_NOT_DEFINED -D_NETBSD_SOURCE"
-  xlibdir=${xlibdir:-'/usr/X11R7/lib'}
-  xincdir=${xincdir:-'/usr/X11R7/include'}
+  xlibdir=${xlibdir:-'/usr/X11R6/lib'}
+  xincdir=${xincdir:-'/usr/X11R6/include'}
   motiflibdir=${motiflibdir:-'/usr/pkg/lib'}
   motifincdir=${motifincdir:-'/usr/pkg/include'}
   ARFLAGS="cq"
@@ -222,14 +223,17 @@ case $OSLOWER in
   
   ;;
  aix)
-   case $CPU in
+  if [ -x /usr/local/bin/gcc ]; then
+   CC="/usr/local/bin/gcc"
+   LIBPATH="/usr/local/lib"
+  fi
+  case $CPU in
     powerpc)
      OSFLAGS="-D___rs6000ppc";;
     rs6000|*)
      OSFLAGS="-D___rs6000"
      DEFFLAGS="-DHAVE_MEMMOVE -D__STR31__";;
    esac
-      
   ;;
  sunos)
    OSFLAGS="-D___sun4"
@@ -382,6 +386,7 @@ Building Environment:
  CFLAGS="$CFLAGS"
  CPPFLAGS="$CPPFLAGS"
  LDFLAGS="$LDFLAGS"
+ LIBPATH="$LIBPATH"
  MOTIF_LIBS="$MOTIF_LIBS"
  X11_LIBS="$X11_LIBS"
  SOCK_LIBS="$SOCK_LIBS"
@@ -421,10 +426,11 @@ ed - $TOP/Makefile > /dev/null 2>&1 << EOF
 
 .
 /^SUBDIRS =/s:^.*$:SUBDIRS = $SUBDIRS:
-/^CC =/s/^.*$/CC = $CC/
+/^CC =/s:^.*$:CC = $CC:
 /^CFLAGS =/s:^.*$:CFLAGS = $CFLAGS:
 /^CPPFLAGS =/s:^.*$:CPPFLAGS = $CPPFLAGS:
 /^LDFLAGS =/s:^.*$:LDFLAGS = $LDFLAGS:
+/^LIBPATH =/s:^.*$:LIBPATH = $LIBPATH:
 /^SOCK_LIBS =/s:^.*$:SOCK_LIBS = $SOCK_LIBS:
 /^MOTIF_LIBS =/s:^.*$:MOTIF_LIBS = $MOTIF_LIBS:
 /^X11_LIBS =/s:^.*$:X11_LIBS = $X11_LIBS:

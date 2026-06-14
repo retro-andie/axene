@@ -1,0 +1,2426 @@
+! ************************************************************************
+! ************************************************************************
+! **									**
+! **		      XQuad(tm) - Application Defaults			**
+! **			     (c)1995-1998 Axene   			**
+! **			http://www.axene.org/french/			**
+! **		           Email:  axene@axene.org			**
+! **									**
+! ************************************************************************
+! ************************************************************************
+
+
+! ************************************************************************
+! **				FONTS LIST				**
+! ************************************************************************
+
+*fontList:			-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmText.fontList:		-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmTextField.fontList:		-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*XmSrolledList.fontList:	-*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*ASLBoxLabel.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*FSTitle.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxPatternTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxPrintTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxPrintSetupTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxColSizeTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxBordersTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxAskGraphTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxFunctionsTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBoxRegisterTitle.fontList:	-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lBRegisterAdress.fontList:	-*-helvetica-medium-*-*-*-14-*-*-*-*-*-iso8859-1
+*lFontSelect.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*FSList.fontList:		-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-iso8859-1
+*FSEditor.fontList:		-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-iso8859-1
+*XmFrame.XmLabelGadget.fontList: -*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*XmFrame.XmToggleButtonGadget.fontList: -*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*lTitleStartup.fontList:	-*-helvetica-*-*-*-*-24-*-*-*-*-*-iso8859-1
+*lPleaseWait.fontList:		-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lStartupMessage.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*BottomBar*fontList:		-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*tfEditBar.fontList:		-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-iso8859-1
+*lPositionLabel.fontList:	-*-helvetica-medium-r-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutRelease.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutEnd.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*lAboutTitle.fontList:		-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutLicense.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lAboutIDDN.fontList:		-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*lLegalCopy.fontList:		-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*lBoxLicense.fontList:		-*-lucidatypewriter-medium-*-*-*-10-*-*-*-*-*-*-*
+*lBoxLegal2.fontList:		-*-lucidatypewriter-medium-*-*-*-10-*-*-*-*-*-*-*
+*lLegalVersion.fontList:	-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*FileName.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*DocumentName.fontList:		-*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*BoxFunctions*lBFFunction.fontList: -*-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+*FileSelector.fontList:		-*-helvetica-medium-*-*-*-13-*-*-*-*-*-iso8859-1
+*lDeadlineDate.fontList:	-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lDeadlineDay.fontList:		-*-helvetica-medium-*-*-*-18-*-*-*-*-*-iso8859-1
+*lLegalVersion.fontList:	-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*lLegal2Title.fontList:		-*-helvetica-*-*-*-*-18-*-*-*-*-*-iso8859-1
+*gBNBar.XmToggleButtonGadget.fontList: -*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*gBCBar.XmToggleButtonGadget.fontList: -*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*gBSBar.XmToggleButtonGadget.fontList: -*-helvetica-bold-o-*-*-14-*-*-*-*-*-iso8859-1
+*iconFont:			-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*XmScale.fontList: 		-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*gASLcommands*fontList: 	-*-helvetica-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+*tBSoverview.fontList: 		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*clLabel.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*lColor.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*positionFont:			-*-helvetica-medium-r-*-*-18-*-*-*-*-*-iso8859-1
+*classorFont:			-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+*hIconBar*fontList:		-*-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1
+*sbTextField.fontList:		-*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+
+! ************************************************************************
+! **				DEFAULT SETTINGS			**
+! ************************************************************************
+
+! Overridden by -opaqueMove option
+*opaqueMove:		10
+
+! Overridden by -/+opaqueResize option
+*opaqueResizeMsg:	No
+
+! Overridden by -keepFreeColor option
+*keepFreeColorMsg:	10
+
+! Define help bubble type. Could be "Off", "Classic" or "Fun"
+*helpBubblesMsg:	Classic
+
+! ************************************************************************
+! **				SHORTCUTS				**
+! ************************************************************************
+
+*pmFile.mNew.AcceleratorText:		Ctrl+N
+*pmFile.mOpen.AcceleratorText:		Ctrl+O
+*pmFile.mSave.AcceleratorText:		Ctrl+S
+*pmFile.mSaveAs.AcceleratorText:	Ctrl+A
+*pmFile.mPrint.AcceleratorText:		Ctrl+P
+*pmFile.mQuit.AcceleratorText:		Ctrl+Q
+
+*pmEdit.mDeleteFrame.AcceleratorText: 	Bck
+*pmEdit.mCut.AcceleratorText:  		Ctrl+X
+*pmEdit.mCopy.AcceleratorText:  	Ctrl+C
+*pmEdit.mPaste.AcceleratorText:  	Ctrl+V
+
+*pmDisplay.mRedraw.AcceleratorText:	Meta+X
+
+*pmFile.mNew.Accelerator:		Ctrl<Key>N
+*pmFile.mOpen.Accelerator:		Ctrl<Key>O
+*pmFile.mSave.Accelerator:		Ctrl<Key>S
+*pmFile.mSaveAs.Accelerator:		Ctrl<Key>A
+*pmFile.mPrint.Accelerator:		Ctrl<Key>P
+*pmFile.mQuit.Accelerator:		Ctrl<Key>Q
+
+*pmEdit.mCut.Accelerator:  		Ctrl<Key>X
+*pmEdit.mCopy.Accelerator:  		Crtl<Key>C
+*pmEdit.mPaste.Accelerator:  		Ctrl<Key>V
+
+*pmDisplay.mRedraw.Accelerator:		Meta<Key>X
+
+
+
+
+
+! ************************************************************************
+! **				CURSORS					**
+! ************************************************************************
+
+*menuCursor:				right_ptr
+*cursorPositionVisible:			False
+
+
+! ************************************************************************
+! **		TOGGLE INDICATOR SIZE, VISUAL & TYPE			**
+! ************************************************************************
+
+*indicatorSize:					13
+*XmToggleButton.indicatorSize:			0
+*XmFrame.XmToggleButtonGadget.indicatorSize:	10
+*XmMenuShell*XmToggleButtonGadget.indicatorSize:	9
+*gBSBar.XmToggleButtonGadget.indicatorSize:	0
+*gBCBar.XmToggleButtonGadget.indicatorSize:	0
+*gBNBar.XmToggleButtonGadget.indicatorSize: 0
+
+
+*BoxFunctions*XmLabel.recomputeSize:	False
+*XmScale.showValue:			True
+*XmScale.orientation:			HORIZONTAL
+
+
+*BoxBorders*XmToggleButton.spacing:	0
+
+*XmToggleButton.enableToggleVisual:	True
+*XmToggleButtonGadget.enableToggleVisual: True
+
+*XmToggleButton.indicatorType:		XmONE_OF_MANY
+*XmToggleButtonGadget.indicatorType:	XmONE_OF_MANY
+*tbFSITdoc.indicatorType:		XmN_OF_MANY
+*rbFSITtrim*indicatorType:		XmN_OF_MANY
+*tbFSETformula.indicatorType:		XmN_OF_MANY
+*tbFSETselection.indicatorType:		XmN_OF_MANY
+*tbFSETgrid.indicatorType:		XmN_OF_MANY
+*tbFSETheaders.indicatorType:		XmN_OF_MANY
+*rbPSCenter*indicatorType:		XmN_OF_MANY
+*riWhatPrint*indicatorType:		XmN_OF_MANY
+*tbCSRowSize.indicatorType:		XmN_OF_MANY
+*tbCSColSize.indicatorType:		XmN_OF_MANY
+*tbBNTruncate.indicatorType:		XmN_OF_MANY
+*tbBNUnitAfter.indicatorType:		XmN_OF_MANY
+*tbBNfracDecimal.indicatorType:		XmN_OF_MANY
+*tbBNExpSign.indicatorType:		XmN_OF_MANY
+*rbRegistered*indicatorType:		XmN_OF_MANY
+*tbKeepAlias.indicatorType:		XmN_OF_MANY
+*XmFrame.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*gBSglobal.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*gPSScale.XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+*fBSsubscript.indicatorType:		XmONE_OF_MANY
+*fBSsupscript.indicatorType:		XmONE_OF_MANY
+
+*XmMenuShell*XmToggleButtonGadget.indicatorType:	XmN_OF_MANY
+
+
+! ************************************************************************
+! **			TRAVERSAL & HIGHLIGHT THICKNESS			**
+! ************************************************************************
+
+*vIconBar*traversalOn:				False
+*hIconBar.rchIconBar.traversalOn:		False
+*hIconBar*XmPushButton.traversalOn:		False
+*hIconBar*XmToggleButton.traversalOn:		False
+*hIconBar*XmTextField.traversalOn:		True
+*imFontFamily*traversalOn:			False
+*clArrow.traversalOn:				False
+*MainDocument.traversalOn:			False
+
+*highlightThickness:				1
+*hIconBar*highlightThickness:			0
+*hIconBar*sbTextField.highlightThickness:	1
+*hIconBar*XmSeparatorGadget.highlightThickness:	7
+*hIconBar.XmRowColumn.highlightThickness:	0
+*vIconBar*highlightThickness:			0
+*gASLcommands*highlightThickness:		1
+*tfEditBar.highlightThickness:			0
+*clLabel.highlightThickness:			3
+*lColor.highlightThickness:			3
+*XmArrowButton.highlightThickness:		0
+
+! ************************************************************************
+! **				SIZE & RESIZE				**
+! ************************************************************************
+
+*ASLItemL.resizable:				False
+
+*ASLItemL.width:				200
+
+*XmTextField.resizeWidth:			False
+*XmFrame.XmBulletinBoard.resizePolicy:		XmRESIZE_NONE
+*bboard.XmRowColumn.resizeWidth:		False
+*booard.XmRowColumn.resizeHeight:		False
+
+*PrivateClipArea.resizeHeight:			False
+*PrivateClipArea.resizeWidth:			False
+
+*hIconBar.XmRowColumn.resizeHeight:		False
+*vIconBar.XmRowColumn.resizeWidth:		False
+
+! ************************************************************************
+! *				DISPLAY POLICY				**
+! ************************************************************************
+
+*ClipboardPrivate.scrollBarDisplayPolicy:	XmAS_NEEDED
+*BoxFunction*scrollBarDisplayPolicy:		XmAS_NEEDED
+*stBoxLicense*scrollBarDisplayPolicy:		XmAS_NEEDED
+*stBoxLegal2*scrollBarDisplayPolicy:		XmAS_NEEDED
+
+! ************************************************************************
+! **                               ALIGMENTS				**
+! ************************************************************************
+
+!-- Font replacement dialog box -----------------------------------------
+*tbKeepAlias.alignment:			ALIGNMENT_BEGINNING
+
+*lBPForeColor.alignment:		ALIGNMENT_END
+*lBPBackColor.alignment:		ALIGNMENT_END
+*lBBOutline.alignment:			ALIGNMENT_END
+*lBBTop.alignment:			ALIGNMENT_END
+*lBBBottom.alignment:			ALIGNMENT_END
+*lBBLeft.alignment:			ALIGNMENT_END
+*lBBRight.alignment:			ALIGNMENT_END
+*lBBPattern.alignment:			ALIGNMENT_END
+*lBBDash.alignment:			ALIGNMENT_END
+*lBBForeColor.alignment:		ALIGNMENT_END
+*lBBBackColor.alignment:		ALIGNMENT_END
+*lBNPositiveColor.alignment:		ALIGNMENT_END
+*lBNNegativeColor.alignment:		ALIGNMENT_END
+*lBNUnitString.alignment:		ALIGNMENT_END
+*tbBNTruncate.alignment:		ALIGNMENT_BEGINNING
+*tbBNUnitAfter.alignment:		ALIGNMENT_BEGINNING
+*lBNMaxPrecision.alignment:		ALIGNMENT_END
+*lBNMinPrecision.alignment:		ALIGNMENT_END
+*lBNSeparatorString.alignment:		ALIGNMENT_END
+*lBNSeparatorMString.alignment:		ALIGNMENT_END
+*lBNSeparatorPosition.alignment:	ALIGNMENT_END
+*lBNStringEString.alignment:		ALIGNMENT_END
+*lBNExpMinDigit.alignment:		ALIGNMENT_END
+*lBNExpMul.alignment:			ALIGNMENT_END
+*tbBNExpSign.alignment:			ALIGNMENT_BEGINNING
+
+*lAGFirstSerial.alignment:		ALIGNMENT_BEGINNING
+*lAGFirstQuestion.alignment:		ALIGNMENT_BEGINNING
+*lAGSecondQuestion.alignment:		ALIGNMENT_BEGINNING
+
+!-- Fonts dialog box ----------------------------------------------------
+*lBSwidth.alignment:			ALIGNMENT_END
+*lBSfamily.alignment:			ALIGNMENT_END
+*lBSfontsize.alignment:			ALIGNMENT_END
+*lBSscale.alignment:			ALIGNMENT_END
+*lBSypos.alignment:			ALIGNMENT_END
+*lBSundeline_dy.alignment:		ALIGNMENT_END
+*lBSstrikeout_dy.alignment:		ALIGNMENT_END
+*lBSshadow_dy.alignment:		ALIGNMENT_END
+*lBSshadow_dx.alignment:		ALIGNMENT_END
+*tbBSsupscript.alignment:		ALIGNMENT_BEGINNING
+*tbBSsubscript.alignment:		ALIGNMENT_BEGINNING
+*tbBSsmallcaps.alignment:		ALIGNMENT_BEGINNING
+*tbBSbigcaps.alignment:			ALIGNMENT_BEGINNING
+*tbBSwidth.alignment:			ALIGNMENT_BEGINNING
+
+*lCSColSize.alignment:			ALIGNMENT_END
+*lCSRowSize.alignment:			ALIGNMENT_END
+*tbCSColSize.alignment:			ALIGNMENT_BEGINNING
+*tbCSRowSize.alignment:			ALIGNMENT_BEGINNING
+
+!-- Frame attributes dialog box -----------------------------------------
+*lBABackColor.alignment:		ALIGNMENT_END
+*lBABorderColor.alignment:		ALIGNMENT_END
+*lBABorderWidth.alignment:		ALIGNMENT_END
+
+*tbBPPrintArea.alignment:		ALIGNMENT_BEGINNING
+*tbBPPrintAllPages.alignment:		ALIGNMENT_BEGINNING
+
+*tbPSPrintOnPage.alignment:		ALIGNMENT_BEGINNING
+*tbPSReduce.alignment:			ALIGNMENT_BEGINNING
+*lPSMarginT.alignment:			ALIGNMENT_END
+*lPSMarginB.alignment:			ALIGNMENT_END
+*lPSMarginL.alignment:			ALIGNMENT_END
+*lPSMarginR.alignment:			ALIGNMENT_END
+
+*lBFFunction.alignment:			ALIGNMENT_BEGINNING
+*tbBFFuncTypeAll.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeNume.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeStat.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeBusi.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeDate.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeShee.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeText.alignment:		ALIGNMENT_BEGINNING
+*tbBFFuncTypeLogi.alignment:		ALIGNMENT_BEGINNING
+
+!-- Goto cell dialog box ------------------------------------------------
+*lGCGotoCell.alignment:			ALIGNMENT_END
+
+*tbFSITdoc.alignment:			ALIGNMENT_BEGINNING
+*tbFSETformula.alignment:		ALIGNMENT_BEGINNING
+*tbFSETselection.alignment:		ALIGNMENT_BEGINNING
+*tbFSETgrid.alignment:			ALIGNMENT_BEGINNING
+*tbFSETheaders.alignment:		ALIGNMENT_BEGINNING
+
+*tbBNfracDecimal.alignment:		ALIGNMENT_BEGINNING
+*lBNFracPrecision.alignment:		ALIGNMENT_END
+*gBNLinks.XmLabel.alignment:		ALIGNMENT_END
+*gBNColors.XmLabel.alignment:		ALIGNMENT_END
+*gBNBoolean.XmLabel.alignment:		ALIGNMENT_END
+
+!-- Mailing Lists dialog box --------------------------------------------
+*lMailCommand.alignment:		ALIGNMENT_END
+*lRegisterReply.alignment:		ALIGNMENT_END
+
+*lYear.alignment:			ALIGNMENT_END
+*lMonth.alignment:			ALIGNMENT_END
+*lWeek.alignment:			ALIGNMENT_END
+*lDay.alignment:			ALIGNMENT_END
+*lDayInYear.alignment:			ALIGNMENT_END
+*lHour.alignment:			ALIGNMENT_END
+*lHour24.alignment:			ALIGNMENT_END
+*lMinute.alignment:			ALIGNMENT_END
+*lSecond.alignment:			ALIGNMENT_END
+*lTenthOfSecond.alignment:		ALIGNMENT_END
+*lHundredthOfSecond.alignment:		ALIGNMENT_END
+*lThousandthOfSecond.alignment:		ALIGNMENT_END
+
+*lSep.alignment:			ALIGNMENT_END
+*XmOptionMenu*alignment:		ALIGNMENT_BEGINNING
+
+!-- Colors dialog box ---------------------------------------------------
+*l_C.alignment:			ALIGNMENT_END
+*l_M.alignment:			ALIGNMENT_END
+*l_Y.alignment:			ALIGNMENT_END
+*l_K.alignment:			ALIGNMENT_END
+*l_R.alignment:			ALIGNMENT_END
+*l_G.alignment:			ALIGNMENT_END
+*l_B.alignment:			ALIGNMENT_END
+*l_H.alignment:			ALIGNMENT_END
+*l_S.alignment:			ALIGNMENT_END
+*l_L.alignment:			ALIGNMENT_END
+*l_G1.alignment:		ALIGNMENT_END
+
+!-- Legal box -----------------------------------------------------------
+*lBoxLicense.alignment:			ALIGNMENT_BEGINNING
+*lBoxLegal2.alignment:			ALIGNMENT_BEGINNING
+
+! ************************************************************************
+! **				SHADOW THICKNESS			**
+! ************************************************************************
+
+*shadowThickness:				1
+*XmFrame.shadowThickness:			2
+*XmFrame.XmToggleButtonGadget.shadowThickness:	0
+*XmSeparatorGadget.shadowThickness:		2
+*XmRowColumn.shadowThickness:			1
+*XmCascadeButtonGadget.shadowThickness:		1
+*XmScrollBar.shadowThickness:			1
+*XmBulletinBoard.shadowThickness:		0
+*XmForm.shadowThickness:			0
+*XmRadioBox*shadowThickness:			0
+
+*ebGlobalEditBar.shadowThickness:		1
+*ebGlobalEditBar.XmFrame.shadowThickness:	1
+
+*XmFileSelectionBox*shadowThickness:		1
+*sbRowColumnH.shadowThickness:			0
+
+*vIconBar.shadowThickness:			0
+*vIconBar3.shadowThickness:			1
+*IconVlogo.shadowThickness:			0
+*vIconBar*XmRowColumn.shadowThickness:		0
+*vIconBar*XmToggleButton.shadowThickness:	1
+*vIconBar*XmPushButton.shadowThickness:		1
+
+*hIconBar.shadowThickness:			1
+*hIconBar*XmRowColumn.shadowThickness:		0
+*hIconBar*XmToggleButton.shadowThickness:	1
+*hIconBar*XmPushButton.shadowThickness:		1
+*hIconBar*item_menu.shadowThickness:		1
+*BottomBar.shadowThickness:			1
+
+*tbBNUnitAfter.shadowThickness:			0
+*tbBNTruncate.shadowThickness:			0
+*tbBNExpSign.shadowThickness:			0
+*tbCSColSize.shadowThickness:			0
+*tbCSRowSize.shadowThickness:			0
+*MainDocument.borderWidth:			1
+
+*tbPSReduce.shadowThickness:			0
+*tbPSPrintOnPage.shadowThickness:		0
+
+*tbBPPrintArea.shadowThickness:			0
+*tbBPPrintAllPages.shadowThickness:		0
+
+*tbFSITdoc.shadowThickness:			0
+*tbFSETformula.shadowThickness:			0
+*tbFSETselection.shadowThickness:		0
+*tbFSETgrid.shadowThickness:			0
+*tbFSETheaders.shadowThickness:			0
+
+*tbBFFuncTypeAll.shadowThickness:		0
+*tbBFFuncTypeNume.shadowThickness:		0
+*tbBFFuncTypeStat.shadowThickness:		0
+*tbBFFuncTypeBusi.shadowThickness:		0
+*tbBFFuncTypeDate.shadowThickness:		0
+*tbBFFuncTypeShee.shadowThickness:		0
+*tbBFFuncTypeText.shadowThickness:		0
+*tbBFFuncTypeLogi.shadowThickness:		0
+
+*gBSconfig*XmRowColumn.shadowThickness:		0
+*tbBSsupscript.shadowThickness:			0
+*tbBSsubscript.shadowThickness:			0
+*tbBSsmallcaps.shadowThickness:			0
+*tbBSbigcaps.shadowThickness:			0
+*tbBSwidth.shadowThickness:			0
+
+*omBBOMenu1.shadowThickness:			0
+*omBBOMenu2.shadowThickness:			0
+
+*tbBNfracDecimal.shadowThickness:		0
+*rcPadding*XmToggleButtonGadget.shadowThickness:	0
+*rcNameSize*XmToggleButtonGadget.shadowThickness:	0
+
+! ************************************************************************
+! **					MARGINS				**
+! ************************************************************************
+
+*XmRadioBox.marginHeight:			0
+*XmRadioBox.spacing:				0
+
+*XmBulletinBoard.marginWidth:			0
+*XmBulletinBoard.marginHeight:			0
+*XmToggleButton.marginWidth:			0
+*XmToggleButton.marginHeight:			0
+*XmToggleButtonGadget.marginWidth:		0
+*XmToggleButtonGadget.marginHeight:		0
+*XmFrame.XmBulletinBoard.marginWidth:		14
+*XmFrame.XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginHeight:		10
+*BoxAbout*XmBulletinBoard.marginWidth:		10
+*XmFrame.XmLabel.marginLeft:			1
+*XmFrame.XmLabel.marginRight:			1
+*XmLabel.marginLeft:				3
+*XmLabel.marginRight:				3
+
+*gBNBar.XmToggleButtonGadget.marginWidth:	0
+*gBNBar.XmToggleButtonGadget.marginLeft:	10
+*gBNBar.XmToggleButtonGadget.marginRight:	10
+
+*gPSFormat.marginHeight:			5
+*gBoxNumbers.marginHeight:			0
+
+*BottomBar.marginHeight:			1
+*BottomBar.marginWidth:				1
+
+*hIconBar.verticalSpacing:			3
+*hIconBar.XmRowColumn.leftOffset:		34
+*hIconBar.XmRowColumn.rightOffset:		3
+
+*hIconBar*XmPushButton.marginWidth:		0
+*hIconBar*XmPushButton.marginHeight:		0
+*hIconBar*XmSeparatorGadget.margin:		0
+*hIconBar.XmRowColumn.spacing:			0
+*hIconBar.XmRowColumn.marginWidth:		2
+*hIconBar.XmRowColumn.marginHeight:		2
+*hIconBar*sbTextField.marginHeight:		3
+
+*rchIconBarFontSize.borderWidth:		0
+*rchIconBarFontSize.marginHeight:		0
+*rchIconBarFontSize.spacing:			0
+
+*vIconBar.verticalSpacing:			0
+*vIconBar.horizontalSpacing:			0
+*vIconBar*XmPushButton.marginWidth:		0
+*vIconBar*XmPushButton.marginHeight:		0
+*vIconBar.XmRowColumn.spacing:			0
+*vIconBar.XmRowColumn.marginWidth:		0
+*vIconBar.XmRowColumn.marginHeight:		0
+*vIconBar.XmRowColumn.borderWidth:		0
+
+*XmCascadeButtonGadget.marginWidth:		8
+*XmCascadeButtonGadget.marginHeight:		2
+*XmPushButtonGadget.marginWidth:		8
+*XmPushButtonGadget.marginHeight:		2
+!*XmToggleButtonGadget.marginWidth:		5
+!*XmToggleButtonGadget.marginHeight:		1
+*XmLabel.marginWidth:				0
+*XmLabel.marginHeight:				0
+
+*fBNPreview.marginWidth:			5
+*fBNPreview.marginHeight:			5
+*fBAPreview.marginWidth:			5
+*fBAPreview.marginHeight:			5
+
+*Application.verticalSpacing:			0
+
+*clDrawing.marginLeft:				0
+*clDrawing.marginRight:				0
+
+*rcPadding.spacing:				0
+*rcNameSize.spacing:				0
+
+*XmFrame.marginHeight:				0
+*XmFrame.marginWidth:				0
+*Color results.marginWidth:			3
+*Color results.marginHeight:			3
+*Color results.borderWidth:			10
+
+*IconVlogo.marginLeft:				0
+*IconVlogo.marginRight:				0
+
+**lColor.marginHeight:				5
+
+*ebGlobalEditBar.horizontalSpacing:		3
+*ebGlobalEditBar.verticalSpacing:		3
+
+*XmScrolledWindow.scrolledWindowMarginWidth:	2
+*XmScrolledWindow.scrolledWindowMarginHeight:	2
+
+*tfEditBar.blinkRate:				0
+*lPositionLabel.recomputeSize:			False
+*lPositionLabel.width:				100
+
+*item_menu.XmLabel.marginLeft:			6
+*item_menu.XmLabel.marginRight:			12
+
+*XmToggleButton.borderWidth:			0
+*XmToggleButton.spacing:			0
+*XmToggleButton.indicatorOn:			False
+
+*lStartupMessage.labelString:  ©1995-99 Axene.
+*aboutCommentsMsg:	EMail: contact@axene.org\n\
+Bugs-report: xquad-bugs@axene.org\n\
+http://www.axene.org/\n\
+ftp://www.axene.org/
+
+*gBLFrame2_1*marginHeight:			0
+*gBLFrame2_1*marginWidth:			0
+
+*lBoxLicense.marginLeft:			2
+*lBoxLicense.marginRight:			2
+*lBoxLicense.highlightThickness: 		0
+
+*lBoxLegal2.marginLeft:				2
+*lBoxLegal2.marginRight:			2
+*lBoxLegal2.highlightThickness: 		0
+
+*stBoxLicense*borderWidth: 			0
+*stBoxLicense.highlightThickness: 		2
+*stBoxLicense.shadowThickness: 			0
+*stBoxLicense.spacing: 				0
+*stBoxLicense*traversalOn: 			True
+*stBoxLicense*scrolledWindowMarginWidth:	0
+*stBoxLicense*scrolledWindowMarginHeight:	0
+
+*stBoxLicense*XmScrollBar.showArrows:		False
+
+*stBoxLegal2*borderWidth: 			0
+*stBoxLegal2.highlightThickness: 		2
+*stBoxLegal2.shadowThickness: 			0
+*stBoxLegal2.spacing: 				0
+*stBoxLegal2*traversalOn: 			True
+*stBoxLegal2*scrolledWindowMarginWidth:		0
+*stBoxLegal2*scrolledWindowMarginHeight:	0
+
+*stBoxLegal2*XmScrollBar.showArrows:		False
+
+
+
+
+
+
+
+
+
+*title:				Axene XQuad 2.0.1 - Tableur
+*lPleaseWait.labelString:     		Lancement en cours...
+
+*defaultFrameNameMsg:			Cadre
+*defaultDocumentNameMsg:		Sans Titre
+*defaultSheetNameMsg:			Feuille
+*automaticColorMsg:			Automatique
+
+
+! ************************************************************************
+! **			MNEMONICS for PULLDOWN MENUS			**
+! ************************************************************************
+
+*pmFile.mnemonic:			F
+*pmEdit.mnemonic:			E
+*pmSelect.mnemonic:			S
+*pmDisplay.mnemonic:			A
+*pmFormat.mnemonic:			o
+*pmGraph.mnemonic:			G
+*pmWindows.mnemonic:			n
+*pmHelp.mnemonic:			i
+
+*pmFile.mNew.mnemonic:			N
+*pmFile.mOpen.mnemonic:			O
+*pmFile.mClose.mnemonic:		F
+*pmFile.mSave.mnemonic:			S
+*pmFile.mSaveAs.mnemonic:		a
+*pmFile.mSaveAll.mnemonic:		T
+*pmFile.mAcquire.mnemonic:		m
+*pmFile.mExport.mnemonic:		E
+*mExportVector.mnemonic:		V
+*mExportText.mnemonic:			T
+*mExportHTML.mnemonic:			H
+*pmFile.mPrintSetup.mnemonic:		C
+*pmFile.mPrint.mnemonic:		I
+*pmFile.mQuit.mnemonic:			Q
+
+*pmEdit.mCut.mnemonic:  		C
+*pmEdit.mCopy.mnemonic:  		o
+*pmEdit.mPaste.mnemonic:  		l
+*pmEdit.mDeleteFrame.mnemonic:	 	S
+*pmEdit.mDelete.mnemonic:		S
+*mDeleteAll.mnemonic:	  		T
+*mDeleteFormula.mnemonic:	  	F
+*mDeleteFormat.mnemonic:	  	a
+*mDeletePattern.mnemonic:	  	n
+*mDeleteBorder.mnemonic:		B
+*mDeleteStyle.mnemonic:	  		S
+*mDeletePosition.mnemonic:	  	P
+*mDeleteFont.mnemonic:	  		o
+*pmEdit.mInsertRow.mnemonic:		I
+*pmEdit.mDeleteRow.mnemonic:		e
+*pmEdit.mInsertColumn.mnemonic:		n
+*pmEdit.mDeleteColumn.mnemonic:		t
+*pmEdit.mCopyBottom.mnemonic:		B
+*pmEdit.mCopyRight.mnemonic:		D
+*pmEdit.mColors.mnemonic:  		u
+
+*pmSelect.mPasteFunction.mnemonic:	F
+*pmSelect.mGotoCell.mnemonic:		A
+*pmSelect.mGotoActiveCell.mnemonic:	t
+*pmSelect.mGotoLastCell.mnemonic:	d
+*pmSelect.mSelectToLastCell.mnemonic:	Z
+*pmSelect.mSelectAllCells.mnemonic:	S
+*pmSelect.mSelectAllFrames.mnemonic:	C
+
+*pmDisplay.mRedraw.mnemonic:		R
+*pmDisplay.mMaskGrid.mnemonic:		G
+*pmDisplay.mShowGrid.mnemonic:		G
+*pmDisplay.mMaskInfobar.mnemonic:	I
+*pmDisplay.mShowInfobar.mnemonic:	I
+*pmDisplay.mMaskFrameBorders.mnemonic:	B
+*pmDisplay.mShowFrameBorders.mnemonic:	B
+*pmDisplay.mMaskColOrigin.mnemonic:	C
+*pmDisplay.mShowColOrigin.mnemonic:	C
+*pmDisplay.mMaskRowOrigin.mnemonic:	L
+*pmDisplay.mShowRowOrigin.mnemonic:	L
+*pmDisplay.mMaskSeparator.mnemonic:	S
+*pmDisplay.mShowSeparator.mnemonic:	S
+*pmDisplay.mShowFormula.mnemonic:	u
+*pmDisplay.mMaskFormula.mnemonic:	u
+*pmDisplay.mMaskZeroCell.mnemonic:	Z
+*pmDisplay.mShowZeroCell.mnemonic:	Z
+*pmDisplay.mActivMagnet.mnemonic:	M
+*pmDisplay.mStopMagnet.mnemonic:	M
+
+*pmFormat.mNumbers.mnemonic:		N
+*pmFormat.mPatterns.mnemonic:		F
+*pmFormat.mBorders.mnemonic:		B
+*pmFormat.mFonts.mnemonic:		P
+*pmFormat.mRowColSize.mnemonic:		T
+
+*pmGraph.mGraphHBar.mnemonic:		B
+*pmGraph.mGraphVBar.mnemonic:		H
+*pmGraph.mGraphLayer.mnemonic:		A
+*pmGraph.mGraphLine.mnemonic:		C
+*pmGraph.mGraphPie.mnemonic:		S
+*pmGraph.mGraphRadar.mnemonic:		R
+*pmGraph.mMaskLegend.mnemonic:		L
+*pmGraph.mShowLegend.mnemonic:		L
+*pmGraph.mMaskAxeMarks.mnemonic:	o
+*pmGraph.mShowAxeMarks.mnemonic:	o
+*pmGraph.mMaskTitle.mnemonic:		T
+*pmGraph.mShowTitle.mnemonic:		T
+*pmGraph.mMaskFirstSerieLabel.mnemonic:	e
+*pmGraph.mShowFirstSerieLabel.mnemonic:	e
+*pmGraph.mMaskSerieTitles.mnemonic:	g
+*pmGraph.mShowSerieTitles.mnemonic:	g
+*pmGraph.mGraphSetup.mnemonic:		n
+
+*pmWindows.mCascade.mnemonic:		C
+*pmWindows.mTile.mnemonic:		M
+
+*pmHelp.mOverview.mnemonic:		G
+*pmHelp.mContent.mnemonic:		T
+*pmHelp.mKeyboard.mnemonic:		C
+*pmHelp.mMouse.mnemonic:		S
+*pmHelp.mOnItem.mnemonic:		I
+*pmHelp.mUsingHelp.mnemonic:		U
+*pmHelp.mLegal.mnemonic:		L
+*pmHelp.mRegistration.mnemonic:		D
+*pmHelp.mAbout.mnemonic:		A
+
+
+! ************************************************************************
+! **				PULLDOWN MENUS				**
+! ************************************************************************
+
+*pmFile.labelString:  			Fichier
+*pmFile.mNew.labelString:		Nouveau
+*pmFile.mOpen.labelString:		Ouvrir...
+*pmFile.mClose.labelString:		Fermer
+*pmFile.mSave.labelString:  		Sauver
+*pmFile.mSaveAs.labelString:		Sauver sous...
+*pmFile.mSaveAll.labelString:  		Tout sauver
+*pmFile.mAcquire.labelString:  		Importer...
+*pmFile.mExport.labelString:  		Exporter
+*mExportVector.labelString:  		Dessin Vectoriel...
+*mExportText.labelString:  		Texte...
+*mExportHTML.labelString:  		HTML...
+*pmFile.mPrintSetup.labelString:  	Configurer l'impression...
+*pmFile.mPrint.labelString:  		Imprimer...
+*pmFile.mQuit.labelString:  		Quitter...
+
+*pmEdit.labelString:  			Edition
+*pmEdit.mCut.labelString:  		Couper
+*pmEdit.mCopy.labelString:  		Copier
+*pmEdit.mPaste.labelString:  		Coller
+*pmEdit.mDeleteFrame.labelString:	Supprimer
+*pmEdit.mDelete.labelString:		Supprimer
+*mDeleteAll.labelString:	  	Tout supprimer
+*mDeleteFormula.labelString:	  	Supprimer Formules
+*mDeleteFormat.labelString:	  	Supprimer Formats
+*mDeletePattern.labelString:	  	Supprimer Fonds
+*mDeleteBorder.labelString:		Supprimer Bordures
+*mDeleteStyle.labelString:	  	Supprimer Styles
+*mDeletePosition.labelString:	  	Supprimer Positions
+*mDeleteFont.labelString:	  	Supprimer Polices
+*pmEdit.Tout selectionner.labelString:	Tout sélectionner
+*pmEdit.mColors.labelString:  		Couleurs...
+*pmEdit.mInsertRow.labelString:		Insérer Lignes
+*pmEdit.mInsertColumn.labelString:	Insérer Colonnes
+*pmEdit.mDeleteRow.labelString:		Détruire Lignes
+*pmEdit.mDeleteColumn.labelString:	Détruire Colonnes
+*pmEdit.mCopyBottom.labelString:	Copier vers le Bas
+*pmEdit.mCopyRight.labelString:		Copier vers la Droite
+
+*pmSelect.labelString:			Sélection
+*pmSelect.mPasteFunction.labelString:	Coller une Fonction...
+*pmSelect.mGotoCell.labelString:	Atteindre la cellule...
+*pmSelect.mGotoActiveCell.labelString:	Atteindre la cellule active
+*pmSelect.mGotoLastCell.labelString:	Atteindre la dernière cellule
+*pmSelect.mSelectToLastCell.labelString: Sélectionner la Zone utile
+*pmSelect.mSelectAllCells.labelString: 	Sélectionner toutes les Cellules
+*pmSelect.mSelectAllFrames.labelString: Sélectionner tous les Cadres
+
+*pmDisplay.labelString:			Affichage
+*pmDisplay.mRedraw.labelString:		Tout Redessiner
+*pmDisplay.mMaskGrid.labelString:	Cacher Grille
+*pmDisplay.mShowGrid.labelString:	Afficher Grille
+*pmDisplay.mMaskInfobar.labelString:	Cacher barre d'Infos
+*pmDisplay.mShowInfobar.labelString:	Afficher barre d'Infos
+*pmDisplay.mMaskFrameBorders.labelString: Cacher Bords des cadres
+*pmDisplay.mShowFrameBorders.labelString: Afficher Bords des cadres
+*pmDisplay.mMaskColOrigin.labelString:	Cacher en-têtes des Colonnes
+*pmDisplay.mShowColOrigin.labelString:	Afficher entêtes des Colonnes
+*pmDisplay.mMaskRowOrigin.labelString:	Cacher entêtes des Lignes
+*pmDisplay.mShowRowOrigin.labelString:	Afficher en-têtes des Lignes
+*pmDisplay.mShowSeparator.labelString:	Afficher Séparateurs
+*pmDisplay.mMaskSeparator.labelString:	Cacher Séparateurs
+*pmDisplay.mShowFormula.labelString:	Afficher Formules
+*pmDisplay.mMaskFormula.labelString:	Afficher Résultats
+*pmDisplay.mMaskZeroCell.labelString:	Cacher les Zéros
+*pmDisplay.mShowZeroCell.labelString:	Afficher les Zéros
+*pmDisplay.mActivMagnet.labelString:	Activer Magnétisme
+*pmDisplay.mStopMagnet.labelString:	Stopper Magnétisme
+
+*pmFormat.labelString:			Format
+*pmFormat.mNumbers.labelString:		Nombres...
+*pmFormat.mPatterns.labelString:	Fonds...
+*pmFormat.mBorders.labelString:		Bordures...
+*pmFormat.mFonts.labelString:		Polices...
+*pmFormat.mRowColSize.labelString:	Lignes et colonnes...
+
+*pmGraph.labelString:			Grapheur
+*pmGraph.mGraphHBar.labelString:	Créer Barres...
+*pmGraph.mGraphVBar.labelString:	Créer Histogrammes...
+*pmGraph.mGraphLayer.labelString:	Créer Aires...
+*pmGraph.mGraphLine.labelString:	Créer Courbes...
+*pmGraph.mGraphPie.labelString:		Créer Secteurs...
+*pmGraph.mGraphRadar.labelString:	Créer Radars...
+*pmGraph.mMaskLegend.labelString:	Cacher Légende
+*pmGraph.mShowLegend.labelString:	Afficher Légende
+*pmGraph.mMaskAxeMarks.labelString:	Cacher Lignes d'ordonnées
+*pmGraph.mShowAxeMarks.labelString:	Afficher Lignes d'ordonnées
+*pmGraph.mMaskTitle.labelString:	Cacher Titre
+*pmGraph.mShowTitle.labelString:	Afficher Titre
+*pmGraph.mMaskFirstSerieLabel.labelString: Cacher Texte des abscisses
+*pmGraph.mShowFirstSerieLabel.labelString: Afficher Texte des abscisses
+*pmGraph.mMaskSerieTitles.labelString:	Cacher Nom des séries
+*pmGraph.mShowSerieTitles.labelString:	Afficher Nom des séries
+*pmGraph.mGraphSetup.labelString:	Configuration...
+
+*pmWindows.labelString:			Fenêtres
+*pmWindows.mCascade.labelString:	Cascade
+*pmWindows.mTile.labelString:		Mosaïque
+
+*pmHelp.labelString:			Aide
+*pmHelp.mOverview.labelString:		Aide Générale...
+*pmHelp.mContent.labelString:		Table des Matières...
+*pmHelp.mKeyboard.labelString:		Clavier...
+*pmHelp.mMouse.labelString:		Souris...
+*pmHelp.mOnItem.labelString:		Aide sur Item
+*pmHelp.mUsingHelp.labelString:		Utiliser l'aide...
+*pmHelp.mAbout.labelString:		A propos d'XQuad...
+*pmHelp.mLegal.labelString:		Licence...
+*pmHelp.mRegistration.labelString:	Listes de Diffusion...
+
+
+! ************************************************************************
+! **				DIALOG BOXES				**
+! ************************************************************************
+
+
+! ** Dialog Box: REPLACE FONT ********************************************
+
+*lFontSelekeyFirsct.labelString:	Police indisponible
+*tbKeepAlias.labelString:		Garder l'association
+
+
+! ** Dialog Box: LICENSE *************************************************
+
+*lBoxLicense.labelString: Fichier Licence non trouvé.\n\
+Il devrait se trouver dans $AXENE_LIB/license/\n\
+L'installation est peut-être incomplète.
+
+*keyFirstMsg:		Licence enregistrée par %s
+*keySecondMsg:		%s
+*noKeyFirstMsg:		Vous n'avez pas de clef
+*noVKeyFirstMsg:	Clef non valide
+*noKeySecondMsg:	Pensez à vous enregistrer
+*noVKeySecondMsg:	Veuillez contacter support@axene.org
+*deadlineExpiredMsg:	Votre clef est expirée
+*deadlineExpired2Msg:	Vous devez vous ré-enregistrer
+
+*lLegalAdress.labelString: Email: contact@axene.org\n\
+http://www.axene.org/\n\
+ftp://ftp.axene.org
+
+*lLegalCopy.labelString: Copyright ©1995-2000 Axene, Inc. Tous droits réservés.\n\
+XQuad est une marque déposée.
+
+*BoxLegal*Ok.labelString:		Comment s'enregistrer...
+*BoxLegal*Cancel.labelString:		S'enregister plus tard
+
+
+! ** Dialog Box: LICENSE2 *************************************************
+
+*lLegal2Title.labelString:		Où et comment s'enregistrer ?
+*lBoxLegal2.labelString: Fichier Register non trouvé.\n\
+Il devrait se trouver dans $AXENE_LIB/license/\n\
+L'installation est peut-être incomplète.
+
+
+ ! ** Dialog Box: COLORS **************************************************
+
+*editColorsMsg:			Préparation des couleurs
+*lColor.labelString:		Témoin de couleur
+*l_C.labelString:		Cyan
+*l_M.labelString:		Magenta
+*l_Y.labelString:		Jaune
+*l_K.labelString:		Noir
+*l_R.labelString:		Rouge
+*l_G.labelString:		Vert
+*l_B.labelString:		Bleu
+*l_H.labelString:		Teinte
+*l_S.labelString:		Saturation
+*l_L.labelString:		Luminosité
+*l_G1.labelString:		Gris
+*lColorAdd.labelString:		Ajouter couleur
+*lColorDel.labelString:		Détruire couleur
+*fBCmain.labelString:		Configuration	
+*tbBC_CMYK.labelString:		CMJN
+*tbBC_RGB.labelString:		RVB
+*tbBC_HSL.labelString:		TSL
+*tbBC_GRAY.labelString:		Gris
+
+
+! ** Dialog Box: FRAME ATTRIBUTES ****************************************
+
+*frameAttribsMsg:		Attributs des cadres
+*lBABackColor.labelString:	Couleur de fond
+*lBABorderColor.labelString:	Couleur de la bordure
+*lBABorderWidth.labelString:	Epaisseur de la bordure
+*fBAPreview.labelString:	Témoin
+
+
+! ** Dialog Box: CELLS PATTERNS ******************************************
+
+*lBoxPatternTitle.labelString:	Fond des cellules
+*lBPForeColor.labelString:	Couleur d'avant-plan
+*lBPBackColor.labelString:	Couleur d'arrière-plan
+*fBPColors.labelString:		Couleurs
+*fBPPatterns.labelString:	Catalogue des motifs
+
+
+! ** Dialog Box: CELLS BORDERS *******************************************
+
+*lBoxBordersTitle.labelString:	Attribution de bordures aux cellules
+*lBBOutline.labelString:	Contour
+*lBBTop.labelString:		Haut
+*lBBBottom.labelString:		Bas
+*lBBLeft.labelString:		Gauche
+*lBBRight.labelString:		Droite
+*lBBPattern.labelString:	Facture du trait
+*lBBDash.labelString:		Pointillés
+*lBBForeColor.labelString:	Couleur d'avant-plan
+*lBBBackColor.labelString:	Couleur d'arrière-plan
+*fBBBorders.labelString:	Appliquer sur...
+*fBBLineStyle.labelString:	Style de la ligne
+
+
+! ** Dialog Box: NUMBER FORMAT *******************************************
+
+*styleNumbersMsg:		Mise en forme des nombres
+*tbColor.labelString:		Couleurs
+*tbColor2.labelString:		Couleurs
+*tbStdPrec.labelString:		Affichage
+*tbExpPrec.labelString:		Affichage
+*tbLinks.labelString:		Liens
+*tbUnit.labelString:		Unité
+*tbFracPrec.labelString:	Affichage
+*tbBoolean.labelString:		Texte
+*tbDay.labelString:		Style
+*tbMonth.labelString:		Style
+*lBNPositiveColor.labelString:	Couleur des nombres positifs
+*lBNNegativeColor.labelString:	Couleur des nombres négatifs
+*lBNUnitString.labelString:	Unité du nombre
+*tbBNUnitAfter.labelString:	Placer l'unité après le nombre
+*tbBNTruncate.labelString:	Tronquer les décimales à l'affichage
+*lBNMaxPrecision.labelString:	Précision Maximale
+*lBNMinPrecision.labelString:	Précision Minimale
+*lBNSeparatorString.labelString:	Séparateur de décimales
+*lBNSeparatorMString.labelString:	Séparateur de milliers
+*lBNSeparatorPosition.labelString:	Séparateur tous les groupes de
+*tbBNfracDecimal.labelString:	Fraction sur la partie décimale
+*lBNFracPrecision.labelString:	Précision du dénominateur
+*lBNTrueString.labelString:	Texte pour VRAI
+*lBNFalseString.labelString:	Texte pour FAUX
+*BnColPositiveMsg:		Couleur des nombres positifs
+*BnColNegativeMsg:		Couleur des nombres négatifs
+*BnColTrueMsg:			Couleur pour VRAI
+*BnColFalseMsg:			Couleur pour FAUX
+*rbDayNameVeryShort.labelString:Format très court
+*rbDayNameShort.labelString:	Format court
+*rbDayNameLong.labelString:	Format long
+*rbMonthNameVeryShort.labelString:Format très court
+*rbMonthNameShort.labelString:	Format court
+*rbMonthNameLong.labelString:	Format long
+*lBNLnormal.labelString:	Nombres
+*lBNLunit.labelString:		Unités
+*lBNLpercent.labelString:	Pourcentages
+*lBNLfraction.labelString:	Fractions
+*lBNLboolean.labelString:	Booléens
+*lBNLday.labelString:		Jours
+*lBNLmonth.labelString:		Mois
+*lBNLtime.labelString:		Heures
+*lBNLdate.labelString:		Dates
+*lBNLdate_time.labelString:	Dates + Heures
+*tbTime.labelString:		Heure
+*lHour.labelString:		Heures (12)
+*lMinute.labelString:		Minutes
+*lSecond.labelString:		Secondes
+*lTenthOfSecond.labelString:	Dixièmes de secondes
+*lHundredthOfSecond.labelString: Centièmes de secondes
+*lThousandthOfSecond.labelString: Millièmes de secondes
+*tbDate.labelString:		Date
+*lYear.labelString:		Année
+*lMonth.labelString:		Mois
+*lWeek.labelString:		Semaine
+*lDay.labelString:		Jour
+*lDayInYear.labelString:	Jour de l'année
+*lPadding.labelString:		Remplissage
+*tbNoPad.labelString:		Aucun
+*tbPadWith0.labelString:	avec '0'
+*tbPadWithSpace.labelString:	avec ' '
+*lNameSize.labelString:		Taille
+*tbNSVeryShort.labelString:	Très court
+*tbNSShort.labelString:		Court
+*tbNSLong.labelString:		Long
+*lSep.labelString:		Séparateurs
+*lBNStringEString.labelString:	Représentation de l'exposant
+*lBNExpMinDigit.labelString:	Taille minimale de l'exposant
+*lBNExpMul.labelString:		Exposant multiple de
+*tbBNExpSign.labelString:	Toujours afficher le signe de l'exposant
+*lBNumAdd.labelString:		Ajouter format
+*lBNumDel.labelString:		Détruire format
+*fBNSetup.labelString:		Configuration
+*fBNPreview.labelString:	Témoin
+*fPadding.labelString:		Alignement
+*fNameSize.labelString:		Longueur des noms
+
+*BnFmtAllMsg:		Tous types
+*BnFmtNormalMsg:	Nombres
+*BnFmtUnitMsg:		Unités
+*BnFmtExponantialMsg:	Scientifiques
+*BnFmtPercentMsg:	Pourcentages
+*BnFmtFracMsg:		Fractions
+*BnFmtBooleanMsg:	Booléens
+*BnFmtDayMsg:		Jours de la semaine
+*BnFmtMonthMsg:		Mois dans l'année
+*BnFmtTimeMsg:		Heures
+*BnFmtDateMsg:		Dates
+*BnFmtDateTimeMsg:	Dates + Heures
+
+
+! ** Dialog Box: ROWS & COLUMNS SIZE *************************************
+
+*lBoxColSizeTitle.labelString:	Taille des lignes et des colonnes
+*lCSColSize.labelString:	Largeur de colonne
+*lCSRowSize.labelString:	Hauteur de ligne
+*tbCSColSize.labelString:	Appliquer
+*tbCSRowSize.labelString:	Appliquer
+*fCSColSize.labelString:	Colonnes
+*fCSRowSize.labelString:	Lignes
+
+
+! ** Dialog Box: FONTS ***************************************************
+
+*editStylesMsg:				Composition des polices
+*lAddFont.labelString:			Ajouter police
+*lDelFont.labelString:			Détruire police
+*tbBSglobal.labelString:		Attributs
+*tbBSconfig.labelString:		Configurations
+*lBSfamily.labelString:			Famille
+*lBSfontsize.labelString:		Taille
+*lBSwidth.labelString:			Largeur
+*lBSthickness.labelString:		Ep.
+*lBSypos.labelString:			Y-Pos
+*lBSscale.labelString:			Taille
+*lBSshadow_dx.labelString:		dX
+*lBSshadow_dy.labelString:		dY
+*lBSstrikeout_dy.labelString:		dY
+*lBSunderline_dy.labelString:		dY
+*tbBSsupscript.labelString:		Exposant...
+*tbBSsubscript.labelString:		Indice...
+*tbBSsmallcaps.labelString:		Petites majuscules
+*tbBSbigcaps.labelString:		Majuscules
+*tbBSwidth.labelString:			Largeur...
+*fBSoverview.labelString:		Resumé des paramètres
+*fBSpreview.labelString:		Témoin
+*fBSmain.labelString:			Configuration
+*fBSwidth.labelString:			Largeur
+*fBSunderline.labelString:		Souligné
+*fBSstrikeout.labelString:		Barré
+*fBSshadow.labelString:			Ombré
+*fBSsupscript.labelString:		Exposant
+*fBSsubscript.labelString:		Indice
+*styleBoldMsg:				Gras
+*styleItalicMsg:			Italique
+*styleUnderlineMsg:			Souligné
+*styleThicknessMsg:			Ep
+*styleSimpleMsg:			simple
+*styleDoubleMsg:			double
+*styleTripleMsg:			triple
+*styleNoSpaceMsg:			sauf espaces
+*styleStrikeoutMsg:			Barré
+*styleShadowMsg:			Ombré
+*styleWidthMsg:				Largeur
+*styleSubscriptMsg:			Indice
+*styleScaleMsg:				T
+*styleSupscriptMsg:			Exposant
+*styleSmallCapsMsg:			Petites Majuscules
+*styleBigCapsMsg:			Grandes majuscules
+
+
+! ** Dialog Box: CHART SETTINGS ******************************************
+
+*lBoxAskGraphTitle.labelString:	Configuration du graphique
+*fAGSerial.labelString:		Lecture des séries
+*askGraphRowMsg:		Lire la première ligne comme :
+*askGraphColMsg:		Lire la première colonne comme :
+*askGraphRow2Msg:		Première ligne
+*askGraphCol2Msg:		Première colonne
+*lAGFirstSerial.labelString:	Lire les séries en :
+*rbAGLegend.labelString:	Textes de la légende
+*rbAGDatas.labelString:		Première série de données
+*rbAGLabels.labelString:	Etiquettes de l'axe des abscisses
+*rbAGColumns.labelString:	Colonnes
+*rbAGRows.labelString:		Lignes
+
+
+! ** Dialog Box: PRINT SETTINGS ******************************************
+
+*lBoxPrintSetupTitle.labelString: Configuration de l'impression
+*riPortrait.labelString:	Portrait
+*riLandscape.labelString:	Paysage
+*lPSMarginT.labelString:	Haut
+*lPSMarginB.labelString:	Bas
+*lPSMarginL.labelString:	Gauche
+*lPSMarginR.labelString:	Droite
+*riZ.labelString:		Imprimer de gauche à droite
+*riN.labelString:		Imprimer de haut en bas
+*riGrid.labelString:		Imprimer grille
+*riRowColumn.labelString:	Imprimer entêtes de lignes et colonnes
+*lPSSize.labelString:		Taille
+*rbPSCenterV.labelString:	Centrer verticalement
+*rbPSCenterH.labelString:	Centrer horizontalement
+*tbPSReduce.labelString:	Réduction
+*tbPSPrintOnPage.labelString:	Tenir sur
+*fPSPrintDirection.labelString:	Sens de l'impression
+*fPSOrientation.labelString:	Orientation
+*fPSScale.labelString:		Réduction
+*fPSFormat.labelString:		Format
+*fPSMargin.labelString:		Marges
+*fPSWhatPrint.labelString:	Ajouts à l'impression
+
+
+! ** Dialog Box: PRINT ***************************************************
+
+*lBoxPrintTitle.labelString:	Impression
+*lBPNbCopy.labelString:		Nombre de copies
+*tbBPPrintAllPages.labelString:	Tout le document
+*tbBPPrintArea.labelString:	Seulement la sélection
+*lBPPrintFrom.labelString:	Page
+*lBPPrintTo.labelString:	à
+*fBPPrinter.labelString:	Imprimer sur...
+*fBPPrintPage.labelString:	Zone d'impression
+
+
+! ** Dialog Box: PASTE FUNCTION ******************************************
+
+*lBoxFunctionsTitle.labelString:	Collage d'une fonction
+*tbBFFuncTypeAll.labelString:	Tous types
+*tbBFFuncTypeNume.labelString:	Numériques
+*tbBFFuncTypeStat.labelString:	Statistiques
+*tbBFFuncTypeBusi.labelString:	Financières
+*tbBFFuncTypeDate.labelString:	Dates/Heures
+*tbBFFuncTypeShee.labelString:	Tableur
+*tbBFFuncTypeText.labelString:	Textes
+*tbBFFuncTypeLogi.labelString:	Logiques
+*fBFFuncType.labelString:	Type
+
+
+! ** Dialog Box: GOTO CELL ***********************************************
+
+*lGCGotoCell.labelString:	Aller à la cellule
+
+
+! ** Dialog Box: ABOUT XQUAD *********************************************
+
+*aboutTitleMsg:		XQuad® - Tableur
+*aboutReleaseBetaMsg:	XQuad version %d.%d.%d
+*aboutReleaseMsg:	XQuad version %d.%d
+*aboutNoLicenseMsg:	Version non enregistrée\nL'enregistrement est Gratuit
+*licenseCommercialMsg:	Logiciel enregistrer par :\n%s\n%s
+*licensePersonalMsg:	Logiciel enregistrer par :\n%s
+
+
+! ** Dialog Box: MAILING LISTS *******************************************
+
+*lBoxRegisterTitle.labelString:		Listes de diffusion
+*lBRegisterAdress.labelString:		écrire à: majordomo@axene.org
+*BoxRegistration*Ok.labelString:	Poster
+*rbRegisterAnnounces.labelString:	S'inscrire à "axene-announce"
+*rbRegisterBugs.labelString:		S'inscrire à "xquad-bugs"
+*rbRegisterUsers.labelString:		S'inscrire à "axene-users"
+*lRegisterReply.labelString:		Votre adresse Email
+*lMailCommand.labelString:		Commande
+*mailingListMsg: \n\
+    Axene met à votre disposition des listes de \
+diffusion (mailing lists) qui vous permettent de \
+recevoir des informations par courrier électronique.\n\
+\n\
+    "axene-announce" vous permet de recevoir les \
+annonces officielles de nouveaux produits ou \
+de nouvelles versions.\n\
+\n\
+    "xquad-bugs" vous informe des corrections \
+apportées à XQuad. Il existe d'autres listes \
+propres à chaque produit Axene, que vous \
+pourrez découvrir dans nos autres logiciels.\n\
+\n\
+    "axene-users" vous permet de discuter avec \
+d'autres utilisateurs de produits Axene. \
+Cette liste est modérée (chaque message posté \
+est validé manuellement par nos soins) afin \
+de vous éviter un encombrement en messages \
+inutiles.\n\
+\n\
+    Pour chaque inscription dans une de ces listes, \
+vous recevrez une confirmation par Email ainsi \
+que les instructions nécessaires à un eventuel \
+futur désenregistrement.\n
+
+*fBRRegistered.labelString:		S'inscrire à...
+*fBRegisterCommand.labelString:		Commande de mail
+
+
+! ************************************************************************
+! **				FILE SELECTORS				**
+! ************************************************************************
+
+! ** File selector: IMPORT SHEET *****************************************
+
+*importDocumentMsg:		Importation de document
+*tbFSITdoc.labelString:		Dans le document actif
+*rbTrimBefore.labelString:	Couper Espaces avant
+*rbTrimAfter.labelString:	Couper Espaces après
+*lFSITseparators.labelString:	Colonnes :
+*lFSITcharCode.labelString:	Type d'accents :
+*rbCodeWindows.labelString:	Unix, Windows
+*rbCodeDos.labelString:		Dos, OS/2
+*rbCodeMac.labelString:		Macintosh
+*tbFSETformula.labelString:	Exporter les formules
+*tbFSETselection.labelString:	Exporter la sélection
+*tbFSETgrid.labelString:	Ajouter la grille
+*tbFSETheaders.labelString:	Ajouter les entêtes
+*lFSETcharCode.labelString:	Type d'accents :
+*lFSETseparators.labelString:	Séparateur :
+*importDocTextSpaceUnixMsg:	Texte Unix Espace
+*importDocTextSpaceDosMsg:	Texte Dos Espace
+*importDocTextSpaceMacMsg:	Texte Mac Espace
+*importDocTextTabUnixMsg:	Texte Unix Tab
+*importDocTextTabDosMsg:	Texte Dos Tab
+*importDocTextTabMacMsg:	Texte Mac Tab
+**importDocTextCSVUnixMsg:	Texte Unix CSV
+*importDocTextCSVDosMsg:	Texte Dos CSV
+*importDocTextCSVMacMsg:	Texte Mac CSV
+*ImportDocument*Ok.labelString:	Importer
+*fFSITSetup.labelString:	Configuration
+
+
+! ** File selector: EXPORT SHEET *****************************************
+
+*exportDocumentMsg:		Exportation de document
+*exportDocTextSpaceUnixMsg:	Texte Unix Formaté
+*exportDocTextSpaceDosMsg:	Texte Dos Formaté
+*exportDocTextSpaceMacMsg:	Texte Mac Formaté
+*exportDocTextTabUnixMsg:	Texte Unix Tab
+*exportDocTextTabDosMsg:	Texte Dos Tab
+*exportDocTextTabMacMsg:	Texte Mac Tab
+*exportDocTextCSVUnixMsg:	Texte Unix CSV
+*exportDocTextCSVDosMsg:	Texte Dos CSV
+*exportDocTextCSVMacMsg:	Texte Mac CSV
+*ExportVector*Ok.labelString:	Exporter
+
+*ExportText*Ok.labelString:	Exporter
+
+*ExportHTML*Ok.labelString:	Exporter
+
+
+! ** File selector: SIMPLE SELECTORS *************************************
+
+*loadDocumentMsg:		Ouverture d'un document
+*OpenDocument*Ok.labelString:	Ouvrir
+
+*saveDocumentMsg:		Sauvegarde du document sous...
+*CloseDocument*Ok.labelString:	Sauver
+
+*printDocumentMsg:		Impression dans le fichier...
+*Print*Ok.labelString:		Imprimer
+
+
+! ************************************************************************
+! **				WARNING DIALOG BOXES			**
+! ************************************************************************
+
+! ** Warning dialog: SAVE UNDER ******************************************
+*lSaveDocument.labelString:		Sauver le document :
+*lSavingName.labelString:		sous le nom de fichier :
+
+! ** Warning dialog: CLOSE DOCUMENT **************************************
+*lCloseDocument.labelString:		Fermer le document :
+
+! ** Warning dialog: QUIT ************************************************
+*quitMessageMsg:			Quitter XQuad
+
+! ** Warning dialog: HELP NOT FOUND **************************************
+*helpNotFoundMsg:       \
+L'aide d'XQuad est introuvable dans %s\n\
+Le chemin de l'aide est défini dans le fichier xquadrc.\n\
+Vous pouvez télécharger l'aide sur ftp.axene.org /pub/xquad/doc/
+
+! ** Warning dialog: NO VALID KEY ****************************************
+*functionNeedKeyMsg: Vous devez posséder une clef pour utiliser cette fonctionnalité.\n\
+Vous pouvez demander une clef temporaire sur le site web d'Axene\n\
+http://www.axene.org/french/freekey.html
+*autosaveNeedKeyMsg:	Sauvegarde impossible.\n\
+Vous pouvez demander une clef temporaire sur le site web d'Axene\n\
+http://www.axene.org/french/freekey.html
+
+
+! ************************************************************************
+! **				HELP LINES				**
+! ************************************************************************
+
+! ** Help lines: MISC ****************************************************
+
+*helpMiscMsg:		Caisse à outils générale|Outils généraux
+*helpMiscNewMsg:	Crée un nouveau document vide|Nouveau
+*helpMiscOpenMsg:	Ouvre un document précédement sauvé|Ouvrir
+*helpMiscSaveMsg:	Sauve le document dans un fichier|Sauver
+*helpMiscPrintMsg:	Imprime le document|Imprimer
+*helpMiscCutMsg:	Coupe la sélection et la copie dans le clipboard|Couper
+*helpMiscCopyMsg:	Copie la sélection dans le clipboard|Copier
+*helpMiscPasteMsg:	Colle le contenu du clipboard|Coller
+*helpMiscDeleteMsg:	Efface la sélection|Effacer
+*helpMiscUndoMsg:	Annuler '%s'|Annuler
+*helpMiscRedoMsg:	Refaire '%s'|Refaire
+
+! ** Help lines: GENERAL *************************************************
+*helpCalcMsg:		Caisse à outils de calculs|Outils Calcul
+*helpPasteEqualMsg:	Ajoute / Enlève un '='
+*helpCalcSummMsg:	Colle la fonction SOMME|Fonction Somme
+*helpToolsFunctionsMsg:	Colle une fonction...|Colle Fonction
+*helpToolsThousandsMsg:	Applique le format "Milliers"|Format "Milliers"
+*helpToolsCurrencyMsg:	Applique le format "Monétaire"|Format "Monétaire"
+*helpToolsPercentMsg:	Applique le format "Pourcentages"|Format "Pourcentages"
+*helpToolsScientificMsg: Applique le format "Scientifique"|Format "Scientifique"
+*helpToolsEngineerMsg:	Applique le format "Ingénieur"|Format "Ingénieur"
+*helpAddDigitMsg:	Ajoute une décimale aux nombres|Ajouter décimale
+*helpSubDigitMsg:	Enlève une décimale aux nombres|Retirer décimale
+
+! ** Help lines: FONT ****************************************************
+*helpFontMsg:		Caisse à outils de changement de polices|Outils Police
+*helpToolsBoldMsg:	Passe la police en Gras|Gras
+*helpToolsItalicMsg:	Passe la police en Italique|Italique
+*helpToolsUnderlineMsg:	Souligne la police|Souligné
+*helpToolsStrikeoutMsg:	Barre la police|Barré
+*helpToolsShadowMsg:	Ombre la police|Ombré
+*helpToolsSmallCapsMsg:	Change les minuscules en petites majuscules|Petites Majuscules
+*helpToolsBigCapsMsg:	Change les minscules en majuscules|Grandes Majuscules
+*helpFontMinusMsg:	Réduit la taille de la police|Réduire la taille
+*helpFontPlusMsg:	Augmente la taille de la police|Augmenter la taille
+
+! ** Help lines: TEXT ****************************************************
+*helpCellsMsg:		Caisse à outils de manipulation des textes|Outils Texte
+*helpCellsLeftMsg:	Aligne le texte à gauche de la cellule|Aligné à gauche
+*helpCellsCenterMsg:	Centre le texte horizontalement dans la cellule|Centré
+*helpCellsRightMsg:	Aligne le texte à droite de la cellule|Aligné à droite
+*helpCellsHJustifyMsg:	Justifie le texte horizontalement dans la cellule|Justifié horizontalement
+*helpCellsVJustifyMsg:	Justifie le texte verticalement dans la cellule|Justifié Verticalement
+*helpCellsTopMsg:	Aligne le texte en haut de la cellule|Aligné en haut
+*helpCellsBottomMsg:	Aligne le texte au bas de la cellule|Aligné en bas
+*helpCellsMultilinesMsg: Affiche le texte sur plusieurs lignes|Multi-lignes
+*helpCellsAngle90Msg:	Affiche le texte suivant un angle de +90 degrés|Angle +90°
+*helpCellsAngle270Msg:	Affiche le texte suivant un angle de -90 degrés|Angle -90°
+  
+! ** Help lines: CELLS ***************************************************
+*helpBordersMsg:	Caisse à outils de décoration des cellules|Outils Décoration
+*helpBordersCleanMsg:	Efface les bords des cellules|Effacer les bords
+*helpBordersLeftMsg:	Place un bord fin à gauche des cellules|Bord gauche
+*helpBordersBottomMsg:	Place un bord fin en bas des cellules|Bord bas
+*helpBordersRightMsg:	Place un bord fin à droite des cellules|Bord droite
+*helpBordersTopMsg:	Place un bord fin en haut des cellules|Bord haut
+*helpBordersOutlineMsg:	Place un bord épais autour de la sélection|Bords autour
+
+*helpBackgroundDefaultMsg:	Applique le fond par défaut|Fond par défaut
+*helpVideoReverseMsg:	Inversion vidéo de la zone sélectionnée|Inverse vidéo
+
+! ** Help lines: CHARTS **************************************************
+*helpGraphMsg:		Caisse à outils de manipulation de graphiques|Outils Graphiques
+*helpFrameSelectMsg:	Mode sélection
+*helpFrameCreateMsg:	Construit un cadre|Construire cadres
+*helpFramePlanFirstMsg:	Passe le cadre au premier plan|Premier plan
+*helpFramePlanLastMsg:	Passe le cadre à l'arrière-plan|Arrière plan
+*helpFramePlanUpMsg:	Monte le cadre au plan supérieur|Plan supérieur
+*helpFramePlanDownMsg:	Descend le cadre au plan inférieur|Plan inférieur
+*helpGraphVBarMsg:	Graphique en Histogrammes|Histogrammes
+*helpGraphHBarMsg:	Graphique en Barres|Barres
+*helpGraphLineMsg:	Graphique en Courbes|Courbes
+*helpGraphAreaMsg:	Graphique en Aires|Aires
+*helpGraphPieMsg:	Graphique en Secteurs|Secteurs
+*helpGraphRadarMsg:	Graphique en Radars|Radars
+*helpFrameLockMsg:	Verrouille / Déverrouille un cadre ou un groupe de cadres|Verrou
+*helpGraphAxesMsg:	Affiche / Cache les lignes d'ordonnées|Lignes ordonnées
+*helpGraphLegendMsg:	Affiche / Cache la légende du graphique|Légende
+*helpGraphTitleMsg:	Affiche / Cache le titre du graphique|Titre
+*helpGraphSetupMsg:	Ouvre la boîte de configuration du graphique|Configuration...
+*helpGraphAbsMsg:	Affiche / Cache le texte des abscisses|Texte abscisses
+*helpGraphNamesMsg:	Affiche / Cache le nom des séries|Nom séries
+
+! ** Help lines: ZOOM ****************************************************
+*helpZoomMsg:		Caisse à outils de changement de zoom|Outils Zoom
+*helpZoomInMsg:		Augmente le zoom de 25%|+25%
+*helpZoomOutMsg:	Diminue le zoom de 25%|-25%
+*helpZoom50Msg:		Zoom à 50%
+*helpZoom75Msg:		Zoom à 75%
+*helpZoom100Msg:	Zoom à 100%
+*helpZoom200Msg:	Zoom à 200%
+*helpZoom400Msg:	Zoom à 400%
+  
+! ** Help lines: SEPARATE ************************************************
+*helpTrashMsg:		Poubelle : destruction des objets|Poubelle
+
+! ** Help lines: EDIT BAR ************************************************
+*helpEditbarOkMsg:	Applique la formule|Appliquer
+*helpEditbarEscMsg:	Annule / Desélectionne / Sélectionne|Annuler
+
+
+! ************************************************************************
+! **				ERRORS					**
+! ************************************************************************
+
+*sigErrorSEGVMsg:		Violation de privilèges (Segmentation fault)
+*sigErrorPIPEMsg:		Connexion interrompue (Broken pipe)
+*sigErrorBUSMsg:		Erreur de bus (Bus error)
+*sigErrorFPEMsg:		Erreur de calcul (Floating exception)
+*sigErrorIOTMsg:		Erreur interne (IOT trap)
+*sigErrorEMTMsg:		Déroutement Erreur mémoire (EMT trap)
+*sigErrorXCPUMsg:		Dépassement de temps CPU (Cputime limit exceeded)
+*sigErrorXFSZMsg:		Dépassement de taille fichier (Filesize limit exceeded)
+*sigErrorILLMsg:		Instruction illicite (Illegal instruction)
+*sigErrorINTMsg:		XQuad a été interrompu (Interrupt)
+*sigErrorQuitingMsg:		Quitter XQuad maintenant
+*sigErrorSorryMsg:		Impossible de continuer l'exécution
+
+*lCaughtSignal.labelString:	Une erreur est survenue :
+*lCaughtIOerror.labelString:	Erreur fatale du serveur X
+*lCannotContinue.labelString:	Impossible de continuer
+
+*loadErrorMsg:			Erreur de chargement
+
+
+! ************************************************************************
+! **			DEFAULT DIALOG BUTTONS				**
+! ************************************************************************
+
+*action_area.Yes.labelString:		Oui
+*action_area.No.labelString:		Non
+*action_area.Apply.labelString:		Appliquer
+*action_area.Ok.labelString:		Ok
+*action_area.Open.labelString:		Ouvrir...
+*action_area.Retry.labelString:		Recommencer
+*action_area.Stop.labelString:		Arrêter
+*action_area.Reset.labelString:		Réinitialiser
+*action_area.Cancel.labelString:	Annuler
+*action_area.Close.labelString:		Fermer
+*action_area.Help.labelString:		Aide
+*action_area.Save.labelString:		Sauver
+*action_area.Continue.labelString:	Continuer
+*action_area.Quit.labelString:		Quitter
+*action_area.Save as.labelString:	Sauver sous...
+
+
+! ************************************************************************
+! **			FORMULA ERRORS					**
+! ************************************************************************
+
+*formulaCircErrorMsg:			!DEPENDANCE CIRCULAIRE
+*formulaValErrorMsg:			!MAUVAIS TYPE DE VALEUR
+*formulaNameErrorMsg:			!FONCTION INCONNUE
+*formulaCharErrorMsg:			!CARACTERE INCONNU
+*formulaCalcErrorMsg:			!ERREUR DE CALCUL
+*formulaDivzErrorMsg:			!DIVISION PAR ZERO
+*formulaParamLessErrorMsg:		!PAS ASSEZ DE PARAMETRES
+*formulaParamMoreErrorMsg:		!TROP DE PARAMETRES
+*formulaCellRangeErrorMsg:		!CELLULE HORS LIMITES
+*formulaDIntErrorMsg:			!PARAMETRE ENTIER REQUIS
+*formulaDOneOneErrorMsg:		!PARAMETRE [-1,1] REQUIS
+*formulaDOverOneErrorMsg:		!PARAMETRE >= 1 REQUIS
+*formulaDOneOneOpenErrorMsg:		!PARAMETRE ]-1,1[ REQUIS
+*formulaDAlleZeroErrorMsg:		!PARAMETRE != 0 REQUIS
+*formulaDOverZeroErrorMsg:		!PARAMETRE > 0 REQUIS
+*formulaDPositiveErrorMsg:		!PARAMETRE >= 0 REQUIS
+*formulaMissingParamErrorMsg:		!PARENTHESE MANQUANTE
+*formulaErrorMsg:			!ERREUR DE FORMULE
+
+
+! ************************************************************************
+! **			FUNCTIONS					**
+! ************************************************************************
+
+*funcAbsMsg:		abs
+*funcAcosMsg:		acos
+*funcAcoshMsg:		acosh
+*funcAdressMsg:		adresse
+*funcAleaMsg:		alea
+*funcAleabMsg:		alea.entre.bornes
+*funcSlnMsg:		amorlin
+*funcRoundMsg:		arrondi
+*funcAsinMsg:		asin
+*funcAsinhMsg:		asinh
+*funcAtanMsg:		atan
+*funcAtan2Msg:		atan2
+*funcAtanhMsg:		atanh
+*funcBaseMsg:		base
+*funcBesseljMsg:	besselj
+*funcBesselkMsg:	besselk
+*funcCharMsg:		car
+*funcCeilMsg:		arrondi.sup
+*funcFindMsg:		cherche
+*funcCnumMsg:		cnum
+*funcColMsg:		col
+*funcCodeMsg:		code
+*funcCosMsg:		cos
+*funcCoshMsg:		cosh
+*funcCountMsg:		nbval
+*funcCountnMsg:		nb
+*funcCtxtMsg:		ctxt
+*funcDegreesMsg:	degrés
+*funcRightMsg:		droite
+*funcEMsg:		e
+*funcIntMsg:		ent
+*funcPurgeMsg:		épurage
+*funcAndMsg:		et
+*funcExactMsg:		exact
+*funcExpMsg:		exp
+*funcFactMsg:		fact
+*funcFalseMsg:		faux
+*funcFloorMsg:		arrondi.inf
+*funcFracMsg:		frac
+*funcCurrencyMsg:	franc
+*funcLeftMsg:		gauche
+*funcIndirectMsg:	indirect
+*funcInvMsg:		inv
+*funcRowMsg:		ligne
+*funcLnMsg:		ln
+*funcLogMsg:		log
+*funcLog10Msg:		log10
+*funcUpperMsg:		majuscule
+*funcMaxMsg:		max
+*funcMinMsg:		min
+*funcLowerMsg:		minuscule
+*funcModMsg:		mod
+*funcAvgMsg:		moyenne
+*funcLengthMsg:		nbcar
+*funcProperMsg:		nompropre
+*funcPiMsg:		pi
+*funcProdMsg:		produit
+*funcSqrtMsg:		racine
+*funcRandomMsg:		random
+*funcReplaceMsg:	remplacer
+*funcRepeatMsg:		répéter
+*funcSignMsg:		signe
+*funcSinMsg:		sin
+*funcSinhMsg:		sinh
+*funcSummMsg:		somme
+*funcSqrMsg:		carré
+*funcMidMsg:		stxt
+*funcSubstituteMsg:	substitue
+*funcTrimMsg:		supprespace
+*funcRadiansMsg:	radians
+*funcTMsg:		t
+*funcTanMsg:		tan
+*funcTanhMsg:		tanh
+*funcTextMsg:		texte
+*funcTruncMsg:		tronque
+*funcMatchMsg:		trouve
+*funcTrueMsg:		vrai
+*funcDbMsg:		db
+*funcDdbMsg:		ddb
+*funcIpmtMsg:		intper
+*funcNperMsg:		npm
+*funcPpmtMsg:		princper
+*funcSydMsg:		syd
+*funcRateMsg:		taux
+*funcIrrMsg:		tri
+*funcMirrMsg:		trim
+*funcPvMsg:		va
+*funcNpvMsg:		van
+*funcFvMsg:		vc
+*funcVdbMsg:		vdb
+*funcPmtMsg:		vpm
+*funcConcatMsg:		concat
+
+*funcDay360Msg:		jours360
+*funcTodayMsg:		aujourdhui
+*funcDateMsg:		date
+*funcDatevalMsg:	dateval
+*funcNowMsg:		maintenant
+*funcTimeMsg:		temps
+*funcTimevalMsg:	tempsval
+*funcYearMsg:		année
+*funcDayMsg:		jour
+*funcDayweekMsg:	joursem
+*funcHourMsg:		heure
+*funcMinuteMsg:		minute
+*funcMonthMsg:		mois
+*funcSecondMsg:		seconde
+*funcMillisecondMsg:	milliseconde
+
+*funcNotMsg:		non
+*funcOrMsg:		ou
+*funcIfMsg:		si
+
+
+! ** File selector: ALIASES **********************************************
+  
+*funcColAlias1Msg:	colonne
+*funcBesselkAlias1Msg:	kbessel
+*funcBesseljAlias1Msg:	jbessel
+*funcIntAlias1Msg:	entier
+*funcFactAlias1Msg:	factoriel
+*funcFracAlias1Msg:	fraction
+*funcInvAlias1Msg:	inverse
+*funcMaxAlias1Msg:	maximum
+*funcMinAlias1Msg:	minimum
+*funcModAlias1Msg:	modulo
+*funcAvgAlias1Msg:	moy
+*funcProdAlias1Msg:	produit
+*funcSummAlias1Msg:	som
+
+
+! ************************************************************************
+! **				SPECIAL FORMATS				**
+! ************************************************************************
+
+! ** Special formats: DATES **********************************************
+
+*dateMonthJanMsg:	Janvier
+*dateMonthFebMsg:	Février
+*dateMonthMarMsg:	Mars
+*dateMonthAprMsg:	Avril
+*dateMonthMayMsg:	Mai
+*dateMonthJunMsg:	Juin
+*dateMonthJulMsg:	Juillet
+*dateMonthAugMsg:	Août
+*dateMonthSepMsg:	Septembre
+*dateMonthOctMsg:	Octobre
+*dateMonthNovMsg:	Novembre
+*dateMonthDecMsg:	Décembre
+
+*dateMonthJanShortMsg:	Jan
+*dateMonthFebShortMsg:	Fév
+*dateMonthMarShortMsg:	Mar
+*dateMonthAprShortMsg:	Avr
+*dateMonthMayShortMsg:	Mai
+*dateMonthJunShortMsg:	Jun
+*dateMonthJulShortMsg:	Jul
+*dateMonthAugShortMsg:	Aoû
+*dateMonthSepShortMsg:	Sep
+*dateMonthOctShortMsg:	Oct
+*dateMonthNovShortMsg:	Nov
+*dateMonthDecShortMsg:	Déc
+*dateMonthVeryShortMsg:	Ja F Mr Av Mi Jn Jt Ao S O N D
+	     
+*dateDayMonMsg:		Lundi
+*dateDayTueMsg:		Mardi
+*dateDayWedMsg:		Mercredi
+*dateDayThuMsg:		Jeudi
+*dateDayFriMsg:		Vendredi
+*dateDaySatMsg:		Samedi
+*dateDaySunMsg:		Dimanche
+
+*dateDayMonShortMsg:	Lun
+*dateDayTueShortMsg:	Mar
+*dateDayWedShortMsg:	Mer
+*dateDayThuShortMsg:	Jeu
+*dateDayFriShortMsg:	Ven
+*dateDaySatShortMsg:	Sam
+*dateDaySunShortMsg:	Dim
+*dateDayVeryShortMsg:	L M Me J V S D
+  
+*dateYearBeforeJCMsg:	av. J.-C.
+*dateYearAfterJCMsg:	apr. J.-C.
+  
+*timeHourAMMsg:	AM
+*timeHourPMMsg:	PM
+
+! ** Special formats: BOOLEANS *******************************************
+
+*trueMsg:		Vrai
+*falseMsg:		Faux
+
+! ************************************************************************
+! **				ONLINE HELP FILES			**
+! ************************************************************************
+
+*Application.userData:			Main_Interface.html
+
+*pmFile.userData:                       Menu_File.html
+*pmEdit.userData:                       Menu_Edit.html
+*pmSelect.userData:                     Menu_Selection.html
+*pmDisplay.userData:                    Menu_View.html
+*pmFormat.userData:                     Menu_Format.html
+*pmGraph.userData:                      Menu_Graph.html
+*pmWindows.userData:                    Menu_Window.html
+*pmHelp.userData:                       Menu_Help.html
+
+*pmFile.mNew.userData:			Menu_File.html#new_menu_entry
+*pmFile.mOpen.userData:			Menu_File.html#open_menu_entry
+*pmFile.mClose.userData:		Menu_File.html#close_menu_entry
+*pmFile.mSave.userData:			Menu_File.html#save_menu_entry
+*pmFile.mSaveAs.userData:		Menu_File.html#save_as_menu_entry
+*pmFile.mSaveAll.userData:		Menu_File.html#save_all_menu_entry
+*pmFile.mAcquire.userData:		Menu_File.html#import_menu_entry
+*pmFile.mExport.userData:		Menu_File.html#export_menu_entry
+*mExportVector.userData:		Menu_File.html#export_vector_menu_entry
+*mExportText.userData:			Menu_File.html#export_text_menu_entry
+*mExportHTML.userData:			Menu_File.html#export_html_menu_entry
+*pmFile.mPrintSetup.userData:		Menu_File.html#print_setup_menu_entry
+*pmFile.mPrint.userData:		Menu_File.html#print_menu_entry
+*pmFile.mQuit.userData:			Menu_File.html#quit_menu_entry
+
+*pmEdit.mCut.userData:  		Menu_Edit.html#cut_menu_entry
+*pmEdit.mCopy.userData:  		Menu_Edit.html#copy_menu_entry
+*pmEdit.mPaste.userData:  		Menu_Edit.html#paste_menu_entry
+*pmEdit.mDeleteFrame.userData: 		Menu_Edit.html#delete_frame_menu_entry
+*pmEdit.mDelete.userData:  		Menu_Edit.html#delete_menu_entry
+*mDeleteAll.userData:			Menu_Edit.html#delete_all_menu_entry
+*mDeleteFormula.userData:	Menu_Edit.html#delete_formulas_menu_entry
+*mDeleteFormat.userData:	Menu_Edit.html#delete_formats_menu_entry
+*mDeletePattern.userData:	Menu_Edit.html#delete_patterns_menu_entry
+*mDeleteBorder.userData:	Menu_Edit.html#delete_borders_menu_entry
+*mDeleteStyle.userData:		Menu_Edit.html#delete_styles_menu_entry
+*mDeletePosition.userData:	Menu_Edit.html#delete_positions_menu_entry
+*mDeleteFont.userData:		Menu_Edit.html#delete_fonts_menu_entry
+*pmEdit.mInsertRow.userData:  		Menu_Edit.html#insert_rows_menu_entry
+*pmEdit.mDeleteRow.userData:  		Menu_Edit.html#delete_rows_menu_entry
+*pmEdit.mInsertColumn.userData: Menu_Edit.html#insert_columns_menu_entry
+*pmEdit.mDeleteColumn.userData: Menu_Edit.html#delete_columns_menu_entry
+*pmEdit.mCopyBottom.userData:	Menu_Edit.html#copy_to_bottom_menu_entry
+*pmEdit.mCopyRight.userData:	Menu_Edit.html#copy_to_right_menu_entry
+*pmEdit.mColors.userData:		Menu_Edit.html#color_menu_entry
+
+*pmSelect.mPasteFunction.userData:	Menu_Selection.html#paste_function_menu_entry
+*pmSelect.mGotoCell.userData:		Menu_Selection.html#reach_cell_menu_entry
+*pmSelect.mGotoActiveCell.userData:	Menu_Selection.html#reach_active_cell_menu_entry
+*pmSelect.mGotoLastCell.userData:	Menu_Selection.html#reach_last_cell_menu_entry
+*pmSelect.mSelectToLastCell.userData:	Menu_Selection.html#select_used_area_menu_entry
+*pmSelect.mSelectAllCells.userData:	Menu_Selection.html#select_all_cells_menu_entry
+*pmSelect.mSelectAllFrames.userData:	Menu_Selection.html#select_all_frames_menu_entry
+
+*pmDisplay.mRedraw.userData:		Menu_View.html#redraw_menu_entry
+*pmDisplay.mMaskGrid.userData:		Menu_View.html#grid_menu_entry
+*pmDisplay.mShowGrid.userData:		Menu_View.html#grid_menu_entry
+*pmDisplay.mMaskFrameBorders.userData:	Menu_View.html#frame_border_menu_entry
+*pmDisplay.mShowFrameBorders.userData:	Menu_View.html#frame_border_menu_entry
+*pmDisplay.mMaskInfobar.userData:	Menu_View.html#hint_line_menu_entry
+*pmDisplay.mShowInfobar.userData:	Menu_View.html#hint_line_menu_entry
+*pmDisplay.mMaskColOrigin.userData: Menu_View.html#column_headers_menu_entry
+*pmDisplay.mShowColOrigin.userData: Menu_View.html#column_headers_menu_entry
+*pmDisplay.mMaskRowOrigin.userData:	Menu_View.html#row_headers_menu_entry
+*pmDisplay.mShowRowOrigin.userData:	Menu_View.html#row_headers_menu_entry
+*pmDisplay.mMaskSeparator.userData: Menu_View.html#page_separators_menu_entry
+*pmDisplay.mShowSeparator.userData: Menu_View.html#page_separators_menu_entry
+*pmDisplay.mMaskFormula.userData:	Menu_View.html#formulas_menu_entry
+*pmDisplay.mShowFormula.userData:	Menu_View.html#formulas_menu_entry
+*pmDisplay.mMaskZeroCell.userData:	Menu_View.html#zeros_menu_entry
+*pmDisplay.mShowZeroCell.userData:	Menu_View.html#zeros_menu_entry
+*pmDisplay.mActiveMagnet.userData:	Menu_View.html#magnet_menu_entry
+*pmDisplay.mStopMagnet.userData:	Menu_View.html#magnet_menu_entry
+
+
+*pmFormat.mNumbers.userData:		Menu_Format.html#numbers_menu_entry
+*pmFormat.mPatterns.userData:		Menu_Format.html#patterns_menu_entry
+*pmFormat.mBorders.userData:		Menu_Format.html#borders_menu_entry
+*pmFormat.mFonts.userData:		Menu_Format.html#fonts_menu_entry
+*pmFormat.mRowColSize.userData:		Menu_Format.html#rc_sizes_menu_entry
+
+*pmGraph.mGraphHBar.userData:		Menu_Graph.html#hbars_menu_entry
+*pmGraph.mGraphVBar.userData:		Menu_Graph.html#vbars_menu_entry
+*pmGraph.mGraphLayer.userData:		Menu_Graph.html#areas_menu_entry
+*pmGraph.mGraphLine.userData:		Menu_Graph.html#curves_menu_entry
+*pmGraph.mGraphPie.userData:		Menu_Graph.html#pies_menu_entry
+*pmGraph.mGraphRadar.userData:		Menu_Graph.html#radars_menu_entry
+*pmGraph.mMaskLegend.userData:		Menu_Graph.html#legend_menu_entry
+*pmGraph.mShowLegend.userData:		Menu_Graph.html#legend_menu_entry
+*pmGraph.mMaskAxeMarks.userData:	Menu_Graph.html#y_axes_menu_entry
+*pmGraph.mShowAxeMarks.userData:	Menu_Graph.html#y_axes_menu_entry
+*pmGraph.mMaskTitle.userData:		Menu_Graph.html#graph_name_menu_entry
+*pmGraph.mShowTitle.userData:		Menu_Graph.html#graph_name_menu_entry
+*pmGraph.mMaskFirstSerieLabel.userData:	Menu_Graph.html#absc_name_menu_entry
+*pmGraph.mShowFirstSerieLabel.userData:	Menu_Graph.html#absc_name_menu_entry
+*pmGraph.mMaskSerieTitles.userData:	Menu_Graph.html#series_name_menu_entry
+*pmGraph.mShowSerieTitles.userData:	Menu_Graph.html#series_name_menu_entry
+*pmGraph.mGraphSetup.userData:		Menu_Graph.html#setup_menu_entry
+
+*pmWindows*userData:			Menu_Window.html#document_menu_entries
+*pmWindows.mCascade.userData:		Menu_Window.html#cascade_menu_entry
+*pmWindows.mTile.userData:		Menu_Window.html#mosaic_menu_entry
+
+*pmHelp.mOverview.userData:		Overview.html
+*pmHelp.mContent.userData:		index.html
+*pmHelp.mKeyboard.userData:		Keyboard.html
+*pmHelp.mMouse.userData:		Mouse.html
+*pmHelp.mOnItem.userData:		Menu_Help.html#help_on_item_menu_entry
+*pmHelp.mUsingHelp.userData:            Help_Usage.html
+*pmHelp.mLegal.userData:		Menu_Help.html#licence_menu_entry
+*pmHelp.mRegistration.userData:		Menu_Help.html#registration_menu_entry
+*pmHelp.mAbout.userData:		Menu_Help.html#about_XQuad_menu_entry
+
+!***************************** Mein Interface ********************************
+
+*IconCal.userData:			Main_Interface.html#misc_vbar
+*IconFon.userData:			Main_Interface.html#font_vbar
+*IconCel.userData:			Main_Interface.html#text_vbar
+*IconBor.userData:			Main_Interface.html#ornament_vbar
+*IconGra.userData:			Main_Interface.html#graphic_vbar
+*IconZoo.userData:			Main_Interface.html#zoom_vbar
+*IconTra.userData:			Main_Interface.html#trash_vbar
+
+*Menu.userData:				Main_Interface.html#menu_bar
+*hIconBar.userData:			Main_Interface.html#horizontal_icon_bar
+*ebGlobalEditBar.userData:		Main_Interface.html#edit_bar
+*vIconBar.userData:			Main_Interface.html#vertical_icon_bar
+*MainDocument.userData:			Main_Interface.html#worktop
+*BottomBar.userData:			Main_Interface.html#hint_line
+
+!***************************  Edit Bar *****************************
+*lPositionLabel.userData:		Edit_Bar.html#coord_label
+*EBIconEsc.userData:			Edit_Bar.html#red_led
+*EBIconOk.userData:			Edit_Bar.html#green_led
+*tfEditBar.userData:			Edit_Bar.html#textfield
+
+!***************************** ICONS ********************************
+
+*hIconBar1_1.userData:			HBar_Misc.html
+*IconCal_1.userData:			HBar_Misc.html#save_icon
+*IconCal_2.userData:			HBar_Misc.html#print_icon
+*IconCal_3.userData:			HBar_Misc.html#cut_icon
+*IconCal_4.userData:			HBar_Misc.html#copy_icon
+*IconCal_5.userData:			HBar_Misc.html#paste_icon
+*IconCal_15.userData:			HBar_Misc.html#equal_icon
+*IconCal_7.userData:			HBar_Misc.html#function_icon
+*IconCal_6.userData:			HBar_Misc.html#sum_icon
+*IconCal_8.userData:			HBar_Misc.html#thousands_icon
+*IconCal_9.userData:			HBar_Misc.html#currency_icon
+*IconCal_10.userData:			HBar_Misc.html#percent_icon
+*IconCal_11.userData:			HBar_Misc.html#scientific_icon
+*IconCal_12.userData:			HBar_Misc.html#engineer_icon
+*IconCal_13.userData:			HBar_Misc.html#inc_digit_icon
+*IconCal_14.userData:			HBar_Misc.html#dec_digit_icon
+
+*hIconBar2_1.userData:			HBar_Font.html
+*imFontFamily.userData:			HBar_Font.html#family_itemlist
+*clFontColor.userData:			HBar_Font.html#font_colorlist
+*IconFon_3.userData:			HBar_Font.html#bold_icon
+*IconFon_4.userData:			HBar_Font.html#italic_icon
+*IconFon_5.userData:			HBar_Font.html#underline_icon
+*IconFon_6.userData:			HBar_Font.html#stroke_icon
+*IconFon_9.userData:			HBar_Font.html#shadow_icon
+*IconFon_11.userData:			HBar_Font.html#smallcaps_icon
+*IconFon_12.userData:			HBar_Font.html#bigcaps_icon
+*tfFontSize.userData:			HBar_Font.html#size_textfield
+*IconFon_1.userData:			HBar_Font.html#inc_size_icon
+*IconFon_2.userData:			HBar_Font.html#dec_size_icon
+
+*hIconBar3_1.userData:			HBar_Text.html
+*IconCel_1.userData:			HBar_Text.html#left_icon
+*IconCel_2.userData:			HBar_Text.html#center_icon
+*IconCel_3.userData:			HBar_Text.html#right_icon
+*IconCel_4.userData:			HBar_Text.html#justify_icon
+*IconCel_8.userData:			HBar_Text.html#top_icon
+*IconCel_10.userData:			HBar_Text.html#bottom_icon
+*IconCel_5.userData:			HBar_Text.html#vjustify_icon
+*IconCel_11.userData:			HBar_Text.html#multiline_icon
+*IconCel_13.userData:			HBar_Text.html#down2up_icon
+*IconCel_14.userData:			HBar_Text.html#up2down_icon
+
+*hIconBar4_1.userData:			HBar_Ornament.html
+*IconBor_1.userData:			HBar_Ornament.html#noborder_icon
+*IconBor_2.userData:			HBar_Ornament.html#left_icon
+*IconBor_3.userData:			HBar_Ornament.html#bottom_icon
+*IconBor_4.userData:			HBar_Ornament.html#right_icon
+*IconBor_5.userData:			HBar_Ornament.html#top_icon
+*IconBor_6.userData:			HBar_Ornament.html#around_icon
+*clFillColor.userData:			HBar_Ornament.html#back_colorlist
+*IconBor_7.userData:			HBar_Ornament.html#pattern_icon
+*IconBor_8.userData:			HBar_Ornament.html#revvideo_icon
+
+*hIconBar5_1.userData:			HBar_Graphics.html
+*IconGra_0.userData:			HBar_Graphics.html#select_mode_icon
+*IconGra_1.userData:			HBar_Graphics.html#rectangle_frame_icon
+*IconGra_2.userData:			HBar_Graphics.html#foreground_icon
+*IconGra_3.userData:			HBar_Graphics.html#background_icon
+*IconGra_4.userData:			HBar_Graphics.html#forward_icon
+*IconGra_5.userData:			HBar_Graphics.html#backward_icon
+*IconGra_6.userData:			HBar_Graphics.html#vbars_icon
+*IconGra_7.userData:			HBar_Graphics.html#hbars_icon
+*IconGra_8.userData:			HBar_Graphics.html#curves_icon
+*IconGra_9.userData:			HBar_Graphics.html#areas_icon
+*IconGra_10.userData:			HBar_Graphics.html#pies_icon
+*IconGra_11.userData:			HBar_Graphics.html#radars_icon
+*IconGra_12.userData:			HBar_Graphics.html#y_axes_icon
+*IconGra_13.userData:			HBar_Graphics.html#legend_icon
+*IconGra_16.userData:			HBar_Graphics.html#absc_name_icon
+*IconGra_17.userData:			HBar_Graphics.html#series_name_icon
+*IconGra_14.userData:			HBar_Graphics.html#graph_name_icon
+*IconGra_15.userData:			HBar_Graphics.html#setup_icon
+*IconGra_18.userData:			HBar_Graphics.html#lock_icon
+
+*hIconBar6_1.userData:			HBar_Zoom.html
+*IconZoo_1.userData:			HBar_Zoom.html#zoom_plus_icon
+*IconZoo_2.userData:			HBar_Zoom.html#zoom_minus_icon
+*IconZoo_3.userData:			HBar_Zoom.html#predefined_scale_icons
+*IconZoo_4.userData:			HBar_Zoom.html#predefined_scale_icons
+*IconZoo_5.userData:			HBar_Zoom.html#predefined_scale_icons
+*IconZoo_6.userData:			HBar_Zoom.html#predefined_scale_icons
+*IconZoo_7.userData:			HBar_Zoom.html#predefined_scale_icons
+
+!***************************  File Selector *****************************
+
+*OpenDocument.bboard.userData:		Box_File_Selectors.html#fs_load
+*CloseDocument.bboard.userData:		Box_File_Selectors.html#fs_save
+*Print.bboard.userData:		       Box_File_Selectors.html#fs_print_in_file
+*ImportDocument.bboard.userData:	Box_FS_Import.html
+*ImportDocument*Format.userData:	Box_FS_Import.html#format_list
+*ImportDocument*fFSITSetup.userData:   Box_FS_Import.html#configuration_section
+*ImportDocument*tbFSITdoc.userData:	Box_FS_Import.html#in_active_doc_button
+*ImportDocument*rbTrimBefore.userData:	Box_FS_Import.html#trim_before_button
+*ImportDocument*rbTrimAfter.userData:	Box_FS_Import.html#trim_after_button
+*ImportDocument*lFSITseparators.userData:	Box_FS_Import.html#sep_column_textfield
+*ImportDocument*tfFSITseparators.userData:	Box_FS_Import.html#sep_column_textfield
+*ImportDocument*lFSITcharCode.userData:	 Box_FS_Import.html#encoding_buttons
+*ImportDocument*rbFSITcharCode.userData: Box_FS_Import.html#encoding_buttons
+*ExportVector.bboard.userData:		Box_FS_Export.html#fs_export_vector
+*ExportText.bboard.userData:		Box_FS_Export.html#fs_export_text
+*ExportText*Format.userData:		Box_FS_Export.html#format_list
+*ExportText*fFSITSetup.userData:       Box_FS_Export.html#configuration_section
+*ExportText*gFSExportText.tbFSETselection.userData:	Box_FS_Export.html#selection_button
+*ExportText*tbFSETformula.userData:	Box_FS_Export.html#formula_button
+*ExportText*lFSETseparators.userData:	Box_FS_Export.html#separator_textfield
+*ExportText*tfFSETseparators.userData:	Box_FS_Export.html#separator_textfield
+*ExportText*gFSExportText.lFSETcharCode.userData:	Box_FS_Export.html#accents_buttons
+*ExportText*gFSExportText.rbFSETcharCode.userData:	Box_FS_Export.html#accents_buttons
+*ExportText*gFSExportFText.tbFSETselection.userData:	Box_FS_Export.html#selection_button2
+*ExportText*tbFSETgrid.userData:	Box_FS_Export.html#grid_button
+*ExportText*tbFSETheaders.userData:	Box_FS_Export.html#header_button
+*ExportText*gFSExportFText.lFSETcharCode.userData:	Box_FS_Export.html#encoding_buttons
+*ExportText*gFSExportFText.rbFSETcharCode.userData:	Box_FS_Export.html#encoding_buttons
+*ExportHTML.bboard.userData:		Box_FS_Export.html#fs_export_html
+
+!***************************  Box Print Setup *****************************
+*BoxPrintSetup.bboard.userData:			Box_PrintSetup.html
+*BoxPrintSetup*fPSPrintDirection.userData:	Box_PrintSetup.html#button_left_to_right
+*BoxPrintSetup*riZ.userData:	Box_PrintSetup.html#button_left_to_right
+*BoxPrintSetup*riN.userData:	Box_PrintSetup.html#button_up_to_down
+*BoxPrintSetup*fPSOrientation.userData:	Box_PrintSetup.html#button_portrait
+*BoxPrintSetup*riPortrait.userData:	Box_PrintSetup.html#button_portrait
+*BoxPrintSetup*riLandscape.userData:	Box_PrintSetup.html#button_landscape
+*BoxPrintSetup*fPSScale.userData:	Box_PrintSetup.html#button_reduction
+*BoxPrintSetup*tbPSReduce.userData:	Box_PrintSetup.html#button_reduction
+*BoxPrintSetup*tfPSReduceOffset.userData: Box_PrintSetup.html#button_reduction
+*BoxPrintSetup*tbPSPrintOnPage.userData:  Box_PrintSetup.html#button_constraint
+*BoxPrintSetup*tfPSPrintOnPage1.userData: Box_PrintSetup.html#button_constraint
+*BoxPrintSetup*gPSScale.XmLabel.userData: Box_PrintSetup.html#button_constraint
+*BoxPrintSetup*tfPSPrintOnPage2.userData: Box_PrintSetup.html#button_constraint
+*BoxPrintSetup*fPSFormat.userData:	Box_PrintSetup.html#section_format
+*BoxPrintSetup*fPSMargin.userData:	Box_PrintSetup.html#section_margins
+*BoxPrintSetup*rbPSCenterV.userData:	Box_PrintSetup.html#button_center_verticaly
+*BoxPrintSetup*rbPSCenterH.userData:	Box_PrintSetup.html#button_center_horizontaly
+*BoxPrintSetup*fPSWhatPrint.userData:	Box_PrintSetup.html#button_print_grid
+*BoxPrintSetup*riGrid.userData:		Box_PrintSetup.html#button_print_grid
+*BoxPrintSetup*riRowColumn.userData:	Box_PrintSetup.html#button_print_headers
+*BoxPrintSetup*action_area.Ok.userData:	     Box_PrintSetup.html#button_ok
+*BoxPrintSetup*action_area.Cancel.userData:  Box_PrintSetup.html#button_cancel
+
+!***************************  Box Print *****************************
+*BoxPrint.bboard.userData:		Box_Print.html
+*BoxPrint*fBPPrinter.userData:		Box_Print.html#printer_list
+*BoxPrint*fBPPrintPage.userData:	Box_Print.html#button_selection_only
+*BoxPrint*tbBPPrintArea.userData:	Box_Print.html#button_selection_only
+*BoxPrint*tbBPPrintAllPages.userData:	Box_Print.html#button_entire_document
+*BoxPrint*lBPPrintFrom.userData:	Box_Print.html#page_from_to_textfields
+*BoxPrint*tfBPPrintFrom.userData:	Box_Print.html#page_from_to_textfields
+*BoxPrint*lBPPrintTo.userData:		Box_Print.html#page_from_to_textfields
+*BoxPrint*tfBPPrintTo.userData:		Box_Print.html#page_from_to_textfields
+*BoxPrint*gBPNbCopy.userData:		Box_Print.html#nb_copy_textfield
+*BoxPrint*action_area.Ok.userData:	Box_Print.html#button_ok
+*BoxPrint*action_area.Cancel.userData:	Box_Print.html#button_cancel
+
+!***************************  Box Color *****************************
+*BoxColors.bboard.userData:			Box_Color.html
+*BoxColors*ASLItemLSW.userData:			Box_Color.html#color_list
+*BoxColors*ASLeditor.userData:			Box_Color.html#edit_color_name
+*BoxColors*lColorAdd.userData:			Box_Color.html#button_new
+*BoxColors*lColorDel.userData:			Box_Color.html#button_del
+*BoxColors*gBCBar.userData:			Box_Color.html#navbar
+*BoxColors*fBCmain.userData:			Box_Color.html#setup
+*BoxColors*lColor.userData:			Box_Color.html#color_preview
+*BoxColors*action_area.Ok.userData:		Box_Color.html#button_ok
+*BoxColors*action_area.Cancel.userData:		Box_Color.html#button_cancel
+*BoxColors*gBC_CMYK*userData:			Box_Color.html#color_CMYK
+*BoxColors*gBC_RGB*userData:			Box_Color.html#color_RGB
+*BoxColors*gBC_HSL*userData:			Box_Color.html#color_HSB
+*BoxColors*gBC_GRAY*userData:			Box_Color.html#color_gray
+
+!***************************  Box Paste Function *****************************
+*BoxFunctions.bboard.userData:		Box_PasteFunction.html
+*BoxFunctions*ilBoxFunctionSW.userData:	Box_PasteFunction.html#list_functions
+*BoxFunctions*fBFFuncType.userData:	Box_PasteFunction.html#section_type
+*BoxFunctions*tfBFPreview.userData:	Box_PasteFunction.html#entry_function
+*BoxFunctions*action_area.Ok.userData:	Box_PasteFunction.html#button_ok
+*BoxFunctions*action_area.Cancel.userData: Box_PasteFunction.html#button_cancel
+
+!***************************  Box Reach Cell *****************************
+*BoxGotoCell.bboard.userData:		       Box_ReachCell.html
+*BoxGotoCell*lGCGotoCell.userData:	       Box_ReachCell.html#entry_goto
+*BoxGotoCell*tfGCGotoAt.userData:	       Box_ReachCell.html#entry_goto
+*BoxGotoCell*action_area.Ok.userData:	       Box_ReachCell.html#button_ok
+*BoxGotoCell*action_area.Cancel.userData:      Box_ReachCell.html#button_cancel
+
+!************************** Box Number Format *****************************
+*BoxNumbers.bboard.userData:		Box_NumFormat.html
+
+*BoxNumbers*imBNFormatType.userData:	Box_NumFormat.html#format_type_list
+*BoxNumbers*ASLItemLSW.userData:	Box_NumFormat.html#format_list
+*BoxNumbers*ASLeditor.userData:		Box_NumFormat.html#format_textfield
+*BoxNumbers*lBNumAdd.userData:		Box_NumFormat.html#button_new
+*BoxNumbers*lBNumDel.userData:		Box_NumFormat.html#button_del
+*BoxNumbers*rcBNBar.userData:		Box_NumFormat.html#button_bar
+*BoxNumbers*fBNSetup.userData:		Box_NumFormat.html#setup_frame
+*BoxNumbers*fBNPreview.userData:	Box_NumFormat.html#preview_frame
+*BoxNumbers*Apply.userData:		Box_NumFormat.html#button_apply
+*BoxNumbers*Ok.userData:		Box_NumFormat.html#button_ok
+*BoxNumbers*Cancel.userData:		Box_NumFormat.html#button_cancel
+*BoxNumbers*tbStdPrec.userData:		Box_NumFmt_Display.html#bnf_display_1
+*BoxNumbers*tbColor.userData:		Box_NumFmt_Colors.html#bnf_colors_1
+*BoxNumbers*tbUnit.userData:		Box_NumFmt_UnitStyleText.html#bnf_unit
+*BoxNumbers*tbExpPrec.userData:		Box_NumFmt_Display.html#bnf_display_2
+*BoxNumbers*tbFracPrec.userData:	Box_NumFmt_Display.html#bnf_display_3
+*BoxNumbers*tbBoolean.userData:		Box_NumFmt_UnitStyleText.html#bnf_text
+*BoxNumbers*tbColor2.userData:		Box_NumFmt_Colors.html#bnf_colors_2
+*BoxNumbers*tbDay.userData:		Box_NumFmt_UnitStyleText.html#bnf_style
+*BoxNumbers*tbMonth.userData:		Box_NumFmt_UnitStyleText.html#bnf_style
+*BoxNumbers*tbTime.userData:		Box_NumFmt_HourDate.html#bnf_hour
+*BoxNumbers*tbDate.userData:		Box_NumFmt_HourDate.html#bnf_date
+*BoxNumbers*gBNStdPrec.userData:	Box_NumFmt_Display.html#bnf_display_1
+*BoxNumbers*tbBNTruncate.userData:	Box_NumFmt_Display.html#button_truncate
+*BoxNumbers*gBNStdPrec.lBNMaxPrecision.userData:	Box_NumFmt_Display.html#textfield_max_prec
+*BoxNumbers*gBNStdPrec.tfBNMaxPrecision.userData:	Box_NumFmt_Display.html#textfield_max_prec
+*BoxNumbers*gBNStdPrec.lBNMinPrecision.userData:	Box_NumFmt_Display.html#textfield_min_prec
+*BoxNumbers*gBNStdPrec.tfBNMinPrecision.userData:	Box_NumFmt_Display.html#textfield_min_prec
+*BoxNumbers*gBNStdPrec.lBNSeparatorString.userData:	Box_NumFmt_Display.html#textfield_sep_string
+*BoxNumbers*gBNStdPrec.tfBNSeparatorString.userData:	Box_NumFmt_Display.html#textfield_sep_string
+*BoxNumbers*lBNSeparatorMString.userData:	Box_NumFmt_Display.html#textfield_sep_mstring
+*BoxNumbers*tfBNSeparatorMString.userData:	Box_NumFmt_Display.html#textfield_sep_mstring
+*BoxNumbers*lBNSeparatorPosition.userData:	Box_NumFmt_Display.html#textfield_sep_position
+*BoxNumbers*tfBNSeparatorPosition.userData:	Box_NumFmt_Display.html#textfield_sep_position
+*BoxNumbers*gBNExpPrec.userData:	Box_NumFmt_Display.html#bnf_display_2
+*BoxNumbers*gBNExpPrec.lBNMaxPrecision.userData:	Box_NumFmt_Display.html#textfield_max_prec2
+*BoxNumbers*gBNExpPrec.tfBNMaxPrecision.userData:	Box_NumFmt_Display.html#textfield_max_prec2
+*BoxNumbers*gBNExpPrec.lBNMinPrecision.userData:	Box_NumFmt_Display.html#textfield_min_prec2
+*BoxNumbers*gBNExpPrec.tfBNMinPrecision.userData:	Box_NumFmt_Display.html#textfield_min_prec2
+*BoxNumbers*gBNExpPrec.lBNSeparatorString.userData:	Box_NumFmt_Display.html#textfield_sep_string2
+*BoxNumbers*gBNExpPrec.tfBNSeparatorString.userData:	Box_NumFmt_Display.html#textfield_sep_string2
+*BoxNumbers*lBNStringEString.userData:	Box_NumFmt_Display.html#textfield_sep_estring
+*BoxNumbers*tfBNStringEString.userData:	Box_NumFmt_Display.html#textfield_sep_estring
+*BoxNumbers*lBNExpMinDigit.userData:	Box_NumFmt_Display.html#textfield_exp_prec
+*BoxNumbers*tfBNExpMinDigit.userData:	Box_NumFmt_Display.html#textfield_exp_prec
+*BoxNumbers*lBNExpMul.userData:		Box_NumFmt_Display.html#textfield_exp_multiple
+*BoxNumbers*tfBNExpMul.userData:	Box_NumFmt_Display.html#textfield_exp_multiple
+*BoxNumbers*tbBNExpSign.userData:	Box_NumFmt_Display.html#button_exp_sign
+*BoxNumbers*gBNFracPrec.userData:	Box_NumFmt_Display.html#bnf_display_3
+*BoxNumbers*tbBNfracDecimal.userData:	Box_NumFmt_Display.html#button_frac_decimal
+*BoxNumbers*lBNFracPrecision.userData:	Box_NumFmt_Display.html#textfield_frac_prec
+*BoxNumbers*tfBNfracPrecision.userData:	Box_NumFmt_Display.html#textfield_frac_prec
+*BoxNumbers*gBNColors.userData:		Box_NumFmt_Colors.html#bnf_colors_1
+*BoxNumbers*lBNColor1.userData:		Box_NumFmt_Colors.html#list_color_pos
+*BoxNumbers*clBNColor1.userData:	Box_NumFmt_Colors.html#list_color_pos
+*BoxNumbers*lBNColor2.userData:		Box_NumFmt_Colors.html#list_color_neg
+*BoxNumbers*clBNColor2.userData:	Box_NumFmt_Colors.html#list_color_neg
+*BoxNumbers*gBNUnit.userData:		Box_NumFmt_UnitStyleText.html#bnf_unit
+*BoxNumbers*tbBNUnitAfter.userData:	Box_NumFmt_UnitStyleText.html#button_unit
+*BoxNumbers*lBNUnitString.userData:	Box_NumFmt_UnitStyleText.html#textfield_unit
+*BoxNumbers*tfBNUnitString.userData:	Box_NumFmt_UnitStyleText.html#textfield_unit
+*BoxNumbers*gBNBoolean.userData:	Box_NumFmt_UnitStyleText.html#bnf_text
+*BoxNumbers*lBNTrueString.userData:	Box_NumFmt_UnitStyleText.html#textfield_true
+*BoxNumbers*tfBNTrueString.userData:	Box_NumFmt_UnitStyleText.html#textfield_true
+*BoxNumbers*lBNFalseString.userData:	Box_NumFmt_UnitStyleText.html#textfield_false
+*BoxNumbers*tfBNFalseString.userData:	Box_NumFmt_UnitStyleText.html#textfield_false
+*BoxNumbers*gBNDay.userData:		Box_NumFmt_UnitStyleText.html#bnf_style
+*BoxNumbers*rbDayNameVeryShort.userData:	Box_NumFmt_UnitStyleText.html#button_very_short
+*BoxNumbers*rbDayNameShort.userData:	Box_NumFmt_UnitStyleText.html#button_short
+*BoxNumbers*rbDayNameLong.userData:	Box_NumFmt_UnitStyleText.html#button_long
+*BoxNumbers*gBNMonth.userData:		Box_NumFmt_UnitStyleText.html#bnf_style
+*BoxNumbers*rbMonthNameVeryShort.userData:	Box_NumFmt_UnitStyleText.html#button_very_short
+*BoxNumbers*rbMonthNameShort.userData:	Box_NumFmt_UnitStyleText.html#button_short
+*BoxNumbers*rbMonthNameLong.userData:	Box_NumFmt_UnitStyleText.html#button_long
+*BoxNumbers*gBNTime.userData:		Box_NumFmt_HourDate.html#bnf_hour
+*BoxNumbers*gBNTime.fPadding.userData:	Box_NumFmt_HourDate.html#frame_alignment_1
+*BoxNumbers*lHour.userData:		Box_NumFmt_HourDate.html#hour_area
+*BoxNumbers*rcHour.userData:		Box_NumFmt_HourDate.html#hour_area
+*BoxNumbers*lMinute.userData:		Box_NumFmt_HourDate.html#minute_area
+*BoxNumbers*rcMinute.userData:		Box_NumFmt_HourDate.html#minute_area
+*BoxNumbers*lSecond.userData:		Box_NumFmt_HourDate.html#second_area
+*BoxNumbers*rcSecond.userData:		Box_NumFmt_HourDate.html#second_area
+*BoxNumbers*lTenthOfSecond.userData:	Box_NumFmt_HourDate.html#second_10_area
+*BoxNumbers*rcTenthOfSecond.userData:	Box_NumFmt_HourDate.html#second_10_area
+*BoxNumbers*lHundredthOfSecond.userData:	Box_NumFmt_HourDate.html#second_100_area
+*BoxNumbers*rcHundredthOfSecond.userData:	Box_NumFmt_HourDate.html#second_100_area
+*BoxNumbers*lThousandthOfSecond.userData:	Box_NumFmt_HourDate.html#second_1000_area
+*BoxNumbers*rcThousandthOfSecond.userData:	Box_NumFmt_HourDate.html#second_1000_area
+*BoxNumbers*gBNTime.lSep.userData:		Box_NumFmt_HourDate.html#separator_area_1
+*BoxNumbers*gBNTime.rcSeparators.userData:	Box_NumFmt_HourDate.html#separator_area_1
+*BoxNumbers*gBNDate.userData:		Box_NumFmt_HourDate.html#bnf_date
+*BoxNumbers*gBNDate.fPadding.userData:	Box_NumFmt_HourDate.html#frame_alignment_2
+*BoxNumbers*fNameSize.userData:		Box_NumFmt_HourDate.html#frame_namelength
+*BoxNumbers*lYear.userData:		Box_NumFmt_HourDate.html#year_area
+*BoxNumbers*rcYear.userData:		Box_NumFmt_HourDate.html#year_area
+*BoxNumbers*lMonth.userData:		Box_NumFmt_HourDate.html#month_area
+*BoxNumbers*rcMonth.userData:		Box_NumFmt_HourDate.html#month_area
+*BoxNumbers*lWeek.userData:		Box_NumFmt_HourDate.html#week_area
+*BoxNumbers*rcWeek.userData:		Box_NumFmt_HourDate.html#week_area
+*BoxNumbers*lDay.userData:		Box_NumFmt_HourDate.html#day_area
+*BoxNumbers*rcDay.userData:		Box_NumFmt_HourDate.html#day_area
+*BoxNumbers*lDayInYear.userData:	Box_NumFmt_HourDate.html#day_year_area
+*BoxNumbers*rcDayInYear.userData:	Box_NumFmt_HourDate.html#day_year_area
+*BoxNumbers*gBNDate.lSep.userData:		Box_NumFmt_HourDate.html#separator_area_2
+*BoxNumbers*gBNDate.rcSeparators.userData:	Box_NumFmt_HourDate.html#separator_area_2
+
+!************************** Box Cell Patterns *****************************
+*BoxPatterns.bboard.userData:		Box_CellPattern.html
+*BoxPatterns*fBPColors.userData:	Box_CellPattern.html#list_foreground_color
+*BoxPatterns*lBPBackColor.userData:	Box_CellPattern.html#list_background_color
+*BoxPatterns*clBPBackColor.userData:	Box_CellPattern.html#list_background_color
+*BoxPatterns*fBPPatterns.userData:	Box_CellPattern.html#section_pattern
+*BoxPatterns*Ok.userData:		Box_CellPattern.html#button_ok
+*BoxPatterns*Cancel.userData:		Box_CellPattern.html#button_cancel
+
+!************************** Box Cell Border *****************************
+*BoxBorders.bboard.userData:		Box_CellBorder.html
+*BoxBorders*fBBBorders.userData:	Box_CellBorder.html#section_apply_on
+*BoxBorders*lBBOutline.userData:	Box_CellBorder.html#area_outline
+*BoxBorders*daBBdrawing1.userData:	Box_CellBorder.html#area_outline
+*BoxBorders*lBBTop.userData:		Box_CellBorder.html#area_top
+*BoxBorders*daBBdrawing2.userData:	Box_CellBorder.html#area_top
+*BoxBorders*lBBBottom.userData:		Box_CellBorder.html#area_bottom
+*BoxBorders*daBBdrawing3.userData:	Box_CellBorder.html#area_bottom
+*BoxBorders*lBBLeft.userData:		Box_CellBorder.html#area_left
+*BoxBorders*daBBdrawing4.userData:	Box_CellBorder.html#area_left
+*BoxBorders*lBBRight.userData:		Box_CellBorder.html#area_right
+*BoxBorders*daBBdrawing5.userData:	Box_CellBorder.html#area_right
+*BoxBorders*fBBLineStyle.userData: Box_CellBorder.html#list_thickness_pattern
+*BoxBorders*lBBDash.userData:		Box_CellBorder.html#list_dash_pattern
+*BoxBorders*omBBOMenu2.userData:	Box_CellBorder.html#list_dash_pattern
+*BoxBorders*lBBForeColor.userData:  Box_CellBorder.html#list_foreground_color
+*BoxBorders*clForeground.userData:  Box_CellBorder.html#list_foreground_color
+*BoxBorders*lBBBackColor.userData:  Box_CellBorder.html#list_background_color
+*BoxBorders*clBackground.userData:  Box_CellBorder.html#list_background_color
+*BoxBorders*Ok.userData:		Box_CellBorder.html#button_ok
+*BoxBorders*Cancel.userData:		Box_CellBorder.html#button_cancel
+
+!**************************** Box Font *******************************
+*BoxFonts.bboard.userData:		Box_Font.html
+*BoxFonts*ASLItemLSW.userData:		Box_Font.html#style_list
+*BoxFonts*ASLeditor.userData:		Box_Font.html#style_name
+*BoxFonts*lAddFont.userData:		Box_Font.html#new_style
+*BoxFonts*lDelFont.userData:		Box_Font.html#delete_style
+*BoxFonts*gBSBar.userData:		Box_Font.html#button_bar
+*BoxFonts*fBSmain.userData:		Box_Font.html#configuration_section
+*BoxFonts*wdaBSpreview.userData:	Box_Font.html#preview_area
+*BoxFonts*action_area.Apply.userData:	Box_Font.html#button_apply
+*BoxFonts*action_area.Ok.userData:	Box_Font.html#button_ok
+*BoxFonts*action_area.Cancel.userData:	Box_Font.html#button_cancel
+*BoxFonts*gBSglobal.userData:		Box_Font.html#general_attributes
+*BoxFonts*lBSfamily.userData:		Box_Font.html#font_list
+*BoxFonts*imBSfont.userData:		Box_Font.html#font_list
+*BoxFonts*clBSfont.userData:		Box_Font.html#font_color_list
+*BoxFonts*lBSfontsize.userData:		Box_Font.html#font_size_textfield
+*BoxFonts*tfBSfontsize.userData:	Box_Font.html#font_size_textfield
+*BoxFonts*iBSbold.userData:		Box_Font.html#icon_bold
+*BoxFonts*iBSitalic.userData:		Box_Font.html#icon_italic
+*BoxFonts*iBSshadow.userData:		Box_Font.html#icon_shadow
+*BoxFonts*iBSunderline.userData:	Box_Font.html#icon_underline
+*BoxFonts*iBSstrikeout.userData:	Box_Font.html#icon_strikeout
+*BoxFonts*tbBSsupscript.userData:	Box_Font.html#button_superscript
+*BoxFonts*tbBSsubscript.userData:	Box_Font.html#button_subscript
+*BoxFonts*tbBSsmallcaps.userData:	Box_Font.html#button_smallcaps
+*BoxFonts*tbBSbigcaps.userData:		Box_Font.html#button_bigcaps
+*BoxFonts*tbBSwidth.userData:		Box_Font.html#button_width
+*BoxFonts*fBSoverview.userData:		Box_Font.html#summary_section
+*BoxFonts*gBSconfig.userData:		Box_Font.html#detailed_configuration
+*BoxFonts*fBSunderline.userData:	Box_Font.html#underline_section
+*BoxFonts*rcBSunderline.userData:	Box_Font.html#underline_section
+*BoxFonts*fBSstrikeout.userData:	Box_Font.html#strikeout_section
+*BoxFonts*rcBSstrikeout.userData:	Box_Font.html#strikeout_section
+*BoxFonts*fBSshadow.userData:		Box_Font.html#shadow_section
+*BoxFonts*rcBSshadow.userData:		Box_Font.html#shadow_section
+*BoxFonts*fBSwidth.userData:		Box_Font.html#width_section
+*BoxFonts*rcBSwidth.userData:		Box_Font.html#width_section
+*BoxFonts*fBSsubscript.userData:	Box_Font.html#subscript_section
+*BoxFonts*rcBSsubscript.userData:	Box_Font.html#subscript_section
+*BoxFonts*fBSsupscript.userData:	Box_Font.html#superscript_section
+*BoxFonts*rcBSsupscript.userData:	Box_Font.html#superscript_section
+
+!************************** Box Column/Row Size *****************************
+*BoxRowColSize.bboard.userData:		Box_ColumnRowSize.html
+*BoxRowColSize*fCSColSize.userData:	Box_ColumnRowSize.html#entry_column_width
+*BoxRowColSize*tbCSColSize.userData:	Box_ColumnRowSize.html#button_colsize_apply
+*BoxRowColSize*fCSRowSize.userData:	Box_ColumnRowSize.html#entry_row_height
+*BoxRowColSize*tbCSRowSize.userData:	Box_ColumnRowSize.html#button_rowsize_apply
+*BoxRowColSize*Ok.userData:		Box_ColumnRowSize.html#button_ok
+*BoxRowColSize*Cancel.userData:		Box_ColumnRowSize.html#button_cancel
+
+!**************************** Box Graph Setup *******************************
+*BoxAskGraph.bboard.userData:		Box_GraphSetup.html
+*BoxAskGraph*fAGSerial.userData:	Box_GraphSetup.html#column_button
+*BoxAskGraph*rbAGRows.userData:		Box_GraphSetup.html#row_button
+*BoxAskGraph*fAGFirstQuestion.userData:	Box_GraphSetup.html#absc_label_button
+*BoxAskGraph*fAGFirstQuestion*rbAGDatas.userData:	Box_GraphSetup.html#col_data_button
+*BoxAskGraph*fAGSecondQuestion.userData:		Box_GraphSetup.html#legend_button
+*BoxAskGraph*fAGSecondQuestion*rbDatas.userData:	Box_GraphSetup.html#row_data_button
+*BoxAskGraph*daBoxAskGraph.userData:	Box_GraphSetup.html#preview_area
+*BoxAskGraph*Ok.userData:		Box_GraphSetup.html#button_ok
+*BoxAskGraph*Cancel.userData:		Box_GraphSetup.html#button_cancel
+
+!**************************** Box Frame Attributes ***********************
+*BoxAttribs.bboard.userData:		Box_Frame_Attributes.html
+*BoxAttribs*ASLItemLSW.userData:	Box_Frame_Attributes.html#frame_list
+*BoxAttribs*ASLeditor.userData:		Box_Frame_Attributes.html#edit_frame_name
+*BoxAttribs*lBABackColor.userData:	Box_Frame_Attributes.html#background_color_list
+*BoxAttribs*clBABackColor.userData:	Box_Frame_Attributes.html#background_color_list
+*BoxAttribs*lBABorderColor.userData:	Box_Frame_Attributes.html#border_color_list
+*BoxAttribs*clBABorderColor.userData:	Box_Frame_Attributes.html#border_color_list
+*BoxAttribs*lBABorderWidth.userData:	Box_Frame_Attributes.html#thickness_textfield
+*BoxAttribs*tfBABorderWidth.userData:	Box_Frame_Attributes.html#thickness_textfield
+*BoxAttribs*XmFrame.userData:		Box_Frame_Attributes.html#frame_preview
+*BoxAttribs*action_area.Ok.userData:	Box_Frame_Attributes.html#button_ok
+*BoxAttribs*action_area.Cancel.userData: Box_Frame_Attributes.html#button_cancel
+
+!**************************** Box Font Replacement ***********************
+*font_select.bboard.userData:		Box_Font_Replacement.html
+*font_select*Font Name.userData:	Box_Font_Replacement.html#label
+*font_select*FSListSW.userData:		Box_Font_Replacement.html#font_list
+*font_select*tbKeepAlias.userData:	Box_Font_Replacement.html#keep_button
+*font_select*action_area.Ok.userData:	Box_Font_Replacement.html#button_ok
+*font_select*action_area.Cancel.userData: Box_Font_Replacement.html#button_cancel
+
+! ************************************************************************
+! **				COLORS					**
+! ************************************************************************
+
+! ** Colors: BACKGROUND **************************************************
+
+*background:				gray65
+*MainDocument.background:		gray50
+*XmList.background:			gray60
+*XmTextField.background:		#BCB5BA
+*XmText.background:			#BCB5BA
+*clArrow.background:			#B1B0B8
+
+*bboard*XmPushButton.background:	#B1B0B8
+*hIconBar*XmPushButton.background:	#B1B0B8
+*bboard*XmToggleButton.background:	#B1B0B8
+*hIconBar*XmToggleButton.background:	#B1B0B8
+*OptionButton.background:		#B1B0B8
+
+*RowStartup*background:			#BCB5BA
+
+*gASLcommands.background:		#B1B0B8
+
+*sBRegisterText.background:		gray60
+
+*wdaBSpreview.background:		white
+
+*dBKeyb.background:			#BCB5BA
+*wdaBSpreview.background:		white
+*tBSoverview.background:		gray65
+*ClipboardPrivate.PrivateClipArea.background: gray60
+*PrivateClipArea*XmLabel.background:	gray60
+
+*tBSoverview.background:		gray65
+*tfBFPreview.background:		gray60
+*tfBNPreview.background:		gray60
+*rcBNBar.background:			#B1B0B8
+
+*borderColor:				gray65
+*Application*borderColor:		black
+
+*vIconBarlogo*background:		gray80
+
+*fLicense*background:			gray50
+*fRegister*background:			gray50
+
+*fLicense*stBoxLicense*XmScrollBar*background:	gray60
+*fLicense*stBoxLicense*XmScrollBar.troughColor:	red
+*fRegister*stBoxLegal2*XmScrollBar*background:	gray60
+*fRegister*stBoxLegal2*XmScrollBar.troughColor:	red
+
+*clIcon.background:			#B1B0B8
+*sbRowColumnH.background:		#B1B0B8
+*sbRowColumnV*background:		#B1B0B8
+*bboard*sbIconTop.background:		#B1B0B8
+*bboard*sbIconBottom.background:	#B1B0B8
+*hIconBar*sbIconTop.background:		#B1B0B8
+*hIconBar*sbIconBottom.background:	#B1B0B8
+
+*Menu*background:		#b0a0a0
+*XmMenuShell*background:	#b0a0a0
+
+! ** Colors: FOREGROUND **************************************************
+
+*RowStartup.lPleaseWait.foreground:	gray40
+*XmFrame.foreground:			navyblue
+*lAboutRelease.foreground:		white
+*lAboutLicense.foreground:		white
+*lLegalVersion.foreground:		white
+*lLegal2Title.foreground:		white
+
+*clArrow.foreground:			gray75
+*sbArrowUp.foreground:			gray60
+*sbArrowDown.foreground:		gray60
+
+
+! ** Colors: TOGGLE SELECTORS ********************************************
+
+*XmToggleButtonGadget.selectColor:   	yellow
+*gBNBar.XmToggleButtonGadget.selectColor:	gray60
+*gBSBar.XmToggleButtonGadget.selectColor:	gray60
+*gBCBar.XmToggleButtonGadget.selectColor:	gray60
+
+
+! ** Colors: BOTTOM SHADOW ***********************************************
+
+*sbArrowUp.bottomShadowColor:		gray40
+*sbArrowDown.bottomShadowColor:		gray40
+
+
+! ** Colors: HIGHLIGHTS **************************************************
+
+*highlightColor:			gray30
+*tf_C.highlightColor:			cyan
+*s_C.highlightColor:			cyan
+*tf_M.highlightColor:			magenta
+*s_M.highlightColor:			magenta
+*tf_Y.highlightColor:			yellow
+*s_Y.highlightColor:			yellow
+*tf_K.highlightColor:		 	black
+*s_K.highlightColor:		 	black
+*tf_R.highlightColor:			red
+*s_R.highlightColor:			red
+*tf_G.highlightColor:			green
+*s_G.highlightColor:			green
+*tf_B.highlightColor:			blue
+*s_B.highlightColor:			blue
+
+
+! ************************************************************************
+! **				BACKGROUND PIXMAPS			**
+! ************************************************************************
+
+*BoxAbout*bboard.backgroundPixmap:		leather_light
+*BoxAbout*action_area.backgroundPixmap:		leather_light
+*BoxAbout*gBoxAbout.backgroundPixmap:		leather_light
+*BoxAbout*lAboutRelease.backgroundPixmap:	leather_light
+*BoxAbout*lAboutLicense.backgroundPixmap:	leather_light
+
+*BoxLegal*bboard.backgroundPixmap:		leather_light
+*BoxLegal*action_area.backgroundPixmap:		leather_light
+*BoxLegal*gBoxLegal.backgroundPixmap:		leather_light
+*BoxLegal*lLegalVersion.backgroundPixmap:	leather_light
+
+*BoxLegal2*bboard.backgroundPixmap:		leather_light
+*BoxLegal2*action_area.backgroundPixmap:	leather_light
+*BoxLegal2*gBoxLegal2.backgroundPixmap:		leather_light
+*BoxLegal2*lLegal2Title.backgroundPixmap:	leather_light
+
+
+
+
+
+!--------- Translations for ISO-8859/1 characters set --------
+!--------- + Emacs-like bindings...
+
+*XmScrolledWindow*translations:         #override               \n\
+                        <Btn4Down>:     xc_dispatch_event()     \n\
+                        <Btn5Down>:     xc_dispatch_event()     \n
+
+*XmScrolledWindow.XmScrollBar.translations:	#override	\n\
+~Meta ~Alt Ctrl         <Btn4Down>:     PageUpOrLeft(0)         \n\
+                        <Btn4Down>:     IncrementUpOrLeft(0)    \n\
+~Meta ~Alt Ctrl         <Btn5Down>:     PageDownOrRight(0)      \n\
+                        <Btn5Down>:     IncrementDownOrRight(0)	\n
+
+*XmTextField.translations:	#override			\n\
+ ~Meta ~Alt Ctrl<Key>a:		beginning-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>b:		backward-character()		\n\
+ ~Meta ~Alt Ctrl<Key>d:		delete-next-character()		\n\
+ ~Meta ~Alt Ctrl<Key>e:		end-of-line()			\n\
+ ~Meta ~Alt Ctrl<Key>f:		forward-character()		\n\
+ ~Meta ~Alt Ctrl<Key>g:		process-cancel()		\n\
+ ~Meta ~Alt Ctrl<Key>h:		delete-previous-character()	\n\
+ ~Meta ~Alt Ctrl<Key>k:		delete-to-end-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>u:		beginning-of-line()		\
+				delete-to-end-of-line()		\n\
+ ~Meta ~Alt Ctrl<Key>w:		cut-clipboard()			\n\
+ Meta ~Ctrl<Key>b:		backward-word()			\n\
+  Alt ~Ctrl<Key>b:		backward-word()			\n\
+ Meta ~Ctrl<Key>d:		delete-next-word()		\n\
+  Alt ~Ctrl<Key>d:		delete-next-word()		\n\
+ Meta ~Ctrl<Key>f:		forward-word()			\n\
+  Alt ~Ctrl<Key>f:		forward-word()			\n\
+ Meta ~Ctrl<Key>w:		copy-clipboard()		\n\
+  Alt ~Ctrl<Key>w:		copy-clipboard()		\n\
+ Meta ~Ctrl<Key>osfLeft:	backward-word()			\n\
+  Alt ~Ctrl<Key>osfLeft:	backward-word()			\n\
+ Meta ~Ctrl<Key>osfRight:	forward-word()			\n\
+  Alt ~Ctrl<Key>osfRight:	forward-word()			\n\
+ Meta ~Ctrl<Key>osfBackSpace:	delete-previous-word()		\n\
+  Alt ~Ctrl<Key>osfBackSpace:	delete-previous-word()		\n\
+ Meta ~Ctrl<Key>osfDelete:	delete-next-word()		\n\
+  Alt ~Ctrl<Key>osfDelete:	delete-next-word()		\n\
+	!<Key>KP_F1:	xc_insert_string("XQuad")\n\
+	!<Key>KP_F2:	xc_insert_string("Xclamation")\n\
+	!<Key>KP_F3:	xc_insert_string("XAllWrite")\n\
+	!<Key>KP_F4:	xc_insert_string("Axene")\n
+
+
+
+
+
+
+

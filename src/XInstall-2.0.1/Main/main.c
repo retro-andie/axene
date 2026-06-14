@@ -242,7 +242,7 @@ char	**argv;
  Globprog_name = SearchFile(argv[0]);
  if ((env_dir = getenv(Xc_ENVIRONNEMENT)) == NULL)
   if ((env_dir = getenv(Xc_ENVIRONNEMENT_GLOBAL)) == NULL)
-   Xsetenv(Xc_ENVIRONNEMENT,"/");
+   setenv(Xc_ENVIRONNEMENT,"/",1);
 
  my_getopt(argv, argc);
 

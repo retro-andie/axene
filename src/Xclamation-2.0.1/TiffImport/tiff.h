@@ -58,6 +58,7 @@ typedef unsigned int u_int;
  * 32-bit quantities	int32/uint32
  * strings		unsigned char*
  */
+#ifndef _H_INTTYPES
 typedef	short int16;
 typedef	unsigned short uint16;	/* sizeof (uint16) must == 2 */
 #if defined(__alpha)
@@ -67,6 +68,10 @@ typedef	unsigned int uint32;	/* sizeof (uint32) must == 4 */
 typedef	long int32;
 typedef	unsigned long uint32;	/* sizeof (uint32) must == 4 */
 #endif
+#else  /* AIX _ALL_SOURCE: int16 and int32 already defined in sys/inttypes.h */
+typedef	unsigned short uint16;	/* sizeof (uint16) must == 2 */
+typedef	unsigned int uint32;	/* sizeof (uint32) must == 4 */
+#endif /* _H_INTTYPES */
 
 typedef	struct {
 	uint16	tiff_magic;	/* magic number (defines byte order) */
